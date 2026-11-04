@@ -110,9 +110,9 @@
    },
    "lore": "죽은 왕의 맹세를 지키는 마지막 성기사단장. 세 왕자 누구의 편도 들지 않는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9337,
+    "ad_mult": 0.9337,
+    "skill_mult": 0.9337
    }
   },
   {
@@ -173,9 +173,9 @@
    },
    "lore": "비룡을 길들인 둘째 왕자. 형과 동생의 내전을 끝내기 위해 외부의 힘을 찾는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0237,
+    "ad_mult": 1.0237,
+    "skill_mult": 1.0237
    }
   },
   {
@@ -231,9 +231,9 @@
    },
    "lore": "왕국 동부 국경을 20년간 지킨 기사. 명예를 위해 부와 지위를 버렸다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -287,9 +287,9 @@
    },
    "lore": "왕실의 비밀을 너무 많이 아는 마도사. 암살을 피해 용병단에 몸을 숨겼다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0643,
+    "ad_mult": 1.0643,
+    "skill_mult": 1.0643
    }
   },
   {
@@ -410,9 +410,9 @@
    },
    "lore": "성벽 위에서 30년을 보낸 노병. 손이 떨려도 조준은 틀리지 않는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0552,
+    "ad_mult": 1.0552,
+    "skill_mult": 1.0552
    }
   },
   {
@@ -465,9 +465,9 @@
    },
    "lore": "엘리아와 같은 수도원에서 치유술을 배운 동문. 레온에게 엘리아의 과거를 들려준다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9712,
+    "ad_mult": 0.9712,
+    "skill_mult": 0.9712
    }
   },
   {
@@ -594,9 +594,9 @@
    },
    "lore": "국경 마을 하론의 수비대장. 엘리아가 납치되던 날 레온과 함께 있었다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0457,
+    "ad_mult": 1.0457,
+    "skill_mult": 1.0457
    }
   },
   {
@@ -656,9 +656,9 @@
    },
    "lore": "왕실 사냥터지기의 딸. 매와 함께 전장을 누빈다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1257,
+    "ad_mult": 1.1257,
+    "skill_mult": 1.1257
    }
   },
   {
@@ -712,9 +712,9 @@
    },
    "lore": "세 왕자의 내전을 노래로 풍자하다 쫓겨난 시인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -776,9 +776,9 @@
    },
    "lore": "농부의 아들. 활 하나로 가족을 먹여 살린다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9086,
+    "ad_mult": 0.9086,
+    "skill_mult": 0.9086
    }
   },
   {
@@ -894,9 +894,9 @@
    },
    "lore": "국경 마을의 약초꾼 노파. 저주보다 약초를 더 잘 안다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0326,
+    "ad_mult": 1.0326,
+    "skill_mult": 1.0326
    }
   },
   {
@@ -961,9 +961,9 @@
    },
    "lore": "결투로 왕좌를 쟁취한 여왕. 재의 날개에게 북부 씨족 셋을 잃었다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.068,
+    "ad_mult": 1.068,
+    "skill_mult": 1.068
    }
   },
   {
@@ -1076,9 +1076,9 @@
    },
    "lore": "여왕의 호위 대장. 말보다 방패가 먼저 나간다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.8663,
+    "ad_mult": 0.8663,
+    "skill_mult": 0.8663
    }
   },
   {
@@ -1139,9 +1139,9 @@
    },
    "lore": "북부 와이번을 길들인 최초의 인간. 늑대 가죽을 벗지 않는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.924,
+    "ad_mult": 0.924,
+    "skill_mult": 0.924
    }
   },
   {
@@ -1195,9 +1195,9 @@
    },
    "lore": "고통을 느끼지 못하는 저주를 받은 전사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0962,
+    "ad_mult": 1.0962,
+    "skill_mult": 1.0962
    }
   },
   {
@@ -1257,9 +1257,9 @@
    },
    "lore": "눈보라 속에서도 300보 밖의 토끼를 맞힌다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.951,
+    "ad_mult": 0.951,
+    "skill_mult": 0.951
    }
   },
   {
@@ -1313,9 +1313,9 @@
    },
    "lore": "씨족의 방패벽 선두. 동생을 재의 날개에게 잃었다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9704,
+    "ad_mult": 0.9704,
+    "skill_mult": 0.9704
    }
   },
   {
@@ -1368,9 +1368,9 @@
    },
    "lore": "조상의 영혼과 대화한다고 주장하는 룬 사제.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9684,
+    "ad_mult": 0.9684,
+    "skill_mult": 0.9684
    }
   },
   {
@@ -1492,9 +1492,9 @@
    },
    "lore": "늑대 무리와 함께 자란 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -1609,9 +1609,9 @@
    },
    "lore": "얼음 마법을 독학한 어부의 아들.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0353,
+    "ad_mult": 1.0353,
+    "skill_mult": 1.0353
    }
   },
   {
@@ -1665,9 +1665,9 @@
    },
    "lore": "전사들의 무용담을 노래하는 스칼드.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -1845,9 +1845,9 @@
    },
    "lore": "별을 읽어 세계의 멸망 날짜를 계산한 음양사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0727,
+    "ad_mult": 1.0727,
+    "skill_mult": 1.0727
    }
   },
   {
@@ -1971,9 +1971,9 @@
    },
    "lore": "벚꽃이 질 때 가장 많은 적을 쓰러뜨렸다는 궁수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0369,
+    "ad_mult": 1.0369,
+    "skill_mult": 1.0369
    }
   },
   {
@@ -2033,9 +2033,9 @@
    },
    "lore": "종이 인형에 영혼을 불어넣는 소녀 술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -2091,9 +2091,9 @@
    },
    "lore": "한 걸음도 물러선 적 없는 중갑 무사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -2146,9 +2146,9 @@
    },
    "lore": "신사의 무녀. 춤으로 상처를 씻는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9411,
+    "ad_mult": 0.9411,
+    "skill_mult": 0.9411
    }
   },
   {
@@ -2207,9 +2207,9 @@
    },
    "lore": "네오스의 기술을 흉내 내 조총을 만든 장인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1019,
+    "ad_mult": 1.1019,
+    "skill_mult": 1.1019
    }
   },
   {
@@ -2330,9 +2330,9 @@
    },
    "lore": "원령과 함께 사는 음울한 술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1037,
+    "ad_mult": 1.1037,
+    "skill_mult": 1.1037
    }
   },
   {
@@ -2393,9 +2393,9 @@
    },
    "lore": "제국 용기병대의 젊은 기수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.932,
+    "ad_mult": 0.932,
+    "skill_mult": 0.932
    }
   },
   {
@@ -2449,9 +2449,9 @@
    },
    "lore": "창 하나로 농민 병사들을 이끄는 대장.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9041,
+    "ad_mult": 0.9041,
+    "skill_mult": 0.9041
    }
   },
   {
@@ -2505,9 +2505,9 @@
    },
    "lore": "전장에서 샤미센을 켜는 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.05,
+    "ad_mult": 1.05,
+    "skill_mult": 1.05
    }
   },
   {
@@ -2567,9 +2567,9 @@
    },
    "lore": "축제 폭죽을 무기로 바꾼 장인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0533,
+    "ad_mult": 1.0533,
+    "skill_mult": 1.0533
    }
   },
   {
@@ -2692,9 +2692,9 @@
    },
    "lore": "천 개의 이야기로 마신을 묶은 여인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0254,
+    "ad_mult": 1.0254,
+    "skill_mult": 1.0254
    }
   },
   {
@@ -2754,9 +2754,9 @@
    },
    "lore": "술탄의 친위대장. 술탄이 재의 날개와 거래하자 반기를 들었다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9337,
+    "ad_mult": 0.9337,
+    "skill_mult": 0.9337
    }
   },
   {
@@ -2811,9 +2811,9 @@
    },
    "lore": "사막의 바람을 다루는 주술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9574,
+    "ad_mult": 0.9574,
+    "skill_mult": 0.9574
    }
   },
   {
@@ -2872,9 +2872,9 @@
    },
    "lore": "낙타 등에 소형 포를 얹은 괴짜 포병.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0248,
+    "ad_mult": 1.0248,
+    "skill_mult": 1.0248
    }
   },
   {
@@ -2930,9 +2930,9 @@
    },
    "lore": "노예에서 기사가 된 맘루크.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -2986,9 +2986,9 @@
    },
    "lore": "불꽃 정령과 계약한 술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0796,
+    "ad_mult": 1.0796,
+    "skill_mult": 1.0796
    }
   },
   {
@@ -3049,9 +3049,9 @@
    },
    "lore": "사막 와이번을 타는 기수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.914,
+    "ad_mult": 0.914,
+    "skill_mult": 0.914
    }
   },
   {
@@ -3113,9 +3113,9 @@
    },
    "lore": "말 위에서 활을 쏘는 유목민 출신.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9462,
+    "ad_mult": 0.9462,
+    "skill_mult": 0.9462
    }
   },
   {
@@ -3168,9 +3168,9 @@
    },
    "lore": "오아시스의 물로 상처를 씻는 치유사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9471,
+    "ad_mult": 0.9471,
+    "skill_mult": 0.9471
    }
   },
   {
@@ -3224,9 +3224,9 @@
    },
    "lore": "춤추듯 검을 휘두르는 무희.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0355,
+    "ad_mult": 1.0355,
+    "skill_mult": 1.0355
    }
   },
   {
@@ -3280,9 +3280,9 @@
    },
    "lore": "시장 경비병. 성실함이 무기다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.8609,
+    "ad_mult": 0.8609,
+    "skill_mult": 0.8609
    }
   },
   {
@@ -3336,9 +3336,9 @@
    },
    "lore": "시장 한구석에서 이야기를 파는 노인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -3398,9 +3398,9 @@
    },
    "lore": "낡은 기계를 고치는 소년.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9488,
+    "ad_mult": 0.9488,
+    "skill_mult": 0.9488
    }
   },
   {
@@ -3459,9 +3459,9 @@
    },
    "lore": "리에스 연합 함대의 제독. 재의 날개에게 함대 절반을 잃었다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.044,
+    "ad_mult": 1.044,
+    "skill_mult": 1.044
    }
   },
   {
@@ -3515,9 +3515,9 @@
    },
    "lore": "해족(인어)의 왕. 바다 밑에서 쐐기의 진동을 느꼈다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9084,
+    "ad_mult": 0.9084,
+    "skill_mult": 0.9084
    }
   },
   {
@@ -3577,9 +3577,9 @@
    },
    "lore": "바다 위의 왕. 보물보다 재미를 찾는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.975,
+    "ad_mult": 0.975,
+    "skill_mult": 0.975
    }
   },
   {
@@ -3633,9 +3633,9 @@
    },
    "lore": "노래로 배를 침몰시키던 세이렌. 지금은 아군을 위해 노래한다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -3695,9 +3695,9 @@
    },
    "lore": "크라켄에게 먹혔다가 돌아온 남자.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0868,
+    "ad_mult": 1.0868,
+    "skill_mult": 1.0868
    }
   },
   {
@@ -3824,9 +3824,9 @@
    },
    "lore": "항구 뒷골목에서 자란 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9675,
+    "ad_mult": 0.9675,
+    "skill_mult": 0.9675
    }
   },
   {
@@ -4057,9 +4057,9 @@
    },
    "lore": "폭풍을 부르는 항해사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9721,
+    "ad_mult": 0.9721,
+    "skill_mult": 0.9721
    }
   },
   {
@@ -4113,9 +4113,9 @@
    },
    "lore": "항구의 부두 주술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0566,
+    "ad_mult": 1.0566,
+    "skill_mult": 1.0566
    }
   },
   {
@@ -4176,9 +4176,9 @@
    },
    "lore": "바다뱀을 길들인 소년.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9232,
+    "ad_mult": 0.9232,
+    "skill_mult": 0.9232
    }
   },
   {
@@ -4238,9 +4238,9 @@
    },
    "lore": "배를 고치는 목수. 포탑도 고친다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0472,
+    "ad_mult": 1.0472,
+    "skill_mult": 1.0472
    }
   },
   {
@@ -4302,9 +4302,9 @@
    },
    "lore": "엘프의 여왕. 세계수가 시들어가는 이유가 쐐기임을 안다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1247,
+    "ad_mult": 1.1247,
+    "skill_mult": 1.1247
    }
   },
   {
@@ -4357,9 +4357,9 @@
    },
    "lore": "천 년을 산 대드루이드. 용의 전쟁을 기억한다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9745,
+    "ad_mult": 0.9745,
+    "skill_mult": 0.9745
    }
   },
   {
@@ -4413,9 +4413,9 @@
    },
    "lore": "밤하늘의 별을 끌어내리는 마법사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0818,
+    "ad_mult": 1.0818,
+    "skill_mult": 1.0818
    }
   },
   {
@@ -4475,9 +4475,9 @@
    },
    "lore": "숲의 침입자를 소리 없이 처리하는 그림자.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9647,
+    "ad_mult": 0.9647,
+    "skill_mult": 0.9647
    }
   },
   {
@@ -4537,9 +4537,9 @@
    },
    "lore": "정령의 말을 알아듣는 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1442,
+    "ad_mult": 1.1442,
+    "skill_mult": 1.1442
    }
   },
   {
@@ -4593,9 +4593,9 @@
    },
    "lore": "바람처럼 검을 휘두르는 무용수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0384,
+    "ad_mult": 1.0384,
+    "skill_mult": 1.0384
    }
   },
   {
@@ -4713,9 +4713,9 @@
    },
    "lore": "숲의 그리폰과 함께 자란 기수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.939,
+    "ad_mult": 0.939,
+    "skill_mult": 0.939
    }
   },
   {
@@ -4771,9 +4771,9 @@
    },
    "lore": "세계수를 지키는 기사단의 일원.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -4838,9 +4838,9 @@
    },
    "lore": "걸어다니는 고목. 말은 느리지만 주먹은 빠르다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9617,
+    "ad_mult": 0.9617,
+    "skill_mult": 0.9617
    }
   },
   {
@@ -4894,9 +4894,9 @@
    },
    "lore": "숲의 입구를 지키는 고목.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9646,
+    "ad_mult": 0.9646,
+    "skill_mult": 0.9646
    }
   },
   {
@@ -4955,9 +4955,9 @@
    },
    "lore": "엘프 장궁병 견습생.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.115,
+    "ad_mult": 1.115,
+    "skill_mult": 1.115
    }
   },
   {
@@ -5011,9 +5011,9 @@
    },
    "lore": "피리로 새를 부르는 소년.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -5073,9 +5073,9 @@
    },
    "lore": "나무를 깎아 무엇이든 만드는 세공사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0342,
+    "ad_mult": 1.0342,
+    "skill_mult": 1.0342
    }
   },
   {
@@ -5136,9 +5136,9 @@
    },
    "lore": "그란두르의 왕. 손 하나가 강철이다. 쐐기를 만든 고대 기술에 관심이 있다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0898,
+    "ad_mult": 1.0898,
+    "skill_mult": 1.0898
    }
   },
   {
@@ -5194,9 +5194,9 @@
    },
    "lore": "룬을 새긴 갑옷을 입은 왕의 방패.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -5261,9 +5261,9 @@
    },
    "lore": "도끼로 산을 가른다는 전설의 광전사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9678,
+    "ad_mult": 0.9678,
+    "skill_mult": 0.9678
    }
   },
   {
@@ -5322,9 +5322,9 @@
    },
    "lore": "증기 대포를 발명한 괴짜.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0779,
+    "ad_mult": 1.0779,
+    "skill_mult": 1.0779
    }
   },
   {
@@ -5378,9 +5378,9 @@
    },
    "lore": "산맥처럼 움직이지 않는 방패병.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.925,
+    "ad_mult": 0.925,
+    "skill_mult": 0.925
    }
   },
   {
@@ -5440,9 +5440,9 @@
    },
    "lore": "터널에서 석궁으로 괴물을 사냥하던 명사수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.8946,
+    "ad_mult": 0.8946,
+    "skill_mult": 0.8946
    }
   },
   {
@@ -5502,9 +5502,9 @@
    },
    "lore": "룬으로 적의 갑옷을 녹이는 각인사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1165,
+    "ad_mult": 1.1165,
+    "skill_mult": 1.1165
    }
   },
   {
@@ -5564,9 +5564,9 @@
    },
    "lore": "골렘을 친구로 여기는 제작자.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1549,
+    "ad_mult": 1.1549,
+    "skill_mult": 1.1549
    }
   },
   {
@@ -5626,9 +5626,9 @@
    },
    "lore": "땅속으로 적진에 침투하는 병사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0319,
+    "ad_mult": 1.0319,
+    "skill_mult": 1.0319
    }
   },
   {
@@ -5737,9 +5737,9 @@
    },
    "lore": "망치 두 개로 싸우는 결투가.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1132,
+    "ad_mult": 1.1132,
+    "skill_mult": 1.1132
    }
   },
   {
@@ -5793,9 +5793,9 @@
    },
    "lore": "용광로의 불로 마법을 배운 술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1056,
+    "ad_mult": 1.1056,
+    "skill_mult": 1.1056
    }
   },
   {
@@ -5849,9 +5849,9 @@
    },
    "lore": "맥주를 마시면 노래가 나오는 드워프.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -5912,9 +5912,9 @@
    },
    "lore": "증기 날개를 단 드워프 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9585,
+    "ad_mult": 0.9585,
+    "skill_mult": 0.9585
    }
   },
   {
@@ -5973,9 +5973,9 @@
    },
    "lore": "돔 상공의 위성과 연결된 포격 유닛. 돔 밖으로 나온 것은 처음이다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9709,
+    "ad_mult": 0.9709,
+    "skill_mult": 0.9709
    }
   },
   {
@@ -6036,9 +6036,9 @@
    },
    "lore": "네오스 평의회의 수석 과학자. 쐐기가 고대 문명의 '제어 장치'임을 밝혔다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0279,
+    "ad_mult": 1.0279,
+    "skill_mult": 1.0279
    }
   },
   {
@@ -6094,9 +6094,9 @@
    },
    "lore": "돔의 문을 지키던 자동인형.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -6150,9 +6150,9 @@
    },
    "lore": "뇌에 연산기를 이식한 사이보그 과학자.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0998,
+    "ad_mult": 1.0998,
+    "skill_mult": 1.0998
    }
   },
   {
@@ -6212,9 +6212,9 @@
    },
    "lore": "광학 위장 장치를 단 침투 유닛.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1242,
+    "ad_mult": 1.1242,
+    "skill_mult": 1.1242
    }
   },
   {
@@ -6274,9 +6274,9 @@
    },
    "lore": "드론으로 조준하고 레일건으로 쏜다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9075,
+    "ad_mult": 0.9075,
+    "skill_mult": 0.9075
    }
   },
   {
@@ -6329,9 +6329,9 @@
    },
    "lore": "전장 의료 유닛.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9251,
+    "ad_mult": 0.9251,
+    "skill_mult": 0.9251
    }
   },
   {
@@ -6391,9 +6391,9 @@
    },
    "lore": "드론 열 대를 동시에 조종하는 관제사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -6458,9 +6458,9 @@
    },
    "lore": "외골격 강화복을 입은 보병.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9601,
+    "ad_mult": 0.9601,
+    "skill_mult": 0.9601
    }
   },
   {
@@ -6514,9 +6514,9 @@
    },
    "lore": "검을 든 전투 자동인형.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1092,
+    "ad_mult": 1.1092,
+    "skill_mult": 1.1092
    }
   },
   {
@@ -6627,9 +6627,9 @@
    },
    "lore": "방패를 든 보급형 로봇.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9177,
+    "ad_mult": 0.9177,
+    "skill_mult": 0.9177
    }
   },
   {
@@ -6683,9 +6683,9 @@
    },
    "lore": "홀로그램 아이돌. 전장에서도 공연한다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0834,
+    "ad_mult": 1.0834,
+    "skill_mult": 1.0834
    }
   },
   {
@@ -6746,9 +6746,9 @@
    },
    "lore": "제트팩을 메고 날아다니는 병사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.923,
+    "ad_mult": 0.923,
+    "skill_mult": 0.923
    }
   },
   {
@@ -6802,9 +6802,9 @@
    },
    "lore": "죽음을 초월한 리치. 쐐기의 피 봉인 의식을 직접 목격했다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1004,
+    "ad_mult": 1.1004,
+    "skill_mult": 1.1004
    }
   },
   {
@@ -6864,9 +6864,9 @@
    },
    "lore": "녹스의 여왕. 세계가 멸망하면 다스릴 백성이 없다는 이유로 레온을 돕는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0613,
+    "ad_mult": 1.0613,
+    "skill_mult": 1.0613
    }
   },
   {
@@ -6982,9 +6982,9 @@
    },
    "lore": "역병을 퍼뜨리는 저주술사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0515,
+    "ad_mult": 1.0515,
+    "skill_mult": 1.0515
    }
   },
   {
@@ -7039,9 +7039,9 @@
    },
    "lore": "죽어서도 갑옷을 벗지 않는 기사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9688,
+    "ad_mult": 0.9688,
+    "skill_mult": 0.9688
    }
   },
   {
@@ -7101,9 +7101,9 @@
    },
    "lore": "전장의 시체를 먹고 자라는 식인귀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9432,
+    "ad_mult": 0.9432,
+    "skill_mult": 0.9432
    }
   },
   {
@@ -7156,9 +7156,9 @@
    },
    "lore": "어둠으로 상처를 메우는 사제.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9203,
+    "ad_mult": 0.9203,
+    "skill_mult": 0.9203
    }
   },
   {
@@ -7219,9 +7219,9 @@
    },
    "lore": "죽은 용의 뼈를 타는 기수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9602,
+    "ad_mult": 0.9602,
+    "skill_mult": 0.9602
    }
   },
   {
@@ -7283,9 +7283,9 @@
    },
    "lore": "해골이 된 뒤에도 활을 놓지 않은 궁수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9688,
+    "ad_mult": 0.9688,
+    "skill_mult": 0.9688
    }
   },
   {
@@ -7339,9 +7339,9 @@
    },
    "lore": "뼈를 쌓아 만든 골렘.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9079,
+    "ad_mult": 0.9079,
+    "skill_mult": 0.9079
    }
   },
   {
@@ -7395,9 +7395,9 @@
    },
    "lore": "검에 씐 귀신.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1442,
+    "ad_mult": 1.1442,
+    "skill_mult": 1.1442
    }
   },
   {
@@ -7456,9 +7456,9 @@
    },
    "lore": "역병 단지를 던지는 구울.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0734,
+    "ad_mult": 1.0734,
+    "skill_mult": 1.0734
    }
   },
   {
@@ -7512,9 +7512,9 @@
    },
    "lore": "비명으로 아군의 마력을 깨우는 밴시.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -7574,9 +7574,9 @@
    },
    "lore": "시체로 무엇이든 만드는 조립사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0591,
+    "ad_mult": 1.0591,
+    "skill_mult": 1.0591
    }
   },
   {
@@ -7630,9 +7630,9 @@
    },
    "lore": "셀레스티아의 수장이자 쐐기의 수호자. 쐐기를 지키는 것이 용족의 멸종을 뜻함을 안다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0657,
+    "ad_mult": 1.0657,
+    "skill_mult": 1.0657
    }
   },
   {
@@ -7686,9 +7686,9 @@
    },
    "lore": "시간을 노래하는 성가수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1019,
+    "ad_mult": 1.1019,
+    "skill_mult": 1.1019
    }
   },
   {
@@ -7741,9 +7741,9 @@
    },
    "lore": "별빛으로 상처를 씻는 사제.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9161,
+    "ad_mult": 0.9161,
+    "skill_mult": 0.9161
    }
   },
   {
@@ -7797,9 +7797,9 @@
    },
    "lore": "하늘을 떠받치는 수호자.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9179,
+    "ad_mult": 0.9179,
+    "skill_mult": 0.9179
    }
   },
   {
@@ -7859,9 +7859,9 @@
    },
    "lore": "별자리를 불러내는 소환사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -7916,9 +7916,9 @@
    },
    "lore": "중력을 다루는 기사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.968,
+    "ad_mult": 0.968,
+    "skill_mult": 0.968
    }
   },
   {
@@ -7978,9 +7978,9 @@
    },
    "lore": "유성을 활에 걸어 쏘는 사수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.953,
+    "ad_mult": 0.953,
+    "skill_mult": 0.953
    }
   },
   {
@@ -8158,9 +8158,9 @@
    },
    "lore": "마력을 검에 싣는 검사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1542,
+    "ad_mult": 1.1542,
+    "skill_mult": 1.1542
    }
   },
   {
@@ -8214,9 +8214,9 @@
    },
    "lore": "마력으로 포탄을 쏘는 포병.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9698,
+    "ad_mult": 0.9698,
+    "skill_mult": 0.9698
    }
   },
   {
@@ -8344,9 +8344,9 @@
    },
    "lore": "구름 비룡을 타는 견습생.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9149,
+    "ad_mult": 0.9149,
+    "skill_mult": 0.9149
    }
   },
   {
@@ -8406,9 +8406,9 @@
    },
    "lore": "마법과 기계를 함께 배우는 학생.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9703,
+    "ad_mult": 0.9703,
+    "skill_mult": 0.9703
    }
   },
   {
@@ -8464,9 +8464,9 @@
    },
    "lore": "공존파 용족의 지도자. 바르그라드의 여동생. 오빠를 막기 위해 인간과 손잡는다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9619,
+    "ad_mult": 0.9619,
+    "skill_mult": 0.9619
    }
   },
   {
@@ -8652,9 +8652,9 @@
    },
    "lore": "흰 비늘의 수호자. 알을 지키다 수백 년을 보냈다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -8707,9 +8707,9 @@
    },
    "lore": "녹색 비늘의 치유사. 더 이상 부화하지 않는 알들을 돌본다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9142,
+    "ad_mult": 0.9142,
+    "skill_mult": 0.9142
    }
   },
   {
@@ -8763,9 +8763,9 @@
    },
    "lore": "인간과 용 사이에서 태어난 떠돌이. 레온의 첫 번째 동료이자 바르그라드의 아들.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0704,
+    "ad_mult": 1.0704,
+    "skill_mult": 1.0704
    }
   },
   {
@@ -8825,9 +8825,9 @@
    },
    "lore": "그림자 속에서 자란 용족.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9503,
+    "ad_mult": 0.9503,
+    "skill_mult": 0.9503
    }
   },
   {
@@ -8889,9 +8889,9 @@
    },
    "lore": "자신의 비늘을 화살촉으로 쓰는 사수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9675,
+    "ad_mult": 0.9675,
+    "skill_mult": 0.9675
    }
   },
   {
@@ -8945,9 +8945,9 @@
    },
    "lore": "용의 말을 전하는 무녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0379,
+    "ad_mult": 1.0379,
+    "skill_mult": 1.0379
    }
   },
   {
@@ -9007,9 +9007,9 @@
    },
    "lore": "마지막으로 부화한 새끼용을 돌보는 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -9068,9 +9068,9 @@
    },
    "lore": "용의 불을 포탄으로 쓰는 사수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0905,
+    "ad_mult": 1.0905,
+    "skill_mult": 1.0905
    }
   },
   {
@@ -9124,9 +9124,9 @@
    },
    "lore": "둥지 입구를 지키는 젊은 경비.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.8906,
+    "ad_mult": 0.8906,
+    "skill_mult": 0.8906
    }
   },
   {
@@ -9180,9 +9180,9 @@
    },
    "lore": "용의 언어로 노래하는 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1526,
+    "ad_mult": 1.1526,
+    "skill_mult": 1.1526
    }
   },
   {
@@ -9309,9 +9309,9 @@
    },
    "lore": "부족 연맹의 대족장. 힘으로 모든 것을 결정한다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1119,
+    "ad_mult": 1.1119,
+    "skill_mult": 1.1119
    }
   },
   {
@@ -9422,9 +9422,9 @@
    },
    "lore": "투기장에서 100승을 거둔 검투사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -9486,9 +9486,9 @@
    },
    "lore": "호랑이의 눈으로 활을 쏜다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0253,
+    "ad_mult": 1.0253,
+    "skill_mult": 1.0253
    }
   },
   {
@@ -9549,9 +9549,9 @@
    },
    "lore": "와이번을 맨손으로 길들였다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9446,
+    "ad_mult": 0.9446,
+    "skill_mult": 0.9446
    }
   },
   {
@@ -9607,9 +9607,9 @@
    },
    "lore": "등껍질이 방패인 거북 수인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.898,
+    "ad_mult": 0.898,
+    "skill_mult": 0.898
    }
   },
   {
@@ -9669,9 +9669,9 @@
    },
    "lore": "야수와 대화하는 조련사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.142,
+    "ad_mult": 1.142,
+    "skill_mult": 1.142
    }
   },
   {
@@ -9730,9 +9730,9 @@
    },
    "lore": "키 4미터의 거인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0706,
+    "ad_mult": 1.0706,
+    "skill_mult": 1.0706
    }
   },
   {
@@ -9792,9 +9792,9 @@
    },
    "lore": "표범처럼 빠른 수인.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0366,
+    "ad_mult": 1.0366,
+    "skill_mult": 1.0366
    }
   },
   {
@@ -9847,9 +9847,9 @@
    },
    "lore": "곰처럼 크고 따뜻한 치유사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0462,
+    "ad_mult": 1.0462,
+    "skill_mult": 1.0462
    }
   },
   {
@@ -9903,9 +9903,9 @@
    },
    "lore": "코뿔소 수인 방패병.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9641,
+    "ad_mult": 0.9641,
+    "skill_mult": 0.9641
    }
   },
   {
@@ -9959,9 +9959,9 @@
    },
    "lore": "불장난을 좋아하는 고블린.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0836,
+    "ad_mult": 1.0836,
+    "skill_mult": 1.0836
    }
   },
   {
@@ -10015,9 +10015,9 @@
    },
    "lore": "북을 치면 모두가 빨라진다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -10077,9 +10077,9 @@
    },
    "lore": "고철로 포탑을 만드는 고블린.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0616,
+    "ad_mult": 1.0616,
+    "skill_mult": 1.0616
    }
   },
   {
@@ -10132,9 +10132,9 @@
    },
    "lore": "성교국의 성녀. 교황이 재의 날개를 '신의 심판'이라 부르자 교단을 떠났다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.8878,
+    "ad_mult": 0.8878,
+    "skill_mult": 0.8878
    }
   },
   {
@@ -10190,9 +10190,9 @@
    },
    "lore": "성기사단의 수장. 성녀를 따라 교단을 떠났다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.86,
+    "ad_mult": 0.86,
+    "skill_mult": 0.86
    }
   },
   {
@@ -10315,9 +10315,9 @@
    },
    "lore": "천사를 부르는 수녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -10371,9 +10371,9 @@
    },
    "lore": "대성당의 문을 지키던 수호자.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.894,
+    "ad_mult": 0.894,
+    "skill_mult": 0.894
    }
   },
   {
@@ -10427,9 +10427,9 @@
    },
    "lore": "빛으로 적을 태우는 마법사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0932,
+    "ad_mult": 1.0932,
+    "skill_mult": 1.0932
    }
   },
   {
@@ -10489,9 +10489,9 @@
    },
    "lore": "활을 쏘는 수녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9327,
+    "ad_mult": 0.9327,
+    "skill_mult": 0.9327
    }
   },
   {
@@ -10545,9 +10545,9 @@
    },
    "lore": "찬송가로 마력을 북돋는 성가대장.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   },
   {
@@ -10607,9 +10607,9 @@
    },
    "lore": "순례길에서 괴물과 싸우는 전사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9295,
+    "ad_mult": 0.9295,
+    "skill_mult": 0.9295
    }
   },
   {
@@ -10663,9 +10663,9 @@
    },
    "lore": "성검을 수련하는 젊은이.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0267,
+    "ad_mult": 1.0267,
+    "skill_mult": 1.0267
    }
   },
   {
@@ -10720,9 +10720,9 @@
    },
    "lore": "악령을 쫓는 퇴마사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0393,
+    "ad_mult": 1.0393,
+    "skill_mult": 1.0393
    }
   },
   {
@@ -10845,9 +10845,9 @@
    },
    "lore": "그리폰을 타는 견습 기수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9385,
+    "ad_mult": 0.9385,
+    "skill_mult": 0.9385
    }
   },
   {
@@ -10907,9 +10907,9 @@
    },
    "lore": "성당을 짓는 건축가.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9315,
+    "ad_mult": 0.9315,
+    "skill_mult": 0.9315
    }
   },
   {
@@ -10969,9 +10969,9 @@
    },
    "lore": "레온이 속한 용병단 '회색 늑대'의 단장. 레온에게 검을 가르쳤다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.1588,
+    "ad_mult": 1.1588,
+    "skill_mult": 1.1588
    }
   },
   {
@@ -11030,9 +11030,9 @@
    },
    "lore": "대륙 최고의 현상금 사냥꾼. 레온의 목에 걸린 현상금을 보고 찾아왔다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0622,
+    "ad_mult": 1.0622,
+    "skill_mult": 1.0622
    }
   },
   {
@@ -11097,9 +11097,9 @@
    },
    "lore": "말수가 적고 도끼가 큰 용병.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9504,
+    "ad_mult": 0.9504,
+    "skill_mult": 0.9504
    }
   },
   {
@@ -11216,9 +11216,9 @@
    },
    "lore": "돈을 받으면 어디든 강하한다.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.95,
+    "ad_mult": 0.95,
+    "skill_mult": 0.95
    }
   },
   {
@@ -11274,9 +11274,9 @@
    },
    "lore": "주군을 잃고 용병이 된 늙은 기사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9037,
+    "ad_mult": 0.9037,
+    "skill_mult": 0.9037
    }
   },
   {
@@ -11391,9 +11391,9 @@
    },
    "lore": "전장을 따라다니는 의사.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.91,
+    "ad_mult": 0.91,
+    "skill_mult": 0.91
    }
   },
   {
@@ -11455,9 +11455,9 @@
    },
    "lore": "숲에서 사냥하던 사냥꾼.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9554,
+    "ad_mult": 0.9554,
+    "skill_mult": 0.9554
    }
   },
   {
@@ -11517,9 +11517,9 @@
    },
    "lore": "카드로 불운을 점치는 집시.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0258,
+    "ad_mult": 1.0258,
+    "skill_mult": 1.0258
    }
   },
   {
@@ -11579,9 +11579,9 @@
    },
    "lore": "마차에 발명품을 싣고 다니는 발명가.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9783,
+    "ad_mult": 0.9783,
+    "skill_mult": 0.9783
    }
   },
   {
@@ -11635,9 +11635,9 @@
    },
    "lore": "용병단에 막 들어온 신참.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 0.9252,
+    "ad_mult": 0.9252,
+    "skill_mult": 0.9252
    }
   },
   {
@@ -11697,9 +11697,9 @@
    },
    "lore": "들개들과 함께 다니는 소녀.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.0773,
+    "ad_mult": 1.0773,
+    "skill_mult": 1.0773
    }
   },
   {
@@ -11753,9 +11753,9 @@
    },
    "lore": "선술집에서 노래하는 가수.",
    "balance": {
-    "hp_mult": 1.0,
-    "ad_mult": 1.0,
-    "skill_mult": 1.0
+    "hp_mult": 1.16,
+    "ad_mult": 1.16,
+    "skill_mult": 1.16
    }
   }
  ]
