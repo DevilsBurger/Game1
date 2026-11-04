@@ -29,10 +29,11 @@ L += ["", "## 계층별 분포", "", "| 계층 | 등급 | 인원 |", "|---|---|-
 RAR = {1: '일반', 2: '고급', 3: '희귀', 4: '영웅', 5: '전설'}
 for t in range(1, 6):
     L.append(f"| {t} | {RAR[t]} | {sum(1 for h in heroes['heroes'] if h['tier']==t)} |")
-L += ["", "## 전체 목록", "", "| ID | 이름 | 칭호 | 출신 | 직업 | 계층 | HP | AD | AS | 방어 | 마저 | 사거리 | 마나 | 스킬 | 스킬 원형 | 스킬 설명 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+L += ["", "## 전체 목록 (밸런스 배율 반영 최종 수치)", "", "| ID | 이름 | 칭호 | 출신 | 직업 | 계층 | HP ★1/★2/★3 | AD ★1/★2/★3 | AS | 방어 | 마저 | 사거리 | 마나 | 스킬 | 스킬 원형 | 스킬 설명 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
 for h in heroes["heroes"]:
-    s = h["stats"]; b = h.get("balance", {})
-    hp = round(s["hp"] * b.get("hp_mult", 1)); ad = round(s["ad"] * b.get("ad_mult", 1))
+    s = h["stats"]; b = h.get("balance", {}); sm = b.get("star_mult", [1, 1, 1])
+    hp = "/".join(str(round(s["hp"] * b.get("hp_mult", 1) * sm[i] * h["star_scaling"]["hp"][i])) for i in range(3))
+    ad = "/".join(str(round(s["ad"] * b.get("ad_mult", 1) * sm[i] * h["star_scaling"]["ad"][i])) for i in range(3))
     L.append(f"| {h['id']} | {h['name_ko']} | {h['title']} | {ON[h['origin']]} | {CN[h['class']]} | {h['tier']} | {hp} | {ad} | {s['attack_speed']} | {s['armor']} | {s['mr']} | {s['range']} | {s['mana_start']}/{s['mana_max']} | {h['skill']['name']} | {h['skill']['archetype']} | {h['skill']['desc']} |")
 L += ["", "## 서사 한 줄", ""]
 for h in heroes["heroes"]:
@@ -49,6 +50,8 @@ for cat, ko in cat_ko.items():
         stats = ", ".join(f"{k} +{v}" for k, v in it["stats"].items()) or "-"
         rec = "+".join(it["recipe"]) if it.get("recipe") else (it.get("base_item") or ("보석 %d" % it["price_gem"] if it.get("price_gem") else "-"))
         price = it.get("price_gold") if it.get("price_gold") is not None else "보석 전용"
+        bm = it.get("balance", {}).get("mult")
+        stats = stats + (f" (×{bm:.2f})" if bm and abs(bm - 1) > 0.005 else "")
         L.append(f"| {it['id']} | {it['name_ko']} | {it['name_en']} | {stats} | {it['desc']} | {rec} | {price} |")
     L.append("")
 w("A2_아이템_목록.md", L)

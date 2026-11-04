@@ -129,8 +129,9 @@ def _item_fight(args):
     d = _G["data"]
     A = [d.hero_spec(h, star, items=([item_id] if (i == carrier_idx and item_id) else [])) for i, h in enumerate(team)]
     B = [d.hero_spec(h, star) for h in team]
-    r = Battle(d, A, B, seed=seed).run()
-    return item_id, 1 if r["winner"] == 0 else 0
+    side = seed & 1  # 잔여 배치 비대칭 상쇄: 절반은 아이템 팀을 우측에 배치
+    r = Battle(d, A, B, seed=seed).run() if side == 0 else Battle(d, B, A, seed=seed).run()
+    return item_id, 1 if r["winner"] == side else 0
 
 
 def item_phase_eval(pool, data, ref_teams, item_ids, fights, seed_base, star=1):
@@ -173,6 +174,9 @@ def main():
     ap.add_argument("--procs", type=int, default=4)
     ap.add_argument("--band", type=float, default=0.05)
     ap.add_argument("--seed", type=int, default=2026)
+    ap.add_argument("--exp", type=float, default=0.42, help="조정 지수 (0.5/wr)^exp")
+    ap.add_argument("--clamp", type=float, default=0.15, help="1회 조정 상한 ±")
+    ap.add_argument("--stop-band", type=float, default=0.96)
     args = ap.parse_args()
 
     heroes_doc = json.load(open(os.path.join(DATA, "heroes.json"), encoding="utf-8"))
@@ -183,45 +187,49 @@ def main():
     t0 = time.time()
 
     if args.phase in ("hero", "all"):
+        for h in heroes.values():
+            h["balance"].setdefault("star_mult", [1.0, 1.0, 1.0])
         for it in range(args.iters):
             with Pool(args.procs, initializer=_init, initargs=(heroes_doc, items_doc)) as pool:
-                ev1 = hero_phase_eval(pool, by_tier, args.appearances, 1, args.seed + it)
-                ev3 = hero_phase_eval(pool, by_tier, args.appearances * 2 // 3, 3, args.seed + 50 + it)
-            # 혼합 목적함수: ★1 60% + ★3 40%
-            ev = {h: dict(v, wr=0.6 * v["wr"] + 0.4 * ev3[h]["wr"], wr1=v["wr"], wr3=ev3[h]["wr"]) for h, v in ev1.items()}
-            wrs = [v["wr"] for v in ev.values()]
-            inband = sum(1 for w in wrs if abs(w - 0.5) <= args.band) / len(wrs)
-            sd = statistics.pstdev(wrs)
-            print(f"[hero iter {it}] mean={statistics.mean(wrs):.3f} sd={sd:.3f} in-band={inband:.1%} min={min(wrs):.3f} max={max(wrs):.3f} t={time.time()-t0:.0f}s", flush=True)
-            history["hero"].append({"iter": it, "sd": sd, "in_band": inband, "min": min(wrs), "max": max(wrs),
-                                    "sd_star1": statistics.pstdev([v["wr1"] for v in ev.values()]), "sd_star3": statistics.pstdev([v["wr3"] for v in ev.values()])})
-            if inband >= 0.97 and it >= 2: break
-            # 조정
-            for hid, v in ev.items():
-                wr = v["wr"]
-                f = (0.5 / max(0.05, wr)) ** 0.42
-                f = max(0.86, min(1.16, f))
-                if abs(wr - 0.5) <= args.band * 0.5: f = 1.0
-                b = heroes[hid]["balance"]
-                b["hp_mult"] = round(b["hp_mult"] * f, 4); b["ad_mult"] = round(b["ad_mult"] * f, 4); b["skill_mult"] = round(b["skill_mult"] * f, 4)
+                evs = {1: hero_phase_eval(pool, by_tier, args.appearances, 1, args.seed + it),
+                       2: hero_phase_eval(pool, by_tier, args.appearances * 2 // 3, 2, args.seed + 50 + it),
+                       3: hero_phase_eval(pool, by_tier, args.appearances * 2 // 3, 3, args.seed + 100 + it)}
+            stat = {}
+            for star, ev in evs.items():
+                wrs = [v["wr"] for v in ev.values()]
+                stat[star] = dict(sd=statistics.pstdev(wrs), in_band=sum(1 for w in wrs if abs(w - 0.5) <= args.band) / len(wrs), min=min(wrs), max=max(wrs))
+            print(f"[hero iter {it}] " + " | ".join(f"★{s_}: sd={v['sd']:.3f} band={v['in_band']:.0%} [{v['min']:.2f},{v['max']:.2f}]" for s_, v in stat.items()) + f" t={time.time()-t0:.0f}s", flush=True)
+            history["hero"].append({"iter": it, **{f"star{s_}": v for s_, v in stat.items()}})
+            if all(v["in_band"] >= args.stop_band for v in stat.values()) and it >= 2: break
+            for star, ev in evs.items():
+                for hid, v in ev.items():
+                    wr = v["wr"]
+                    f = (0.5 / max(0.05, wr)) ** args.exp
+                    f = max(1 - args.clamp, min(1 + args.clamp, f))
+                    if abs(wr - 0.5) <= args.band * 0.4: f = 1.0
+                    b = heroes[hid]["balance"]
+                    b["star_mult"][star - 1] = round(b["star_mult"][star - 1] * f, 4)
             json.dump(heroes_doc, open(os.path.join(DATA, "heroes.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
     # 최종 평가 (영웅)
     with Pool(args.procs, initializer=_init, initargs=(heroes_doc, items_doc)) as pool:
-        ev = hero_phase_eval(pool, by_tier, max(args.appearances, 500), 1, args.seed + 777)
-        ev3 = hero_phase_eval(pool, by_tier, 200, 3, args.seed + 778)
+        ev = hero_phase_eval(pool, by_tier, max(args.appearances, 600), 1, args.seed + 777)
+        ev2 = hero_phase_eval(pool, by_tier, 400, 2, args.seed + 779)
+        ev3 = hero_phase_eval(pool, by_tier, 400, 3, args.seed + 778)
         duel = duel_phase_eval(pool, by_tier, 2, args.seed + 999)
         cross = cross_tier_eval(pool, by_tier, args.seed)
     hero_report = []
     for hid in sorted(ev, key=lambda h: heroes[h]["tier"] * 1000 + int(h[1:])):
         h = heroes[hid]; v = ev[hid]
         hero_report.append(dict(id=hid, name=h["name_ko"], tier=h["tier"], origin=h["origin"], cls=h["class"], arche=h["skill"]["archetype"],
-                                wr_team=round(v["wr"], 3), wr_team_star3=round(ev3[hid]["wr"], 3), wr_duel=round(duel.get(hid, 0.5), 3), n=v["n"],
+                                wr_team=round(v["wr"], 3), wr_team_star2=round(ev2[hid]["wr"], 3), wr_team_star3=round(ev3[hid]["wr"], 3), wr_duel=round(duel.get(hid, 0.5), 3), n=v["n"],
                                 dmg=round(v["dmg"]), taken=round(v["taken"]), heal=round(v["heal"]),
-                                hp_mult=h["balance"]["hp_mult"], ad_mult=h["balance"]["ad_mult"], skill_mult=h["balance"]["skill_mult"]))
+                                star_mult=h["balance"].get("star_mult", [1.0, 1.0, 1.0])))
     json.dump({"history": history["hero"], "cross_tier": cross, "heroes": hero_report}, open(os.path.join(REP, "hero_balance.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    wrs = [r["wr_team"] for r in hero_report]
-    print(f"[hero final] sd={statistics.pstdev(wrs):.3f} in-band={sum(1 for w in wrs if abs(w-0.5)<=args.band)/len(wrs):.1%} cross={cross}", flush=True)
+    for key in ("wr_team", "wr_team_star2", "wr_team_star3"):
+        wrs = [r[key] for r in hero_report]
+        print(f"[hero final {key}] sd={statistics.pstdev(wrs):.3f} in-band={sum(1 for w in wrs if abs(w-0.5)<=args.band)/len(wrs):.1%}", flush=True)
+    print("cross-tier", cross, flush=True)
 
     if args.phase in ("item", "all"):
         data = GameData(heroes=heroes_doc, items=items_doc)

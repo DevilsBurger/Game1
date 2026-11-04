@@ -406,7 +406,8 @@ class Battle:
             sec = int(t)
             tick1s = sec != last_sec
             last_sec = sec
-            for u in self.units:
+            order = self.units if (int(round(t / DT)) & 1) == 0 else self.units[::-1]
+            for u in order:
                 if not u.alive: continue
                 self.step_unit(u)
             if tick1s:

@@ -28,7 +28,8 @@ class GameData:
         h = self.heroes[hero_id] if hero_id in self.heroes else self.player
         b = h.get("balance", {})
         s = h["stats"]
-        hp_m, ad_m, sk_m = b.get("hp_mult", 1.0), b.get("ad_mult", 1.0), b.get("skill_mult", 1.0)
+        sm = b.get("star_mult", [1.0, 1.0, 1.0])[star - 1]
+        hp_m, ad_m, sk_m = b.get("hp_mult", 1.0) * sm, b.get("ad_mult", 1.0) * sm, b.get("skill_mult", 1.0) * sm
         sh, sa = h["star_scaling"]["hp"][star - 1], h["star_scaling"]["ad"][star - 1]
         return {
             "id": h["id"], "name": h["name_ko"], "origin": h["origin"], "class": h["class"], "tier": h["tier"], "star": star,
