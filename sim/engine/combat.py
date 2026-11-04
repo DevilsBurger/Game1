@@ -37,7 +37,7 @@ class Unit:
         self.items = spec.get("items", [])
         # 정적 수정치 (아이템/특성)
         self.mod = dict(ad_pct=0.0, ad_flat=0.0, ap=0.0, hp=0.0, hp_pct=0.0, armor=0.0, mr=0.0, as_pct=0.0, mana=0.0, crit=0.0, crit_dmg=0.0,
-                        omnivamp=0.0, durability=0.0, range=0, dmg_amp=0.0, heal_recv=0.0, magic_dr=0.0, armor_shred=0.0, mr_shred=0.0, skill_dmg=0.0)
+                        omnivamp=0.0, durability=0.0, range=0, dmg_amp=0.0, heal_recv=0.0, magic_dr=0.0, armor_shred=0.0, mr_shred=0.0, skill_dmg=0.0, structure_dmg=0.0)
         self.buffs = []  # [stat, value, until]
         self.dirty = True
         self.shields = []  # [amount, until]
@@ -45,6 +45,7 @@ class Unit:
         self.next_attack = 0.0; self.cast_until = 0.0; self.next_move = 0.0; self.move_cd = MOVE_INTERVAL
         self.pos = None; self.target = None; self.alive = True; self.lifetime_until = spec.get("lifetime_until", 1e9)
         self.hooks = {}; self.state = {}
+        if spec.get("state"): self.state.update(spec["state"])
         self.stats = dict(dmg=0.0, taken=0.0, heal=0.0, kills=0, casts=0, mitigated=0.0)
         self.empowered = 0; self.attack_count = 0; self.dots = []  # [dps, until, src, kind]
         self.stasis_until = 0.0; self.front = False; self.summons = []; self.spawned_by = spec.get("spawned_by"); self.dead_time = None
@@ -126,6 +127,8 @@ class Battle:
         self.dmg_mult_global = 1.0
         self.pending_summons = []
         self.trait_counts_override = trait_counts
+        self.waves = [list(w) for w in self.rules.get("waves", [])]  # 웨이브 2..N의 적 스펙
+        self.wave_index = 1; self.wave_t0 = 0.0
         self._place_team(allies, 0)
         self._place_team(enemies, 1)
         self._setup()
@@ -135,13 +138,14 @@ class Battle:
         cols_front = [3, 2, 1, 0] if team == 0 else [4, 5, 6, 7]
         cols_back = [0, 1, 2, 3] if team == 0 else [7, 6, 5, 4]
         rows = list(range(ROWS)); self.rng.shuffle(rows)
-        order = sorted(range(len(specs)), key=lambda i: (specs[i]["range"] > 1, i))  # 근접 먼저
+        order = sorted(range(len(specs)), key=lambda i: (specs[i].get("is_structure", False), specs[i]["range"] > 1, i))  # 근접 먼저, 구조물은 마지막(후열)
+        placed = []
         for i in order:
             spec = specs[i]
             u = Unit(self.uid_seq, team, spec, self.rng); self.uid_seq += 1
             pos = spec.get("pos")
             if pos is None or pos in self.occ:
-                pref = cols_front if spec["range"] <= 1 else ([1, 0, 2, 3] if team == 0 else [6, 7, 5, 4])
+                pref = cols_front if (spec["range"] <= 1 and not spec.get("is_structure")) else ([1, 0, 2, 3] if team == 0 else [6, 7, 5, 4])
                 pos = None
                 for c in pref:
                     for r in sorted(rows, key=lambda r: abs(r - 3)):
@@ -153,28 +157,41 @@ class Battle:
                     if cell not in self.occ and ((cell[0] < 4) == (team == 0)):
                         pos = cell; break
             u.pos = pos; self.occ[pos] = u
-            self.units.append(u)
-        for u in self.units:
-            if u.team == team:
-                u.front = (u.pos[0] in (2, 3)) if team == 0 else (u.pos[0] in (4, 5))
+            self.units.append(u); placed.append(u)
+        for u in placed:
+            u.front = (u.pos[0] in (2, 3)) if team == 0 else (u.pos[0] in (4, 5))
+        return placed
 
-    def _setup(self):
+    def _setup(self, units=None):
         from .traits import apply_traits
         from .items import apply_items
-        for u in self.units:
+        units = self.units if units is None else units
+        for u in units:
             u.mod["mana"] = 0.0
-        apply_items(self)
-        apply_traits(self)
-        for u in self.units:
+        apply_items(self, units)
+        apply_traits(self, units)
+        for u in units:
             u.max_hp = u.max_hp * (1 + u.mod["hp_pct"] / 100.0) + u.mod["hp"]
             u.hp = u.max_hp
             u.mana_max = max(10.0, u.mana_max)
             u.mana = min(u.mana_max - 1, u.mana_start + u.mod["mana"])
             u.recalc()
-            u.next_attack = self.rng.random() * 0.3
-            u.next_move = 0.0
-        for u in list(self.units):
+            u.next_attack = self.t + self.rng.random() * 0.3
+            u.next_move = self.t
+            if u.state.get("captive"): u.stasis_until = 1e9
+        for u in list(units):
             u.fire(self, "start")
+
+    def _next_wave(self):
+        specs = self.waves.pop(0)
+        self.wave_index += 1
+        new_units = self._place_team(specs, 1)
+        self._setup(new_units)
+        for u in self.units:
+            if u.alive and u.team == 0:
+                u.target = None
+                u.fire(self, "wave_end")
+        self.wave_t0 = self.t; self.dmg_mult_global = 1.0
 
     # ── 유틸
     def alive_units(self, team=None):
@@ -220,6 +237,7 @@ class Battle:
         raw = amount
         if src is not None:
             raw *= 1 + src.e_dmg_amp / 100.0
+            if dst.is_structure and src.mod["structure_dmg"]: raw *= 1 + src.mod["structure_dmg"] / 100.0
             if is_skill: raw *= 1 + src.mod["skill_dmg"] / 100.0
             r = src.fire(self, "pre_damage", dst, raw, kind, is_skill)
             if r is not None: raw *= r
@@ -292,6 +310,10 @@ class Battle:
         u.fire(self, "died", killer)
         for e in self.units:
             if e.target is u: e.target = None
+        if u.state.get("jailer"):
+            for c in self.units:
+                if c.alive and c.team != u.team and c.state.get("captive"):
+                    c.state["captive"] = False; c.stasis_until = 0.0
 
     def unit_by_uid(self, uid):
         for u in self.units:
@@ -319,6 +341,7 @@ class Battle:
         if not enemies: u.target = None; return
         best = None; bd = 1e9
         for e in enemies:
+            if e.state.get("captive"): continue
             d = hdist(u.pos, e.pos)
             if e.is_structure and not e.state.get("priority"): d += 0.5
             if e.state.get("escort_priority"): d -= 0.75
@@ -401,8 +424,8 @@ class Battle:
         while True:
             self.t += DT
             t = self.t
-            if t > limit:
-                self.dmg_mult_global = 1.0 + 0.5 * (t - limit)
+            if t - self.wave_t0 > limit:
+                self.dmg_mult_global = 1.0 + 0.5 * (t - self.wave_t0 - limit)
             sec = int(t)
             tick1s = sec != last_sec
             last_sec = sec
@@ -422,19 +445,24 @@ class Battle:
                             self.damage(src if (src is not None and src.alive) else None, u, d[0], d[3], is_skill=True)
                         if not u.alive: continue
                     u.fire(self, "tick1s")
+                    if u.is_structure and u.state.get("arrow_aura_pct"):
+                        for e in self.enemies_of(u):
+                            if not e.is_structure: self.damage(None, e, e.max_hp * u.state["arrow_aura_pct"] / 100.0, "true")
             a = any(u.alive and not u.is_structure and not u.no_attack for u in self.units if u.team == 0)
-            b = any(u.alive and not u.is_structure and not u.no_attack for u in self.units if u.team == 1)
+            b = any(u.alive and ((not u.no_attack and not u.is_structure) or (u.is_structure and u.state.get("must_destroy", True))) for u in self.units if u.team == 1)
+            if not b and self.waves and a:
+                self._next_wave(); continue
             must = [u for u in self.units if u.state.get("must_survive")]
             lost = any(not u.alive for u in must)
             if lost: self.winner = 1 if any(u.team == 0 for u in must if not u.alive) else 0; break
             if self.rules.get("assassination") and not any(u.alive for u in self.units if u.state.get("commander")):
                 self.winner = 0; break
-            if self.rules.get("escape") and t >= 30.0 and a:
+            if self.rules.get("escape") and t - self.wave_t0 >= 30.0 and a:
                 self.winner = 0; break
             if not a and not b: self.winner = -1; break
             if not a: self.winner = 1; break
             if not b: self.winner = 0; break
-            if t >= limit + OVERTIME:
+            if t - self.wave_t0 >= limit + OVERTIME:
                 ha = sum(u.hp_pct() for u in self.units if u.alive and u.team == 0)
                 hb = sum(u.hp_pct() for u in self.units if u.alive and u.team == 1)
                 self.winner = 0 if ha > hb else 1
@@ -442,7 +470,7 @@ class Battle:
         return self.result()
 
     def result(self):
-        return {"winner": self.winner, "time": round(self.t, 2),
+        return {"winner": self.winner, "time": round(self.t, 2), "waves": self.wave_index,
                 "units": [{"uid": u.uid, "team": u.team, "id": u.hid, "name": u.name, "alive": u.alive, "hp": round(max(0, u.hp)), "max_hp": round(u.max_hp),
                            "is_summon": u.is_summon or u.is_turret, "stats": {k: round(v) for k, v in u.stats.items()}} for u in self.units]}
 

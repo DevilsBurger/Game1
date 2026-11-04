@@ -7,11 +7,11 @@ STAT_MAP = {"ad_pct": "ad_pct", "ap": "ap", "hp": "hp", "armor": "armor", "mr": 
             "omnivamp": "omnivamp", "durability": "durability"}
 
 
-def apply_items(b):
+def apply_items(b, only_units=None):
     data = b.data
     # 그란두르 item_mult은 traits 적용 전이므로 출신 카운트로 선계산
     for team in (0, 1):
-        units = [u for u in b.units if u.team == team and not u.is_summon]
+        units = [u for u in (only_units if only_units is not None else b.units) if u.team == team and not u.is_summon]
         gcount = len({u.hid for u in units if u.origin == "grandur"})
         gl = 0
         for i, th in enumerate(data.origins["grandur"]["thresholds"]):
@@ -27,8 +27,8 @@ def apply_items(b):
                     fn = HOOKS.get(h["type"])
                     if fn: fn(b, u, dict(h.get("params", {})), mult)
     # 오라(아군) 적용: 시작 배치 기준
-    for u in b.units:
-        for aura in u.state.get("auras", []):
+    for u in (only_units if only_units is not None else b.units):
+        for aura in u.state.pop("auras", []):
             r = aura.get("radius", 1)
             for a in b.units:
                 if a.team != u.team or a is u or a.is_summon: continue
@@ -53,6 +53,8 @@ def _apply_aura(b, a, aura):
         elif k == "summon_stat_pct": a.state["summon_bonus_pct"] = a.state.get("summon_bonus_pct", 0) + v
         elif k == "turret_stat_pct": a.state["turret_bonus_pct"] = a.state.get("turret_bonus_pct", 0) + v
         elif k == "start_as_pct": a.on("start", lambda b, u, p: u.add_buff("as_pct", p["v"], b.t + p["d"]), {"v": v, "d": aura.get("start_as_dur", 6)})
+        elif k == "structure_dmg_pct": a.mod["structure_dmg"] += v
+        elif k == "heal_on_wave_pct": a.on("wave_end", lambda b, u, p: b.heal(u, u, u.max_hp * p["pct"] / 100.0), {"pct": v})
 
 
 # ── 훅 구현. 시그니처: fn(b, u, params, mult)

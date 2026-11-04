@@ -15,10 +15,23 @@ def _v(arr, lvl):
     return arr[min(lvl, len(arr)) - 1]
 
 
-def apply_traits(b):
+def scale_eff(eff, mult):
+    """리스트형 수치에 임계값 배율 적용. '_mult'로 끝나는 키는 (v-1)*mult+1 형태로 적용."""
+    if abs(mult - 1.0) < 1e-9: return eff
+    out = {}
+    for k, v in eff.items():
+        if isinstance(v, list) and v and all(isinstance(x, (int, float)) for x in v):
+            out[k] = [((x - 1) * mult + 1) if k.endswith("_mult") else x * mult for x in v]
+        else:
+            out[k] = v
+    return out
+
+
+def apply_traits(b, only_units=None):
     data = b.data
     for team in (0, 1):
-        units = [u for u in b.units if u.team == team and not u.is_summon and not u.is_turret and not u.is_structure]
+        units = [u for u in (only_units if only_units is not None else b.units) if u.team == team and not u.is_summon and not u.is_turret and not u.is_structure]
+        if not units: continue
         counts = {}
         if b.trait_counts_override and team in b.trait_counts_override:
             counts = dict(b.trait_counts_override[team])
@@ -43,11 +56,13 @@ def apply_traits(b):
         n_origins = len([k for k in counts if k in data.origins])
         for tr, lvl in active.items():
             if tr in data.origins:
-                eff = data.origins[tr]["effects"]
+                tdef = data.origins[tr]
+                eff = scale_eff(tdef["effects"], tdef.get("balance", {}).get("mult", [1.0] * 8)[lvl - 1])
                 holders = [u for u in units if u.origin == tr or tr in u.state.get("extra_traits", [])]
                 ORIGIN_IMPL[tr](b, units, holders, eff, lvl, n_origins)
             else:
-                eff = data.classes[tr]["effects"]
+                tdef = data.classes[tr]
+                eff = scale_eff(tdef["effects"], tdef.get("balance", {}).get("mult", [1.0] * 8)[lvl - 1])
                 holders = [u for u in units if u.cls == tr or tr in u.state.get("extra_traits", [])]
                 CLASS_IMPL[tr](b, units, holders, eff, lvl)
 
