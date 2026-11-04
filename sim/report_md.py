@@ -55,9 +55,12 @@ def item_md():
     for c, v in byc.items(): L.append(f"| {c} | {target.get(c, '-')} | {statistics.mean(v):+.3f} | {statistics.pstdev(v):.3f} | {len(v)} |")
     L += ["", "## 수렴 이력", ""]
     for h in r["history"]: L.append(f"- 반복 {h['iter']}: 기준선 {h['base']:.3f}, " + ", ".join(f"{c} 평균 {v[0]:+.3f}(sd {v[1]:.3f})" for c, v in h["summary"].items()))
-    L += ["", "## 아이템별 결과", "", "| ID | 아이템 | 분류 | Δ 승률 | 배율 | 캐리어 역할 |", "|---|---|---|---|---|---|"]
+    flagged = [x for x in r["items"] if x.get("flag")]
+    L += ["", f"## 상황 의존형 아이템 (배율 한계 0.4~2.0에서도 목표 밖, 디자이너 검토 대상: {len(flagged)}개)", ""]
+    for x in flagged: L.append(f"- {x['name']} ({x['category']}): Δ {x['delta']:+.3f}, 배율 ×{x['mult']:.2f}")
+    L += ["", "## 아이템별 결과", "", "| ID | 아이템 | 분류 | Δ 승률 | 배율 | 캐리어 역할 | 비고 |", "|---|---|---|---|---|---|---|"]
     for x in sorted(r["items"], key=lambda x: (x["category"], x["id"])):
-        L.append(f"| {x['id']} | {x['name']} | {x['category']} | {x['delta']:+.3f} | {x['mult']:.2f} | {', '.join(x['carriers'])} |")
+        L.append(f"| {x['id']} | {x['name']} | {x['category']} | {x['delta']:+.3f} | {x['mult']:.2f} | {', '.join(x['carriers'])} | {x.get('flag','')} |")
     open(os.path.join(OUT, "B2_아이템_밸런스.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 

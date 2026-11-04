@@ -2,110 +2,214 @@
  "history": [
   {
    "iter": 0,
-   "base": 0.49166666666666664,
+   "base": 0.5119047619047619,
    "summary": {
     "completed": [
-     0.244,
-     0.118
+     0.1,
+     0.039
     ],
     "radiant": [
-     0.321,
-     0.127
+     0.171,
+     0.048
     ],
     "artifact": [
-     0.285,
-     0.137
+     0.125,
+     0.064
     ],
     "support": [
-     0.118,
-     0.077
+     0.038,
+     0.022
     ],
     "national": [
-     0.258,
-     0.095
+     0.11,
+     0.044
     ]
    }
   },
   {
    "iter": 1,
-   "base": 0.48333333333333334,
+   "base": 0.49702380952380953,
    "summary": {
     "completed": [
-     0.215,
-     0.096
+     0.119,
+     0.032
     ],
     "radiant": [
-     0.306,
-     0.104
+     0.197,
+     0.033
     ],
     "artifact": [
-     0.264,
-     0.128
+     0.145,
+     0.05
     ],
     "support": [
-     0.113,
-     0.042
+     0.076,
+     0.026
     ],
     "national": [
-     0.239,
-     0.086
+     0.122,
+     0.029
     ]
    }
   },
   {
    "iter": 2,
-   "base": 0.48333333333333334,
+   "base": 0.4880952380952381,
    "summary": {
     "completed": [
-     0.162,
-     0.073
+     0.118,
+     0.029
     ],
     "radiant": [
-     0.276,
-     0.091
+     0.205,
+     0.033
     ],
     "artifact": [
-     0.225,
-     0.112
+     0.149,
+     0.046
     ],
     "support": [
-     0.092,
-     0.043
+     0.084,
+     0.019
     ],
     "national": [
-     0.187,
-     0.08
+     0.125,
+     0.02
     ]
    }
   },
   {
    "iter": 3,
-   "base": 0.4875,
+   "base": 0.4851190476190476,
    "summary": {
     "completed": [
-     0.144,
-     0.054
+     0.117,
+     0.03
     ],
     "radiant": [
-     0.248,
-     0.068
+     0.198,
+     0.031
     ],
     "artifact": [
-     0.199,
-     0.094
+     0.148,
+     0.044
     ],
     "support": [
-     0.088,
+     0.083,
+     0.023
+    ],
+    "national": [
+     0.125,
+     0.032
+    ]
+   }
+  },
+  {
+   "iter": 4,
+   "base": 0.5,
+   "summary": {
+    "completed": [
+     0.115,
+     0.024
+    ],
+    "radiant": [
+     0.194,
+     0.03
+    ],
+    "artifact": [
+     0.147,
+     0.043
+    ],
+    "support": [
+     0.077,
+     0.017
+    ],
+    "national": [
+     0.124,
+     0.027
+    ]
+   }
+  },
+  {
+   "iter": 5,
+   "base": 0.5208333333333334,
+   "summary": {
+    "completed": [
+     0.123,
+     0.027
+    ],
+    "radiant": [
+     0.19,
+     0.031
+    ],
+    "artifact": [
+     0.144,
+     0.046
+    ],
+    "support": [
+     0.083,
+     0.035
+    ],
+    "national": [
+     0.133,
+     0.03
+    ]
+   }
+  },
+  {
+   "iter": 6,
+   "base": 0.5267857142857143,
+   "summary": {
+    "completed": [
+     0.108,
+     0.024
+    ],
+    "radiant": [
+     0.184,
+     0.028
+    ],
+    "artifact": [
+     0.146,
+     0.044
+    ],
+    "support": [
+     0.08,
      0.019
     ],
     "national": [
-     0.157,
-     0.058
+     0.119,
+     0.024
+    ]
+   }
+  },
+  {
+   "iter": 7,
+   "base": 0.5476190476190477,
+   "summary": {
+    "completed": [
+     0.111,
+     0.025
+    ],
+    "radiant": [
+     0.184,
+     0.032
+    ],
+    "artifact": [
+     0.144,
+     0.049
+    ],
+    "support": [
+     0.078,
+     0.019
+    ],
+    "national": [
+     0.13,
+     0.025
     ]
    }
   }
  ],
- "base": 0.48055555555555557,
+ "base": 0.496031746031746,
  "ref_teams": [
   [
    [
@@ -209,8 +313,8 @@
    "id": "I001",
    "name": "피의 쌍검",
    "category": "completed",
-   "delta": 0.139,
-   "mult": 0.422,
+   "delta": 0.131,
+   "mult": 0.5193,
    "carriers": [
     "ad"
    ]
@@ -219,8 +323,8 @@
    "id": "I002",
    "name": "용살자의 장검",
    "category": "completed",
-   "delta": 0.117,
-   "mult": 1.0,
+   "delta": 0.127,
+   "mult": 1.443,
    "carriers": [
     "ad",
     "ap"
@@ -230,8 +334,8 @@
    "id": "I003",
    "name": "용맹의 맹세",
    "category": "completed",
-   "delta": 0.192,
-   "mult": 0.4096,
+   "delta": 0.151,
+   "mult": 0.3596,
    "carriers": [
     "ad",
     "tank"
@@ -241,8 +345,8 @@
    "id": "I004",
    "name": "약탈자의 발톱",
    "category": "completed",
-   "delta": 0.208,
-   "mult": 0.4096,
+   "delta": 0.133,
+   "mult": 0.3274,
    "carriers": [
     "ad",
     "tank"
@@ -252,8 +356,8 @@
    "id": "I005",
    "name": "흡혈의 장검",
    "category": "completed",
-   "delta": 0.136,
-   "mult": 0.7465,
+   "delta": 0.137,
+   "mult": 0.9928,
    "carriers": [
     "ad",
     "tank"
@@ -263,8 +367,8 @@
    "id": "I006",
    "name": "쌍둥이 폭풍",
    "category": "completed",
-   "delta": 0.175,
-   "mult": 0.5159,
+   "delta": 0.157,
+   "mult": 0.5267,
    "carriers": [
     "ad"
    ]
@@ -273,8 +377,8 @@
    "id": "I007",
    "name": "창술사의 창",
    "category": "completed",
-   "delta": 0.103,
-   "mult": 0.4205,
+   "delta": 0.153,
+   "mult": 0.7261,
    "carriers": [
     "ad",
     "ap"
@@ -284,8 +388,8 @@
    "id": "I008",
    "name": "무한의 대검",
    "category": "completed",
-   "delta": 0.183,
-   "mult": 0.5398,
+   "delta": 0.111,
+   "mult": 0.5177,
    "carriers": [
     "ad"
    ]
@@ -294,8 +398,8 @@
    "id": "I009",
    "name": "핏빛 사냥칼",
    "category": "completed",
-   "delta": 0.133,
-   "mult": 0.6828,
+   "delta": 0.145,
+   "mult": 0.6489,
    "carriers": [
     "ad",
     "bruiser"
@@ -305,8 +409,8 @@
    "id": "I010",
    "name": "맹세의 검",
    "category": "completed",
-   "delta": 0.158,
-   "mult": 0.5216,
+   "delta": 0.117,
+   "mult": 0.4829,
    "carriers": [
     "ad",
     "tank"
@@ -316,7 +420,7 @@
    "id": "I011",
    "name": "대마법사의 모자",
    "category": "completed",
-   "delta": 0.122,
+   "delta": 0.145,
    "mult": 1.806,
    "carriers": [
     "ap"
@@ -326,8 +430,8 @@
    "id": "I012",
    "name": "역병의 서",
    "category": "completed",
-   "delta": 0.156,
-   "mult": 0.5336,
+   "delta": 0.129,
+   "mult": 0.3947,
    "carriers": [
     "ap",
     "tank"
@@ -337,8 +441,8 @@
    "id": "I013",
    "name": "수정 갑옷",
    "category": "completed",
-   "delta": 0.108,
-   "mult": 0.5907,
+   "delta": 0.131,
+   "mult": 0.5094,
    "carriers": [
     "ap",
     "tank"
@@ -348,8 +452,8 @@
    "id": "I014",
    "name": "지식의 서",
    "category": "completed",
-   "delta": 0.122,
-   "mult": 1.9303,
+   "delta": 0.125,
+   "mult": 1.5961,
    "carriers": [
     "ap",
     "tank"
@@ -359,8 +463,8 @@
    "id": "I015",
    "name": "격노의 지팡이",
    "category": "completed",
-   "delta": 0.111,
-   "mult": 0.4127,
+   "delta": 0.151,
+   "mult": 0.3635,
    "carriers": [
     "ad",
     "ap"
@@ -370,8 +474,8 @@
    "id": "I016",
    "name": "푸른 축복",
    "category": "completed",
-   "delta": 0.183,
-   "mult": 1.0,
+   "delta": 0.105,
+   "mult": 1.0029,
    "carriers": [
     "ap"
    ]
@@ -380,8 +484,8 @@
    "id": "I017",
    "name": "보석 장갑",
    "category": "completed",
-   "delta": 0.125,
-   "mult": 1.25,
+   "delta": 0.141,
+   "mult": 1.6298,
    "carriers": [
     "ad",
     "ap"
@@ -391,8 +495,8 @@
    "id": "I018",
    "name": "핏빛 마도서",
    "category": "completed",
-   "delta": 0.092,
-   "mult": 1.0,
+   "delta": 0.133,
+   "mult": 0.8624,
    "carriers": [
     "ap",
     "bruiser"
@@ -402,8 +506,8 @@
    "id": "I019",
    "name": "별의 지팡이",
    "category": "completed",
-   "delta": 0.139,
-   "mult": 0.8535,
+   "delta": 0.137,
+   "mult": 0.7297,
    "carriers": [
     "ap",
     "tank"
@@ -413,7 +517,7 @@
    "id": "I020",
    "name": "전사의 흉갑",
    "category": "completed",
-   "delta": 0.242,
+   "delta": 0.2,
    "mult": 0.4096,
    "carriers": [
     "tank"
@@ -423,8 +527,8 @@
    "id": "I021",
    "name": "태양불꽃 망토",
    "category": "completed",
-   "delta": 0.208,
-   "mult": 0.4096,
+   "delta": 0.149,
+   "mult": 0.2477,
    "carriers": [
     "tank"
    ]
@@ -433,8 +537,8 @@
    "id": "I022",
    "name": "서리 망토",
    "category": "completed",
-   "delta": 0.2,
-   "mult": 0.512,
+   "delta": 0.135,
+   "mult": 0.4577,
    "carriers": [
     "tank"
    ]
@@ -443,8 +547,8 @@
    "id": "I023",
    "name": "거인의 결의",
    "category": "completed",
-   "delta": 0.186,
-   "mult": 0.4096,
+   "delta": 0.165,
+   "mult": 0.416,
    "carriers": [
     "ad",
     "tank"
@@ -454,8 +558,8 @@
    "id": "I024",
    "name": "구원",
    "category": "completed",
-   "delta": 0.164,
-   "mult": 0.64,
+   "delta": 0.097,
+   "mult": 0.5722,
    "carriers": [
     "support",
     "ap"
@@ -465,8 +569,8 @@
    "id": "I025",
    "name": "용맹의 흉갑",
    "category": "completed",
-   "delta": 0.161,
-   "mult": 0.7277,
+   "delta": 0.119,
+   "mult": 0.7566,
    "carriers": [
     "ad",
     "tank"
@@ -476,8 +580,8 @@
    "id": "I026",
    "name": "흡혈귀의 흉갑",
    "category": "completed",
-   "delta": 0.122,
-   "mult": 0.5463,
+   "delta": 0.149,
+   "mult": 0.7132,
    "carriers": [
     "tank",
     "bruiser"
@@ -487,8 +591,8 @@
    "id": "I027",
    "name": "불굴의 심장",
    "category": "completed",
-   "delta": 0.15,
-   "mult": 0.64,
+   "delta": 0.179,
+   "mult": 0.8168,
    "carriers": [
     "tank"
    ]
@@ -497,8 +601,8 @@
    "id": "I028",
    "name": "가시 갑옷",
    "category": "completed",
-   "delta": 0.183,
-   "mult": 0.4096,
+   "delta": 0.135,
+   "mult": 0.2654,
    "carriers": [
     "tank"
    ]
@@ -507,8 +611,8 @@
    "id": "I029",
    "name": "가고일 돌갑옷",
    "category": "completed",
-   "delta": 0.256,
-   "mult": 0.4096,
+   "delta": 0.121,
+   "mult": 0.2298,
    "carriers": [
     "tank"
    ]
@@ -517,8 +621,8 @@
    "id": "I030",
    "name": "질풍 갑옷",
    "category": "completed",
-   "delta": 0.167,
-   "mult": 0.4502,
+   "delta": 0.141,
+   "mult": 0.4413,
    "carriers": [
     "ad",
     "tank"
@@ -528,7 +632,7 @@
    "id": "I031",
    "name": "수호자의 맹세",
    "category": "completed",
-   "delta": 0.15,
+   "delta": 0.121,
    "mult": 0.422,
    "carriers": [
     "ap",
@@ -539,8 +643,8 @@
    "id": "I032",
    "name": "파쇄 장갑",
    "category": "completed",
-   "delta": 0.156,
-   "mult": 0.4788,
+   "delta": 0.151,
+   "mult": 0.5325,
    "carriers": [
     "ad",
     "tank"
@@ -550,8 +654,8 @@
    "id": "I033",
    "name": "피의 갑옷",
    "category": "completed",
-   "delta": 0.158,
-   "mult": 0.6925,
+   "delta": 0.133,
+   "mult": 0.5505,
    "carriers": [
     "tank",
     "bruiser"
@@ -561,8 +665,8 @@
    "id": "I034",
    "name": "강철 요새",
    "category": "completed",
-   "delta": 0.131,
-   "mult": 0.5598,
+   "delta": 0.117,
+   "mult": 0.4393,
    "carriers": [
     "tank"
    ]
@@ -571,8 +675,8 @@
    "id": "I035",
    "name": "용의 발톱",
    "category": "completed",
-   "delta": 0.078,
-   "mult": 2.4414,
+   "delta": 0.06,
+   "mult": 5.0,
    "carriers": [
     "tank"
    ]
@@ -581,8 +685,8 @@
    "id": "I036",
    "name": "정전기 망토",
    "category": "completed",
-   "delta": 0.164,
-   "mult": 0.512,
+   "delta": 0.173,
+   "mult": 0.6132,
    "carriers": [
     "ad",
     "tank"
@@ -592,8 +696,8 @@
    "id": "I037",
    "name": "은총의 성배",
    "category": "completed",
-   "delta": 0.131,
-   "mult": 1.5625,
+   "delta": 0.117,
+   "mult": 1.3969,
    "carriers": [
     "ap",
     "tank"
@@ -604,7 +708,7 @@
    "name": "수은 망토",
    "category": "completed",
    "delta": 0.131,
-   "mult": 1.0,
+   "mult": 1.1977,
    "carriers": [
     "ad",
     "tank"
@@ -614,8 +718,8 @@
    "id": "I039",
    "name": "정령의 송곳니",
    "category": "completed",
-   "delta": 0.111,
-   "mult": 1.0,
+   "delta": 0.163,
+   "mult": 1.5189,
    "carriers": [
     "tank",
     "bruiser"
@@ -625,8 +729,8 @@
    "id": "I040",
    "name": "성역의 망토",
    "category": "completed",
-   "delta": 0.172,
-   "mult": 0.64,
+   "delta": 0.117,
+   "mult": 0.5618,
    "carriers": [
     "tank"
    ]
@@ -635,8 +739,8 @@
    "id": "I041",
    "name": "고속 연사포",
    "category": "completed",
-   "delta": 0.2,
-   "mult": 0.422,
+   "delta": 0.133,
+   "mult": 0.498,
    "carriers": [
     "ad"
    ]
@@ -645,8 +749,8 @@
    "id": "I042",
    "name": "마나의 활",
    "category": "completed",
-   "delta": 0.114,
-   "mult": 0.652,
+   "delta": 0.133,
+   "mult": 0.9497,
    "carriers": [
     "ad",
     "ap"
@@ -656,8 +760,8 @@
    "id": "I043",
    "name": "최후의 속삭임",
    "category": "completed",
-   "delta": 0.158,
-   "mult": 0.437,
+   "delta": 0.121,
+   "mult": 0.5314,
    "carriers": [
     "ad"
    ]
@@ -666,8 +770,8 @@
    "id": "I044",
    "name": "핏빛 활",
    "category": "completed",
-   "delta": 0.122,
-   "mult": 0.4838,
+   "delta": 0.145,
+   "mult": 0.6101,
    "carriers": [
     "ad",
     "bruiser"
@@ -677,8 +781,8 @@
    "id": "I045",
    "name": "불굴의 활",
    "category": "completed",
-   "delta": 0.106,
-   "mult": 0.7285,
+   "delta": 0.119,
+   "mult": 0.8859,
    "carriers": [
     "ad",
     "tank"
@@ -688,8 +792,8 @@
    "id": "I046",
    "name": "대천사의 눈물",
    "category": "completed",
-   "delta": 0.197,
-   "mult": 0.8973,
+   "delta": 0.133,
+   "mult": 0.6802,
    "carriers": [
     "ap"
    ]
@@ -698,8 +802,8 @@
    "id": "I047",
    "name": "정의의 손길",
    "category": "completed",
-   "delta": 0.183,
-   "mult": 0.512,
+   "delta": 0.119,
+   "mult": 0.4577,
    "carriers": [
     "ad",
     "ap"
@@ -709,8 +813,8 @@
    "id": "I048",
    "name": "영혼 수확자",
    "category": "completed",
-   "delta": 0.169,
-   "mult": 1.3499,
+   "delta": 0.071,
+   "mult": 1.21,
    "carriers": [
     "ap",
     "bruiser"
@@ -720,8 +824,8 @@
    "id": "I049",
    "name": "명상의 보주",
    "category": "completed",
-   "delta": 0.058,
-   "mult": 0.7374,
+   "delta": 0.129,
+   "mult": 0.9069,
    "carriers": [
     "ap",
     "tank"
@@ -731,8 +835,8 @@
    "id": "I050",
    "name": "도둑의 장갑",
    "category": "completed",
-   "delta": 0.208,
-   "mult": 0.4096,
+   "delta": 0.109,
+   "mult": 0.3104,
    "carriers": [
     "ad"
    ]
@@ -741,8 +845,8 @@
    "id": "I051",
    "name": "암살자의 송곳니",
    "category": "completed",
-   "delta": 0.189,
-   "mult": 0.7568,
+   "delta": 0.115,
+   "mult": 0.7277,
    "carriers": [
     "ad",
     "bruiser"
@@ -752,8 +856,8 @@
    "id": "I052",
    "name": "행운의 부적",
    "category": "completed",
-   "delta": 0.144,
-   "mult": 0.6669,
+   "delta": 0.117,
+   "mult": 0.7848,
    "carriers": [
     "ad",
     "tank"
@@ -763,8 +867,8 @@
    "id": "I053",
    "name": "뱀파이어 군주의 송곳니",
    "category": "completed",
-   "delta": 0.092,
-   "mult": 0.4423,
+   "delta": 0.139,
+   "mult": 0.5071,
    "carriers": [
     "bruiser"
    ]
@@ -773,8 +877,8 @@
    "id": "I054",
    "name": "불사의 심장",
    "category": "completed",
-   "delta": 0.336,
-   "mult": 0.4096,
+   "delta": 0.192,
+   "mult": 0.2,
    "carriers": [
     "tank",
     "bruiser"
@@ -784,8 +888,8 @@
    "id": "I055",
    "name": "별의 갑주",
    "category": "completed",
-   "delta": 0.106,
-   "mult": 0.5398,
+   "delta": 0.127,
+   "mult": 0.4655,
    "carriers": [
     "tank"
    ]
@@ -794,8 +898,8 @@
    "id": "R001",
    "name": "빛나는 피의 쌍검",
    "category": "radiant",
-   "delta": 0.258,
-   "mult": 0.4617,
+   "delta": 0.194,
+   "mult": 0.5819,
    "carriers": [
     "ad"
    ]
@@ -804,8 +908,8 @@
    "id": "R002",
    "name": "빛나는 용살자의 장검",
    "category": "radiant",
-   "delta": 0.181,
-   "mult": 1.1292,
+   "delta": 0.19,
+   "mult": 1.5342,
    "carriers": [
     "ad",
     "ap"
@@ -815,8 +919,8 @@
    "id": "R003",
    "name": "빛나는 용맹의 맹세",
    "category": "radiant",
-   "delta": 0.292,
-   "mult": 0.4096,
+   "delta": 0.234,
+   "mult": 0.3809,
    "carriers": [
     "ad",
     "tank"
@@ -826,8 +930,8 @@
    "id": "R004",
    "name": "빛나는 약탈자의 발톱",
    "category": "radiant",
-   "delta": 0.317,
-   "mult": 0.4096,
+   "delta": 0.226,
+   "mult": 0.3892,
    "carriers": [
     "ad",
     "tank"
@@ -837,8 +941,8 @@
    "id": "R005",
    "name": "빛나는 흡혈의 장검",
    "category": "radiant",
-   "delta": 0.214,
-   "mult": 0.8313,
+   "delta": 0.224,
+   "mult": 1.0861,
    "carriers": [
     "ad",
     "tank"
@@ -848,8 +952,8 @@
    "id": "R006",
    "name": "빛나는 쌍둥이 폭풍",
    "category": "radiant",
-   "delta": 0.239,
-   "mult": 0.4443,
+   "delta": 0.24,
+   "mult": 0.524,
    "carriers": [
     "ad"
    ]
@@ -858,8 +962,8 @@
    "id": "R007",
    "name": "빛나는 창술사의 창",
    "category": "radiant",
-   "delta": 0.261,
-   "mult": 0.6325,
+   "delta": 0.218,
+   "mult": 0.6979,
    "carriers": [
     "ad",
     "ap"
@@ -869,8 +973,8 @@
    "id": "R008",
    "name": "빛나는 무한의 대검",
    "category": "radiant",
-   "delta": 0.294,
-   "mult": 0.5229,
+   "delta": 0.22,
+   "mult": 0.6955,
    "carriers": [
     "ad"
    ]
@@ -879,8 +983,8 @@
    "id": "R009",
    "name": "빛나는 핏빛 사냥칼",
    "category": "radiant",
-   "delta": 0.231,
-   "mult": 0.7636,
+   "delta": 0.236,
+   "mult": 0.7718,
    "carriers": [
     "ad",
     "bruiser"
@@ -890,8 +994,8 @@
    "id": "R010",
    "name": "빛나는 맹세의 검",
    "category": "radiant",
-   "delta": 0.281,
-   "mult": 0.512,
+   "delta": 0.216,
+   "mult": 0.5579,
    "carriers": [
     "ad",
     "tank"
@@ -901,8 +1005,8 @@
    "id": "R011",
    "name": "빛나는 대마법사의 모자",
    "category": "radiant",
-   "delta": 0.156,
-   "mult": 2.2093,
+   "delta": 0.19,
+   "mult": 5.0,
    "carriers": [
     "ap"
    ]
@@ -911,8 +1015,8 @@
    "id": "R012",
    "name": "빛나는 역병의 서",
    "category": "radiant",
-   "delta": 0.228,
-   "mult": 0.5083,
+   "delta": 0.24,
+   "mult": 0.6449,
    "carriers": [
     "ap",
     "tank"
@@ -922,8 +1026,8 @@
    "id": "R013",
    "name": "빛나는 수정 갑옷",
    "category": "radiant",
-   "delta": 0.231,
-   "mult": 0.6073,
+   "delta": 0.244,
+   "mult": 0.7031,
    "carriers": [
     "ap",
     "tank"
@@ -933,8 +1037,8 @@
    "id": "R014",
    "name": "빛나는 지식의 서",
    "category": "radiant",
-   "delta": 0.206,
-   "mult": 1.8994,
+   "delta": 0.25,
+   "mult": 1.8965,
    "carriers": [
     "ap",
     "tank"
@@ -944,8 +1048,8 @@
    "id": "R015",
    "name": "빛나는 격노의 지팡이",
    "category": "radiant",
-   "delta": 0.289,
-   "mult": 0.512,
+   "delta": 0.28,
+   "mult": 0.603,
    "carriers": [
     "ad",
     "ap"
@@ -955,8 +1059,8 @@
    "id": "R016",
    "name": "빛나는 푸른 축복",
    "category": "radiant",
-   "delta": 0.203,
-   "mult": 1.1551,
+   "delta": 0.188,
+   "mult": 0.9916,
    "carriers": [
     "ap"
    ]
@@ -965,8 +1069,8 @@
    "id": "R017",
    "name": "빛나는 보석 장갑",
    "category": "radiant",
-   "delta": 0.181,
-   "mult": 1.2616,
+   "delta": 0.202,
+   "mult": 1.9922,
    "carriers": [
     "ad",
     "ap"
@@ -976,8 +1080,8 @@
    "id": "R018",
    "name": "빛나는 핏빛 마도서",
    "category": "radiant",
-   "delta": 0.189,
-   "mult": 1.1024,
+   "delta": 0.222,
+   "mult": 1.1914,
    "carriers": [
     "ap",
     "bruiser"
@@ -987,8 +1091,8 @@
    "id": "R019",
    "name": "빛나는 별의 지팡이",
    "category": "radiant",
-   "delta": 0.231,
-   "mult": 0.7626,
+   "delta": 0.214,
+   "mult": 0.7092,
    "carriers": [
     "ap",
     "tank"
@@ -998,7 +1102,7 @@
    "id": "R020",
    "name": "빛나는 전사의 흉갑",
    "category": "radiant",
-   "delta": 0.328,
+   "delta": 0.236,
    "mult": 0.4096,
    "carriers": [
     "tank"
@@ -1008,8 +1112,8 @@
    "id": "R021",
    "name": "빛나는 태양불꽃 망토",
    "category": "radiant",
-   "delta": 0.239,
-   "mult": 0.4096,
+   "delta": 0.226,
+   "mult": 0.3979,
    "carriers": [
     "tank"
    ]
@@ -1018,8 +1122,8 @@
    "id": "R022",
    "name": "빛나는 서리 망토",
    "category": "radiant",
-   "delta": 0.242,
-   "mult": 0.4096,
+   "delta": 0.274,
+   "mult": 0.5299,
    "carriers": [
     "tank"
    ]
@@ -1028,8 +1132,8 @@
    "id": "R023",
    "name": "빛나는 거인의 결의",
    "category": "radiant",
-   "delta": 0.278,
-   "mult": 0.4096,
+   "delta": 0.284,
+   "mult": 0.4947,
    "carriers": [
     "ad",
     "tank"
@@ -1039,8 +1143,8 @@
    "id": "R024",
    "name": "빛나는 구원",
    "category": "radiant",
-   "delta": 0.228,
-   "mult": 0.6744,
+   "delta": 0.216,
+   "mult": 0.7982,
    "carriers": [
     "support",
     "ap"
@@ -1050,8 +1154,8 @@
    "id": "R025",
    "name": "빛나는 용맹의 흉갑",
    "category": "radiant",
-   "delta": 0.269,
-   "mult": 0.5904,
+   "delta": 0.258,
+   "mult": 0.8627,
    "carriers": [
     "ad",
     "tank"
@@ -1061,8 +1165,8 @@
    "id": "R026",
    "name": "빛나는 흡혈귀의 흉갑",
    "category": "radiant",
-   "delta": 0.169,
-   "mult": 0.4633,
+   "delta": 0.24,
+   "mult": 0.7373,
    "carriers": [
     "tank",
     "bruiser"
@@ -1072,8 +1176,8 @@
    "id": "R027",
    "name": "빛나는 불굴의 심장",
    "category": "radiant",
-   "delta": 0.181,
-   "mult": 0.4274,
+   "delta": 0.25,
+   "mult": 0.7038,
    "carriers": [
     "tank"
    ]
@@ -1082,8 +1186,8 @@
    "id": "R028",
    "name": "빛나는 가시 갑옷",
    "category": "radiant",
-   "delta": 0.344,
-   "mult": 0.4096,
+   "delta": 0.22,
+   "mult": 0.3294,
    "carriers": [
     "tank"
    ]
@@ -1092,8 +1196,8 @@
    "id": "R029",
    "name": "빛나는 가고일 돌갑옷",
    "category": "radiant",
-   "delta": 0.411,
-   "mult": 0.4096,
+   "delta": 0.22,
+   "mult": 0.2793,
    "carriers": [
     "tank"
    ]
@@ -1102,8 +1206,8 @@
    "id": "R030",
    "name": "빛나는 질풍 갑옷",
    "category": "radiant",
-   "delta": 0.258,
-   "mult": 0.4374,
+   "delta": 0.24,
+   "mult": 0.5019,
    "carriers": [
     "ad",
     "tank"
@@ -1113,8 +1217,8 @@
    "id": "R031",
    "name": "빛나는 수호자의 맹세",
    "category": "radiant",
-   "delta": 0.225,
-   "mult": 0.4155,
+   "delta": 0.244,
+   "mult": 0.5413,
    "carriers": [
     "ap",
     "tank"
@@ -1124,8 +1228,8 @@
    "id": "R032",
    "name": "빛나는 파쇄 장갑",
    "category": "radiant",
-   "delta": 0.242,
-   "mult": 0.5028,
+   "delta": 0.25,
+   "mult": 0.6235,
    "carriers": [
     "ad",
     "tank"
@@ -1135,8 +1239,8 @@
    "id": "R033",
    "name": "빛나는 피의 갑옷",
    "category": "radiant",
-   "delta": 0.208,
-   "mult": 0.6047,
+   "delta": 0.238,
+   "mult": 0.7217,
    "carriers": [
     "tank",
     "bruiser"
@@ -1146,8 +1250,8 @@
    "id": "R034",
    "name": "빛나는 강철 요새",
    "category": "radiant",
-   "delta": 0.269,
-   "mult": 0.5121,
+   "delta": 0.222,
+   "mult": 0.4806,
    "carriers": [
     "tank"
    ]
@@ -1156,8 +1260,8 @@
    "id": "R035",
    "name": "빛나는 용의 발톱",
    "category": "radiant",
-   "delta": 0.106,
-   "mult": 2.4414,
+   "delta": 0.062,
+   "mult": 5.0,
    "carriers": [
     "tank"
    ]
@@ -1166,8 +1270,8 @@
    "id": "R036",
    "name": "빛나는 정전기 망토",
    "category": "radiant",
-   "delta": 0.233,
-   "mult": 0.4641,
+   "delta": 0.224,
+   "mult": 0.6477,
    "carriers": [
     "ad",
     "tank"
@@ -1177,8 +1281,8 @@
    "id": "R037",
    "name": "빛나는 은총의 성배",
    "category": "radiant",
-   "delta": 0.203,
-   "mult": 1.6206,
+   "delta": 0.212,
+   "mult": 1.7385,
    "carriers": [
     "ap",
     "tank"
@@ -1189,7 +1293,7 @@
    "name": "빛나는 수은 망토",
    "category": "radiant",
    "delta": 0.228,
-   "mult": 1.1024,
+   "mult": 1.9152,
    "carriers": [
     "ad",
     "tank"
@@ -1199,8 +1303,8 @@
    "id": "R039",
    "name": "빛나는 정령의 송곳니",
    "category": "radiant",
-   "delta": 0.192,
-   "mult": 1.3437,
+   "delta": 0.212,
+   "mult": 1.5147,
    "carriers": [
     "tank",
     "bruiser"
@@ -1210,8 +1314,8 @@
    "id": "R040",
    "name": "빛나는 성역의 망토",
    "category": "radiant",
-   "delta": 0.261,
-   "mult": 0.475,
+   "delta": 0.252,
+   "mult": 0.5549,
    "carriers": [
     "tank"
    ]
@@ -1220,8 +1324,8 @@
    "id": "R041",
    "name": "빛나는 고속 연사포",
    "category": "radiant",
-   "delta": 0.272,
-   "mult": 0.4515,
+   "delta": 0.208,
+   "mult": 0.5362,
    "carriers": [
     "ad"
    ]
@@ -1230,8 +1334,8 @@
    "id": "R042",
    "name": "빛나는 마나의 활",
    "category": "radiant",
-   "delta": 0.269,
-   "mult": 0.7904,
+   "delta": 0.288,
+   "mult": 0.9502,
    "carriers": [
     "ad",
     "ap"
@@ -1241,8 +1345,8 @@
    "id": "R043",
    "name": "빛나는 최후의 속삭임",
    "category": "radiant",
-   "delta": 0.253,
-   "mult": 0.4708,
+   "delta": 0.2,
+   "mult": 0.6142,
    "carriers": [
     "ad"
    ]
@@ -1251,8 +1355,8 @@
    "id": "R044",
    "name": "빛나는 핏빛 활",
    "category": "radiant",
-   "delta": 0.233,
-   "mult": 0.554,
+   "delta": 0.236,
+   "mult": 0.7071,
    "carriers": [
     "ad",
     "bruiser"
@@ -1262,8 +1366,8 @@
    "id": "R045",
    "name": "빛나는 불굴의 활",
    "category": "radiant",
-   "delta": 0.244,
-   "mult": 0.7783,
+   "delta": 0.252,
+   "mult": 0.8568,
    "carriers": [
     "ad",
     "tank"
@@ -1273,8 +1377,8 @@
    "id": "R046",
    "name": "빛나는 대천사의 눈물",
    "category": "radiant",
-   "delta": 0.217,
-   "mult": 1.0,
+   "delta": 0.192,
+   "mult": 0.8332,
    "carriers": [
     "ap"
    ]
@@ -1283,8 +1387,8 @@
    "id": "R047",
    "name": "빛나는 정의의 손길",
    "category": "radiant",
-   "delta": 0.272,
-   "mult": 0.4744,
+   "delta": 0.196,
+   "mult": 0.5155,
    "carriers": [
     "ad",
     "ap"
@@ -1294,8 +1398,8 @@
    "id": "R048",
    "name": "빛나는 영혼 수확자",
    "category": "radiant",
-   "delta": 0.197,
-   "mult": 1.25,
+   "delta": 0.242,
+   "mult": 1.4743,
    "carriers": [
     "ap",
     "bruiser"
@@ -1305,7 +1409,7 @@
    "id": "R049",
    "name": "빛나는 명상의 보주",
    "category": "radiant",
-   "delta": 0.264,
+   "delta": 0.27,
    "mult": 0.9039,
    "carriers": [
     "ap",
@@ -1316,8 +1420,8 @@
    "id": "R050",
    "name": "빛나는 도둑의 장갑",
    "category": "radiant",
-   "delta": 0.281,
-   "mult": 0.4125,
+   "delta": 0.248,
+   "mult": 0.5337,
    "carriers": [
     "ad"
    ]
@@ -1326,8 +1430,8 @@
    "id": "R051",
    "name": "빛나는 암살자의 송곳니",
    "category": "radiant",
-   "delta": 0.25,
-   "mult": 0.7326,
+   "delta": 0.24,
+   "mult": 0.9954,
    "carriers": [
     "ad",
     "bruiser"
@@ -1337,8 +1441,8 @@
    "id": "R052",
    "name": "빛나는 행운의 부적",
    "category": "radiant",
-   "delta": 0.244,
-   "mult": 0.5835,
+   "delta": 0.282,
+   "mult": 0.723,
    "carriers": [
     "ad",
     "tank"
@@ -1348,8 +1452,8 @@
    "id": "R053",
    "name": "빛나는 뱀파이어 군주의 송곳니",
    "category": "radiant",
-   "delta": 0.211,
-   "mult": 0.5552,
+   "delta": 0.238,
+   "mult": 0.6759,
    "carriers": [
     "bruiser"
    ]
@@ -1358,8 +1462,8 @@
    "id": "R054",
    "name": "빛나는 불사의 심장",
    "category": "radiant",
-   "delta": 0.394,
-   "mult": 0.4096,
+   "delta": 0.244,
+   "mult": 0.2256,
    "carriers": [
     "tank",
     "bruiser"
@@ -1369,8 +1473,8 @@
    "id": "R055",
    "name": "빛나는 별의 갑주",
    "category": "radiant",
-   "delta": 0.278,
-   "mult": 0.64,
+   "delta": 0.226,
+   "mult": 0.5775,
    "carriers": [
     "tank"
    ]
@@ -1379,8 +1483,8 @@
    "id": "A001",
    "name": "재의 왕관",
    "category": "artifact",
-   "delta": 0.139,
-   "mult": 0.5222,
+   "delta": 0.187,
+   "mult": 0.6597,
    "carriers": [
     "ap",
     "tank"
@@ -1390,8 +1494,8 @@
    "id": "A002",
    "name": "이셀라의 반지",
    "category": "artifact",
-   "delta": 0.181,
-   "mult": 0.5056,
+   "delta": 0.143,
+   "mult": 0.5863,
    "carriers": [
     "support",
     "ap"
@@ -1401,8 +1505,8 @@
    "id": "A003",
    "name": "용의 심장석",
    "category": "artifact",
-   "delta": 0.269,
-   "mult": 0.4096,
+   "delta": 0.23,
+   "mult": 0.4698,
    "carriers": [
     "tank"
    ]
@@ -1411,8 +1515,8 @@
    "id": "A004",
    "name": "쐐기의 파편",
    "category": "artifact",
-   "delta": 0.142,
-   "mult": 2.1559,
+   "delta": 0.171,
+   "mult": 2.4727,
    "carriers": [
     "ap"
    ]
@@ -1421,8 +1525,8 @@
    "id": "A005",
    "name": "고대 문명의 코어",
    "category": "artifact",
-   "delta": 0.211,
-   "mult": 0.4264,
+   "delta": 0.204,
+   "mult": 0.5481,
    "carriers": [
     "ad"
    ]
@@ -1431,8 +1535,8 @@
    "id": "A006",
    "name": "세계수의 가지",
    "category": "artifact",
-   "delta": 0.189,
-   "mult": 0.4474,
+   "delta": 0.175,
+   "mult": 0.5257,
    "carriers": [
     "support",
     "tank"
@@ -1442,8 +1546,8 @@
    "id": "A007",
    "name": "검성의 유품",
    "category": "artifact",
-   "delta": 0.219,
-   "mult": 0.43,
+   "delta": 0.183,
+   "mult": 0.4556,
    "carriers": [
     "ad"
    ]
@@ -1452,8 +1556,8 @@
    "id": "A008",
    "name": "심해의 진주",
    "category": "artifact",
-   "delta": 0.161,
-   "mult": 0.8155,
+   "delta": 0.115,
+   "mult": 0.6486,
    "carriers": [
     "ap",
     "tank"
@@ -1463,8 +1567,8 @@
    "id": "A009",
    "name": "네오스 반응로",
    "category": "artifact",
-   "delta": 0.136,
-   "mult": 0.5252,
+   "delta": 0.208,
+   "mult": 0.7803,
    "carriers": [
     "ad",
     "ap"
@@ -1474,8 +1578,8 @@
    "id": "A010",
    "name": "사령왕의 두개골",
    "category": "artifact",
-   "delta": 0.206,
-   "mult": 0.7228,
+   "delta": 0.169,
+   "mult": 0.7451,
    "carriers": [
     "ap"
    ]
@@ -1484,8 +1588,8 @@
    "id": "A011",
    "name": "노른의 실",
    "category": "artifact",
-   "delta": 0.333,
-   "mult": 0.4096,
+   "delta": 0.236,
+   "mult": 0.2,
    "carriers": [
     "tank"
    ]
@@ -1494,8 +1598,8 @@
    "id": "A012",
    "name": "마신의 램프",
    "category": "artifact",
-   "delta": 0.142,
-   "mult": 1.3063,
+   "delta": 0.133,
+   "mult": 1.0508,
    "carriers": [
     "ap"
    ]
@@ -1504,8 +1608,8 @@
    "id": "A013",
    "name": "세이렌의 조개",
    "category": "artifact",
-   "delta": 0.211,
-   "mult": 0.4575,
+   "delta": 0.187,
+   "mult": 0.5582,
    "carriers": [
     "tank"
    ]
@@ -1515,7 +1619,7 @@
    "name": "황제의 인장",
    "category": "artifact",
    "delta": 0.147,
-   "mult": 0.7387,
+   "mult": 0.8278,
    "carriers": [
     "support",
     "tank"
@@ -1525,8 +1629,8 @@
    "id": "A015",
    "name": "투기장 우승 벨트",
    "category": "artifact",
-   "delta": 0.244,
-   "mult": 0.4343,
+   "delta": 0.177,
+   "mult": 0.5709,
    "carriers": [
     "ad",
     "tank"
@@ -1536,8 +1640,8 @@
    "id": "A016",
    "name": "현상금 사냥꾼의 총",
    "category": "artifact",
-   "delta": 0.286,
-   "mult": 0.4096,
+   "delta": 0.226,
+   "mult": 0.2,
    "carriers": [
     "ad"
    ]
@@ -1546,7 +1650,7 @@
    "id": "A017",
    "name": "성녀의 묵주",
    "category": "artifact",
-   "delta": 0.169,
+   "delta": 0.125,
    "mult": 0.4096,
    "carriers": [
     "support",
@@ -1557,8 +1661,8 @@
    "id": "A018",
    "name": "황룡의 비늘",
    "category": "artifact",
-   "delta": 0.283,
-   "mult": 0.4096,
+   "delta": 0.161,
+   "mult": 0.3258,
    "carriers": [
     "tank"
    ]
@@ -1567,8 +1671,8 @@
    "id": "A019",
    "name": "별의 관측기",
    "category": "artifact",
-   "delta": 0.214,
-   "mult": 1.013,
+   "delta": 0.179,
+   "mult": 1.0442,
    "carriers": [
     "ad",
     "ap"
@@ -1578,8 +1682,8 @@
    "id": "A020",
    "name": "증기 심장",
    "category": "artifact",
-   "delta": 0.253,
-   "mult": 0.4096,
+   "delta": 0.173,
+   "mult": 0.459,
    "carriers": [
     "ad",
     "tank"
@@ -1589,8 +1693,8 @@
    "id": "A021",
    "name": "안개의 등불",
    "category": "artifact",
-   "delta": 0.231,
-   "mult": 1.0,
+   "delta": 0.192,
+   "mult": 1.6668,
    "carriers": [
     "tank"
    ]
@@ -1599,8 +1703,8 @@
    "id": "A022",
    "name": "피의 성배",
    "category": "artifact",
-   "delta": 0.172,
-   "mult": 0.4748,
+   "delta": 0.157,
+   "mult": 0.596,
    "carriers": [
     "ad",
     "bruiser"
@@ -1610,8 +1714,8 @@
    "id": "A023",
    "name": "와이번의 발톱",
    "category": "artifact",
-   "delta": 0.15,
-   "mult": 0.5168,
+   "delta": 0.155,
+   "mult": 0.6873,
    "carriers": [
     "ad"
    ]
@@ -1620,8 +1724,8 @@
    "id": "A024",
    "name": "골렘의 핵",
    "category": "artifact",
-   "delta": 0.386,
-   "mult": 0.4096,
+   "delta": 0.177,
+   "mult": 0.2057,
    "carriers": [
     "tank"
    ]
@@ -1630,8 +1734,8 @@
    "id": "A025",
    "name": "요정의 가루",
    "category": "artifact",
-   "delta": 0.192,
-   "mult": 0.5375,
+   "delta": 0.194,
+   "mult": 0.6165,
    "carriers": [
     "ad"
    ]
@@ -1640,8 +1744,8 @@
    "id": "A026",
    "name": "폭풍의 눈",
    "category": "artifact",
-   "delta": 0.303,
-   "mult": 0.4096,
+   "delta": 0.181,
+   "mult": 0.3556,
    "carriers": [
     "ad",
     "ap"
@@ -1651,8 +1755,8 @@
    "id": "A027",
    "name": "용병왕의 계약서",
    "category": "artifact",
-   "delta": 0.158,
-   "mult": 0.6532,
+   "delta": 0.165,
+   "mult": 0.9128,
    "carriers": [
     "ad",
     "ap"
@@ -1662,8 +1766,8 @@
    "id": "A028",
    "name": "태초의 불씨",
    "category": "artifact",
-   "delta": 0.186,
-   "mult": 0.4096,
+   "delta": 0.183,
+   "mult": 0.3308,
    "carriers": [
     "ap"
    ]
@@ -1672,8 +1776,8 @@
    "id": "A029",
    "name": "거인의 심장",
    "category": "artifact",
-   "delta": 0.292,
-   "mult": 0.4096,
+   "delta": 0.232,
+   "mult": 0.365,
    "carriers": [
     "tank"
    ]
@@ -1682,8 +1786,8 @@
    "id": "A030",
    "name": "리치의 지팡이",
    "category": "artifact",
-   "delta": 0.175,
-   "mult": 1.0,
+   "delta": 0.129,
+   "mult": 0.7832,
    "carriers": [
     "ap"
    ]
@@ -1692,7 +1796,7 @@
    "id": "A031",
    "name": "얼음 여왕의 왕관",
    "category": "artifact",
-   "delta": 0.156,
+   "delta": 0.204,
    "mult": 1.9325,
    "carriers": [
     "ap",
@@ -1703,7 +1807,7 @@
    "id": "A032",
    "name": "모래시계",
    "category": "artifact",
-   "delta": 0.225,
+   "delta": 0.21,
    "mult": 0.4342,
    "carriers": [
     "ap",
@@ -1714,7 +1818,7 @@
    "id": "A033",
    "name": "전설의 모루",
    "category": "artifact",
-   "delta": 0.208,
+   "delta": 0.185,
    "mult": 0.4575,
    "carriers": [
     "tank"
@@ -1724,8 +1828,8 @@
    "id": "A034",
    "name": "암살자의 가면",
    "category": "artifact",
-   "delta": -0.117,
-   "mult": 2.4414,
+   "delta": -0.03,
+   "mult": 5.0,
    "carriers": [
     "ad"
    ]
@@ -1734,8 +1838,8 @@
    "id": "A035",
    "name": "수호자의 횃불",
    "category": "artifact",
-   "delta": 0.183,
-   "mult": 0.5222,
+   "delta": 0.113,
+   "mult": 0.5319,
    "carriers": [
     "support",
     "tank"
@@ -1745,8 +1849,8 @@
    "id": "A036",
    "name": "바다의 삼지창",
    "category": "artifact",
-   "delta": 0.161,
-   "mult": 0.4718,
+   "delta": 0.179,
+   "mult": 0.6453,
    "carriers": [
     "ad",
     "ap"
@@ -1756,8 +1860,8 @@
    "id": "A037",
    "name": "부족의 토템",
    "category": "artifact",
-   "delta": 0.225,
-   "mult": 0.4096,
+   "delta": 0.135,
+   "mult": 0.4235,
    "carriers": [
     "ad",
     "tank"
@@ -1767,8 +1871,8 @@
    "id": "A038",
    "name": "천공의 나침반",
    "category": "artifact",
-   "delta": 0.169,
-   "mult": 0.7274,
+   "delta": 0.143,
+   "mult": 1.0756,
    "carriers": [
     "ad",
     "ap"
@@ -1778,8 +1882,8 @@
    "id": "A039",
    "name": "불멸의 갑주",
    "category": "artifact",
-   "delta": 0.319,
-   "mult": 0.4096,
+   "delta": 0.206,
+   "mult": 0.2,
    "carriers": [
     "tank"
    ]
@@ -1788,8 +1892,8 @@
    "id": "A040",
    "name": "정령 계약서",
    "category": "artifact",
-   "delta": 0.178,
-   "mult": 1.0,
+   "delta": 0.188,
+   "mult": 1.3485,
    "carriers": [
     "ap"
    ]
@@ -1798,8 +1902,8 @@
    "id": "A041",
    "name": "드워프의 룬 망치",
    "category": "artifact",
-   "delta": 0.267,
-   "mult": 0.4096,
+   "delta": 0.147,
+   "mult": 0.3334,
    "carriers": [
     "ad",
     "tank"
@@ -1809,8 +1913,8 @@
    "id": "A042",
    "name": "뱀파이어의 망토",
    "category": "artifact",
-   "delta": 0.125,
-   "mult": 0.4718,
+   "delta": 0.157,
+   "mult": 0.5835,
    "carriers": [
     "tank",
     "bruiser"
@@ -1820,8 +1924,8 @@
    "id": "A043",
    "name": "기계 심장",
    "category": "artifact",
-   "delta": 0.244,
-   "mult": 0.4526,
+   "delta": 0.218,
+   "mult": 0.6163,
    "carriers": [
     "ad",
     "tank"
@@ -1831,8 +1935,8 @@
    "id": "A044",
    "name": "성기사의 서약",
    "category": "artifact",
-   "delta": 0.247,
-   "mult": 0.4096,
+   "delta": 0.135,
+   "mult": 0.3088,
    "carriers": [
     "tank"
    ]
@@ -1841,8 +1945,8 @@
    "id": "A045",
    "name": "공허의 눈",
    "category": "artifact",
-   "delta": 0.128,
-   "mult": 1.4939,
+   "delta": 0.139,
+   "mult": 1.9897,
    "carriers": [
     "ad",
     "ap"
@@ -1852,8 +1956,8 @@
    "id": "A046",
    "name": "샤미센의 줄",
    "category": "artifact",
-   "delta": 0.236,
-   "mult": 0.659,
+   "delta": 0.188,
+   "mult": 0.875,
    "carriers": [
     "support",
     "ad"
@@ -1863,8 +1967,8 @@
    "id": "A047",
    "name": "전쟁의 북",
    "category": "artifact",
-   "delta": 0.186,
-   "mult": 0.554,
+   "delta": 0.179,
+   "mult": 0.6393,
    "carriers": [
     "support",
     "ad"
@@ -1874,8 +1978,8 @@
    "id": "A048",
    "name": "마도 학술원의 증표",
    "category": "artifact",
-   "delta": 0.206,
-   "mult": 1.13,
+   "delta": 0.173,
+   "mult": 1.2137,
    "carriers": [
     "ap"
    ]
@@ -1884,8 +1988,8 @@
    "id": "A049",
    "name": "용의 알 껍질",
    "category": "artifact",
-   "delta": 0.192,
-   "mult": 0.4575,
+   "delta": 0.169,
+   "mult": 0.5442,
    "carriers": [
     "tank"
    ]
@@ -1894,8 +1998,8 @@
    "id": "A050",
    "name": "늑대의 이빨",
    "category": "artifact",
-   "delta": 0.169,
-   "mult": 0.4772,
+   "delta": 0.155,
+   "mult": 0.4174,
    "carriers": [
     "ad",
     "bruiser"
@@ -1905,8 +2009,8 @@
    "id": "A051",
    "name": "고블린의 폭탄",
    "category": "artifact",
-   "delta": 0.192,
-   "mult": 0.7149,
+   "delta": 0.145,
+   "mult": 0.8816,
    "carriers": [
     "ad",
     "ap"
@@ -1916,8 +2020,8 @@
    "id": "A052",
    "name": "오아시스의 물병",
    "category": "artifact",
-   "delta": 0.167,
-   "mult": 0.5658,
+   "delta": 0.075,
+   "mult": 0.6414,
    "carriers": [
     "support",
     "ap"
@@ -1927,8 +2031,8 @@
    "id": "A053",
    "name": "해적의 보물지도",
    "category": "artifact",
-   "delta": 0.206,
-   "mult": 0.8198,
+   "delta": 0.177,
+   "mult": 1.3501,
    "carriers": [
     "ad",
     "tank"
@@ -1938,8 +2042,8 @@
    "id": "A054",
    "name": "빛의 심판봉",
    "category": "artifact",
-   "delta": 0.061,
-   "mult": 2.4414,
+   "delta": 0.125,
+   "mult": 3.3392,
    "carriers": [
     "ad",
     "ap"
@@ -1949,8 +2053,8 @@
    "id": "A055",
    "name": "트롤의 곤봉",
    "category": "artifact",
-   "delta": 0.153,
-   "mult": 1.0,
+   "delta": 0.177,
+   "mult": 1.3331,
    "carriers": [
     "ad"
    ]
@@ -1959,8 +2063,8 @@
    "id": "A056",
    "name": "별똥별 조각",
    "category": "artifact",
-   "delta": 0.278,
-   "mult": 0.4096,
+   "delta": 0.204,
+   "mult": 0.4401,
    "carriers": [
     "ad",
     "ap"
@@ -1970,8 +2074,8 @@
    "id": "A057",
    "name": "시간의 회중시계",
    "category": "artifact",
-   "delta": 0.136,
-   "mult": 0.5867,
+   "delta": 0.177,
+   "mult": 0.8307,
    "carriers": [
     "ad",
     "ap"
@@ -1981,8 +2085,8 @@
    "id": "A058",
    "name": "수호천사의 깃털",
    "category": "artifact",
-   "delta": 0.336,
-   "mult": 0.4096,
+   "delta": 0.248,
+   "mult": 0.2,
    "carriers": [
     "tank"
    ]
@@ -1991,8 +2095,8 @@
    "id": "A059",
    "name": "대족장의 도끼",
    "category": "artifact",
-   "delta": 0.15,
-   "mult": 0.4343,
+   "delta": 0.163,
+   "mult": 0.5593,
    "carriers": [
     "ad",
     "tank"
@@ -2002,8 +2106,8 @@
    "id": "A060",
    "name": "심문관의 낙인",
    "category": "artifact",
-   "delta": 0.417,
-   "mult": 0.4096,
+   "delta": 0.331,
+   "mult": 0.2,
    "carriers": [
     "ad",
     "ap"
@@ -2013,8 +2117,8 @@
    "id": "S001",
    "name": "전쟁 깃발",
    "category": "support",
-   "delta": 0.131,
-   "mult": 0.6509,
+   "delta": 0.091,
+   "mult": 0.8027,
    "carriers": [
     "support",
     "tank"
@@ -2024,8 +2128,8 @@
    "id": "S002",
    "name": "수호의 깃발",
    "category": "support",
-   "delta": 0.089,
-   "mult": 0.5137,
+   "delta": 0.097,
+   "mult": 0.5836,
    "carriers": [
     "support",
     "tank"
@@ -2035,7 +2139,7 @@
    "id": "S003",
    "name": "치유의 향로",
    "category": "support",
-   "delta": 0.1,
+   "delta": 0.087,
    "mult": 0.5137,
    "carriers": [
     "support",
@@ -2046,8 +2150,8 @@
    "id": "S004",
    "name": "질풍의 뿔피리",
    "category": "support",
-   "delta": 0.128,
-   "mult": 0.5354,
+   "delta": 0.167,
+   "mult": 0.8148,
    "carriers": [
     "support",
     "tank"
@@ -2057,8 +2161,8 @@
    "id": "S005",
    "name": "마나의 샘",
    "category": "support",
-   "delta": 0.108,
-   "mult": 0.8249,
+   "delta": 0.089,
+   "mult": 0.9047,
    "carriers": [
     "support",
     "tank"
@@ -2068,8 +2172,8 @@
    "id": "S006",
    "name": "성역의 등불",
    "category": "support",
-   "delta": 0.086,
-   "mult": 0.5446,
+   "delta": 0.091,
+   "mult": 0.7243,
    "carriers": [
     "support",
     "tank"
@@ -2079,8 +2183,8 @@
    "id": "S007",
    "name": "용기의 나팔",
    "category": "support",
-   "delta": 0.144,
-   "mult": 0.512,
+   "delta": 0.123,
+   "mult": 0.4079,
    "carriers": [
     "support",
     "tank"
@@ -2090,8 +2194,8 @@
    "id": "S008",
    "name": "철벽의 북",
    "category": "support",
-   "delta": 0.125,
-   "mult": 0.512,
+   "delta": 0.091,
+   "mult": 0.3859,
    "carriers": [
     "support",
     "tank"
@@ -2101,8 +2205,8 @@
    "id": "S009",
    "name": "저주의 토템",
    "category": "support",
-   "delta": 0.125,
-   "mult": 0.512,
+   "delta": 0.101,
+   "mult": 0.5134,
    "carriers": [
     "support",
     "tank"
@@ -2112,8 +2216,8 @@
    "id": "S010",
    "name": "둔화의 토템",
    "category": "support",
-   "delta": 0.15,
-   "mult": 0.7207,
+   "delta": 0.073,
+   "mult": 0.5688,
    "carriers": [
     "support",
     "tank"
@@ -2123,8 +2227,8 @@
    "id": "S011",
    "name": "재생의 토템",
    "category": "support",
-   "delta": 0.117,
-   "mult": 0.6805,
+   "delta": 0.093,
+   "mult": 0.9051,
    "carriers": [
     "support",
     "tank"
@@ -2134,8 +2238,8 @@
    "id": "S012",
    "name": "전술 지도",
    "category": "support",
-   "delta": 0.081,
-   "mult": 0.64,
+   "delta": 0.123,
+   "mult": 0.7265,
    "carriers": [
     "support",
     "tank"
@@ -2145,8 +2249,8 @@
    "id": "S013",
    "name": "흡혈의 깃발",
    "category": "support",
-   "delta": 0.108,
-   "mult": 0.8249,
+   "delta": 0.083,
+   "mult": 0.7279,
    "carriers": [
     "support",
     "tank"
@@ -2156,8 +2260,8 @@
    "id": "S014",
    "name": "치명의 깃발",
    "category": "support",
-   "delta": 0.106,
-   "mult": 1.0,
+   "delta": 0.083,
+   "mult": 1.2332,
    "carriers": [
     "support",
     "tank"
@@ -2167,8 +2271,8 @@
    "id": "S015",
    "name": "내구의 깃발",
    "category": "support",
-   "delta": 0.075,
-   "mult": 0.6036,
+   "delta": 0.071,
+   "mult": 0.8028,
    "carriers": [
     "support",
     "tank"
@@ -2178,8 +2282,8 @@
    "id": "S016",
    "name": "사정거리 망원경",
    "category": "support",
-   "delta": 0.094,
-   "mult": 1.0,
+   "delta": 0.083,
+   "mult": 1.5794,
    "carriers": [
     "support",
     "tank"
@@ -2189,8 +2293,8 @@
    "id": "S017",
    "name": "가시 울타리",
    "category": "support",
-   "delta": 0.128,
-   "mult": 1.1705,
+   "delta": 0.069,
+   "mult": 1.2701,
    "carriers": [
     "support",
     "tank"
@@ -2200,8 +2304,8 @@
    "id": "S018",
    "name": "용의 깃발",
    "category": "support",
-   "delta": 0.1,
-   "mult": 0.512,
+   "delta": 0.095,
+   "mult": 0.4066,
    "carriers": [
     "support",
     "tank"
@@ -2211,8 +2315,8 @@
    "id": "S019",
    "name": "공성 사다리",
    "category": "support",
-   "delta": 0.114,
-   "mult": 1.5625,
+   "delta": 0.123,
+   "mult": 2.7639,
    "carriers": [
     "support",
     "tank"
@@ -2222,8 +2326,8 @@
    "id": "S020",
    "name": "보급 마차",
    "category": "support",
-   "delta": 0.114,
-   "mult": 1.5625,
+   "delta": 0.123,
+   "mult": 2.7639,
    "carriers": [
     "support",
     "tank"
@@ -2233,8 +2337,8 @@
    "id": "S021",
    "name": "정찰병의 각적",
    "category": "support",
-   "delta": 0.136,
-   "mult": 0.512,
+   "delta": 0.143,
+   "mult": 0.681,
    "carriers": [
     "support",
     "tank"
@@ -2244,8 +2348,8 @@
    "id": "S022",
    "name": "기수의 안장",
    "category": "support",
-   "delta": 0.1,
-   "mult": 1.0,
+   "delta": 0.095,
+   "mult": 1.1875,
    "carriers": [
     "support",
     "tank"
@@ -2255,8 +2359,8 @@
    "id": "S023",
    "name": "암살 지령서",
    "category": "support",
-   "delta": 0.089,
-   "mult": 1.0,
+   "delta": 0.091,
+   "mult": 1.1875,
    "carriers": [
     "support",
     "tank"
@@ -2266,8 +2370,8 @@
    "id": "S024",
    "name": "마법 증폭기",
    "category": "support",
-   "delta": 0.117,
-   "mult": 1.25,
+   "delta": 0.133,
+   "mult": 1.7496,
    "carriers": [
     "support",
     "tank"
@@ -2277,8 +2381,8 @@
    "id": "S025",
    "name": "사제의 성수",
    "category": "support",
-   "delta": 0.1,
-   "mult": 1.2605,
+   "delta": 0.103,
+   "mult": 1.6798,
    "carriers": [
     "support",
     "tank"
@@ -2288,8 +2392,8 @@
    "id": "S026",
    "name": "소환사의 서",
    "category": "support",
-   "delta": 0.111,
-   "mult": 1.3128,
+   "delta": 0.062,
+   "mult": 1.2882,
    "carriers": [
     "support",
     "tank"
@@ -2299,8 +2403,8 @@
    "id": "S027",
    "name": "공학자의 공구",
    "category": "support",
-   "delta": 0.089,
-   "mult": 1.0,
+   "delta": 0.085,
+   "mult": 1.33,
    "carriers": [
     "support",
     "tank"
@@ -2310,8 +2414,8 @@
    "id": "S028",
    "name": "용병 계약서",
    "category": "support",
-   "delta": 0.119,
-   "mult": 1.0,
+   "delta": 0.091,
+   "mult": 1.1737,
    "carriers": [
     "support",
     "tank"
@@ -2321,8 +2425,8 @@
    "id": "S029",
    "name": "행운의 토끼발",
    "category": "support",
-   "delta": 0.114,
-   "mult": 1.5625,
+   "delta": 0.123,
+   "mult": 2.7639,
    "carriers": [
     "support",
     "tank"
@@ -2332,8 +2436,8 @@
    "id": "S030",
    "name": "영웅의 부적",
    "category": "support",
-   "delta": 0.114,
-   "mult": 1.5625,
+   "delta": 0.123,
+   "mult": 2.7639,
    "carriers": [
     "support",
     "tank"
@@ -2343,8 +2447,8 @@
    "id": "N001",
    "name": "회색 늑대의 문장",
    "category": "national",
-   "delta": 0.142,
-   "mult": 0.7296,
+   "delta": 0.131,
+   "mult": 0.8935,
    "carriers": [
     "ad",
     "tank"
@@ -2354,8 +2458,8 @@
    "id": "N002",
    "name": "아스텔 왕실 검",
    "category": "national",
-   "delta": 0.161,
-   "mult": 0.5533,
+   "delta": 0.113,
+   "mult": 0.5762,
    "carriers": [
     "ad",
     "tank"
@@ -2365,8 +2469,8 @@
    "id": "N003",
    "name": "미르 포도주",
    "category": "national",
-   "delta": 0.114,
-   "mult": 0.4234,
+   "delta": 0.187,
+   "mult": 0.6696,
    "carriers": [
     "tank"
    ]
@@ -2375,8 +2479,8 @@
    "id": "N004",
    "name": "하르벤 용병 휘장",
    "category": "national",
-   "delta": 0.136,
-   "mult": 1.0,
+   "delta": 0.129,
+   "mult": 1.2537,
    "carriers": [
     "ad",
     "ap"
@@ -2386,8 +2490,8 @@
    "id": "N005",
    "name": "루멘 성유물함",
    "category": "national",
-   "delta": 0.286,
-   "mult": 0.4096,
+   "delta": 0.2,
+   "mult": 0.2,
    "carriers": [
     "tank"
    ]
@@ -2396,8 +2500,8 @@
    "id": "N006",
    "name": "리에스 항해 나침반",
    "category": "national",
-   "delta": 0.2,
-   "mult": 0.8959,
+   "delta": 0.157,
+   "mult": 1.1299,
    "carriers": [
     "ad"
    ]
@@ -2406,7 +2510,7 @@
    "id": "N007",
    "name": "발하임 늑대 가죽",
    "category": "national",
-   "delta": 0.269,
+   "delta": 0.2,
    "mult": 0.4096,
    "carriers": [
     "ad",
@@ -2417,8 +2521,8 @@
    "id": "N008",
    "name": "카르나 모래 유리",
    "category": "national",
-   "delta": 0.15,
-   "mult": 1.0,
+   "delta": 0.129,
+   "mult": 1.2526,
    "carriers": [
     "ap"
    ]
@@ -2427,8 +2531,8 @@
    "id": "N009",
    "name": "토르가 전쟁 가면",
    "category": "national",
-   "delta": 0.167,
-   "mult": 0.5598,
+   "delta": 0.159,
+   "mult": 0.5958,
    "carriers": [
     "ad",
     "tank"
@@ -2438,8 +2542,8 @@
    "id": "N010",
    "name": "쿠르간 기마 활",
    "category": "national",
-   "delta": 0.158,
-   "mult": 0.4327,
+   "delta": 0.109,
+   "mult": 0.5074,
    "carriers": [
     "ad"
    ]
@@ -2448,8 +2552,8 @@
    "id": "N011",
    "name": "사이람 벚꽃 검",
    "category": "national",
-   "delta": 0.208,
-   "mult": 0.6412,
+   "delta": 0.113,
+   "mult": 0.5611,
    "carriers": [
     "ad"
    ]
@@ -2458,8 +2562,8 @@
    "id": "N012",
    "name": "엘로웬 세계수 잎",
    "category": "national",
-   "delta": 0.242,
-   "mult": 0.5923,
+   "delta": 0.204,
+   "mult": 0.805,
    "carriers": [
     "tank"
    ]
@@ -2468,8 +2572,8 @@
    "id": "N013",
    "name": "그란두르 룬 강철",
    "category": "national",
-   "delta": 0.153,
-   "mult": 0.5665,
+   "delta": 0.143,
+   "mult": 0.5111,
    "carriers": [
     "tank"
    ]
@@ -2478,8 +2582,8 @@
    "id": "N014",
    "name": "서리 제도 고래 기름",
    "category": "national",
-   "delta": 0.211,
-   "mult": 0.512,
+   "delta": 0.163,
+   "mult": 0.4761,
    "carriers": [
     "ad",
     "tank"
@@ -2489,8 +2593,8 @@
    "id": "N015",
    "name": "티아마 진주 목걸이",
    "category": "national",
-   "delta": 0.133,
-   "mult": 1.0,
+   "delta": 0.089,
+   "mult": 0.701,
    "carriers": [
     "ap",
     "tank"
@@ -2500,8 +2604,8 @@
    "id": "N016",
    "name": "베일 요정 날개",
    "category": "national",
-   "delta": 0.192,
-   "mult": 0.6412,
+   "delta": 0.155,
+   "mult": 0.7321,
    "carriers": [
     "ad"
    ]
@@ -2510,8 +2614,8 @@
    "id": "N017",
    "name": "자이로스 독 송곳니",
    "category": "national",
-   "delta": 0.192,
-   "mult": 0.4096,
+   "delta": 0.135,
+   "mult": 0.314,
    "carriers": [
     "ad",
     "ap"
@@ -2521,8 +2625,8 @@
    "id": "N018",
    "name": "녹스 흑요석 두개골",
    "category": "national",
-   "delta": 0.128,
-   "mult": 0.8959,
+   "delta": 0.163,
+   "mult": 0.8747,
    "carriers": [
     "ap",
     "bruiser"
@@ -2532,8 +2636,8 @@
    "id": "N019",
    "name": "황혼 요새 핏빛 잔",
    "category": "national",
-   "delta": 0.114,
-   "mult": 0.5734,
+   "delta": 0.143,
+   "mult": 0.7346,
    "carriers": [
     "tank",
     "bruiser"
@@ -2543,8 +2647,8 @@
    "id": "N020",
    "name": "마카브 흑요석 핵",
    "category": "national",
-   "delta": 0.228,
-   "mult": 0.4096,
+   "delta": 0.127,
+   "mult": 0.2585,
    "carriers": [
     "tank"
    ]
@@ -2553,8 +2657,8 @@
    "id": "N021",
    "name": "네오스 에너지 셀",
    "category": "national",
-   "delta": 0.153,
-   "mult": 0.6838,
+   "delta": 0.175,
+   "mult": 0.8798,
    "carriers": [
     "ad",
     "ap"
@@ -2564,8 +2668,8 @@
    "id": "N022",
    "name": "셀레스티아 별의 서",
    "category": "national",
-   "delta": 0.142,
-   "mult": 1.0,
+   "delta": 0.111,
+   "mult": 1.3019,
    "carriers": [
     "ap"
    ]
@@ -2574,8 +2678,8 @@
    "id": "N023",
    "name": "드라케스탄 용의 알 조각",
    "category": "national",
-   "delta": 0.178,
-   "mult": 0.512,
+   "delta": 0.137,
+   "mult": 0.6265,
    "carriers": [
     "ad",
     "ap"
@@ -2585,8 +2689,8 @@
    "id": "N024",
    "name": "애쉬펠 재의 비늘",
    "category": "national",
-   "delta": 0.239,
-   "mult": 0.4096,
+   "delta": 0.155,
+   "mult": 0.2809,
    "carriers": [
     "ad",
     "ap"

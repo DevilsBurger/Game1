@@ -41,6 +41,8 @@ def item_block():
     L += ["", "가장 크게 조정된 아이템(배율 기준):"]
     xs = sorted(r["items"], key=lambda x: abs(x["mult"] - 1), reverse=True)[:12]
     L.append(", ".join(f"{x['name']} ×{x['mult']:.2f}" for x in xs))
+    flagged = [x for x in r["items"] if x.get("flag")]
+    L += ["", f"상황 의존형(배율 한계 0.4~2.0에서도 목표 밖, 디자이너 검토 대상) {len(flagged)}개: " + ", ".join(f"{x['name']}(Δ{x['delta']:+.2f})" for x in flagged)]
     return "\n".join(L)
 
 
