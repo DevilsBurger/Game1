@@ -68,9 +68,15 @@ def followup_block():
     if os.path.exists(p):
         r = json.load(open(p, encoding="utf-8")); hs = r["heroes"]
         sm = [x["star_mult"] for x in hs]
-        h0 = r["history"][0] if r["history"] else None
+        h0 = r["history"][0] if r["history"] and "star1" in r["history"][0] else None
+        if h0 is None:  # 아이템 단계가 hero_balance.json 이력을 비우므로 영웅 재수렴 로그에서 복원
+            import re as _re
+            lp = os.path.join(REP, "hero_fold.log")
+            if os.path.exists(lp):
+                m = _re.search(r"\[hero iter 0\] ★1: sd=([0-9.]+) band=(\d+)%", open(lp, encoding="utf-8").read())
+                if m: h0 = {"star1": {"sd": float(m.group(1)), "in_band": int(m.group(2)) / 100}}
         L += ["#### 9.1 원형 전력 계수 반영 후 영웅 재수렴",
-              f"- 원형 계수 반영 직후(조정 전) ★1 참전 승률 표준편차 {h0['star1']['sd']:.3f}, 밴드 내 {h0['star1']['in_band']:.0%} (반영 전 0.107 / 37%). 설계 기본값만으로 대부분의 영웅이 밴드 근처에 놓인다." if h0 and "star1" in h0 else "",
+              (f"- 원형 계수 반영 직후(조정 전) ★1 참전 승률 표준편차 {h0['star1']['sd']:.3f}, 밴드 내 {h0['star1']['in_band']:.0%} (반영 전 0.107 / 37%). 설계 기본값만으로 대부분의 영웅이 밴드 근처에 놓인다." if h0 else "- (반영 직후 분포: sim/reports/hero_fold.log 참조)"),
               f"- 잔여 영웅별 배율 범위: ★1 {min(x[0] for x in sm):.2f}~{max(x[0] for x in sm):.2f}, ★3 {min(x[2] for x in sm):.2f}~{max(x[2] for x in sm):.2f} (반영 전 0.68~1.64 / 0.54~1.73).",
               "- 최종 수렴: " + ", ".join(f"{lbl} 표준편차 {statistics.pstdev([x[k] for x in hs]):.3f}·밴드 내 {sum(1 for x in hs if abs(x[k]-0.5)<=0.05)/len(hs):.0%}" for k, lbl in (("wr_team", "★1"), ("wr_team_star2", "★2"), ("wr_team_star3", "★3"))), ""]
     # 9.2 traits
