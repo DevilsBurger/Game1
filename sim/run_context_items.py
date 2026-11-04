@@ -68,8 +68,8 @@ def main():
     scenarios = {
         "magic_heavy": dict(teams=teams, opp=lambda: [pick("tank", [])] + rng.sample(mages, 3) + [pick("support", [])], rules={}),
         # 보스/공성은 기준선 승률이 20~80% 구간에 오도록 강도를 맞춘다(0% 또는 100%면 Δ를 잴 수 없음)
-        "boss_hp": dict(teams=teams, opp=lambda: [{"monster": "ash_general", "tier": 4, "hp_mult": 2.2}] + [pick("ad", [])], rules={}),
-        "siege": dict(teams=teams, opp=lambda: [structure_spec("성벽", 2500, state={"priority": True, "arrow_aura_pct": 0.5})] + [pick("tank", []), pick("ad", [])], rules={}),
+        "boss_hp": dict(teams=teams, opp=lambda: [{"monster": "ash_general", "tier": 4, "hp_mult": 2.2}] + [pick("ad", []), pick("ap", [])], rules={}),
+        "siege": dict(teams=teams, opp=lambda: [structure_spec("성벽", 3000, state={"priority": True, "arrow_aura_pct": 0.6})] + [pick("tank", []), pick("bruiser", []), pick("ad", []), pick("ap", []), pick("support", [])], rules={}),
         "waves": dict(teams=teams, opp=lambda: [pick("tank", []), pick("ad", []), pick("ap", [])], rules={"waves": 3}),
         "assassin": dict(teams=teams_assassin, opp=lambda: [pick("tank", []), pick("bruiser", []), pick("ad", []), pick("ap", []), pick("support", [])], rules={}),
     }

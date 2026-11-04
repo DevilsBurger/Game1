@@ -112,7 +112,7 @@ def context_md():
     r = json.load(open(p, encoding="utf-8"))
     sc = r["scenarios"]
     bw = r.get("baseline_wr", {})
-    L = ["# 부록 B6. 상황 의존형 아이템의 유형별 전투 재평가", "", "시나리오: magic_heavy(마법 중심 적), boss_hp(계층 4 보스 체력 ×2.2), siege(적 성벽 + 화살비), waves(3웨이브), assassin(암살자 캐리어). 값 = Δ승률.",
+    L = ["# 부록 B6. 상황 의존형 아이템의 유형별 전투 재평가", "", "시나리오: magic_heavy(마법 중심 적), boss_hp(계층 4 보스 체력 ×2.2 + 딜러 2), siege(적 성벽 3000 + 화살비 + 5유닛), waves(3웨이브), assassin(암살자 캐리어). 값 = Δ승률.",
          "기준선(아이템 없음) 승률: " + ", ".join(f"{k} {v:.2f}" for k, v in bw.items()), "",
          "| ID | 아이템 | 분류 | 배율 | 목표 Δ | " + " | ".join(sc) + " | 최적 상황 | 판정 |", "|---|---|---|---|---|" + "---|" * len(sc) + "---|---|"]
     for x in r["rows"]:
