@@ -7,11 +7,11 @@
   "assassin"
  ],
  "baseline_wr": {
-  "magic_heavy": 0.617,
-  "boss_hp": 0.448,
-  "siege": 0.375,
+  "magic_heavy": 0.568,
+  "boss_hp": 0.435,
+  "siege": 0.372,
   "waves": 0.557,
-  "assassin": 0.445
+  "assassin": 0.424
  },
  "rows": [
   {
@@ -21,11 +21,11 @@
    "mult": 0.4,
    "target": 0.11,
    "delta": {
-    "magic_heavy": 0.057,
+    "magic_heavy": 0.086,
     "boss_hp": 0.07,
-    "siege": 0.133,
-    "waves": 0.051,
-    "assassin": 0.185
+    "siege": 0.073,
+    "waves": 0.026,
+    "assassin": 0.202
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -37,78 +37,30 @@
    "mult": 0.4,
    "target": 0.11,
    "delta": {
-    "magic_heavy": 0.064,
+    "magic_heavy": 0.096,
     "boss_hp": 0.104,
-    "siege": 0.13,
-    "waves": 0.079,
-    "assassin": 0.135
+    "siege": 0.109,
+    "waves": 0.053,
+    "assassin": 0.152
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
   },
   {
-   "id": "I029",
-   "name": "가고일 돌갑옷",
-   "category": "completed",
-   "mult": 0.4,
-   "target": 0.165,
-   "delta": {
-    "magic_heavy": 0.115,
-    "boss_hp": 0.12,
-    "siege": 0.13,
-    "waves": 0.072,
-    "assassin": 0.087
-   },
-   "best_scenario": "siege",
-   "verdict": "재설계 필요"
-  },
-  {
-   "id": "I035",
-   "name": "용의 발톱",
-   "category": "completed",
-   "mult": 2.0,
-   "target": 0.165,
-   "delta": {
-    "magic_heavy": 0.148,
-    "boss_hp": 0.13,
-    "siege": 0.039,
-    "waves": 0.109,
-    "assassin": 0.091
-   },
-   "best_scenario": "magic_heavy",
-   "verdict": "상황 특화 OK"
-  },
-  {
-   "id": "I054",
-   "name": "불사의 심장",
-   "category": "completed",
-   "mult": 0.4,
-   "target": 0.165,
-   "delta": {
-    "magic_heavy": 0.133,
-    "boss_hp": 0.102,
-    "siege": 0.174,
-    "waves": 0.086,
-    "assassin": 0.176
-   },
-   "best_scenario": "assassin",
-   "verdict": "상황 특화 OK"
-  },
-  {
-   "id": "R035",
-   "name": "빛나는 용의 발톱",
+   "id": "R039",
+   "name": "빛나는 정령의 송곳니",
    "category": "radiant",
    "mult": 2.0,
    "target": 0.3,
    "delta": {
-    "magic_heavy": 0.176,
-    "boss_hp": 0.18,
-    "siege": 0.055,
-    "waves": 0.147,
-    "assassin": 0.107
+    "magic_heavy": 0.258,
+    "boss_hp": 0.294,
+    "siege": 0.286,
+    "waves": 0.182,
+    "assassin": 0.436
    },
-   "best_scenario": "boss_hp",
-   "verdict": "재설계 필요"
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
   },
   {
    "id": "A011",
@@ -117,11 +69,11 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.117,
+    "magic_heavy": 0.143,
     "boss_hp": 0.201,
-    "siege": 0.174,
-    "waves": 0.102,
-    "assassin": 0.249
+    "siege": 0.161,
+    "waves": 0.048,
+    "assassin": 0.26
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -133,30 +85,30 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.176,
-    "boss_hp": 0.094,
-    "siege": 0.156,
-    "waves": 0.109,
-    "assassin": 0.242
+    "magic_heavy": 0.199,
+    "boss_hp": 0.096,
+    "siege": 0.174,
+    "waves": 0.09,
+    "assassin": 0.237
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
   },
   {
-   "id": "A024",
-   "name": "골렘의 핵",
+   "id": "A020",
+   "name": "증기 심장",
    "category": "artifact",
    "mult": 0.4,
-   "target": 0.21,
+   "target": 0.14,
    "delta": {
-    "magic_heavy": 0.141,
-    "boss_hp": 0.156,
-    "siege": 0.161,
-    "waves": 0.092,
-    "assassin": 0.146
+    "magic_heavy": 0.092,
+    "boss_hp": 0.099,
+    "siege": 0.138,
+    "waves": 0.06,
+    "assassin": 0.18
    },
-   "best_scenario": "siege",
-   "verdict": "재설계 필요"
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
   },
   {
    "id": "A026",
@@ -165,11 +117,11 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.086,
-    "boss_hp": 0.143,
-    "siege": 0.151,
-    "waves": 0.056,
-    "assassin": 0.118
+    "magic_heavy": 0.117,
+    "boss_hp": 0.138,
+    "siege": 0.154,
+    "waves": 0.046,
+    "assassin": 0.125
    },
    "best_scenario": "siege",
    "verdict": "상황 특화 OK"
@@ -181,13 +133,29 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.18,
-    "boss_hp": 0.146,
-    "siege": 0.286,
-    "waves": 0.049,
-    "assassin": 0.154
+    "magic_heavy": 0.217,
+    "boss_hp": 0.151,
+    "siege": 0.276,
+    "waves": 0.055,
+    "assassin": 0.171
    },
    "best_scenario": "siege",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A032",
+   "name": "모래시계",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": 0.102,
+    "boss_hp": 0.102,
+    "siege": 0.128,
+    "waves": 0.001,
+    "assassin": 0.236
+   },
+   "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
   },
   {
@@ -198,10 +166,10 @@
    "target": 0.14,
    "delta": {
     "magic_heavy": -0.182,
-    "boss_hp": 0.268,
-    "siege": -0.042,
-    "waves": 0.009,
-    "assassin": 0.158
+    "boss_hp": 0.242,
+    "siege": -0.068,
+    "waves": -0.026,
+    "assassin": 0.145
    },
    "best_scenario": "boss_hp",
    "verdict": "상황 특화 OK"
@@ -213,11 +181,27 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.119,
-    "boss_hp": 0.214,
-    "siege": 0.206,
-    "waves": 0.116,
-    "assassin": 0.257
+    "magic_heavy": 0.174,
+    "boss_hp": 0.203,
+    "siege": 0.203,
+    "waves": 0.077,
+    "assassin": 0.271
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A041",
+   "name": "드워프의 룬 망치",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": 0.109,
+    "boss_hp": 0.125,
+    "siege": 0.146,
+    "waves": 0.048,
+    "assassin": 0.24
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -229,11 +213,11 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.09,
-    "boss_hp": 0.148,
-    "siege": 0.182,
-    "waves": 0.095,
-    "assassin": 0.26
+    "magic_heavy": 0.119,
+    "boss_hp": 0.143,
+    "siege": 0.185,
+    "waves": 0.061,
+    "assassin": 0.289
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -245,61 +229,13 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.262,
-    "boss_hp": 0.185,
-    "siege": 0.344,
-    "waves": 0.112,
-    "assassin": 0.299
+    "magic_heavy": 0.303,
+    "boss_hp": 0.195,
+    "siege": 0.365,
+    "waves": 0.102,
+    "assassin": 0.314
    },
    "best_scenario": "siege",
-   "verdict": "상황 특화 OK"
-  },
-  {
-   "id": "S016",
-   "name": "사정거리 망원경",
-   "category": "support",
-   "mult": 2.0,
-   "target": 0.08,
-   "delta": {
-    "magic_heavy": 0.0,
-    "boss_hp": 0.018,
-    "siege": 0.076,
-    "waves": 0.089,
-    "assassin": 0.18
-   },
-   "best_scenario": "assassin",
-   "verdict": "상황 특화 OK"
-  },
-  {
-   "id": "N005",
-   "name": "루멘 성유물함",
-   "category": "national",
-   "mult": 0.4,
-   "target": 0.18,
-   "delta": {
-    "magic_heavy": 0.072,
-    "boss_hp": 0.104,
-    "siege": 0.117,
-    "waves": 0.065,
-    "assassin": 0.199
-   },
-   "best_scenario": "assassin",
-   "verdict": "상황 특화 OK"
-  },
-  {
-   "id": "N007",
-   "name": "발하임 늑대 가죽",
-   "category": "national",
-   "mult": 0.4,
-   "target": 0.12,
-   "delta": {
-    "magic_heavy": 0.047,
-    "boss_hp": 0.081,
-    "siege": 0.154,
-    "waves": 0.061,
-    "assassin": 0.186
-   },
-   "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
   },
   {
@@ -309,11 +245,11 @@
    "mult": 0.4,
    "target": 0.12,
    "delta": {
-    "magic_heavy": 0.143,
-    "boss_hp": 0.104,
+    "magic_heavy": 0.17,
+    "boss_hp": 0.107,
     "siege": 0.195,
-    "waves": 0.048,
-    "assassin": 0.145
+    "waves": 0.06,
+    "assassin": 0.16
    },
    "best_scenario": "siege",
    "verdict": "상황 특화 OK"

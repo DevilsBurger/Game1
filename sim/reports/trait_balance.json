@@ -2,32 +2,32 @@
  "history": [
   {
    "iter": 0,
-   "mean_dev": 0.04285714285714285,
-   "sd": 0.10347806410330111,
-   "in_band": 0.3979591836734694
+   "mean_dev": 0.021972789115646256,
+   "sd": 0.08654339314330113,
+   "in_band": 0.6224489795918368
   },
   {
    "iter": 1,
-   "mean_dev": 0.02374149659863945,
-   "sd": 0.07652199497970517,
-   "in_band": 0.40816326530612246
+   "mean_dev": 0.013945578231292515,
+   "sd": 0.06030787777870581,
+   "in_band": 0.6632653061224489
   },
   {
    "iter": 2,
-   "mean_dev": 0.024081632653061222,
-   "sd": 0.060809972426739294,
-   "in_band": 0.5408163265306123
+   "mean_dev": 0.008775510204081629,
+   "sd": 0.04414310822115383,
+   "in_band": 0.7142857142857143
   },
   {
    "iter": 3,
-   "mean_dev": 0.017278911564625847,
-   "sd": 0.06100136970837869,
-   "in_band": 0.5714285714285714
+   "mean_dev": -0.002517006802721093,
+   "sd": 0.042732785781059615,
+   "in_band": 0.7755102040816326
   },
   {
    "iter": 4,
-   "mean_dev": 0.018333333333333326,
-   "sd": 0.04511072294103741,
+   "mean_dev": 0.004557823129251697,
+   "sd": 0.038345569638583966,
    "in_band": 0.7142857142857143
   }
  ],
@@ -50,30 +50,30 @@
    "key": "artillerist",
    "name": "포격수",
    "level": 2,
-   "value": 0.063,
+   "value": 0.083,
    "target": 0.06,
    "n": 300,
-   "mult": 0.6536
+   "mult": 0.6682
   },
   {
    "kind": "class",
    "key": "artillerist",
    "name": "포격수",
    "level": 4,
-   "value": 0.133,
+   "value": 0.043,
    "target": 0.16,
    "n": 300,
-   "mult": 0.5393
+   "mult": 0.4265
   },
   {
    "kind": "class",
    "key": "artillerist",
    "name": "포격수",
    "level": 6,
-   "value": 0.323,
+   "value": 0.303,
    "target": 0.32,
    "n": 300,
-   "mult": 0.5325
+   "mult": 0.4919
   },
   {
    "kind": "class",
@@ -83,27 +83,27 @@
    "value": 0.04,
    "target": 0.06,
    "n": 300,
-   "mult": 0.7858
+   "mult": 0.8091
   },
   {
    "kind": "class",
    "key": "assassin",
    "name": "암살자",
    "level": 4,
-   "value": 0.21,
+   "value": 0.2,
    "target": 0.16,
    "n": 300,
-   "mult": 0.6362
+   "mult": 0.6364
   },
   {
    "kind": "class",
    "key": "assassin",
    "name": "암살자",
    "level": 6,
-   "value": 0.337,
+   "value": 0.293,
    "target": 0.32,
    "n": 300,
-   "mult": 0.5548
+   "mult": 0.4825
   },
   {
    "kind": "class",
@@ -113,67 +113,67 @@
    "value": 0.067,
    "target": 0.06,
    "n": 300,
-   "mult": 0.422
+   "mult": 0.4202
   },
   {
    "kind": "class",
    "key": "bard",
    "name": "음유시인",
    "level": 4,
-   "value": 0.16,
+   "value": 0.157,
    "target": 0.16,
    "n": 300,
-   "mult": 0.3772
+   "mult": 0.4532
   },
   {
    "kind": "class",
    "key": "bard",
    "name": "음유시인",
    "level": 6,
-   "value": 0.267,
+   "value": 0.293,
    "target": 0.32,
    "n": 300,
-   "mult": 0.6906
+   "mult": 0.8396
   },
   {
    "kind": "class",
    "key": "dragoon",
    "name": "용기사",
    "level": 2,
-   "value": 0.127,
+   "value": 0.117,
    "target": 0.06,
    "n": 300,
-   "mult": 0.6477
+   "mult": 0.6425
   },
   {
    "kind": "class",
    "key": "dragoon",
    "name": "용기사",
    "level": 4,
-   "value": 0.203,
+   "value": 0.263,
    "target": 0.16,
    "n": 300,
-   "mult": 0.4701
+   "mult": 0.5041
   },
   {
    "kind": "class",
    "key": "dragoon",
    "name": "용기사",
    "level": 6,
-   "value": 0.303,
+   "value": 0.28,
    "target": 0.32,
    "n": 300,
-   "mult": 0.5912
+   "mult": 0.5741
   },
   {
    "kind": "class",
    "key": "duelist",
    "name": "결투가",
    "level": 2,
-   "value": 0.073,
+   "value": 0.007,
    "target": 0.06,
    "n": 300,
-   "mult": 0.9039
+   "mult": 0.7155
   },
   {
    "kind": "class",
@@ -183,37 +183,37 @@
    "value": 0.227,
    "target": 0.16,
    "n": 300,
-   "mult": 0.6527
+   "mult": 0.6211
   },
   {
    "kind": "class",
    "key": "duelist",
    "name": "결투가",
    "level": 6,
-   "value": 0.35,
+   "value": 0.267,
    "target": 0.32,
    "n": 300,
-   "mult": 0.453
+   "mult": 0.4006
   },
   {
    "kind": "class",
    "key": "engineer",
    "name": "공학자",
    "level": 2,
-   "value": 0.047,
+   "value": 0.063,
    "target": 0.06,
    "n": 300,
-   "mult": 0.3464
+   "mult": 0.2979
   },
   {
    "kind": "class",
    "key": "engineer",
    "name": "공학자",
    "level": 4,
-   "value": 0.137,
+   "value": 0.16,
    "target": 0.16,
    "n": 300,
-   "mult": 0.282
+   "mult": 0.2608
   },
   {
    "kind": "class",
@@ -223,57 +223,57 @@
    "value": 0.287,
    "target": 0.32,
    "n": 300,
-   "mult": 0.2639
+   "mult": 0.2442
   },
   {
    "kind": "class",
    "key": "guardian",
    "name": "수호자",
    "level": 2,
-   "value": 0.107,
+   "value": 0.087,
    "target": 0.06,
    "n": 300,
-   "mult": 0.2019
+   "mult": 0.2
   },
   {
    "kind": "class",
    "key": "guardian",
    "name": "수호자",
    "level": 4,
-   "value": 0.21,
+   "value": 0.19,
    "target": 0.16,
    "n": 300,
-   "mult": 0.232
+   "mult": 0.2443
   },
   {
    "kind": "class",
    "key": "guardian",
    "name": "수호자",
    "level": 6,
-   "value": 0.343,
+   "value": 0.34,
    "target": 0.32,
    "n": 300,
-   "mult": 0.5695
+   "mult": 0.5298
   },
   {
    "kind": "class",
    "key": "knight",
    "name": "기사",
    "level": 2,
-   "value": 0.053,
+   "value": 0.073,
    "target": 0.06,
    "n": 300,
-   "mult": 0.2876
+   "mult": 0.2872
   },
   {
    "kind": "class",
    "key": "knight",
    "name": "기사",
    "level": 4,
-   "value": 0.17,
+   "value": 0.187,
    "target": 0.16,
    "n": 300,
-   "mult": 0.4407
+   "mult": 0.4395
   },
   {
    "kind": "class",
@@ -283,67 +283,67 @@
    "value": 0.29,
    "target": 0.32,
    "n": 300,
-   "mult": 0.863
+   "mult": 0.8372
   },
   {
    "kind": "class",
    "key": "mage",
    "name": "마법사",
    "level": 2,
-   "value": 0.08,
+   "value": 0.113,
    "target": 0.06,
    "n": 300,
-   "mult": 0.4057
+   "mult": 0.4759
   },
   {
    "kind": "class",
    "key": "mage",
    "name": "마법사",
    "level": 4,
-   "value": 0.163,
+   "value": 0.23,
    "target": 0.16,
    "n": 300,
-   "mult": 0.2983
+   "mult": 0.2814
   },
   {
    "kind": "class",
    "key": "mage",
    "name": "마법사",
    "level": 6,
-   "value": 0.317,
+   "value": 0.24,
    "target": 0.32,
    "n": 300,
-   "mult": 0.2427
+   "mult": 0.2059
   },
   {
    "kind": "class",
    "key": "priest",
    "name": "사제",
    "level": 2,
-   "value": 0.05,
+   "value": 0.063,
    "target": 0.06,
    "n": 300,
-   "mult": 0.607
+   "mult": 0.4393
   },
   {
    "kind": "class",
    "key": "priest",
    "name": "사제",
    "level": 4,
-   "value": 0.167,
+   "value": 0.15,
    "target": 0.16,
    "n": 300,
-   "mult": 0.79
+   "mult": 0.691
   },
   {
    "kind": "class",
    "key": "priest",
    "name": "사제",
    "level": 6,
-   "value": 0.373,
+   "value": 0.383,
    "target": 0.32,
    "n": 300,
-   "mult": 2.3647
+   "mult": 2.5806
   },
   {
    "kind": "class",
@@ -353,137 +353,137 @@
    "value": 0.103,
    "target": 0.06,
    "n": 300,
-   "mult": 0.4973
+   "mult": 0.459
   },
   {
    "kind": "class",
    "key": "ranger",
    "name": "궁수",
    "level": 4,
-   "value": 0.167,
+   "value": 0.17,
    "target": 0.16,
    "n": 300,
-   "mult": 0.2349
+   "mult": 0.2141
   },
   {
    "kind": "class",
    "key": "ranger",
    "name": "궁수",
    "level": 6,
-   "value": 0.347,
+   "value": 0.283,
    "target": 0.32,
    "n": 300,
-   "mult": 0.2579
+   "mult": 0.2181
   },
   {
    "kind": "class",
    "key": "shaman",
    "name": "주술사",
    "level": 2,
-   "value": 0.073,
+   "value": 0.083,
    "target": 0.06,
    "n": 300,
-   "mult": 1.3892
+   "mult": 1.4556
   },
   {
    "kind": "class",
    "key": "shaman",
    "name": "주술사",
    "level": 4,
-   "value": 0.117,
+   "value": 0.123,
    "target": 0.16,
    "n": 300,
-   "mult": 1.0631
+   "mult": 1.1629
   },
   {
    "kind": "class",
    "key": "shaman",
    "name": "주술사",
    "level": 6,
-   "value": 0.35,
+   "value": 0.34,
    "target": 0.32,
    "n": 300,
-   "mult": 1.4581
+   "mult": 1.6747
   },
   {
    "kind": "class",
    "key": "summoner",
    "name": "소환사",
    "level": 2,
-   "value": 0.037,
+   "value": 0.067,
    "target": 0.06,
    "n": 300,
-   "mult": 0.6311
+   "mult": 0.5881
   },
   {
    "kind": "class",
    "key": "summoner",
    "name": "소환사",
    "level": 4,
-   "value": 0.193,
+   "value": 0.187,
    "target": 0.16,
    "n": 300,
-   "mult": 0.4326
+   "mult": 0.3812
   },
   {
    "kind": "class",
    "key": "summoner",
    "name": "소환사",
    "level": 6,
-   "value": 0.307,
+   "value": 0.3,
    "target": 0.32,
    "n": 300,
-   "mult": 0.4099
+   "mult": 0.4046
   },
   {
    "kind": "class",
    "key": "warrior",
    "name": "전사",
    "level": 2,
-   "value": 0.097,
+   "value": 0.09,
    "target": 0.06,
    "n": 300,
-   "mult": 0.4731
+   "mult": 0.3924
   },
   {
    "kind": "class",
    "key": "warrior",
    "name": "전사",
    "level": 4,
-   "value": 0.193,
+   "value": 0.203,
    "target": 0.16,
    "n": 300,
-   "mult": 0.3721
+   "mult": 0.3873
   },
   {
    "kind": "class",
    "key": "warrior",
    "name": "전사",
    "level": 6,
-   "value": 0.323,
+   "value": 0.33,
    "target": 0.32,
    "n": 300,
-   "mult": 0.3765
+   "mult": 0.3477
   },
   {
    "kind": "origin",
    "key": "astel",
    "name": "아스텔",
    "level": 2,
-   "value": 0.077,
+   "value": 0.047,
    "target": 0.05,
    "n": 300,
-   "mult": 0.3295
+   "mult": 0.2
   },
   {
    "kind": "origin",
    "key": "astel",
    "name": "아스텔",
    "level": 4,
-   "value": 0.15,
+   "value": 0.19,
    "target": 0.14,
    "n": 300,
-   "mult": 0.2994
+   "mult": 0.3343
   },
   {
    "kind": "origin",
@@ -493,77 +493,77 @@
    "value": 0.247,
    "target": 0.28,
    "n": 300,
-   "mult": 0.2799
+   "mult": 0.2808
   },
   {
    "kind": "origin",
    "key": "astel",
    "name": "아스텔",
    "level": 8,
-   "value": 0.44,
+   "value": 0.39,
    "target": 0.42,
    "n": 300,
-   "mult": 0.3461
+   "mult": 0.3288
   },
   {
    "kind": "origin",
    "key": "celestia",
    "name": "셀레스티아",
    "level": 2,
-   "value": 0.087,
+   "value": 0.027,
    "target": 0.05,
    "n": 300,
-   "mult": 0.4527
+   "mult": 0.4617
   },
   {
    "kind": "origin",
    "key": "celestia",
    "name": "셀레스티아",
    "level": 4,
-   "value": 0.163,
+   "value": 0.123,
    "target": 0.14,
    "n": 300,
-   "mult": 0.3478
+   "mult": 0.3679
   },
   {
    "kind": "origin",
    "key": "celestia",
    "name": "셀레스티아",
    "level": 6,
-   "value": 0.247,
+   "value": 0.223,
    "target": 0.28,
    "n": 300,
-   "mult": 0.2569
+   "mult": 0.2672
   },
   {
    "kind": "origin",
    "key": "celestia",
    "name": "셀레스티아",
    "level": 8,
-   "value": 0.497,
+   "value": 0.433,
    "target": 0.42,
    "n": 300,
-   "mult": 0.2331
+   "mult": 0.2
   },
   {
    "kind": "origin",
    "key": "dragonkin",
    "name": "용족",
    "level": 2,
-   "value": 0.057,
+   "value": 0.023,
    "target": 0.05,
    "n": 300,
-   "mult": 0.5717
+   "mult": 0.7963
   },
   {
    "kind": "origin",
    "key": "dragonkin",
    "name": "용족",
    "level": 4,
-   "value": 0.213,
+   "value": 0.143,
    "target": 0.14,
    "n": 300,
-   "mult": 0.4579
+   "mult": 0.3716
   },
   {
    "kind": "origin",
@@ -573,274 +573,274 @@
    "value": 0.26,
    "target": 0.28,
    "n": 300,
-   "mult": 0.2779
+   "mult": 0.2902
   },
   {
    "kind": "origin",
    "key": "dragonkin",
    "name": "용족",
    "level": 8,
-   "value": 0.443,
+   "value": 0.42,
    "target": 0.42,
    "n": 300,
-   "mult": 0.2396
+   "mult": 0.2195
   },
   {
    "kind": "origin",
    "key": "elowen",
    "name": "엘로웬",
    "level": 2,
-   "value": 0.083,
+   "value": 0.05,
    "target": 0.05,
    "n": 300,
-   "mult": 0.9942
+   "mult": 0.7757
   },
   {
    "kind": "origin",
    "key": "elowen",
    "name": "엘로웬",
    "level": 4,
-   "value": 0.18,
+   "value": 0.213,
    "target": 0.14,
    "n": 300,
-   "mult": 0.9775
+   "mult": 1.0563
   },
   {
    "kind": "origin",
    "key": "elowen",
    "name": "엘로웬",
    "level": 6,
-   "value": 0.283,
+   "value": 0.337,
    "target": 0.28,
    "n": 300,
-   "mult": 0.9176
+   "mult": 0.9906
   },
   {
    "kind": "origin",
    "key": "elowen",
    "name": "엘로웬",
    "level": 8,
-   "value": 0.41,
+   "value": 0.44,
    "target": 0.42,
    "n": 300,
-   "mult": 0.7578
+   "mult": 0.8109
   },
   {
    "kind": "origin",
    "key": "freelancer",
    "name": "자유용병",
    "level": 2,
-   "value": 0.053,
+   "value": 0.08,
    "target": 0.05,
    "n": 300,
-   "mult": 0.4936
+   "mult": 0.6567
   },
   {
    "kind": "origin",
    "key": "freelancer",
    "name": "자유용병",
    "level": 4,
-   "value": 0.167,
+   "value": 0.197,
    "target": 0.14,
    "n": 300,
-   "mult": 0.4275
+   "mult": 0.4718
   },
   {
    "kind": "origin",
    "key": "freelancer",
    "name": "자유용병",
    "level": 6,
-   "value": 0.277,
+   "value": 0.233,
    "target": 0.28,
    "n": 300,
-   "mult": 0.5669
+   "mult": 0.563
   },
   {
    "kind": "origin",
    "key": "freelancer",
    "name": "자유용병",
+   "level": 8,
+   "value": 0.413,
+   "target": 0.42,
+   "n": 300,
+   "mult": 0.7237
+  },
+  {
+   "kind": "origin",
+   "key": "grandur",
+   "name": "그란두르",
+   "level": 2,
+   "value": 0.063,
+   "target": 0.05,
+   "n": 300,
+   "mult": 0.2682
+  },
+  {
+   "kind": "origin",
+   "key": "grandur",
+   "name": "그란두르",
+   "level": 4,
+   "value": 0.143,
+   "target": 0.14,
+   "n": 300,
+   "mult": 0.471
+  },
+  {
+   "kind": "origin",
+   "key": "grandur",
+   "name": "그란두르",
+   "level": 6,
+   "value": 0.3,
+   "target": 0.28,
+   "n": 300,
+   "mult": 0.5329
+  },
+  {
+   "kind": "origin",
+   "key": "grandur",
+   "name": "그란두르",
+   "level": 8,
+   "value": 0.447,
+   "target": 0.42,
+   "n": 300,
+   "mult": 0.5779
+  },
+  {
+   "kind": "origin",
+   "key": "karna",
+   "name": "카르나",
+   "level": 2,
+   "value": 0.1,
+   "target": 0.05,
+   "n": 300,
+   "mult": 0.2973
+  },
+  {
+   "kind": "origin",
+   "key": "karna",
+   "name": "카르나",
+   "level": 4,
+   "value": 0.09,
+   "target": 0.14,
+   "n": 300,
+   "mult": 0.2378
+  },
+  {
+   "kind": "origin",
+   "key": "karna",
+   "name": "카르나",
+   "level": 6,
+   "value": 0.247,
+   "target": 0.28,
+   "n": 300,
+   "mult": 0.2847
+  },
+  {
+   "kind": "origin",
+   "key": "karna",
+   "name": "카르나",
+   "level": 8,
+   "value": 0.367,
+   "target": 0.42,
+   "n": 300,
+   "mult": 0.2511
+  },
+  {
+   "kind": "origin",
+   "key": "lies",
+   "name": "리에스",
+   "level": 2,
+   "value": 0.03,
+   "target": 0.05,
+   "n": 300,
+   "mult": 1.1026
+  },
+  {
+   "kind": "origin",
+   "key": "lies",
+   "name": "리에스",
+   "level": 4,
+   "value": 0.16,
+   "target": 0.14,
+   "n": 300,
+   "mult": 0.8121
+  },
+  {
+   "kind": "origin",
+   "key": "lies",
+   "name": "리에스",
+   "level": 6,
+   "value": 0.297,
+   "target": 0.28,
+   "n": 300,
+   "mult": 0.655
+  },
+  {
+   "kind": "origin",
+   "key": "lies",
+   "name": "리에스",
    "level": 8,
    "value": 0.403,
    "target": 0.42,
    "n": 300,
-   "mult": 0.6886
-  },
-  {
-   "kind": "origin",
-   "key": "grandur",
-   "name": "그란두르",
-   "level": 2,
-   "value": 0.06,
-   "target": 0.05,
-   "n": 300,
-   "mult": 0.2749
-  },
-  {
-   "kind": "origin",
-   "key": "grandur",
-   "name": "그란두르",
-   "level": 4,
-   "value": 0.147,
-   "target": 0.14,
-   "n": 300,
-   "mult": 0.478
-  },
-  {
-   "kind": "origin",
-   "key": "grandur",
-   "name": "그란두르",
-   "level": 6,
-   "value": 0.313,
-   "target": 0.28,
-   "n": 300,
-   "mult": 0.5431
-  },
-  {
-   "kind": "origin",
-   "key": "grandur",
-   "name": "그란두르",
-   "level": 8,
-   "value": 0.503,
-   "target": 0.42,
-   "n": 300,
-   "mult": 0.5898
-  },
-  {
-   "kind": "origin",
-   "key": "karna",
-   "name": "카르나",
-   "level": 2,
-   "value": 0.057,
-   "target": 0.05,
-   "n": 300,
-   "mult": 0.269
-  },
-  {
-   "kind": "origin",
-   "key": "karna",
-   "name": "카르나",
-   "level": 4,
-   "value": 0.11,
-   "target": 0.14,
-   "n": 300,
-   "mult": 0.299
-  },
-  {
-   "kind": "origin",
-   "key": "karna",
-   "name": "카르나",
-   "level": 6,
-   "value": 0.323,
-   "target": 0.28,
-   "n": 300,
-   "mult": 0.3104
-  },
-  {
-   "kind": "origin",
-   "key": "karna",
-   "name": "카르나",
-   "level": 8,
-   "value": 0.353,
-   "target": 0.42,
-   "n": 300,
-   "mult": 0.2491
-  },
-  {
-   "kind": "origin",
-   "key": "lies",
-   "name": "리에스",
-   "level": 2,
-   "value": 0.033,
-   "target": 0.05,
-   "n": 300,
-   "mult": 1.4841
-  },
-  {
-   "kind": "origin",
-   "key": "lies",
-   "name": "리에스",
-   "level": 4,
-   "value": 0.147,
-   "target": 0.14,
-   "n": 300,
-   "mult": 0.5801
-  },
-  {
-   "kind": "origin",
-   "key": "lies",
-   "name": "리에스",
-   "level": 6,
-   "value": 0.29,
-   "target": 0.28,
-   "n": 300,
-   "mult": 0.6174
-  },
-  {
-   "kind": "origin",
-   "key": "lies",
-   "name": "리에스",
-   "level": 8,
-   "value": 0.43,
-   "target": 0.42,
-   "n": 300,
-   "mult": 0.554
+   "mult": 0.5462
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 2,
-   "value": 0.107,
+   "value": 0.0,
    "target": 0.05,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.4697
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 4,
-   "value": 0.233,
+   "value": 0.123,
    "target": 0.14,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.5122
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 6,
-   "value": 0.323,
+   "value": 0.377,
    "target": 0.28,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.6482
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 8,
-   "value": 0.617,
+   "value": 0.413,
    "target": 0.42,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.5443
   },
   {
    "kind": "origin",
    "key": "neos",
    "name": "네오스",
    "level": 2,
-   "value": 0.027,
+   "value": 0.093,
    "target": 0.05,
    "n": 300,
-   "mult": 0.6913
+   "mult": 0.7986
   },
   {
    "kind": "origin",
    "key": "neos",
    "name": "네오스",
    "level": 4,
-   "value": 0.183,
+   "value": 0.123,
    "target": 0.14,
    "n": 300,
    "mult": 0.5726
@@ -850,80 +850,80 @@
    "key": "neos",
    "name": "네오스",
    "level": 6,
-   "value": 0.267,
+   "value": 0.31,
    "target": 0.28,
    "n": 300,
-   "mult": 0.3746
+   "mult": 0.3923
   },
   {
    "kind": "origin",
    "key": "neos",
    "name": "네오스",
    "level": 8,
-   "value": 0.44,
+   "value": 0.447,
    "target": 0.42,
    "n": 300,
-   "mult": 0.3463
+   "mult": 0.3398
   },
   {
    "kind": "origin",
    "key": "nox",
    "name": "녹스",
    "level": 2,
-   "value": 0.05,
+   "value": 0.033,
    "target": 0.05,
    "n": 300,
-   "mult": 1.9105
+   "mult": 0.9941
   },
   {
    "kind": "origin",
    "key": "nox",
    "name": "녹스",
    "level": 4,
-   "value": 0.32,
+   "value": 0.157,
    "target": 0.14,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.7288
   },
   {
    "kind": "origin",
    "key": "nox",
    "name": "녹스",
    "level": 6,
-   "value": 0.427,
+   "value": 0.22,
    "target": 0.28,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.7044
   },
   {
    "kind": "origin",
    "key": "nox",
    "name": "녹스",
    "level": 8,
-   "value": 0.587,
+   "value": 0.407,
    "target": 0.42,
    "n": 300,
-   "mult": 0.2
+   "mult": 0.6656
   },
   {
    "kind": "origin",
    "key": "sairam",
    "name": "사이람",
    "level": 2,
-   "value": 0.05,
+   "value": -0.007,
    "target": 0.05,
    "n": 300,
-   "mult": 0.9057
+   "mult": 1.2931
   },
   {
    "kind": "origin",
    "key": "sairam",
    "name": "사이람",
    "level": 4,
-   "value": 0.1,
+   "value": 0.207,
    "target": 0.14,
    "n": 300,
-   "mult": 0.652
+   "mult": 1.0159
   },
   {
    "kind": "origin",
@@ -933,97 +933,97 @@
    "value": 0.283,
    "target": 0.28,
    "n": 300,
-   "mult": 0.7796
+   "mult": 0.8629
   },
   {
    "kind": "origin",
    "key": "sairam",
    "name": "사이람",
    "level": 8,
-   "value": 0.42,
+   "value": 0.437,
    "target": 0.42,
    "n": 300,
-   "mult": 0.6334
+   "mult": 0.6786
   },
   {
    "kind": "origin",
    "key": "torga",
    "name": "토르가",
    "level": 2,
-   "value": 0.127,
+   "value": 0.057,
    "target": 0.05,
    "n": 300,
-   "mult": 2.0372
+   "mult": 1.8792
   },
   {
    "kind": "origin",
    "key": "torga",
    "name": "토르가",
    "level": 4,
-   "value": 0.197,
+   "value": 0.173,
    "target": 0.14,
    "n": 300,
-   "mult": 1.7979
+   "mult": 1.6264
   },
   {
    "kind": "origin",
    "key": "torga",
    "name": "토르가",
    "level": 6,
-   "value": 0.273,
+   "value": 0.313,
    "target": 0.28,
    "n": 300,
-   "mult": 1.5499
+   "mult": 1.854
   },
   {
    "kind": "origin",
    "key": "torga",
    "name": "토르가",
    "level": 8,
-   "value": 0.37,
+   "value": 0.44,
    "target": 0.42,
    "n": 300,
-   "mult": 1.2003
+   "mult": 1.3678
   },
   {
    "kind": "origin",
    "key": "valheim",
    "name": "발하임",
    "level": 2,
-   "value": 0.043,
+   "value": 0.077,
    "target": 0.05,
    "n": 300,
-   "mult": 1.0822
+   "mult": 1.2749
   },
   {
    "kind": "origin",
    "key": "valheim",
    "name": "발하임",
    "level": 4,
-   "value": 0.157,
+   "value": 0.167,
    "target": 0.14,
    "n": 300,
-   "mult": 1.0011
+   "mult": 1.1048
   },
   {
    "kind": "origin",
    "key": "valheim",
    "name": "발하임",
    "level": 6,
-   "value": 0.337,
+   "value": 0.3,
    "target": 0.28,
    "n": 300,
-   "mult": 1.0322
+   "mult": 1.04
   },
   {
    "kind": "origin",
    "key": "valheim",
    "name": "발하임",
    "level": 8,
-   "value": 0.393,
+   "value": 0.403,
    "target": 0.42,
    "n": 300,
-   "mult": 0.8335
+   "mult": 0.9294
   }
  ]
 }

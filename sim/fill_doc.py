@@ -112,8 +112,8 @@ def followup_block():
     if os.path.exists(p):
         r = json.load(open(p, encoding="utf-8")); rows = r["rows"]
         L += ["#### 9.5 스토리 보스 튜닝",
-              f"- 결전·레이드·토벌형 스토리 전투 {len(rows)}개의 보스 체력 배수를 목표(보통 65%/어려움 45%/악몽 25%)로 조정. 최종 평균 승률: 보통 {statistics.mean(x['wr']['normal'] for x in rows):.0%}, 어려움 {statistics.mean(x['wr']['hard'] for x in rows):.0%}, 악몽 {statistics.mean(x['wr']['nightmare'] for x in rows):.0%}.",
-              "- " + ", ".join(f"{x['name']}({x['boss']}) ×{x['hp_mult']:.1f}" for x in rows if x["type"] == "decisive"), ""]
+              f"- 결전·레이드·토벌형 스토리 전투 {len(rows)}개. 고정 매치업 승률이 전력 배수의 계단 함수에 가까워(작은 전력 차로 0↔100% 반전) 승률 직접 피팅은 발산했고, 난이도별 **승률 50% 교차점(절벽)** 을 이분 탐색한 뒤 여유 배수(보통 0.96/어려움 1.00/악몽 1.035)를 곱하는 방식으로 바꿨다. 최종 평균 승률: 보통 {statistics.mean(x['wr']['normal'] for x in rows):.0%}, 어려움 {statistics.mean(x['wr']['hard'] for x in rows):.0%}, 악몽 {statistics.mean(x['wr']['nightmare'] for x in rows):.0%} (목표 65/45/25).",
+              "- 결전 절벽(보통): " + ", ".join(f"{x['name']} ×{x.get('cliff', {}).get('normal', 0):.2f}" for x in rows if x["type"] == "decisive"), ""]
     # 9.6 calibration + vectors
     p = os.path.join(REP, "battle_validation.json")
     if os.path.exists(p):

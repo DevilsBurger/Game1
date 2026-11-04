@@ -4,41 +4,39 @@
   "hard": 0.45,
   "nightmare": 0.25
  },
+ "margin": {
+  "normal": 0.96,
+  "hard": 1.0,
+  "nightmare": 1.035
+ },
  "history": [
   {
-   "round": 0,
-   "mean_dev": 0.0048611111111111,
-   "sd": 0.25118690089672024
+   "step": 0,
+   "mean_cliff": 1.0944444444444443
   },
   {
-   "round": 1,
-   "mean_dev": 0.14288194444444444,
-   "sd": 0.2151497014847962
+   "step": 1,
+   "mean_cliff": 1.1555555555555554
   },
   {
-   "round": 2,
-   "mean_dev": 0.04218749999999999,
-   "sd": 0.20569883742683137
+   "step": 2,
+   "mean_cliff": 1.1555555555555554
   },
   {
-   "round": 3,
-   "mean_dev": 0.047395833333333325,
-   "sd": 0.2209334236619082
+   "step": 3,
+   "mean_cliff": 1.1288194444444444
   },
   {
-   "round": 4,
-   "mean_dev": 0.017881944444444433,
-   "sd": 0.20193375466033195
+   "step": 4,
+   "mean_cliff": 1.1307291666666666
   },
   {
-   "round": 5,
-   "mean_dev": 0.12118055555555554,
-   "sd": 0.19302214189258823
+   "step": 5,
+   "mean_cliff": 1.1326388888888888
   },
   {
-   "round": 6,
-   "mean_dev": 0.012239583333333323,
-   "sd": 0.18940206392375028
+   "step": 6,
+   "mean_cliff": 1.1350260416666667
   }
  ],
  "rows": [
@@ -50,15 +48,20 @@
    "level": 17,
    "boss": "화염 와이번",
    "hp_mult": 2.0,
+   "cliff": {
+    "normal": 0.979,
+    "hard": 0.773,
+    "nightmare": 0.635
+   },
    "power_mult": {
-    "normal": 0.98,
-    "hard": 0.739,
-    "nightmare": 0.604
+    "normal": 0.94,
+    "hard": 0.773,
+    "nightmare": 0.657
    },
    "wr": {
-    "normal": 0.547,
-    "hard": 0.719,
-    "nightmare": 0.453
+    "normal": 0.75,
+    "hard": 0.562,
+    "nightmare": 0.146
    }
   },
   {
@@ -69,15 +72,20 @@
    "level": 18,
    "boss": "재의 장군",
    "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.46,
+    "hard": 1.168,
+    "nightmare": 0.962
+   },
    "power_mult": {
-    "normal": 1.428,
-    "hard": 1.196,
-    "nightmare": 0.983
+    "normal": 1.402,
+    "hard": 1.168,
+    "nightmare": 0.996
    },
    "wr": {
-    "normal": 0.703,
-    "hard": 0.375,
-    "nightmare": 0.234
+    "normal": 0.896,
+    "hard": 0.542,
+    "nightmare": 0.125
    }
   },
   {
@@ -88,15 +96,20 @@
    "level": 25,
    "boss": "바다뱀",
    "hp_mult": 2.0,
+   "cliff": {
+    "normal": 1.168,
+    "hard": 0.962,
+    "nightmare": 0.755
+   },
    "power_mult": {
-    "normal": 1.061,
-    "hard": 0.902,
-    "nightmare": 0.838
+    "normal": 1.121,
+    "hard": 0.962,
+    "nightmare": 0.781
    },
    "wr": {
-    "normal": 0.891,
-    "hard": 0.828,
-    "nightmare": 0.0
+    "normal": 0.562,
+    "hard": 0.479,
+    "nightmare": 0.312
    }
   },
   {
@@ -107,15 +120,20 @@
    "level": 29,
    "boss": "서리 거인",
    "hp_mult": 2.0,
+   "cliff": {
+    "normal": 0.979,
+    "hard": 0.773,
+    "nightmare": 0.584
+   },
    "power_mult": {
-    "normal": 0.932,
-    "hard": 0.794,
-    "nightmare": 0.629
+    "normal": 0.94,
+    "hard": 0.773,
+    "nightmare": 0.604
    },
    "wr": {
-    "normal": 0.656,
-    "hard": 0.359,
-    "nightmare": 0.172
+    "normal": 0.625,
+    "hard": 0.583,
+    "nightmare": 0.333
    }
   },
   {
@@ -126,15 +144,20 @@
    "level": 47,
    "boss": "서리 마녀",
    "hp_mult": 2.0,
+   "cliff": {
+    "normal": 1.426,
+    "hard": 0.687,
+    "nightmare": 0.807
+   },
    "power_mult": {
-    "normal": 1.439,
-    "hard": 0.708,
-    "nightmare": 0.795
+    "normal": 1.369,
+    "hard": 0.687,
+    "nightmare": 0.835
    },
    "wr": {
-    "normal": 0.469,
-    "hard": 0.469,
-    "nightmare": 0.688
+    "normal": 0.792,
+    "hard": 0.625,
+    "nightmare": 0.188
    }
   },
   {
@@ -145,15 +168,20 @@
    "level": 48,
    "boss": "재의 장군",
    "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.409,
+    "hard": 1.082,
+    "nightmare": 0.79
+   },
    "power_mult": {
-    "normal": 1.352,
-    "hard": 1.152,
-    "nightmare": 0.817
+    "normal": 1.353,
+    "hard": 1.082,
+    "nightmare": 0.818
    },
    "wr": {
-    "normal": 0.5,
-    "hard": 0.234,
-    "nightmare": 0.188
+    "normal": 0.417,
+    "hard": 0.375,
+    "nightmare": 0.146
    }
   },
   {
@@ -164,15 +192,20 @@
    "level": 73,
    "boss": "프로토타입 병기",
    "hp_mult": 4.0,
+   "cliff": {
+    "normal": 1.976,
+    "hard": 1.048,
+    "nightmare": 0.945
+   },
    "power_mult": {
-    "normal": 1.6,
-    "hard": 1.049,
-    "nightmare": 1.004
+    "normal": 1.897,
+    "hard": 1.048,
+    "nightmare": 0.978
    },
    "wr": {
-    "normal": 1.0,
-    "hard": 0.609,
-    "nightmare": 0.141
+    "normal": 0.854,
+    "hard": 0.5,
+    "nightmare": 0.229
    }
   },
   {
@@ -183,15 +216,20 @@
    "level": 78,
    "boss": "재의 주술사",
    "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.563,
+    "hard": 1.34,
+    "nightmare": 0.927
+   },
    "power_mult": {
-    "normal": 1.493,
-    "hard": 1.377,
-    "nightmare": 1.041
+    "normal": 1.5,
+    "hard": 1.34,
+    "nightmare": 0.959
    },
    "wr": {
-    "normal": 0.594,
-    "hard": 0.25,
-    "nightmare": 0.047
+    "normal": 0.646,
+    "hard": 0.396,
+    "nightmare": 0.208
    }
   },
   {
@@ -202,15 +240,20 @@
    "level": 79,
    "boss": "용의 유령",
    "hp_mult": 2.0,
+   "cliff": {
+    "normal": 1.391,
+    "hard": 1.22,
+    "nightmare": 0.859
+   },
    "power_mult": {
-    "normal": 1.336,
-    "hard": 1.277,
-    "nightmare": 0.879
+    "normal": 1.335,
+    "hard": 1.22,
+    "nightmare": 0.889
    },
    "wr": {
-    "normal": 0.656,
-    "hard": 0.219,
-    "nightmare": 0.25
+    "normal": 0.667,
+    "hard": 0.396,
+    "nightmare": 0.188
    }
   },
   {
@@ -221,15 +264,20 @@
    "level": 90,
    "boss": "재의 장군",
    "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.391,
+    "hard": 1.151,
+    "nightmare": 1.185
+   },
    "power_mult": {
-    "normal": 1.354,
-    "hard": 1.214,
-    "nightmare": 1.158
+    "normal": 1.335,
+    "hard": 1.151,
+    "nightmare": 1.226
    },
    "wr": {
-    "normal": 0.641,
-    "hard": 0.266,
-    "nightmare": 0.547
+    "normal": 0.667,
+    "hard": 0.542,
+    "nightmare": 0.271
    }
   },
   {
@@ -240,15 +288,20 @@
    "level": 93,
    "boss": "재의 장군",
    "hp_mult": 4.0,
+   "cliff": {
+    "normal": 2.079,
+    "hard": 1.254,
+    "nightmare": 1.151
+   },
    "power_mult": {
-    "normal": 1.6,
-    "hard": 1.241,
-    "nightmare": 1.251
+    "normal": 1.996,
+    "hard": 1.254,
+    "nightmare": 1.191
    },
    "wr": {
-    "normal": 1.0,
-    "hard": 0.578,
-    "nightmare": 0.172
+    "normal": 0.771,
+    "hard": 0.396,
+    "nightmare": 0.312
    }
   },
   {
@@ -259,15 +312,20 @@
    "level": 99,
    "boss": "재의 장군",
    "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.512,
+    "hard": 1.495,
+    "nightmare": 0.979
+   },
    "power_mult": {
-    "normal": 1.462,
-    "hard": 1.497,
-    "nightmare": 1.081
+    "normal": 1.452,
+    "hard": 1.495,
+    "nightmare": 1.013
    },
    "wr": {
-    "normal": 0.656,
-    "hard": 0.297,
-    "nightmare": 0.234
+    "normal": 0.667,
+    "hard": 0.25,
+    "nightmare": 0.458
    }
   }
  ]

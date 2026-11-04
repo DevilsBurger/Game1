@@ -124,11 +124,11 @@ def boss_md():
     p = os.path.join(REP, "boss_tuning.json")
     if not os.path.exists(p): return
     r = json.load(open(p, encoding="utf-8"))
-    L = ["# 부록 B7. 스토리 보스 전투 튜닝", "", f"목표(기대 팀): {r['targets']}. 보스 체력 배수(hp_mult)를 보통 승률로 조정, battles.json에 기록.", "",
-         "| ID | 전투 | 막 | 유형 | 레벨 | 보스 | 체력 배수 | 전력 배수(보통/어려움/악몽) | 보통 | 어려움 | 악몽 |", "|---|---|---|---|---|---|---|---|---|---|---|"]
+    L = ["# 부록 B7. 스토리 보스 전투 튜닝", "", f"목표(기대 팀): {r['targets']}. 고정 매치업의 승률은 전력 배수의 계단 함수에 가까우므로 난이도별 승률 50% 교차점(절벽)을 이분 탐색으로 찾고 여유 배수 {r.get('margin', {})}를 곱해 `tuned_power_mult`를 정한다. 보스 체력 배수는 설계값 유지. battles.json에 기록.", "",
+         "| ID | 전투 | 막 | 유형 | 레벨 | 보스 | 체력 배수 | 절벽(보통/어려움/악몽) | 전력 배수(보통/어려움/악몽) | 보통 | 어려움 | 악몽 |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for x in r["rows"]:
-        pmv = x.get("power_mult", {})
-        L.append(f"| {x['id']} | {x['name']} | {x['act']} | {x['type']} | {x['level']} | {x['boss']} | ×{x['hp_mult']:.2f} | {pmv.get('normal', 1):.2f}/{pmv.get('hard', 1):.2f}/{pmv.get('nightmare', 1):.2f} | {x['wr']['normal']:.2f} | {x['wr']['hard']:.2f} | {x['wr']['nightmare']:.2f} |")
+        pmv = x.get("power_mult", {}); cl = x.get("cliff", {})
+        L.append(f"| {x['id']} | {x['name']} | {x['act']} | {x['type']} | {x['level']} | {x['boss']} | ×{x['hp_mult']:.2f} | {cl.get('normal', 0):.2f}/{cl.get('hard', 0):.2f}/{cl.get('nightmare', 0):.2f} | {pmv.get('normal', 1):.2f}/{pmv.get('hard', 1):.2f}/{pmv.get('nightmare', 1):.2f} | {x['wr']['normal']:.2f} | {x['wr']['hard']:.2f} | {x['wr']['nightmare']:.2f} |")
     open(os.path.join(OUT, "B7_보스_튜닝.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 
