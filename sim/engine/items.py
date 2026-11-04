@@ -294,7 +294,14 @@ def h_kill_explode(b, u, p, m):
 
 def h_execute_low(b, u, p, m):
     def on_dd(b, u, p, dst, amt, kind, is_skill, is_attack):
-        if dst.alive and dst.hp_pct() <= p["threshold"] / 100.0 and not dst.is_structure: b.damage(u, dst, dst.hp + 1, "true")
+        # 재진입 방지(처형 피해 자체가 damage_dealt를 다시 발생시킴) + 방어막 포함 즉사
+        if u.state.get("executing"): return
+        if dst.alive and dst.hp_pct() <= p["threshold"] / 100.0 and not dst.is_structure and dst.stasis_until <= b.t:
+            u.state["executing"] = True
+            try:
+                b.damage(u, dst, dst.hp + dst.shield_total() + 1, "true")
+            finally:
+                u.state["executing"] = False
     u.on("damage_dealt", on_dd, p)
 
 

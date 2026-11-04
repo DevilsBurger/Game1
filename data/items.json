@@ -200,7 +200,7 @@
     "C01"
    ],
    "balance": {
-    "mult": 0.8337
+    "mult": 0.7128
    }
   },
   {
@@ -228,7 +228,7 @@
     "C02"
    ],
    "balance": {
-    "mult": 1.2353
+    "mult": 2.0
    }
   },
   {
@@ -258,7 +258,7 @@
     "C03"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -286,7 +286,7 @@
     "C04"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -338,7 +338,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6501
    }
   },
   {
@@ -365,7 +365,7 @@
     "C07"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6525
    }
   },
   {
@@ -392,7 +392,7 @@
     "C08"
    ],
    "balance": {
-    "mult": 0.8269
+    "mult": 0.7789
    }
   },
   {
@@ -419,7 +419,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.855
+    "mult": 0.731
    }
   },
   {
@@ -447,7 +447,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.5148
    }
   },
   {
@@ -466,7 +466,7 @@
     "C02"
    ],
    "balance": {
-    "mult": 0.8202
+    "mult": 0.7473
    }
   },
   {
@@ -495,7 +495,7 @@
     "C03"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6044
    }
   },
   {
@@ -523,7 +523,7 @@
     "C04"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.583
    }
   },
   {
@@ -550,7 +550,7 @@
     "C05"
    ],
    "balance": {
-    "mult": 1.1466
+    "mult": 1.5971
    }
   },
   {
@@ -578,7 +578,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4974
    }
   },
   {
@@ -605,7 +605,7 @@
     "C07"
    ],
    "balance": {
-    "mult": 0.789
+    "mult": 0.6493
    }
   },
   {
@@ -628,7 +628,10 @@
    "recipe": [
     "C02",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 1.506
+   }
   },
   {
    "id": "I018",
@@ -682,7 +685,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.8011
+    "mult": 0.7096
    }
   },
   {
@@ -701,7 +704,7 @@
     "C03"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -730,7 +733,7 @@
     "C04"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -758,7 +761,7 @@
     "C05"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.5706
    }
   },
   {
@@ -788,7 +791,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4992
    }
   },
   {
@@ -818,7 +821,7 @@
     "C07"
    ],
    "balance": {
-    "mult": 0.789
+    "mult": 0.6766
    }
   },
   {
@@ -843,7 +846,10 @@
    "recipe": [
     "C03",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 1.0748
+   }
   },
   {
    "id": "I026",
@@ -869,7 +875,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6152
    }
   },
   {
@@ -915,7 +921,7 @@
     "C04"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -942,7 +948,7 @@
     "C05"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -970,7 +976,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4458
    }
   },
   {
@@ -1000,7 +1006,7 @@
     "C07"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4985
    }
   },
   {
@@ -1028,7 +1034,7 @@
     "C08"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6035
    }
   },
   {
@@ -1055,7 +1061,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.5578
    }
   },
   {
@@ -1075,7 +1081,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.5012
    }
   },
   {
@@ -1101,7 +1107,7 @@
     "C05"
    ],
    "balance": {
-    "mult": 1.1977
+    "mult": 2.0
    }
   },
   {
@@ -1132,7 +1138,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6305
    }
   },
   {
@@ -1186,7 +1192,10 @@
    "recipe": [
     "C05",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 1.2161
+   }
   },
   {
    "id": "I039",
@@ -1210,7 +1219,10 @@
    "recipe": [
     "C05",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 1.1977
+   }
   },
   {
    "id": "I040",
@@ -1237,7 +1249,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.5054
    }
   },
   {
@@ -1263,7 +1275,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.8137
+    "mult": 0.5609
    }
   },
   {
@@ -1318,7 +1330,7 @@
     "C08"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6103
    }
   },
   {
@@ -1345,7 +1357,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.7717
+    "mult": 0.5489
    }
   },
   {
@@ -1365,7 +1377,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.8406
+    "mult": 0.8563
    }
   },
   {
@@ -1392,7 +1404,7 @@
     "C07"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.6358
    }
   },
   {
@@ -1420,7 +1432,7 @@
     "C08"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4984
    }
   },
   {
@@ -1445,7 +1457,10 @@
    "recipe": [
     "C07",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 1.18
+   }
   },
   {
    "id": "I049",
@@ -1469,7 +1484,10 @@
    "recipe": [
     "C07",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8406
+   }
   },
   {
    "id": "I050",
@@ -1494,7 +1512,7 @@
     "C08"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -1519,7 +1537,10 @@
    "recipe": [
     "C08",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 1.0118
+   }
   },
   {
    "id": "I052",
@@ -1546,7 +1567,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.8202
+    "mult": 0.7076
    }
   },
   {
@@ -1572,7 +1593,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4851
    }
   },
   {
@@ -1599,7 +1620,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -1618,7 +1639,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.75
+    "mult": 0.5357
    }
   },
   {
@@ -2324,7 +2345,7 @@
    "recipe": null,
    "base_item": "I001",
    "balance": {
-    "mult": 0.8164
+    "mult": 0.7149
    }
   },
   {
@@ -2350,7 +2371,7 @@
    "recipe": null,
    "base_item": "I002",
    "balance": {
-    "mult": 1.33
+    "mult": 1.8008
    }
   },
   {
@@ -2378,7 +2399,7 @@
    "recipe": null,
    "base_item": "I003",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -2404,7 +2425,7 @@
    "recipe": null,
    "base_item": "I004",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4141
    }
   },
   {
@@ -2452,7 +2473,7 @@
    "recipe": null,
    "base_item": "I006",
    "balance": {
-    "mult": 0.8002
+    "mult": 0.6367
    }
   },
   {
@@ -2477,7 +2498,7 @@
    "recipe": null,
    "base_item": "I007",
    "balance": {
-    "mult": 0.7738
+    "mult": 0.6173
    }
   },
   {
@@ -2527,7 +2548,7 @@
    "recipe": null,
    "base_item": "I009",
    "balance": {
-    "mult": 0.9184
+    "mult": 0.8184
    }
   },
   {
@@ -2553,7 +2574,7 @@
    "recipe": null,
    "base_item": "I010",
    "balance": {
-    "mult": 0.7667
+    "mult": 0.5128
    }
   },
   {
@@ -2568,7 +2589,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주문력 +50.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I011"
+   "base_item": "I011",
+   "balance": {
+    "mult": 0.9874
+   }
   },
   {
    "id": "R012",
@@ -2594,7 +2618,7 @@
    "recipe": null,
    "base_item": "I012",
    "balance": {
-    "mult": 0.8205
+    "mult": 0.77
    }
   },
   {
@@ -2620,7 +2644,7 @@
    "recipe": null,
    "base_item": "I013",
    "balance": {
-    "mult": 0.7886
+    "mult": 0.5594
    }
   },
   {
@@ -2645,7 +2669,7 @@
    "recipe": null,
    "base_item": "I014",
    "balance": {
-    "mult": 1.1794
+    "mult": 1.4625
    }
   },
   {
@@ -2671,7 +2695,7 @@
    "recipe": null,
    "base_item": "I015",
    "balance": {
-    "mult": 0.7632
+    "mult": 0.5573
    }
   },
   {
@@ -2696,7 +2720,7 @@
    "recipe": null,
    "base_item": "I016",
    "balance": {
-    "mult": 0.8658
+    "mult": 0.8215
    }
   },
   {
@@ -2719,7 +2743,7 @@
    "recipe": null,
    "base_item": "I017",
    "balance": {
-    "mult": 1.2514
+    "mult": 1.8133
    }
   },
   {
@@ -2744,7 +2768,7 @@
    "recipe": null,
    "base_item": "I018",
    "balance": {
-    "mult": 0.9072
+    "mult": 0.9197
    }
   },
   {
@@ -2770,7 +2794,7 @@
    "recipe": null,
    "base_item": "I019",
    "balance": {
-    "mult": 0.8164
+    "mult": 0.6804
    }
   },
   {
@@ -2787,7 +2811,7 @@
    "recipe": null,
    "base_item": "I020",
    "balance": {
-    "mult": 0.75
+    "mult": 0.401
    }
   },
   {
@@ -2814,7 +2838,7 @@
    "recipe": null,
    "base_item": "I021",
    "balance": {
-    "mult": 0.75
+    "mult": 0.5116
    }
   },
   {
@@ -2840,7 +2864,7 @@
    "recipe": null,
    "base_item": "I022",
    "balance": {
-    "mult": 0.75
+    "mult": 0.502
    }
   },
   {
@@ -2868,7 +2892,7 @@
    "recipe": null,
    "base_item": "I023",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4746
    }
   },
   {
@@ -2896,7 +2920,7 @@
    "recipe": null,
    "base_item": "I024",
    "balance": {
-    "mult": 0.8964
+    "mult": 0.7318
    }
   },
   {
@@ -2921,7 +2945,7 @@
    "recipe": null,
    "base_item": "I025",
    "balance": {
-    "mult": 0.8469
+    "mult": 0.8537
    }
   },
   {
@@ -2946,7 +2970,7 @@
    "recipe": null,
    "base_item": "I026",
    "balance": {
-    "mult": 0.8082
+    "mult": 0.5932
    }
   },
   {
@@ -2964,7 +2988,7 @@
    "recipe": null,
    "base_item": "I027",
    "balance": {
-    "mult": 0.8291
+    "mult": 0.7388
    }
   },
   {
@@ -2988,7 +3012,7 @@
    "recipe": null,
    "base_item": "I028",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -3013,7 +3037,7 @@
    "recipe": null,
    "base_item": "I029",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -3039,7 +3063,7 @@
    "recipe": null,
    "base_item": "I030",
    "balance": {
-    "mult": 0.7563
+    "mult": 0.5576
    }
   },
   {
@@ -3067,7 +3091,7 @@
    "recipe": null,
    "base_item": "I031",
    "balance": {
-    "mult": 0.7774
+    "mult": 0.5381
    }
   },
   {
@@ -3093,7 +3117,7 @@
    "recipe": null,
    "base_item": "I032",
    "balance": {
-    "mult": 0.7702
+    "mult": 0.5976
    }
   },
   {
@@ -3118,7 +3142,7 @@
    "recipe": null,
    "base_item": "I033",
    "balance": {
-    "mult": 0.8002
+    "mult": 0.6342
    }
   },
   {
@@ -3136,7 +3160,7 @@
    "recipe": null,
    "base_item": "I034",
    "balance": {
-    "mult": 0.8122
+    "mult": 0.495
    }
   },
   {
@@ -3160,7 +3184,7 @@
    "recipe": null,
    "base_item": "I035",
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -3189,7 +3213,7 @@
    "recipe": null,
    "base_item": "I036",
    "balance": {
-    "mult": 0.8248
+    "mult": 0.6554
    }
   },
   {
@@ -3215,7 +3239,7 @@
    "recipe": null,
    "base_item": "I037",
    "balance": {
-    "mult": 1.0808
+    "mult": 1.4416
    }
   },
   {
@@ -3241,7 +3265,7 @@
    "recipe": null,
    "base_item": "I038",
    "balance": {
-    "mult": 1.2646
+    "mult": 1.6215
    }
   },
   {
@@ -3266,7 +3290,7 @@
    "recipe": null,
    "base_item": "I039",
    "balance": {
-    "mult": 1.0987
+    "mult": 1.3495
    }
   },
   {
@@ -3292,7 +3316,7 @@
    "recipe": null,
    "base_item": "I040",
    "balance": {
-    "mult": 0.7738
+    "mult": 0.5204
    }
   },
   {
@@ -3316,7 +3340,7 @@
    "recipe": null,
    "base_item": "I041",
    "balance": {
-    "mult": 0.8757
+    "mult": 0.7037
    }
   },
   {
@@ -3341,7 +3365,7 @@
    "recipe": null,
    "base_item": "I042",
    "balance": {
-    "mult": 0.8122
+    "mult": 0.8061
    }
   },
   {
@@ -3367,7 +3391,7 @@
    "recipe": null,
    "base_item": "I043",
    "balance": {
-    "mult": 0.7597
+    "mult": 0.6718
    }
   },
   {
@@ -3390,7 +3414,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I044"
+   "base_item": "I044",
+   "balance": {
+    "mult": 0.6912
+   }
   },
   {
    "id": "R045",
@@ -3407,7 +3434,7 @@
    "recipe": null,
    "base_item": "I045",
    "balance": {
-    "mult": 0.9072
+    "mult": 0.8332
    }
   },
   {
@@ -3432,7 +3459,7 @@
    "recipe": null,
    "base_item": "I046",
    "balance": {
-    "mult": 0.8515
+    "mult": 0.6893
    }
   },
   {
@@ -3458,7 +3485,7 @@
    "recipe": null,
    "base_item": "I047",
    "balance": {
-    "mult": 0.75
+    "mult": 0.493
    }
   },
   {
@@ -3481,7 +3508,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 적 처치 시 마나 +20.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I048"
+   "base_item": "I048",
+   "balance": {
+    "mult": 1.1324
+   }
   },
   {
    "id": "R049",
@@ -3505,7 +3535,7 @@
    "recipe": null,
    "base_item": "I049",
    "balance": {
-    "mult": 0.8002
+    "mult": 0.8143
    }
   },
   {
@@ -3529,7 +3559,7 @@
    "recipe": null,
    "base_item": "I050",
    "balance": {
-    "mult": 0.7811
+    "mult": 0.6043
    }
   },
   {
@@ -3552,7 +3582,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +25%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I051"
+   "base_item": "I051",
+   "balance": {
+    "mult": 0.9545
+   }
   },
   {
    "id": "R052",
@@ -3577,7 +3610,7 @@
    "recipe": null,
    "base_item": "I052",
    "balance": {
-    "mult": 0.7848
+    "mult": 0.6294
    }
   },
   {
@@ -3601,7 +3634,7 @@
    "recipe": null,
    "base_item": "I053",
    "balance": {
-    "mult": 0.8248
+    "mult": 0.5943
    }
   },
   {
@@ -3626,7 +3659,7 @@
    "recipe": null,
    "base_item": "I054",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -3643,7 +3676,7 @@
    "recipe": null,
    "base_item": "I055",
    "balance": {
-    "mult": 0.8469
+    "mult": 0.6042
    }
   },
   {
@@ -3668,7 +3701,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.799
+    "mult": 0.7151
    }
   },
   {
@@ -3692,7 +3725,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.799
+    "mult": 0.5773
    }
   },
   {
@@ -3715,7 +3748,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4086
    }
   },
   {
@@ -3736,7 +3769,10 @@
    ],
    "desc": "스킬 피해의 10%만큼 고정 피해 추가.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.9191
+   }
   },
   {
    "id": "A005",
@@ -3760,7 +3796,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7649
+    "mult": 0.6846
    }
   },
   {
@@ -3793,7 +3829,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7695
+    "mult": 0.5538
    }
   },
   {
@@ -3817,7 +3853,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.6153
    }
   },
   {
@@ -3841,7 +3877,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.8149
+    "mult": 0.7516
    }
   },
   {
@@ -3865,7 +3901,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.6237
    }
   },
   {
@@ -3890,7 +3926,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5856
    }
   },
   {
@@ -3914,7 +3950,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -3938,7 +3974,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7514
+    "mult": 0.5806
    }
   },
   {
@@ -3963,7 +3999,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5954
    }
   },
   {
@@ -4014,7 +4050,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5094
    }
   },
   {
@@ -4038,7 +4074,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4065,7 +4101,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5175
    }
   },
   {
@@ -4089,7 +4125,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4227
    }
   },
   {
@@ -4139,7 +4175,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4812
    }
   },
   {
@@ -4163,7 +4199,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 1.1749
+    "mult": 1.4155
    }
   },
   {
@@ -4187,7 +4223,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7839
+    "mult": 0.5614
    }
   },
   {
@@ -4235,7 +4271,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4258,7 +4294,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7514
+    "mult": 0.6572
    }
   },
   {
@@ -4285,7 +4321,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4308,7 +4344,10 @@
    ],
    "desc": "전투 승리 시 골드 +30%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8747
+   }
   },
   {
    "id": "A028",
@@ -4332,7 +4371,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4348,7 +4387,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4372,7 +4411,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5496
    }
   },
   {
@@ -4395,7 +4434,10 @@
    ],
    "desc": "스킬에 맞은 적 공격 속도 -40% (3초).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.1207
+   }
   },
   {
    "id": "A032",
@@ -4419,7 +4461,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.8149
+    "mult": 0.6309
    }
   },
   {
@@ -4444,7 +4486,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5633
    }
   },
   {
@@ -4466,7 +4508,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -4491,7 +4533,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7888
+    "mult": 0.566
    }
   },
   {
@@ -4516,7 +4558,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.8881
+    "mult": 0.7543
    }
   },
   {
@@ -4541,7 +4583,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4861
    }
   },
   {
@@ -4563,7 +4605,10 @@
    ],
    "desc": "사거리 +2.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.895
+   }
   },
   {
    "id": "A039",
@@ -4589,7 +4634,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4614,7 +4659,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5351
    }
   },
   {
@@ -4639,7 +4684,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4663,7 +4708,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7742
+    "mult": 0.5627
    }
   },
   {
@@ -4687,7 +4732,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.6467
    }
   },
   {
@@ -4712,7 +4757,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -4734,7 +4779,10 @@
    ],
    "desc": "스킬 피해의 20%만큼 고정 피해 추가.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.1207
+   }
   },
   {
    "id": "A046",
@@ -4756,7 +4804,10 @@
    ],
    "desc": "인접 아군 공격 속도 +10%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.7486
+   }
   },
   {
    "id": "A047",
@@ -4780,7 +4831,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.9021
+    "mult": 0.7832
    }
   },
   {
@@ -4830,7 +4881,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7695
+    "mult": 0.6433
    }
   },
   {
@@ -4860,7 +4911,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.8375
+    "mult": 0.7063
    }
   },
   {
@@ -4912,7 +4963,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.8375
+    "mult": 0.7023
    }
   },
   {
@@ -4934,7 +4985,10 @@
    ],
    "desc": "전투 승리 시 골드 +50%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.2565
+   }
   },
   {
    "id": "A054",
@@ -4958,7 +5012,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 1.1749
+    "mult": 1.4613
    }
   },
   {
@@ -5013,7 +5067,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4437
    }
   },
   {
@@ -5043,7 +5097,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5803
    }
   },
   {
@@ -5073,7 +5127,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -5098,7 +5152,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5965
    }
   },
   {
@@ -5130,7 +5184,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -5153,7 +5207,10 @@
    ],
    "desc": "인접 아군 공격력·주문력 +12%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8453
+   }
   },
   {
    "id": "S002",
@@ -5177,7 +5234,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.8825
+    "mult": 0.6619
    }
   },
   {
@@ -5203,7 +5260,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.7893
+    "mult": 0.5142
    }
   },
   {
@@ -5227,7 +5284,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.6546
    }
   },
   {
@@ -5251,7 +5308,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.8542
+    "mult": 0.8107
    }
   },
   {
@@ -5275,7 +5332,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.8728
+    "mult": 0.702
    }
   },
   {
@@ -5300,7 +5357,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.775
+    "mult": 0.5813
    }
   },
   {
@@ -5325,7 +5382,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.5004
    }
   },
   {
@@ -5350,7 +5407,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.82
+    "mult": 0.6861
    }
   },
   {
@@ -5374,7 +5431,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.775
+    "mult": 0.662
    }
   },
   {
@@ -5398,7 +5455,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.8453
+    "mult": 0.7463
    }
   },
   {
@@ -5422,7 +5479,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.6363
    }
   },
   {
@@ -5446,7 +5503,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.8542
+    "mult": 0.687
    }
   },
   {
@@ -5492,7 +5549,10 @@
    ],
    "desc": "인접 아군 내구력 +8%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8728
+   }
   },
   {
    "id": "S016",
@@ -5515,7 +5575,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.2839
+    "mult": 1.7275
    }
   },
   {
@@ -5537,7 +5597,10 @@
    ],
    "desc": "인접 아군 물리 피해 8% 반사.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.673
+   }
   },
   {
    "id": "S018",
@@ -5560,7 +5623,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.418
    }
   },
   {
@@ -5584,7 +5647,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -5608,7 +5671,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -5633,7 +5696,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.75
+    "mult": 0.536
    }
   },
   {
@@ -5657,7 +5720,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.2098
+    "mult": 1.4919
    }
   },
   {
@@ -5679,7 +5742,10 @@
    ],
    "desc": "인접 아군 치명타 피해 +20%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.7689
+   }
   },
   {
    "id": "S024",
@@ -5702,7 +5768,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 1.5794
    }
   },
   {
@@ -5724,7 +5790,10 @@
    ],
    "desc": "아군 전체 받는 치유 +20%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.33
+   }
   },
   {
    "id": "S026",
@@ -5747,7 +5816,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -5771,7 +5840,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -5801,7 +5870,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.1875
+    "mult": 1.5573
    }
   },
   {
@@ -5824,7 +5893,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -5847,7 +5916,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.33
+    "mult": 2.0
    }
   },
   {
@@ -5870,7 +5939,10 @@
    "desc": "[브로멜 자유도시 특산] 골드 +15%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "bromel"
+   "nation": "bromel",
+   "balance": {
+    "mult": 1.2612
+   }
   },
   {
    "id": "N002",
@@ -5895,7 +5967,7 @@
    "recipe": null,
    "nation": "astel",
    "balance": {
-    "mult": 0.7674
+    "mult": 0.6097
    }
   },
   {
@@ -5919,7 +5991,7 @@
    "recipe": null,
    "nation": "mir",
    "balance": {
-    "mult": 0.7726
+    "mult": 0.6022
    }
   },
   {
@@ -5945,7 +6017,7 @@
    "recipe": null,
    "nation": "harben",
    "balance": {
-    "mult": 1.127
+    "mult": 1.6887
    }
   },
   {
@@ -5970,7 +6042,7 @@
    "recipe": null,
    "nation": "lumen",
    "balance": {
-    "mult": 0.7572
+    "mult": 0.4
    }
   },
   {
@@ -5995,7 +6067,7 @@
    "recipe": null,
    "nation": "lies",
    "balance": {
-    "mult": 1.127
+    "mult": 1.4501
    }
   },
   {
@@ -6023,7 +6095,7 @@
    "recipe": null,
    "nation": "valheim",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -6048,7 +6120,7 @@
    "recipe": null,
    "nation": "karna",
    "balance": {
-    "mult": 0.8121
+    "mult": 0.9152
    }
   },
   {
@@ -6074,7 +6146,7 @@
    "recipe": null,
    "nation": "torga",
    "balance": {
-    "mult": 0.7946
+    "mult": 0.7138
    }
   },
   {
@@ -6149,7 +6221,7 @@
    "recipe": null,
    "nation": "elowen",
    "balance": {
-    "mult": 0.778
+    "mult": 0.6366
    }
   },
   {
@@ -6174,7 +6246,7 @@
    "recipe": null,
    "nation": "grandur",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4344
    }
   },
   {
@@ -6200,7 +6272,7 @@
    "recipe": null,
    "nation": "frost_isles",
    "balance": {
-    "mult": 0.75
+    "mult": 0.5069
    }
   },
   {
@@ -6225,7 +6297,7 @@
    "recipe": null,
    "nation": "tiama",
    "balance": {
-    "mult": 0.8373
+    "mult": 0.781
    }
   },
   {
@@ -6249,7 +6321,7 @@
    "recipe": null,
    "nation": "veil",
    "balance": {
-    "mult": 0.8373
+    "mult": 0.7555
    }
   },
   {
@@ -6276,7 +6348,7 @@
    "recipe": null,
    "nation": "zyros",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4319
    }
   },
   {
@@ -6303,7 +6375,7 @@
    "recipe": null,
    "nation": "nox",
    "balance": {
-    "mult": 0.8373
+    "mult": 0.701
    }
   },
   {
@@ -6328,7 +6400,7 @@
    "recipe": null,
    "nation": "twilight",
    "balance": {
-    "mult": 0.75
+    "mult": 0.6024
    }
   },
   {
@@ -6353,7 +6425,7 @@
    "recipe": null,
    "nation": "makab",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
@@ -6378,7 +6450,7 @@
    "recipe": null,
    "nation": "neos",
    "balance": {
-    "mult": 0.75
+    "mult": 0.6767
    }
   },
   {
@@ -6402,7 +6474,10 @@
    "desc": "[셀레스티아 특산] 스킬 시 인접 아군 마나 +6.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "celestia"
+   "nation": "celestia",
+   "balance": {
+    "mult": 0.7094
+   }
   },
   {
    "id": "N023",
@@ -6427,7 +6502,7 @@
    "recipe": null,
    "nation": "drakestan",
    "balance": {
-    "mult": 0.7834
+    "mult": 0.5913
    }
   },
   {
@@ -6461,7 +6536,7 @@
    "recipe": null,
    "nation": "ashfell",
    "balance": {
-    "mult": 0.75
+    "mult": 0.4
    }
   },
   {
