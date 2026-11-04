@@ -79,5 +79,55 @@ def battle_md():
     open(os.path.join(OUT, "B3_전투_난이도_검증.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 
+def trait_md():
+    p = os.path.join(REP, "trait_balance.json")
+    if not os.path.exists(p): return
+    r = json.load(open(p, encoding="utf-8"))
+    L = ["# 부록 B4. 특성 임계값 가치 측정", "", "특성 T를 레벨 L로 활성화한 8인 팀(보유자 L명 + 무작위 비보유자) vs 계층 1:1 매칭 무작위 8인 팀(보유자 제외). 값 = 승률 - 50%.",
+         f"목표: 출신 {r['targets']['origin']}, 직업 {r['targets']['class']} (±4%p). 조정은 traits.json effects의 `balance.mult[레벨]`.", "", "## 수렴 이력", "", "| 반복 | 평균 편차 | 표준편차 | ±4%p 내 |", "|---|---|---|---|"]
+    for h in r["history"]: L.append(f"| {h['iter']} | {h['mean_dev']:+.3f} | {h['sd']:.3f} | {h['in_band']:.0%} |")
+    L += ["", "## 특성별 결과", "", "| 구분 | 특성 | 레벨 | 가치(승률-50%) | 목표 | 배율 | 표본 |", "|---|---|---|---|---|---|---|"]
+    for x in r["rows"]:
+        L.append(f"| {'출신' if x['kind']=='origin' else '직업'} | {x['name']} | {x['level']} | {x['value']:+.3f} {band(x['value'] - x['target'] + 0.5, 0.04)} | {x['target']:+.2f} | ×{x['mult']:.2f} | {x['n']} |")
+    open(os.path.join(OUT, "B4_특성_가치.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+
+
+def combos_md():
+    p = os.path.join(REP, "item_combos.json")
+    if not os.path.exists(p): return
+    r = json.load(open(p, encoding="utf-8"))
+    L = ["# 부록 B5. 아이템 다중 장착 상호작용", "", "같은 캐리어 역할의 조합 아이템 2개·3개를 한 캐리어에 장착했을 때 Δ와 단일 Δ 합의 차이(시너지 = Δ조합 - ΣΔ단일). 음수 = 열가산(상쇄), 양수 = 초가산.", ""]
+    for k, v in r["summary"].items():
+        L.append(f"- {k}: n={v['n']}, 평균 Δ조합 {v['mean_delta']:+.3f}, 평균 ΣΔ단일 {v['mean_sum_single']:+.3f}, 평균 시너지 {v['mean_synergy']:+.3f} (sd {v['sd_synergy']:.3f})")
+    L += ["", "## 상쇄(열가산) 상위 15", "", "| 역할 | 아이템 | Δ조합 | ΣΔ단일 | 시너지 |", "|---|---|---|---|---|"]
+    for x in r["rows"][:15]: L.append(f"| {x['role']} | {' + '.join(x['items'])} | {x['delta']:+.3f} | {x['sum_single']:+.3f} | {x['synergy']:+.3f} |")
+    L += ["", "## 시너지(초가산) 상위 15", "", "| 역할 | 아이템 | Δ조합 | ΣΔ단일 | 시너지 |", "|---|---|---|---|---|"]
+    for x in r["rows"][-15:][::-1]: L.append(f"| {x['role']} | {' + '.join(x['items'])} | {x['delta']:+.3f} | {x['sum_single']:+.3f} | {x['synergy']:+.3f} |")
+    open(os.path.join(OUT, "B5_아이템_조합_상호작용.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+
+
+def context_md():
+    p = os.path.join(REP, "context_items.json")
+    if not os.path.exists(p): return
+    r = json.load(open(p, encoding="utf-8"))
+    sc = r["scenarios"]
+    L = ["# 부록 B6. 상황 의존형 아이템의 유형별 전투 재평가", "", "시나리오: magic_heavy(마법 중심 적), boss_hp(계층 5 보스 체력 ×4), siege(적 성벽), waves(3웨이브), assassin(암살자 캐리어). 값 = Δ승률.", "",
+         "| ID | 아이템 | 분류 | 배율 | 목표 Δ | " + " | ".join(sc) + " | 최적 상황 | 판정 |", "|---|---|---|---|---|" + "---|" * len(sc) + "---|---|"]
+    for x in r["rows"]:
+        L.append(f"| {x['id']} | {x['name']} | {x['category']} | ×{x['mult']:.2f} | {x['target']:+.2f} | " + " | ".join(f"{x['delta'][s]:+.2f}" if x['delta'].get(s) is not None else "-" for s in sc) + f" | {x['best_scenario']} | {x['verdict']} |")
+    open(os.path.join(OUT, "B6_상황의존_아이템.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+
+
+def boss_md():
+    p = os.path.join(REP, "boss_tuning.json")
+    if not os.path.exists(p): return
+    r = json.load(open(p, encoding="utf-8"))
+    L = ["# 부록 B7. 스토리 보스 전투 튜닝", "", f"목표(기대 팀): {r['targets']}. 보스 체력 배수(hp_mult)를 보통 승률로 조정, battles.json에 기록.", "",
+         "| ID | 전투 | 막 | 유형 | 레벨 | 보스 | 체력 배수 | 보통 | 어려움 | 악몽 |", "|---|---|---|---|---|---|---|---|---|---|"]
+    for x in r["rows"]:
+        L.append(f"| {x['id']} | {x['name']} | {x['act']} | {x['type']} | {x['level']} | {x['boss']} | ×{x['hp_mult']:.2f} | {x['wr']['normal']:.2f} | {x['wr']['hard']:.2f} | {x['wr']['nightmare']:.2f} |")
+    open(os.path.join(OUT, "B7_보스_튜닝.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+
+
 if __name__ == "__main__":
-    hero_md(); item_md(); battle_md(); print("reports written")
+    hero_md(); item_md(); battle_md(); trait_md(); combos_md(); context_md(); boss_md(); print("reports written")

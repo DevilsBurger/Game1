@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-전투 난이도 검증: battles.json의 적 편성을 몬스터 템플릿으로 생성하고, 전투 레벨에 맞는 '기대 팀'으로 싸워
-난이도별 승률을 측정한다. 목표: 보통 70~85%, 어려움 45~65%, 악몽 20~40% (기대 팀 기준).
+전투 난이도 검증: battles.json의 적 편성을 몬스터 템플릿으로 생성하고(유형별 규칙: 웨이브·구조물·호위·암살·탈출·구출 포함), 전투 레벨에 맞는 '기대 팀'으로 싸워
+난이도별 승률을 측정한다. 기대 팀: 계층 = 1+레벨/22, 성급 = 1(<35)/2(<75)/3·2 혼합(≥75). 목표: 보통 70~85%, 어려움 45~65%, 악몽 20~40% (기대 팀 기준).
 출력: sim/reports/battle_validation.json
 """
 import json, os, sys, random, statistics, argparse
@@ -22,17 +22,7 @@ def _init(curve=None):
     _G["curve"] = curve or {}
 
 
-def expected_team(d, level, size, rng):
-    """레벨에 맞는 기대 팀: 계층 = 1 + level//22, 성급 = 1(레벨<35) / 2(35~75) / 3(75+). 역할 혼합."""
-    tier = max(1, min(5, 1 + level // 22))
-    star = 1 if level < 35 else (2 if level < 75 else 3)
-    pool = [h for h in d.heroes.values() if h["tier"] in (tier, max(1, tier - 1))]
-    roles = ["knight", "guardian", "warrior", "duelist", "ranger", "mage", "priest", "assassin", "artillerist", "bard"]
-    team = []
-    for r in roles[:size]:
-        cands = [h for h in pool if h["class"] == r]
-        team.append(rng.choice(cands)["id"])
-    return [d.hero_spec(h, star) for h in team]
+from scenario import build_scenario, expected_team, enemy_power as _ep  # noqa: E402
 
 
 def band_of(level):
@@ -40,41 +30,12 @@ def band_of(level):
     return f"{lo}-{lo+9}"
 
 
-def enemy_power(level, diff, curve):
-    bands = curve.get("bands", {})
-    if isinstance(bands.get(diff), dict):  # 난이도별 × 구간별
-        return bands[diff].get(band_of(level), 1.0)
-    return bands.get(band_of(level), 1.0) * curve.get("difficulty_mult", {}).get(diff, 1.0)
-
-
-def enemy_team(d, b, diff, curve=None):
-    dd = b["difficulties"][diff]
-    star = dd["enemy_star"]; pm = dd["enemy_power_mult"]
-    # 전력 배수는 성급 상승으로 대부분 반영되므로 잔여분만 능력치에 적용
-    star_gain = {1: 1.0, 2: 1.8 * 1.5, 3: 3.24 * 2.25}
-    residual = max(0.75, min(1.6, (pm / (star_gain[star] / star_gain[b["difficulties"]["normal"]["enemy_star"]])) ** 0.5))
-    residual *= enemy_power(b["level"], diff, curve or _G.get("curve", {}))
-    units = []
-    for u in b["enemy"]["units"]:
-        units.append(d.monster_spec(u["unit"], star=star, tier_override=u["tier"], power_mult=residual))
-    if b["enemy"]["boss"]:
-        bs = b["enemy"]["boss"]
-        units.append(d.monster_spec(bs["unit"], star=star, tier_override=bs["tier"], hp_mult=bs["hp_mult"], power_mult=residual))
-    return units[:12]
-
-
 def _run(args):
     bid, diff, seed = args
     d = _G["d"]; b = _G["b"][bid]
     rng = random.Random(seed)
-    size = max(b["participation"]["min"], min(b["participation"]["max"], 6 if b["participation"]["mode"] != "solo" else 1))
-    if b["participation"]["mode"] == "solo":
-        allies = [d.hero_spec(rng.choice([h["id"] for h in d.heroes.values() if h["tier"] == max(1, min(5, 1 + b["level"] // 22)) and h["class"] in ("duelist", "warrior", "knight")]),
-                              1 if b["level"] < 35 else (2 if b["level"] < 75 else 3))]
-    else:
-        allies = expected_team(d, b["level"], size, rng)
-    enemies = enemy_team(d, b, diff)
-    r = Battle(d, allies, enemies, seed=seed).run()
+    allies, enemies, rules = build_scenario(d, b, diff, rng, curve=_G.get("curve", {}))
+    r = Battle(d, allies, enemies, seed=seed, rules=rules).run()
     return bid, diff, 1 if r["winner"] == 0 else 0
 
 

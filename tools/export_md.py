@@ -31,7 +31,8 @@ for t in range(1, 6):
     L.append(f"| {t} | {RAR[t]} | {sum(1 for h in heroes['heroes'] if h['tier']==t)} |")
 L += ["", "## 전체 목록 (밸런스 배율 반영 최종 수치)", "", "| ID | 이름 | 칭호 | 출신 | 직업 | 계층 | HP ★1/★2/★3 | AD ★1/★2/★3 | AS | 방어 | 마저 | 사거리 | 마나 | 스킬 | 스킬 원형 | 스킬 설명 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
 for h in heroes["heroes"]:
-    s = h["stats"]; b = h.get("balance", {}); sm = b.get("star_mult", [1, 1, 1])
+    s = h["stats"]; b = h.get("balance", {}); ap_ = h.get("archetype_power", [1, 1, 1])
+    sm = [b.get("star_mult", [1, 1, 1])[i] * ap_[i] for i in range(3)]
     hp = "/".join(str(round(s["hp"] * b.get("hp_mult", 1) * sm[i] * h["star_scaling"]["hp"][i])) for i in range(3))
     ad = "/".join(str(round(s["ad"] * b.get("ad_mult", 1) * sm[i] * h["star_scaling"]["ad"][i])) for i in range(3))
     L.append(f"| {h['id']} | {h['name_ko']} | {h['title']} | {ON[h['origin']]} | {CN[h['class']]} | {h['tier']} | {hp} | {ad} | {s['attack_speed']} | {s['armor']} | {s['mr']} | {s['range']} | {s['mana_start']}/{s['mana_max']} | {h['skill']['name']} | {h['skill']['archetype']} | {h['skill']['desc']} |")

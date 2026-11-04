@@ -77,6 +77,46 @@ ARCHETYPES = {
     "turret_big":      dict(kind="turret", hp_pct=[70, 85, 110], ad_pct=[110, 125, 150], range=4, max_active=1, lifetime=15, radius=1),
 }
 
+# ───────── 원형별 전력 계수 (★1, ★2, ★3) ─────────
+# 1차 밸런스 시뮬레이션에서 측정된 원형별 평균 보정 비율을 설계 상수로 접어 넣은 값.
+# 체력·공격력·스킬 수치에 공통으로 곱한다 (<1: 원형 기본값이 과강 → 하향, >1: 과약 → 상향).
+ARCHETYPE_POWER = {
+    "aoe_line": [0.91, 0.94, 0.97],
+    "aoe_line_ad": [1.12, 1.19, 1.23],
+    "aoe_self": [0.96, 0.99, 1.06],
+    "aoe_target": [1.18, 1.22, 1.26],
+    "aoe_target_ad": [1.1, 1.14, 1.19],
+    "armor_shred": [1.2, 1.21, 1.23],
+    "buff_ad_allies": [1.4, 1.37, 1.2],
+    "buff_ap_allies": [1.61, 1.67, 1.73],
+    "buff_as_allies": [1.4, 1.37, 1.27],
+    "buff_as_self": [1.07, 1.09, 1.13],
+    "burst_ad": [1.01, 1.05, 1.08],
+    "burst_ad_long": [1.18, 1.22, 1.25],
+    "burst_st": [1.2, 1.21, 1.24],
+    "chain": [1.1, 1.14, 1.19],
+    "chain_ad": [0.92, 0.97, 1.05],
+    "dash_aoe": [0.9, 0.92, 0.95],
+    "dash_strike": [1.02, 1.02, 1.04],
+    "dot_target": [1.25, 1.3, 1.38],
+    "execute": [1.02, 1.07, 1.09],
+    "execute_long": [1.14, 1.19, 1.18],
+    "heal_aoe": [0.98, 0.92, 0.86],
+    "heal_lowest": [0.99, 0.93, 0.84],
+    "lifesteal_strike": [0.92, 0.95, 0.98],
+    "multishot": [1.02, 1.06, 1.11],
+    "shield_allies": [0.77, 0.81, 0.82],
+    "shield_self": [0.74, 0.77, 0.74],
+    "stun_aoe": [1.09, 1.08, 1.05],
+    "stun_st": [0.96, 0.95, 0.95],
+    "summon": [1.24, 1.23, 1.26],
+    "summon_big": [1.09, 1.09, 1.15],
+    "summon_multi": [1.13, 1.12, 1.18],
+    "taunt_shield": [0.69, 0.66, 0.61],
+    "turret": [1.03, 1.03, 1.06],
+    "turret_big": [1.1, 1.12, 1.19],
+}
+
 # 각 출신/직업 특성 임계값
 ORIGIN_THRESHOLDS = [2, 4, 6, 8]
 CLASS_THRESHOLDS = [2, 4, 6]
@@ -165,8 +205,9 @@ def main():
             "stats": stats,
             "star_scaling": {"hp": STAR_HP, "ad": STAR_AD},
             "skill": {"name": skill_name, "archetype": arche, "desc": skill_desc, "params": params},
+            "archetype_power": ARCHETYPE_POWER.get(arche, [1.0, 1.0, 1.0]),
             "lore": lore,
-            "balance": {"hp_mult": 1.0, "ad_mult": 1.0, "skill_mult": 1.0},
+            "balance": {"hp_mult": 1.0, "ad_mult": 1.0, "skill_mult": 1.0, "star_mult": [1.0, 1.0, 1.0]},
         }
         heroes.append(hero)
 
@@ -192,6 +233,8 @@ def main():
     player["skill"] = {"name": player.pop("skill_name"), "archetype": player.pop("archetype"),
                        "desc": player.pop("skill_desc"), "params": scaled_params("burst_ad", 3)}
     player["star_scaling"] = {"hp": STAR_HP, "ad": STAR_AD}
+    player["archetype_power"] = ARCHETYPE_POWER.get("burst_ad", [1.0, 1.0, 1.0])
+    player["balance"] = {"hp_mult": 1.0, "ad_mult": 1.0, "skill_mult": 1.0, "star_mult": [1.0, 1.0, 1.0]}
 
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "heroes.json"), "w", encoding="utf-8") as f:
