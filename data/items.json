@@ -1,0 +1,6114 @@
+{
+ "version": 1,
+ "count": 282,
+ "by_category": {
+  "component": 12,
+  "completed": 55,
+  "emblem": 31,
+  "radiant": 55,
+  "artifact": 60,
+  "support": 30,
+  "national": 24,
+  "consumable": 12,
+  "material": 3
+ },
+ "prices": {
+  "component": 300,
+  "completed": 900,
+  "emblem": 1500,
+  "special": 3000,
+  "uncraftable_emblem": 2500,
+  "radiant": 3500,
+  "artifact": 2800,
+  "support": 1800,
+  "national": 2200
+ },
+ "items": [
+  {
+   "id": "C01",
+   "name_ko": "강철검",
+   "name_en": "Steel Sword",
+   "category": "component",
+   "stats": {
+    "ad_pct": 10
+   },
+   "hooks": [],
+   "desc": "공격력 +10%",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C02",
+   "name_ko": "마력의 지팡이",
+   "name_en": "Arcane Rod",
+   "category": "component",
+   "stats": {
+    "ap": 10
+   },
+   "hooks": [],
+   "desc": "주문력 +10",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C03",
+   "name_ko": "거인의 허리띠",
+   "name_en": "Giant's Belt",
+   "category": "component",
+   "stats": {
+    "hp": 150
+   },
+   "hooks": [],
+   "desc": "체력 +150",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C04",
+   "name_ko": "쇠사슬 갑옷",
+   "name_en": "Chain Vest",
+   "category": "component",
+   "stats": {
+    "armor": 20
+   },
+   "hooks": [],
+   "desc": "방어력 +20",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C05",
+   "name_ko": "정령의 망토",
+   "name_en": "Spirit Cloak",
+   "category": "component",
+   "stats": {
+    "mr": 20
+   },
+   "hooks": [],
+   "desc": "마법 저항력 +20",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C06",
+   "name_ko": "질풍의 활",
+   "name_en": "Gale Bow",
+   "category": "component",
+   "stats": {
+    "as_pct": 10
+   },
+   "hooks": [],
+   "desc": "공격 속도 +10%",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C07",
+   "name_ko": "수정 눈물",
+   "name_en": "Crystal Tear",
+   "category": "component",
+   "stats": {
+    "mana": 15
+   },
+   "hooks": [],
+   "desc": "마나 +15",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C08",
+   "name_ko": "행운의 장갑",
+   "name_en": "Lucky Gloves",
+   "category": "component",
+   "stats": {
+    "crit": 20
+   },
+   "hooks": [],
+   "desc": "치명타 확률 +20%",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C09",
+   "name_ko": "흡혈 송곳니",
+   "name_en": "Vampire Fang",
+   "category": "component",
+   "stats": {
+    "omnivamp": 8
+   },
+   "hooks": [],
+   "desc": "피해 흡혈 +8%",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C10",
+   "name_ko": "별의 파편",
+   "name_en": "Star Fragment",
+   "category": "component",
+   "stats": {
+    "durability": 6
+   },
+   "hooks": [],
+   "desc": "내구력(받는 피해 감소) +6%",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C11",
+   "name_ko": "용의 비늘",
+   "name_en": "Dragon Scale",
+   "category": "component",
+   "stats": {},
+   "hooks": [],
+   "desc": "능력치 재료와 조합하면 출신 상징이 된다.",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "C12",
+   "name_ko": "영웅의 문장",
+   "name_en": "Hero Crest",
+   "category": "component",
+   "stats": {},
+   "hooks": [],
+   "desc": "능력치 재료와 조합하면 직업 상징이 된다.",
+   "price_gold": 300,
+   "recipe": null
+  },
+  {
+   "id": "I001",
+   "name_ko": "피의 쌍검",
+   "name_en": "Twin Bloodblades",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 30
+   },
+   "hooks": [
+    {
+     "type": "stack_ad_on_kill",
+     "params": {
+      "pct": 6,
+      "max": 5
+     }
+    }
+   ],
+   "desc": "공격력 +20%. 적 처치 시 공격력 +6% (최대 5중첩).",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C01"
+   ]
+  },
+  {
+   "id": "I002",
+   "name_ko": "용살자의 장검",
+   "name_en": "Dragonslayer Sword",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "ap": 10
+   },
+   "hooks": [
+    {
+     "type": "giant_slayer",
+     "params": {
+      "hp_threshold": 1800,
+      "bonus_pct": 25
+     }
+    }
+   ],
+   "desc": "최대 체력 1800 이상의 적에게 주는 피해 +25%.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C02"
+   ]
+  },
+  {
+   "id": "I003",
+   "name_ko": "용맹의 맹세",
+   "name_en": "Oath of Valor",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "low_hp_shield",
+     "params": {
+      "threshold": 60,
+      "shield_pct": 30,
+      "ad_pct": 25,
+      "duration": 6
+     }
+    }
+   ],
+   "desc": "체력이 60% 이하가 되면 최대 체력 30%의 방어막과 공격력 +25%를 6초간 얻는다.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C03"
+   ]
+  },
+  {
+   "id": "I004",
+   "name_ko": "약탈자의 발톱",
+   "name_en": "Raider's Claw",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "shred_on_hit",
+     "params": {
+      "pct": 30,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "공격 적중 시 대상 방어력 30% 감소(3초).",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C04"
+   ]
+  },
+  {
+   "id": "I005",
+   "name_ko": "흡혈의 장검",
+   "name_en": "Bloodthirster",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 18
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +18%.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C05"
+   ]
+  },
+  {
+   "id": "I006",
+   "name_ko": "쌍둥이 폭풍",
+   "name_en": "Twin Tempest",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "aoe_on_attack",
+     "params": {
+      "targets": 1,
+      "ad_ratio": 0.45
+     }
+    }
+   ],
+   "desc": "공격 시 가장 가까운 다른 적 1명에게 공격력 45%의 추가 피해.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C06"
+   ]
+  },
+  {
+   "id": "I007",
+   "name_ko": "창술사의 창",
+   "name_en": "Spear of Shojin",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "mana_on_attack",
+     "params": {
+      "mana": 5
+     }
+    }
+   ],
+   "desc": "공격 시 마나 +5.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C07"
+   ]
+  },
+  {
+   "id": "I008",
+   "name_ko": "무한의 대검",
+   "name_en": "Infinity Edge",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 30
+     }
+    }
+   ],
+   "desc": "치명타 피해 +30%.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C08"
+   ]
+  },
+  {
+   "id": "I009",
+   "name_ko": "핏빛 사냥칼",
+   "name_en": "Crimson Hunter",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "heal_on_kill",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "적 처치 시 최대 체력의 15% 회복.",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C09"
+   ]
+  },
+  {
+   "id": "I010",
+   "name_ko": "맹세의 검",
+   "name_en": "Sworn Blade",
+   "category": "completed",
+   "stats": {
+    "ad_pct": 10,
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "start_shield",
+     "params": {
+      "pct": 20,
+      "duration": 8
+     }
+    }
+   ],
+   "desc": "전투 시작 시 최대 체력 20%의 방어막(8초).",
+   "price_gold": 900,
+   "recipe": [
+    "C01",
+    "C10"
+   ]
+  },
+  {
+   "id": "I011",
+   "name_ko": "대마법사의 모자",
+   "name_en": "Archmage's Hat",
+   "category": "completed",
+   "stats": {
+    "ap": 50
+   },
+   "hooks": [],
+   "desc": "주문력 +50.",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C02"
+   ]
+  },
+  {
+   "id": "I012",
+   "name_ko": "역병의 서",
+   "name_en": "Tome of Plague",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "burn_on_hit",
+     "params": {
+      "pct_per_sec": 1.0,
+      "duration": 6,
+      "grievous": 33
+     }
+    }
+   ],
+   "desc": "피해를 준 적에게 6초간 매초 최대 체력 1% 화상 + 치유 감소 33%.",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C03"
+   ]
+  },
+  {
+   "id": "I013",
+   "name_ko": "수정 갑옷",
+   "name_en": "Crystal Armor",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "shield_on_cast",
+     "params": {
+      "pct": 12,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 최대 체력 12%의 방어막(4초).",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C04"
+   ]
+  },
+  {
+   "id": "I014",
+   "name_ko": "지식의 서",
+   "name_en": "Tome of Knowledge",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 12
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +12%.",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C05"
+   ]
+  },
+  {
+   "id": "I015",
+   "name_ko": "격노의 지팡이",
+   "name_en": "Rageblade Staff",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "as_stack_on_attack",
+     "params": {
+      "pct": 5,
+      "max": 12
+     }
+    }
+   ],
+   "desc": "공격마다 공격 속도 +5% (최대 12중첩).",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C06"
+   ]
+  },
+  {
+   "id": "I016",
+   "name_ko": "푸른 축복",
+   "name_en": "Blue Blessing",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "mana_refund_on_cast",
+     "params": {
+      "mana": 20
+     }
+    }
+   ],
+   "desc": "스킬 사용 후 마나 +20.",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C07"
+   ]
+  },
+  {
+   "id": "I017",
+   "name_ko": "보석 장갑",
+   "name_en": "Jeweled Gauntlet",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "spell_crit",
+     "params": {}
+    }
+   ],
+   "desc": "스킬이 치명타를 입힐 수 있다.",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C08"
+   ]
+  },
+  {
+   "id": "I018",
+   "name_ko": "핏빛 마도서",
+   "name_en": "Crimson Grimoire",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 12
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +12%(스킬 포함).",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C09"
+   ]
+  },
+  {
+   "id": "I019",
+   "name_ko": "별의 지팡이",
+   "name_en": "Star Staff",
+   "category": "completed",
+   "stats": {
+    "ap": 10,
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "shield_on_cast",
+     "params": {
+      "pct": 10,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 최대 체력 10%의 방어막.",
+   "price_gold": 900,
+   "recipe": [
+    "C02",
+    "C10"
+   ]
+  },
+  {
+   "id": "I020",
+   "name_ko": "전사의 흉갑",
+   "name_en": "Warmog's Plate",
+   "category": "completed",
+   "stats": {
+    "hp": 700
+   },
+   "hooks": [],
+   "desc": "체력 +700.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C03"
+   ]
+  },
+  {
+   "id": "I021",
+   "name_ko": "태양불꽃 망토",
+   "name_en": "Sunfire Cape",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "burn_aura",
+     "params": {
+      "radius": 2,
+      "pct_per_sec": 1.0,
+      "grievous": 33
+     }
+    }
+   ],
+   "desc": "주변 2칸 적에게 매초 최대 체력 1% 화상 + 치유 감소.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C04"
+   ]
+  },
+  {
+   "id": "I022",
+   "name_ko": "서리 망토",
+   "name_en": "Frost Cloak",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "as_slow_aura",
+     "params": {
+      "radius": 1,
+      "pct": 25
+     }
+    }
+   ],
+   "desc": "인접 적의 공격 속도 -25%.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C05"
+   ]
+  },
+  {
+   "id": "I023",
+   "name_ko": "거인의 결의",
+   "name_en": "Titan's Resolve",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "ad_pct": 1.5,
+      "ap": 1.5,
+      "max": 25,
+      "max_bonus_def": 25
+     }
+    }
+   ],
+   "desc": "공격/피격마다 공격력·주문력 +1.5% (최대 25). 최대 중첩 시 방어력·마저 +25.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C06"
+   ]
+  },
+  {
+   "id": "I024",
+   "name_ko": "구원",
+   "name_en": "Redemption",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "heal_allies_timer",
+     "params": {
+      "delay": 3,
+      "radius": 1,
+      "missing_pct": 18,
+      "interval": 5
+     }
+    }
+   ],
+   "desc": "3초 후부터 5초마다 주변 1칸 아군의 잃은 체력 18% 회복.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C07"
+   ]
+  },
+  {
+   "id": "I025",
+   "name_ko": "용맹의 흉갑",
+   "name_en": "Valiant Plate",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "치명타 피해 +20%.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C08"
+   ]
+  },
+  {
+   "id": "I026",
+   "name_ko": "흡혈귀의 흉갑",
+   "name_en": "Vampiric Plate",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +15%.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C09"
+   ]
+  },
+  {
+   "id": "I027",
+   "name_ko": "불굴의 심장",
+   "name_en": "Unyielding Heart",
+   "category": "completed",
+   "stats": {
+    "hp": 150,
+    "durability": 10
+   },
+   "hooks": [],
+   "desc": "내구력 +10%, 체력 +150.",
+   "price_gold": 900,
+   "recipe": [
+    "C03",
+    "C10"
+   ]
+  },
+  {
+   "id": "I028",
+   "name_ko": "가시 갑옷",
+   "name_en": "Bramble Vest",
+   "category": "completed",
+   "stats": {
+    "armor": 60
+   },
+   "hooks": [
+    {
+     "type": "thorns",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "방어력 +60. 받은 물리 피해의 10%를 반사.",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C04"
+   ]
+  },
+  {
+   "id": "I029",
+   "name_ko": "가고일 돌갑옷",
+   "name_en": "Gargoyle Stoneplate",
+   "category": "completed",
+   "stats": {
+    "armor": 20,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "gargoyle",
+     "params": {
+      "per_enemy": 12
+     }
+    }
+   ],
+   "desc": "자신을 노리는 적 1명당 방어력·마저 +12.",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C05"
+   ]
+  },
+  {
+   "id": "I030",
+   "name_ko": "질풍 갑옷",
+   "name_en": "Gale Armor",
+   "category": "completed",
+   "stats": {
+    "armor": 20,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "armor": 2,
+      "max": 20
+     }
+    }
+   ],
+   "desc": "공격마다 방어력 +2 (최대 20중첩).",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C06"
+   ]
+  },
+  {
+   "id": "I031",
+   "name_ko": "수호자의 맹세",
+   "name_en": "Protector's Vow",
+   "category": "completed",
+   "stats": {
+    "armor": 20,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "low_hp_shield",
+     "params": {
+      "threshold": 40,
+      "shield_pct": 25,
+      "def": 20,
+      "duration": 5
+     }
+    }
+   ],
+   "desc": "체력 40% 이하 시 최대 체력 25% 방어막 + 방어력·마저 +20.",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C07"
+   ]
+  },
+  {
+   "id": "I032",
+   "name_ko": "파쇄 장갑",
+   "name_en": "Shatter Gauntlet",
+   "category": "completed",
+   "stats": {
+    "armor": 20,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "shred_on_crit",
+     "params": {
+      "pct": 30,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "치명타 시 대상 방어력 30% 감소.",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C08"
+   ]
+  },
+  {
+   "id": "I033",
+   "name_ko": "피의 갑옷",
+   "name_en": "Blood Armor",
+   "category": "completed",
+   "stats": {
+    "armor": 20,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 12
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +12%.",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C09"
+   ]
+  },
+  {
+   "id": "I034",
+   "name_ko": "강철 요새",
+   "name_en": "Iron Fortress",
+   "category": "completed",
+   "stats": {
+    "armor": 20,
+    "durability": 10
+   },
+   "hooks": [],
+   "desc": "내구력 +10%, 방어력 +20.",
+   "price_gold": 900,
+   "recipe": [
+    "C04",
+    "C10"
+   ]
+  },
+  {
+   "id": "I035",
+   "name_ko": "용의 발톱",
+   "name_en": "Dragon's Claw",
+   "category": "completed",
+   "stats": {
+    "mr": 60
+   },
+   "hooks": [
+    {
+     "type": "magic_dr",
+     "params": {
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "마법 저항력 +60. 받는 마법 피해 -20%.",
+   "price_gold": 900,
+   "recipe": [
+    "C05",
+    "C05"
+   ]
+  },
+  {
+   "id": "I036",
+   "name_ko": "정전기 망토",
+   "name_en": "Static Cloak",
+   "category": "completed",
+   "stats": {
+    "mr": 20,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "shock_every_n",
+     "params": {
+      "n": 3,
+      "targets": 3,
+      "dmg": 60,
+      "mr_shred": 30,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "3번째 공격마다 적 3명에게 60 마법 피해 + 마저 30% 감소.",
+   "price_gold": 900,
+   "recipe": [
+    "C05",
+    "C06"
+   ]
+  },
+  {
+   "id": "I037",
+   "name_ko": "은총의 성배",
+   "name_en": "Chalice of Grace",
+   "category": "completed",
+   "stats": {
+    "mr": 20,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "cast_mana_allies",
+     "params": {
+      "radius": 1,
+      "mana": 8
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 인접 아군 마나 +8.",
+   "price_gold": 900,
+   "recipe": [
+    "C05",
+    "C07"
+   ]
+  },
+  {
+   "id": "I038",
+   "name_ko": "수은 망토",
+   "name_en": "Quicksilver Cloak",
+   "category": "completed",
+   "stats": {
+    "mr": 20,
+    "crit": 20,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "cc_immune",
+     "params": {
+      "duration": 15
+     }
+    }
+   ],
+   "desc": "전투 시작 후 15초간 군중 제어 면역. 공격 속도 +10%.",
+   "price_gold": 900,
+   "recipe": [
+    "C05",
+    "C08"
+   ]
+  },
+  {
+   "id": "I039",
+   "name_ko": "정령의 송곳니",
+   "name_en": "Spirit Fang",
+   "category": "completed",
+   "stats": {
+    "mr": 20,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 12
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +12%.",
+   "price_gold": 900,
+   "recipe": [
+    "C05",
+    "C09"
+   ]
+  },
+  {
+   "id": "I040",
+   "name_ko": "성역의 망토",
+   "name_en": "Sanctuary Cloak",
+   "category": "completed",
+   "stats": {
+    "mr": 20,
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "start_shield",
+     "params": {
+      "pct": 18,
+      "duration": 8
+     }
+    }
+   ],
+   "desc": "전투 시작 시 최대 체력 18% 방어막.",
+   "price_gold": 900,
+   "recipe": [
+    "C05",
+    "C10"
+   ]
+  },
+  {
+   "id": "I041",
+   "name_ko": "고속 연사포",
+   "name_en": "Rapid Firecannon",
+   "category": "completed",
+   "stats": {
+    "as_pct": 30
+   },
+   "hooks": [
+    {
+     "type": "extra_range",
+     "params": {
+      "range": 1
+     }
+    }
+   ],
+   "desc": "공격 속도 +30%, 사거리 +1.",
+   "price_gold": 900,
+   "recipe": [
+    "C06",
+    "C06"
+   ]
+  },
+  {
+   "id": "I042",
+   "name_ko": "마나의 활",
+   "name_en": "Mana Bow",
+   "category": "completed",
+   "stats": {
+    "as_pct": 10,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "mana_on_attack",
+     "params": {
+      "mana": 3
+     }
+    }
+   ],
+   "desc": "공격 시 마나 +3.",
+   "price_gold": 900,
+   "recipe": [
+    "C06",
+    "C07"
+   ]
+  },
+  {
+   "id": "I043",
+   "name_ko": "최후의 속삭임",
+   "name_en": "Last Whisper",
+   "category": "completed",
+   "stats": {
+    "as_pct": 10,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "shred_on_crit",
+     "params": {
+      "pct": 30,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "치명타 시 대상 방어력 30% 감소.",
+   "price_gold": 900,
+   "recipe": [
+    "C06",
+    "C08"
+   ]
+  },
+  {
+   "id": "I044",
+   "name_ko": "핏빛 활",
+   "name_en": "Crimson Bow",
+   "category": "completed",
+   "stats": {
+    "as_pct": 10,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 12
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +12%.",
+   "price_gold": 900,
+   "recipe": [
+    "C06",
+    "C09"
+   ]
+  },
+  {
+   "id": "I045",
+   "name_ko": "불굴의 활",
+   "name_en": "Unyielding Bow",
+   "category": "completed",
+   "stats": {
+    "as_pct": 10,
+    "durability": 10
+   },
+   "hooks": [],
+   "desc": "내구력 +10%, 공격 속도 +10%.",
+   "price_gold": 900,
+   "recipe": [
+    "C06",
+    "C10"
+   ]
+  },
+  {
+   "id": "I046",
+   "name_ko": "대천사의 눈물",
+   "name_en": "Archangel's Tear",
+   "category": "completed",
+   "stats": {
+    "mana": 30
+   },
+   "hooks": [
+    {
+     "type": "ap_stack_timer",
+     "params": {
+      "ap": 20,
+      "interval": 5
+     }
+    }
+   ],
+   "desc": "5초마다 주문력 +20.",
+   "price_gold": 900,
+   "recipe": [
+    "C07",
+    "C07"
+   ]
+  },
+  {
+   "id": "I047",
+   "name_ko": "정의의 손길",
+   "name_en": "Hand of Justice",
+   "category": "completed",
+   "stats": {
+    "mana": 15,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "hand_of_justice",
+     "params": {
+      "dmg_pct": 15,
+      "omnivamp": 15
+     }
+    }
+   ],
+   "desc": "주는 피해 +15%, 피해 흡혈 +15%.",
+   "price_gold": 900,
+   "recipe": [
+    "C07",
+    "C08"
+   ]
+  },
+  {
+   "id": "I048",
+   "name_ko": "영혼 수확자",
+   "name_en": "Soul Harvester",
+   "category": "completed",
+   "stats": {
+    "mana": 15,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "mana_on_kill",
+     "params": {
+      "mana": 20
+     }
+    }
+   ],
+   "desc": "적 처치 시 마나 +20.",
+   "price_gold": 900,
+   "recipe": [
+    "C07",
+    "C09"
+   ]
+  },
+  {
+   "id": "I049",
+   "name_ko": "명상의 보주",
+   "name_en": "Orb of Meditation",
+   "category": "completed",
+   "stats": {
+    "mana": 15,
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "mana_regen",
+     "params": {
+      "per_sec": 2
+     }
+    }
+   ],
+   "desc": "매초 마나 +2.",
+   "price_gold": 900,
+   "recipe": [
+    "C07",
+    "C10"
+   ]
+  },
+  {
+   "id": "I050",
+   "name_ko": "도둑의 장갑",
+   "name_en": "Thief's Gloves",
+   "category": "completed",
+   "stats": {
+    "crit": 60
+   },
+   "hooks": [
+    {
+     "type": "random_items",
+     "params": {
+      "count": 2
+     }
+    }
+   ],
+   "desc": "치명타 +40%. 전투마다 무작위 조합 아이템 2개의 능력치를 얻는다.",
+   "price_gold": 900,
+   "recipe": [
+    "C08",
+    "C08"
+   ]
+  },
+  {
+   "id": "I051",
+   "name_ko": "암살자의 송곳니",
+   "name_en": "Assassin's Fang",
+   "category": "completed",
+   "stats": {
+    "crit": 20,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 25
+     }
+    }
+   ],
+   "desc": "치명타 피해 +25%.",
+   "price_gold": 900,
+   "recipe": [
+    "C08",
+    "C09"
+   ]
+  },
+  {
+   "id": "I052",
+   "name_ko": "행운의 부적",
+   "name_en": "Lucky Charm",
+   "category": "completed",
+   "stats": {
+    "crit": 20,
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "shield_on_crit",
+     "params": {
+      "pct": 4,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "치명타 시 최대 체력 4%의 방어막.",
+   "price_gold": 900,
+   "recipe": [
+    "C08",
+    "C10"
+   ]
+  },
+  {
+   "id": "I053",
+   "name_ko": "뱀파이어 군주의 송곳니",
+   "name_en": "Vampire Lord's Fang",
+   "category": "completed",
+   "stats": {
+    "omnivamp": 25
+   },
+   "hooks": [
+    {
+     "type": "overheal_shield",
+     "params": {
+      "max_pct": 30
+     }
+    }
+   ],
+   "desc": "피해 흡혈 +25%. 초과 치유량은 방어막이 된다(최대 체력 30%).",
+   "price_gold": 900,
+   "recipe": [
+    "C09",
+    "C09"
+   ]
+  },
+  {
+   "id": "I054",
+   "name_ko": "불사의 심장",
+   "name_en": "Immortal Heart",
+   "category": "completed",
+   "stats": {
+    "omnivamp": 8,
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "revive",
+     "params": {
+      "hp_pct": 30
+     }
+    }
+   ],
+   "desc": "전투 중 1회 사망 시 체력 30%로 부활.",
+   "price_gold": 900,
+   "recipe": [
+    "C09",
+    "C10"
+   ]
+  },
+  {
+   "id": "I055",
+   "name_ko": "별의 갑주",
+   "name_en": "Star Plate",
+   "category": "completed",
+   "stats": {
+    "durability": 20
+   },
+   "hooks": [],
+   "desc": "내구력 +20%.",
+   "price_gold": 900,
+   "recipe": [
+    "C10",
+    "C10"
+   ]
+  },
+  {
+   "id": "E001",
+   "name_ko": "아스텔의 상징",
+   "name_en": "Astel Emblem",
+   "category": "emblem",
+   "stats": {
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "astel"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '아스텔' 출신 특성을 추가로 얻는다. 공격력 +10%",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C01"
+   ]
+  },
+  {
+   "id": "E002",
+   "name_ko": "셀레스티아의 상징",
+   "name_en": "Celestia Emblem",
+   "category": "emblem",
+   "stats": {
+    "ap": 10
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "celestia"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '셀레스티아' 출신 특성을 추가로 얻는다. 주문력 +10",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C02"
+   ]
+  },
+  {
+   "id": "E003",
+   "name_ko": "토르가의 상징",
+   "name_en": "Torga Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "torga"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '토르가' 출신 특성을 추가로 얻는다. 체력 +150",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C03"
+   ]
+  },
+  {
+   "id": "E004",
+   "name_ko": "그란두르의 상징",
+   "name_en": "Grandur Emblem",
+   "category": "emblem",
+   "stats": {
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "grandur"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '그란두르' 출신 특성을 추가로 얻는다. 방어력 +20",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C04"
+   ]
+  },
+  {
+   "id": "E005",
+   "name_ko": "루멘의 상징",
+   "name_en": "Lumen Emblem",
+   "category": "emblem",
+   "stats": {
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "lumen"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '루멘' 출신 특성을 추가로 얻는다. 마법 저항력 +20",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C05"
+   ]
+  },
+  {
+   "id": "E006",
+   "name_ko": "엘로웬의 상징",
+   "name_en": "Elowen Emblem",
+   "category": "emblem",
+   "stats": {
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "elowen"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '엘로웬' 출신 특성을 추가로 얻는다. 공격 속도 +10%",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C06"
+   ]
+  },
+  {
+   "id": "E007",
+   "name_ko": "리에스의 상징",
+   "name_en": "Lies Emblem",
+   "category": "emblem",
+   "stats": {
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "lies"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '리에스' 출신 특성을 추가로 얻는다. 마나 +15",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C07"
+   ]
+  },
+  {
+   "id": "E008",
+   "name_ko": "사이람의 상징",
+   "name_en": "Sairam Emblem",
+   "category": "emblem",
+   "stats": {
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "sairam"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '사이람' 출신 특성을 추가로 얻는다. 치명타 확률 +20%",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C08"
+   ]
+  },
+  {
+   "id": "E009",
+   "name_ko": "녹스의 상징",
+   "name_en": "Nox Emblem",
+   "category": "emblem",
+   "stats": {
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "nox"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '녹스' 출신 특성을 추가로 얻는다. 피해 흡혈 +8%",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C09"
+   ]
+  },
+  {
+   "id": "E010",
+   "name_ko": "용족의 상징",
+   "name_en": "Dragonkin Emblem",
+   "category": "emblem",
+   "stats": {
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "dragonkin"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '용족' 출신 특성을 추가로 얻는다. 내구력(받는 피해 감소) +6%",
+   "price_gold": 1500,
+   "recipe": [
+    "C11",
+    "C10"
+   ]
+  },
+  {
+   "id": "E011",
+   "name_ko": "전사의 상징",
+   "name_en": "Warrior Emblem",
+   "category": "emblem",
+   "stats": {
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "warrior"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '전사' 직업 특성을 추가로 얻는다. 공격력 +10%",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C01"
+   ]
+  },
+  {
+   "id": "E012",
+   "name_ko": "마법사의 상징",
+   "name_en": "Mage Emblem",
+   "category": "emblem",
+   "stats": {
+    "ap": 10
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "mage"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '마법사' 직업 특성을 추가로 얻는다. 주문력 +10",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C02"
+   ]
+  },
+  {
+   "id": "E013",
+   "name_ko": "기사의 상징",
+   "name_en": "Knight Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "knight"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '기사' 직업 특성을 추가로 얻는다. 체력 +150",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C03"
+   ]
+  },
+  {
+   "id": "E014",
+   "name_ko": "수호자의 상징",
+   "name_en": "Guardian Emblem",
+   "category": "emblem",
+   "stats": {
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "guardian"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '수호자' 직업 특성을 추가로 얻는다. 방어력 +20",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C04"
+   ]
+  },
+  {
+   "id": "E015",
+   "name_ko": "사제의 상징",
+   "name_en": "Priest Emblem",
+   "category": "emblem",
+   "stats": {
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "priest"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '사제' 직업 특성을 추가로 얻는다. 마법 저항력 +20",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C05"
+   ]
+  },
+  {
+   "id": "E016",
+   "name_ko": "궁수의 상징",
+   "name_en": "Ranger Emblem",
+   "category": "emblem",
+   "stats": {
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "ranger"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '궁수' 직업 특성을 추가로 얻는다. 공격 속도 +10%",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C06"
+   ]
+  },
+  {
+   "id": "E017",
+   "name_ko": "소환사의 상징",
+   "name_en": "Summoner Emblem",
+   "category": "emblem",
+   "stats": {
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "summoner"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '소환사' 직업 특성을 추가로 얻는다. 마나 +15",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C07"
+   ]
+  },
+  {
+   "id": "E018",
+   "name_ko": "암살자의 상징",
+   "name_en": "Assassin Emblem",
+   "category": "emblem",
+   "stats": {
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "assassin"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '암살자' 직업 특성을 추가로 얻는다. 치명타 확률 +20%",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C08"
+   ]
+  },
+  {
+   "id": "E019",
+   "name_ko": "결투가의 상징",
+   "name_en": "Duelist Emblem",
+   "category": "emblem",
+   "stats": {
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "duelist"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '결투가' 직업 특성을 추가로 얻는다. 피해 흡혈 +8%",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C09"
+   ]
+  },
+  {
+   "id": "E020",
+   "name_ko": "용기사의 상징",
+   "name_en": "Dragoon Emblem",
+   "category": "emblem",
+   "stats": {
+    "durability": 6
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "dragoon"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '용기사' 직업 특성을 추가로 얻는다. 내구력(받는 피해 감소) +6%",
+   "price_gold": 1500,
+   "recipe": [
+    "C12",
+    "C10"
+   ]
+  },
+  {
+   "id": "E021",
+   "name_ko": "발하임의 상징",
+   "name_en": "Valheim Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "valheim"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '발하임' 출신 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E022",
+   "name_ko": "카르나의 상징",
+   "name_en": "Karna Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "karna"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '카르나' 출신 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E023",
+   "name_ko": "네오스의 상징",
+   "name_en": "Neos Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "neos"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '네오스' 출신 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E024",
+   "name_ko": "자유용병의 상징",
+   "name_en": "Freelancer Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "freelancer"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '자유용병' 출신 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E025",
+   "name_ko": "포격수의 상징",
+   "name_en": "Artillerist Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "artillerist"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '포격수' 직업 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E026",
+   "name_ko": "주술사의 상징",
+   "name_en": "Shaman Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "shaman"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '주술사' 직업 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E027",
+   "name_ko": "음유시인의 상징",
+   "name_en": "Bard Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "bard"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '음유시인' 직업 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E028",
+   "name_ko": "공학자의 상징",
+   "name_en": "Engineer Emblem",
+   "category": "emblem",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "grant_trait",
+     "params": {
+      "trait": "engineer"
+     }
+    }
+   ],
+   "desc": "장착한 영웅이 '공학자' 직업 특성을 추가로 얻는다. 조합 불가(구매/보상 전용).",
+   "price_gold": 2500,
+   "recipe": null
+  },
+  {
+   "id": "E029",
+   "name_ko": "용의 심장",
+   "name_en": "Dragon Heart",
+   "category": "emblem",
+   "stats": {},
+   "hooks": [
+    {
+     "type": "team_slot",
+     "params": {
+      "slots": 1
+     }
+    }
+   ],
+   "desc": "팀 슬롯 +1. 장착 영웅은 전투에서 자리를 차지하지 않는 것으로 계산.",
+   "price_gold": 3000,
+   "recipe": [
+    "C11",
+    "C11"
+   ]
+  },
+  {
+   "id": "E030",
+   "name_ko": "영웅의 왕관",
+   "name_en": "Hero's Crown",
+   "category": "emblem",
+   "stats": {},
+   "hooks": [
+    {
+     "type": "team_slot",
+     "params": {
+      "slots": 1
+     }
+    }
+   ],
+   "desc": "팀 슬롯 +1.",
+   "price_gold": 3000,
+   "recipe": [
+    "C12",
+    "C12"
+   ]
+  },
+  {
+   "id": "E031",
+   "name_ko": "전설의 인장",
+   "name_en": "Legendary Seal",
+   "category": "emblem",
+   "stats": {},
+   "hooks": [
+    {
+     "type": "double_trait_count",
+     "params": {}
+    }
+   ],
+   "desc": "장착 영웅의 출신·직업 특성 카운트를 2로 계산.",
+   "price_gold": 3000,
+   "recipe": [
+    "C11",
+    "C12"
+   ]
+  },
+  {
+   "id": "R001",
+   "name_ko": "빛나는 피의 쌍검",
+   "name_en": "Radiant Twin Bloodblades",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 48
+   },
+   "hooks": [
+    {
+     "type": "stack_ad_on_kill",
+     "params": {
+      "pct": 9.0,
+      "max": 5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격력 +20%. 적 처치 시 공격력 +6% (최대 5중첩).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I001"
+  },
+  {
+   "id": "R002",
+   "name_ko": "빛나는 용살자의 장검",
+   "name_en": "Radiant Dragonslayer Sword",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "ap": 16
+   },
+   "hooks": [
+    {
+     "type": "giant_slayer",
+     "params": {
+      "hp_threshold": 1800,
+      "bonus_pct": 37.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 최대 체력 1800 이상의 적에게 주는 피해 +25%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I002"
+  },
+  {
+   "id": "R003",
+   "name_ko": "빛나는 용맹의 맹세",
+   "name_en": "Radiant Oath of Valor",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "hp": 240
+   },
+   "hooks": [
+    {
+     "type": "low_hp_shield",
+     "params": {
+      "threshold": 60,
+      "shield_pct": 45.0,
+      "ad_pct": 37.5,
+      "duration": 6
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 체력이 60% 이하가 되면 최대 체력 30%의 방어막과 공격력 +25%를 6초간 얻는다.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I003"
+  },
+  {
+   "id": "R004",
+   "name_ko": "빛나는 약탈자의 발톱",
+   "name_en": "Radiant Raider's Claw",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "armor": 32
+   },
+   "hooks": [
+    {
+     "type": "shred_on_hit",
+     "params": {
+      "pct": 45.0,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 적중 시 대상 방어력 30% 감소(3초).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I004"
+  },
+  {
+   "id": "R005",
+   "name_ko": "빛나는 흡혈의 장검",
+   "name_en": "Radiant Bloodthirster",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "mr": 32
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 27.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +18%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I005"
+  },
+  {
+   "id": "R006",
+   "name_ko": "빛나는 쌍둥이 폭풍",
+   "name_en": "Radiant Twin Tempest",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "as_pct": 16
+   },
+   "hooks": [
+    {
+     "type": "aoe_on_attack",
+     "params": {
+      "targets": 1,
+      "ad_ratio": 0.68
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 시 가장 가까운 다른 적 1명에게 공격력 45%의 추가 피해.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I006"
+  },
+  {
+   "id": "R007",
+   "name_ko": "빛나는 창술사의 창",
+   "name_en": "Radiant Spear of Shojin",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "mana": 24
+   },
+   "hooks": [
+    {
+     "type": "mana_on_attack",
+     "params": {
+      "mana": 7.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 시 마나 +5.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I007"
+  },
+  {
+   "id": "R008",
+   "name_ko": "빛나는 무한의 대검",
+   "name_en": "Radiant Infinity Edge",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "crit": 32
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 45.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +30%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I008"
+  },
+  {
+   "id": "R009",
+   "name_ko": "빛나는 핏빛 사냥칼",
+   "name_en": "Radiant Crimson Hunter",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "heal_on_kill",
+     "params": {
+      "pct": 22.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 적 처치 시 최대 체력의 15% 회복.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I009"
+  },
+  {
+   "id": "R010",
+   "name_ko": "빛나는 맹세의 검",
+   "name_en": "Radiant Sworn Blade",
+   "category": "radiant",
+   "stats": {
+    "ad_pct": 16,
+    "durability": 14
+   },
+   "hooks": [
+    {
+     "type": "start_shield",
+     "params": {
+      "pct": 30.0,
+      "duration": 8
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 시작 시 최대 체력 20%의 방어막(8초).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I010"
+  },
+  {
+   "id": "R011",
+   "name_ko": "빛나는 대마법사의 모자",
+   "name_en": "Radiant Archmage's Hat",
+   "category": "radiant",
+   "stats": {
+    "ap": 80
+   },
+   "hooks": [],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주문력 +50.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I011"
+  },
+  {
+   "id": "R012",
+   "name_ko": "빛나는 역병의 서",
+   "name_en": "Radiant Tome of Plague",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "hp": 240
+   },
+   "hooks": [
+    {
+     "type": "burn_on_hit",
+     "params": {
+      "pct_per_sec": 1.0,
+      "duration": 6,
+      "grievous": 33
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해를 준 적에게 6초간 매초 최대 체력 1% 화상 + 치유 감소 33%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I012"
+  },
+  {
+   "id": "R013",
+   "name_ko": "빛나는 수정 갑옷",
+   "name_en": "Radiant Crystal Armor",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "armor": 32
+   },
+   "hooks": [
+    {
+     "type": "shield_on_cast",
+     "params": {
+      "pct": 18.0,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 시 최대 체력 12%의 방어막(4초).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I013"
+  },
+  {
+   "id": "R014",
+   "name_ko": "빛나는 지식의 서",
+   "name_en": "Radiant Tome of Knowledge",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "mr": 32
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 18.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I014"
+  },
+  {
+   "id": "R015",
+   "name_ko": "빛나는 격노의 지팡이",
+   "name_en": "Radiant Rageblade Staff",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "as_pct": 16
+   },
+   "hooks": [
+    {
+     "type": "as_stack_on_attack",
+     "params": {
+      "pct": 7.5,
+      "max": 12
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격마다 공격 속도 +5% (최대 12중첩).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I015"
+  },
+  {
+   "id": "R016",
+   "name_ko": "빛나는 푸른 축복",
+   "name_en": "Radiant Blue Blessing",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "mana": 24
+   },
+   "hooks": [
+    {
+     "type": "mana_refund_on_cast",
+     "params": {
+      "mana": 30.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 후 마나 +20.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I016"
+  },
+  {
+   "id": "R017",
+   "name_ko": "빛나는 보석 장갑",
+   "name_en": "Radiant Jeweled Gauntlet",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "crit": 32
+   },
+   "hooks": [
+    {
+     "type": "spell_crit",
+     "params": {}
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬이 치명타를 입힐 수 있다.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I017"
+  },
+  {
+   "id": "R018",
+   "name_ko": "빛나는 핏빛 마도서",
+   "name_en": "Radiant Crimson Grimoire",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 18.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%(스킬 포함).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I018"
+  },
+  {
+   "id": "R019",
+   "name_ko": "빛나는 별의 지팡이",
+   "name_en": "Radiant Star Staff",
+   "category": "radiant",
+   "stats": {
+    "ap": 16,
+    "durability": 14
+   },
+   "hooks": [
+    {
+     "type": "shield_on_cast",
+     "params": {
+      "pct": 15.0,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 시 최대 체력 10%의 방어막.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I019"
+  },
+  {
+   "id": "R020",
+   "name_ko": "빛나는 전사의 흉갑",
+   "name_en": "Radiant Warmog's Plate",
+   "category": "radiant",
+   "stats": {
+    "hp": 1120
+   },
+   "hooks": [],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 체력 +700.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I020"
+  },
+  {
+   "id": "R021",
+   "name_ko": "빛나는 태양불꽃 망토",
+   "name_en": "Radiant Sunfire Cape",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "armor": 32
+   },
+   "hooks": [
+    {
+     "type": "burn_aura",
+     "params": {
+      "radius": 2,
+      "pct_per_sec": 1.0,
+      "grievous": 33
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주변 2칸 적에게 매초 최대 체력 1% 화상 + 치유 감소.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I021"
+  },
+  {
+   "id": "R022",
+   "name_ko": "빛나는 서리 망토",
+   "name_en": "Radiant Frost Cloak",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "mr": 32
+   },
+   "hooks": [
+    {
+     "type": "as_slow_aura",
+     "params": {
+      "radius": 1,
+      "pct": 37.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 인접 적의 공격 속도 -25%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I022"
+  },
+  {
+   "id": "R023",
+   "name_ko": "빛나는 거인의 결의",
+   "name_en": "Radiant Titan's Resolve",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "as_pct": 16
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "ad_pct": 2.25,
+      "ap": 2.25,
+      "max": 25,
+      "max_bonus_def": 25
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격/피격마다 공격력·주문력 +1.5% (최대 25). 최대 중첩 시 방어력·마저 +25.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I023"
+  },
+  {
+   "id": "R024",
+   "name_ko": "빛나는 구원",
+   "name_en": "Radiant Redemption",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "mana": 24
+   },
+   "hooks": [
+    {
+     "type": "heal_allies_timer",
+     "params": {
+      "delay": 3,
+      "radius": 1,
+      "missing_pct": 27.0,
+      "interval": 5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 3초 후부터 5초마다 주변 1칸 아군의 잃은 체력 18% 회복.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I024"
+  },
+  {
+   "id": "R025",
+   "name_ko": "빛나는 용맹의 흉갑",
+   "name_en": "Radiant Valiant Plate",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "crit": 32
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 30.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +20%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I025"
+  },
+  {
+   "id": "R026",
+   "name_ko": "빛나는 흡혈귀의 흉갑",
+   "name_en": "Radiant Vampiric Plate",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 22.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +15%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I026"
+  },
+  {
+   "id": "R027",
+   "name_ko": "빛나는 불굴의 심장",
+   "name_en": "Radiant Unyielding Heart",
+   "category": "radiant",
+   "stats": {
+    "hp": 240,
+    "durability": 18
+   },
+   "hooks": [],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +10%, 체력 +150.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I027"
+  },
+  {
+   "id": "R028",
+   "name_ko": "빛나는 가시 갑옷",
+   "name_en": "Radiant Bramble Vest",
+   "category": "radiant",
+   "stats": {
+    "armor": 96
+   },
+   "hooks": [
+    {
+     "type": "thorns",
+     "params": {
+      "pct": 15.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 방어력 +60. 받은 물리 피해의 10%를 반사.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I028"
+  },
+  {
+   "id": "R029",
+   "name_ko": "빛나는 가고일 돌갑옷",
+   "name_en": "Radiant Gargoyle Stoneplate",
+   "category": "radiant",
+   "stats": {
+    "armor": 32,
+    "mr": 32
+   },
+   "hooks": [
+    {
+     "type": "gargoyle",
+     "params": {
+      "per_enemy": 18.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 자신을 노리는 적 1명당 방어력·마저 +12.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I029"
+  },
+  {
+   "id": "R030",
+   "name_ko": "빛나는 질풍 갑옷",
+   "name_en": "Radiant Gale Armor",
+   "category": "radiant",
+   "stats": {
+    "armor": 32,
+    "as_pct": 16
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "armor": 3.0,
+      "max": 20
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격마다 방어력 +2 (최대 20중첩).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I030"
+  },
+  {
+   "id": "R031",
+   "name_ko": "빛나는 수호자의 맹세",
+   "name_en": "Radiant Protector's Vow",
+   "category": "radiant",
+   "stats": {
+    "armor": 32,
+    "mana": 24
+   },
+   "hooks": [
+    {
+     "type": "low_hp_shield",
+     "params": {
+      "threshold": 40,
+      "shield_pct": 37.5,
+      "def": 20,
+      "duration": 5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 체력 40% 이하 시 최대 체력 25% 방어막 + 방어력·마저 +20.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I031"
+  },
+  {
+   "id": "R032",
+   "name_ko": "빛나는 파쇄 장갑",
+   "name_en": "Radiant Shatter Gauntlet",
+   "category": "radiant",
+   "stats": {
+    "armor": 32,
+    "crit": 32
+   },
+   "hooks": [
+    {
+     "type": "shred_on_crit",
+     "params": {
+      "pct": 45.0,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 시 대상 방어력 30% 감소.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I032"
+  },
+  {
+   "id": "R033",
+   "name_ko": "빛나는 피의 갑옷",
+   "name_en": "Radiant Blood Armor",
+   "category": "radiant",
+   "stats": {
+    "armor": 32,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 18.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I033"
+  },
+  {
+   "id": "R034",
+   "name_ko": "빛나는 강철 요새",
+   "name_en": "Radiant Iron Fortress",
+   "category": "radiant",
+   "stats": {
+    "armor": 32,
+    "durability": 18
+   },
+   "hooks": [],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +10%, 방어력 +20.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I034"
+  },
+  {
+   "id": "R035",
+   "name_ko": "빛나는 용의 발톱",
+   "name_en": "Radiant Dragon's Claw",
+   "category": "radiant",
+   "stats": {
+    "mr": 96
+   },
+   "hooks": [
+    {
+     "type": "magic_dr",
+     "params": {
+      "pct": 30.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 마법 저항력 +60. 받는 마법 피해 -20%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I035"
+  },
+  {
+   "id": "R036",
+   "name_ko": "빛나는 정전기 망토",
+   "name_en": "Radiant Static Cloak",
+   "category": "radiant",
+   "stats": {
+    "mr": 32,
+    "as_pct": 16
+   },
+   "hooks": [
+    {
+     "type": "shock_every_n",
+     "params": {
+      "n": 3,
+      "targets": 3,
+      "dmg": 90.0,
+      "mr_shred": 45.0,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 3번째 공격마다 적 3명에게 60 마법 피해 + 마저 30% 감소.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I036"
+  },
+  {
+   "id": "R037",
+   "name_ko": "빛나는 은총의 성배",
+   "name_en": "Radiant Chalice of Grace",
+   "category": "radiant",
+   "stats": {
+    "mr": 32,
+    "mana": 24
+   },
+   "hooks": [
+    {
+     "type": "cast_mana_allies",
+     "params": {
+      "radius": 1,
+      "mana": 12.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 시 인접 아군 마나 +8.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I037"
+  },
+  {
+   "id": "R038",
+   "name_ko": "빛나는 수은 망토",
+   "name_en": "Radiant Quicksilver Cloak",
+   "category": "radiant",
+   "stats": {
+    "mr": 32,
+    "crit": 32,
+    "as_pct": 16
+   },
+   "hooks": [
+    {
+     "type": "cc_immune",
+     "params": {
+      "duration": 15
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 시작 후 15초간 군중 제어 면역. 공격 속도 +10%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I038"
+  },
+  {
+   "id": "R039",
+   "name_ko": "빛나는 정령의 송곳니",
+   "name_en": "Radiant Spirit Fang",
+   "category": "radiant",
+   "stats": {
+    "mr": 32,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 18.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I039"
+  },
+  {
+   "id": "R040",
+   "name_ko": "빛나는 성역의 망토",
+   "name_en": "Radiant Sanctuary Cloak",
+   "category": "radiant",
+   "stats": {
+    "mr": 32,
+    "durability": 14
+   },
+   "hooks": [
+    {
+     "type": "start_shield",
+     "params": {
+      "pct": 27.0,
+      "duration": 8
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 시작 시 최대 체력 18% 방어막.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I040"
+  },
+  {
+   "id": "R041",
+   "name_ko": "빛나는 고속 연사포",
+   "name_en": "Radiant Rapid Firecannon",
+   "category": "radiant",
+   "stats": {
+    "as_pct": 48
+   },
+   "hooks": [
+    {
+     "type": "extra_range",
+     "params": {
+      "range": 1
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 속도 +30%, 사거리 +1.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I041"
+  },
+  {
+   "id": "R042",
+   "name_ko": "빛나는 마나의 활",
+   "name_en": "Radiant Mana Bow",
+   "category": "radiant",
+   "stats": {
+    "as_pct": 16,
+    "mana": 24
+   },
+   "hooks": [
+    {
+     "type": "mana_on_attack",
+     "params": {
+      "mana": 4.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 시 마나 +3.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I042"
+  },
+  {
+   "id": "R043",
+   "name_ko": "빛나는 최후의 속삭임",
+   "name_en": "Radiant Last Whisper",
+   "category": "radiant",
+   "stats": {
+    "as_pct": 16,
+    "crit": 32
+   },
+   "hooks": [
+    {
+     "type": "shred_on_crit",
+     "params": {
+      "pct": 45.0,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 시 대상 방어력 30% 감소.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I043"
+  },
+  {
+   "id": "R044",
+   "name_ko": "빛나는 핏빛 활",
+   "name_en": "Radiant Crimson Bow",
+   "category": "radiant",
+   "stats": {
+    "as_pct": 16,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "omnivamp_bonus",
+     "params": {
+      "pct": 18.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I044"
+  },
+  {
+   "id": "R045",
+   "name_ko": "빛나는 불굴의 활",
+   "name_en": "Radiant Unyielding Bow",
+   "category": "radiant",
+   "stats": {
+    "as_pct": 16,
+    "durability": 18
+   },
+   "hooks": [],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +10%, 공격 속도 +10%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I045"
+  },
+  {
+   "id": "R046",
+   "name_ko": "빛나는 대천사의 눈물",
+   "name_en": "Radiant Archangel's Tear",
+   "category": "radiant",
+   "stats": {
+    "mana": 48
+   },
+   "hooks": [
+    {
+     "type": "ap_stack_timer",
+     "params": {
+      "ap": 30.0,
+      "interval": 5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 5초마다 주문력 +20.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I046"
+  },
+  {
+   "id": "R047",
+   "name_ko": "빛나는 정의의 손길",
+   "name_en": "Radiant Hand of Justice",
+   "category": "radiant",
+   "stats": {
+    "mana": 24,
+    "crit": 32
+   },
+   "hooks": [
+    {
+     "type": "hand_of_justice",
+     "params": {
+      "dmg_pct": 22.5,
+      "omnivamp": 22.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주는 피해 +15%, 피해 흡혈 +15%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I047"
+  },
+  {
+   "id": "R048",
+   "name_ko": "빛나는 영혼 수확자",
+   "name_en": "Radiant Soul Harvester",
+   "category": "radiant",
+   "stats": {
+    "mana": 24,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "mana_on_kill",
+     "params": {
+      "mana": 30.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 적 처치 시 마나 +20.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I048"
+  },
+  {
+   "id": "R049",
+   "name_ko": "빛나는 명상의 보주",
+   "name_en": "Radiant Orb of Meditation",
+   "category": "radiant",
+   "stats": {
+    "mana": 24,
+    "durability": 14
+   },
+   "hooks": [
+    {
+     "type": "mana_regen",
+     "params": {
+      "per_sec": 3.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 매초 마나 +2.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I049"
+  },
+  {
+   "id": "R050",
+   "name_ko": "빛나는 도둑의 장갑",
+   "name_en": "Radiant Thief's Gloves",
+   "category": "radiant",
+   "stats": {
+    "crit": 96
+   },
+   "hooks": [
+    {
+     "type": "random_items",
+     "params": {
+      "count": 2
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 +40%. 전투마다 무작위 조합 아이템 2개의 능력치를 얻는다.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I050"
+  },
+  {
+   "id": "R051",
+   "name_ko": "빛나는 암살자의 송곳니",
+   "name_en": "Radiant Assassin's Fang",
+   "category": "radiant",
+   "stats": {
+    "crit": 32,
+    "omnivamp": 13
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 37.5
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +25%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I051"
+  },
+  {
+   "id": "R052",
+   "name_ko": "빛나는 행운의 부적",
+   "name_en": "Radiant Lucky Charm",
+   "category": "radiant",
+   "stats": {
+    "crit": 32,
+    "durability": 14
+   },
+   "hooks": [
+    {
+     "type": "shield_on_crit",
+     "params": {
+      "pct": 6.0,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 시 최대 체력 4%의 방어막.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I052"
+  },
+  {
+   "id": "R053",
+   "name_ko": "빛나는 뱀파이어 군주의 송곳니",
+   "name_en": "Radiant Vampire Lord's Fang",
+   "category": "radiant",
+   "stats": {
+    "omnivamp": 40
+   },
+   "hooks": [
+    {
+     "type": "overheal_shield",
+     "params": {
+      "max_pct": 30
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +25%. 초과 치유량은 방어막이 된다(최대 체력 30%).",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I053"
+  },
+  {
+   "id": "R054",
+   "name_ko": "빛나는 불사의 심장",
+   "name_en": "Radiant Immortal Heart",
+   "category": "radiant",
+   "stats": {
+    "omnivamp": 13,
+    "durability": 14
+   },
+   "hooks": [
+    {
+     "type": "revive",
+     "params": {
+      "hp_pct": 45.0
+     }
+    }
+   ],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 중 1회 사망 시 체력 30%로 부활.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I054"
+  },
+  {
+   "id": "R055",
+   "name_ko": "빛나는 별의 갑주",
+   "name_en": "Radiant Star Plate",
+   "category": "radiant",
+   "stats": {
+    "durability": 28
+   },
+   "hooks": [],
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +20%.",
+   "price_gold": 3500,
+   "recipe": null,
+   "base_item": "I055"
+  },
+  {
+   "id": "A001",
+   "name_ko": "재의 왕관",
+   "name_en": "Crown of Ash",
+   "category": "artifact",
+   "stats": {
+    "ap": 30,
+    "hp": 200
+   },
+   "hooks": [
+    {
+     "type": "kill_explode",
+     "params": {
+      "dmg": 250,
+      "radius": 1
+     }
+    }
+   ],
+   "desc": "적 처치 시 주변 1칸에 250 마법 피해.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A002",
+   "name_ko": "이셀라의 반지",
+   "name_en": "Isela's Ring",
+   "category": "artifact",
+   "stats": {
+    "mana": 20,
+    "ap": 20
+   },
+   "hooks": [
+    {
+     "type": "heal_on_cast_allies",
+     "params": {
+      "pct": 6
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 아군 전체 최대 체력 6% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A003",
+   "name_ko": "용의 심장석",
+   "name_en": "Dragonheart Stone",
+   "category": "artifact",
+   "stats": {
+    "hp": 500
+   },
+   "hooks": [
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 1.5
+     }
+    }
+   ],
+   "desc": "매초 최대 체력 1.5% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A004",
+   "name_ko": "쐐기의 파편",
+   "name_en": "Spire Shard",
+   "category": "artifact",
+   "stats": {
+    "ap": 40
+   },
+   "hooks": [
+    {
+     "type": "true_dmg_on_cast",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "스킬 피해의 10%만큼 고정 피해 추가.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A005",
+   "name_ko": "고대 문명의 코어",
+   "name_en": "Ancient Core",
+   "category": "artifact",
+   "stats": {
+    "as_pct": 20,
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "as_stack_on_attack",
+     "params": {
+      "pct": 3,
+      "max": 20
+     }
+    }
+   ],
+   "desc": "공격마다 공격 속도 +3% (최대 20중첩).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A006",
+   "name_ko": "세계수의 가지",
+   "name_en": "Worldtree Branch",
+   "category": "artifact",
+   "stats": {
+    "hp": 300,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 1.0
+     }
+    },
+    {
+     "type": "heal_allies_timer",
+     "params": {
+      "delay": 4,
+      "radius": 1,
+      "missing_pct": 10,
+      "interval": 5
+     }
+    }
+   ],
+   "desc": "자신 재생 + 5초마다 인접 아군 잃은 체력 10% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A007",
+   "name_ko": "검성의 유품",
+   "name_en": "Sword Saint's Relic",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 25,
+    "crit": 20
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 40
+     }
+    }
+   ],
+   "desc": "치명타 피해 +40%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A008",
+   "name_ko": "심해의 진주",
+   "name_en": "Deep Pearl",
+   "category": "artifact",
+   "stats": {
+    "mana": 30,
+    "mr": 30
+   },
+   "hooks": [
+    {
+     "type": "mana_regen",
+     "params": {
+      "per_sec": 3
+     }
+    }
+   ],
+   "desc": "매초 마나 +3.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A009",
+   "name_ko": "네오스 반응로",
+   "name_en": "Neos Reactor",
+   "category": "artifact",
+   "stats": {
+    "ap": 25,
+    "as_pct": 15
+   },
+   "hooks": [
+    {
+     "type": "mana_refund_on_cast",
+     "params": {
+      "mana": 30
+     }
+    }
+   ],
+   "desc": "스킬 사용 후 마나 +30.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A010",
+   "name_ko": "사령왕의 두개골",
+   "name_en": "Necrolord Skull",
+   "category": "artifact",
+   "stats": {
+    "ap": 30
+   },
+   "hooks": [
+    {
+     "type": "summon_on_kill",
+     "params": {
+      "hp_pct": 30,
+      "ad_pct": 30,
+      "max": 2
+     }
+    }
+   ],
+   "desc": "적 처치 시 망령 소환(최대 2).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A011",
+   "name_ko": "노른의 실",
+   "name_en": "Norn's Thread",
+   "category": "artifact",
+   "stats": {
+    "hp": 250,
+    "durability": 8
+   },
+   "hooks": [
+    {
+     "type": "revive",
+     "params": {
+      "hp_pct": 50
+     }
+    }
+   ],
+   "desc": "1회 부활(체력 50%).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A012",
+   "name_ko": "마신의 램프",
+   "name_en": "Djinn's Lamp",
+   "category": "artifact",
+   "stats": {
+    "ap": 35,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "first_cast_bonus",
+     "params": {
+      "pct": 60
+     }
+    }
+   ],
+   "desc": "첫 스킬의 피해/치유 +60%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A013",
+   "name_ko": "세이렌의 조개",
+   "name_en": "Siren's Shell",
+   "category": "artifact",
+   "stats": {
+    "hp": 200,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "as_slow_aura",
+     "params": {
+      "radius": 2,
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "주변 2칸 적 공격 속도 -20%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A014",
+   "name_ko": "황제의 인장",
+   "name_en": "Emperor's Seal",
+   "category": "artifact",
+   "stats": {
+    "armor": 25,
+    "mr": 25
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "armor": 15,
+      "mr": 15
+     }
+    }
+   ],
+   "desc": "인접 아군 방어력·마저 +15.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A015",
+   "name_ko": "투기장 우승 벨트",
+   "name_en": "Champion's Belt",
+   "category": "artifact",
+   "stats": {
+    "hp": 350,
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "stack_ad_on_kill",
+     "params": {
+      "pct": 8,
+      "max": 5
+     }
+    }
+   ],
+   "desc": "처치마다 공격력 +8% (최대 5).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A016",
+   "name_ko": "현상금 사냥꾼의 총",
+   "name_en": "Bounty Gun",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 20,
+    "crit": 10
+   },
+   "hooks": [
+    {
+     "type": "execute_low",
+     "params": {
+      "threshold": 15
+     }
+    }
+   ],
+   "desc": "체력 15% 이하 적을 즉시 처형.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A017",
+   "name_ko": "성녀의 묵주",
+   "name_en": "Saint's Rosary",
+   "category": "artifact",
+   "stats": {
+    "hp": 200,
+    "mana": 20
+   },
+   "hooks": [
+    {
+     "type": "heal_allies_timer",
+     "params": {
+      "delay": 2,
+      "radius": 9,
+      "missing_pct": 8,
+      "interval": 4
+     }
+    }
+   ],
+   "desc": "4초마다 아군 전체 잃은 체력 8% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A018",
+   "name_ko": "황룡의 비늘",
+   "name_en": "Gold Dragon Scale",
+   "category": "artifact",
+   "stats": {
+    "armor": 40,
+    "hp": 300
+   },
+   "hooks": [
+    {
+     "type": "thorns",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "받은 물리 피해 15% 반사.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A019",
+   "name_ko": "별의 관측기",
+   "name_en": "Star Observer",
+   "category": "artifact",
+   "stats": {
+    "ap": 20,
+    "crit": 25
+   },
+   "hooks": [
+    {
+     "type": "spell_crit",
+     "params": {}
+    },
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "스킬 치명타 가능 + 치명타 피해 +15%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A020",
+   "name_ko": "증기 심장",
+   "name_en": "Steam Heart",
+   "category": "artifact",
+   "stats": {
+    "hp": 300,
+    "as_pct": 15
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "ad_pct": 2,
+      "max": 20
+     }
+    }
+   ],
+   "desc": "공격/피격마다 공격력 +2% (최대 20).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A021",
+   "name_ko": "안개의 등불",
+   "name_en": "Mist Lantern",
+   "category": "artifact",
+   "stats": {
+    "mr": 30,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "cc_immune",
+     "params": {
+      "duration": 30
+     }
+    }
+   ],
+   "desc": "30초간 군중 제어 면역.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A022",
+   "name_ko": "피의 성배",
+   "name_en": "Blood Chalice",
+   "category": "artifact",
+   "stats": {
+    "omnivamp": 20,
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "overheal_shield",
+     "params": {
+      "max_pct": 40
+     }
+    }
+   ],
+   "desc": "초과 치유량이 방어막이 된다(최대 40%).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A023",
+   "name_ko": "와이번의 발톱",
+   "name_en": "Wyvern Talon",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 15,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "dash_dmg_bonus",
+     "params": {
+      "pct": 50
+     }
+    }
+   ],
+   "desc": "도약/강하 스킬 피해 +50%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A024",
+   "name_ko": "골렘의 핵",
+   "name_en": "Golem Core",
+   "category": "artifact",
+   "stats": {
+    "armor": 35,
+    "mr": 35
+   },
+   "hooks": [
+    {
+     "type": "gargoyle",
+     "params": {
+      "per_enemy": 15
+     }
+    }
+   ],
+   "desc": "자신을 노리는 적 1명당 방어력·마저 +15.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A025",
+   "name_ko": "요정의 가루",
+   "name_en": "Fairy Dust",
+   "category": "artifact",
+   "stats": {
+    "as_pct": 25
+   },
+   "hooks": [
+    {
+     "type": "dodge",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "15% 확률로 공격을 회피.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A026",
+   "name_ko": "폭풍의 눈",
+   "name_en": "Eye of the Storm",
+   "category": "artifact",
+   "stats": {
+    "ap": 30
+   },
+   "hooks": [
+    {
+     "type": "shock_every_n",
+     "params": {
+      "n": 3,
+      "targets": 4,
+      "dmg": 90,
+      "mr_shred": 30,
+      "duration": 4
+     }
+    }
+   ],
+   "desc": "3번째 공격마다 적 4명에게 90 마법 피해 + 마저 감소.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A027",
+   "name_ko": "용병왕의 계약서",
+   "name_en": "Mercenary King's Contract",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 10,
+    "ap": 10,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "gold_bonus",
+     "params": {
+      "pct": 30
+     }
+    }
+   ],
+   "desc": "전투 승리 시 골드 +30%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A028",
+   "name_ko": "태초의 불씨",
+   "name_en": "Primordial Ember",
+   "category": "artifact",
+   "stats": {
+    "ap": 35
+   },
+   "hooks": [
+    {
+     "type": "burn_on_hit",
+     "params": {
+      "pct_per_sec": 2.0,
+      "duration": 5,
+      "grievous": 50
+     }
+    }
+   ],
+   "desc": "피해를 준 적에게 매초 최대 체력 2% 화상 + 치유 감소 50%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A029",
+   "name_ko": "거인의 심장",
+   "name_en": "Giant's Heart",
+   "category": "artifact",
+   "stats": {
+    "hp": 900
+   },
+   "hooks": [],
+   "desc": "체력 +900.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A030",
+   "name_ko": "리치의 지팡이",
+   "name_en": "Lich Staff",
+   "category": "artifact",
+   "stats": {
+    "ap": 50,
+    "mana": 10
+   },
+   "hooks": [
+    {
+     "type": "mana_on_kill",
+     "params": {
+      "mana": 30
+     }
+    }
+   ],
+   "desc": "적 처치 시 마나 +30.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A031",
+   "name_ko": "얼음 여왕의 왕관",
+   "name_en": "Frost Queen's Crown",
+   "category": "artifact",
+   "stats": {
+    "ap": 25,
+    "mr": 25
+   },
+   "hooks": [
+    {
+     "type": "slow_on_cast",
+     "params": {
+      "pct": 40,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "스킬에 맞은 적 공격 속도 -40% (3초).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A032",
+   "name_ko": "모래시계",
+   "name_en": "Hourglass",
+   "category": "artifact",
+   "stats": {
+    "mana": 25,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "stasis_low_hp",
+     "params": {
+      "threshold": 30,
+      "duration": 2
+     }
+    }
+   ],
+   "desc": "체력 30% 이하 시 2초간 무적 정지(1회).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A033",
+   "name_ko": "전설의 모루",
+   "name_en": "Legendary Anvil",
+   "category": "artifact",
+   "stats": {
+    "armor": 20,
+    "mr": 20,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "random_items",
+     "params": {
+      "count": 1
+     }
+    }
+   ],
+   "desc": "전투마다 무작위 조합 아이템 1개의 능력치를 얻는다.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A034",
+   "name_ko": "암살자의 가면",
+   "name_en": "Assassin's Mask",
+   "category": "artifact",
+   "stats": {
+    "crit": 30,
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "backline_jump",
+     "params": {}
+    }
+   ],
+   "desc": "전투 시작 시 적 후열로 도약한다.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A035",
+   "name_ko": "수호자의 횃불",
+   "name_en": "Guardian's Torch",
+   "category": "artifact",
+   "stats": {
+    "hp": 250,
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "hp_pct": 10
+     }
+    }
+   ],
+   "desc": "인접 아군 최대 체력 +10%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A036",
+   "name_ko": "바다의 삼지창",
+   "name_en": "Sea Trident",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 20,
+    "mana": 10
+   },
+   "hooks": [
+    {
+     "type": "aoe_on_attack",
+     "params": {
+      "targets": 2,
+      "ad_ratio": 0.4
+     }
+    }
+   ],
+   "desc": "공격 시 인접 적 2명에게 공격력 40% 추가 피해.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A037",
+   "name_ko": "부족의 토템",
+   "name_en": "Tribal Totem",
+   "category": "artifact",
+   "stats": {
+    "hp": 300,
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "ad_pct": 3,
+      "max": 15
+     }
+    }
+   ],
+   "desc": "피격/공격마다 공격력 +3% (최대 15).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A038",
+   "name_ko": "천공의 나침반",
+   "name_en": "Sky Compass",
+   "category": "artifact",
+   "stats": {
+    "as_pct": 15,
+    "ap": 15
+   },
+   "hooks": [
+    {
+     "type": "extra_range",
+     "params": {
+      "range": 2
+     }
+    }
+   ],
+   "desc": "사거리 +2.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A039",
+   "name_ko": "불멸의 갑주",
+   "name_en": "Immortal Armor",
+   "category": "artifact",
+   "stats": {
+    "armor": 50,
+    "hp": 200
+   },
+   "hooks": [
+    {
+     "type": "low_hp_shield",
+     "params": {
+      "threshold": 50,
+      "shield_pct": 40,
+      "def": 30,
+      "duration": 6
+     }
+    }
+   ],
+   "desc": "체력 50% 이하 시 최대 체력 40% 방어막 + 방어력·마저 +30.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A040",
+   "name_ko": "정령 계약서",
+   "name_en": "Elemental Pact",
+   "category": "artifact",
+   "stats": {
+    "ap": 30
+   },
+   "hooks": [
+    {
+     "type": "summon_on_cast",
+     "params": {
+      "hp_pct": 25,
+      "ad_pct": 25,
+      "max": 1
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 정령 소환(최대 1).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A041",
+   "name_ko": "드워프의 룬 망치",
+   "name_en": "Dwarven Rune Hammer",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 20,
+    "armor": 20
+   },
+   "hooks": [
+    {
+     "type": "shred_on_hit",
+     "params": {
+      "pct": 40,
+      "duration": 3
+     }
+    }
+   ],
+   "desc": "공격 적중 시 방어력 40% 감소.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A042",
+   "name_ko": "뱀파이어의 망토",
+   "name_en": "Vampire Cloak",
+   "category": "artifact",
+   "stats": {
+    "omnivamp": 15,
+    "hp": 200
+   },
+   "hooks": [
+    {
+     "type": "heal_on_kill",
+     "params": {
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "처치 시 최대 체력 20% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A043",
+   "name_ko": "기계 심장",
+   "name_en": "Mech Heart",
+   "category": "artifact",
+   "stats": {
+    "hp": 350,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "turret_stat_bonus",
+     "params": {
+      "pct": 50
+     }
+    }
+   ],
+   "desc": "소환한 포탑/소환수 능력치 +50%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A044",
+   "name_ko": "성기사의 서약",
+   "name_en": "Paladin's Vow",
+   "category": "artifact",
+   "stats": {
+    "armor": 30,
+    "mr": 30
+   },
+   "hooks": [
+    {
+     "type": "start_shield",
+     "params": {
+      "pct": 30,
+      "duration": 10
+     }
+    }
+   ],
+   "desc": "전투 시작 시 최대 체력 30% 방어막(10초).",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A045",
+   "name_ko": "공허의 눈",
+   "name_en": "Void Eye",
+   "category": "artifact",
+   "stats": {
+    "ap": 40,
+    "crit": 10
+   },
+   "hooks": [
+    {
+     "type": "true_dmg_on_cast",
+     "params": {
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "스킬 피해의 20%만큼 고정 피해 추가.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A046",
+   "name_ko": "샤미센의 줄",
+   "name_en": "Shamisen String",
+   "category": "artifact",
+   "stats": {
+    "as_pct": 20,
+    "mana": 10
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "as_pct": 10
+     }
+    }
+   ],
+   "desc": "인접 아군 공격 속도 +10%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A047",
+   "name_ko": "전쟁의 북",
+   "name_en": "War Drum",
+   "category": "artifact",
+   "stats": {
+    "hp": 200,
+    "ad_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "ad_pct": 10
+     }
+    }
+   ],
+   "desc": "인접 아군 공격력 +10%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A048",
+   "name_ko": "마도 학술원의 증표",
+   "name_en": "Academy Token",
+   "category": "artifact",
+   "stats": {
+    "ap": 25,
+    "mana": 20
+   },
+   "hooks": [
+    {
+     "type": "cast_mana_allies",
+     "params": {
+      "radius": 9,
+      "mana": 5
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 아군 전체 마나 +5.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A049",
+   "name_ko": "용의 알 껍질",
+   "name_en": "Dragon Eggshell",
+   "category": "artifact",
+   "stats": {
+    "armor": 30,
+    "mr": 30,
+    "hp": 200
+   },
+   "hooks": [
+    {
+     "type": "magic_dr",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "받는 마법 피해 -15%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A050",
+   "name_ko": "늑대의 이빨",
+   "name_en": "Wolf Fang",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 15,
+    "crit": 15
+   },
+   "hooks": [
+    {
+     "type": "execute_low",
+     "params": {
+      "threshold": 10
+     }
+    },
+    {
+     "type": "heal_on_kill",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "체력 10% 이하 적 처형, 처치 시 10% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A051",
+   "name_ko": "고블린의 폭탄",
+   "name_en": "Goblin Bomb",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 10,
+    "ap": 10
+   },
+   "hooks": [
+    {
+     "type": "kill_explode",
+     "params": {
+      "dmg": 300,
+      "radius": 1
+     }
+    }
+   ],
+   "desc": "적 처치 시 주변 1칸 300 마법 피해.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A052",
+   "name_ko": "오아시스의 물병",
+   "name_en": "Oasis Flask",
+   "category": "artifact",
+   "stats": {
+    "hp": 200,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "heal_on_cast_allies",
+     "params": {
+      "pct": 4
+     }
+    },
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 0.8
+     }
+    }
+   ],
+   "desc": "스킬 사용 시 아군 4% 회복 + 자신 재생.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A053",
+   "name_ko": "해적의 보물지도",
+   "name_en": "Pirate's Map",
+   "category": "artifact",
+   "stats": {
+    "crit": 20,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "gold_bonus",
+     "params": {
+      "pct": 50
+     }
+    }
+   ],
+   "desc": "전투 승리 시 골드 +50%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A054",
+   "name_ko": "빛의 심판봉",
+   "name_en": "Rod of Judgment",
+   "category": "artifact",
+   "stats": {
+    "ap": 30,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "giant_slayer",
+     "params": {
+      "hp_threshold": 1600,
+      "bonus_pct": 30
+     }
+    }
+   ],
+   "desc": "최대 체력 1600 이상 적에게 피해 +30%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A055",
+   "name_ko": "트롤의 곤봉",
+   "name_en": "Troll Club",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 30
+   },
+   "hooks": [
+    {
+     "type": "as_pct_penalty",
+     "params": {
+      "pct": -15
+     }
+    },
+    {
+     "type": "stack_ad_on_kill",
+     "params": {
+      "pct": 10,
+      "max": 5
+     }
+    }
+   ],
+   "desc": "공격력 +30%, 공격 속도 -15%, 처치마다 공격력 +10%.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A056",
+   "name_ko": "별똥별 조각",
+   "name_en": "Meteor Shard",
+   "category": "artifact",
+   "stats": {
+    "ap": 35,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "shock_every_n",
+     "params": {
+      "n": 4,
+      "targets": 1,
+      "dmg": 200,
+      "mr_shred": 0,
+      "duration": 0
+     }
+    }
+   ],
+   "desc": "4번째 공격마다 200 마법 피해.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A057",
+   "name_ko": "시간의 회중시계",
+   "name_en": "Pocket Watch",
+   "category": "artifact",
+   "stats": {
+    "mana": 20,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "mana_regen",
+     "params": {
+      "per_sec": 2
+     }
+    },
+    {
+     "type": "mana_on_attack",
+     "params": {
+      "mana": 2
+     }
+    }
+   ],
+   "desc": "매초 마나 +2, 공격 시 마나 +2.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A058",
+   "name_ko": "수호천사의 깃털",
+   "name_en": "Angel Feather",
+   "category": "artifact",
+   "stats": {
+    "hp": 250,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "revive",
+     "params": {
+      "hp_pct": 40
+     }
+    },
+    {
+     "type": "heal_on_revive_allies",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "1회 부활(40%) + 부활 시 아군 10% 회복.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A059",
+   "name_ko": "대족장의 도끼",
+   "name_en": "Chieftain's Axe",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 25,
+    "hp": 200
+   },
+   "hooks": [
+    {
+     "type": "aoe_on_attack",
+     "params": {
+      "targets": 2,
+      "ad_ratio": 0.3
+     }
+    }
+   ],
+   "desc": "공격 시 인접 적 2명에게 공격력 30% 추가 피해.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "A060",
+   "name_ko": "심문관의 낙인",
+   "name_en": "Inquisitor's Brand",
+   "category": "artifact",
+   "stats": {
+    "ad_pct": 15,
+    "ap": 15
+   },
+   "hooks": [
+    {
+     "type": "burn_on_hit",
+     "params": {
+      "pct_per_sec": 1.5,
+      "duration": 4,
+      "grievous": 50
+     }
+    },
+    {
+     "type": "execute_low",
+     "params": {
+      "threshold": 12
+     }
+    }
+   ],
+   "desc": "화상 + 치유 감소 + 12% 이하 처형.",
+   "price_gold": 2800,
+   "recipe": null
+  },
+  {
+   "id": "S001",
+   "name_ko": "전쟁 깃발",
+   "name_en": "War Banner",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "ad_pct": 12,
+      "ap": 12
+     }
+    }
+   ],
+   "desc": "인접 아군 공격력·주문력 +12%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S002",
+   "name_ko": "수호의 깃발",
+   "name_en": "Guardian Banner",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "armor": 20,
+      "mr": 20
+     }
+    }
+   ],
+   "desc": "인접 아군 방어력·마저 +20.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S003",
+   "name_ko": "치유의 향로",
+   "name_en": "Healing Censer",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "heal_allies_timer",
+     "params": {
+      "delay": 2,
+      "radius": 1,
+      "missing_pct": 12,
+      "interval": 4
+     }
+    }
+   ],
+   "desc": "4초마다 인접 아군 잃은 체력 12% 회복.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S004",
+   "name_ko": "질풍의 뿔피리",
+   "name_en": "Gale Horn",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "as_pct": 15
+     }
+    }
+   ],
+   "desc": "인접 아군 공격 속도 +15%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S005",
+   "name_ko": "마나의 샘",
+   "name_en": "Mana Spring",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "mana_regen": 2
+     }
+    }
+   ],
+   "desc": "인접 아군 매초 마나 +2.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S006",
+   "name_ko": "성역의 등불",
+   "name_en": "Sanctuary Lamp",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "start_shield_pct": 15
+     }
+    }
+   ],
+   "desc": "인접 아군 전투 시작 시 15% 방어막.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S007",
+   "name_ko": "용기의 나팔",
+   "name_en": "Horn of Courage",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "ad_pct": 6,
+      "ap": 6
+     }
+    }
+   ],
+   "desc": "아군 전체 공격력·주문력 +6%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S008",
+   "name_ko": "철벽의 북",
+   "name_en": "Iron Drum",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "armor": 10,
+      "mr": 10
+     }
+    }
+   ],
+   "desc": "아군 전체 방어력·마저 +10.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S009",
+   "name_ko": "저주의 토템",
+   "name_en": "Curse Totem",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_enemies",
+     "params": {
+      "radius": 2,
+      "armor": -15,
+      "mr": -15
+     }
+    }
+   ],
+   "desc": "주변 2칸 적 방어력·마저 -15.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S010",
+   "name_ko": "둔화의 토템",
+   "name_en": "Slow Totem",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "as_slow_aura",
+     "params": {
+      "radius": 2,
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "주변 2칸 적 공격 속도 -15%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S011",
+   "name_ko": "재생의 토템",
+   "name_en": "Regen Totem",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "regen_pct": 1.0
+     }
+    }
+   ],
+   "desc": "인접 아군 매초 1% 재생.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S012",
+   "name_ko": "전술 지도",
+   "name_en": "Tactical Map",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "start_mana": 15
+     }
+    }
+   ],
+   "desc": "아군 전체 시작 마나 +15.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S013",
+   "name_ko": "흡혈의 깃발",
+   "name_en": "Vampiric Banner",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "omnivamp": 10
+     }
+    }
+   ],
+   "desc": "인접 아군 피해 흡혈 +10%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S014",
+   "name_ko": "치명의 깃발",
+   "name_en": "Lethal Banner",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "crit": 20
+     }
+    }
+   ],
+   "desc": "인접 아군 치명타 +20%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S015",
+   "name_ko": "내구의 깃발",
+   "name_en": "Durable Banner",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "durability": 8
+     }
+    }
+   ],
+   "desc": "인접 아군 내구력 +8%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S016",
+   "name_ko": "사정거리 망원경",
+   "name_en": "Range Scope",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "range": 1
+     }
+    }
+   ],
+   "desc": "인접 아군 사거리 +1.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S017",
+   "name_ko": "가시 울타리",
+   "name_en": "Thorn Fence",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "thorns": 8
+     }
+    }
+   ],
+   "desc": "인접 아군 물리 피해 8% 반사.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S018",
+   "name_ko": "용의 깃발",
+   "name_en": "Dragon Banner",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "hp_pct": 15
+     }
+    }
+   ],
+   "desc": "인접 아군 최대 체력 +15%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S019",
+   "name_ko": "공성 사다리",
+   "name_en": "Siege Ladder",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "structure_dmg_pct": 50
+     }
+    }
+   ],
+   "desc": "아군 전체 구조물에 주는 피해 +50%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S020",
+   "name_ko": "보급 마차",
+   "name_en": "Supply Wagon",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "heal_on_wave_pct": 25
+     }
+    }
+   ],
+   "desc": "웨이브 종료 시 아군 전체 25% 회복(웨이브 전투).",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S021",
+   "name_ko": "정찰병의 각적",
+   "name_en": "Scout's Horn",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "start_as_pct": 20,
+      "start_as_dur": 6
+     }
+    }
+   ],
+   "desc": "전투 시작 6초간 아군 전체 공격 속도 +20%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S022",
+   "name_ko": "기수의 안장",
+   "name_en": "Rider's Saddle",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "dash_dmg_pct": 30
+     }
+    }
+   ],
+   "desc": "인접 아군 강하/도약 피해 +30%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S023",
+   "name_ko": "암살 지령서",
+   "name_en": "Assassination Order",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "crit_dmg": 20
+     }
+    }
+   ],
+   "desc": "인접 아군 치명타 피해 +20%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S024",
+   "name_ko": "마법 증폭기",
+   "name_en": "Spell Amplifier",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "ap": 20
+     }
+    }
+   ],
+   "desc": "인접 아군 주문력 +20.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S025",
+   "name_ko": "사제의 성수",
+   "name_en": "Priest's Holy Water",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "heal_pct": 20
+     }
+    }
+   ],
+   "desc": "아군 전체 받는 치유 +20%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S026",
+   "name_ko": "소환사의 서",
+   "name_en": "Summoner's Tome",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "summon_stat_pct": 30
+     }
+    }
+   ],
+   "desc": "아군 소환수 능력치 +30%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S027",
+   "name_ko": "공학자의 공구",
+   "name_en": "Engineer's Toolkit",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 9,
+      "turret_stat_pct": 30
+     }
+    }
+   ],
+   "desc": "아군 포탑 능력치 +30%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S028",
+   "name_ko": "용병 계약서",
+   "name_en": "Mercenary Contract",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "gold_bonus",
+     "params": {
+      "pct": 20
+     }
+    },
+    {
+     "type": "aura_allies",
+     "params": {
+      "radius": 1,
+      "ad_pct": 5
+     }
+    }
+   ],
+   "desc": "골드 +20%, 인접 아군 공격력 +5%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S029",
+   "name_ko": "행운의 토끼발",
+   "name_en": "Rabbit's Foot",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "drop_bonus",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "전투 보상 아이템 드랍률 +10%.",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "S030",
+   "name_ko": "영웅의 부적",
+   "name_en": "Hero's Amulet",
+   "category": "support",
+   "stats": {
+    "hp": 100
+   },
+   "hooks": [
+    {
+     "type": "hero_drop_bonus",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "영웅 드랍 확률 +10% (조우 전투).",
+   "price_gold": 1800,
+   "recipe": null
+  },
+  {
+   "id": "N001",
+   "name_ko": "회색 늑대의 문장",
+   "name_en": "Bromel Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 10,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "gold_bonus",
+     "params": {
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "[브로멜 자유도시 특산] 골드 +15%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "bromel"
+  },
+  {
+   "id": "N002",
+   "name_ko": "아스텔 왕실 검",
+   "name_en": "Astel Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 15,
+    "armor": 15
+   },
+   "hooks": [
+    {
+     "type": "start_shield",
+     "params": {
+      "pct": 12,
+      "duration": 6
+     }
+    }
+   ],
+   "desc": "[아스텔 왕국 특산] 시작 시 12% 방어막.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "astel"
+  },
+  {
+   "id": "N003",
+   "name_ko": "미르 포도주",
+   "name_en": "Mir Specialty",
+   "category": "national",
+   "stats": {
+    "hp": 250
+   },
+   "hooks": [
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 1.0
+     }
+    }
+   ],
+   "desc": "[미르 공국 특산] 매초 1% 재생.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "mir"
+  },
+  {
+   "id": "N004",
+   "name_ko": "하르벤 용병 휘장",
+   "name_en": "Harben Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 12,
+    "ap": 12
+   },
+   "hooks": [
+    {
+     "type": "stack_ad_on_kill",
+     "params": {
+      "pct": 5,
+      "max": 4
+     }
+    }
+   ],
+   "desc": "[하르벤 후국 특산] 처치마다 공격력 +5%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "harben"
+  },
+  {
+   "id": "N005",
+   "name_ko": "루멘 성유물함",
+   "name_en": "Lumen Specialty",
+   "category": "national",
+   "stats": {
+    "mr": 30,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "revive",
+     "params": {
+      "hp_pct": 25
+     }
+    }
+   ],
+   "desc": "[루멘 성교국 특산] 1회 부활(25%).",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "lumen"
+  },
+  {
+   "id": "N006",
+   "name_ko": "리에스 항해 나침반",
+   "name_en": "Lies Specialty",
+   "category": "national",
+   "stats": {
+    "as_pct": 15,
+    "crit": 10
+   },
+   "hooks": [
+    {
+     "type": "gold_bonus",
+     "params": {
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "[리에스 연합 특산] 골드 +20%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "lies"
+  },
+  {
+   "id": "N007",
+   "name_ko": "발하임 늑대 가죽",
+   "name_en": "Valheim Specialty",
+   "category": "national",
+   "stats": {
+    "hp": 300,
+    "ad_pct": 8
+   },
+   "hooks": [
+    {
+     "type": "low_hp_shield",
+     "params": {
+      "threshold": 50,
+      "shield_pct": 20,
+      "ad_pct": 20,
+      "duration": 5
+     }
+    }
+   ],
+   "desc": "[발하임 특산] 체력 50% 이하 시 방어막 + 공격력.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "valheim"
+  },
+  {
+   "id": "N008",
+   "name_ko": "카르나 모래 유리",
+   "name_en": "Karna Specialty",
+   "category": "national",
+   "stats": {
+    "ap": 25,
+    "mana": 10
+   },
+   "hooks": [
+    {
+     "type": "first_cast_bonus",
+     "params": {
+      "pct": 40
+     }
+    }
+   ],
+   "desc": "[카르나 술탄국 특산] 첫 스킬 +40%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "karna"
+  },
+  {
+   "id": "N009",
+   "name_ko": "토르가 전쟁 가면",
+   "name_en": "Torga Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 15,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "stack_on_hit",
+     "params": {
+      "ad_pct": 2,
+      "max": 15
+     }
+    }
+   ],
+   "desc": "[토르가 부족연맹 특산] 피격/공격마다 공격력 +2%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "torga"
+  },
+  {
+   "id": "N010",
+   "name_ko": "쿠르간 기마 활",
+   "name_en": "Kurgan Specialty",
+   "category": "national",
+   "stats": {
+    "as_pct": 20,
+    "ad_pct": 5
+   },
+   "hooks": [
+    {
+     "type": "extra_range",
+     "params": {
+      "range": 1
+     }
+    }
+   ],
+   "desc": "[쿠르간 칸국 특산] 사거리 +1.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "kurgan"
+  },
+  {
+   "id": "N011",
+   "name_ko": "사이람 벚꽃 검",
+   "name_en": "Sairam Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 15,
+    "crit": 15
+   },
+   "hooks": [
+    {
+     "type": "crit_dmg_bonus",
+     "params": {
+      "pct": 20
+     }
+    }
+   ],
+   "desc": "[사이람 제국 특산] 치명타 피해 +20%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "sairam"
+  },
+  {
+   "id": "N012",
+   "name_ko": "엘로웬 세계수 잎",
+   "name_en": "Elowen Specialty",
+   "category": "national",
+   "stats": {
+    "hp": 200,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 1.2
+     }
+    }
+   ],
+   "desc": "[엘로웬 특산] 매초 1.2% 재생.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "elowen"
+  },
+  {
+   "id": "N013",
+   "name_ko": "그란두르 룬 강철",
+   "name_en": "Grandur Specialty",
+   "category": "national",
+   "stats": {
+    "armor": 35,
+    "mr": 15
+   },
+   "hooks": [
+    {
+     "type": "thorns",
+     "params": {
+      "pct": 8
+     }
+    }
+   ],
+   "desc": "[그란두르 특산] 물리 피해 8% 반사.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "grandur"
+  },
+  {
+   "id": "N014",
+   "name_ko": "서리 제도 고래 기름",
+   "name_en": "Frost Isles Specialty",
+   "category": "national",
+   "stats": {
+    "hp": 200,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "as_slow_aura",
+     "params": {
+      "radius": 1,
+      "pct": 15
+     }
+    }
+   ],
+   "desc": "[서리 제도 특산] 인접 적 공속 -15%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "frost_isles"
+  },
+  {
+   "id": "N015",
+   "name_ko": "티아마 진주 목걸이",
+   "name_en": "Tiama Specialty",
+   "category": "national",
+   "stats": {
+    "mana": 25,
+    "mr": 20
+   },
+   "hooks": [
+    {
+     "type": "mana_regen",
+     "params": {
+      "per_sec": 2
+     }
+    }
+   ],
+   "desc": "[티아마 수중도시 특산] 매초 마나 +2.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "tiama"
+  },
+  {
+   "id": "N016",
+   "name_ko": "베일 요정 날개",
+   "name_en": "Veil Specialty",
+   "category": "national",
+   "stats": {
+    "as_pct": 20
+   },
+   "hooks": [
+    {
+     "type": "dodge",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "[베일 요정 영지 특산] 10% 회피.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "veil"
+  },
+  {
+   "id": "N017",
+   "name_ko": "자이로스 독 송곳니",
+   "name_en": "Zyros Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 10,
+    "as_pct": 10
+   },
+   "hooks": [
+    {
+     "type": "burn_on_hit",
+     "params": {
+      "pct_per_sec": 1.0,
+      "duration": 4,
+      "grievous": 33
+     }
+    }
+   ],
+   "desc": "[자이로스 정글 특산] 독(화상) + 치유 감소.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "zyros"
+  },
+  {
+   "id": "N018",
+   "name_ko": "녹스 흑요석 두개골",
+   "name_en": "Nox Specialty",
+   "category": "national",
+   "stats": {
+    "ap": 30,
+    "omnivamp": 8
+   },
+   "hooks": [
+    {
+     "type": "summon_on_kill",
+     "params": {
+      "hp_pct": 25,
+      "ad_pct": 25,
+      "max": 1
+     }
+    }
+   ],
+   "desc": "[녹스 특산] 처치 시 망령 소환.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "nox"
+  },
+  {
+   "id": "N019",
+   "name_ko": "황혼 요새 핏빛 잔",
+   "name_en": "Twilight Specialty",
+   "category": "national",
+   "stats": {
+    "omnivamp": 15,
+    "hp": 150
+   },
+   "hooks": [
+    {
+     "type": "heal_on_kill",
+     "params": {
+      "pct": 12
+     }
+    }
+   ],
+   "desc": "[황혼 요새 특산] 처치 시 12% 회복.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "twilight"
+  },
+  {
+   "id": "N020",
+   "name_ko": "마카브 흑요석 핵",
+   "name_en": "Makab Specialty",
+   "category": "national",
+   "stats": {
+    "armor": 25,
+    "mr": 25
+   },
+   "hooks": [
+    {
+     "type": "gargoyle",
+     "params": {
+      "per_enemy": 10
+     }
+    }
+   ],
+   "desc": "[마카브 화산령 특산] 노리는 적당 방어력·마저 +10.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "makab"
+  },
+  {
+   "id": "N021",
+   "name_ko": "네오스 에너지 셀",
+   "name_en": "Neos Specialty",
+   "category": "national",
+   "stats": {
+    "ap": 20,
+    "as_pct": 15
+   },
+   "hooks": [
+    {
+     "type": "mana_refund_on_cast",
+     "params": {
+      "mana": 15
+     }
+    }
+   ],
+   "desc": "[네오스 특산] 스킬 후 마나 +15.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "neos"
+  },
+  {
+   "id": "N022",
+   "name_ko": "셀레스티아 별의 서",
+   "name_en": "Celestia Specialty",
+   "category": "national",
+   "stats": {
+    "ap": 35,
+    "mana": 15
+   },
+   "hooks": [
+    {
+     "type": "cast_mana_allies",
+     "params": {
+      "radius": 1,
+      "mana": 6
+     }
+    }
+   ],
+   "desc": "[셀레스티아 특산] 스킬 시 인접 아군 마나 +6.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "celestia"
+  },
+  {
+   "id": "N023",
+   "name_ko": "드라케스탄 용의 알 조각",
+   "name_en": "Drakestan Specialty",
+   "category": "national",
+   "stats": {
+    "hp": 300,
+    "ap": 15,
+    "ad_pct": 5
+   },
+   "hooks": [
+    {
+     "type": "magic_dr",
+     "params": {
+      "pct": 10
+     }
+    }
+   ],
+   "desc": "[드라케스탄 특산] 받는 마법 피해 -10%.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "drakestan"
+  },
+  {
+   "id": "N024",
+   "name_ko": "애쉬펠 재의 비늘",
+   "name_en": "Ashfell Specialty",
+   "category": "national",
+   "stats": {
+    "ad_pct": 15,
+    "ap": 15
+   },
+   "hooks": [
+    {
+     "type": "burn_on_hit",
+     "params": {
+      "pct_per_sec": 1.5,
+      "duration": 4,
+      "grievous": 33
+     }
+    },
+    {
+     "type": "kill_explode",
+     "params": {
+      "dmg": 150,
+      "radius": 1
+     }
+    }
+   ],
+   "desc": "[애쉬펠 (재의 산맥) 특산] 화상 + 처치 시 폭발.",
+   "price_gold": 2200,
+   "recipe": null,
+   "nation": "ashfell"
+  },
+  {
+   "id": "X001",
+   "name_ko": "스태미너 물약(소)",
+   "name_en": "Stamina Potion S",
+   "category": "consumable",
+   "kind": "stamina",
+   "effect": {
+    "stamina": 20
+   },
+   "desc": "영웅 1명의 스태미너 20 회복.",
+   "price_gold": 200,
+   "price_gem": 10,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X002",
+   "name_ko": "스태미너 물약(중)",
+   "name_en": "Stamina Potion M",
+   "category": "consumable",
+   "kind": "stamina",
+   "effect": {
+    "stamina": 50
+   },
+   "desc": "영웅 1명의 스태미너 50 회복.",
+   "price_gold": 450,
+   "price_gem": 22,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X003",
+   "name_ko": "스태미너 물약(대)",
+   "name_en": "Stamina Potion L",
+   "category": "consumable",
+   "kind": "stamina",
+   "effect": {
+    "stamina": 100
+   },
+   "desc": "영웅 1명의 스태미너 전부 회복.",
+   "price_gold": 800,
+   "price_gem": 40,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X004",
+   "name_ko": "부대 스태미너 보급",
+   "name_en": "Squad Stamina Ration",
+   "category": "consumable",
+   "kind": "stamina",
+   "effect": {
+    "stamina_all": 30
+   },
+   "desc": "보유 영웅 전체 스태미너 30 회복.",
+   "price_gold": 1500,
+   "price_gem": 70,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X005",
+   "name_ko": "영웅 서약서(일반)",
+   "name_en": "Hero Pact (Common)",
+   "category": "consumable",
+   "kind": "drop",
+   "effect": {
+    "hero_drop_mult": 1.5
+   },
+   "desc": "조우 전투 1회 영웅 드랍 확률 ×1.5.",
+   "price_gold": 600,
+   "price_gem": 30,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X006",
+   "name_ko": "영웅 서약서(고급)",
+   "name_en": "Hero Pact (Rare)",
+   "category": "consumable",
+   "kind": "drop",
+   "effect": {
+    "hero_drop_mult": 2.0
+   },
+   "desc": "조우 전투 1회 영웅 드랍 확률 ×2.0.",
+   "price_gold": 1400,
+   "price_gem": 60,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X007",
+   "name_ko": "영웅 서약서(전설)",
+   "name_en": "Hero Pact (Legendary)",
+   "category": "consumable",
+   "kind": "drop",
+   "effect": {
+    "hero_drop_mult": 3.0
+   },
+   "desc": "조우 전투 1회 영웅 드랍 확률 ×3.0. 보석 전용.",
+   "price_gold": null,
+   "price_gem": 150,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X008",
+   "name_ko": "매력 징표",
+   "name_en": "Charm Token",
+   "category": "consumable",
+   "kind": "affinity",
+   "effect": {
+    "affinity": 10
+   },
+   "desc": "지정 영웅의 호감도 +10. 호감도 100 도달 시 확정 영입(천장).",
+   "price_gold": 500,
+   "price_gem": 25,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X009",
+   "name_ko": "매력 징표 묶음",
+   "name_en": "Charm Token Bundle",
+   "category": "consumable",
+   "kind": "affinity",
+   "effect": {
+    "affinity": 50
+   },
+   "desc": "지정 영웅의 호감도 +50. 보석 전용.",
+   "price_gold": null,
+   "price_gem": 110,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X010",
+   "name_ko": "황금 열쇠",
+   "name_en": "Golden Key",
+   "category": "consumable",
+   "kind": "key",
+   "effect": {
+    "treasure_entry": 1
+   },
+   "desc": "보물 전투 입장권.",
+   "price_gold": 1000,
+   "price_gem": 45,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X011",
+   "name_ko": "아이템 드랍 부적",
+   "name_en": "Item Drop Charm",
+   "category": "consumable",
+   "kind": "drop",
+   "effect": {
+    "item_drop_mult": 1.5
+   },
+   "desc": "전투 1회 아이템 드랍 확률 ×1.5.",
+   "price_gold": 400,
+   "price_gem": 20,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "X012",
+   "name_ko": "재료 드랍 부적",
+   "name_en": "Material Drop Charm",
+   "category": "consumable",
+   "kind": "drop",
+   "effect": {
+    "material_drop_mult": 1.5
+   },
+   "desc": "전투 1회 승급 재료 드랍 ×1.5.",
+   "price_gold": 400,
+   "price_gem": 20,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "M001",
+   "name_ko": "영혼의 파편",
+   "name_en": "Soul Shard",
+   "category": "material",
+   "grade": "common",
+   "desc": "모든 영웅 승급의 기본 재료. 대부분의 전투에서 드랍.",
+   "price_gold": 40,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "M002",
+   "name_ko": "용의 정수",
+   "name_en": "Dragon Essence",
+   "category": "material",
+   "grade": "rare",
+   "desc": "2성·3성 승급 재료. 토벌/레이드/고난도 전투에서 드랍.",
+   "price_gold": 250,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  },
+  {
+   "id": "M003",
+   "name_ko": "별의 결정",
+   "name_en": "Star Crystal",
+   "category": "material",
+   "grade": "epic",
+   "desc": "3성 승급 재료. 악몽 난이도, 레이드, 결전에서 드랍.",
+   "price_gold": 1500,
+   "stats": {},
+   "hooks": [],
+   "recipe": null
+  }
+ ]
+}

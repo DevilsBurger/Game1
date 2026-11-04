@@ -1,0 +1,11762 @@
+{
+ "version": 1,
+ "count": 196,
+ "player_unit": {
+  "id": "P000",
+  "origin": "freelancer",
+  "class": "duelist",
+  "tier": 3,
+  "name_ko": "레온 바르크",
+  "name_en": "Leon Varke",
+  "title": "회색 늑대의 떠돌이 용병",
+  "lore": "브로멜 자유도시 출신의 떠돌이 용병. 연인 엘리아를 되찾기 위해 전 세계의 영웅을 모은다.",
+  "note": "플레이어 캐릭터. 항상 보유. 성급 승급은 스토리 막(Act) 진행으로 해금.",
+  "stats": {
+   "hp": 846,
+   "ad": 76,
+   "attack_speed": 0.8,
+   "armor": 40,
+   "mr": 35,
+   "range": 1,
+   "mana_start": 20,
+   "mana_max": 70,
+   "crit_chance": 25,
+   "crit_damage": 140,
+   "ap": 100
+  },
+  "skill": {
+   "name": "늑대의 이빨",
+   "archetype": "burst_ad",
+   "desc": "대상에게 큰 물리 피해를 준다. 스토리 진행에 따라 '용의 피' 효과가 추가된다.",
+   "params": {
+    "kind": "damage",
+    "ad_ratio": [
+     2.4,
+     2.5,
+     2.7
+    ],
+    "flat": [
+     52,
+     78,
+     117
+    ],
+    "target": "current",
+    "radius": 0,
+    "crit": true
+   }
+  },
+  "star_scaling": {
+   "hp": [
+    1.0,
+    1.8,
+    3.24
+   ],
+   "ad": [
+    1.0,
+    1.5,
+    2.25
+   ]
+  }
+ },
+ "heroes": [
+  {
+   "id": "H001",
+   "name_ko": "로이드 하트윈",
+   "name_en": "Lloyd Hartwin",
+   "title": "성기사단장",
+   "origin": "astel",
+   "class": "guardian",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1289,
+    "ad": 82,
+    "attack_speed": 0.556,
+    "armor": 62,
+    "mr": 67,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "왕국의 방벽",
+    "archetype": "shield_allies",
+    "desc": "모든 아군에게 큰 방어막을 부여하고, 방어막이 유지되는 동안 아군의 방어력을 높인다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      306,
+      459,
+      714
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "죽은 왕의 맹세를 지키는 마지막 성기사단장. 세 왕자 누구의 편도 들지 않는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H002",
+   "name_ko": "세드릭 아스텔",
+   "name_en": "Cedric Astel",
+   "title": "둘째 왕자·비룡 기수",
+   "origin": "astel",
+   "class": "dragoon",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1168,
+    "ad": 104,
+    "attack_speed": 0.714,
+    "armor": 54,
+    "mr": 52,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "왕자의 강하",
+    "archetype": "dash_aoe",
+    "desc": "적진 가장 밀집한 곳으로 강하해 광역 피해를 주고 적을 잠시 기절시킨다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      170,
+      255,
+      408
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "비룡을 길들인 둘째 왕자. 형과 동생의 내전을 끝내기 위해 외부의 힘을 찾는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H003",
+   "name_ko": "가웨인 로스",
+   "name_en": "Gawain Roth",
+   "title": "은빛 방패",
+   "origin": "astel",
+   "class": "knight",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 998,
+    "ad": 62,
+    "attack_speed": 0.6,
+    "armor": 55,
+    "mr": 50,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "불굴의 맹세",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 자신에게 큰 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      520,
+      780,
+      1235
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "왕국 동부 국경을 20년간 지킨 기사. 명예를 위해 부와 지위를 버렸다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H004",
+   "name_ko": "에드릭 몬타뉴",
+   "name_en": "Edric Montagne",
+   "title": "궁정 마도사",
+   "origin": "astel",
+   "class": "mage",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 676,
+    "ad": 50,
+    "attack_speed": 0.65,
+    "armor": 30,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성광 작열",
+    "archetype": "burst_st",
+    "desc": "현재 대상에게 강력한 마법 피해를 준다. 대상이 처치되면 마나를 일부 환급받는다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      338,
+      507,
+      780
+     ],
+     "target": "current",
+     "radius": 0
+    }
+   },
+   "lore": "왕실의 비밀을 너무 많이 아는 마도사. 암살을 피해 용병단에 몸을 숨겼다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H005",
+   "name_ko": "리젤",
+   "name_en": "Liesel",
+   "title": "왕실 그림자",
+   "origin": "astel",
+   "class": "assassin",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 854,
+    "ad": 99,
+    "attack_speed": 0.75,
+    "armor": 40,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "그림자 암습",
+    "archetype": "dash_strike",
+    "desc": "체력이 가장 낮은 적에게 도약해 치명타가 보장된 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "왕실 암살자로 길러졌으나, 죽여야 할 대상이 어린 왕자임을 알고 명령을 거부했다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H006",
+   "name_ko": "하워드 크레인",
+   "name_en": "Howard Crane",
+   "title": "노포 대장",
+   "origin": "astel",
+   "class": "artillerist",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 793,
+    "ad": 108,
+    "attack_speed": 0.533,
+    "armor": 35,
+    "mr": 35,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "노포 사격",
+    "archetype": "burst_ad_long",
+    "desc": "가장 멀리 있는 적에게 관통 노포를 쏘아 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.6,
+      2.7,
+      2.9
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "farthest",
+     "radius": 0
+    }
+   },
+   "lore": "성벽 위에서 30년을 보낸 노병. 손이 떨려도 조준은 틀리지 않는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H007",
+   "name_ko": "마리엘",
+   "name_en": "Mariel",
+   "title": "왕실 치유사",
+   "origin": "astel",
+   "class": "priest",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 743,
+    "ad": 56,
+    "attack_speed": 0.643,
+    "armor": 32,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "치유의 빛",
+    "archetype": "heal_lowest",
+    "desc": "체력이 가장 낮은 아군을 크게 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      416,
+      624,
+      988
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "엘리아와 같은 수도원에서 치유술을 배운 동문. 레온에게 엘리아의 과거를 들려준다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H008",
+   "name_ko": "길버트 홀",
+   "name_en": "Gilbert Hall",
+   "title": "왕실 수석 기술자",
+   "origin": "astel",
+   "class": "engineer",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 906,
+    "ad": 73,
+    "attack_speed": 0.657,
+    "armor": 43,
+    "mr": 43,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성문 쇠뇌",
+    "archetype": "turret",
+    "desc": "자리에 쇠뇌 포탑을 설치한다. 포탑은 가장 가까운 적을 공격한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "아스텔 성문 기계를 설계한 기술자. 전쟁으로 성이 불타자 떠돌이가 되었다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H009",
+   "name_ko": "브랜든 홀트",
+   "name_en": "Brandon Holt",
+   "title": "국경 수비대장",
+   "origin": "astel",
+   "class": "warrior",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 837,
+    "ad": 63,
+    "attack_speed": 0.67,
+    "armor": 40,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "파쇄 강타",
+    "archetype": "aoe_self",
+    "desc": "주변 적 모두에게 물리 피해를 주고 잠시 공격력을 높인다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "국경 마을 하론의 수비대장. 엘리아가 납치되던 날 레온과 함께 있었다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H010",
+   "name_ko": "엘레나 베일리",
+   "name_en": "Elena Bailey",
+   "title": "매 조련사",
+   "origin": "astel",
+   "class": "summoner",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 562,
+    "ad": 40,
+    "attack_speed": 0.612,
+    "armor": 20,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "사냥매 소환",
+    "archetype": "summon",
+    "desc": "사냥매를 소환한다. 사냥매는 빠르게 적 후열을 공격한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "왕실 사냥터지기의 딸. 매와 함께 전장을 누빈다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H011",
+   "name_ko": "올란도",
+   "name_en": "Orlando",
+   "title": "방랑 음유시인",
+   "origin": "astel",
+   "class": "bard",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 668,
+    "ad": 51,
+    "attack_speed": 0.657,
+    "armor": 30,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용기의 노래",
+    "archetype": "buff_ad_allies",
+    "desc": "아군 전체의 공격력을 일정 시간 높인다.",
+    "params": {
+     "kind": "buff",
+     "ad_pct": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "세 왕자의 내전을 노래로 풍자하다 쫓겨난 시인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H012",
+   "name_ko": "토마스 플레처",
+   "name_en": "Thomas Fletcher",
+   "title": "견습 궁수",
+   "origin": "astel",
+   "class": "ranger",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 536,
+    "ad": 60,
+    "attack_speed": 0.728,
+    "armor": 20,
+    "mr": 20,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "연속 사격",
+    "archetype": "multishot",
+    "desc": "다음 3회 공격이 강화되어 추가 물리 피해를 준다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      20,
+      30,
+      45
+     ]
+    }
+   },
+   "lore": "농부의 아들. 활 하나로 가족을 먹여 살린다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H013",
+   "name_ko": "핀",
+   "name_en": "Finn",
+   "title": "종자",
+   "origin": "astel",
+   "class": "duelist",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 735,
+    "ad": 63,
+    "attack_speed": 0.808,
+    "armor": 35,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "날렵한 검",
+    "archetype": "buff_as_self",
+    "desc": "일정 시간 공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "가웨인의 종자. 기사가 되는 날을 꿈꾼다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H014",
+   "name_ko": "아그네스",
+   "name_en": "Agnes",
+   "title": "약초 주술사",
+   "origin": "astel",
+   "class": "shaman",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 597,
+    "ad": 45,
+    "attack_speed": 0.657,
+    "armor": 25,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "쇠약의 저주",
+    "archetype": "armor_shred",
+    "desc": "대상에게 마법 피해를 주고 방어력과 마법 저항력을 깎는다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      180,
+      270,
+      420
+     ],
+     "target": "current",
+     "radius": 0,
+     "shred": [
+      30,
+      40,
+      50
+     ],
+     "shred_dur": 6
+    }
+   },
+   "lore": "국경 마을의 약초꾼 노파. 저주보다 약초를 더 잘 안다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H015",
+   "name_ko": "시그룬 아이언브로우",
+   "name_en": "Sigrun Ironbrow",
+   "title": "발하임의 여왕",
+   "origin": "valheim",
+   "class": "warrior",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1224,
+    "ad": 98,
+    "attack_speed": 0.65,
+    "armor": 57,
+    "mr": 52,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "발키리의 분노",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 큰 물리 피해를 주고, 피해량의 일부를 체력으로 회복한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      68,
+      102,
+      153
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "결투로 왕좌를 쟁취한 여왕. 재의 날개에게 북부 씨족 셋을 잃었다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H016",
+   "name_ko": "그림힐드",
+   "name_en": "Grimhild",
+   "title": "노른 할머니",
+   "origin": "valheim",
+   "class": "shaman",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 996,
+    "ad": 78,
+    "attack_speed": 0.67,
+    "armor": 47,
+    "mr": 57,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "폭풍 부름",
+    "archetype": "stun_aoe",
+    "desc": "대상 주변에 폭풍을 불러 광역 마법 피해를 주고 기절시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      255,
+      382,
+      595
+     ],
+     "target": "current",
+     "radius": 1,
+     "stun": 1.25
+    }
+   },
+   "lore": "운명을 읽는 노른. 레온의 운명에 '용의 그림자'가 드리워 있음을 본다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H017",
+   "name_ko": "비요른 프로스트",
+   "name_en": "Bjorn Frost",
+   "title": "서리 방패",
+   "origin": "valheim",
+   "class": "knight",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 958,
+    "ad": 65,
+    "attack_speed": 0.588,
+    "armor": 55,
+    "mr": 50,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "서리 방패",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 방어막을 얻는다. 방어막이 깨지면 주변 적이 둔화된다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      520,
+      780,
+      1235
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "여왕의 호위 대장. 말보다 방패가 먼저 나간다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H018",
+   "name_ko": "하랄드 울프스킨",
+   "name_en": "Harald Wolfskin",
+   "title": "서리 와이번 기수",
+   "origin": "valheim",
+   "class": "dragoon",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1027,
+    "ad": 85,
+    "attack_speed": 0.686,
+    "armor": 47,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "서리 강하",
+    "archetype": "dash_aoe",
+    "desc": "적진에 강하해 광역 피해와 둔화를 건다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      148,
+      222,
+      355
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "북부 와이번을 길들인 최초의 인간. 늑대 가죽을 벗지 않는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H019",
+   "name_ko": "에이나르",
+   "name_en": "Einar",
+   "title": "쌍도끼 광전사",
+   "origin": "valheim",
+   "class": "duelist",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 936,
+    "ad": 85,
+    "attack_speed": 0.816,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "광전사의 피",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가하고 잃은 체력에 비례해 공격력이 오른다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "고통을 느끼지 못하는 저주를 받은 전사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H020",
+   "name_ko": "아스트리드",
+   "name_en": "Astrid",
+   "title": "매눈",
+   "origin": "valheim",
+   "class": "ranger",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 754,
+    "ad": 90,
+    "attack_speed": 0.735,
+    "armor": 35,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "관통 화살",
+    "archetype": "chain_ad",
+    "desc": "화살이 적을 관통하여 뒤의 적들에게도 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.8,
+      1.9,
+      2.0
+     ],
+     "flat": [
+      44,
+      67,
+      104
+     ],
+     "target": "current",
+     "bounces": 2,
+     "falloff": 0.7
+    }
+   },
+   "lore": "눈보라 속에서도 300보 밖의 토끼를 맞힌다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H021",
+   "name_ko": "토르발드",
+   "name_en": "Thorvald",
+   "title": "방패벽",
+   "origin": "valheim",
+   "class": "guardian",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 1037,
+    "ad": 65,
+    "attack_speed": 0.533,
+    "armor": 50,
+    "mr": 55,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "방패벽",
+    "archetype": "shield_allies",
+    "desc": "인접한 아군에게 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      234,
+      351,
+      546
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "씨족의 방패벽 선두. 동생을 재의 날개에게 잃었다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H022",
+   "name_ko": "올라프",
+   "name_en": "Olaf",
+   "title": "룬 사제",
+   "origin": "valheim",
+   "class": "priest",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 750,
+    "ad": 55,
+    "attack_speed": 0.63,
+    "armor": 32,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "조상의 가호",
+    "archetype": "heal_aoe",
+    "desc": "아군 전체의 체력을 회복한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      208,
+      312,
+      494
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "조상의 영혼과 대화한다고 주장하는 룬 사제.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H023",
+   "name_ko": "스카디",
+   "name_en": "Skadi",
+   "title": "그림자발",
+   "origin": "valheim",
+   "class": "assassin",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 651,
+    "ad": 74,
+    "attack_speed": 0.735,
+    "armor": 30,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "설원 기습",
+    "archetype": "dash_strike",
+    "desc": "체력이 가장 낮은 적에게 도약해 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "눈 위에서 발자국을 남기지 않는 사냥꾼.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H024",
+   "name_ko": "우나",
+   "name_en": "Una",
+   "title": "늑대 조련사",
+   "origin": "valheim",
+   "class": "summoner",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 545,
+    "ad": 38,
+    "attack_speed": 0.618,
+    "armor": 20,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "늑대 소환",
+    "archetype": "summon",
+    "desc": "전투 늑대를 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "늑대 무리와 함께 자란 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H025",
+   "name_ko": "군나르",
+   "name_en": "Gunnar",
+   "title": "투석병",
+   "origin": "valheim",
+   "class": "artillerist",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 569,
+    "ad": 83,
+    "attack_speed": 0.539,
+    "armor": 25,
+    "mr": 25,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "바위 투척",
+    "archetype": "aoe_target_ad",
+    "desc": "대상 주변에 바위를 던져 광역 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.5,
+      1.6,
+      1.7
+     ],
+     "flat": [
+      34,
+      51,
+      80
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "성벽을 부수는 것이 취미인 거구의 투석병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H026",
+   "name_ko": "이바르",
+   "name_en": "Ivar",
+   "title": "얼음 주문사",
+   "origin": "valheim",
+   "class": "mage",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 569,
+    "ad": 46,
+    "attack_speed": 0.65,
+    "armor": 25,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "서리 화살",
+    "archetype": "burst_st",
+    "desc": "대상에게 마법 피해를 주고 둔화시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      296,
+      445,
+      684
+     ],
+     "target": "current",
+     "radius": 0
+    }
+   },
+   "lore": "얼음 마법을 독학한 어부의 아들.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H027",
+   "name_ko": "레이프",
+   "name_en": "Leif",
+   "title": "스칼드",
+   "origin": "valheim",
+   "class": "bard",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 574,
+    "ad": 45,
+    "attack_speed": 0.663,
+    "armor": 25,
+    "mr": 30,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "전투가",
+    "archetype": "buff_ad_allies",
+    "desc": "아군 전체의 공격력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ad_pct": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "전사들의 무용담을 노래하는 스칼드.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H028",
+   "name_ko": "헬가",
+   "name_en": "Helga",
+   "title": "대장장이",
+   "origin": "valheim",
+   "class": "engineer",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 576,
+    "ad": 47,
+    "attack_speed": 0.67,
+    "armor": 28,
+    "mr": 28,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "공성 쇠뇌",
+    "archetype": "turret",
+    "desc": "쇠뇌 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "씨족의 무기를 만드는 대장장이. 포탑도 만든다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H029",
+   "name_ko": "카게토라",
+   "name_en": "Kagetora",
+   "title": "검성",
+   "origin": "sairam",
+   "class": "duelist",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1033,
+    "ad": 96,
+    "attack_speed": 0.784,
+    "armor": 52,
+    "mr": 47,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "일섬",
+    "archetype": "burst_ad",
+    "desc": "단 한 번의 베기로 대상에게 막대한 물리 피해를 준다. 치명타가 보장된다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.4,
+      2.5,
+      2.7
+     ],
+     "flat": [
+      68,
+      102,
+      153
+     ],
+     "target": "current",
+     "radius": 0,
+     "crit": true
+    }
+   },
+   "lore": "황제의 검. 제국이 재의 날개와 밀약을 맺자 검을 버리고 떠났다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H030",
+   "name_ko": "호렌",
+   "name_en": "Horen",
+   "title": "대음양사",
+   "origin": "sairam",
+   "class": "mage",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 884,
+    "ad": 70,
+    "attack_speed": 0.67,
+    "armor": 42,
+    "mr": 47,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "식신 폭발",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 식신을 폭발시켜 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      306,
+      459,
+      714
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "별을 읽어 세계의 멸망 날짜를 계산한 음양사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H031",
+   "name_ko": "하야테",
+   "name_en": "Hayate",
+   "title": "질풍의 닌자",
+   "origin": "sairam",
+   "class": "assassin",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 829,
+    "ad": 95,
+    "attack_speed": 0.728,
+    "armor": 40,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "그림자 분신",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가하고 잠시 회피 상태가 된다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "쇼군의 닌자. 쇼군이 재의 날개와 손잡자 주인을 배신했다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H032",
+   "name_ko": "아카네",
+   "name_en": "Akane",
+   "title": "유미 사수",
+   "origin": "sairam",
+   "class": "ranger",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 739,
+    "ad": 90,
+    "attack_speed": 0.735,
+    "armor": 35,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "벚꽃 화살",
+    "archetype": "multishot",
+    "desc": "다음 4회 공격이 벚꽃 화살이 되어 추가 피해를 준다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      30,
+      44,
+      67
+     ]
+    }
+   },
+   "lore": "벚꽃이 질 때 가장 많은 적을 쓰러뜨렸다는 궁수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H033",
+   "name_ko": "유키노",
+   "name_en": "Yukino",
+   "title": "식신술사",
+   "origin": "sairam",
+   "class": "summoner",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 775,
+    "ad": 61,
+    "attack_speed": 0.588,
+    "armor": 35,
+    "mr": 40,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "식신 소환",
+    "archetype": "summon",
+    "desc": "종이 식신을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "종이 인형에 영혼을 불어넣는 소녀 술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H034",
+   "name_ko": "노부타다",
+   "name_en": "Nobutada",
+   "title": "중갑 사무라이",
+   "origin": "sairam",
+   "class": "knight",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 1018,
+    "ad": 64,
+    "attack_speed": 0.582,
+    "armor": 55,
+    "mr": 50,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "부동",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 큰 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      520,
+      780,
+      1235
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "한 걸음도 물러선 적 없는 중갑 무사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H035",
+   "name_ko": "사쿠야",
+   "name_en": "Sakuya",
+   "title": "신사의 어린 무녀",
+   "origin": "sairam",
+   "class": "priest",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 571,
+    "ad": 42,
+    "attack_speed": 0.67,
+    "armor": 22,
+    "mr": 30,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "정화의 춤",
+    "archetype": "heal_aoe",
+    "desc": "춤을 추어 아군 전체를 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      160,
+      240,
+      380
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "신사의 무녀. 춤으로 상처를 씻는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H036",
+   "name_ko": "겐조",
+   "name_en": "Genzo",
+   "title": "철포병",
+   "origin": "sairam",
+   "class": "artillerist",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 510,
+    "ad": 71,
+    "attack_speed": 0.544,
+    "armor": 20,
+    "mr": 20,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "조총 사격",
+    "archetype": "burst_ad_long",
+    "desc": "가장 멀리 있는 적에게 조총을 쏘아 큰 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.6,
+      2.7,
+      2.9
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "farthest",
+     "radius": 0
+    }
+   },
+   "lore": "네오스의 기술을 흉내 내 조총을 만든 장인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H037",
+   "name_ko": "류자키",
+   "name_en": "Ryuzaki",
+   "title": "낭인",
+   "origin": "sairam",
+   "class": "warrior",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 845,
+    "ad": 67,
+    "attack_speed": 0.637,
+    "armor": 40,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "거합",
+    "archetype": "aoe_self",
+    "desc": "주변 적을 한 번에 베어 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "주군을 잃고 떠도는 낭인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H038",
+   "name_ko": "쿠로",
+   "name_en": "Kuro",
+   "title": "원령술사",
+   "origin": "sairam",
+   "class": "shaman",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 635,
+    "ad": 50,
+    "attack_speed": 0.663,
+    "armor": 30,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "원령의 저주",
+    "archetype": "dot_target",
+    "desc": "대상에게 지속 마법 피해를 주는 원령을 붙인다.",
+    "params": {
+     "kind": "dot",
+     "dmg": [
+      410,
+      616,
+      969
+     ],
+     "duration": 6,
+     "target": "current"
+    }
+   },
+   "lore": "원령과 함께 사는 음울한 술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H039",
+   "name_ko": "타츠마",
+   "name_en": "Tatsuma",
+   "title": "용기병",
+   "origin": "sairam",
+   "class": "dragoon",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 775,
+    "ad": 66,
+    "attack_speed": 0.707,
+    "armor": 37,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "비룡 강습",
+    "archetype": "dash_aoe",
+    "desc": "적진으로 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      114,
+      171,
+      274
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "제국 용기병대의 젊은 기수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H040",
+   "name_ko": "고로",
+   "name_en": "Goro",
+   "title": "아시가루 대장",
+   "origin": "sairam",
+   "class": "guardian",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 758,
+    "ad": 49,
+    "attack_speed": 0.544,
+    "armor": 40,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "창벽",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      180,
+      270,
+      420
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "창 하나로 농민 병사들을 이끄는 대장.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H041",
+   "name_ko": "코하루",
+   "name_en": "Koharu",
+   "title": "샤미센 연주자",
+   "origin": "sairam",
+   "class": "bard",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 777,
+    "ad": 60,
+    "attack_speed": 0.67,
+    "armor": 35,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "벚꽃 선율",
+    "archetype": "buff_as_allies",
+    "desc": "아군 전체의 공격 속도를 높인다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      25,
+      35,
+      50
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "전장에서 샤미센을 켜는 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H042",
+   "name_ko": "히데요",
+   "name_en": "Hideyo",
+   "title": "화약 장인",
+   "origin": "sairam",
+   "class": "engineer",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 811,
+    "ad": 64,
+    "attack_speed": 0.637,
+    "armor": 38,
+    "mr": 38,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "폭죽 포탑",
+    "archetype": "turret",
+    "desc": "폭죽 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "축제 폭죽을 무기로 바꾼 장인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H043",
+   "name_ko": "자파르",
+   "name_en": "Jafar",
+   "title": "암살단주",
+   "origin": "karna",
+   "class": "assassin",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 933,
+    "ad": 108,
+    "attack_speed": 0.735,
+    "armor": 47,
+    "mr": 47,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "모래 처형",
+    "archetype": "execute",
+    "desc": "체력이 가장 낮은 적에게 도약해 일격을 가한다. 대상 체력이 낮을수록 피해가 크게 증가하며 처치 시 다시 사용된다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.8,
+      1.9,
+      2.1
+     ],
+     "flat": [
+      85,
+      128,
+      204
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "execute_scale": 1.0,
+     "reset_on_kill": true
+    }
+   },
+   "lore": "사막 암살단의 수장. 재의 날개의 의뢰로 레온을 죽이러 왔다가 계약을 깼다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H044",
+   "name_ko": "샤흐라자드",
+   "name_en": "Shahrazad",
+   "title": "마신 계약자",
+   "origin": "karna",
+   "class": "summoner",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 900,
+    "ad": 69,
+    "attack_speed": 0.6,
+    "armor": 42,
+    "mr": 47,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "마신 소환",
+    "archetype": "summon_big",
+    "desc": "거대한 마신을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      120,
+      140,
+      170
+     ],
+     "ad_pct": [
+      110,
+      125,
+      150
+     ],
+     "max_active": 1,
+     "lifetime": 15
+    }
+   },
+   "lore": "천 개의 이야기로 마신을 묶은 여인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H045",
+   "name_ko": "라시드",
+   "name_en": "Rashid",
+   "title": "사막의 사자",
+   "origin": "karna",
+   "class": "warrior",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1108,
+    "ad": 88,
+    "attack_speed": 0.643,
+    "armor": 50,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "열사의 강타",
+    "archetype": "lifesteal_strike",
+    "desc": "대상에게 큰 물리 피해를 주고 피해량의 일부를 회복한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.0,
+      2.1,
+      2.3
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "current",
+     "radius": 0,
+     "heal_pct": 50
+    }
+   },
+   "lore": "술탄의 친위대장. 술탄이 재의 날개와 거래하자 반기를 들었다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H046",
+   "name_ko": "나디아",
+   "name_en": "Nadia",
+   "title": "모래 주술사",
+   "origin": "karna",
+   "class": "shaman",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 893,
+    "ad": 69,
+    "attack_speed": 0.67,
+    "armor": 40,
+    "mr": 50,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "모래 폭풍",
+    "archetype": "stun_aoe",
+    "desc": "대상 주변에 모래 폭풍을 일으켜 광역 피해와 기절을 건다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      222,
+      333,
+      518
+     ],
+     "target": "current",
+     "radius": 1,
+     "stun": 1.25
+    }
+   },
+   "lore": "사막의 바람을 다루는 주술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H047",
+   "name_ko": "오마르",
+   "name_en": "Omar",
+   "title": "낙타 포병",
+   "origin": "karna",
+   "class": "artillerist",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 754,
+    "ad": 107,
+    "attack_speed": 0.561,
+    "armor": 35,
+    "mr": 35,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "유탄 포격",
+    "archetype": "aoe_target_ad",
+    "desc": "대상 주변에 유탄을 쏘아 광역 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.5,
+      1.6,
+      1.7
+     ],
+     "flat": [
+      44,
+      67,
+      104
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "낙타 등에 소형 포를 얹은 괴짜 포병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H048",
+   "name_ko": "타리크",
+   "name_en": "Tariq",
+   "title": "맘루크 기사",
+   "origin": "karna",
+   "class": "knight",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 892,
+    "ad": 56,
+    "attack_speed": 0.618,
+    "armor": 50,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "사막의 벽",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      456,
+      684,
+      1083
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "노예에서 기사가 된 맘루크.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H049",
+   "name_ko": "라일라",
+   "name_en": "Layla",
+   "title": "불꽃 술사",
+   "origin": "karna",
+   "class": "mage",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 669,
+    "ad": 51,
+    "attack_speed": 0.663,
+    "armor": 30,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "화염 폭발",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 화염을 폭발시켜 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      234,
+      351,
+      546
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "불꽃 정령과 계약한 술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H050",
+   "name_ko": "카림",
+   "name_en": "Karim",
+   "title": "모래 와이번 기수",
+   "origin": "karna",
+   "class": "dragoon",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 893,
+    "ad": 80,
+    "attack_speed": 0.7,
+    "armor": 42,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "모래 강하",
+    "archetype": "dash_aoe",
+    "desc": "적진으로 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      130,
+      195,
+      312
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "사막 와이번을 타는 기수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H051",
+   "name_ko": "파리드",
+   "name_en": "Farid",
+   "title": "기마 궁수",
+   "origin": "karna",
+   "class": "ranger",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 575,
+    "ad": 72,
+    "attack_speed": 0.758,
+    "armor": 25,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "질주 사격",
+    "archetype": "multishot",
+    "desc": "다음 3회 공격이 강화된다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      23,
+      34,
+      51
+     ]
+    }
+   },
+   "lore": "말 위에서 활을 쏘는 유목민 출신.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H052",
+   "name_ko": "아미라",
+   "name_en": "Amira",
+   "title": "오아시스 치유사",
+   "origin": "karna",
+   "class": "priest",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 543,
+    "ad": 42,
+    "attack_speed": 0.637,
+    "armor": 22,
+    "mr": 30,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "오아시스의 물",
+    "archetype": "heal_lowest",
+    "desc": "체력이 가장 낮은 아군을 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      320,
+      480,
+      760
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "오아시스의 물로 상처를 씻는 치유사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H053",
+   "name_ko": "야스민",
+   "name_en": "Yasmin",
+   "title": "무희 검사",
+   "origin": "karna",
+   "class": "duelist",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 632,
+    "ad": 54,
+    "attack_speed": 0.816,
+    "armor": 30,
+    "mr": 25,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "춤추는 쌍검",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "춤추듯 검을 휘두르는 무희.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H054",
+   "name_ko": "하산",
+   "name_en": "Hassan",
+   "title": "경비병",
+   "origin": "karna",
+   "class": "guardian",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 892,
+    "ad": 53,
+    "attack_speed": 0.544,
+    "armor": 45,
+    "mr": 50,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "방패 올리기",
+    "archetype": "shield_self",
+    "desc": "자신에게 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      433,
+      638,
+      1003
+     ],
+     "target": "self",
+     "duration": 5
+    }
+   },
+   "lore": "시장 경비병. 성실함이 무기다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H055",
+   "name_ko": "바바 알리",
+   "name_en": "Baba Ali",
+   "title": "이야기꾼",
+   "origin": "karna",
+   "class": "bard",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 731,
+    "ad": 56,
+    "attack_speed": 0.657,
+    "armor": 35,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "천일야화",
+    "archetype": "buff_ap_allies",
+    "desc": "아군 전체의 주문력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ap_flat": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "시장 한구석에서 이야기를 파는 노인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H056",
+   "name_ko": "이드리스",
+   "name_en": "Idris",
+   "title": "기계공",
+   "origin": "karna",
+   "class": "engineer",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 594,
+    "ad": 47,
+    "attack_speed": 0.67,
+    "armor": 28,
+    "mr": 28,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "톱니 함정",
+    "archetype": "turret",
+    "desc": "톱니 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "낡은 기계를 고치는 소년.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H057",
+   "name_ko": "카탈리나 벨",
+   "name_en": "Catalina Bell",
+   "title": "연합 제독",
+   "origin": "lies",
+   "class": "artillerist",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 849,
+    "ad": 121,
+    "attack_speed": 0.544,
+    "armor": 42,
+    "mr": 42,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "일제 포격",
+    "archetype": "aoe_line_ad",
+    "desc": "대상과 그 뒤의 적들에게 함포 일제 사격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.9,
+      2.0,
+      2.2
+     ],
+     "flat": [
+      68,
+      102,
+      153
+     ],
+     "target": "current",
+     "line": 3
+    }
+   },
+   "lore": "리에스 연합 함대의 제독. 재의 날개에게 함대 절반을 잃었다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H058",
+   "name_ko": "트리톤 바르",
+   "name_en": "Triton Var",
+   "title": "심해의 왕",
+   "origin": "lies",
+   "class": "guardian",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1303,
+    "ad": 81,
+    "attack_speed": 0.539,
+    "armor": 62,
+    "mr": 67,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "조류 방벽",
+    "archetype": "shield_allies",
+    "desc": "아군 전체에게 방어막을 부여하고 적을 밀어낸다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      306,
+      459,
+      714
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "해족(인어)의 왕. 바다 밑에서 쐐기의 진동을 느꼈다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H059",
+   "name_ko": "블랙 모건",
+   "name_en": "Black Morgan",
+   "title": "해적왕",
+   "origin": "lies",
+   "class": "duelist",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 908,
+    "ad": 83,
+    "attack_speed": 0.792,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "난도질",
+    "archetype": "burst_ad",
+    "desc": "대상에게 연속으로 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.4,
+      2.5,
+      2.7
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "current",
+     "radius": 0,
+     "crit": true
+    }
+   },
+   "lore": "바다 위의 왕. 보물보다 재미를 찾는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H060",
+   "name_ko": "멜로디아",
+   "name_en": "Melodia",
+   "title": "세이렌",
+   "origin": "lies",
+   "class": "bard",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 850,
+    "ad": 69,
+    "attack_speed": 0.657,
+    "armor": 40,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "세이렌의 노래",
+    "archetype": "buff_as_allies",
+    "desc": "아군 전체의 공격 속도를 크게 높인다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      25,
+      35,
+      50
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "노래로 배를 침몰시키던 세이렌. 지금은 아군을 위해 노래한다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H061",
+   "name_ko": "요나",
+   "name_en": "Jonah",
+   "title": "크라켄 부름꾼",
+   "origin": "lies",
+   "class": "summoner",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 695,
+    "ad": 51,
+    "attack_speed": 0.606,
+    "armor": 30,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "크라켄의 촉수",
+    "archetype": "summon",
+    "desc": "크라켄의 촉수를 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "크라켄에게 먹혔다가 돌아온 남자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H062",
+   "name_ko": "브루노",
+   "name_en": "Bruno",
+   "title": "갑판장",
+   "origin": "lies",
+   "class": "warrior",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 973,
+    "ad": 75,
+    "attack_speed": 0.663,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "닻 휘두르기",
+    "archetype": "aoe_self",
+    "desc": "닻을 휘둘러 주변 적에게 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      52,
+      78,
+      117
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "닻을 무기로 쓰는 거구의 갑판장.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H063",
+   "name_ko": "루시아",
+   "name_en": "Lucia",
+   "title": "뒷골목 소매치기",
+   "origin": "lies",
+   "class": "assassin",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 538,
+    "ad": 66,
+    "attack_speed": 0.765,
+    "armor": 25,
+    "mr": 25,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "단검 투척",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "항구 뒷골목에서 자란 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H064",
+   "name_ko": "바실",
+   "name_en": "Basil",
+   "title": "함대 군의관",
+   "origin": "lies",
+   "class": "priest",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 845,
+    "ad": 61,
+    "attack_speed": 0.65,
+    "armor": 37,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "럼주 치료",
+    "archetype": "heal_lowest",
+    "desc": "체력이 가장 낮은 아군을 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      474,
+      710,
+      1125
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "럼주로 소독하고 럼주로 마취하는 의사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H065",
+   "name_ko": "마르코",
+   "name_en": "Marco",
+   "title": "해군 중위",
+   "origin": "lies",
+   "class": "knight",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 745,
+    "ad": 49,
+    "attack_speed": 0.588,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "방패 돌격",
+    "archetype": "stun_st",
+    "desc": "대상에게 돌격해 피해를 주고 기절시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      200,
+      300,
+      470
+     ],
+     "target": "current",
+     "radius": 0,
+     "stun": 1.5
+    }
+   },
+   "lore": "연합 해군의 젊은 장교.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H066",
+   "name_ko": "엘사",
+   "name_en": "Elsa",
+   "title": "석궁수",
+   "origin": "lies",
+   "class": "ranger",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 575,
+    "ad": 74,
+    "attack_speed": 0.758,
+    "armor": 25,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "쇠뇌 연사",
+    "archetype": "multishot",
+    "desc": "다음 3회 공격이 강화된다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      23,
+      34,
+      51
+     ]
+    }
+   },
+   "lore": "석궁을 쏘는 상선 호위병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H067",
+   "name_ko": "가브리엘",
+   "name_en": "Gabriel",
+   "title": "폭풍 술사",
+   "origin": "lies",
+   "class": "mage",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 599,
+    "ad": 44,
+    "attack_speed": 0.657,
+    "armor": 25,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "연쇄 번개",
+    "archetype": "chain",
+    "desc": "번개가 적들 사이를 튀며 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      228,
+      342,
+      536
+     ],
+     "target": "current",
+     "bounces": 3,
+     "falloff": 0.75
+    }
+   },
+   "lore": "폭풍을 부르는 항해사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H068",
+   "name_ko": "마마 조",
+   "name_en": "Mama Jo",
+   "title": "부두 주술사",
+   "origin": "lies",
+   "class": "shaman",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 568,
+    "ad": 44,
+    "attack_speed": 0.643,
+    "armor": 25,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "저주 인형",
+    "archetype": "dot_target",
+    "desc": "대상에게 지속 피해를 주는 저주를 건다.",
+    "params": {
+     "kind": "dot",
+     "dmg": [
+      360,
+      540,
+      850
+     ],
+     "duration": 6,
+     "target": "current"
+    }
+   },
+   "lore": "항구의 부두 주술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H069",
+   "name_ko": "톰",
+   "name_en": "Tom",
+   "title": "바다뱀 기수",
+   "origin": "lies",
+   "class": "dragoon",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 783,
+    "ad": 70,
+    "attack_speed": 0.707,
+    "armor": 37,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "바다뱀 돌진",
+    "archetype": "dash_aoe",
+    "desc": "적진으로 돌진해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      114,
+      171,
+      274
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "바다뱀을 길들인 소년.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H070",
+   "name_ko": "올리버",
+   "name_en": "Oliver",
+   "title": "조선소 기술자",
+   "origin": "lies",
+   "class": "engineer",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 796,
+    "ad": 64,
+    "attack_speed": 0.663,
+    "armor": 38,
+    "mr": 38,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "갑판 포탑",
+    "archetype": "turret",
+    "desc": "소형 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "배를 고치는 목수. 포탑도 고친다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H071",
+   "name_ko": "실바나 아엘린",
+   "name_en": "Sylvana Aelin",
+   "title": "숲의 여왕",
+   "origin": "elowen",
+   "class": "ranger",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 919,
+    "ad": 105,
+    "attack_speed": 0.742,
+    "armor": 42,
+    "mr": 42,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "세계수의 화살",
+    "archetype": "multishot",
+    "desc": "다음 5회 공격이 세계수의 화살이 되어 큰 추가 피해를 주고 관통한다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      34,
+      51,
+      76
+     ]
+    }
+   },
+   "lore": "엘프의 여왕. 세계수가 시들어가는 이유가 쐐기임을 안다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H072",
+   "name_ko": "오리엘",
+   "name_en": "Oriel",
+   "title": "대드루이드",
+   "origin": "elowen",
+   "class": "priest",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 914,
+    "ad": 70,
+    "attack_speed": 0.657,
+    "armor": 44,
+    "mr": 52,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "생명의 숲",
+    "archetype": "heal_aoe",
+    "desc": "아군 전체를 크게 치유하고 잠시 지속 회복을 부여한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      272,
+      408,
+      646
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "천 년을 산 대드루이드. 용의 전쟁을 기억한다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H073",
+   "name_ko": "루미엘",
+   "name_en": "Lumiel",
+   "title": "별빛 마법사",
+   "origin": "elowen",
+   "class": "mage",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 747,
+    "ad": 61,
+    "attack_speed": 0.643,
+    "armor": 35,
+    "mr": 40,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "별똥별",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 별똥별을 떨어뜨려 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      266,
+      400,
+      622
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "밤하늘의 별을 끌어내리는 마법사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H074",
+   "name_ko": "니아",
+   "name_en": "Nia",
+   "title": "숲의 그림자",
+   "origin": "elowen",
+   "class": "assassin",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 713,
+    "ad": 85,
+    "attack_speed": 0.772,
+    "armor": 35,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "가시 암습",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가하고 출혈을 건다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      52,
+      78,
+      117
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "숲의 침입자를 소리 없이 처리하는 그림자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H075",
+   "name_ko": "티아라",
+   "name_en": "Tiara",
+   "title": "정령 소환사",
+   "origin": "elowen",
+   "class": "summoner",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 767,
+    "ad": 62,
+    "attack_speed": 0.6,
+    "armor": 35,
+    "mr": 40,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "정령 소환",
+    "archetype": "summon",
+    "desc": "숲의 정령을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "정령의 말을 알아듣는 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H076",
+   "name_ko": "엘라리온",
+   "name_en": "Elarion",
+   "title": "바람의 검무가",
+   "origin": "elowen",
+   "class": "duelist",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 936,
+    "ad": 85,
+    "attack_speed": 0.808,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "바람의 춤",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "바람처럼 검을 휘두르는 무용수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H077",
+   "name_ko": "브람블",
+   "name_en": "Bramble",
+   "title": "가시 드루이드",
+   "origin": "elowen",
+   "class": "shaman",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 762,
+    "ad": 57,
+    "attack_speed": 0.637,
+    "armor": 35,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "가시 덩굴",
+    "archetype": "stun_aoe",
+    "desc": "대상 주변에 가시 덩굴을 자라게 해 광역 피해와 속박을 건다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      195,
+      292,
+      455
+     ],
+     "target": "current",
+     "radius": 1,
+     "stun": 1.25
+    }
+   },
+   "lore": "가시로 뒤덮인 늙은 드루이드.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H078",
+   "name_ko": "파엘",
+   "name_en": "Fael",
+   "title": "그리폰 기수",
+   "origin": "elowen",
+   "class": "dragoon",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 884,
+    "ad": 78,
+    "attack_speed": 0.693,
+    "armor": 42,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "급강하",
+    "archetype": "dash_aoe",
+    "desc": "적진으로 급강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      130,
+      195,
+      312
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "숲의 그리폰과 함께 자란 기수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H079",
+   "name_ko": "카엘렌",
+   "name_en": "Kaelen",
+   "title": "숲 수호 기사",
+   "origin": "elowen",
+   "class": "knight",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 790,
+    "ad": 50,
+    "attack_speed": 0.588,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "나무껍질 방패",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 방어막을 얻는다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      400,
+      600,
+      950
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "세계수를 지키는 기사단의 일원.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H080",
+   "name_ko": "모스",
+   "name_en": "Moss",
+   "title": "나무지기 트렌트",
+   "origin": "elowen",
+   "class": "warrior",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 706,
+    "ad": 56,
+    "attack_speed": 0.63,
+    "armor": 35,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "뿌리 강타",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "걸어다니는 고목. 말은 느리지만 주먹은 빠르다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H081",
+   "name_ko": "아르보른",
+   "name_en": "Arborn",
+   "title": "고목 수호자",
+   "origin": "elowen",
+   "class": "guardian",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 874,
+    "ad": 54,
+    "attack_speed": 0.556,
+    "armor": 45,
+    "mr": 50,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "수호의 숲",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      205,
+      308,
+      479
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "숲의 입구를 지키는 고목.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H082",
+   "name_ko": "리안",
+   "name_en": "Rian",
+   "title": "장궁병",
+   "origin": "elowen",
+   "class": "artillerist",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 530,
+    "ad": 67,
+    "attack_speed": 0.544,
+    "armor": 20,
+    "mr": 20,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "저격",
+    "archetype": "burst_ad_long",
+    "desc": "가장 먼 적에게 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.6,
+      2.7,
+      2.9
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "farthest",
+     "radius": 0
+    }
+   },
+   "lore": "엘프 장궁병 견습생.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H083",
+   "name_ko": "피오",
+   "name_en": "Pio",
+   "title": "숲의 피리 연주자",
+   "origin": "elowen",
+   "class": "bard",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 681,
+    "ad": 53,
+    "attack_speed": 0.63,
+    "armor": 30,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "숲의 선율",
+    "archetype": "buff_ap_allies",
+    "desc": "아군 전체의 주문력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ap_flat": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "피리로 새를 부르는 소년.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H084",
+   "name_ko": "에린",
+   "name_en": "Erin",
+   "title": "나무 세공사",
+   "origin": "elowen",
+   "class": "engineer",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 691,
+    "ad": 53,
+    "attack_speed": 0.643,
+    "armor": 33,
+    "mr": 33,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "가시 함정",
+    "archetype": "turret",
+    "desc": "가시 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "나무를 깎아 무엇이든 만드는 세공사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H085",
+   "name_ko": "토르딘 아이언핸드",
+   "name_en": "Thordin Ironhand",
+   "title": "대장장이 왕",
+   "origin": "grandur",
+   "class": "engineer",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 989,
+    "ad": 81,
+    "attack_speed": 0.637,
+    "armor": 50,
+    "mr": 50,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "거대 포탑",
+    "archetype": "turret_big",
+    "desc": "거대한 증기 포탑을 설치한다. 포탑은 광역 피해를 준다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      70,
+      85,
+      110
+     ],
+     "ad_pct": [
+      110,
+      125,
+      150
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 15,
+     "radius": 1
+    }
+   },
+   "lore": "그란두르의 왕. 손 하나가 강철이다. 쐐기를 만든 고대 기술에 관심이 있다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H086",
+   "name_ko": "브롬 스톤하트",
+   "name_en": "Brom Stoneheart",
+   "title": "룬 수호 기사",
+   "origin": "grandur",
+   "class": "knight",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1292,
+    "ad": 83,
+    "attack_speed": 0.6,
+    "armor": 67,
+    "mr": 62,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "룬의 성벽",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 룬 방어막을 두른다. 방어막이 유지되는 동안 주변 아군의 받는 피해가 감소한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      680,
+      1020,
+      1615
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "룬을 새긴 갑옷을 입은 왕의 방패.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H087",
+   "name_ko": "두린",
+   "name_en": "Durin",
+   "title": "광전사",
+   "origin": "grandur",
+   "class": "warrior",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1055,
+    "ad": 86,
+    "attack_speed": 0.663,
+    "armor": 50,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "산 가르기",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "도끼로 산을 가른다는 전설의 광전사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H088",
+   "name_ko": "그림로크",
+   "name_en": "Grimlok",
+   "title": "대포 장인",
+   "origin": "grandur",
+   "class": "artillerist",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 703,
+    "ad": 90,
+    "attack_speed": 0.533,
+    "armor": 30,
+    "mr": 30,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "증기 대포",
+    "archetype": "aoe_target_ad",
+    "desc": "대상 주변에 포탄을 쏘아 광역 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.5,
+      1.6,
+      1.7
+     ],
+     "flat": [
+      39,
+      58,
+      91
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "증기 대포를 발명한 괴짜.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H089",
+   "name_ko": "발더",
+   "name_en": "Balder",
+   "title": "산맥의 방패",
+   "origin": "grandur",
+   "class": "guardian",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1216,
+    "ad": 73,
+    "attack_speed": 0.567,
+    "armor": 55,
+    "mr": 60,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "산맥의 벽",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 큰 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      266,
+      400,
+      622
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "산맥처럼 움직이지 않는 방패병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H090",
+   "name_ko": "헬라",
+   "name_en": "Hella",
+   "title": "석궁 명사수",
+   "origin": "grandur",
+   "class": "ranger",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 575,
+    "ad": 73,
+    "attack_speed": 0.765,
+    "armor": 25,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "관통 볼트",
+    "archetype": "chain_ad",
+    "desc": "석궁 볼트가 적을 관통한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.8,
+      1.9,
+      2.0
+     ],
+     "flat": [
+      34,
+      51,
+      80
+     ],
+     "target": "current",
+     "bounces": 2,
+     "falloff": 0.7
+    }
+   },
+   "lore": "터널에서 석궁으로 괴물을 사냥하던 명사수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H091",
+   "name_ko": "모르딘",
+   "name_en": "Mordin",
+   "title": "룬 각인사",
+   "origin": "grandur",
+   "class": "shaman",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 867,
+    "ad": 65,
+    "attack_speed": 0.637,
+    "armor": 40,
+    "mr": 50,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "룬 폭발",
+    "archetype": "armor_shred",
+    "desc": "대상에게 피해를 주고 방어력·마법 저항력을 깎는다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      266,
+      400,
+      622
+     ],
+     "target": "current",
+     "radius": 0,
+     "shred": [
+      30,
+      40,
+      50
+     ],
+     "shred_dur": 6
+    }
+   },
+   "lore": "룬으로 적의 갑옷을 녹이는 각인사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H092",
+   "name_ko": "피를리",
+   "name_en": "Pirli",
+   "title": "골렘 제작자",
+   "origin": "grandur",
+   "class": "summoner",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 709,
+    "ad": 50,
+    "attack_speed": 0.6,
+    "armor": 30,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "돌 골렘",
+    "archetype": "summon",
+    "desc": "돌 골렘을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "골렘을 친구로 여기는 제작자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H093",
+   "name_ko": "노리",
+   "name_en": "Nori",
+   "title": "터널 침투병",
+   "origin": "grandur",
+   "class": "assassin",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 645,
+    "ad": 74,
+    "attack_speed": 0.765,
+    "armor": 30,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "지하 기습",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "땅속으로 적진에 침투하는 병사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H094",
+   "name_ko": "베르나",
+   "name_en": "Berna",
+   "title": "룬 사제",
+   "origin": "grandur",
+   "class": "priest",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 543,
+    "ad": 41,
+    "attack_speed": 0.663,
+    "armor": 22,
+    "mr": 30,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "룬 치유",
+    "archetype": "heal_lowest",
+    "desc": "체력이 가장 낮은 아군을 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      320,
+      480,
+      760
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "룬으로 상처를 봉합하는 사제.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H095",
+   "name_ko": "코린",
+   "name_en": "Korin",
+   "title": "망치 결투가",
+   "origin": "grandur",
+   "class": "duelist",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 798,
+    "ad": 74,
+    "attack_speed": 0.816,
+    "armor": 40,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "망치 연타",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "망치 두 개로 싸우는 결투가.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H096",
+   "name_ko": "핌",
+   "name_en": "Pim",
+   "title": "용광로 술사",
+   "origin": "grandur",
+   "class": "mage",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 510,
+    "ad": 38,
+    "attack_speed": 0.657,
+    "armor": 20,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용암 구체",
+    "archetype": "burst_st",
+    "desc": "대상에게 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      260,
+      390,
+      600
+     ],
+     "target": "current",
+     "radius": 0
+    }
+   },
+   "lore": "용광로의 불로 마법을 배운 술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H097",
+   "name_ko": "보핀",
+   "name_en": "Bofin",
+   "title": "맥주 가수",
+   "origin": "grandur",
+   "class": "bard",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 635,
+    "ad": 50,
+    "attack_speed": 0.663,
+    "armor": 30,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "맥주의 노래",
+    "archetype": "buff_ad_allies",
+    "desc": "아군 전체의 공격력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ad_pct": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "맥주를 마시면 노래가 나오는 드워프.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H098",
+   "name_ko": "달라",
+   "name_en": "Dalla",
+   "title": "증기 비행사",
+   "origin": "grandur",
+   "class": "dragoon",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 694,
+    "ad": 60,
+    "attack_speed": 0.679,
+    "armor": 32,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "증기 강하",
+    "archetype": "dash_aoe",
+    "desc": "증기 날개로 적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      100,
+      150,
+      240
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "증기 날개를 단 드워프 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H099",
+   "name_ko": "ORB-9",
+   "name_en": "ORB-9",
+   "title": "궤도 포격 유닛",
+   "origin": "neos",
+   "class": "artillerist",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 849,
+    "ad": 120,
+    "attack_speed": 0.561,
+    "armor": 42,
+    "mr": 42,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "궤도 레이저",
+    "archetype": "aoe_line_ad",
+    "desc": "대상과 그 뒤의 적들을 관통하는 궤도 레이저를 발사한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.9,
+      2.0,
+      2.2
+     ],
+     "flat": [
+      68,
+      102,
+      153
+     ],
+     "target": "current",
+     "line": 3
+    }
+   },
+   "lore": "돔 상공의 위성과 연결된 포격 유닛. 돔 밖으로 나온 것은 처음이다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H100",
+   "name_ko": "윌로우 하인즈",
+   "name_en": "Willow Heinz",
+   "title": "수석 과학자",
+   "origin": "neos",
+   "class": "engineer",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1010,
+    "ad": 78,
+    "attack_speed": 0.65,
+    "armor": 50,
+    "mr": 50,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "드론 포탑",
+    "archetype": "turret_big",
+    "desc": "강력한 드론 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      70,
+      85,
+      110
+     ],
+     "ad_pct": [
+      110,
+      125,
+      150
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 15,
+     "radius": 1
+    }
+   },
+   "lore": "네오스 평의회의 수석 과학자. 쐐기가 고대 문명의 '제어 장치'임을 밝혔다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H101",
+   "name_ko": "AEGIS-1",
+   "name_en": "AEGIS-1",
+   "title": "방어 자동인형",
+   "origin": "neos",
+   "class": "knight",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1159,
+    "ad": 73,
+    "attack_speed": 0.612,
+    "armor": 60,
+    "mr": 55,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "역장 전개",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 역장 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      592,
+      888,
+      1406
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "돔의 문을 지키던 자동인형.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H102",
+   "name_ko": "이오",
+   "name_en": "Io",
+   "title": "플라즈마 술사",
+   "origin": "neos",
+   "class": "mage",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 676,
+    "ad": 50,
+    "attack_speed": 0.643,
+    "armor": 30,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "플라즈마 폭발",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 플라즈마를 폭발시켜 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      234,
+      351,
+      546
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "뇌에 연산기를 이식한 사이보그 과학자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H103",
+   "name_ko": "GHOST-3",
+   "name_en": "GHOST-3",
+   "title": "은신 유닛",
+   "origin": "neos",
+   "class": "assassin",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 619,
+    "ad": 72,
+    "attack_speed": 0.75,
+    "armor": 30,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "광학 위장 기습",
+    "archetype": "dash_strike",
+    "desc": "투명화 후 적 후열에 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "광학 위장 장치를 단 침투 유닛.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H104",
+   "name_ko": "노바",
+   "name_en": "Nova",
+   "title": "저격 드론 사수",
+   "origin": "neos",
+   "class": "ranger",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 800,
+    "ad": 91,
+    "attack_speed": 0.758,
+    "armor": 35,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "레일건",
+    "archetype": "burst_ad",
+    "desc": "대상에게 레일건을 쏘아 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.4,
+      2.5,
+      2.7
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "current",
+     "radius": 0,
+     "crit": true
+    }
+   },
+   "lore": "드론으로 조준하고 레일건으로 쏜다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H105",
+   "name_ko": "MEDIC-7",
+   "name_en": "MEDIC-7",
+   "title": "나노 의무병",
+   "origin": "neos",
+   "class": "priest",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 699,
+    "ad": 56,
+    "attack_speed": 0.637,
+    "armor": 32,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "나노 수복",
+    "archetype": "heal_aoe",
+    "desc": "아군 전체에 나노 머신을 뿌려 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      208,
+      312,
+      494
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "전장 의료 유닛.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H106",
+   "name_ko": "카이",
+   "name_en": "Kai",
+   "title": "드론 관제사",
+   "origin": "neos",
+   "class": "summoner",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 616,
+    "ad": 47,
+    "attack_speed": 0.582,
+    "armor": 25,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "전투 드론",
+    "archetype": "summon",
+    "desc": "전투 드론을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "드론 열 대를 동시에 조종하는 관제사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H107",
+   "name_ko": "크루거",
+   "name_en": "Kruger",
+   "title": "강화 보병",
+   "origin": "neos",
+   "class": "warrior",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 917,
+    "ad": 75,
+    "attack_speed": 0.65,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "파워 피스트",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      52,
+      78,
+      117
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "외골격 강화복을 입은 보병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H108",
+   "name_ko": "BLADE-2",
+   "name_en": "BLADE-2",
+   "title": "검식 전투체",
+   "origin": "neos",
+   "class": "duelist",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 632,
+    "ad": 57,
+    "attack_speed": 0.824,
+    "armor": 30,
+    "mr": 25,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "과부하",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "검을 든 전투 자동인형.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H109",
+   "name_ko": "젠",
+   "name_en": "Zen",
+   "title": "EMP 교란병",
+   "origin": "neos",
+   "class": "shaman",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 557,
+    "ad": 44,
+    "attack_speed": 0.65,
+    "armor": 25,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "EMP 폭발",
+    "archetype": "stun_aoe",
+    "desc": "대상 주변에 EMP를 터뜨려 광역 피해와 기절을 건다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      150,
+      225,
+      350
+     ],
+     "target": "current",
+     "radius": 1,
+     "stun": 1.25
+    }
+   },
+   "lore": "전자 장비를 무력화하는 교란병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H110",
+   "name_ko": "BULWARK",
+   "name_en": "BULWARK",
+   "title": "방패 유닛",
+   "origin": "neos",
+   "class": "guardian",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 758,
+    "ad": 48,
+    "attack_speed": 0.55,
+    "armor": 40,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "보호막 전개",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      180,
+      270,
+      420
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "방패를 든 보급형 로봇.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H111",
+   "name_ko": "리듬",
+   "name_en": "Rhythm",
+   "title": "홀로그램 디바",
+   "origin": "neos",
+   "class": "bard",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 893,
+    "ad": 66,
+    "attack_speed": 0.643,
+    "armor": 40,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "전투 BGM",
+    "archetype": "buff_as_allies",
+    "desc": "아군 전체의 공격 속도를 높인다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      25,
+      35,
+      50
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "홀로그램 아이돌. 전장에서도 공연한다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H112",
+   "name_ko": "렉스",
+   "name_en": "Rex",
+   "title": "제트팩 병사",
+   "origin": "neos",
+   "class": "dragoon",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 791,
+    "ad": 66,
+    "attack_speed": 0.686,
+    "armor": 37,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "제트 강하",
+    "archetype": "dash_aoe",
+    "desc": "제트팩으로 적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      114,
+      171,
+      274
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "제트팩을 메고 날아다니는 병사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H113",
+   "name_ko": "말라키",
+   "name_en": "Malachi",
+   "title": "대리치",
+   "origin": "nox",
+   "class": "mage",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 902,
+    "ad": 65,
+    "attack_speed": 0.657,
+    "armor": 42,
+    "mr": 47,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "영혼 폭발",
+    "archetype": "aoe_target",
+    "desc": "대상 주변의 영혼을 폭발시켜 광역 마법 피해를 준다. 처치한 적마다 주문력이 영구 증가한다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      306,
+      459,
+      714
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "죽음을 초월한 리치. 쐐기의 피 봉인 의식을 직접 목격했다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H114",
+   "name_ko": "모르가나 녹스",
+   "name_en": "Morgana Nox",
+   "title": "사령술사 여왕",
+   "origin": "nox",
+   "class": "summoner",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 900,
+    "ad": 69,
+    "attack_speed": 0.606,
+    "armor": 42,
+    "mr": 47,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "망자 군단",
+    "archetype": "summon_multi",
+    "desc": "망자 셋을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 3,
+     "hp_pct": [
+      40,
+      48,
+      60
+     ],
+     "ad_pct": [
+      40,
+      48,
+      60
+     ],
+     "max_active": 3,
+     "lifetime": 12
+    }
+   },
+   "lore": "녹스의 여왕. 세계가 멸망하면 다스릴 백성이 없다는 이유로 레온을 돕는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H115",
+   "name_ko": "세르반",
+   "name_en": "Servan",
+   "title": "뱀파이어 공작",
+   "origin": "nox",
+   "class": "assassin",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 750,
+    "ad": 88,
+    "attack_speed": 0.765,
+    "armor": 35,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "흡혈",
+    "archetype": "lifesteal_strike",
+    "desc": "대상에게 큰 피해를 주고 피해량의 대부분을 회복한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.0,
+      2.1,
+      2.3
+     ],
+     "flat": [
+      52,
+      78,
+      117
+     ],
+     "target": "current",
+     "radius": 0,
+     "heal_pct": 50
+    }
+   },
+   "lore": "밤의 공작. 낮에는 관 속에서 잔다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H116",
+   "name_ko": "헥사",
+   "name_en": "Hexa",
+   "title": "저주술사",
+   "origin": "nox",
+   "class": "shaman",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 824,
+    "ad": 69,
+    "attack_speed": 0.637,
+    "armor": 40,
+    "mr": 50,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "역병",
+    "archetype": "dot_target",
+    "desc": "대상에게 전염되는 지속 피해 저주를 건다.",
+    "params": {
+     "kind": "dot",
+     "dmg": [
+      533,
+      799,
+      1258
+     ],
+     "duration": 6,
+     "target": "current"
+    }
+   },
+   "lore": "역병을 퍼뜨리는 저주술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H117",
+   "name_ko": "모르드",
+   "name_en": "Mord",
+   "title": "죽음의 기사",
+   "origin": "nox",
+   "class": "knight",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1159,
+    "ad": 77,
+    "attack_speed": 0.6,
+    "armor": 60,
+    "mr": 55,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "죽음의 손아귀",
+    "archetype": "stun_st",
+    "desc": "대상에게 피해를 주고 기절시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      296,
+      444,
+      696
+     ],
+     "target": "current",
+     "radius": 0,
+     "stun": 1.5
+    }
+   },
+   "lore": "죽어서도 갑옷을 벗지 않는 기사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H118",
+   "name_ko": "그롤",
+   "name_en": "Grol",
+   "title": "어린 식인귀",
+   "origin": "nox",
+   "class": "warrior",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 691,
+    "ad": 60,
+    "attack_speed": 0.663,
+    "armor": 35,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "포식",
+    "archetype": "lifesteal_strike",
+    "desc": "대상에게 피해를 주고 체력을 회복한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.0,
+      2.1,
+      2.3
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "current",
+     "radius": 0,
+     "heal_pct": 50
+    }
+   },
+   "lore": "전장의 시체를 먹고 자라는 식인귀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H119",
+   "name_ko": "네리사",
+   "name_en": "Nerissa",
+   "title": "어둠 사제",
+   "origin": "nox",
+   "class": "priest",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 619,
+    "ad": 47,
+    "attack_speed": 0.663,
+    "armor": 27,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "흡수 치유",
+    "archetype": "heal_lowest",
+    "desc": "적의 생명력을 빼앗아 체력이 가장 낮은 아군을 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      365,
+      547,
+      866
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "어둠으로 상처를 메우는 사제.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H120",
+   "name_ko": "카라즈",
+   "name_en": "Karaz",
+   "title": "본 드래곤 기수",
+   "origin": "nox",
+   "class": "dragoon",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 902,
+    "ad": 79,
+    "attack_speed": 0.7,
+    "armor": 42,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "뼈 강하",
+    "archetype": "dash_aoe",
+    "desc": "본 드래곤을 타고 적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      130,
+      195,
+      312
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "죽은 용의 뼈를 타는 기수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H121",
+   "name_ko": "라트",
+   "name_en": "Rat",
+   "title": "해골 궁수",
+   "origin": "nox",
+   "class": "ranger",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 504,
+    "ad": 61,
+    "attack_speed": 0.75,
+    "armor": 20,
+    "mr": 20,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "독 화살",
+    "archetype": "multishot",
+    "desc": "다음 3회 공격이 독 화살이 된다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      20,
+      30,
+      45
+     ]
+    }
+   },
+   "lore": "해골이 된 뒤에도 활을 놓지 않은 궁수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H122",
+   "name_ko": "오사",
+   "name_en": "Osa",
+   "title": "뼈 골렘",
+   "origin": "nox",
+   "class": "guardian",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 1006,
+    "ad": 64,
+    "attack_speed": 0.556,
+    "armor": 50,
+    "mr": 55,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "뼈 갑옷",
+    "archetype": "shield_self",
+    "desc": "자신에게 큰 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      494,
+      728,
+      1144
+     ],
+     "target": "self",
+     "duration": 5
+    }
+   },
+   "lore": "뼈를 쌓아 만든 골렘.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H123",
+   "name_ko": "라바인",
+   "name_en": "Ravine",
+   "title": "검귀",
+   "origin": "nox",
+   "class": "duelist",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 707,
+    "ad": 61,
+    "attack_speed": 0.784,
+    "armor": 35,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "광기",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "검에 씐 귀신.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H124",
+   "name_ko": "피트",
+   "name_en": "Pit",
+   "title": "역병 투척 구울",
+   "origin": "nox",
+   "class": "artillerist",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 525,
+    "ad": 69,
+    "attack_speed": 0.55,
+    "armor": 20,
+    "mr": 20,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "역병 단지",
+    "archetype": "aoe_target_ad",
+    "desc": "대상 주변에 역병 단지를 던져 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.5,
+      1.6,
+      1.7
+     ],
+     "flat": [
+      30,
+      45,
+      70
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "역병 단지를 던지는 구울.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H125",
+   "name_ko": "울라",
+   "name_en": "Ulla",
+   "title": "밴시 여왕",
+   "origin": "nox",
+   "class": "bard",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 893,
+    "ad": 65,
+    "attack_speed": 0.637,
+    "armor": 40,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "죽음의 비명",
+    "archetype": "buff_ap_allies",
+    "desc": "아군 전체의 주문력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ap_flat": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "비명으로 아군의 마력을 깨우는 밴시.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H126",
+   "name_ko": "이고르",
+   "name_en": "Igor",
+   "title": "시체 조립사",
+   "origin": "nox",
+   "class": "engineer",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 677,
+    "ad": 55,
+    "attack_speed": 0.65,
+    "armor": 33,
+    "mr": 33,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "시체 포탑",
+    "archetype": "turret",
+    "desc": "시체로 만든 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "시체로 무엇이든 만드는 조립사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H127",
+   "name_ko": "오리온 셀레스티아",
+   "name_en": "Orion Celestia",
+   "title": "대마법사",
+   "origin": "celestia",
+   "class": "mage",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 902,
+    "ad": 66,
+    "attack_speed": 0.663,
+    "armor": 42,
+    "mr": 47,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "초신성",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 초신성을 일으켜 막대한 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      306,
+      459,
+      714
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "셀레스티아의 수장이자 쐐기의 수호자. 쐐기를 지키는 것이 용족의 멸종을 뜻함을 안다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H128",
+   "name_ko": "리라",
+   "name_en": "Lyra",
+   "title": "시간의 성가수",
+   "origin": "celestia",
+   "class": "bard",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 947,
+    "ad": 74,
+    "attack_speed": 0.637,
+    "armor": 47,
+    "mr": 52,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "시간 가속",
+    "archetype": "buff_as_allies",
+    "desc": "아군 전체의 공격 속도를 크게 높이고 마나를 채운다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      25,
+      35,
+      50
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "시간을 노래하는 성가수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H129",
+   "name_ko": "엘라라",
+   "name_en": "Elara",
+   "title": "별빛 사제",
+   "origin": "celestia",
+   "class": "priest",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 845,
+    "ad": 61,
+    "attack_speed": 0.637,
+    "armor": 37,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "별의 축복",
+    "archetype": "heal_aoe",
+    "desc": "아군 전체를 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      237,
+      355,
+      562
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "별빛으로 상처를 씻는 사제.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H130",
+   "name_ko": "아틀라스",
+   "name_en": "Atlas",
+   "title": "별 수호자",
+   "origin": "celestia",
+   "class": "guardian",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1204,
+    "ad": 69,
+    "attack_speed": 0.544,
+    "armor": 55,
+    "mr": 60,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "별의 장벽",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 큰 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      266,
+      400,
+      622
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "하늘을 떠받치는 수호자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H131",
+   "name_ko": "아스트라",
+   "name_en": "Astra",
+   "title": "별자리 소환사",
+   "origin": "celestia",
+   "class": "summoner",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 815,
+    "ad": 57,
+    "attack_speed": 0.612,
+    "armor": 35,
+    "mr": 40,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "별자리 소환",
+    "archetype": "summon",
+    "desc": "별자리의 짐승을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "별자리를 불러내는 소환사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H132",
+   "name_ko": "세레노",
+   "name_en": "Sereno",
+   "title": "천공 기사",
+   "origin": "celestia",
+   "class": "knight",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 901,
+    "ad": 55,
+    "attack_speed": 0.6,
+    "armor": 50,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "중력 격추",
+    "archetype": "stun_st",
+    "desc": "대상에게 피해를 주고 기절시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      228,
+      342,
+      536
+     ],
+     "target": "current",
+     "radius": 0,
+     "stun": 1.5
+    }
+   },
+   "lore": "중력을 다루는 기사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H133",
+   "name_ko": "베가",
+   "name_en": "Vega",
+   "title": "별빛 사수",
+   "origin": "celestia",
+   "class": "ranger",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 656,
+    "ad": 81,
+    "attack_speed": 0.765,
+    "armor": 30,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "유성 화살",
+    "archetype": "chain_ad",
+    "desc": "유성 화살이 적을 관통한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.8,
+      1.9,
+      2.0
+     ],
+     "flat": [
+      39,
+      58,
+      91
+     ],
+     "target": "current",
+     "bounces": 2,
+     "falloff": 0.7
+    }
+   },
+   "lore": "유성을 활에 걸어 쏘는 사수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H134",
+   "name_ko": "칼리스토",
+   "name_en": "Callisto",
+   "title": "점성술사",
+   "origin": "celestia",
+   "class": "shaman",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 648,
+    "ad": 53,
+    "attack_speed": 0.637,
+    "armor": 30,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "별의 저주",
+    "archetype": "armor_shred",
+    "desc": "대상에게 피해를 주고 방어력·마법 저항력을 깎는다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      205,
+      308,
+      479
+     ],
+     "target": "current",
+     "radius": 0,
+     "shred": [
+      30,
+      40,
+      50
+     ],
+     "shred_dur": 6
+    }
+   },
+   "lore": "별로 운명을 저주하는 점성술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H135",
+   "name_ko": "리스",
+   "name_en": "Lith",
+   "title": "공허 암살자",
+   "origin": "celestia",
+   "class": "assassin",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 549,
+    "ad": 67,
+    "attack_speed": 0.742,
+    "armor": 25,
+    "mr": 25,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "공간 도약",
+    "archetype": "dash_strike",
+    "desc": "공간을 접어 적 후열에 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "공간을 접는 암살자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H136",
+   "name_ko": "아리아",
+   "name_en": "Aria",
+   "title": "마법검사",
+   "origin": "celestia",
+   "class": "duelist",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 679,
+    "ad": 66,
+    "attack_speed": 0.824,
+    "armor": 35,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "마검무",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "마력을 검에 싣는 검사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H137",
+   "name_ko": "테오",
+   "name_en": "Theo",
+   "title": "마법 포병",
+   "origin": "celestia",
+   "class": "artillerist",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 656,
+    "ad": 89,
+    "attack_speed": 0.55,
+    "armor": 30,
+    "mr": 30,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "마력탄",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 마력탄을 떨어뜨려 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      234,
+      351,
+      546
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "마력으로 포탄을 쏘는 포병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H138",
+   "name_ko": "피오나",
+   "name_en": "Fiona",
+   "title": "수습 마법전사",
+   "origin": "celestia",
+   "class": "warrior",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 706,
+    "ad": 57,
+    "attack_speed": 0.67,
+    "armor": 35,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "마력 강타",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "검과 마법을 함께 배우는 수습생.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H139",
+   "name_ko": "밀로",
+   "name_en": "Milo",
+   "title": "구름 비룡 견습 기수",
+   "origin": "celestia",
+   "class": "dragoon",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 694,
+    "ad": 61,
+    "attack_speed": 0.686,
+    "armor": 32,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "구름 강하",
+    "archetype": "dash_aoe",
+    "desc": "적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      100,
+      150,
+      240
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "구름 비룡을 타는 견습생.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H140",
+   "name_ko": "엘리엇",
+   "name_en": "Elliot",
+   "title": "마도공학자",
+   "origin": "celestia",
+   "class": "engineer",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 788,
+    "ad": 60,
+    "attack_speed": 0.663,
+    "armor": 38,
+    "mr": 38,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "마력 포탑",
+    "archetype": "turret",
+    "desc": "마력 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "마법과 기계를 함께 배우는 학생.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H141",
+   "name_ko": "아젤리아",
+   "name_en": "Azelia",
+   "title": "청룡·푸른 비늘의 여왕",
+   "origin": "dragonkin",
+   "class": "mage",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 919,
+    "ad": 71,
+    "attack_speed": 0.657,
+    "armor": 42,
+    "mr": 47,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "서리 숨결",
+    "archetype": "aoe_line",
+    "desc": "대상과 그 뒤의 적들에게 서리 숨결을 내뿜어 큰 마법 피해를 주고 둔화시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      374,
+      561,
+      884
+     ],
+     "target": "current",
+     "line": 3,
+     "slow": 30,
+     "slow_dur": 3
+    }
+   },
+   "lore": "공존파 용족의 지도자. 바르그라드의 여동생. 오빠를 막기 위해 인간과 손잡는다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H142",
+   "name_ko": "이그니스",
+   "name_en": "Ignis",
+   "title": "적룡·전향한 재의 장군",
+   "origin": "dragonkin",
+   "class": "dragoon",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1110,
+    "ad": 102,
+    "attack_speed": 0.693,
+    "armor": 54,
+    "mr": 52,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "화염 강하",
+    "archetype": "dash_aoe",
+    "desc": "적진에 강하해 막대한 광역 피해를 주고 화상을 입힌다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      170,
+      255,
+      408
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "재의 날개의 장군이었으나, 바르그라드의 진짜 목적이 '재생'이 아님을 알고 등을 돌렸다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H143",
+   "name_ko": "갈란드",
+   "name_en": "Galand",
+   "title": "황룡",
+   "origin": "dragonkin",
+   "class": "warrior",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1098,
+    "ad": 88,
+    "attack_speed": 0.637,
+    "armor": 50,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용의 포효",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 큰 피해를 주고 잠시 공격력을 높인다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      59,
+      89,
+      133
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "황금 비늘의 전사. 말보다 주먹이 빠르다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H144",
+   "name_ko": "세리스",
+   "name_en": "Seris",
+   "title": "백룡",
+   "origin": "dragonkin",
+   "class": "knight",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 1147,
+    "ad": 75,
+    "attack_speed": 0.618,
+    "armor": 60,
+    "mr": 55,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "비늘 방벽",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 큰 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      592,
+      888,
+      1406
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "흰 비늘의 수호자. 알을 지키다 수백 년을 보냈다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H145",
+   "name_ko": "베릴",
+   "name_en": "Beryl",
+   "title": "녹룡",
+   "origin": "dragonkin",
+   "class": "priest",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 837,
+    "ad": 64,
+    "attack_speed": 0.657,
+    "armor": 37,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "생명의 숨결",
+    "archetype": "heal_aoe",
+    "desc": "아군 전체를 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      237,
+      355,
+      562
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "녹색 비늘의 치유사. 더 이상 부화하지 않는 알들을 돌본다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H146",
+   "name_ko": "카시안",
+   "name_en": "Kasian",
+   "title": "흑룡 혼혈 용병",
+   "origin": "dragonkin",
+   "class": "duelist",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 830,
+    "ad": 71,
+    "attack_speed": 0.784,
+    "armor": 40,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용의 발톱",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가하고 공격마다 추가 마법 피해를 준다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "인간과 용 사이에서 태어난 떠돌이. 레온의 첫 번째 동료이자 바르그라드의 아들.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H147",
+   "name_ko": "니르",
+   "name_en": "Nir",
+   "title": "그림자 용",
+   "origin": "dragonkin",
+   "class": "assassin",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 658,
+    "ad": 74,
+    "attack_speed": 0.75,
+    "armor": 30,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "그림자 기습",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "그림자 속에서 자란 용족.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H148",
+   "name_ko": "라케아",
+   "name_en": "Rakea",
+   "title": "용린 사수",
+   "origin": "dragonkin",
+   "class": "ranger",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 669,
+    "ad": 78,
+    "attack_speed": 0.742,
+    "armor": 30,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용린 화살",
+    "archetype": "multishot",
+    "desc": "다음 3회 공격이 용의 비늘 화살이 된다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      26,
+      39,
+      58
+     ]
+    }
+   },
+   "lore": "자신의 비늘을 화살촉으로 쓰는 사수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H149",
+   "name_ko": "세레나",
+   "name_en": "Serena",
+   "title": "용의 무녀",
+   "origin": "dragonkin",
+   "class": "shaman",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 784,
+    "ad": 57,
+    "attack_speed": 0.65,
+    "armor": 35,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용의 저주",
+    "archetype": "dot_target",
+    "desc": "대상에게 지속 마법 피해를 준다.",
+    "params": {
+     "kind": "dot",
+     "dmg": [
+      468,
+      702,
+      1105
+     ],
+     "duration": 6,
+     "target": "current"
+    }
+   },
+   "lore": "용의 말을 전하는 무녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H150",
+   "name_ko": "피피",
+   "name_en": "Pipi",
+   "title": "새끼용 돌보미",
+   "origin": "dragonkin",
+   "class": "summoner",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 545,
+    "ad": 41,
+    "attack_speed": 0.612,
+    "armor": 20,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "새끼용 소환",
+    "archetype": "summon",
+    "desc": "새끼용을 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "마지막으로 부화한 새끼용을 돌보는 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H151",
+   "name_ko": "드라코",
+   "name_en": "Draco",
+   "title": "용화포 사수",
+   "origin": "dragonkin",
+   "class": "artillerist",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 599,
+    "ad": 80,
+    "attack_speed": 0.561,
+    "armor": 25,
+    "mr": 25,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용화포",
+    "archetype": "aoe_target_ad",
+    "desc": "대상 주변에 용화포를 쏘아 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.5,
+      1.6,
+      1.7
+     ],
+     "flat": [
+      34,
+      51,
+      80
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "용의 불을 포탄으로 쓰는 사수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H152",
+   "name_ko": "타르",
+   "name_en": "Tar",
+   "title": "용족 경비",
+   "origin": "dragonkin",
+   "class": "guardian",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 774,
+    "ad": 50,
+    "attack_speed": 0.544,
+    "armor": 40,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "비늘 방패",
+    "archetype": "shield_self",
+    "desc": "자신에게 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      380,
+      560,
+      880
+     ],
+     "target": "self",
+     "duration": 5
+    }
+   },
+   "lore": "둥지 입구를 지키는 젊은 경비.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H153",
+   "name_ko": "리리카",
+   "name_en": "Lirika",
+   "title": "용족 가수",
+   "origin": "dragonkin",
+   "class": "bard",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 603,
+    "ad": 45,
+    "attack_speed": 0.657,
+    "armor": 25,
+    "mr": 30,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용의 노래",
+    "archetype": "buff_ad_allies",
+    "desc": "아군 전체의 공격력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ad_pct": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "용의 언어로 노래하는 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H154",
+   "name_ko": "보르",
+   "name_en": "Bor",
+   "title": "용강 세공사",
+   "origin": "dragonkin",
+   "class": "engineer",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 711,
+    "ad": 56,
+    "attack_speed": 0.65,
+    "armor": 33,
+    "mr": 33,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "용강 포탑",
+    "archetype": "turret",
+    "desc": "용강 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "용의 비늘로 강철을 만드는 세공사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H155",
+   "name_ko": "그룸 블러드액스",
+   "name_en": "Grum Bloodaxe",
+   "title": "대족장",
+   "origin": "torga",
+   "class": "warrior",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1248,
+    "ad": 98,
+    "attack_speed": 0.63,
+    "armor": 57,
+    "mr": 52,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "피의 분노",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 막대한 피해를 주고 피해량의 일부를 회복한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      68,
+      102,
+      153
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "부족 연맹의 대족장. 힘으로 모든 것을 결정한다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H156",
+   "name_ko": "카쉬",
+   "name_en": "Kash",
+   "title": "대주술사",
+   "origin": "torga",
+   "class": "shaman",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1025,
+    "ad": 76,
+    "attack_speed": 0.65,
+    "armor": 47,
+    "mr": 57,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "조상의 분노",
+    "archetype": "stun_aoe",
+    "desc": "대상 주변에 조상의 영혼을 불러 광역 피해와 기절을 건다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      255,
+      382,
+      595
+     ],
+     "target": "current",
+     "radius": 1,
+     "stun": 1.25
+    }
+   },
+   "lore": "조상 영혼을 부리는 대주술사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H157",
+   "name_ko": "라가르",
+   "name_en": "Ragar",
+   "title": "쌍도끼 검투사",
+   "origin": "torga",
+   "class": "duelist",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 822,
+    "ad": 71,
+    "attack_speed": 0.784,
+    "armor": 40,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "광란",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "투기장에서 100승을 거둔 검투사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H158",
+   "name_ko": "타이라",
+   "name_en": "Taira",
+   "title": "호랑이 수인 사수",
+   "origin": "torga",
+   "class": "ranger",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 747,
+    "ad": 89,
+    "attack_speed": 0.758,
+    "armor": 35,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "야수의 화살",
+    "archetype": "multishot",
+    "desc": "다음 4회 공격이 강화된다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      30,
+      44,
+      67
+     ]
+    }
+   },
+   "lore": "호랑이의 눈으로 활을 쏜다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H159",
+   "name_ko": "볼그",
+   "name_en": "Volg",
+   "title": "와이번 기수",
+   "origin": "torga",
+   "class": "dragoon",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 986,
+    "ad": 87,
+    "attack_speed": 0.679,
+    "armor": 47,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "짓밟기",
+    "archetype": "dash_aoe",
+    "desc": "적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      148,
+      222,
+      355
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "와이번을 맨손으로 길들였다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H160",
+   "name_ko": "토르토",
+   "name_en": "Torto",
+   "title": "거북 수인 방패전사",
+   "origin": "torga",
+   "class": "knight",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 849,
+    "ad": 58,
+    "attack_speed": 0.612,
+    "armor": 50,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "등껍질",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      456,
+      684,
+      1083
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "등껍질이 방패인 거북 수인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H161",
+   "name_ko": "미르카",
+   "name_en": "Mirka",
+   "title": "야수 조련사",
+   "origin": "torga",
+   "class": "summoner",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 591,
+    "ad": 44,
+    "attack_speed": 0.618,
+    "armor": 25,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "야수 소환",
+    "archetype": "summon",
+    "desc": "야수를 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "야수와 대화하는 조련사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H162",
+   "name_ko": "보르그",
+   "name_en": "Borg",
+   "title": "거인 투석병",
+   "origin": "torga",
+   "class": "artillerist",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 649,
+    "ad": 88,
+    "attack_speed": 0.556,
+    "armor": 30,
+    "mr": 30,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "바위 투척",
+    "archetype": "aoe_target_ad",
+    "desc": "대상 주변에 거대한 바위를 던진다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.5,
+      1.6,
+      1.7
+     ],
+     "flat": [
+      39,
+      58,
+      91
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "키 4미터의 거인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H163",
+   "name_ko": "샤",
+   "name_en": "Sha",
+   "title": "표범 수인",
+   "origin": "torga",
+   "class": "assassin",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 554,
+    "ad": 64,
+    "attack_speed": 0.735,
+    "armor": 25,
+    "mr": 25,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "야수 기습",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      40,
+      60,
+      90
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "표범처럼 빠른 수인.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H164",
+   "name_ko": "우르사",
+   "name_en": "Ursa",
+   "title": "곰 수인 치유사",
+   "origin": "torga",
+   "class": "priest",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 664,
+    "ad": 46,
+    "attack_speed": 0.657,
+    "armor": 27,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "자연 치유",
+    "archetype": "heal_lowest",
+    "desc": "체력이 가장 낮은 아군을 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      365,
+      547,
+      866
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "곰처럼 크고 따뜻한 치유사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H165",
+   "name_ko": "람",
+   "name_en": "Ram",
+   "title": "코뿔소 수인",
+   "origin": "torga",
+   "class": "guardian",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 1058,
+    "ad": 64,
+    "attack_speed": 0.567,
+    "armor": 50,
+    "mr": 55,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "돌진 방패",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      234,
+      351,
+      546
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "코뿔소 수인 방패병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H166",
+   "name_ko": "지크",
+   "name_en": "Zik",
+   "title": "고블린 화염술사",
+   "origin": "torga",
+   "class": "mage",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 510,
+    "ad": 39,
+    "attack_speed": 0.643,
+    "armor": 20,
+    "mr": 25,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "화염 구체",
+    "archetype": "burst_st",
+    "desc": "대상에게 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      260,
+      390,
+      600
+     ],
+     "target": "current",
+     "radius": 0
+    }
+   },
+   "lore": "불장난을 좋아하는 고블린.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H167",
+   "name_ko": "두둠",
+   "name_en": "Dudum",
+   "title": "북 치는 고블린",
+   "origin": "torga",
+   "class": "bard",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 603,
+    "ad": 45,
+    "attack_speed": 0.637,
+    "armor": 25,
+    "mr": 30,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "전쟁 북",
+    "archetype": "buff_as_allies",
+    "desc": "아군 전체의 공격 속도를 높인다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      25,
+      35,
+      50
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "북을 치면 모두가 빨라진다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H168",
+   "name_ko": "스니크",
+   "name_en": "Snik",
+   "title": "고블린 수석 기술자",
+   "origin": "torga",
+   "class": "engineer",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 879,
+    "ad": 72,
+    "attack_speed": 0.663,
+    "armor": 43,
+    "mr": 43,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "고철 거대 포탑",
+    "archetype": "turret",
+    "desc": "고철 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "고철로 포탑을 만드는 고블린.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H169",
+   "name_ko": "요한나 루멘",
+   "name_en": "Johanna Lumen",
+   "title": "성녀",
+   "origin": "lumen",
+   "class": "priest",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 990,
+    "ad": 71,
+    "attack_speed": 0.637,
+    "armor": 44,
+    "mr": 52,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "부활의 기도",
+    "archetype": "heal_aoe",
+    "desc": "아군 전체를 크게 치유한다. 전투 중 최초 1회, 사망한 아군 하나를 부활시킨다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      272,
+      408,
+      646
+     ],
+     "target": "all_allies"
+    }
+   },
+   "lore": "성교국의 성녀. 교황이 재의 날개를 '신의 심판'이라 부르자 교단을 떠났다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H170",
+   "name_ko": "가브리엘 아르망",
+   "name_en": "Gabriel Armand",
+   "title": "대성기사",
+   "origin": "lumen",
+   "class": "knight",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1318,
+    "ad": 88,
+    "attack_speed": 0.618,
+    "armor": 67,
+    "mr": 62,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성스러운 방벽",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 성스러운 방어막을 두른다. 방어막이 유지되는 동안 받는 피해가 감소한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      680,
+      1020,
+      1615
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "성기사단의 수장. 성녀를 따라 교단을 떠났다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H171",
+   "name_ko": "레이븐",
+   "name_en": "Raven",
+   "title": "이단 심문관",
+   "origin": "lumen",
+   "class": "assassin",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 845,
+    "ad": 95,
+    "attack_speed": 0.728,
+    "armor": 40,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "심판",
+    "archetype": "execute",
+    "desc": "체력이 낮은 적에게 도약해 처형한다. 대상 체력이 낮을수록 피해가 증가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.8,
+      1.9,
+      2.1
+     ],
+     "flat": [
+      74,
+      111,
+      178
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "execute_scale": 1.0,
+     "reset_on_kill": true
+    }
+   },
+   "lore": "이단을 심문하던 자. 지금은 교단을 심문한다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H172",
+   "name_ko": "세라피나",
+   "name_en": "Seraphina",
+   "title": "천사 소환사",
+   "origin": "lumen",
+   "class": "summoner",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 695,
+    "ad": 50,
+    "attack_speed": 0.582,
+    "armor": 30,
+    "mr": 35,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "천사 소환",
+    "archetype": "summon",
+    "desc": "천사를 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "천사를 부르는 수녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H173",
+   "name_ko": "바르톨로",
+   "name_en": "Bartolo",
+   "title": "성문 수호병",
+   "origin": "lumen",
+   "class": "guardian",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 806,
+    "ad": 49,
+    "attack_speed": 0.544,
+    "armor": 40,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성역",
+    "archetype": "shield_allies",
+    "desc": "인접 아군에게 큰 방어막을 부여한다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      180,
+      270,
+      420
+     ],
+     "target": "adjacent_allies",
+     "duration": 5
+    }
+   },
+   "lore": "대성당의 문을 지키던 수호자.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H174",
+   "name_ko": "루시우스",
+   "name_en": "Lucius",
+   "title": "성광 마법사",
+   "origin": "lumen",
+   "class": "mage",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 739,
+    "ad": 59,
+    "attack_speed": 0.65,
+    "armor": 35,
+    "mr": 40,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "빛의 심판",
+    "archetype": "burst_st",
+    "desc": "대상에게 큰 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      385,
+      577,
+      888
+     ],
+     "target": "current",
+     "radius": 0
+    }
+   },
+   "lore": "빛으로 적을 태우는 마법사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H175",
+   "name_ko": "클레어",
+   "name_en": "Claire",
+   "title": "성궁 수녀",
+   "origin": "lumen",
+   "class": "ranger",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 669,
+    "ad": 79,
+    "attack_speed": 0.758,
+    "armor": 30,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성스러운 화살",
+    "archetype": "chain_ad",
+    "desc": "성스러운 화살이 적을 관통한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.8,
+      1.9,
+      2.0
+     ],
+     "flat": [
+      39,
+      58,
+      91
+     ],
+     "target": "current",
+     "bounces": 2,
+     "falloff": 0.7
+    }
+   },
+   "lore": "활을 쏘는 수녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H176",
+   "name_ko": "안젤로",
+   "name_en": "Angelo",
+   "title": "성가대장",
+   "origin": "lumen",
+   "class": "bard",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 731,
+    "ad": 56,
+    "attack_speed": 0.63,
+    "armor": 35,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "찬송가",
+    "archetype": "buff_ap_allies",
+    "desc": "아군 전체의 주문력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ap_flat": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "찬송가로 마력을 북돋는 성가대장.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H177",
+   "name_ko": "마르틴",
+   "name_en": "Martin",
+   "title": "순례 전사",
+   "origin": "lumen",
+   "class": "warrior",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 837,
+    "ad": 68,
+    "attack_speed": 0.65,
+    "armor": 40,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성스러운 일격",
+    "archetype": "lifesteal_strike",
+    "desc": "대상에게 피해를 주고 체력을 회복한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.0,
+      2.1,
+      2.3
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "current",
+     "radius": 0,
+     "heal_pct": 50
+    }
+   },
+   "lore": "순례길에서 괴물과 싸우는 전사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H178",
+   "name_ko": "노엘",
+   "name_en": "Noel",
+   "title": "성검 수련사",
+   "origin": "lumen",
+   "class": "duelist",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 645,
+    "ad": 58,
+    "attack_speed": 0.816,
+    "armor": 30,
+    "mr": 25,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "빛의 검무",
+    "archetype": "buff_as_self",
+    "desc": "공격 속도가 크게 증가한다.",
+    "params": {
+     "kind": "buff",
+     "as_pct": [
+      60,
+      80,
+      110
+     ],
+     "duration": 5,
+     "target": "self"
+    }
+   },
+   "lore": "성검을 수련하는 젊은이.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H179",
+   "name_ko": "이사도라",
+   "name_en": "Isadora",
+   "title": "퇴마사",
+   "origin": "lumen",
+   "class": "shaman",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 635,
+    "ad": 51,
+    "attack_speed": 0.643,
+    "armor": 30,
+    "mr": 40,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "퇴마",
+    "archetype": "stun_st",
+    "desc": "대상에게 피해를 주고 기절시킨다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      228,
+      342,
+      536
+     ],
+     "target": "current",
+     "radius": 0,
+     "stun": 1.5
+    }
+   },
+   "lore": "악령을 쫓는 퇴마사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H180",
+   "name_ko": "피터",
+   "name_en": "Peter",
+   "title": "교단 화승총병",
+   "origin": "lumen",
+   "class": "artillerist",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 569,
+    "ad": 80,
+    "attack_speed": 0.533,
+    "armor": 25,
+    "mr": 25,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성총 사격",
+    "archetype": "burst_ad",
+    "desc": "대상에게 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.4,
+      2.5,
+      2.7
+     ],
+     "flat": [
+      46,
+      68,
+      103
+     ],
+     "target": "current",
+     "radius": 0,
+     "crit": true
+    }
+   },
+   "lore": "화승총을 든 교단 병사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H181",
+   "name_ko": "로렌",
+   "name_en": "Loren",
+   "title": "그리폰 견습 기수",
+   "origin": "lumen",
+   "class": "dragoon",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 680,
+    "ad": 58,
+    "attack_speed": 0.7,
+    "armor": 32,
+    "mr": 30,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "천공 강하",
+    "archetype": "dash_aoe",
+    "desc": "적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      100,
+      150,
+      240
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "그리폰을 타는 견습 기수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H182",
+   "name_ko": "도미닉",
+   "name_en": "Dominic",
+   "title": "대성당 건축 장인",
+   "origin": "lumen",
+   "class": "engineer",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 915,
+    "ad": 70,
+    "attack_speed": 0.65,
+    "armor": 43,
+    "mr": 43,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "성물 포탑",
+    "archetype": "turret",
+    "desc": "성물 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "성당을 짓는 건축가.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H183",
+   "name_ko": "바르토스",
+   "name_en": "Bartos",
+   "title": "회색 늑대 단장",
+   "origin": "freelancer",
+   "class": "duelist",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 1043,
+    "ad": 91,
+    "attack_speed": 0.808,
+    "armor": 52,
+    "mr": 47,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "늑대의 검",
+    "archetype": "burst_ad",
+    "desc": "대상에게 막대한 물리 피해를 준다. 처치 시 공격 속도가 증가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.4,
+      2.5,
+      2.7
+     ],
+     "flat": [
+      68,
+      102,
+      153
+     ],
+     "target": "current",
+     "radius": 0,
+     "crit": true
+    }
+   },
+   "lore": "레온이 속한 용병단 '회색 늑대'의 단장. 레온에게 검을 가르쳤다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H184",
+   "name_ko": "레드 하울",
+   "name_en": "Red Howl",
+   "title": "현상금 사냥꾼",
+   "origin": "freelancer",
+   "class": "artillerist",
+   "tier": 5,
+   "rarity": "전설",
+   "stats": {
+    "hp": 919,
+    "ad": 124,
+    "attack_speed": 0.544,
+    "armor": 42,
+    "mr": 42,
+    "range": 5,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "사격 처형",
+    "archetype": "execute_long",
+    "desc": "체력이 가장 낮은 적을 저격한다. 대상 체력이 낮을수록 피해가 증가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.0,
+      2.1,
+      2.3
+     ],
+     "flat": [
+      85,
+      128,
+      204
+     ],
+     "target": "lowest_enemy",
+     "execute_scale": 1.0
+    }
+   },
+   "lore": "대륙 최고의 현상금 사냥꾼. 레온의 목에 걸린 현상금을 보고 찾아왔다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H185",
+   "name_ko": "브루트",
+   "name_en": "Brute",
+   "title": "용병 거한",
+   "origin": "freelancer",
+   "class": "warrior",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 955,
+    "ad": 75,
+    "attack_speed": 0.637,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "거대 도끼",
+    "archetype": "aoe_self",
+    "desc": "주변 적에게 큰 물리 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.6,
+      1.7,
+      1.8
+     ],
+     "flat": [
+      52,
+      78,
+      117
+     ],
+     "target": "self",
+     "radius": 1,
+     "self_ad_pct": [
+      10,
+      15,
+      20
+     ],
+     "buff_dur": 4
+    }
+   },
+   "lore": "말수가 적고 도끼가 큰 용병.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H186",
+   "name_ko": "윌라",
+   "name_en": "Willa",
+   "title": "탈주 마법사",
+   "origin": "freelancer",
+   "class": "mage",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 754,
+    "ad": 57,
+    "attack_speed": 0.663,
+    "armor": 35,
+    "mr": 40,
+    "range": 4,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "마력 폭발",
+    "archetype": "aoe_target",
+    "desc": "대상 주변에 광역 마법 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      266,
+      400,
+      622
+     ],
+     "target": "current",
+     "radius": 1
+    }
+   },
+   "lore": "셀레스티아에서 도망친 마법사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H187",
+   "name_ko": "다리우스",
+   "name_en": "Darius",
+   "title": "용병 비룡 기수",
+   "origin": "freelancer",
+   "class": "dragoon",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 976,
+    "ad": 87,
+    "attack_speed": 0.686,
+    "armor": 47,
+    "mr": 45,
+    "range": 1,
+    "mana_start": 30,
+    "mana_max": 90,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "급습",
+    "archetype": "dash_aoe",
+    "desc": "적진에 강하해 광역 피해를 준다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      1.3,
+      1.4,
+      1.5
+     ],
+     "dmg": [
+      148,
+      222,
+      355
+     ],
+     "target": "cluster",
+     "dash": true,
+     "radius": 1,
+     "stun": 0.75
+    }
+   },
+   "lore": "돈을 받으면 어디든 강하한다.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H188",
+   "name_ko": "오스왈드",
+   "name_en": "Oswald",
+   "title": "낡은 갑옷의 노기사",
+   "origin": "freelancer",
+   "class": "knight",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 768,
+    "ad": 49,
+    "attack_speed": 0.582,
+    "armor": 45,
+    "mr": 40,
+    "range": 1,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "노병의 방패",
+    "archetype": "taunt_shield",
+    "desc": "주변 적을 도발하고 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      400,
+      600,
+      950
+     ],
+     "target": "self",
+     "duration": 5,
+     "taunt_radius": 2,
+     "taunt_dur": 2.5
+    }
+   },
+   "lore": "주군을 잃고 용병이 된 늙은 기사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H189",
+   "name_ko": "잭 스캐빈",
+   "name_en": "Jack Scavin",
+   "title": "도적",
+   "origin": "freelancer",
+   "class": "assassin",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 713,
+    "ad": 88,
+    "attack_speed": 0.772,
+    "armor": 35,
+    "mr": 35,
+    "range": 1,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "뒤치기",
+    "archetype": "dash_strike",
+    "desc": "적 후열로 도약해 일격을 가한다.",
+    "params": {
+     "kind": "damage",
+     "ad_ratio": [
+      2.2,
+      2.3,
+      2.5
+     ],
+     "flat": [
+      52,
+      78,
+      117
+     ],
+     "target": "lowest_enemy",
+     "dash": true,
+     "crit": true
+    }
+   },
+   "lore": "지갑과 목숨을 동시에 노리는 도적.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H190",
+   "name_ko": "헬레나",
+   "name_en": "Helena",
+   "title": "종군 의사",
+   "origin": "freelancer",
+   "class": "priest",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 664,
+    "ad": 47,
+    "attack_speed": 0.637,
+    "armor": 27,
+    "mr": 35,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "응급 처치",
+    "archetype": "heal_lowest",
+    "desc": "체력이 가장 낮은 아군을 치유한다.",
+    "params": {
+     "kind": "heal",
+     "heal": [
+      365,
+      547,
+      866
+     ],
+     "target": "lowest_ally"
+    }
+   },
+   "lore": "전장을 따라다니는 의사.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H191",
+   "name_ko": "로완",
+   "name_en": "Rowan",
+   "title": "사냥꾼",
+   "origin": "freelancer",
+   "class": "ranger",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 536,
+    "ad": 64,
+    "attack_speed": 0.742,
+    "armor": 20,
+    "mr": 20,
+    "range": 4,
+    "mana_start": 20,
+    "mana_max": 70,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "맹독 화살",
+    "archetype": "multishot",
+    "desc": "다음 3회 공격이 독 화살이 된다.",
+    "params": {
+     "kind": "empower",
+     "shots": [
+      3,
+      3,
+      4
+     ],
+     "bonus_ad_ratio": [
+      0.6,
+      0.7,
+      0.8
+     ],
+     "bonus_flat": [
+      20,
+      30,
+      45
+     ]
+    }
+   },
+   "lore": "숲에서 사냥하던 사냥꾼.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H192",
+   "name_ko": "에스메",
+   "name_en": "Esme",
+   "title": "방랑 점술사",
+   "origin": "freelancer",
+   "class": "shaman",
+   "tier": 3,
+   "rarity": "희귀",
+   "stats": {
+    "hp": 731,
+    "ad": 57,
+    "attack_speed": 0.65,
+    "armor": 35,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 30,
+    "mana_max": 80,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "불운의 저주",
+    "archetype": "armor_shred",
+    "desc": "대상에게 피해를 주고 방어력·마법 저항력을 깎는다.",
+    "params": {
+     "kind": "damage",
+     "dmg": [
+      234,
+      351,
+      546
+     ],
+     "target": "current",
+     "radius": 0,
+     "shred": [
+      30,
+      40,
+      50
+     ],
+     "shred_dur": 6
+    }
+   },
+   "lore": "카드로 불운을 점치는 집시.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H193",
+   "name_ko": "티모",
+   "name_en": "Timo",
+   "title": "떠돌이 발명가",
+   "origin": "freelancer",
+   "class": "engineer",
+   "tier": 1,
+   "rarity": "일반",
+   "stats": {
+    "hp": 588,
+    "ad": 49,
+    "attack_speed": 0.67,
+    "armor": 28,
+    "mr": 28,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "조립식 포탑",
+    "archetype": "turret",
+    "desc": "조립식 포탑을 설치한다.",
+    "params": {
+     "kind": "turret",
+     "hp_pct": [
+      45,
+      55,
+      70
+     ],
+     "ad_pct": [
+      70,
+      80,
+      95
+     ],
+     "range": 4,
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "마차에 발명품을 싣고 다니는 발명가.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H194",
+   "name_ko": "벤",
+   "name_en": "Ben",
+   "title": "신참 방패병",
+   "origin": "freelancer",
+   "class": "guardian",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 919,
+    "ad": 53,
+    "attack_speed": 0.533,
+    "armor": 45,
+    "mr": 50,
+    "range": 1,
+    "mana_start": 50,
+    "mana_max": 110,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "방패 들기",
+    "archetype": "shield_self",
+    "desc": "자신에게 방어막을 두른다.",
+    "params": {
+     "kind": "shield",
+     "shield": [
+      433,
+      638,
+      1003
+     ],
+     "target": "self",
+     "duration": 5
+    }
+   },
+   "lore": "용병단에 막 들어온 신참.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H195",
+   "name_ko": "포피",
+   "name_en": "Poppy",
+   "title": "동물 친구",
+   "origin": "freelancer",
+   "class": "summoner",
+   "tier": 2,
+   "rarity": "고급",
+   "stats": {
+    "hp": 634,
+    "ad": 47,
+    "attack_speed": 0.618,
+    "armor": 25,
+    "mr": 30,
+    "range": 4,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "들개 소환",
+    "archetype": "summon",
+    "desc": "들개를 소환한다.",
+    "params": {
+     "kind": "summon",
+     "count": 1,
+     "hp_pct": [
+      60,
+      70,
+      85
+     ],
+     "ad_pct": [
+      60,
+      70,
+      85
+     ],
+     "max_active": 1,
+     "lifetime": 12
+    }
+   },
+   "lore": "들개들과 함께 다니는 소녀.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  },
+  {
+   "id": "H196",
+   "name_ko": "로지",
+   "name_en": "Rosie",
+   "title": "브로멜 극장의 디바",
+   "origin": "freelancer",
+   "class": "bard",
+   "tier": 4,
+   "rarity": "영웅",
+   "stats": {
+    "hp": 850,
+    "ad": 69,
+    "attack_speed": 0.67,
+    "armor": 40,
+    "mr": 45,
+    "range": 3,
+    "mana_start": 40,
+    "mana_max": 100,
+    "crit_chance": 25,
+    "crit_damage": 140,
+    "ap": 100
+   },
+   "star_scaling": {
+    "hp": [
+     1.0,
+     1.8,
+     3.24
+    ],
+    "ad": [
+     1.0,
+     1.5,
+     2.25
+    ]
+   },
+   "skill": {
+    "name": "승리의 노래",
+    "archetype": "buff_ad_allies",
+    "desc": "아군 전체의 공격력을 높인다.",
+    "params": {
+     "kind": "buff",
+     "ad_pct": [
+      20,
+      30,
+      45
+     ],
+     "duration": 5,
+     "target": "all_allies"
+    }
+   },
+   "lore": "선술집에서 노래하는 가수.",
+   "balance": {
+    "hp_mult": 1.0,
+    "ad_mult": 1.0,
+    "skill_mult": 1.0
+   }
+  }
+ ]
+}

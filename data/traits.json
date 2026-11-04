@@ -1,0 +1,1332 @@
+{
+ "origins": [
+  {
+   "key": "astel",
+   "name_ko": "아스텔",
+   "name_en": "Astel",
+   "desc": "대륙 중앙의 기사 왕국. 왕의 급사 후 세 왕자가 왕위를 두고 내전 중.",
+   "synergy_desc": "아군 전체 방어력 증가. 아스텔 영웅은 전투 시작 시 추가 방어막을 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "astel",
+    "allies_armor": [
+     10,
+     20,
+     35,
+     50
+    ],
+    "start_shield_pct": [
+     10,
+     15,
+     20,
+     25
+    ]
+   }
+  },
+  {
+   "key": "valheim",
+   "name_ko": "발하임",
+   "name_en": "Valheim",
+   "desc": "북방의 얼음 왕국. 씨족 연맹이며 왕은 결투로 뽑힌다.",
+   "synergy_desc": "아스텔 영웅이 체력 50% 이하가 되면 공격 속도와 피해 흡혈이 증가한다(광전사화).",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "valheim",
+    "low_hp_as": [
+     25,
+     40,
+     60,
+     80
+    ],
+    "low_hp_omnivamp": [
+     10,
+     15,
+     20,
+     25
+    ]
+   }
+  },
+  {
+   "key": "sairam",
+   "name_ko": "사이람",
+   "name_en": "Sairam",
+   "desc": "동방의 제국. 황제와 쇼군이 권력을 나누며 사무라이·닌자·음양사가 섬긴다.",
+   "synergy_desc": "사이람 영웅의 공격이 일정 확률로 치명타가 되고, 치명타 피해가 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "sairam",
+    "crit": [
+     15,
+     25,
+     35,
+     50
+    ],
+    "crit_dmg": [
+     10,
+     20,
+     30,
+     45
+    ]
+   }
+  },
+  {
+   "key": "karna",
+   "name_ko": "카르나",
+   "name_en": "Karna",
+   "desc": "남방 사막의 술탄국. 상인 길드와 암살단, 마신(지니) 계약자의 땅.",
+   "synergy_desc": "전투 시작 시 7초간 카르나 영웅이 모래 장막에 숨어 받는 피해가 감소하고, 첫 스킬 마나가 충전된다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "karna",
+    "dr": [
+     30,
+     40,
+     50,
+     60
+    ],
+    "dr_dur": 7,
+    "start_mana": [
+     20,
+     35,
+     50,
+     70
+    ]
+   }
+  },
+  {
+   "key": "lies",
+   "name_ko": "리에스",
+   "name_en": "Lies",
+   "desc": "서해의 도시국가 연합. 해적과 상인, 해족(인어)이 공존한다.",
+   "synergy_desc": "전투 승리 시 추가 골드를 획득하고, 리에스 영웅은 공격 시 마나를 추가로 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "lies",
+    "mana_on_attack": [
+     3,
+     5,
+     7,
+     10
+    ],
+    "gold_bonus_pct": [
+     10,
+     20,
+     35,
+     50
+    ]
+   }
+  },
+  {
+   "key": "elowen",
+   "name_ko": "엘로웬",
+   "name_en": "Elowen",
+   "desc": "고대의 숲에 자리한 엘프 왕국. 세계수와 정령을 섬긴다.",
+   "synergy_desc": "엘로웬 영웅은 매초 최대 체력의 일정 비율을 회복하고, 사거리가 1 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "elowen",
+    "regen_pct": [
+     1.0,
+     1.5,
+     2.2,
+     3.0
+    ],
+    "range_bonus": [
+     0,
+     1,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "key": "grandur",
+   "name_ko": "그란두르",
+   "name_en": "Grandur",
+   "desc": "산맥 아래 드워프 왕국. 대장간과 룬, 초기 증기 기계의 본산.",
+   "synergy_desc": "그란두르 영웅이 착용한 아이템의 효과가 증폭되고, 아군 전체가 방어력·마법 저항력을 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "grandur",
+    "allies_armor": [
+     10,
+     20,
+     30,
+     45
+    ],
+    "allies_mr": [
+     10,
+     20,
+     30,
+     45
+    ],
+    "item_mult": [
+     1.15,
+     1.3,
+     1.5,
+     1.8
+    ]
+   }
+  },
+  {
+   "key": "neos",
+   "name_ko": "네오스",
+   "name_en": "Neos",
+   "desc": "잿빛 황무지의 돔 아래 숨겨진 고도 과학 문명. 고대 문명의 생존자들.",
+   "synergy_desc": "네오스 영웅은 전투 시작 시 과충전 상태가 되어 공격 속도가 증가하고, 처치 시 에너지 폭발을 일으킨다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "neos",
+    "start_as": [
+     15,
+     25,
+     40,
+     60
+    ],
+    "start_as_dur": 8,
+    "kill_explode": [
+     100,
+     150,
+     250,
+     400
+    ]
+   }
+  },
+  {
+   "key": "nox",
+   "name_ko": "녹스",
+   "name_en": "Nox",
+   "desc": "안개에 갇힌 반도의 흑마법 국가. 사령술사와 뱀파이어가 다스린다.",
+   "synergy_desc": "녹스 영웅이 사망하면 그 자리에 망령이 소환된다. 녹스 영웅의 피해 흡혈이 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "nox",
+    "omnivamp": [
+     8,
+     12,
+     18,
+     25
+    ],
+    "wraith_from": 4
+   }
+  },
+  {
+   "key": "celestia",
+   "name_ko": "셀레스티아",
+   "name_en": "Celestia",
+   "desc": "하늘에 떠 있는 부유섬의 고마법 학술국. '세계의 쐐기'의 수호자.",
+   "synergy_desc": "셀레스티아 영웅의 주문력이 증가하고, 스킬 사용 시 아군 전체가 마나를 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "celestia",
+    "ap": [
+     20,
+     35,
+     55,
+     80
+    ],
+    "cast_mana_allies": [
+     5,
+     8,
+     12,
+     20
+    ]
+   }
+  },
+  {
+   "key": "dragonkin",
+   "name_ko": "용족",
+   "name_en": "Dragonkin",
+   "desc": "인간의 형상을 한 용의 후예. 푸른 비늘(공존파)과 재의 날개(파괴파)로 갈라졌다.",
+   "synergy_desc": "용족 영웅의 최대 체력과 스킬 피해가 크게 증가한다. 용족은 자리를 2개 차지하지 않으며 모든 용족이 숨결을 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "dragonkin",
+    "hp_pct": [
+     15,
+     25,
+     40,
+     60
+    ],
+    "skill_dmg_pct": [
+     10,
+     20,
+     30,
+     45
+    ]
+   }
+  },
+  {
+   "key": "torga",
+   "name_ko": "토르가",
+   "name_en": "Torga",
+   "desc": "초원과 산악의 부족 연맹. 오크·수인·거인·고블린이 함께 산다.",
+   "synergy_desc": "토르가 영웅은 적을 처치하거나 피해를 받을 때마다 공격력이 누적 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "torga",
+    "ad_pct_per_stack": [
+     2,
+     3,
+     4,
+     6
+    ],
+    "max_stacks": 10
+   }
+  },
+  {
+   "key": "lumen",
+   "name_ko": "루멘",
+   "name_en": "Lumen",
+   "desc": "성교국. 성기사단과 이단 심문소, 천사 소환술을 보유한다.",
+   "synergy_desc": "루멘 영웅은 전투 중 최초 1회 치명적 피해를 받으면 잠시 무적이 되며 체력을 회복한다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "lumen",
+    "cheat_death_heal": [
+     20,
+     30,
+     40,
+     60
+    ],
+    "invuln": 2.0
+   }
+  },
+  {
+   "key": "freelancer",
+   "name_ko": "자유용병",
+   "name_en": "Freelancer",
+   "desc": "브로멜 자유도시의 용병 길드 소속. 국적 없는 떠돌이들.",
+   "synergy_desc": "자유용병 영웅은 다른 출신의 영웅 수에 비례하여 공격력과 주문력이 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "effects": {
+    "hook": "freelancer",
+    "pct_per_origin": [
+     3,
+     5,
+     7,
+     10
+    ]
+   }
+  }
+ ],
+ "classes": [
+  {
+   "key": "knight",
+   "name_ko": "기사",
+   "name_en": "Knight",
+   "desc": "전열 탱커. 높은 방어력과 도발·방어막.",
+   "synergy_desc": "아군 전열(앞 2열)의 받는 피해가 감소한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "knight",
+    "front_dr": [
+     10,
+     20,
+     30
+    ]
+   }
+  },
+  {
+   "key": "warrior",
+   "name_ko": "전사",
+   "name_en": "Warrior",
+   "desc": "근접 브루저. 높은 체력과 광역 근접 피해.",
+   "synergy_desc": "전사의 최대 체력이 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "warrior",
+    "hp_pct": [
+     20,
+     40,
+     70
+    ]
+   }
+  },
+  {
+   "key": "assassin",
+   "name_ko": "암살자",
+   "name_en": "Assassin",
+   "desc": "전투 시작 시 적 후열로 도약. 높은 치명타.",
+   "synergy_desc": "암살자의 치명타 확률과 치명타 피해가 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "assassin",
+    "crit": [
+     20,
+     40,
+     60
+    ],
+    "crit_dmg": [
+     15,
+     30,
+     50
+    ]
+   }
+  },
+  {
+   "key": "ranger",
+   "name_ko": "궁수",
+   "name_en": "Ranger",
+   "desc": "원거리 물리 딜러. 높은 공격 속도.",
+   "synergy_desc": "궁수의 공격 속도가 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "ranger",
+    "as_pct": [
+     25,
+     55,
+     100
+    ]
+   }
+  },
+  {
+   "key": "mage",
+   "name_ko": "마법사",
+   "name_en": "Mage",
+   "desc": "원거리 주문 딜러. 강력한 스킬.",
+   "synergy_desc": "마법사의 주문력이 증가하고 마나 소모가 줄어든다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "mage",
+    "ap": [
+     25,
+     50,
+     85
+    ],
+    "mana_max_mult": [
+     0.9,
+     0.8,
+     0.7
+    ]
+   }
+  },
+  {
+   "key": "priest",
+   "name_ko": "사제",
+   "name_en": "Priest",
+   "desc": "치유사. 아군 체력 회복.",
+   "synergy_desc": "사제의 치유량이 증가하고, 아군 전체가 피해 흡혈을 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "priest",
+    "heal_pct": [
+     20,
+     40,
+     70
+    ],
+    "allies_omnivamp": [
+     5,
+     10,
+     15
+    ]
+   }
+  },
+  {
+   "key": "guardian",
+   "name_ko": "수호자",
+   "name_en": "Guardian",
+   "desc": "방어막 지원 탱커. 인접 아군 보호.",
+   "synergy_desc": "수호자와 인접한 아군이 방어막을 얻는다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "guardian",
+    "shield": [
+     150,
+     300,
+     500
+    ]
+   }
+  },
+  {
+   "key": "duelist",
+   "name_ko": "결투가",
+   "name_en": "Duelist",
+   "desc": "근접 공속 딜러. 공격할수록 빨라진다.",
+   "synergy_desc": "결투가의 공격마다 공격 속도가 누적 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "duelist",
+    "as_per_attack": [
+     4,
+     7,
+     12
+    ],
+    "max_stacks": 12
+   }
+  },
+  {
+   "key": "summoner",
+   "name_ko": "소환사",
+   "name_en": "Summoner",
+   "desc": "소환수를 부려 싸운다.",
+   "synergy_desc": "소환수의 체력과 공격력이 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "summoner",
+    "summon_stat_pct": [
+     30,
+     60,
+     100
+    ]
+   }
+  },
+  {
+   "key": "artillerist",
+   "name_ko": "포격수",
+   "name_en": "Artillerist",
+   "desc": "초장거리 물리/폭발 딜러. 느린 공격 속도.",
+   "synergy_desc": "포격수의 사거리가 증가하고, 일정 공격마다 폭발 피해를 추가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "artillerist",
+    "range_bonus": [
+     1,
+     1,
+     2
+    ],
+    "third_attack_ad": [
+     0.6,
+     1.2,
+     2.0
+    ]
+   }
+  },
+  {
+   "key": "shaman",
+   "name_ko": "주술사",
+   "name_en": "Shaman",
+   "desc": "약화·군중 제어 전문.",
+   "synergy_desc": "주술사의 스킬에 맞은 적은 방어력·마법 저항력이 감소한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "shaman",
+    "shred": [
+     20,
+     35,
+     50
+    ],
+    "shred_dur": 6
+   }
+  },
+  {
+   "key": "bard",
+   "name_ko": "음유시인",
+   "name_en": "Bard",
+   "desc": "아군 버프 지원.",
+   "synergy_desc": "음유시인의 노래가 아군 전체에 적용되며, 전투 시작 시 아군 마나를 채운다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "bard",
+    "start_mana": [
+     10,
+     20,
+     30
+    ],
+    "buff_mult": [
+     1.3,
+     1.6,
+     2.0
+    ]
+   }
+  },
+  {
+   "key": "dragoon",
+   "name_ko": "용기사",
+   "name_en": "Dragoon",
+   "desc": "비행 기수. 적진으로 강하해 광역 피해.",
+   "synergy_desc": "용기사는 전투 시작 시 비행하여 받는 피해가 감소하고, 강하 피해가 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "dragoon",
+    "start_dr": [
+     30,
+     50,
+     70
+    ],
+    "start_dr_dur": 3,
+    "dash_dmg_pct": [
+     20,
+     40,
+     70
+    ]
+   }
+  },
+  {
+   "key": "engineer",
+   "name_ko": "공학자",
+   "name_en": "Engineer",
+   "desc": "포탑 설치·기계 지원.",
+   "synergy_desc": "공학자의 포탑이 강화되고, 아군 전체의 공격 속도가 소폭 증가한다.",
+   "thresholds": [
+    2,
+    4,
+    6
+   ],
+   "effects": {
+    "hook": "engineer",
+    "turret_stat_pct": [
+     30,
+     60,
+     100
+    ],
+    "allies_as": [
+     5,
+     10,
+     15
+    ]
+   }
+  }
+ ],
+ "archetypes": {
+  "burst_st": {
+   "kind": "damage",
+   "dmg": [
+    260,
+    390,
+    600
+   ],
+   "target": "current",
+   "radius": 0
+  },
+  "burst_ad": {
+   "kind": "damage",
+   "ad_ratio": [
+    2.4,
+    2.5,
+    2.7
+   ],
+   "flat": [
+    40,
+    60,
+    90
+   ],
+   "target": "current",
+   "radius": 0,
+   "crit": true
+  },
+  "burst_ad_long": {
+   "kind": "damage",
+   "ad_ratio": [
+    2.6,
+    2.7,
+    2.9
+   ],
+   "flat": [
+    40,
+    60,
+    90
+   ],
+   "target": "farthest",
+   "radius": 0
+  },
+  "aoe_target": {
+   "kind": "damage",
+   "dmg": [
+    180,
+    270,
+    420
+   ],
+   "target": "current",
+   "radius": 1
+  },
+  "aoe_target_ad": {
+   "kind": "damage",
+   "ad_ratio": [
+    1.5,
+    1.6,
+    1.7
+   ],
+   "flat": [
+    30,
+    45,
+    70
+   ],
+   "target": "current",
+   "radius": 1
+  },
+  "aoe_self": {
+   "kind": "damage",
+   "ad_ratio": [
+    1.6,
+    1.7,
+    1.8
+   ],
+   "flat": [
+    40,
+    60,
+    90
+   ],
+   "target": "self",
+   "radius": 1,
+   "self_ad_pct": [
+    10,
+    15,
+    20
+   ],
+   "buff_dur": 4
+  },
+  "aoe_line": {
+   "kind": "damage",
+   "dmg": [
+    220,
+    330,
+    520
+   ],
+   "target": "current",
+   "line": 3,
+   "slow": 30,
+   "slow_dur": 3
+  },
+  "aoe_line_ad": {
+   "kind": "damage",
+   "ad_ratio": [
+    1.9,
+    2.0,
+    2.2
+   ],
+   "flat": [
+    40,
+    60,
+    90
+   ],
+   "target": "current",
+   "line": 3
+  },
+  "chain": {
+   "kind": "damage",
+   "dmg": [
+    200,
+    300,
+    470
+   ],
+   "target": "current",
+   "bounces": 3,
+   "falloff": 0.75
+  },
+  "chain_ad": {
+   "kind": "damage",
+   "ad_ratio": [
+    1.8,
+    1.9,
+    2.0
+   ],
+   "flat": [
+    30,
+    45,
+    70
+   ],
+   "target": "current",
+   "bounces": 2,
+   "falloff": 0.7
+  },
+  "heal_lowest": {
+   "kind": "heal",
+   "heal": [
+    320,
+    480,
+    760
+   ],
+   "target": "lowest_ally"
+  },
+  "heal_aoe": {
+   "kind": "heal",
+   "heal": [
+    160,
+    240,
+    380
+   ],
+   "target": "all_allies"
+  },
+  "shield_self": {
+   "kind": "shield",
+   "shield": [
+    380,
+    560,
+    880
+   ],
+   "target": "self",
+   "duration": 5
+  },
+  "shield_allies": {
+   "kind": "shield",
+   "shield": [
+    180,
+    270,
+    420
+   ],
+   "target": "adjacent_allies",
+   "duration": 5
+  },
+  "taunt_shield": {
+   "kind": "shield",
+   "shield": [
+    400,
+    600,
+    950
+   ],
+   "target": "self",
+   "duration": 5,
+   "taunt_radius": 2,
+   "taunt_dur": 2.5
+  },
+  "buff_as_self": {
+   "kind": "buff",
+   "as_pct": [
+    60,
+    80,
+    110
+   ],
+   "duration": 5,
+   "target": "self"
+  },
+  "buff_as_allies": {
+   "kind": "buff",
+   "as_pct": [
+    25,
+    35,
+    50
+   ],
+   "duration": 5,
+   "target": "all_allies"
+  },
+  "buff_ad_allies": {
+   "kind": "buff",
+   "ad_pct": [
+    20,
+    30,
+    45
+   ],
+   "duration": 5,
+   "target": "all_allies"
+  },
+  "buff_ap_allies": {
+   "kind": "buff",
+   "ap_flat": [
+    20,
+    30,
+    45
+   ],
+   "duration": 5,
+   "target": "all_allies"
+  },
+  "stun_st": {
+   "kind": "damage",
+   "dmg": [
+    200,
+    300,
+    470
+   ],
+   "target": "current",
+   "radius": 0,
+   "stun": 1.5
+  },
+  "stun_aoe": {
+   "kind": "damage",
+   "dmg": [
+    150,
+    225,
+    350
+   ],
+   "target": "current",
+   "radius": 1,
+   "stun": 1.25
+  },
+  "dot_target": {
+   "kind": "dot",
+   "dmg": [
+    360,
+    540,
+    850
+   ],
+   "duration": 6,
+   "target": "current"
+  },
+  "armor_shred": {
+   "kind": "damage",
+   "dmg": [
+    180,
+    270,
+    420
+   ],
+   "target": "current",
+   "radius": 0,
+   "shred": [
+    30,
+    40,
+    50
+   ],
+   "shred_dur": 6
+  },
+  "lifesteal_strike": {
+   "kind": "damage",
+   "ad_ratio": [
+    2.0,
+    2.1,
+    2.3
+   ],
+   "flat": [
+    40,
+    60,
+    90
+   ],
+   "target": "current",
+   "radius": 0,
+   "heal_pct": 50
+  },
+  "execute": {
+   "kind": "damage",
+   "ad_ratio": [
+    1.8,
+    1.9,
+    2.1
+   ],
+   "flat": [
+    50,
+    75,
+    120
+   ],
+   "target": "lowest_enemy",
+   "dash": true,
+   "execute_scale": 1.0,
+   "reset_on_kill": true
+  },
+  "execute_long": {
+   "kind": "damage",
+   "ad_ratio": [
+    2.0,
+    2.1,
+    2.3
+   ],
+   "flat": [
+    50,
+    75,
+    120
+   ],
+   "target": "lowest_enemy",
+   "execute_scale": 1.0
+  },
+  "multishot": {
+   "kind": "empower",
+   "shots": [
+    3,
+    3,
+    4
+   ],
+   "bonus_ad_ratio": [
+    0.6,
+    0.7,
+    0.8
+   ],
+   "bonus_flat": [
+    20,
+    30,
+    45
+   ]
+  },
+  "dash_strike": {
+   "kind": "damage",
+   "ad_ratio": [
+    2.2,
+    2.3,
+    2.5
+   ],
+   "flat": [
+    40,
+    60,
+    90
+   ],
+   "target": "lowest_enemy",
+   "dash": true,
+   "crit": true
+  },
+  "dash_aoe": {
+   "kind": "damage",
+   "ad_ratio": [
+    1.3,
+    1.4,
+    1.5
+   ],
+   "dmg": [
+    100,
+    150,
+    240
+   ],
+   "target": "cluster",
+   "dash": true,
+   "radius": 1,
+   "stun": 0.75
+  },
+  "summon": {
+   "kind": "summon",
+   "count": 1,
+   "hp_pct": [
+    60,
+    70,
+    85
+   ],
+   "ad_pct": [
+    60,
+    70,
+    85
+   ],
+   "max_active": 1,
+   "lifetime": 12
+  },
+  "summon_big": {
+   "kind": "summon",
+   "count": 1,
+   "hp_pct": [
+    120,
+    140,
+    170
+   ],
+   "ad_pct": [
+    110,
+    125,
+    150
+   ],
+   "max_active": 1,
+   "lifetime": 15
+  },
+  "summon_multi": {
+   "kind": "summon",
+   "count": 3,
+   "hp_pct": [
+    40,
+    48,
+    60
+   ],
+   "ad_pct": [
+    40,
+    48,
+    60
+   ],
+   "max_active": 3,
+   "lifetime": 12
+  },
+  "turret": {
+   "kind": "turret",
+   "hp_pct": [
+    45,
+    55,
+    70
+   ],
+   "ad_pct": [
+    70,
+    80,
+    95
+   ],
+   "range": 4,
+   "max_active": 1,
+   "lifetime": 12
+  },
+  "turret_big": {
+   "kind": "turret",
+   "hp_pct": [
+    70,
+    85,
+    110
+   ],
+   "ad_pct": [
+    110,
+    125,
+    150
+   ],
+   "range": 4,
+   "max_active": 1,
+   "lifetime": 15,
+   "radius": 1
+  }
+ },
+ "class_base": {
+  "knight": {
+   "hp": 760,
+   "ad": 50,
+   "attack_speed": 0.6,
+   "armor": 45,
+   "mr": 40,
+   "range": 1,
+   "mana_start": 40,
+   "mana_max": 100
+  },
+  "warrior": {
+   "hp": 720,
+   "ad": 58,
+   "attack_speed": 0.65,
+   "armor": 35,
+   "mr": 30,
+   "range": 1,
+   "mana_start": 30,
+   "mana_max": 90
+  },
+  "assassin": {
+   "hp": 560,
+   "ad": 66,
+   "attack_speed": 0.75,
+   "armor": 25,
+   "mr": 25,
+   "range": 1,
+   "mana_start": 20,
+   "mana_max": 70
+  },
+  "ranger": {
+   "hp": 520,
+   "ad": 62,
+   "attack_speed": 0.75,
+   "armor": 20,
+   "mr": 20,
+   "range": 4,
+   "mana_start": 20,
+   "mana_max": 70
+  },
+  "mage": {
+   "hp": 520,
+   "ad": 40,
+   "attack_speed": 0.65,
+   "armor": 20,
+   "mr": 25,
+   "range": 4,
+   "mana_start": 30,
+   "mana_max": 80
+  },
+  "priest": {
+   "hp": 560,
+   "ad": 42,
+   "attack_speed": 0.65,
+   "armor": 22,
+   "mr": 30,
+   "range": 3,
+   "mana_start": 30,
+   "mana_max": 80
+  },
+  "guardian": {
+   "hp": 790,
+   "ad": 48,
+   "attack_speed": 0.55,
+   "armor": 40,
+   "mr": 45,
+   "range": 1,
+   "mana_start": 50,
+   "mana_max": 110
+  },
+  "duelist": {
+   "hp": 620,
+   "ad": 56,
+   "attack_speed": 0.8,
+   "armor": 30,
+   "mr": 25,
+   "range": 1,
+   "mana_start": 20,
+   "mana_max": 70
+  },
+  "summoner": {
+   "hp": 540,
+   "ad": 40,
+   "attack_speed": 0.6,
+   "armor": 20,
+   "mr": 25,
+   "range": 4,
+   "mana_start": 40,
+   "mana_max": 100
+  },
+  "artillerist": {
+   "hp": 520,
+   "ad": 70,
+   "attack_speed": 0.55,
+   "armor": 20,
+   "mr": 20,
+   "range": 5,
+   "mana_start": 30,
+   "mana_max": 90
+  },
+  "shaman": {
+   "hp": 580,
+   "ad": 45,
+   "attack_speed": 0.65,
+   "armor": 25,
+   "mr": 35,
+   "range": 3,
+   "mana_start": 30,
+   "mana_max": 80
+  },
+  "bard": {
+   "hp": 580,
+   "ad": 45,
+   "attack_speed": 0.65,
+   "armor": 25,
+   "mr": 30,
+   "range": 3,
+   "mana_start": 40,
+   "mana_max": 100
+  },
+  "dragoon": {
+   "hp": 680,
+   "ad": 60,
+   "attack_speed": 0.7,
+   "armor": 32,
+   "mr": 30,
+   "range": 1,
+   "mana_start": 30,
+   "mana_max": 90
+  },
+  "engineer": {
+   "hp": 600,
+   "ad": 48,
+   "attack_speed": 0.65,
+   "armor": 28,
+   "mr": 28,
+   "range": 3,
+   "mana_start": 40,
+   "mana_max": 100
+  }
+ },
+ "tier_mult": {
+  "1": 1.0,
+  "2": 1.14,
+  "3": 1.3,
+  "4": 1.48,
+  "5": 1.7
+ },
+ "tier_def_add": {
+  "1": 0,
+  "2": 5,
+  "3": 10,
+  "4": 15,
+  "5": 22
+ },
+ "star_scaling": {
+  "hp": [
+   1.0,
+   1.8,
+   3.24
+  ],
+  "ad": [
+   1.0,
+   1.5,
+   2.25
+  ]
+ }
+}
