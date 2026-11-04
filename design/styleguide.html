@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ashen Epic Styleguide</title>
+<style>
+  :root{--ash950:#0B0D10;--ash900:#121417;--ash800:#1C1F24;--ash700:#2A2F36;--ash600:#3A414A;--ash500:#596270;--ash300:#9AA3AF;--ivory100:#F2EAD8;--ivory50:#FFF8EA;--ember600:#D9601A;--ember500:#FF7A1A;--ember300:#FFB366;--gold500:#D9A441;--gold300:#F2CC7A;--gem:#7FD1FF;--ally:#3FA7D6;--enemy:#D64545;--hp:#4CCB5A;--mana:#4C8DFF;--stamina:#F5C542}
+  body{margin:0;background:var(--ash900);color:var(--ivory100);font-family:"Noto Sans KR",system-ui,sans-serif;padding:32px}
+  h1,h2{font-family:"Noto Serif KR",serif;color:var(--ivory50);margin:0 0 12px}
+  h1{font-size:36px} h2{font-size:28px;margin-top:40px;border-bottom:1px solid var(--ash600);padding-bottom:8px}
+  .row{display:flex;flex-wrap:wrap;gap:12px}
+  .sw{width:150px;border-radius:12px;padding:12px;background:var(--ash800);border:1px solid var(--ash600)}
+  .sw .c{height:56px;border-radius:8px;margin-bottom:8px;border:1px solid rgba(255,255,255,.08)}
+  .sw b{display:block;font-size:14px} .sw span{font-size:12px;color:var(--ash300);font-family:"Roboto Mono",monospace}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 28px;border-radius:8px;font-weight:700;font-size:20px;margin:6px;border:0;cursor:pointer}
+  .primary{background:var(--ember500);color:#1C1F24} .secondary{background:var(--ash700);color:var(--ivory100);border:1px solid var(--ivory100)}
+  .ghost{background:transparent;color:var(--ivory100)} .danger{background:#E04B4B;color:#fff} .premium{background:linear-gradient(135deg,#7FD1FF,#4C8DFF);color:#0B0D10} .disabled{background:var(--ash600);color:var(--ash500)}
+  .card{width:160px;height:200px;border-radius:12px;background:var(--ash700);border:2px solid;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:8px;box-sizing:border-box}
+  .card .name{font-size:14px;font-weight:700} .card .stars{font-size:14px;color:#F2B134}
+  .card .tier{position:absolute;top:8px;left:8px;font-size:12px;padding:2px 6px;border-radius:6px;background:rgba(0,0,0,.5)}
+  .bar{height:16px;background:var(--ash700);border:1px solid var(--ash600);border-radius:4px;overflow:hidden;width:320px;margin:6px 0;position:relative}
+  .bar i{display:block;height:100%} .bar .sh{position:absolute;left:0;top:0;height:100%;background:#E8EEF5;opacity:.85}
+  .hex{display:inline-block;width:96px;height:84px;margin:6px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:rgba(63,167,214,.12);border:1px solid var(--ash600)}
+  .hex.sel{background:rgba(255,122,26,.25)} .hex.en{background:rgba(214,69,69,.12)}
+  .nation{width:220px;border-radius:12px;background:var(--ash800);border:1px solid var(--ash600);padding:10px}
+  .nation .strip{display:flex;height:40px;border-radius:8px;overflow:hidden;margin-bottom:6px} .nation .strip i{flex:1}
+  .nation b{font-size:16px} .nation span{font-size:12px;color:var(--ash300)}
+  .type{margin:10px 0} .type .d{font-family:"Noto Serif KR",serif;font-size:48px;color:var(--gold300);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+  .type .h1{font-family:"Noto Serif KR",serif;font-size:36px;color:var(--ivory50)} .type .h2{font-size:28px;font-weight:700} .type .b{font-size:22px} .type .s{font-size:18px;color:var(--ash300)} .type .c{font-size:16px}
+  .panel{background:var(--ash800);border:1px solid var(--gold500);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.45);max-width:520px}
+  table{border-collapse:collapse;font-size:14px} td,th{border:1px solid var(--ash600);padding:6px 10px;text-align:left}
+</style>
+</head>
+<body>
+<h1>《아르켄: 잿빛 날개》 디자인 시스템 — Ashen Epic</h1>
+<p style="color:var(--ash300)">docs/12 기준. 토큰 원본: design/tokens.json · 국가 팔레트: design/palette_nations.json</p>
+
+<h2>글로벌 색</h2>
+<div class="row" id="global"></div>
+
+<h2>등급 · 성급 · 난이도</h2>
+<div class="row" id="tier"></div>
+
+<h2>타이포그래피</h2>
+<div class="type">
+  <div class="d">아르켄: 잿빛 날개 — Display 48</div>
+  <div class="h1">화면 제목 H1 36 · Noto Serif KR</div>
+  <div class="h2">섹션 H2 28 · Noto Sans KR Bold</div>
+  <div class="b">본문 22. 떠돌이 용병 레온 바르크는 납치된 연인 엘리아를 되찾기 위해 전 세계의 영웅을 모은다.</div>
+  <div class="s">보조 18 · 재의 날개는 쐐기를 부숴 세계를 재로 되돌리려 한다.</div>
+  <div class="c">캡션 16 · 골드 12,340 · 보석 210</div>
+</div>
+
+<h2>버튼</h2>
+<button class="btn primary">출격</button><button class="btn secondary">난이도 변경</button><button class="btn ghost">취소</button><button class="btn danger">판매</button><button class="btn premium">보석 상점</button><button class="btn disabled">스태미너 부족</button>
+
+<h2>영웅 카드 (계층 테두리)</h2>
+<div class="row" id="cards"></div>
+
+<h2>바</h2>
+<div class="bar"><i style="width:70%;background:var(--hp)"></i><span class="sh" style="width:20%"></span></div>
+<div class="bar"><i style="width:45%;background:var(--mana)"></i></div>
+<div class="bar"><i style="width:80%;background:var(--stamina)"></i></div>
+<div class="bar"><i style="width:35%;background:var(--ember500)"></i></div>
+
+<h2>헥스 셀 (아군 틴트 · 선택 · 적 틴트)</h2>
+<div><span class="hex"></span><span class="hex sel"></span><span class="hex en"></span></div>
+
+<h2>패널</h2>
+<div class="panel"><b style="font-family:'Noto Serif KR',serif;font-size:24px;color:var(--ivory50)">전투 정보</b><p style="margin:8px 0;color:var(--ash300)">동부 국경 하론 접전: 국경 도적 · 레벨 12 · 자유(1~10)</p><div class="row"><button class="btn primary" style="height:44px;font-size:16px">보통</button><button class="btn secondary" style="height:44px;font-size:16px">어려움</button><button class="btn secondary" style="height:44px;font-size:16px">악몽</button></div></div>
+
+<h2>국가 팔레트 (24)</h2>
+<div class="row" id="nations"></div>
+
+<script>
+const T = {
+  global: [["ash.950","#0B0D10"],["ash.900","#121417"],["ash.800","#1C1F24"],["ash.700","#2A2F36"],["ash.600","#3A414A"],["ash.500","#596270"],["ash.300","#9AA3AF"],["ivory.100","#F2EAD8"],["ivory.50","#FFF8EA"],["ember.600","#D9601A"],["ember.500","#FF7A1A"],["ember.300","#FFB366"],["gold.500","#D9A441"],["gold.300","#F2CC7A"],["gem.500","#7FD1FF"],["ally.500","#3FA7D6"],["enemy.500","#D64545"],["hp.500","#4CCB5A"],["shield.500","#E8EEF5"],["mana.500","#4C8DFF"],["stamina.500","#F5C542"],["success","#5CB85C"],["warning","#F5A623"],["danger","#E04B4B"],["info","#5BA7E6"]],
+  tier: [["T1 일반","#9AA3AF"],["T2 고급","#58B36B"],["T3 희귀","#4C8DFF"],["T4 영웅","#A06CF0"],["T5 전설","#F2B134"],["★1","#C9CED6"],["★2","#F2B134"],["★3","#FF9E3D"],["보통","#58B36B"],["어려움","#F5A623"],["악몽","#C04BFF"]],
+  nations: [["브로멜","#6B7280","#7A5230","#C9CED6"],["아스텔","#2F4F7F","#C9CED6","#9B2335"],["미르","#6E2B3E","#E8DCC4","#D9A441"],["하르벤","#4F6B3F","#7F5A3A","#1C1F24"],["루멘","#F2EAD8","#D9A441","#5BA7E6"],["리에스","#1F7A8C","#A47A4A","#B03A2E"],["발하임","#DDE6EC","#6B7A8C","#8C2A2A"],["카르나","#D4A857","#B5563A","#2EB5B0"],["토르가","#A66A2C","#E3D9C6","#B32020"],["쿠르간","#6F8F3A","#8A6240","#7FB5E6"],["사이람","#E8A0B8","#1C1F24","#D8432B"],["엘로웬","#3E7A4F","#5B4A2E","#CFF5A0"],["그란두르","#B87333","#4A4F57","#4CB3FF"],["서리 제도","#9CC7D9","#E8E3D8","#7FE0C8"],["티아마","#123A5C","#FF8A80","#F0F4F8"],["베일","#B9A6E0","#6E8F5A","#FF9ED2"],["자이로스","#2E6B3C","#C9D23A","#2A9DA8"],["녹스","#2B1B3D","#DCD6CC","#7CFF9B"],["황혼 요새","#6E1F2E","#121417","#E27D3C"],["마카브","#1A1A1F","#FF5A1F","#E8C547"],["네오스","#D0D6DE","#22D3EE","#FACC15"],["셀레스티아","#EEF3FF","#D9A441","#8A7CFF"],["드라케스탄","#2C6E8F","#3C8C6E","#F2B134"],["애쉬펠","#3A3A3A","#FF7A1A","#0B0D10"]]
+};
+const sw=(n,c)=>`<div class="sw"><div class="c" style="background:${c}"></div><b>${n}</b><span>${c}</span></div>`;
+document.getElementById('global').innerHTML=T.global.map(x=>sw(...x)).join('');
+document.getElementById('tier').innerHTML=T.tier.map(x=>sw(...x)).join('');
+const tiers=[["#9AA3AF","토마스 플레처","★"],["#58B36B","브랜든 홀트","★★"],["#4C8DFF","카시안","★★"],["#A06CF0","리젤","★★★"],["#F2B134","로이드 하트윈","★★★"]];
+document.getElementById('cards').innerHTML=tiers.map((t,i)=>`<div class="card" style="border-color:${t[0]}"><span class="tier" style="color:${t[0]}">T${i+1}</span><span class="name">${t[1]}</span><span class="stars">${t[2]}</span></div>`).join('');
+document.getElementById('nations').innerHTML=T.nations.map(n=>`<div class="nation"><div class="strip"><i style="background:${n[1]}"></i><i style="background:${n[2]}"></i><i style="background:${n[3]}"></i></div><b>${n[0]}</b><br><span>${n[1]} · ${n[2]} · ${n[3]}</span></div>`).join('');
+</script>
+</body>
+</html>
