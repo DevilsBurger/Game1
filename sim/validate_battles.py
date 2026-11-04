@@ -15,10 +15,11 @@ REP = os.path.join(os.path.dirname(__file__), "reports")
 _G = {}
 
 
-def _init():
+def _init(curve=None):
     battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))
     _G["d"] = GameData(battles=battles)
     _G["b"] = {b["id"]: b for b in battles["battles"]}
+    _G["curve"] = curve or {}
 
 
 def expected_team(d, level, size, rng):
@@ -34,12 +35,23 @@ def expected_team(d, level, size, rng):
     return [d.hero_spec(h, star) for h in team]
 
 
-def enemy_team(d, b, diff):
+def band_of(level):
+    lo = (level - 1) // 10 * 10 + 1
+    return f"{lo}-{lo+9}"
+
+
+def enemy_power(level, diff, curve):
+    f = curve.get("bands", {}).get(band_of(level), 1.0) * curve.get("difficulty_mult", {}).get(diff, 1.0)
+    return f
+
+
+def enemy_team(d, b, diff, curve=None):
     dd = b["difficulties"][diff]
     star = dd["enemy_star"]; pm = dd["enemy_power_mult"]
     # 전력 배수는 성급 상승으로 대부분 반영되므로 잔여분만 능력치에 적용
     star_gain = {1: 1.0, 2: 1.8 * 1.5, 3: 3.24 * 2.25}
     residual = max(0.75, min(1.6, (pm / (star_gain[star] / star_gain[b["difficulties"]["normal"]["enemy_star"]])) ** 0.5))
+    residual *= enemy_power(b["level"], diff, curve or _G.get("curve", {}))
     units = []
     for u in b["enemy"]["units"]:
         units.append(d.monster_spec(u["unit"], star=star, tier_override=u["tier"], power_mult=residual))
@@ -64,17 +76,52 @@ def _run(args):
     return bid, diff, 1 if r["winner"] == 0 else 0
 
 
-def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--sample", type=int, default=240); ap.add_argument("--fights", type=int, default=12); ap.add_argument("--procs", type=int, default=4)
-    args = ap.parse_args()
-    battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))["battles"]
-    rng = random.Random(7)
-    sample = rng.sample([b for b in battles if b["kind"] in ("regional", "story")], args.sample)
-    jobs = [(b["id"], diff, i) for b in sample for diff in ("normal", "hard", "nightmare") for i in range(args.fights)]
+TARGET = {"normal": 0.78, "hard": 0.55, "nightmare": 0.30}
+
+
+def evaluate(sample, fights, procs, curve, seed0=0):
+    jobs = [(b["id"], diff, seed0 + i) for b in sample for diff in ("normal", "hard", "nightmare") for i in range(fights)]
     wins = {}
-    with Pool(args.procs, initializer=_init) as pool:
+    with Pool(procs, initializer=_init, initargs=(curve,)) as pool:
         for bid, diff, w in pool.imap_unordered(_run, jobs, chunksize=16):
             wins.setdefault((bid, diff), []).append(w)
+    return wins
+
+
+def main():
+    ap = argparse.ArgumentParser(); ap.add_argument("--sample", type=int, default=240); ap.add_argument("--fights", type=int, default=12); ap.add_argument("--procs", type=int, default=4)
+    ap.add_argument("--calibrate", type=int, default=0, help="몬스터 전력 보정 곡선을 N라운드 피팅하여 economy.json에 기록")
+    args = ap.parse_args()
+    battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))["battles"]
+    econ_path = os.path.join(DATA, "economy.json")
+    econ = json.load(open(econ_path, encoding="utf-8"))
+    curve = econ.get("enemy_power_curve") or {"bands": {f"{lo}-{lo+9}": 1.0 for lo in range(1, 100, 10)}, "difficulty_mult": {"normal": 1.0, "hard": 1.0, "nightmare": 1.0}}
+    rng = random.Random(7)
+    pool_b = [b for b in battles if b["kind"] in ("regional", "story")]
+    for rnd in range(args.calibrate):
+        sample = rng.sample(pool_b, max(120, args.sample * 2 // 3))
+        wins = evaluate(sample, max(6, args.fights * 2 // 3), args.procs, curve, seed0=1000 * rnd)
+        bmap = {b["id"]: b for b in sample}
+        # 밴드별(보통) 보정
+        acc = {}
+        for (bid, diff), ws in wins.items():
+            if diff != "normal": continue
+            acc.setdefault(band_of(bmap[bid]["level"]), []).extend(ws)
+        for band, ws in acc.items():
+            obs = sum(ws) / len(ws)
+            f = ((obs + 0.05) / (TARGET["normal"] + 0.05)) ** 0.6
+            curve["bands"][band] = round(max(0.3, min(3.0, curve["bands"].get(band, 1.0) * max(0.6, min(1.6, f)))), 3)
+        # 난이도 배수(어려움/악몽)
+        for diff in ("hard", "nightmare"):
+            ws = [w for (bid, d_), wl in wins.items() if d_ == diff for w in wl]
+            obs = sum(ws) / len(ws)
+            f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.6
+            curve["difficulty_mult"][diff] = round(max(0.3, min(3.0, curve["difficulty_mult"][diff] * max(0.6, min(1.6, f)))), 3)
+        print(f"[calibrate {rnd}] bands={curve['bands']} diff={curve['difficulty_mult']}", flush=True)
+        econ["enemy_power_curve"] = dict(curve, desc="기대 팀 기준 난이도 목표(보통 78%/어려움 55%/악몽 30%)로 피팅한 몬스터 능력치 배수. 레벨 10 구간별 × 난이도별. 클라이언트는 몬스터 HP·AD·AP에 곱한다.")
+        json.dump(econ, open(econ_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    sample = rng.sample(pool_b, args.sample)
+    wins = evaluate(sample, args.fights, args.procs, curve, seed0=99999)
     bmap = {b["id"]: b for b in sample}
     rows = []
     for (bid, diff), ws in wins.items():
@@ -90,7 +137,8 @@ def main():
         by_level.setdefault((band, r["diff"]), []).append(r["wr"])
     by_level = {f"{k[0]} {k[1]}": round(statistics.mean(v), 3) for k, v in sorted(by_level.items())}
     os.makedirs(REP, exist_ok=True)
-    json.dump({"summary": summary, "by_level_band": by_level, "rows": sorted(rows, key=lambda r: (r["level"], r["id"], r["diff"]))},
+    calib = {**{f"L{k}": v for k, v in curve["bands"].items()}, **{k: v for k, v in curve["difficulty_mult"].items()}}
+    json.dump({"summary": summary, "by_level_band": by_level, "calibration": calib, "rows": sorted(rows, key=lambda r: (r["level"], r["id"], r["diff"]))},
               open(os.path.join(REP, "battle_validation.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(summary); print(by_level)
 

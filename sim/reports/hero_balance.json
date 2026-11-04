@@ -1,14 +1,99 @@
 {
- "history": [],
+ "history": [
+  {
+   "iter": 0,
+   "star1": {
+    "sd": 0.025513596566704527,
+    "in_band": 0.9387755102040817,
+    "min": 0.43594009983361065,
+    "max": 0.5699745547073791
+   },
+   "star2": {
+    "sd": 0.03223162672456033,
+    "in_band": 0.9081632653061225,
+    "min": 0.4199029126213592,
+    "max": 0.6147959183673469
+   },
+   "star3": {
+    "sd": 0.031966457453781474,
+    "in_band": 0.8877551020408163,
+    "min": 0.42727272727272725,
+    "max": 0.6294416243654822
+   }
+  },
+  {
+   "iter": 1,
+   "star1": {
+    "sd": 0.020211385387203847,
+    "in_band": 0.9846938775510204,
+    "min": 0.44873817034700314,
+    "max": 0.5682182985553772
+   },
+   "star2": {
+    "sd": 0.02221298119609336,
+    "in_band": 0.9795918367346939,
+    "min": 0.4367816091954023,
+    "max": 0.5732165206508135
+   },
+   "star3": {
+    "sd": 0.025122204010000797,
+    "in_band": 0.9591836734693877,
+    "min": 0.41845764854614415,
+    "max": 0.5546875
+   }
+  },
+  {
+   "iter": 2,
+   "star1": {
+    "sd": 0.018140016622643536,
+    "in_band": 1.0,
+    "min": 0.45531197301854975,
+    "max": 0.5415973377703827
+   },
+   "star2": {
+    "sd": 0.02356297592682307,
+    "in_band": 0.9591836734693877,
+    "min": 0.44529262086513993,
+    "max": 0.5817490494296578
+   },
+   "star3": {
+    "sd": 0.02255994842580173,
+    "in_band": 0.9846938775510204,
+    "min": 0.44963144963144963,
+    "max": 0.5669586983729662
+   }
+  },
+  {
+   "iter": 3,
+   "star1": {
+    "sd": 0.016724386364602113,
+    "in_band": 0.9948979591836735,
+    "min": 0.4448979591836735,
+    "max": 0.5498251748251748
+   },
+   "star2": {
+    "sd": 0.020791798586614004,
+    "in_band": 0.9897959183673469,
+    "min": 0.43788437884378845,
+    "max": 0.5469483568075117
+   },
+   "star3": {
+    "sd": 0.022204416684970557,
+    "in_band": 0.9744897959183674,
+    "min": 0.44471744471744473,
+    "max": 0.5565110565110565
+   }
+  }
+ ],
  "cross_tier": {
-  "T1★1 vs T2★1": 0.05,
+  "T1★1 vs T2★1": 0.042,
   "T1★2 vs T2★1": 1.0,
-  "T2★1 vs T3★1": 0.033,
+  "T2★1 vs T3★1": 0.075,
   "T2★2 vs T3★1": 1.0,
-  "T3★1 vs T4★1": 0.008,
+  "T3★1 vs T4★1": 0.017,
   "T3★2 vs T4★1": 1.0,
   "T4★1 vs T5★1": 0.0,
-  "T4★2 vs T5★1": 1.0
+  "T4★2 vs T5★1": 0.992
  },
  "heroes": [
   {
@@ -18,18 +103,18 @@
    "origin": "astel",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.494,
-   "wr_team_star2": 0.5,
-   "wr_team_star3": 0.503,
-   "wr_duel": 0.317,
-   "n": 567,
-   "dmg": 651,
-   "taken": 567,
-   "heal": 8,
+   "wr_team": 0.53,
+   "wr_team_star2": 0.474,
+   "wr_team_star3": 0.51,
+   "wr_duel": 0.415,
+   "n": 1179,
+   "dmg": 667,
+   "taken": 542,
+   "heal": 7,
    "star_mult": [
-    1.1828,
-    1.1673,
-    1.2013
+    1.1989,
+    1.1795,
+    1.1953
    ]
   },
   {
@@ -39,18 +124,18 @@
    "origin": "astel",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.525,
-   "wr_team_star2": 0.477,
-   "wr_team_star3": 0.499,
-   "wr_duel": 0.354,
-   "n": 585,
-   "dmg": 1040,
-   "taken": 474,
+   "wr_team": 0.47,
+   "wr_team_star2": 0.508,
+   "wr_team_star3": 0.494,
+   "wr_duel": 0.256,
+   "n": 1186,
+   "dmg": 925,
+   "taken": 499,
    "heal": 1,
    "star_mult": [
-    0.9957,
-    1.0075,
-    1.0228
+    0.9955,
+    1.01,
+    1.02
    ]
   },
   {
@@ -60,18 +145,18 @@
    "origin": "astel",
    "cls": "shaman",
    "arche": "armor_shred",
-   "wr_team": 0.516,
-   "wr_team_star2": 0.439,
-   "wr_team_star3": 0.54,
-   "wr_duel": 0.72,
-   "n": 558,
-   "dmg": 1012,
-   "taken": 616,
+   "wr_team": 0.517,
+   "wr_team_star2": 0.5,
+   "wr_team_star3": 0.526,
+   "wr_duel": 0.744,
+   "n": 1163,
+   "dmg": 1094,
+   "taken": 608,
    "heal": 1,
    "star_mult": [
-    1.1434,
-    1.1495,
-    1.2146
+    1.1703,
+    1.1742,
+    1.1982
    ]
   },
   {
@@ -81,18 +166,18 @@
    "origin": "valheim",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.518,
-   "wr_team_star2": 0.476,
-   "wr_team_star3": 0.473,
-   "wr_duel": 0.476,
-   "n": 606,
-   "dmg": 639,
+   "wr_team": 0.515,
+   "wr_team_star2": 0.471,
+   "wr_team_star3": 0.515,
+   "wr_duel": 0.39,
+   "n": 1204,
+   "dmg": 662,
    "taken": 559,
-   "heal": 8,
+   "heal": 12,
    "star_mult": [
-    1.2357,
-    1.2541,
-    1.2699
+    1.2611,
+    1.2446,
+    1.242
    ]
   },
   {
@@ -102,18 +187,18 @@
    "origin": "valheim",
    "cls": "bard",
    "arche": "buff_ad_allies",
-   "wr_team": 0.523,
-   "wr_team_star2": 0.514,
-   "wr_team_star3": 0.488,
-   "wr_duel": 0.366,
-   "n": 619,
-   "dmg": 889,
-   "taken": 673,
-   "heal": 6,
+   "wr_team": 0.529,
+   "wr_team_star2": 0.517,
+   "wr_team_star3": 0.496,
+   "wr_duel": 0.451,
+   "n": 1239,
+   "dmg": 1012,
+   "taken": 670,
+   "heal": 5,
    "star_mult": [
-    1.3673,
-    1.3129,
-    1.1841
+    1.4377,
+    1.3818,
+    1.2452
    ]
   },
   {
@@ -123,18 +208,18 @@
    "origin": "valheim",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.506,
-   "wr_team_star2": 0.488,
-   "wr_team_star3": 0.475,
-   "wr_duel": 0.622,
-   "n": 618,
-   "dmg": 590,
-   "taken": 551,
-   "heal": 8,
+   "wr_team": 0.474,
+   "wr_team_star2": 0.478,
+   "wr_team_star3": 0.501,
+   "wr_duel": 0.512,
+   "n": 1222,
+   "dmg": 539,
+   "taken": 577,
+   "heal": 6,
    "star_mult": [
-    1.0453,
-    1.0313,
-    1.0476
+    1.0342,
+    1.0182,
+    1.0546
    ]
   },
   {
@@ -144,18 +229,18 @@
    "origin": "sairam",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.497,
-   "wr_team_star2": 0.498,
-   "wr_team_star3": 0.512,
-   "wr_duel": 0.11,
-   "n": 616,
-   "dmg": 529,
-   "taken": 687,
-   "heal": 610,
+   "wr_team": 0.491,
+   "wr_team_star2": 0.468,
+   "wr_team_star3": 0.451,
+   "wr_duel": 0.146,
+   "n": 1224,
+   "dmg": 615,
+   "taken": 730,
+   "heal": 623,
    "star_mult": [
-    0.9912,
-    0.9464,
-    0.9109
+    1.0728,
+    0.9954,
+    0.9507
    ]
   },
   {
@@ -165,18 +250,18 @@
    "origin": "sairam",
    "cls": "artillerist",
    "arche": "burst_ad_long",
-   "wr_team": 0.496,
-   "wr_team_star2": 0.512,
-   "wr_team_star3": 0.47,
-   "wr_duel": 0.683,
-   "n": 607,
-   "dmg": 1218,
-   "taken": 483,
+   "wr_team": 0.501,
+   "wr_team_star2": 0.499,
+   "wr_team_star3": 0.444,
+   "wr_duel": 0.744,
+   "n": 1243,
+   "dmg": 1247,
+   "taken": 488,
    "heal": 1,
    "star_mult": [
-    1.1427,
-    1.1886,
-    1.2332
+    1.1709,
+    1.2075,
+    1.2374
    ]
   },
   {
@@ -186,18 +271,18 @@
    "origin": "sairam",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.481,
-   "wr_team_star3": 0.512,
-   "wr_duel": 0.159,
-   "n": 590,
-   "dmg": 234,
-   "taken": 903,
+   "wr_team": 0.478,
+   "wr_team_star2": 0.504,
+   "wr_team_star3": 0.505,
+   "wr_duel": 0.134,
+   "n": 1175,
+   "dmg": 220,
+   "taken": 869,
    "heal": 0,
    "star_mult": [
-    0.8211,
-    0.8857,
-    0.9708
+    0.7967,
+    0.9053,
+    0.9299
    ]
   },
   {
@@ -207,18 +292,18 @@
    "origin": "karna",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.507,
-   "wr_team_star2": 0.537,
-   "wr_team_star3": 0.471,
-   "wr_duel": 0.561,
-   "n": 592,
-   "dmg": 501,
-   "taken": 719,
-   "heal": 548,
+   "wr_team": 0.501,
+   "wr_team_star2": 0.524,
+   "wr_team_star3": 0.513,
+   "wr_duel": 0.622,
+   "n": 1175,
+   "dmg": 491,
+   "taken": 762,
+   "heal": 546,
    "star_mult": [
-    1.0102,
-    0.9663,
-    0.9156
+    1.0402,
+    0.9899,
+    0.9081
    ]
   },
   {
@@ -228,18 +313,18 @@
    "origin": "karna",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.499,
-   "wr_team_star2": 0.451,
-   "wr_team_star3": 0.496,
-   "wr_duel": 0.829,
-   "n": 613,
-   "dmg": 594,
-   "taken": 773,
+   "wr_team": 0.487,
+   "wr_team_star2": 0.468,
+   "wr_team_star3": 0.532,
+   "wr_duel": 0.768,
+   "n": 1229,
+   "dmg": 579,
+   "taken": 748,
    "heal": 1,
    "star_mult": [
-    1.0893,
-    1.0793,
-    1.1221
+    1.0565,
+    1.0499,
+    1.0869
    ]
   },
   {
@@ -249,18 +334,18 @@
    "origin": "karna",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.489,
-   "wr_team_star2": 0.453,
-   "wr_team_star3": 0.521,
-   "wr_duel": 0.463,
-   "n": 587,
-   "dmg": 565,
-   "taken": 566,
-   "heal": 5,
+   "wr_team": 0.502,
+   "wr_team_star2": 0.501,
+   "wr_team_star3": 0.468,
+   "wr_duel": 0.5,
+   "n": 1165,
+   "dmg": 539,
+   "taken": 578,
+   "heal": 4,
    "star_mult": [
-    1.0078,
-    1.0067,
-    1.0285
+    1.0039,
+    1.0155,
+    1.013
    ]
   },
   {
@@ -270,18 +355,18 @@
    "origin": "lies",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.505,
-   "wr_team_star2": 0.538,
-   "wr_team_star3": 0.52,
-   "wr_duel": 0.951,
-   "n": 604,
-   "dmg": 653,
-   "taken": 640,
+   "wr_team": 0.497,
+   "wr_team_star2": 0.502,
+   "wr_team_star3": 0.495,
+   "wr_duel": 0.878,
+   "n": 1218,
+   "dmg": 512,
+   "taken": 625,
    "heal": 1,
    "star_mult": [
-    1.0711,
-    1.0703,
-    1.0642
+    1.0437,
+    1.0519,
+    1.0315
    ]
   },
   {
@@ -291,18 +376,18 @@
    "origin": "lies",
    "cls": "knight",
    "arche": "stun_st",
-   "wr_team": 0.504,
-   "wr_team_star2": 0.553,
-   "wr_team_star3": 0.507,
-   "wr_duel": 0.683,
-   "n": 593,
-   "dmg": 483,
-   "taken": 794,
+   "wr_team": 0.537,
+   "wr_team_star2": 0.538,
+   "wr_team_star3": 0.535,
+   "wr_duel": 0.573,
+   "n": 1176,
+   "dmg": 510,
+   "taken": 782,
    "heal": 0,
    "star_mult": [
-    0.9621,
-    0.9695,
-    0.9643
+    0.963,
+    0.9468,
+    0.95
    ]
   },
   {
@@ -312,18 +397,18 @@
    "origin": "lies",
    "cls": "shaman",
    "arche": "dot_target",
-   "wr_team": 0.547,
-   "wr_team_star2": 0.494,
-   "wr_team_star3": 0.561,
-   "wr_duel": 0.927,
-   "n": 590,
-   "dmg": 1041,
-   "taken": 624,
+   "wr_team": 0.522,
+   "wr_team_star2": 0.472,
+   "wr_team_star3": 0.534,
+   "wr_duel": 0.951,
+   "n": 1204,
+   "dmg": 1122,
+   "taken": 633,
    "heal": 1,
    "star_mult": [
-    1.2497,
-    1.2658,
-    1.3333
+    1.2975,
+    1.3168,
+    1.3689
    ]
   },
   {
@@ -333,18 +418,18 @@
    "origin": "elowen",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.48,
-   "wr_team_star2": 0.55,
-   "wr_team_star3": 0.513,
-   "wr_duel": 0.061,
-   "n": 567,
-   "dmg": 176,
-   "taken": 979,
-   "heal": 11,
+   "wr_team": 0.497,
+   "wr_team_star2": 0.463,
+   "wr_team_star3": 0.515,
+   "wr_duel": 0.049,
+   "n": 1161,
+   "dmg": 191,
+   "taken": 995,
+   "heal": 10,
    "star_mult": [
-    0.724,
-    0.7011,
-    0.663
+    0.7343,
+    0.6718,
+    0.6464
    ]
   },
   {
@@ -354,18 +439,18 @@
    "origin": "elowen",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.528,
-   "wr_team_star2": 0.524,
-   "wr_team_star3": 0.507,
-   "wr_duel": 0.659,
-   "n": 593,
-   "dmg": 576,
-   "taken": 815,
+   "wr_team": 0.504,
+   "wr_team_star2": 0.534,
+   "wr_team_star3": 0.493,
+   "wr_duel": 0.549,
+   "n": 1166,
+   "dmg": 587,
+   "taken": 797,
    "heal": 14,
    "star_mult": [
-    0.9909,
-    1.0054,
-    1.0552
+    0.975,
+    0.9862,
+    1.0298
    ]
   },
   {
@@ -375,18 +460,18 @@
    "origin": "elowen",
    "cls": "artillerist",
    "arche": "burst_ad_long",
-   "wr_team": 0.498,
+   "wr_team": 0.52,
    "wr_team_star2": 0.51,
-   "wr_team_star3": 0.488,
-   "wr_duel": 0.732,
-   "n": 649,
-   "dmg": 1273,
-   "taken": 502,
-   "heal": 11,
+   "wr_team_star3": 0.55,
+   "wr_duel": 0.829,
+   "n": 1257,
+   "dmg": 1361,
+   "taken": 494,
+   "heal": 10,
    "star_mult": [
-    1.1808,
-    1.2064,
-    1.2303
+    1.2264,
+    1.2302,
+    1.2737
    ]
   },
   {
@@ -396,18 +481,18 @@
    "origin": "grandur",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.547,
-   "wr_team_star2": 0.505,
-   "wr_team_star3": 0.522,
-   "wr_duel": 0.463,
-   "n": 569,
-   "dmg": 530,
-   "taken": 721,
-   "heal": 576,
+   "wr_team": 0.512,
+   "wr_team_star2": 0.517,
+   "wr_team_star3": 0.527,
+   "wr_duel": 0.622,
+   "n": 1162,
+   "dmg": 524,
+   "taken": 765,
+   "heal": 566,
    "star_mult": [
-    1.0372,
-    0.9357,
-    0.8931
+    1.0653,
+    0.9603,
+    0.8888
    ]
   },
   {
@@ -417,18 +502,18 @@
    "origin": "grandur",
    "cls": "mage",
    "arche": "burst_st",
-   "wr_team": 0.524,
-   "wr_team_star2": 0.486,
-   "wr_team_star3": 0.446,
-   "wr_duel": 0.61,
-   "n": 656,
-   "dmg": 1179,
-   "taken": 505,
+   "wr_team": 0.504,
+   "wr_team_star2": 0.526,
+   "wr_team_star3": 0.467,
+   "wr_duel": 0.732,
+   "n": 1255,
+   "dmg": 1171,
+   "taken": 519,
    "heal": 1,
    "star_mult": [
-    1.218,
-    1.1971,
-    1.2464
+    1.2277,
+    1.2316,
+    1.2545
    ]
   },
   {
@@ -438,18 +523,18 @@
    "origin": "grandur",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.456,
-   "wr_team_star2": 0.473,
-   "wr_team_star3": 0.523,
-   "wr_duel": 0.427,
-   "n": 627,
-   "dmg": 633,
+   "wr_team": 0.512,
+   "wr_team_star2": 0.478,
+   "wr_team_star3": 0.551,
+   "wr_duel": 0.354,
+   "n": 1227,
+   "dmg": 655,
    "taken": 677,
    "heal": 1,
    "star_mult": [
-    0.878,
-    0.9085,
-    0.9302
+    0.8709,
+    0.9053,
+    0.9053
    ]
   },
   {
@@ -459,18 +544,18 @@
    "origin": "neos",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.512,
-   "wr_team_star2": 0.486,
-   "wr_team_star3": 0.492,
-   "wr_duel": 0.854,
-   "n": 580,
-   "dmg": 629,
-   "taken": 763,
-   "heal": 1,
+   "wr_team": 0.475,
+   "wr_team_star2": 0.484,
+   "wr_team_star3": 0.49,
+   "wr_duel": 0.805,
+   "n": 1169,
+   "dmg": 593,
+   "taken": 736,
+   "heal": 0,
    "star_mult": [
-    1.1021,
-    1.0694,
-    1.136
+    1.0479,
+    1.0601,
+    1.1106
    ]
   },
   {
@@ -480,18 +565,18 @@
    "origin": "neos",
    "cls": "shaman",
    "arche": "stun_aoe",
-   "wr_team": 0.526,
-   "wr_team_star2": 0.497,
-   "wr_team_star3": 0.538,
-   "wr_duel": 0.28,
-   "n": 604,
-   "dmg": 1052,
-   "taken": 542,
+   "wr_team": 0.464,
+   "wr_team_star2": 0.495,
+   "wr_team_star3": 0.494,
+   "wr_duel": 0.232,
+   "n": 1236,
+   "dmg": 1003,
+   "taken": 563,
    "heal": 1,
    "star_mult": [
-    1.097,
-    1.0687,
-    1.0908
+    1.0906,
+    1.1057,
+    1.0855
    ]
   },
   {
@@ -501,18 +586,18 @@
    "origin": "neos",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.528,
-   "wr_team_star2": 0.49,
-   "wr_team_star3": 0.5,
-   "wr_duel": 0.061,
-   "n": 614,
-   "dmg": 245,
-   "taken": 906,
+   "wr_team": 0.481,
+   "wr_team_star2": 0.531,
+   "wr_team_star3": 0.524,
+   "wr_duel": 0.085,
+   "n": 1202,
+   "dmg": 206,
+   "taken": 862,
    "heal": 0,
    "star_mult": [
-    0.827,
-    0.8735,
-    0.9444
+    0.7837,
+    0.9048,
+    0.9529
    ]
   },
   {
@@ -522,18 +607,18 @@
    "origin": "nox",
    "cls": "warrior",
    "arche": "lifesteal_strike",
-   "wr_team": 0.518,
-   "wr_team_star2": 0.507,
-   "wr_team_star3": 0.491,
-   "wr_duel": 0.805,
-   "n": 577,
-   "dmg": 524,
-   "taken": 840,
-   "heal": 74,
+   "wr_team": 0.505,
+   "wr_team_star2": 0.519,
+   "wr_team_star3": 0.486,
+   "wr_duel": 0.78,
+   "n": 1144,
+   "dmg": 515,
+   "taken": 824,
+   "heal": 72,
    "star_mult": [
-    0.9652,
-    0.9822,
-    0.9981
+    0.944,
+    0.9738,
+    0.9842
    ]
   },
   {
@@ -543,18 +628,18 @@
    "origin": "nox",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.529,
-   "wr_team_star2": 0.432,
-   "wr_team_star3": 0.494,
-   "wr_duel": 0.329,
-   "n": 580,
-   "dmg": 1059,
-   "taken": 444,
-   "heal": 9,
+   "wr_team": 0.506,
+   "wr_team_star2": 0.542,
+   "wr_team_star3": 0.461,
+   "wr_duel": 0.354,
+   "n": 1157,
+   "dmg": 970,
+   "taken": 481,
+   "heal": 8,
    "star_mult": [
-    0.9945,
-    0.9905,
-    1.0369
+    1.0289,
+    1.0472,
+    1.0316
    ]
   },
   {
@@ -565,17 +650,17 @@
    "cls": "artillerist",
    "arche": "aoe_target_ad",
    "wr_team": 0.484,
-   "wr_team_star2": 0.542,
-   "wr_team_star3": 0.508,
-   "wr_duel": 0.317,
-   "n": 603,
-   "dmg": 1051,
-   "taken": 488,
+   "wr_team_star2": 0.496,
+   "wr_team_star3": 0.482,
+   "wr_duel": 0.293,
+   "n": 1206,
+   "dmg": 1063,
+   "taken": 510,
    "heal": 8,
    "star_mult": [
-    1.0519,
-    1.1231,
-    1.1767
+    1.1056,
+    1.134,
+    1.1787
    ]
   },
   {
@@ -585,18 +670,18 @@
    "origin": "celestia",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.515,
-   "wr_team_star2": 0.51,
-   "wr_team_star3": 0.48,
-   "wr_duel": 0.939,
-   "n": 623,
-   "dmg": 523,
-   "taken": 635,
+   "wr_team": 0.479,
+   "wr_team_star2": 0.477,
+   "wr_team_star3": 0.513,
+   "wr_duel": 0.89,
+   "n": 1215,
+   "dmg": 469,
+   "taken": 624,
    "heal": 1,
    "star_mult": [
-    1.0291,
-    1.0619,
-    1.0631
+    1.0172,
+    1.0397,
+    1.0268
    ]
   },
   {
@@ -606,18 +691,18 @@
    "origin": "celestia",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.455,
-   "wr_team_star2": 0.554,
-   "wr_team_star3": 0.5,
-   "wr_duel": 0.646,
-   "n": 591,
-   "dmg": 548,
-   "taken": 770,
+   "wr_team": 0.47,
+   "wr_team_star2": 0.467,
+   "wr_team_star3": 0.46,
+   "wr_duel": 0.524,
+   "n": 1210,
+   "dmg": 552,
+   "taken": 765,
    "heal": 0,
    "star_mult": [
-    0.9572,
-    0.9938,
-    1.0273
+    0.9365,
+    0.9631,
+    1.0026
    ]
   },
   {
@@ -627,18 +712,18 @@
    "origin": "celestia",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.48,
-   "wr_team_star2": 0.517,
-   "wr_team_star3": 0.514,
-   "wr_duel": 0.427,
-   "n": 625,
-   "dmg": 658,
-   "taken": 678,
+   "wr_team": 0.55,
+   "wr_team_star2": 0.478,
+   "wr_team_star3": 0.519,
+   "wr_duel": 0.354,
+   "n": 1212,
+   "dmg": 728,
+   "taken": 688,
    "heal": 1,
    "star_mult": [
-    0.8819,
-    0.8961,
-    0.9069
+    0.8934,
+    0.8894,
+    0.9201
    ]
   },
   {
@@ -648,18 +733,18 @@
    "origin": "dragonkin",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.446,
-   "wr_team_star2": 0.458,
-   "wr_team_star3": 0.478,
-   "wr_duel": 0.427,
-   "n": 574,
-   "dmg": 637,
-   "taken": 562,
-   "heal": 7,
+   "wr_team": 0.489,
+   "wr_team_star2": 0.492,
+   "wr_team_star3": 0.499,
+   "wr_duel": 0.415,
+   "n": 1164,
+   "dmg": 661,
+   "taken": 556,
+   "heal": 6,
    "star_mult": [
-    1.1717,
-    1.19,
-    1.2177
+    1.1953,
+    1.2094,
+    1.2068
    ]
   },
   {
@@ -669,18 +754,18 @@
    "origin": "dragonkin",
    "cls": "guardian",
    "arche": "shield_self",
-   "wr_team": 0.49,
-   "wr_team_star2": 0.463,
-   "wr_team_star3": 0.462,
-   "wr_duel": 0.085,
-   "n": 574,
-   "dmg": 224,
-   "taken": 1018,
+   "wr_team": 0.476,
+   "wr_team_star2": 0.499,
+   "wr_team_star3": 0.484,
+   "wr_duel": 0.098,
+   "n": 1158,
+   "dmg": 198,
+   "taken": 1005,
    "heal": 0,
    "star_mult": [
-    0.7459,
-    0.7755,
-    0.7767
+    0.7317,
+    0.7708,
+    0.7541
    ]
   },
   {
@@ -690,18 +775,18 @@
    "origin": "dragonkin",
    "cls": "bard",
    "arche": "buff_ad_allies",
-   "wr_team": 0.51,
-   "wr_team_star2": 0.494,
-   "wr_team_star3": 0.493,
-   "wr_duel": 0.451,
-   "n": 584,
-   "dmg": 909,
-   "taken": 684,
+   "wr_team": 0.508,
+   "wr_team_star2": 0.506,
+   "wr_team_star3": 0.495,
+   "wr_duel": 0.512,
+   "n": 1187,
+   "dmg": 1007,
+   "taken": 704,
    "heal": 0,
    "star_mult": [
-    1.347,
-    1.2858,
-    1.1785
+    1.4059,
+    1.3385,
+    1.2135
    ]
   },
   {
@@ -711,18 +796,18 @@
    "origin": "torga",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.506,
-   "wr_team_star2": 0.534,
-   "wr_team_star3": 0.509,
-   "wr_duel": 0.915,
-   "n": 575,
-   "dmg": 653,
-   "taken": 648,
+   "wr_team": 0.521,
+   "wr_team_star2": 0.491,
+   "wr_team_star3": 0.514,
+   "wr_duel": 0.878,
+   "n": 1178,
+   "dmg": 613,
+   "taken": 643,
    "heal": 1,
    "star_mult": [
-    1.0593,
-    1.0685,
-    1.0752
+    1.0502,
+    1.0413,
+    1.0471
    ]
   },
   {
@@ -732,18 +817,18 @@
    "origin": "torga",
    "cls": "mage",
    "arche": "burst_st",
-   "wr_team": 0.494,
-   "wr_team_star2": 0.5,
-   "wr_team_star3": 0.518,
-   "wr_duel": 0.805,
-   "n": 622,
-   "dmg": 1164,
-   "taken": 523,
-   "heal": 1,
+   "wr_team": 0.48,
+   "wr_team_star2": 0.508,
+   "wr_team_star3": 0.523,
+   "wr_duel": 0.829,
+   "n": 1245,
+   "dmg": 1188,
+   "taken": 524,
+   "heal": 0,
    "star_mult": [
-    1.2333,
-    1.2528,
-    1.3015
+    1.2561,
+    1.2871,
+    1.292
    ]
   },
   {
@@ -753,18 +838,18 @@
    "origin": "torga",
    "cls": "bard",
    "arche": "buff_as_allies",
-   "wr_team": 0.516,
-   "wr_team_star2": 0.465,
-   "wr_team_star3": 0.505,
-   "wr_duel": 0.402,
-   "n": 607,
-   "dmg": 896,
-   "taken": 700,
+   "wr_team": 0.512,
+   "wr_team_star2": 0.494,
+   "wr_team_star3": 0.517,
+   "wr_duel": 0.598,
+   "n": 1223,
+   "dmg": 959,
+   "taken": 691,
    "heal": 1,
    "star_mult": [
-    1.362,
-    1.3148,
-    1.237
+    1.4051,
+    1.3748,
+    1.2375
    ]
   },
   {
@@ -774,18 +859,18 @@
    "origin": "lumen",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.492,
-   "wr_team_star2": 0.536,
-   "wr_team_star3": 0.494,
+   "wr_team": 0.494,
+   "wr_team_star2": 0.538,
+   "wr_team_star3": 0.471,
    "wr_duel": 0.0,
-   "n": 616,
-   "dmg": 137,
-   "taken": 825,
+   "n": 1248,
+   "dmg": 112,
+   "taken": 811,
    "heal": 0,
    "star_mult": [
-    0.6767,
-    0.7901,
-    0.8333
+    0.6632,
+    0.7431,
+    0.8115
    ]
   },
   {
@@ -795,18 +880,18 @@
    "origin": "lumen",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.485,
-   "wr_team_star2": 0.515,
-   "wr_team_star3": 0.513,
-   "wr_duel": 0.854,
-   "n": 612,
-   "dmg": 542,
-   "taken": 735,
-   "heal": 0,
+   "wr_team": 0.508,
+   "wr_team_star2": 0.577,
+   "wr_team_star3": 0.449,
+   "wr_duel": 0.793,
+   "n": 1209,
+   "dmg": 544,
+   "taken": 734,
+   "heal": 1,
    "star_mult": [
-    1.0059,
-    1.0275,
-    1.0532
+    0.9868,
+    1.0174,
+    1.0023
    ]
   },
   {
@@ -816,18 +901,18 @@
    "origin": "lumen",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.462,
-   "wr_team_star2": 0.502,
-   "wr_team_star3": 0.497,
-   "wr_duel": 0.28,
-   "n": 606,
-   "dmg": 583,
-   "taken": 668,
+   "wr_team": 0.519,
+   "wr_team_star2": 0.512,
+   "wr_team_star3": 0.49,
+   "wr_duel": 0.305,
+   "n": 1232,
+   "dmg": 533,
+   "taken": 663,
    "heal": 1,
    "star_mult": [
-    0.8418,
-    0.8639,
-    0.8896
+    0.8281,
+    0.8821,
+    0.8771
    ]
   },
   {
@@ -837,18 +922,18 @@
    "origin": "freelancer",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.449,
-   "wr_team_star2": 0.515,
-   "wr_team_star3": 0.455,
-   "wr_duel": 0.085,
-   "n": 612,
-   "dmg": 198,
-   "taken": 999,
+   "wr_team": 0.473,
+   "wr_team_star2": 0.465,
+   "wr_team_star3": 0.489,
+   "wr_duel": 0.037,
+   "n": 1193,
+   "dmg": 169,
+   "taken": 963,
    "heal": 0,
    "star_mult": [
-    0.7467,
-    0.7193,
-    0.683
+    0.735,
+    0.6993,
+    0.6699
    ]
   },
   {
@@ -858,18 +943,18 @@
    "origin": "freelancer",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.481,
-   "wr_team_star2": 0.517,
-   "wr_team_star3": 0.512,
-   "wr_duel": 0.256,
-   "n": 597,
-   "dmg": 1004,
-   "taken": 450,
+   "wr_team": 0.504,
+   "wr_team_star2": 0.504,
+   "wr_team_star3": 0.505,
+   "wr_duel": 0.28,
+   "n": 1188,
+   "dmg": 960,
+   "taken": 489,
    "heal": 1,
    "star_mult": [
-    0.9299,
-    0.9436,
-    1.0017
+    0.9794,
+    0.9818,
+    1.013
    ]
   },
   {
@@ -879,18 +964,18 @@
    "origin": "freelancer",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.479,
-   "wr_team_star2": 0.492,
-   "wr_team_star3": 0.482,
-   "wr_duel": 0.549,
-   "n": 618,
+   "wr_team": 0.496,
+   "wr_team_star2": 0.476,
+   "wr_team_star3": 0.497,
+   "wr_duel": 0.707,
+   "n": 1194,
    "dmg": 580,
-   "taken": 558,
-   "heal": 4,
+   "taken": 561,
+   "heal": 3,
    "star_mult": [
-    1.0051,
-    1.0069,
-    1.0242
+    1.0146,
+    1.0265,
+    1.0036
    ]
   },
   {
@@ -900,18 +985,18 @@
    "origin": "astel",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.462,
-   "wr_team_star2": 0.508,
-   "wr_team_star3": 0.513,
-   "wr_duel": 0.488,
-   "n": 612,
-   "dmg": 559,
-   "taken": 882,
-   "heal": 1,
+   "wr_team": 0.472,
+   "wr_team_star2": 0.459,
+   "wr_team_star3": 0.533,
+   "wr_duel": 0.39,
+   "n": 1192,
+   "dmg": 569,
+   "taken": 879,
+   "heal": 0,
    "star_mult": [
-    0.919,
-    0.9619,
-    1.0392
+    0.9064,
+    0.9394,
+    1.0179
    ]
   },
   {
@@ -921,18 +1006,18 @@
    "origin": "astel",
    "cls": "bard",
    "arche": "buff_ad_allies",
-   "wr_team": 0.522,
-   "wr_team_star2": 0.501,
-   "wr_team_star3": 0.518,
-   "wr_duel": 0.354,
-   "n": 601,
-   "dmg": 1022,
-   "taken": 748,
+   "wr_team": 0.482,
+   "wr_team_star2": 0.531,
+   "wr_team_star3": 0.506,
+   "wr_duel": 0.341,
+   "n": 1243,
+   "dmg": 1058,
+   "taken": 780,
    "heal": 1,
    "star_mult": [
-    1.3596,
-    1.3272,
-    1.1896
+    1.3804,
+    1.3616,
+    1.21
    ]
   },
   {
@@ -942,18 +1027,18 @@
    "origin": "astel",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.502,
-   "wr_team_star2": 0.558,
-   "wr_team_star3": 0.482,
-   "wr_duel": 0.878,
-   "n": 605,
-   "dmg": 631,
-   "taken": 874,
-   "heal": 0,
+   "wr_team": 0.51,
+   "wr_team_star2": 0.495,
+   "wr_team_star3": 0.477,
+   "wr_duel": 0.817,
+   "n": 1139,
+   "dmg": 636,
+   "taken": 858,
+   "heal": 1,
    "star_mult": [
-    1.0775,
-    1.0898,
-    1.13
+    1.0521,
+    1.0648,
+    1.1117
    ]
   },
   {
@@ -963,18 +1048,18 @@
    "origin": "valheim",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.508,
-   "wr_team_star2": 0.5,
-   "wr_team_star3": 0.532,
-   "wr_duel": 0.768,
-   "n": 598,
-   "dmg": 657,
-   "taken": 750,
+   "wr_team": 0.493,
+   "wr_team_star2": 0.508,
+   "wr_team_star3": 0.5,
+   "wr_duel": 0.817,
+   "n": 1180,
+   "dmg": 639,
+   "taken": 735,
    "heal": 7,
    "star_mult": [
-    1.0362,
-    1.0181,
-    1.0443
+    1.0237,
+    1.0079,
+    1.0467
    ]
   },
   {
@@ -984,18 +1069,18 @@
    "origin": "valheim",
    "cls": "artillerist",
    "arche": "aoe_target_ad",
-   "wr_team": 0.482,
-   "wr_team_star2": 0.509,
-   "wr_team_star3": 0.531,
-   "wr_duel": 0.22,
-   "n": 620,
-   "dmg": 1285,
-   "taken": 520,
-   "heal": 7,
+   "wr_team": 0.513,
+   "wr_team_star2": 0.526,
+   "wr_team_star3": 0.512,
+   "wr_duel": 0.39,
+   "n": 1204,
+   "dmg": 1268,
+   "taken": 542,
+   "heal": 6,
    "star_mult": [
-    1.0857,
-    1.1096,
-    1.2009
+    1.1312,
+    1.1753,
+    1.2191
    ]
   },
   {
@@ -1005,18 +1090,18 @@
    "origin": "valheim",
    "cls": "mage",
    "arche": "burst_st",
-   "wr_team": 0.48,
-   "wr_team_star2": 0.486,
-   "wr_team_star3": 0.505,
-   "wr_duel": 0.744,
-   "n": 604,
-   "dmg": 1294,
-   "taken": 585,
-   "heal": 6,
+   "wr_team": 0.492,
+   "wr_team_star2": 0.45,
+   "wr_team_star3": 0.485,
+   "wr_duel": 0.72,
+   "n": 1265,
+   "dmg": 1291,
+   "taken": 578,
+   "heal": 7,
    "star_mult": [
-    1.1996,
-    1.2419,
-    1.2574
+    1.2208,
+    1.231,
+    1.2882
    ]
   },
   {
@@ -1026,18 +1111,18 @@
    "origin": "sairam",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.492,
-   "wr_team_star2": 0.476,
+   "wr_team": 0.469,
+   "wr_team_star2": 0.493,
    "wr_team_star3": 0.464,
-   "wr_duel": 0.659,
-   "n": 608,
-   "dmg": 646,
-   "taken": 925,
+   "wr_duel": 0.598,
+   "n": 1274,
+   "dmg": 655,
+   "taken": 904,
    "heal": 1,
    "star_mult": [
-    0.9612,
-    0.9835,
-    1.0335
+    0.9449,
+    0.9711,
+    1.0235
    ]
   },
   {
@@ -1047,18 +1132,18 @@
    "origin": "sairam",
    "cls": "shaman",
    "arche": "dot_target",
-   "wr_team": 0.535,
-   "wr_team_star2": 0.517,
-   "wr_team_star3": 0.505,
+   "wr_team": 0.551,
+   "wr_team_star2": 0.473,
+   "wr_team_star3": 0.49,
    "wr_duel": 0.988,
-   "n": 636,
-   "dmg": 1185,
-   "taken": 671,
-   "heal": 2,
+   "n": 1213,
+   "dmg": 1299,
+   "taken": 692,
+   "heal": 1,
    "star_mult": [
-    1.2367,
-    1.313,
-    1.3596
+    1.3043,
+    1.3327,
+    1.4372
    ]
   },
   {
@@ -1068,18 +1153,18 @@
    "origin": "sairam",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.463,
-   "wr_team_star2": 0.556,
+   "wr_team": 0.483,
+   "wr_team_star2": 0.502,
    "wr_team_star3": 0.504,
-   "wr_duel": 0.451,
-   "n": 585,
-   "dmg": 731,
-   "taken": 765,
+   "wr_duel": 0.366,
+   "n": 1182,
+   "dmg": 720,
+   "taken": 769,
    "heal": 1,
    "star_mult": [
-    0.9019,
-    0.9358,
-    0.8969
+    0.8991,
+    0.9196,
+    0.9134
    ]
   },
   {
@@ -1089,18 +1174,18 @@
    "origin": "karna",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.518,
-   "wr_team_star2": 0.482,
+   "wr_team": 0.495,
+   "wr_team_star2": 0.53,
    "wr_team_star3": 0.468,
-   "wr_duel": 0.037,
-   "n": 583,
-   "dmg": 174,
-   "taken": 1034,
+   "wr_duel": 0.024,
+   "n": 1197,
+   "dmg": 146,
+   "taken": 986,
    "heal": 0,
    "star_mult": [
-    0.6819,
-    0.6755,
-    0.6325
+    0.6697,
+    0.6746,
+    0.6287
    ]
   },
   {
@@ -1110,18 +1195,18 @@
    "origin": "karna",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.528,
-   "wr_team_star2": 0.538,
-   "wr_team_star3": 0.514,
-   "wr_duel": 0.268,
-   "n": 616,
-   "dmg": 1162,
-   "taken": 464,
-   "heal": 0,
+   "wr_team": 0.508,
+   "wr_team_star2": 0.512,
+   "wr_team_star3": 0.501,
+   "wr_duel": 0.207,
+   "n": 1192,
+   "dmg": 1076,
+   "taken": 484,
+   "heal": 1,
    "star_mult": [
-    0.9472,
-    0.9989,
-    1.0406
+    0.9731,
+    0.9985,
+    1.0623
    ]
   },
   {
@@ -1131,18 +1216,18 @@
    "origin": "karna",
    "cls": "guardian",
    "arche": "shield_self",
-   "wr_team": 0.509,
-   "wr_team_star2": 0.444,
-   "wr_team_star3": 0.52,
+   "wr_team": 0.483,
+   "wr_team_star2": 0.497,
+   "wr_team_star3": 0.482,
    "wr_duel": 0.024,
-   "n": 578,
-   "dmg": 197,
-   "taken": 1148,
+   "n": 1255,
+   "dmg": 153,
+   "taken": 1061,
    "heal": 0,
    "star_mult": [
-    0.7423,
-    0.78,
-    0.772
+    0.7023,
+    0.7495,
+    0.7411
    ]
   },
   {
@@ -1152,18 +1237,18 @@
    "origin": "lies",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.507,
-   "wr_team_star2": 0.515,
-   "wr_team_star3": 0.554,
-   "wr_duel": 0.268,
-   "n": 614,
-   "dmg": 1163,
-   "taken": 471,
+   "wr_team": 0.477,
+   "wr_team_star2": 0.482,
+   "wr_team_star3": 0.549,
+   "wr_duel": 0.256,
+   "n": 1129,
+   "dmg": 1142,
+   "taken": 515,
    "heal": 1,
    "star_mult": [
-    0.9423,
-    0.9872,
-    1.0502
+    0.9918,
+    1.0148,
+    1.1017
    ]
   },
   {
@@ -1173,18 +1258,18 @@
    "origin": "lies",
    "cls": "mage",
    "arche": "chain",
-   "wr_team": 0.489,
-   "wr_team_star2": 0.492,
-   "wr_team_star3": 0.507,
-   "wr_duel": 0.256,
-   "n": 583,
-   "dmg": 1387,
-   "taken": 544,
+   "wr_team": 0.523,
+   "wr_team_star2": 0.489,
+   "wr_team_star3": 0.537,
+   "wr_duel": 0.22,
+   "n": 1225,
+   "dmg": 1376,
+   "taken": 572,
    "heal": 1,
    "star_mult": [
-    1.051,
-    1.1133,
-    1.1444
+    1.0991,
+    1.1405,
+    1.19
    ]
   },
   {
@@ -1194,18 +1279,18 @@
    "origin": "lies",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.482,
-   "wr_team_star2": 0.528,
-   "wr_team_star3": 0.508,
-   "wr_duel": 0.451,
-   "n": 614,
-   "dmg": 753,
-   "taken": 771,
-   "heal": 0,
+   "wr_team": 0.455,
+   "wr_team_star2": 0.452,
+   "wr_team_star3": 0.521,
+   "wr_duel": 0.341,
+   "n": 1190,
+   "dmg": 686,
+   "taken": 751,
+   "heal": 1,
    "star_mult": [
-    0.8931,
-    0.9031,
-    0.9027
+    0.8736,
+    0.8851,
+    0.8922
    ]
   },
   {
@@ -1215,18 +1300,18 @@
    "origin": "elowen",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.492,
-   "wr_team_star2": 0.499,
-   "wr_team_star3": 0.474,
-   "wr_duel": 0.11,
-   "n": 594,
-   "dmg": 258,
-   "taken": 1028,
-   "heal": 10,
+   "wr_team": 0.502,
+   "wr_team_star2": 0.554,
+   "wr_team_star3": 0.485,
+   "wr_duel": 0.085,
+   "n": 1168,
+   "dmg": 255,
+   "taken": 1025,
+   "heal": 14,
    "star_mult": [
-    0.8434,
-    0.8951,
-    0.8974
+    0.8269,
+    0.8814,
+    0.9033
    ]
   },
   {
@@ -1236,18 +1321,18 @@
    "origin": "elowen",
    "cls": "bard",
    "arche": "buff_ap_allies",
-   "wr_team": 0.496,
-   "wr_team_star2": 0.531,
-   "wr_team_star3": 0.492,
-   "wr_duel": 0.732,
-   "n": 573,
-   "dmg": 1113,
-   "taken": 917,
-   "heal": 28,
+   "wr_team": 0.5,
+   "wr_team_star2": 0.484,
+   "wr_team_star3": 0.546,
+   "wr_duel": 0.768,
+   "n": 1176,
+   "dmg": 1229,
+   "taken": 873,
+   "heal": 31,
    "star_mult": [
-    1.5396,
-    1.6177,
-    1.6567
+    1.5696,
+    1.6313,
+    1.7362
    ]
   },
   {
@@ -1257,18 +1342,18 @@
    "origin": "elowen",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.492,
-   "wr_team_star2": 0.512,
-   "wr_team_star3": 0.539,
-   "wr_duel": 0.695,
-   "n": 608,
-   "dmg": 650,
-   "taken": 693,
-   "heal": 25,
+   "wr_team": 0.515,
+   "wr_team_star2": 0.553,
+   "wr_team_star3": 0.521,
+   "wr_duel": 0.72,
+   "n": 1244,
+   "dmg": 691,
+   "taken": 682,
+   "heal": 23,
    "star_mult": [
-    1.075,
-    1.075,
-    1.0935
+    1.0854,
+    1.0827,
+    1.1064
    ]
   },
   {
@@ -1278,18 +1363,18 @@
    "origin": "grandur",
    "cls": "ranger",
    "arche": "chain_ad",
-   "wr_team": 0.501,
-   "wr_team_star2": 0.554,
-   "wr_team_star3": 0.493,
-   "wr_duel": 0.159,
-   "n": 593,
-   "dmg": 1162,
-   "taken": 464,
+   "wr_team": 0.48,
+   "wr_team_star2": 0.494,
+   "wr_team_star3": 0.498,
+   "wr_duel": 0.134,
+   "n": 1184,
+   "dmg": 1061,
+   "taken": 496,
    "heal": 1,
    "star_mult": [
-    0.863,
-    0.9327,
-    0.9801
+    0.9054,
+    0.9433,
+    1.0315
    ]
   },
   {
@@ -1299,18 +1384,18 @@
    "origin": "grandur",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.539,
-   "wr_team_star2": 0.508,
-   "wr_team_star3": 0.441,
-   "wr_duel": 0.805,
-   "n": 599,
-   "dmg": 660,
-   "taken": 733,
+   "wr_team": 0.525,
+   "wr_team_star2": 0.464,
+   "wr_team_star3": 0.509,
+   "wr_duel": 0.817,
+   "n": 1131,
+   "dmg": 584,
+   "taken": 709,
    "heal": 1,
    "star_mult": [
-    1.0371,
-    1.0272,
-    1.0209
+    1.0039,
+    0.9949,
+    1.042
    ]
   },
   {
@@ -1320,18 +1405,18 @@
    "origin": "grandur",
    "cls": "bard",
    "arche": "buff_ad_allies",
-   "wr_team": 0.528,
-   "wr_team_star2": 0.477,
-   "wr_team_star3": 0.509,
-   "wr_duel": 0.317,
-   "n": 600,
-   "dmg": 1021,
-   "taken": 784,
+   "wr_team": 0.504,
+   "wr_team_star2": 0.5,
+   "wr_team_star3": 0.533,
+   "wr_duel": 0.476,
+   "n": 1178,
+   "dmg": 1097,
+   "taken": 765,
    "heal": 1,
    "star_mult": [
-    1.4135,
-    1.3623,
-    1.2264
+    1.4628,
+    1.4521,
+    1.2713
    ]
   },
   {
@@ -1341,18 +1426,18 @@
    "origin": "neos",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.465,
-   "wr_team_star2": 0.506,
-   "wr_team_star3": 0.508,
-   "wr_duel": 0.866,
-   "n": 589,
-   "dmg": 607,
-   "taken": 721,
+   "wr_team": 0.512,
+   "wr_team_star2": 0.53,
+   "wr_team_star3": 0.49,
+   "wr_duel": 0.854,
+   "n": 1239,
+   "dmg": 586,
+   "taken": 709,
    "heal": 1,
    "star_mult": [
-    1.0586,
-    1.0578,
-    1.0781
+    1.0429,
+    1.0552,
+    1.0708
    ]
   },
   {
@@ -1362,18 +1447,18 @@
    "origin": "neos",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.525,
-   "wr_team_star2": 0.524,
-   "wr_team_star3": 0.475,
-   "wr_duel": 0.427,
-   "n": 632,
-   "dmg": 754,
-   "taken": 608,
-   "heal": 6,
+   "wr_team": 0.521,
+   "wr_team_star2": 0.527,
+   "wr_team_star3": 0.5,
+   "wr_duel": 0.5,
+   "n": 1178,
+   "dmg": 773,
+   "taken": 587,
+   "heal": 5,
    "star_mult": [
-    1.237,
-    1.2695,
-    1.255
+    1.2399,
+    1.2575,
+    1.2564
    ]
   },
   {
@@ -1383,18 +1468,18 @@
    "origin": "neos",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.522,
+   "wr_team": 0.543,
    "wr_team_star2": 0.482,
-   "wr_team_star3": 0.456,
-   "wr_duel": 0.305,
-   "n": 588,
-   "dmg": 737,
-   "taken": 777,
+   "wr_team_star3": 0.485,
+   "wr_duel": 0.28,
+   "n": 1185,
+   "dmg": 786,
+   "taken": 795,
    "heal": 1,
    "star_mult": [
-    0.8926,
-    0.8954,
-    0.8994
+    0.9126,
+    0.9001,
+    0.9101
    ]
   },
   {
@@ -1404,18 +1489,18 @@
    "origin": "nox",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.527,
-   "wr_team_star2": 0.497,
-   "wr_team_star3": 0.466,
-   "wr_duel": 0.707,
-   "n": 567,
-   "dmg": 726,
-   "taken": 750,
-   "heal": 571,
+   "wr_team": 0.48,
+   "wr_team_star2": 0.552,
+   "wr_team_star3": 0.541,
+   "wr_duel": 0.732,
+   "n": 1281,
+   "dmg": 647,
+   "taken": 796,
+   "heal": 525,
    "star_mult": [
-    0.9036,
-    0.8617,
-    0.767
+    0.9032,
+    0.8669,
+    0.7708
    ]
   },
   {
@@ -1425,18 +1510,18 @@
    "origin": "nox",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.47,
-   "wr_team_star2": 0.504,
-   "wr_team_star3": 0.452,
-   "wr_duel": 0.951,
-   "n": 577,
-   "dmg": 653,
-   "taken": 893,
-   "heal": 8,
+   "wr_team": 0.479,
+   "wr_team_star2": 0.48,
+   "wr_team_star3": 0.489,
+   "wr_duel": 0.902,
+   "n": 1189,
+   "dmg": 698,
+   "taken": 879,
+   "heal": 10,
    "star_mult": [
-    1.1528,
-    1.1713,
-    1.194
+    1.1304,
+    1.1296,
+    1.1939
    ]
   },
   {
@@ -1446,18 +1531,18 @@
    "origin": "nox",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.514,
-   "wr_team_star2": 0.476,
-   "wr_team_star3": 0.49,
-   "wr_duel": 0.646,
-   "n": 603,
-   "dmg": 658,
-   "taken": 659,
-   "heal": 13,
+   "wr_team": 0.489,
+   "wr_team_star2": 0.539,
+   "wr_team_star3": 0.47,
+   "wr_duel": 0.695,
+   "n": 1236,
+   "dmg": 652,
+   "taken": 664,
+   "heal": 11,
    "star_mult": [
-    1.0503,
-    1.0468,
-    1.052
+    1.0533,
+    1.0654,
+    1.0703
    ]
   },
   {
@@ -1467,18 +1552,18 @@
    "origin": "celestia",
    "cls": "knight",
    "arche": "stun_st",
-   "wr_team": 0.502,
-   "wr_team_star2": 0.495,
-   "wr_team_star3": 0.517,
-   "wr_duel": 0.5,
-   "n": 592,
-   "dmg": 484,
-   "taken": 871,
-   "heal": 0,
+   "wr_team": 0.466,
+   "wr_team_star2": 0.5,
+   "wr_team_star3": 0.5,
+   "wr_duel": 0.463,
+   "n": 1194,
+   "dmg": 491,
+   "taken": 880,
+   "heal": 1,
    "star_mult": [
-    0.8966,
-    0.9051,
-    0.9003
+    0.8845,
+    0.8877,
+    0.9097
    ]
   },
   {
@@ -1488,18 +1573,18 @@
    "origin": "celestia",
    "cls": "shaman",
    "arche": "armor_shred",
-   "wr_team": 0.491,
-   "wr_team_star2": 0.502,
-   "wr_team_star3": 0.452,
-   "wr_duel": 0.841,
-   "n": 619,
-   "dmg": 1126,
-   "taken": 685,
+   "wr_team": 0.479,
+   "wr_team_star2": 0.481,
+   "wr_team_star3": 0.49,
+   "wr_duel": 0.866,
+   "n": 1143,
+   "dmg": 1234,
+   "taken": 688,
    "heal": 1,
    "star_mult": [
-    1.1706,
-    1.2412,
-    1.2278
+    1.2036,
+    1.2314,
+    1.2486
    ]
   },
   {
@@ -1509,18 +1594,18 @@
    "origin": "celestia",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.504,
-   "wr_team_star2": 0.502,
-   "wr_team_star3": 0.565,
-   "wr_duel": 0.902,
-   "n": 587,
-   "dmg": 651,
-   "taken": 851,
-   "heal": 1,
+   "wr_team": 0.461,
+   "wr_team_star2": 0.542,
+   "wr_team_star3": 0.463,
+   "wr_duel": 0.915,
+   "n": 1203,
+   "dmg": 620,
+   "taken": 821,
+   "heal": 0,
    "star_mult": [
-    1.153,
-    1.1537,
-    1.1983
+    1.1049,
+    1.1266,
+    1.1572
    ]
   },
   {
@@ -1530,18 +1615,18 @@
    "origin": "dragonkin",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.498,
-   "wr_team_star2": 0.509,
-   "wr_team_star3": 0.503,
-   "wr_duel": 0.817,
-   "n": 590,
-   "dmg": 646,
-   "taken": 749,
-   "heal": 0,
+   "wr_team": 0.549,
+   "wr_team_star2": 0.491,
+   "wr_team_star3": 0.495,
+   "wr_duel": 0.768,
+   "n": 1164,
+   "dmg": 647,
+   "taken": 734,
+   "heal": 1,
    "star_mult": [
-    1.0143,
-    0.9971,
-    1.0176
+    1.0008,
+    0.9802,
+    1.0047
    ]
   },
   {
@@ -1551,18 +1636,18 @@
    "origin": "dragonkin",
    "cls": "artillerist",
    "arche": "aoe_target_ad",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.43,
-   "wr_team_star3": 0.496,
-   "wr_duel": 0.207,
-   "n": 584,
-   "dmg": 1293,
-   "taken": 526,
+   "wr_team": 0.52,
+   "wr_team_star2": 0.519,
+   "wr_team_star3": 0.438,
+   "wr_duel": 0.366,
+   "n": 1183,
+   "dmg": 1267,
+   "taken": 534,
    "heal": 1,
    "star_mult": [
-    1.0444,
-    1.0665,
-    1.1554
+    1.0875,
+    1.12,
+    1.1502
    ]
   },
   {
@@ -1572,18 +1657,18 @@
    "origin": "dragonkin",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.463,
-   "wr_team_star2": 0.455,
-   "wr_team_star3": 0.477,
-   "wr_duel": 0.5,
-   "n": 603,
-   "dmg": 625,
-   "taken": 682,
-   "heal": 7,
+   "wr_team": 0.517,
+   "wr_team_star2": 0.432,
+   "wr_team_star3": 0.53,
+   "wr_duel": 0.573,
+   "n": 1212,
+   "dmg": 668,
+   "taken": 664,
+   "heal": 6,
    "star_mult": [
-    0.9903,
-    0.9966,
-    1.0404
+    1.0052,
+    1.0082,
+    1.0386
    ]
   },
   {
@@ -1593,18 +1678,18 @@
    "origin": "torga",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.473,
-   "wr_team_star2": 0.491,
-   "wr_team_star3": 0.512,
+   "wr_team": 0.484,
+   "wr_team_star2": 0.471,
+   "wr_team_star3": 0.461,
    "wr_duel": 0.11,
-   "n": 603,
-   "dmg": 206,
-   "taken": 1084,
+   "n": 1215,
+   "dmg": 173,
+   "taken": 1021,
    "heal": 0,
    "star_mult": [
-    0.7369,
-    0.7073,
-    0.675
+    0.7252,
+    0.7026,
+    0.6517
    ]
   },
   {
@@ -1614,18 +1699,18 @@
    "origin": "torga",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.498,
-   "wr_team_star2": 0.489,
-   "wr_team_star3": 0.528,
-   "wr_duel": 0.329,
-   "n": 623,
-   "dmg": 740,
-   "taken": 627,
-   "heal": 11,
+   "wr_team": 0.52,
+   "wr_team_star2": 0.572,
+   "wr_team_star3": 0.508,
+   "wr_duel": 0.415,
+   "n": 1186,
+   "dmg": 764,
+   "taken": 611,
+   "heal": 10,
    "star_mult": [
-    1.2873,
-    1.2675,
-    1.2965
+    1.2904,
+    1.2694,
+    1.2833
    ]
   },
   {
@@ -1635,18 +1720,18 @@
    "origin": "torga",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.505,
-   "wr_team_star2": 0.494,
-   "wr_team_star3": 0.531,
+   "wr_team": 0.488,
+   "wr_team_star2": 0.449,
+   "wr_team_star3": 0.541,
    "wr_duel": 0.549,
-   "n": 616,
-   "dmg": 586,
-   "taken": 877,
-   "heal": 717,
+   "n": 1176,
+   "dmg": 595,
+   "taken": 941,
+   "heal": 729,
    "star_mult": [
-    0.9969,
-    0.9523,
-    0.8601
+    1.025,
+    0.9646,
+    0.8762
    ]
   },
   {
@@ -1656,18 +1741,18 @@
    "origin": "lumen",
    "cls": "warrior",
    "arche": "lifesteal_strike",
-   "wr_team": 0.519,
-   "wr_team_star2": 0.468,
-   "wr_team_star3": 0.51,
-   "wr_duel": 0.659,
-   "n": 632,
-   "dmg": 519,
-   "taken": 965,
-   "heal": 73,
+   "wr_team": 0.5,
+   "wr_team_star2": 0.498,
+   "wr_team_star3": 0.518,
+   "wr_duel": 0.622,
+   "n": 1209,
+   "dmg": 503,
+   "taken": 939,
+   "heal": 68,
    "star_mult": [
-    0.8932,
-    0.9125,
-    0.9481
+    0.8723,
+    0.9034,
+    0.9413
    ]
   },
   {
@@ -1677,18 +1762,18 @@
    "origin": "lumen",
    "cls": "shaman",
    "arche": "stun_st",
-   "wr_team": 0.519,
-   "wr_team_star2": 0.472,
-   "wr_team_star3": 0.554,
-   "wr_duel": 0.537,
-   "n": 597,
-   "dmg": 1054,
-   "taken": 678,
+   "wr_team": 0.503,
+   "wr_team_star2": 0.516,
+   "wr_team_star3": 0.522,
+   "wr_duel": 0.573,
+   "n": 1233,
+   "dmg": 1089,
+   "taken": 683,
    "heal": 1,
    "star_mult": [
-    1.1133,
-    1.1165,
-    1.116
+    1.1346,
+    1.121,
+    1.1035
    ]
   },
   {
@@ -1698,18 +1783,18 @@
    "origin": "lumen",
    "cls": "artillerist",
    "arche": "burst_ad",
-   "wr_team": 0.503,
-   "wr_team_star2": 0.538,
-   "wr_team_star3": 0.469,
-   "wr_duel": 0.341,
-   "n": 626,
-   "dmg": 1205,
-   "taken": 486,
-   "heal": 0,
+   "wr_team": 0.523,
+   "wr_team_star2": 0.487,
+   "wr_team_star3": 0.471,
+   "wr_duel": 0.268,
+   "n": 1217,
+   "dmg": 1196,
+   "taken": 512,
+   "heal": 1,
    "star_mult": [
-    1.0121,
-    1.0465,
-    1.0312
+    1.0447,
+    1.0383,
+    1.0778
    ]
   },
   {
@@ -1719,18 +1804,18 @@
    "origin": "freelancer",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.511,
-   "wr_team_star2": 0.512,
-   "wr_team_star3": 0.47,
-   "wr_duel": 0.659,
-   "n": 581,
-   "dmg": 600,
-   "taken": 877,
-   "heal": 711,
+   "wr_team": 0.523,
+   "wr_team_star2": 0.507,
+   "wr_team_star3": 0.49,
+   "wr_duel": 0.646,
+   "n": 1220,
+   "dmg": 590,
+   "taken": 945,
+   "heal": 719,
    "star_mult": [
-    0.9884,
-    0.9708,
-    0.8679
+    1.0222,
+    0.9742,
+    0.8674
    ]
   },
   {
@@ -1740,18 +1825,18 @@
    "origin": "freelancer",
    "cls": "guardian",
    "arche": "shield_self",
-   "wr_team": 0.494,
-   "wr_team_star2": 0.471,
-   "wr_team_star3": 0.493,
-   "wr_duel": 0.085,
-   "n": 591,
-   "dmg": 250,
-   "taken": 1293,
+   "wr_team": 0.518,
+   "wr_team_star2": 0.482,
+   "wr_team_star3": 0.478,
+   "wr_duel": 0.073,
+   "n": 1150,
+   "dmg": 242,
+   "taken": 1234,
    "heal": 0,
    "star_mult": [
-    0.7951,
-    0.7995,
-    0.7707
+    0.7752,
+    0.7892,
+    0.7519
    ]
   },
   {
@@ -1761,18 +1846,18 @@
    "origin": "freelancer",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.479,
-   "wr_team_star2": 0.473,
-   "wr_team_star3": 0.509,
-   "wr_duel": 0.39,
-   "n": 576,
-   "dmg": 753,
-   "taken": 628,
-   "heal": 10,
+   "wr_team": 0.498,
+   "wr_team_star2": 0.487,
+   "wr_team_star3": 0.506,
+   "wr_duel": 0.329,
+   "n": 1226,
+   "dmg": 750,
+   "taken": 615,
+   "heal": 9,
    "star_mult": [
-    1.202,
-    1.2125,
-    1.2161
+    1.1982,
+    1.1922,
+    1.2187
    ]
   },
   {
@@ -1782,18 +1867,18 @@
    "origin": "astel",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.491,
-   "wr_team_star2": 0.482,
-   "wr_team_star3": 0.486,
-   "wr_duel": 0.049,
-   "n": 607,
-   "dmg": 185,
-   "taken": 1227,
+   "wr_team": 0.468,
+   "wr_team_star2": 0.526,
+   "wr_team_star3": 0.512,
+   "wr_duel": 0.012,
+   "n": 1219,
+   "dmg": 156,
+   "taken": 1142,
    "heal": 0,
    "star_mult": [
-    0.6975,
-    0.6805,
-    0.6236
+    0.6624,
+    0.6651,
+    0.6155
    ]
   },
   {
@@ -1803,18 +1888,18 @@
    "origin": "astel",
    "cls": "mage",
    "arche": "burst_st",
-   "wr_team": 0.524,
-   "wr_team_star2": 0.531,
-   "wr_team_star3": 0.506,
+   "wr_team": 0.499,
+   "wr_team_star2": 0.461,
+   "wr_team_star3": 0.516,
    "wr_duel": 0.622,
-   "n": 636,
-   "dmg": 1522,
-   "taken": 635,
+   "n": 1134,
+   "dmg": 1437,
+   "taken": 672,
    "heal": 1,
    "star_mult": [
-    1.1643,
-    1.1614,
-    1.1489
+    1.1555,
+    1.1602,
+    1.1599
    ]
   },
   {
@@ -1824,18 +1909,18 @@
    "origin": "astel",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.508,
-   "wr_team_star2": 0.518,
-   "wr_team_star3": 0.503,
-   "wr_duel": 0.561,
-   "n": 571,
-   "dmg": 611,
-   "taken": 967,
-   "heal": 757,
+   "wr_team": 0.526,
+   "wr_team_star2": 0.531,
+   "wr_team_star3": 0.474,
+   "wr_duel": 0.524,
+   "n": 1214,
+   "dmg": 605,
+   "taken": 1055,
+   "heal": 769,
    "star_mult": [
-    0.9196,
-    0.8877,
-    0.784
+    0.9435,
+    0.8808,
+    0.7749
    ]
   },
   {
@@ -1845,18 +1930,18 @@
    "origin": "valheim",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.492,
-   "wr_team_star2": 0.514,
-   "wr_team_star3": 0.496,
-   "wr_duel": 0.085,
-   "n": 565,
-   "dmg": 229,
-   "taken": 1270,
-   "heal": 4,
+   "wr_team": 0.487,
+   "wr_team_star2": 0.481,
+   "wr_team_star3": 0.479,
+   "wr_duel": 0.037,
+   "n": 1190,
+   "dmg": 196,
+   "taken": 1189,
+   "heal": 3,
    "star_mult": [
-    0.7335,
-    0.7176,
-    0.6502
+    0.7099,
+    0.6982,
+    0.6343
    ]
   },
   {
@@ -1866,18 +1951,18 @@
    "origin": "valheim",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.479,
-   "wr_team_star2": 0.523,
-   "wr_team_star3": 0.505,
-   "wr_duel": 0.085,
-   "n": 601,
-   "dmg": 305,
-   "taken": 1219,
+   "wr_team": 0.497,
+   "wr_team_star2": 0.463,
+   "wr_team_star3": 0.475,
+   "wr_duel": 0.098,
+   "n": 1163,
+   "dmg": 309,
+   "taken": 1207,
    "heal": 3,
    "star_mult": [
-    0.8241,
-    0.8557,
-    0.8885
+    0.8159,
+    0.8303,
+    0.8575
    ]
   },
   {
@@ -1887,18 +1972,18 @@
    "origin": "valheim",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.489,
-   "wr_team_star2": 0.504,
-   "wr_team_star3": 0.458,
-   "wr_duel": 0.122,
-   "n": 616,
-   "dmg": 599,
-   "taken": 921,
-   "heal": 876,
+   "wr_team": 0.517,
+   "wr_team_star2": 0.501,
+   "wr_team_star3": 0.509,
+   "wr_duel": 0.171,
+   "n": 1199,
+   "dmg": 669,
+   "taken": 1002,
+   "heal": 893,
    "star_mult": [
-    0.9487,
-    0.9291,
-    0.8569
+    1.0164,
+    0.9697,
+    0.8826
    ]
   },
   {
@@ -1908,18 +1993,18 @@
    "origin": "sairam",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.416,
-   "wr_team_star2": 0.521,
-   "wr_team_star3": 0.499,
-   "wr_duel": 0.073,
-   "n": 651,
-   "dmg": 210,
-   "taken": 1226,
+   "wr_team": 0.488,
+   "wr_team_star2": 0.479,
+   "wr_team_star3": 0.491,
+   "wr_duel": 0.037,
+   "n": 1239,
+   "dmg": 193,
+   "taken": 1191,
    "heal": 0,
    "star_mult": [
-    0.6911,
-    0.6917,
-    0.6335
+    0.6828,
+    0.6655,
+    0.6244
    ]
   },
   {
@@ -1929,18 +2014,18 @@
    "origin": "sairam",
    "cls": "bard",
    "arche": "buff_as_allies",
-   "wr_team": 0.465,
-   "wr_team_star2": 0.486,
+   "wr_team": 0.529,
+   "wr_team_star2": 0.44,
    "wr_team_star3": 0.482,
    "wr_duel": 0.476,
-   "n": 608,
-   "dmg": 1138,
-   "taken": 906,
+   "n": 1224,
+   "dmg": 1255,
+   "taken": 879,
    "heal": 1,
    "star_mult": [
-    1.2712,
-    1.2938,
-    1.1641
+    1.3209,
+    1.2782,
+    1.2065
    ]
   },
   {
@@ -1951,17 +2036,17 @@
    "cls": "engineer",
    "arche": "turret",
    "wr_team": 0.511,
-   "wr_team_star2": 0.518,
+   "wr_team_star2": 0.57,
    "wr_team_star3": 0.47,
-   "wr_duel": 0.744,
-   "n": 589,
-   "dmg": 765,
-   "taken": 800,
-   "heal": 13,
+   "wr_duel": 0.805,
+   "n": 1187,
+   "dmg": 804,
+   "taken": 776,
+   "heal": 10,
    "star_mult": [
-    1.026,
-    1.0563,
-    1.1011
+    1.0259,
+    1.0524,
+    1.0723
    ]
   },
   {
@@ -1971,18 +2056,18 @@
    "origin": "karna",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.518,
-   "wr_team_star2": 0.502,
-   "wr_team_star3": 0.552,
-   "wr_duel": 0.293,
-   "n": 604,
-   "dmg": 1528,
-   "taken": 639,
+   "wr_team": 0.535,
+   "wr_team_star2": 0.471,
+   "wr_team_star3": 0.496,
+   "wr_duel": 0.28,
+   "n": 1223,
+   "dmg": 1472,
+   "taken": 660,
    "heal": 1,
    "star_mult": [
-    1.108,
-    1.1489,
-    1.194
+    1.1349,
+    1.1512,
+    1.2002
    ]
   },
   {
@@ -1992,18 +2077,18 @@
    "origin": "karna",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.51,
-   "wr_team_star2": 0.498,
-   "wr_team_star3": 0.472,
-   "wr_duel": 0.366,
-   "n": 620,
-   "dmg": 832,
-   "taken": 847,
+   "wr_team": 0.505,
+   "wr_team_star2": 0.485,
+   "wr_team_star3": 0.467,
+   "wr_duel": 0.427,
+   "n": 1186,
+   "dmg": 848,
+   "taken": 857,
    "heal": 1,
    "star_mult": [
-    0.8688,
-    0.8866,
-    0.9096
+    0.8717,
+    0.8878,
+    0.9234
    ]
   },
   {
@@ -2013,18 +2098,18 @@
    "origin": "karna",
    "cls": "bard",
    "arche": "buff_ap_allies",
-   "wr_team": 0.507,
-   "wr_team_star2": 0.515,
-   "wr_team_star3": 0.512,
-   "wr_duel": 0.78,
-   "n": 613,
-   "dmg": 1265,
-   "taken": 1002,
+   "wr_team": 0.504,
+   "wr_team_star2": 0.508,
+   "wr_team_star3": 0.525,
+   "wr_duel": 0.805,
+   "n": 1214,
+   "dmg": 1349,
+   "taken": 974,
    "heal": 1,
    "star_mult": [
-    1.5894,
-    1.6938,
-    1.7237
+    1.5985,
+    1.6625,
+    1.7179
    ]
   },
   {
@@ -2034,18 +2119,18 @@
    "origin": "lies",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.517,
-   "wr_team_star2": 0.46,
-   "wr_team_star3": 0.555,
-   "wr_duel": 0.451,
-   "n": 594,
-   "dmg": 846,
-   "taken": 738,
-   "heal": 21,
+   "wr_team": 0.501,
+   "wr_team_star2": 0.489,
+   "wr_team_star3": 0.528,
+   "wr_duel": 0.488,
+   "n": 1189,
+   "dmg": 858,
+   "taken": 711,
+   "heal": 17,
    "star_mult": [
-    1.2584,
-    1.2676,
-    1.3022
+    1.2551,
+    1.256,
+    1.2967
    ]
   },
   {
@@ -2055,18 +2140,18 @@
    "origin": "lies",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.547,
-   "wr_team_star2": 0.519,
-   "wr_team_star3": 0.442,
-   "wr_duel": 0.732,
-   "n": 596,
-   "dmg": 749,
-   "taken": 1063,
+   "wr_team": 0.502,
+   "wr_team_star2": 0.476,
+   "wr_team_star3": 0.463,
+   "wr_duel": 0.561,
+   "n": 1232,
+   "dmg": 730,
+   "taken": 1033,
    "heal": 1,
    "star_mult": [
-    0.9528,
-    0.9899,
-    1.0404
+    0.9273,
+    0.9299,
+    1.0194
    ]
   },
   {
@@ -2076,18 +2161,18 @@
    "origin": "lies",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.518,
-   "wr_team_star2": 0.494,
-   "wr_team_star3": 0.527,
+   "wr_team": 0.495,
+   "wr_team_star2": 0.462,
+   "wr_team_star3": 0.53,
    "wr_duel": 0.622,
-   "n": 604,
-   "dmg": 764,
-   "taken": 784,
-   "heal": 16,
+   "n": 1239,
+   "dmg": 750,
+   "taken": 787,
+   "heal": 13,
    "star_mult": [
-    1.0314,
-    1.0439,
-    1.106
+    1.0187,
+    1.0243,
+    1.0674
    ]
   },
   {
@@ -2097,18 +2182,18 @@
    "origin": "elowen",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.496,
-   "wr_team_star2": 0.48,
-   "wr_team_star3": 0.455,
-   "wr_duel": 0.793,
-   "n": 581,
-   "dmg": 757,
-   "taken": 835,
-   "heal": 12,
+   "wr_team": 0.469,
+   "wr_team_star2": 0.45,
+   "wr_team_star3": 0.509,
+   "wr_duel": 0.805,
+   "n": 1249,
+   "dmg": 654,
+   "taken": 799,
+   "heal": 9,
    "star_mult": [
-    1.0449,
-    1.0364,
-    1.0512
+    1.0137,
+    1.0055,
+    1.0449
    ]
   },
   {
@@ -2118,18 +2203,18 @@
    "origin": "elowen",
    "cls": "shaman",
    "arche": "stun_aoe",
-   "wr_team": 0.474,
-   "wr_team_star2": 0.496,
-   "wr_team_star3": 0.5,
-   "wr_duel": 0.366,
-   "n": 576,
-   "dmg": 1328,
-   "taken": 791,
-   "heal": 17,
+   "wr_team": 0.471,
+   "wr_team_star2": 0.479,
+   "wr_team_star3": 0.505,
+   "wr_duel": 0.256,
+   "n": 1249,
+   "dmg": 1317,
+   "taken": 782,
+   "heal": 16,
    "star_mult": [
-    1.0498,
-    1.0618,
-    1.0138
+    1.0759,
+    1.0302,
+    1.0206
    ]
   },
   {
@@ -2139,18 +2224,18 @@
    "origin": "elowen",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.487,
-   "wr_team_star2": 0.503,
-   "wr_team_star3": 0.515,
-   "wr_duel": 0.537,
-   "n": 633,
-   "dmg": 883,
-   "taken": 878,
-   "heal": 14,
+   "wr_team": 0.498,
+   "wr_team_star2": 0.482,
+   "wr_team_star3": 0.505,
+   "wr_duel": 0.512,
+   "n": 1196,
+   "dmg": 926,
+   "taken": 888,
+   "heal": 15,
    "star_mult": [
-    0.9011,
-    0.9248,
-    0.9397
+    0.9015,
+    0.9146,
+    0.9579
    ]
   },
   {
@@ -2160,18 +2245,18 @@
    "origin": "grandur",
    "cls": "artillerist",
    "arche": "aoe_target_ad",
-   "wr_team": 0.505,
-   "wr_team_star2": 0.519,
-   "wr_team_star3": 0.485,
-   "wr_duel": 0.439,
-   "n": 574,
-   "dmg": 1447,
-   "taken": 601,
-   "heal": 0,
+   "wr_team": 0.49,
+   "wr_team_star2": 0.483,
+   "wr_team_star3": 0.505,
+   "wr_duel": 0.415,
+   "n": 1191,
+   "dmg": 1465,
+   "taken": 627,
+   "heal": 1,
    "star_mult": [
-    1.0799,
-    1.1283,
-    1.1884
+    1.0855,
+    1.1077,
+    1.1988
    ]
   },
   {
@@ -2181,18 +2266,18 @@
    "origin": "grandur",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.548,
-   "wr_team_star2": 0.478,
-   "wr_team_star3": 0.537,
-   "wr_duel": 0.329,
-   "n": 542,
-   "dmg": 867,
-   "taken": 734,
-   "heal": 16,
+   "wr_team": 0.536,
+   "wr_team_star2": 0.481,
+   "wr_team_star3": 0.501,
+   "wr_duel": 0.378,
+   "n": 1214,
+   "dmg": 881,
+   "taken": 706,
+   "heal": 15,
    "star_mult": [
-    1.2661,
-    1.2122,
-    1.3046
+    1.2548,
+    1.2231,
+    1.2908
    ]
   },
   {
@@ -2202,18 +2287,18 @@
    "origin": "grandur",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.503,
-   "wr_team_star2": 0.442,
-   "wr_team_star3": 0.534,
-   "wr_duel": 0.902,
-   "n": 614,
-   "dmg": 769,
-   "taken": 984,
+   "wr_team": 0.495,
+   "wr_team_star2": 0.462,
+   "wr_team_star3": 0.554,
+   "wr_duel": 0.939,
+   "n": 1254,
+   "dmg": 719,
+   "taken": 956,
    "heal": 1,
    "star_mult": [
-    1.1286,
-    1.1463,
-    1.2035
+    1.0905,
+    1.1343,
+    1.1769
    ]
   },
   {
@@ -2223,18 +2308,18 @@
    "origin": "neos",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.521,
-   "wr_team_star3": 0.539,
-   "wr_duel": 0.293,
-   "n": 607,
-   "dmg": 1529,
-   "taken": 666,
+   "wr_team": 0.517,
+   "wr_team_star2": 0.541,
+   "wr_team_star3": 0.47,
+   "wr_duel": 0.317,
+   "n": 1184,
+   "dmg": 1572,
+   "taken": 669,
    "heal": 1,
    "star_mult": [
-    1.1401,
-    1.1786,
-    1.2113
+    1.1754,
+    1.1971,
+    1.1944
    ]
   },
   {
@@ -2244,18 +2329,18 @@
    "origin": "neos",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.505,
-   "wr_team_star2": 0.509,
-   "wr_team_star3": 0.487,
-   "wr_duel": 0.134,
-   "n": 618,
-   "dmg": 618,
-   "taken": 897,
-   "heal": 871,
+   "wr_team": 0.506,
+   "wr_team_star2": 0.516,
+   "wr_team_star3": 0.465,
+   "wr_duel": 0.22,
+   "n": 1207,
+   "dmg": 632,
+   "taken": 944,
+   "heal": 812,
    "star_mult": [
-    0.9722,
-    0.9327,
-    0.8568
+    1.0185,
+    0.9675,
+    0.8858
    ]
   },
   {
@@ -2265,18 +2350,18 @@
    "origin": "neos",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.518,
-   "wr_team_star2": 0.517,
-   "wr_team_star3": 0.508,
-   "wr_duel": 0.732,
-   "n": 602,
-   "dmg": 716,
-   "taken": 1028,
+   "wr_team": 0.506,
+   "wr_team_star2": 0.472,
+   "wr_team_star3": 0.546,
+   "wr_duel": 0.707,
+   "n": 1175,
+   "dmg": 704,
+   "taken": 1001,
    "heal": 1,
    "star_mult": [
-    0.9686,
-    1.0233,
-    1.0666
+    0.9502,
+    0.989,
+    1.0389
    ]
   },
   {
@@ -2286,18 +2371,18 @@
    "origin": "nox",
    "cls": "assassin",
    "arche": "lifesteal_strike",
-   "wr_team": 0.516,
-   "wr_team_star2": 0.543,
-   "wr_team_star3": 0.49,
-   "wr_duel": 1.0,
-   "n": 640,
-   "dmg": 722,
-   "taken": 975,
-   "heal": 132,
+   "wr_team": 0.526,
+   "wr_team_star2": 0.511,
+   "wr_team_star3": 0.516,
+   "wr_duel": 0.976,
+   "n": 1169,
+   "dmg": 679,
+   "taken": 953,
+   "heal": 125,
    "star_mult": [
-    1.0208,
-    1.0469,
-    1.0288
+    1.008,
+    1.0049,
+    1.0218
    ]
   },
   {
@@ -2307,18 +2392,18 @@
    "origin": "nox",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.491,
-   "wr_team_star2": 0.482,
-   "wr_team_star3": 0.493,
-   "wr_duel": 0.561,
-   "n": 578,
-   "dmg": 955,
-   "taken": 928,
-   "heal": 17,
+   "wr_team": 0.48,
+   "wr_team_star2": 0.511,
+   "wr_team_star3": 0.473,
+   "wr_duel": 0.573,
+   "n": 1149,
+   "dmg": 850,
+   "taken": 881,
+   "heal": 14,
    "star_mult": [
-    0.9141,
-    0.9,
-    0.9144
+    0.8832,
+    0.898,
+    0.934
    ]
   },
   {
@@ -2328,18 +2413,18 @@
    "origin": "nox",
    "cls": "guardian",
    "arche": "shield_self",
-   "wr_team": 0.484,
-   "wr_team_star2": 0.505,
-   "wr_team_star3": 0.49,
-   "wr_duel": 0.134,
-   "n": 603,
-   "dmg": 288,
-   "taken": 1439,
+   "wr_team": 0.515,
+   "wr_team_star2": 0.521,
+   "wr_team_star3": 0.495,
+   "wr_duel": 0.11,
+   "n": 1257,
+   "dmg": 267,
+   "taken": 1375,
    "heal": 4,
    "star_mult": [
-    0.7821,
-    0.7828,
-    0.7337
+    0.753,
+    0.7565,
+    0.7297
    ]
   },
   {
@@ -2349,18 +2434,18 @@
    "origin": "celestia",
    "cls": "ranger",
    "arche": "chain_ad",
-   "wr_team": 0.469,
-   "wr_team_star2": 0.469,
-   "wr_team_star3": 0.503,
-   "wr_duel": 0.232,
-   "n": 576,
-   "dmg": 1369,
-   "taken": 554,
+   "wr_team": 0.485,
+   "wr_team_star2": 0.529,
+   "wr_team_star3": 0.48,
+   "wr_duel": 0.256,
+   "n": 1216,
+   "dmg": 1312,
+   "taken": 576,
    "heal": 1,
    "star_mult": [
-    0.8893,
-    0.9578,
-    1.0291
+    0.9264,
+    0.9722,
+    1.0487
    ]
   },
   {
@@ -2370,18 +2455,18 @@
    "origin": "celestia",
    "cls": "artillerist",
    "arche": "aoe_target",
-   "wr_team": 0.498,
-   "wr_team_star2": 0.506,
-   "wr_team_star3": 0.501,
-   "wr_duel": 0.341,
-   "n": 568,
-   "dmg": 1481,
-   "taken": 553,
+   "wr_team": 0.492,
+   "wr_team_star2": 0.526,
+   "wr_team_star3": 0.486,
+   "wr_duel": 0.39,
+   "n": 1180,
+   "dmg": 1404,
+   "taken": 614,
    "heal": 1,
    "star_mult": [
-    1.0435,
-    1.0888,
-    1.1583
+    1.0594,
+    1.1093,
+    1.1752
    ]
   },
   {
@@ -2391,18 +2476,18 @@
    "origin": "celestia",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.487,
-   "wr_team_star2": 0.397,
-   "wr_team_star3": 0.538,
-   "wr_duel": 0.622,
-   "n": 593,
-   "dmg": 760,
-   "taken": 781,
-   "heal": 13,
+   "wr_team": 0.484,
+   "wr_team_star2": 0.517,
+   "wr_team_star3": 0.481,
+   "wr_duel": 0.671,
+   "n": 1160,
+   "dmg": 749,
+   "taken": 782,
+   "heal": 14,
    "star_mult": [
-    1.0633,
-    1.0652,
-    1.1464
+    1.0498,
+    1.0593,
+    1.1153
    ]
   },
   {
@@ -2412,18 +2497,18 @@
    "origin": "dragonkin",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.527,
-   "wr_team_star3": 0.501,
+   "wr_team": 0.49,
+   "wr_team_star2": 0.521,
+   "wr_team_star3": 0.477,
    "wr_duel": 0.902,
-   "n": 576,
-   "dmg": 724,
-   "taken": 1038,
+   "n": 1211,
+   "dmg": 731,
+   "taken": 1006,
    "heal": 1,
    "star_mult": [
-    1.1015,
-    1.1775,
-    1.2077
+    1.0718,
+    1.1375,
+    1.1407
    ]
   },
   {
@@ -2433,18 +2518,18 @@
    "origin": "dragonkin",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.474,
-   "wr_team_star2": 0.539,
-   "wr_team_star3": 0.441,
-   "wr_duel": 0.451,
-   "n": 586,
-   "dmg": 1277,
+   "wr_team": 0.501,
+   "wr_team_star2": 0.522,
+   "wr_team_star3": 0.481,
+   "wr_duel": 0.415,
+   "n": 1180,
+   "dmg": 1284,
    "taken": 611,
-   "heal": 0,
+   "heal": 1,
    "star_mult": [
-    0.9694,
-    1.046,
-    1.0841
+    0.9909,
+    1.0288,
+    1.0783
    ]
   },
   {
@@ -2454,18 +2539,18 @@
    "origin": "dragonkin",
    "cls": "shaman",
    "arche": "dot_target",
-   "wr_team": 0.516,
-   "wr_team_star2": 0.517,
-   "wr_team_star3": 0.422,
-   "wr_duel": 0.927,
-   "n": 605,
-   "dmg": 1284,
-   "taken": 850,
+   "wr_team": 0.481,
+   "wr_team_star2": 0.477,
+   "wr_team_star3": 0.486,
+   "wr_duel": 0.963,
+   "n": 1214,
+   "dmg": 1396,
+   "taken": 833,
    "heal": 1,
    "star_mult": [
-    1.1356,
-    1.2116,
-    1.2456
+    1.1733,
+    1.2352,
+    1.2792
    ]
   },
   {
@@ -2475,18 +2560,18 @@
    "origin": "torga",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.521,
-   "wr_team_star2": 0.511,
-   "wr_team_star3": 0.462,
-   "wr_duel": 0.963,
-   "n": 597,
-   "dmg": 808,
-   "taken": 1020,
+   "wr_team": 0.499,
+   "wr_team_star2": 0.53,
+   "wr_team_star3": 0.504,
+   "wr_duel": 0.939,
+   "n": 1151,
+   "dmg": 803,
+   "taken": 997,
    "heal": 1,
    "star_mult": [
-    1.1446,
-    1.1698,
-    1.2433
+    1.1128,
+    1.1436,
+    1.2051
    ]
   },
   {
@@ -2496,18 +2581,18 @@
    "origin": "torga",
    "cls": "artillerist",
    "arche": "aoe_target_ad",
-   "wr_team": 0.544,
-   "wr_team_star2": 0.484,
-   "wr_team_star3": 0.494,
-   "wr_duel": 0.463,
-   "n": 616,
-   "dmg": 1484,
-   "taken": 575,
+   "wr_team": 0.5,
+   "wr_team_star2": 0.548,
+   "wr_team_star3": 0.506,
+   "wr_duel": 0.512,
+   "n": 1141,
+   "dmg": 1469,
+   "taken": 591,
    "heal": 1,
    "star_mult": [
-    1.099,
-    1.1465,
-    1.1844
+    1.1095,
+    1.1651,
+    1.204
    ]
   },
   {
@@ -2517,18 +2602,18 @@
    "origin": "torga",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.489,
-   "wr_team_star2": 0.521,
-   "wr_team_star3": 0.534,
-   "wr_duel": 0.11,
-   "n": 593,
-   "dmg": 305,
-   "taken": 1204,
+   "wr_team": 0.525,
+   "wr_team_star2": 0.528,
+   "wr_team_star3": 0.532,
+   "wr_duel": 0.098,
+   "n": 1187,
+   "dmg": 302,
+   "taken": 1194,
    "heal": 0,
    "star_mult": [
-    0.8181,
-    0.837,
-    0.8389
+    0.7928,
+    0.8256,
+    0.842
    ]
   },
   {
@@ -2538,18 +2623,18 @@
    "origin": "lumen",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.46,
+   "wr_team": 0.495,
    "wr_team_star2": 0.498,
-   "wr_team_star3": 0.481,
-   "wr_duel": 0.463,
-   "n": 572,
-   "dmg": 829,
-   "taken": 800,
-   "heal": 18,
+   "wr_team_star3": 0.532,
+   "wr_duel": 0.427,
+   "n": 1249,
+   "dmg": 849,
+   "taken": 774,
+   "heal": 15,
    "star_mult": [
-    1.2543,
-    1.2724,
-    1.295
+    1.2636,
+    1.2523,
+    1.2597
    ]
   },
   {
@@ -2559,18 +2644,18 @@
    "origin": "lumen",
    "cls": "ranger",
    "arche": "chain_ad",
-   "wr_team": 0.556,
-   "wr_team_star2": 0.45,
-   "wr_team_star3": 0.523,
-   "wr_duel": 0.195,
-   "n": 629,
-   "dmg": 1425,
-   "taken": 571,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.496,
+   "wr_team_star3": 0.499,
+   "wr_duel": 0.183,
+   "n": 1207,
+   "dmg": 1216,
+   "taken": 603,
    "heal": 1,
    "star_mult": [
-    0.8957,
-    0.9337,
-    1.039
+    0.8919,
+    0.9378,
+    1.0255
    ]
   },
   {
@@ -2580,18 +2665,18 @@
    "origin": "lumen",
    "cls": "bard",
    "arche": "buff_ap_allies",
-   "wr_team": 0.51,
-   "wr_team_star2": 0.488,
-   "wr_team_star3": 0.536,
-   "wr_duel": 0.793,
-   "n": 630,
-   "dmg": 1286,
-   "taken": 1069,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.525,
+   "wr_team_star3": 0.495,
+   "wr_duel": 0.805,
+   "n": 1247,
+   "dmg": 1377,
+   "taken": 1044,
    "heal": 1,
    "star_mult": [
-    1.609,
-    1.7107,
-    1.7093
+    1.6212,
+    1.693,
+    1.6961
    ]
   },
   {
@@ -2601,18 +2686,18 @@
    "origin": "freelancer",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.473,
-   "wr_team_star2": 0.528,
-   "wr_team_star3": 0.528,
-   "wr_duel": 0.634,
-   "n": 632,
-   "dmg": 719,
-   "taken": 1051,
+   "wr_team": 0.482,
+   "wr_team_star2": 0.567,
+   "wr_team_star3": 0.546,
+   "wr_duel": 0.695,
+   "n": 1155,
+   "dmg": 727,
+   "taken": 1028,
    "heal": 1,
    "star_mult": [
-    0.9612,
-    0.9796,
-    1.0699
+    0.9425,
+    0.9723,
+    1.0274
    ]
   },
   {
@@ -2622,18 +2707,18 @@
    "origin": "freelancer",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.508,
-   "wr_team_star2": 0.474,
-   "wr_team_star3": 0.472,
-   "wr_duel": 0.829,
-   "n": 551,
-   "dmg": 754,
-   "taken": 810,
+   "wr_team": 0.514,
+   "wr_team_star2": 0.476,
+   "wr_team_star3": 0.56,
+   "wr_duel": 0.841,
+   "n": 1180,
+   "dmg": 718,
+   "taken": 798,
    "heal": 1,
    "star_mult": [
-    1.0341,
-    1.0266,
-    1.046
+    1.0186,
+    1.0055,
+    1.0389
    ]
   },
   {
@@ -2643,18 +2728,18 @@
    "origin": "freelancer",
    "cls": "shaman",
    "arche": "armor_shred",
-   "wr_team": 0.506,
-   "wr_team_star2": 0.504,
-   "wr_team_star3": 0.548,
-   "wr_duel": 0.78,
-   "n": 633,
-   "dmg": 1326,
-   "taken": 792,
+   "wr_team": 0.463,
+   "wr_team_star2": 0.487,
+   "wr_team_star3": 0.48,
+   "wr_duel": 0.732,
+   "n": 1176,
+   "dmg": 1407,
+   "taken": 798,
    "heal": 1,
    "star_mult": [
-    1.183,
-    1.2264,
-    1.2405
+    1.2024,
+    1.1995,
+    1.1921
    ]
   },
   {
@@ -2664,18 +2749,18 @@
    "origin": "astel",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.521,
-   "wr_team_star2": 0.485,
-   "wr_team_star3": 0.506,
-   "wr_duel": 0.866,
-   "n": 585,
-   "dmg": 761,
-   "taken": 952,
-   "heal": 1,
+   "wr_team": 0.502,
+   "wr_team_star2": 0.478,
+   "wr_team_star3": 0.487,
+   "wr_duel": 0.695,
+   "n": 1160,
+   "dmg": 695,
+   "taken": 914,
+   "heal": 0,
    "star_mult": [
-    0.998,
-    1.0116,
-    1.0115
+    0.9653,
+    0.968,
+    1.0166
    ]
   },
   {
@@ -2685,18 +2770,18 @@
    "origin": "astel",
    "cls": "artillerist",
    "arche": "burst_ad_long",
-   "wr_team": 0.47,
-   "wr_team_star2": 0.54,
-   "wr_team_star3": 0.522,
-   "wr_duel": 0.854,
-   "n": 607,
+   "wr_team": 0.503,
+   "wr_team_star2": 0.53,
+   "wr_team_star3": 0.481,
+   "wr_duel": 0.89,
+   "n": 1184,
    "dmg": 1842,
-   "taken": 732,
+   "taken": 713,
    "heal": 1,
    "star_mult": [
-    1.1619,
-    1.2045,
-    1.2142
+    1.1379,
+    1.2081,
+    1.233
    ]
   },
   {
@@ -2706,18 +2791,18 @@
    "origin": "astel",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.488,
-   "wr_team_star2": 0.483,
-   "wr_team_star3": 0.466,
-   "wr_duel": 0.634,
-   "n": 568,
-   "dmg": 799,
-   "taken": 910,
-   "heal": 16,
+   "wr_team": 0.487,
+   "wr_team_star2": 0.491,
+   "wr_team_star3": 0.512,
+   "wr_duel": 0.622,
+   "n": 1222,
+   "dmg": 819,
+   "taken": 881,
+   "heal": 15,
    "star_mult": [
-    1.0194,
-    1.0168,
-    1.0407
+    1.0055,
+    1.015,
+    1.0626
    ]
   },
   {
@@ -2727,18 +2812,18 @@
    "origin": "valheim",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.473,
-   "wr_team_star2": 0.497,
-   "wr_team_star3": 0.55,
-   "wr_duel": 0.463,
-   "n": 615,
-   "dmg": 976,
-   "taken": 1037,
-   "heal": 11,
+   "wr_team": 0.486,
+   "wr_team_star2": 0.51,
+   "wr_team_star3": 0.501,
+   "wr_duel": 0.476,
+   "n": 1194,
+   "dmg": 937,
+   "taken": 1013,
+   "heal": 10,
    "star_mult": [
-    0.9156,
-    0.9074,
-    0.9433
+    0.8956,
+    0.9161,
+    0.9457
    ]
   },
   {
@@ -2748,18 +2833,18 @@
    "origin": "valheim",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.517,
-   "wr_team_star2": 0.538,
-   "wr_team_star3": 0.514,
-   "wr_duel": 0.89,
-   "n": 603,
-   "dmg": 906,
-   "taken": 1129,
-   "heal": 12,
+   "wr_team": 0.479,
+   "wr_team_star2": 0.53,
+   "wr_team_star3": 0.499,
+   "wr_duel": 0.927,
+   "n": 1236,
+   "dmg": 816,
+   "taken": 1067,
+   "heal": 10,
    "star_mult": [
-    1.0895,
-    1.0993,
-    1.0788
+    1.0306,
+    1.0585,
+    1.0926
    ]
   },
   {
@@ -2769,18 +2854,18 @@
    "origin": "valheim",
    "cls": "ranger",
    "arche": "chain_ad",
-   "wr_team": 0.464,
-   "wr_team_star2": 0.517,
-   "wr_team_star3": 0.527,
-   "wr_duel": 0.207,
-   "n": 649,
-   "dmg": 1563,
-   "taken": 670,
-   "heal": 9,
+   "wr_team": 0.53,
+   "wr_team_star2": 0.455,
+   "wr_team_star3": 0.498,
+   "wr_duel": 0.183,
+   "n": 1177,
+   "dmg": 1482,
+   "taken": 688,
+   "heal": 8,
    "star_mult": [
-    0.9325,
-    0.9971,
-    1.0931
+    0.9542,
+    1.0133,
+    1.0901
    ]
   },
   {
@@ -2790,18 +2875,18 @@
    "origin": "sairam",
    "cls": "assassin",
    "arche": "dash_strike",
-   "wr_team": 0.543,
-   "wr_team_star2": 0.48,
-   "wr_team_star3": 0.545,
-   "wr_duel": 0.902,
-   "n": 623,
-   "dmg": 887,
-   "taken": 963,
+   "wr_team": 0.5,
+   "wr_team_star2": 0.46,
+   "wr_team_star3": 0.531,
+   "wr_duel": 0.854,
+   "n": 1176,
+   "dmg": 723,
+   "taken": 924,
    "heal": 1,
    "star_mult": [
-    1.0618,
-    1.0457,
-    1.0875
+    1.0186,
+    1.0236,
+    1.0695
    ]
   },
   {
@@ -2811,18 +2896,18 @@
    "origin": "sairam",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.506,
-   "wr_team_star2": 0.54,
-   "wr_team_star3": 0.476,
-   "wr_duel": 0.537,
-   "n": 605,
-   "dmg": 1542,
-   "taken": 674,
+   "wr_team": 0.486,
+   "wr_team_star2": 0.522,
+   "wr_team_star3": 0.445,
+   "wr_duel": 0.549,
+   "n": 1217,
+   "dmg": 1399,
+   "taken": 703,
    "heal": 1,
    "star_mult": [
-    1.022,
-    1.0943,
-    1.1383
+    1.0224,
+    1.0892,
+    1.1637
    ]
   },
   {
@@ -2832,18 +2917,18 @@
    "origin": "sairam",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.53,
-   "wr_team_star2": 0.477,
-   "wr_team_star3": 0.552,
-   "wr_duel": 0.463,
-   "n": 593,
-   "dmg": 939,
-   "taken": 851,
-   "heal": 27,
+   "wr_team": 0.5,
+   "wr_team_star2": 0.495,
+   "wr_team_star3": 0.53,
+   "wr_duel": 0.439,
+   "n": 1184,
+   "dmg": 958,
+   "taken": 814,
+   "heal": 17,
    "star_mult": [
-    1.2912,
-    1.2911,
-    1.3048
+    1.2654,
+    1.2608,
+    1.296
    ]
   },
   {
@@ -2853,18 +2938,18 @@
    "origin": "karna",
    "cls": "warrior",
    "arche": "lifesteal_strike",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.505,
-   "wr_team_star3": 0.476,
-   "wr_duel": 0.732,
-   "n": 593,
-   "dmg": 607,
-   "taken": 1222,
-   "heal": 99,
+   "wr_team": 0.498,
+   "wr_team_star2": 0.5,
+   "wr_team_star3": 0.498,
+   "wr_duel": 0.683,
+   "n": 1259,
+   "dmg": 617,
+   "taken": 1198,
+   "heal": 94,
    "star_mult": [
-    0.8917,
-    0.9232,
-    0.9561
+    0.8685,
+    0.9085,
+    0.9632
    ]
   },
   {
@@ -2874,18 +2959,18 @@
    "origin": "karna",
    "cls": "shaman",
    "arche": "stun_aoe",
-   "wr_team": 0.5,
-   "wr_team_star2": 0.506,
-   "wr_team_star3": 0.512,
+   "wr_team": 0.48,
+   "wr_team_star2": 0.517,
+   "wr_team_star3": 0.457,
    "wr_duel": 0.22,
-   "n": 572,
-   "dmg": 1343,
-   "taken": 816,
+   "n": 1162,
+   "dmg": 1372,
+   "taken": 844,
    "heal": 1,
    "star_mult": [
-    0.9579,
-    0.967,
-    0.9193
+    0.9846,
+    0.9909,
+    0.9585
    ]
   },
   {
@@ -2895,18 +2980,18 @@
    "origin": "karna",
    "cls": "artillerist",
    "arche": "aoe_target_ad",
-   "wr_team": 0.474,
-   "wr_team_star2": 0.451,
-   "wr_team_star3": 0.501,
-   "wr_duel": 0.476,
-   "n": 642,
-   "dmg": 1613,
-   "taken": 693,
+   "wr_team": 0.526,
+   "wr_team_star2": 0.465,
+   "wr_team_star3": 0.481,
+   "wr_duel": 0.451,
+   "n": 1271,
+   "dmg": 1619,
+   "taken": 679,
    "heal": 1,
    "star_mult": [
-    1.053,
-    1.1207,
-    1.1904
+    1.0824,
+    1.124,
+    1.1969
    ]
   },
   {
@@ -2916,18 +3001,18 @@
    "origin": "lies",
    "cls": "duelist",
    "arche": "burst_ad",
-   "wr_team": 0.503,
-   "wr_team_star2": 0.522,
-   "wr_team_star3": 0.513,
-   "wr_duel": 0.866,
-   "n": 535,
-   "dmg": 767,
-   "taken": 997,
+   "wr_team": 0.482,
+   "wr_team_star2": 0.506,
+   "wr_team_star3": 0.457,
+   "wr_duel": 0.939,
+   "n": 1222,
+   "dmg": 724,
+   "taken": 972,
    "heal": 1,
    "star_mult": [
-    0.9981,
-    0.9995,
-    1.0517
+    0.978,
+    0.9946,
+    0.9956
    ]
   },
   {
@@ -2937,18 +3022,18 @@
    "origin": "lies",
    "cls": "bard",
    "arche": "buff_as_allies",
-   "wr_team": 0.514,
-   "wr_team_star2": 0.514,
-   "wr_team_star3": 0.54,
-   "wr_duel": 0.305,
-   "n": 629,
-   "dmg": 1249,
-   "taken": 1021,
+   "wr_team": 0.485,
+   "wr_team_star2": 0.505,
+   "wr_team_star3": 0.533,
+   "wr_duel": 0.354,
+   "n": 1175,
+   "dmg": 1326,
+   "taken": 994,
    "heal": 1,
    "star_mult": [
-    1.3641,
-    1.2686,
-    1.1958
+    1.3374,
+    1.321,
+    1.259
    ]
   },
   {
@@ -2958,18 +3043,18 @@
    "origin": "lies",
    "cls": "priest",
    "arche": "heal_lowest",
-   "wr_team": 0.514,
-   "wr_team_star2": 0.545,
-   "wr_team_star3": 0.513,
-   "wr_duel": 0.537,
-   "n": 586,
-   "dmg": 653,
-   "taken": 1192,
-   "heal": 991,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.505,
+   "wr_team_star3": 0.464,
+   "wr_duel": 0.512,
+   "n": 1201,
+   "dmg": 636,
+   "taken": 1315,
+   "heal": 998,
    "star_mult": [
-    0.9286,
-    0.8503,
-    0.7821
+    0.9408,
+    0.8603,
+    0.7824
    ]
   },
   {
@@ -2979,18 +3064,18 @@
    "origin": "elowen",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.525,
-   "wr_team_star2": 0.489,
-   "wr_team_star3": 0.446,
-   "wr_duel": 0.293,
-   "n": 587,
-   "dmg": 1736,
-   "taken": 781,
-   "heal": 21,
+   "wr_team": 0.479,
+   "wr_team_star2": 0.484,
+   "wr_team_star3": 0.466,
+   "wr_duel": 0.427,
+   "n": 1187,
+   "dmg": 1631,
+   "taken": 800,
+   "heal": 15,
    "star_mult": [
-    1.1651,
-    1.1804,
-    1.2354
+    1.1681,
+    1.2303,
+    1.2659
    ]
   },
   {
@@ -3000,18 +3085,18 @@
    "origin": "elowen",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.48,
-   "wr_team_star2": 0.507,
-   "wr_team_star3": 0.47,
-   "wr_duel": 0.512,
-   "n": 600,
-   "dmg": 898,
-   "taken": 850,
-   "heal": 39,
+   "wr_team": 0.492,
+   "wr_team_star2": 0.471,
+   "wr_team_star3": 0.489,
+   "wr_duel": 0.354,
+   "n": 1198,
+   "dmg": 953,
+   "taken": 809,
+   "heal": 42,
    "star_mult": [
-    1.2374,
-    1.2597,
-    1.2643
+    1.2346,
+    1.2142,
+    1.2648
    ]
   },
   {
@@ -3021,18 +3106,18 @@
    "origin": "elowen",
    "cls": "duelist",
    "arche": "buff_as_self",
-   "wr_team": 0.471,
-   "wr_team_star2": 0.54,
-   "wr_team_star3": 0.523,
-   "wr_duel": 0.866,
-   "n": 611,
-   "dmg": 833,
-   "taken": 1166,
+   "wr_team": 0.52,
+   "wr_team_star2": 0.52,
+   "wr_team_star3": 0.545,
+   "wr_duel": 0.89,
+   "n": 1211,
+   "dmg": 830,
+   "taken": 1118,
    "heal": 16,
    "star_mult": [
-    1.1128,
-    1.1401,
-    1.187
+    1.0703,
+    1.1214,
+    1.1773
    ]
   },
   {
@@ -3042,18 +3127,18 @@
    "origin": "grandur",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.444,
-   "wr_team_star2": 0.478,
-   "wr_team_star3": 0.517,
+   "wr_team": 0.523,
+   "wr_team_star2": 0.517,
+   "wr_team_star3": 0.525,
    "wr_duel": 0.634,
-   "n": 610,
-   "dmg": 682,
-   "taken": 1113,
-   "heal": 0,
+   "n": 1223,
+   "dmg": 717,
+   "taken": 1098,
+   "heal": 1,
    "star_mult": [
-    0.9392,
-    0.9759,
-    1.0272
+    0.9201,
+    0.9648,
+    1.0037
    ]
   },
   {
@@ -3063,18 +3148,18 @@
    "origin": "grandur",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.496,
-   "wr_team_star2": 0.501,
-   "wr_team_star3": 0.464,
-   "wr_duel": 0.122,
-   "n": 589,
-   "dmg": 342,
-   "taken": 1431,
+   "wr_team": 0.49,
+   "wr_team_star2": 0.482,
+   "wr_team_star3": 0.487,
+   "wr_duel": 0.073,
+   "n": 1195,
+   "dmg": 279,
+   "taken": 1341,
    "heal": 0,
    "star_mult": [
-    0.8333,
-    0.8298,
-    0.8332
+    0.7863,
+    0.8052,
+    0.826
    ]
   },
   {
@@ -3084,18 +3169,18 @@
    "origin": "grandur",
    "cls": "shaman",
    "arche": "armor_shred",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.467,
-   "wr_team_star3": 0.5,
+   "wr_team": 0.51,
+   "wr_team_star2": 0.501,
+   "wr_team_star3": 0.518,
    "wr_duel": 0.878,
-   "n": 564,
-   "dmg": 1501,
-   "taken": 939,
-   "heal": 1,
+   "n": 1188,
+   "dmg": 1604,
+   "taken": 926,
+   "heal": 2,
    "star_mult": [
-    1.2035,
-    1.2339,
-    1.2009
+    1.205,
+    1.2175,
+    1.2652
    ]
   },
   {
@@ -3105,18 +3190,18 @@
    "origin": "neos",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.538,
-   "wr_team_star2": 0.476,
-   "wr_team_star3": 0.48,
-   "wr_duel": 0.024,
-   "n": 632,
-   "dmg": 233,
-   "taken": 1400,
+   "wr_team": 0.5,
+   "wr_team_star2": 0.494,
+   "wr_team_star3": 0.497,
+   "wr_duel": 0.037,
+   "n": 1186,
+   "dmg": 166,
+   "taken": 1266,
    "heal": 0,
    "star_mult": [
-    0.6855,
-    0.643,
-    0.5838
+    0.6452,
+    0.6535,
+    0.6009
    ]
   },
   {
@@ -3126,18 +3211,18 @@
    "origin": "neos",
    "cls": "ranger",
    "arche": "burst_ad",
-   "wr_team": 0.523,
-   "wr_team_star2": 0.513,
-   "wr_team_star3": 0.473,
-   "wr_duel": 0.28,
-   "n": 560,
-   "dmg": 1465,
-   "taken": 643,
+   "wr_team": 0.493,
+   "wr_team_star2": 0.539,
+   "wr_team_star3": 0.532,
+   "wr_duel": 0.39,
+   "n": 1203,
+   "dmg": 1302,
+   "taken": 691,
    "heal": 1,
    "star_mult": [
-    0.8662,
-    0.894,
-    0.955
+    0.8771,
+    0.9303,
+    0.9686
    ]
   },
   {
@@ -3147,18 +3232,18 @@
    "origin": "neos",
    "cls": "bard",
    "arche": "buff_as_allies",
-   "wr_team": 0.482,
-   "wr_team_star2": 0.525,
-   "wr_team_star3": 0.462,
-   "wr_duel": 0.378,
-   "n": 583,
-   "dmg": 1194,
-   "taken": 1076,
-   "heal": 0,
+   "wr_team": 0.528,
+   "wr_team_star2": 0.523,
+   "wr_team_star3": 0.499,
+   "wr_duel": 0.402,
+   "n": 1151,
+   "dmg": 1378,
+   "taken": 1080,
+   "heal": 1,
    "star_mult": [
-    1.3309,
-    1.3321,
-    1.198
+    1.4028,
+    1.3649,
+    1.276
    ]
   },
   {
@@ -3168,18 +3253,18 @@
    "origin": "nox",
    "cls": "shaman",
    "arche": "dot_target",
-   "wr_team": 0.509,
-   "wr_team_star2": 0.482,
-   "wr_team_star3": 0.452,
-   "wr_duel": 0.976,
-   "n": 641,
-   "dmg": 1505,
-   "taken": 953,
-   "heal": 17,
+   "wr_team": 0.496,
+   "wr_team_star2": 0.515,
+   "wr_team_star3": 0.54,
+   "wr_duel": 0.988,
+   "n": 1229,
+   "dmg": 1574,
+   "taken": 928,
+   "heal": 14,
    "star_mult": [
-    1.2379,
-    1.2964,
-    1.3504
+    1.2295,
+    1.3165,
+    1.434
    ]
   },
   {
@@ -3189,18 +3274,18 @@
    "origin": "nox",
    "cls": "knight",
    "arche": "stun_st",
-   "wr_team": 0.535,
-   "wr_team_star2": 0.519,
-   "wr_team_star3": 0.499,
-   "wr_duel": 0.512,
-   "n": 611,
-   "dmg": 674,
-   "taken": 1162,
-   "heal": 9,
+   "wr_team": 0.503,
+   "wr_team_star2": 0.587,
+   "wr_team_star3": 0.523,
+   "wr_duel": 0.378,
+   "n": 1190,
+   "dmg": 610,
+   "taken": 1118,
+   "heal": 8,
    "star_mult": [
-    0.9081,
-    0.8764,
-    0.8582
+    0.864,
+    0.8523,
+    0.8539
    ]
   },
   {
@@ -3210,18 +3295,18 @@
    "origin": "nox",
    "cls": "bard",
    "arche": "buff_ap_allies",
-   "wr_team": 0.509,
-   "wr_team_star2": 0.496,
-   "wr_team_star3": 0.496,
-   "wr_duel": 0.744,
-   "n": 633,
-   "dmg": 1421,
-   "taken": 1272,
-   "heal": 16,
+   "wr_team": 0.513,
+   "wr_team_star2": 0.486,
+   "wr_team_star3": 0.504,
+   "wr_duel": 0.793,
+   "n": 1245,
+   "dmg": 1577,
+   "taken": 1219,
+   "heal": 15,
    "star_mult": [
-    1.6355,
-    1.6778,
-    1.7321
+    1.6551,
+    1.6787,
+    1.7894
    ]
   },
   {
@@ -3231,18 +3316,18 @@
    "origin": "celestia",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.503,
-   "wr_team_star2": 0.519,
-   "wr_team_star3": 0.496,
-   "wr_duel": 0.085,
-   "n": 618,
-   "dmg": 621,
-   "taken": 1112,
-   "heal": 1089,
+   "wr_team": 0.521,
+   "wr_team_star2": 0.481,
+   "wr_team_star3": 0.437,
+   "wr_duel": 0.171,
+   "n": 1196,
+   "dmg": 671,
+   "taken": 1152,
+   "heal": 1039,
    "star_mult": [
-    0.9549,
-    0.9078,
-    0.8017
+    0.9926,
+    0.9579,
+    0.8437
    ]
   },
   {
@@ -3252,18 +3337,18 @@
    "origin": "celestia",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.497,
-   "wr_team_star2": 0.51,
-   "wr_team_star3": 0.519,
-   "wr_duel": 0.073,
-   "n": 575,
-   "dmg": 349,
-   "taken": 1488,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.471,
+   "wr_team_star3": 0.483,
+   "wr_duel": 0.037,
+   "n": 1163,
+   "dmg": 373,
+   "taken": 1490,
    "heal": 0,
    "star_mult": [
-    0.861,
-    0.8449,
-    0.8515
+    0.8469,
+    0.816,
+    0.8287
    ]
   },
   {
@@ -3273,18 +3358,18 @@
    "origin": "celestia",
    "cls": "summoner",
    "arche": "summon",
-   "wr_team": 0.528,
-   "wr_team_star2": 0.491,
-   "wr_team_star3": 0.534,
-   "wr_duel": 0.427,
-   "n": 610,
-   "dmg": 951,
-   "taken": 856,
-   "heal": 36,
+   "wr_team": 0.476,
+   "wr_team_star2": 0.519,
+   "wr_team_star3": 0.456,
+   "wr_duel": 0.39,
+   "n": 1151,
+   "dmg": 931,
+   "taken": 830,
+   "heal": 27,
    "star_mult": [
-    1.2765,
-    1.2265,
-    1.2747
+    1.2315,
+    1.2174,
+    1.2526
    ]
   },
   {
@@ -3294,18 +3379,18 @@
    "origin": "dragonkin",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.5,
-   "wr_team_star2": 0.5,
-   "wr_team_star3": 0.513,
-   "wr_duel": 0.549,
-   "n": 588,
-   "dmg": 766,
-   "taken": 1190,
+   "wr_team": 0.495,
+   "wr_team_star2": 0.536,
+   "wr_team_star3": 0.499,
+   "wr_duel": 0.585,
+   "n": 1182,
+   "dmg": 752,
+   "taken": 1161,
    "heal": 1,
    "star_mult": [
-    0.9275,
-    0.9384,
-    1.0207
+    0.8962,
+    0.939,
+    0.9995
    ]
   },
   {
@@ -3315,18 +3400,18 @@
    "origin": "dragonkin",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.566,
-   "wr_team_star2": 0.438,
-   "wr_team_star3": 0.523,
-   "wr_duel": 0.024,
-   "n": 597,
-   "dmg": 236,
-   "taken": 1447,
+   "wr_team": 0.514,
+   "wr_team_star2": 0.514,
+   "wr_team_star3": 0.583,
+   "wr_duel": 0.037,
+   "n": 1241,
+   "dmg": 196,
+   "taken": 1328,
    "heal": 0,
    "star_mult": [
-    0.6766,
-    0.6417,
-    0.5804
+    0.652,
+    0.6439,
+    0.5989
    ]
   },
   {
@@ -3336,18 +3421,18 @@
    "origin": "dragonkin",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.486,
-   "wr_team_star2": 0.544,
+   "wr_team": 0.525,
+   "wr_team_star2": 0.516,
    "wr_team_star3": 0.486,
-   "wr_duel": 0.073,
-   "n": 607,
-   "dmg": 659,
-   "taken": 1079,
-   "heal": 1008,
+   "wr_duel": 0.11,
+   "n": 1154,
+   "dmg": 711,
+   "taken": 1158,
+   "heal": 1014,
    "star_mult": [
-    0.9321,
-    0.8751,
-    0.7936
+    0.9813,
+    0.9196,
+    0.842
    ]
   },
   {
@@ -3357,18 +3442,18 @@
    "origin": "torga",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.485,
-   "wr_team_star2": 0.492,
-   "wr_team_star3": 0.521,
-   "wr_duel": 0.402,
-   "n": 618,
-   "dmg": 1590,
-   "taken": 687,
+   "wr_team": 0.488,
+   "wr_team_star2": 0.464,
+   "wr_team_star3": 0.518,
+   "wr_duel": 0.5,
+   "n": 1161,
+   "dmg": 1404,
+   "taken": 694,
    "heal": 1,
    "star_mult": [
-    1.0159,
-    1.0344,
-    1.1367
+    1.0142,
+    1.0768,
+    1.1417
    ]
   },
   {
@@ -3378,18 +3463,18 @@
    "origin": "torga",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.496,
-   "wr_team_star2": 0.514,
-   "wr_team_star3": 0.475,
-   "wr_duel": 0.573,
-   "n": 570,
-   "dmg": 991,
-   "taken": 1004,
-   "heal": 2,
+   "wr_team": 0.474,
+   "wr_team_star2": 0.512,
+   "wr_team_star3": 0.487,
+   "wr_duel": 0.598,
+   "n": 1170,
+   "dmg": 951,
+   "taken": 999,
+   "heal": 1,
    "star_mult": [
-    0.9344,
-    0.9402,
-    0.9428
+    0.9246,
+    0.9662,
+    0.9745
    ]
   },
   {
@@ -3399,18 +3484,18 @@
    "origin": "torga",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.477,
-   "wr_team_star2": 0.506,
-   "wr_team_star3": 0.487,
-   "wr_duel": 0.695,
-   "n": 583,
-   "dmg": 837,
-   "taken": 883,
-   "heal": 22,
+   "wr_team": 0.498,
+   "wr_team_star2": 0.489,
+   "wr_team_star3": 0.477,
+   "wr_duel": 0.585,
+   "n": 1204,
+   "dmg": 866,
+   "taken": 868,
+   "heal": 16,
    "star_mult": [
-    1.0656,
-    1.0571,
-    1.1205
+    1.0498,
+    1.0334,
+    1.1065
    ]
   },
   {
@@ -3420,18 +3505,18 @@
    "origin": "lumen",
    "cls": "assassin",
    "arche": "execute",
-   "wr_team": 0.499,
-   "wr_team_star2": 0.506,
-   "wr_team_star3": 0.518,
-   "wr_duel": 0.707,
-   "n": 637,
-   "dmg": 704,
-   "taken": 943,
+   "wr_team": 0.489,
+   "wr_team_star2": 0.504,
+   "wr_team_star3": 0.513,
+   "wr_duel": 0.695,
+   "n": 1236,
+   "dmg": 617,
+   "taken": 929,
    "heal": 1,
    "star_mult": [
-    0.98,
-    1.0006,
-    1.0266
+    0.9574,
+    0.9687,
+    1.029
    ]
   },
   {
@@ -3441,18 +3526,18 @@
    "origin": "lumen",
    "cls": "mage",
    "arche": "burst_st",
-   "wr_team": 0.505,
-   "wr_team_star2": 0.512,
-   "wr_team_star3": 0.479,
+   "wr_team": 0.491,
+   "wr_team_star2": 0.52,
+   "wr_team_star3": 0.526,
    "wr_duel": 0.561,
-   "n": 604,
-   "dmg": 1550,
-   "taken": 777,
+   "n": 1214,
+   "dmg": 1484,
+   "taken": 789,
    "heal": 1,
    "star_mult": [
-    1.1374,
-    1.1604,
-    1.1617
+    1.1204,
+    1.1618,
+    1.2013
    ]
   },
   {
@@ -3462,18 +3547,18 @@
    "origin": "lumen",
    "cls": "engineer",
    "arche": "turret",
-   "wr_team": 0.516,
-   "wr_team_star2": 0.488,
-   "wr_team_star3": 0.486,
-   "wr_duel": 0.561,
-   "n": 587,
-   "dmg": 777,
-   "taken": 913,
-   "heal": 16,
+   "wr_team": 0.502,
+   "wr_team_star2": 0.507,
+   "wr_team_star3": 0.498,
+   "wr_duel": 0.524,
+   "n": 1217,
+   "dmg": 748,
+   "taken": 901,
+   "heal": 13,
    "star_mult": [
-    0.9996,
-    1.013,
-    1.0463
+    0.9812,
+    0.9966,
+    1.0598
    ]
   },
   {
@@ -3483,18 +3568,18 @@
    "origin": "freelancer",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.495,
-   "wr_team_star2": 0.417,
-   "wr_team_star3": 0.445,
-   "wr_duel": 0.28,
-   "n": 588,
-   "dmg": 1707,
-   "taken": 760,
-   "heal": 2,
+   "wr_team": 0.517,
+   "wr_team_star2": 0.466,
+   "wr_team_star3": 0.542,
+   "wr_duel": 0.232,
+   "n": 1228,
+   "dmg": 1752,
+   "taken": 765,
+   "heal": 1,
    "star_mult": [
-    1.1671,
-    1.18,
-    1.2149
+    1.181,
+    1.1792,
+    1.2854
    ]
   },
   {
@@ -3504,18 +3589,18 @@
    "origin": "freelancer",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.481,
-   "wr_team_star2": 0.462,
-   "wr_team_star3": 0.516,
-   "wr_duel": 0.488,
-   "n": 599,
-   "dmg": 979,
-   "taken": 997,
+   "wr_team": 0.501,
+   "wr_team_star2": 0.455,
+   "wr_team_star3": 0.466,
+   "wr_duel": 0.561,
+   "n": 1220,
+   "dmg": 943,
+   "taken": 992,
    "heal": 1,
    "star_mult": [
-    0.9329,
-    0.9253,
-    0.9489
+    0.9303,
+    0.9521,
+    0.9713
    ]
   },
   {
@@ -3525,18 +3610,18 @@
    "origin": "freelancer",
    "cls": "bard",
    "arche": "buff_ad_allies",
-   "wr_team": 0.469,
-   "wr_team_star2": 0.509,
-   "wr_team_star3": 0.501,
-   "wr_duel": 0.329,
-   "n": 593,
-   "dmg": 1193,
-   "taken": 1035,
+   "wr_team": 0.502,
+   "wr_team_star2": 0.461,
+   "wr_team_star3": 0.526,
+   "wr_duel": 0.366,
+   "n": 1217,
+   "dmg": 1354,
+   "taken": 987,
    "heal": 1,
    "star_mult": [
-    1.3117,
-    1.2856,
-    1.0255
+    1.3297,
+    1.3069,
+    1.0823
    ]
   },
   {
@@ -3546,18 +3631,18 @@
    "origin": "astel",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.528,
-   "wr_team_star2": 0.437,
-   "wr_team_star3": 0.525,
-   "wr_duel": 0.056,
-   "n": 579,
-   "dmg": 222,
-   "taken": 1418,
+   "wr_team": 0.532,
+   "wr_team_star2": 0.468,
+   "wr_team_star3": 0.512,
+   "wr_duel": 0.037,
+   "n": 1223,
+   "dmg": 182,
+   "taken": 1323,
    "heal": 0,
    "star_mult": [
-    0.7096,
-    0.6805,
-    0.6336
+    0.6668,
+    0.6768,
+    0.6327
    ]
   },
   {
@@ -3567,18 +3652,18 @@
    "origin": "astel",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.512,
-   "wr_team_star2": 0.484,
-   "wr_team_star3": 0.57,
+   "wr_team": 0.51,
+   "wr_team_star2": 0.496,
+   "wr_team_star3": 0.521,
    "wr_duel": 0.556,
-   "n": 568,
-   "dmg": 1452,
-   "taken": 1354,
+   "n": 1217,
+   "dmg": 1454,
+   "taken": 1341,
    "heal": 1,
    "star_mult": [
-    0.9705,
-    0.9831,
-    1.0687
+    0.9612,
+    0.9797,
+    1.0543
    ]
   },
   {
@@ -3588,18 +3673,18 @@
    "origin": "valheim",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.516,
-   "wr_team_star2": 0.452,
-   "wr_team_star3": 0.524,
-   "wr_duel": 0.796,
-   "n": 634,
-   "dmg": 1114,
-   "taken": 1619,
-   "heal": 9,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.491,
+   "wr_team_star3": 0.471,
+   "wr_duel": 0.778,
+   "n": 1194,
+   "dmg": 1094,
+   "taken": 1563,
+   "heal": 8,
    "star_mult": [
-    1.1096,
-    1.1451,
-    1.2745
+    1.0666,
+    1.1288,
+    1.2255
    ]
   },
   {
@@ -3609,18 +3694,18 @@
    "origin": "valheim",
    "cls": "shaman",
    "arche": "stun_aoe",
-   "wr_team": 0.489,
-   "wr_team_star2": 0.544,
-   "wr_team_star3": 0.506,
-   "wr_duel": 0.5,
-   "n": 650,
-   "dmg": 1918,
-   "taken": 1130,
-   "heal": 9,
+   "wr_team": 0.519,
+   "wr_team_star2": 0.464,
+   "wr_team_star3": 0.489,
+   "wr_duel": 0.426,
+   "n": 1157,
+   "dmg": 1938,
+   "taken": 1099,
+   "heal": 10,
    "star_mult": [
-    1.1377,
-    1.1531,
-    1.1347
+    1.1485,
+    1.1347,
+    1.0794
    ]
   },
   {
@@ -3630,18 +3715,18 @@
    "origin": "sairam",
    "cls": "duelist",
    "arche": "burst_ad",
-   "wr_team": 0.48,
-   "wr_team_star2": 0.468,
-   "wr_team_star3": 0.488,
-   "wr_duel": 0.926,
-   "n": 569,
-   "dmg": 1207,
-   "taken": 1384,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.47,
+   "wr_team_star3": 0.522,
+   "wr_duel": 0.907,
+   "n": 1221,
+   "dmg": 1280,
+   "taken": 1348,
    "heal": 2,
    "star_mult": [
-    1.1304,
-    1.159,
-    1.1847
+    1.096,
+    1.1385,
+    1.1883
    ]
   },
   {
@@ -3651,18 +3736,18 @@
    "origin": "sairam",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.487,
-   "wr_team_star2": 0.489,
-   "wr_team_star3": 0.479,
-   "wr_duel": 0.519,
-   "n": 614,
-   "dmg": 2181,
-   "taken": 1047,
+   "wr_team": 0.514,
+   "wr_team_star2": 0.519,
+   "wr_team_star3": 0.508,
+   "wr_duel": 0.352,
+   "n": 1195,
+   "dmg": 2204,
+   "taken": 978,
    "heal": 1,
    "star_mult": [
-    1.2361,
-    1.2846,
-    1.3447
+    1.232,
+    1.2759,
+    1.3495
    ]
   },
   {
@@ -3672,18 +3757,18 @@
    "origin": "karna",
    "cls": "assassin",
    "arche": "execute",
-   "wr_team": 0.489,
-   "wr_team_star2": 0.522,
-   "wr_team_star3": 0.514,
-   "wr_duel": 0.833,
-   "n": 609,
-   "dmg": 1187,
-   "taken": 1253,
+   "wr_team": 0.476,
+   "wr_team_star2": 0.54,
+   "wr_team_star3": 0.504,
+   "wr_duel": 0.815,
+   "n": 1220,
+   "dmg": 1154,
+   "taken": 1220,
    "heal": 1,
    "star_mult": [
-    1.1315,
-    1.1645,
-    1.1627
+    1.0851,
+    1.1698,
+    1.1539
    ]
   },
   {
@@ -3693,18 +3778,18 @@
    "origin": "karna",
    "cls": "summoner",
    "arche": "summon_big",
-   "wr_team": 0.477,
-   "wr_team_star2": 0.506,
-   "wr_team_star3": 0.495,
-   "wr_duel": 0.574,
-   "n": 595,
-   "dmg": 689,
-   "taken": 1003,
-   "heal": 79,
+   "wr_team": 0.493,
+   "wr_team_star2": 0.45,
+   "wr_team_star3": 0.519,
+   "wr_duel": 0.556,
+   "n": 1183,
+   "dmg": 675,
+   "taken": 971,
+   "heal": 56,
    "star_mult": [
-    1.088,
-    1.1232,
-    1.1595
+    1.0912,
+    1.0907,
+    1.1518
    ]
   },
   {
@@ -3714,18 +3799,18 @@
    "origin": "lies",
    "cls": "artillerist",
    "arche": "aoe_line_ad",
-   "wr_team": 0.51,
-   "wr_team_star2": 0.459,
-   "wr_team_star3": 0.536,
-   "wr_duel": 0.444,
-   "n": 590,
-   "dmg": 2271,
-   "taken": 854,
-   "heal": 0,
+   "wr_team": 0.487,
+   "wr_team_star2": 0.517,
+   "wr_team_star3": 0.5,
+   "wr_duel": 0.5,
+   "n": 1205,
+   "dmg": 2168,
+   "taken": 867,
+   "heal": 1,
    "star_mult": [
-    1.1172,
-    1.1587,
-    1.215
+    1.1255,
+    1.1977,
+    1.2319
    ]
   },
   {
@@ -3735,18 +3820,18 @@
    "origin": "lies",
    "cls": "guardian",
    "arche": "shield_allies",
-   "wr_team": 0.498,
-   "wr_team_star2": 0.521,
-   "wr_team_star3": 0.47,
+   "wr_team": 0.512,
+   "wr_team_star2": 0.484,
+   "wr_team_star3": 0.446,
    "wr_duel": 0.056,
-   "n": 614,
-   "dmg": 228,
-   "taken": 1460,
+   "n": 1215,
+   "dmg": 214,
+   "taken": 1381,
    "heal": 0,
    "star_mult": [
-    0.7342,
-    0.6991,
-    0.6503
+    0.6891,
+    0.6925,
+    0.6358
    ]
   },
   {
@@ -3756,18 +3841,18 @@
    "origin": "elowen",
    "cls": "ranger",
    "arche": "multishot",
-   "wr_team": 0.524,
-   "wr_team_star2": 0.492,
-   "wr_team_star3": 0.448,
-   "wr_duel": 0.648,
-   "n": 620,
-   "dmg": 2330,
-   "taken": 1008,
-   "heal": 20,
+   "wr_team": 0.508,
+   "wr_team_star2": 0.472,
+   "wr_team_star3": 0.494,
+   "wr_duel": 0.704,
+   "n": 1194,
+   "dmg": 2157,
+   "taken": 980,
+   "heal": 16,
    "star_mult": [
-    1.2107,
-    1.2524,
-    1.3393
+    1.1681,
+    1.2673,
+    1.3506
    ]
   },
   {
@@ -3777,18 +3862,18 @@
    "origin": "elowen",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.508,
-   "wr_team_star2": 0.518,
-   "wr_team_star3": 0.531,
-   "wr_duel": 0.204,
-   "n": 594,
-   "dmg": 675,
-   "taken": 1371,
-   "heal": 1412,
+   "wr_team": 0.523,
+   "wr_team_star2": 0.545,
+   "wr_team_star3": 0.472,
+   "wr_duel": 0.222,
+   "n": 1194,
+   "dmg": 701,
+   "taken": 1451,
+   "heal": 1403,
    "star_mult": [
-    1.0175,
-    0.9495,
-    0.8758
+    1.0573,
+    0.9776,
+    0.9306
    ]
   },
   {
@@ -3798,18 +3883,18 @@
    "origin": "grandur",
    "cls": "engineer",
    "arche": "turret_big",
-   "wr_team": 0.503,
-   "wr_team_star2": 0.538,
-   "wr_team_star3": 0.481,
-   "wr_duel": 0.944,
-   "n": 587,
-   "dmg": 791,
-   "taken": 1140,
-   "heal": 66,
+   "wr_team": 0.498,
+   "wr_team_star2": 0.522,
+   "wr_team_star3": 0.559,
+   "wr_duel": 0.926,
+   "n": 1237,
+   "dmg": 805,
+   "taken": 1118,
+   "heal": 55,
    "star_mult": [
-    1.1024,
-    1.1467,
-    1.1856
+    1.0854,
+    1.1112,
+    1.1983
    ]
   },
   {
@@ -3819,18 +3904,18 @@
    "origin": "grandur",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.47,
-   "wr_team_star2": 0.488,
-   "wr_team_star3": 0.49,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.459,
+   "wr_team_star3": 0.459,
    "wr_duel": 0.13,
-   "n": 587,
-   "dmg": 275,
-   "taken": 1846,
+   "n": 1193,
+   "dmg": 277,
+   "taken": 1814,
    "heal": 0,
    "star_mult": [
-    0.7038,
-    0.6399,
-    0.5567
+    0.6848,
+    0.6261,
+    0.5377
    ]
   },
   {
@@ -3841,17 +3926,17 @@
    "cls": "artillerist",
    "arche": "aoe_line_ad",
    "wr_team": 0.504,
-   "wr_team_star2": 0.516,
-   "wr_team_star3": 0.506,
-   "wr_duel": 0.444,
-   "n": 579,
-   "dmg": 2247,
-   "taken": 888,
-   "heal": 2,
+   "wr_team_star2": 0.535,
+   "wr_team_star3": 0.489,
+   "wr_duel": 0.481,
+   "n": 1175,
+   "dmg": 2055,
+   "taken": 885,
+   "heal": 1,
    "star_mult": [
-    1.1168,
-    1.1591,
-    1.2131
+    1.1199,
+    1.191,
+    1.2293
    ]
   },
   {
@@ -3861,18 +3946,18 @@
    "origin": "neos",
    "cls": "engineer",
    "arche": "turret_big",
-   "wr_team": 0.505,
-   "wr_team_star2": 0.495,
-   "wr_team_star3": 0.505,
-   "wr_duel": 0.907,
-   "n": 572,
-   "dmg": 833,
-   "taken": 1149,
-   "heal": 66,
+   "wr_team": 0.501,
+   "wr_team_star2": 0.487,
+   "wr_team_star3": 0.502,
+   "wr_duel": 0.889,
+   "n": 1223,
+   "dmg": 874,
+   "taken": 1120,
+   "heal": 71,
    "star_mult": [
-    1.1105,
-    1.1525,
-    1.2459
+    1.1087,
+    1.126,
+    1.1872
    ]
   },
   {
@@ -3882,18 +3967,18 @@
    "origin": "nox",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.519,
-   "wr_team_star2": 0.51,
-   "wr_team_star3": 0.511,
-   "wr_duel": 0.5,
-   "n": 601,
-   "dmg": 2238,
-   "taken": 1030,
-   "heal": 18,
+   "wr_team": 0.504,
+   "wr_team_star2": 0.464,
+   "wr_team_star3": 0.479,
+   "wr_duel": 0.556,
+   "n": 1189,
+   "dmg": 2253,
+   "taken": 1002,
+   "heal": 17,
    "star_mult": [
-    1.2513,
-    1.2858,
-    1.3267
+    1.2712,
+    1.3116,
+    1.3408
    ]
   },
   {
@@ -3903,18 +3988,18 @@
    "origin": "nox",
    "cls": "summoner",
    "arche": "summon_multi",
-   "wr_team": 0.504,
-   "wr_team_star2": 0.494,
-   "wr_team_star3": 0.521,
-   "wr_duel": 0.407,
-   "n": 579,
-   "dmg": 801,
-   "taken": 1061,
-   "heal": 27,
+   "wr_team": 0.49,
+   "wr_team_star2": 0.506,
+   "wr_team_star3": 0.482,
+   "wr_duel": 0.352,
+   "n": 1192,
+   "dmg": 728,
+   "taken": 1005,
+   "heal": 16,
    "star_mult": [
-    1.1875,
-    1.1477,
-    1.2231
+    1.1349,
+    1.1159,
+    1.1797
    ]
   },
   {
@@ -3924,18 +4009,18 @@
    "origin": "celestia",
    "cls": "mage",
    "arche": "aoe_target",
-   "wr_team": 0.445,
-   "wr_team_star2": 0.513,
-   "wr_team_star3": 0.487,
-   "wr_duel": 0.444,
-   "n": 598,
-   "dmg": 2228,
-   "taken": 1036,
+   "wr_team": 0.524,
+   "wr_team_star2": 0.51,
+   "wr_team_star3": 0.503,
+   "wr_duel": 0.481,
+   "n": 1214,
+   "dmg": 2248,
+   "taken": 974,
    "heal": 1,
    "star_mult": [
-    1.2355,
-    1.294,
-    1.286
+    1.2539,
+    1.3012,
+    1.2996
    ]
   },
   {
@@ -3945,18 +4030,18 @@
    "origin": "celestia",
    "cls": "bard",
    "arche": "buff_as_allies",
-   "wr_team": 0.483,
-   "wr_team_star2": 0.515,
-   "wr_team_star3": 0.541,
-   "wr_duel": 0.296,
-   "n": 588,
-   "dmg": 1203,
-   "taken": 1309,
+   "wr_team": 0.488,
+   "wr_team_star2": 0.532,
+   "wr_team_star3": 0.528,
+   "wr_duel": 0.426,
+   "n": 1161,
+   "dmg": 1345,
+   "taken": 1322,
    "heal": 1,
    "star_mult": [
-    1.4319,
-    1.4127,
-    1.2979
+    1.5233,
+    1.5116,
+    1.375
    ]
   },
   {
@@ -3966,18 +4051,18 @@
    "origin": "dragonkin",
    "cls": "mage",
    "arche": "aoe_line",
-   "wr_team": 0.498,
-   "wr_team_star2": 0.513,
-   "wr_team_star3": 0.508,
-   "wr_duel": 0.241,
-   "n": 632,
-   "dmg": 2047,
-   "taken": 890,
+   "wr_team": 0.478,
+   "wr_team_star2": 0.479,
+   "wr_team_star3": 0.477,
+   "wr_duel": 0.222,
+   "n": 1182,
+   "dmg": 1818,
+   "taken": 899,
    "heal": 1,
    "star_mult": [
-    0.9226,
-    0.9322,
-    0.9731
+    0.9135,
+    0.941,
+    0.9744
    ]
   },
   {
@@ -3987,18 +4072,18 @@
    "origin": "dragonkin",
    "cls": "dragoon",
    "arche": "dash_aoe",
-   "wr_team": 0.478,
-   "wr_team_star2": 0.521,
-   "wr_team_star3": 0.524,
-   "wr_duel": 0.611,
-   "n": 580,
-   "dmg": 1482,
-   "taken": 1370,
+   "wr_team": 0.481,
+   "wr_team_star2": 0.533,
+   "wr_team_star3": 0.56,
+   "wr_duel": 0.593,
+   "n": 1242,
+   "dmg": 1404,
+   "taken": 1314,
    "heal": 2,
    "star_mult": [
-    1.0044,
-    1.0368,
-    1.0574
+    0.9805,
+    1.03,
+    1.1046
    ]
   },
   {
@@ -4008,18 +4093,18 @@
    "origin": "torga",
    "cls": "warrior",
    "arche": "aoe_self",
-   "wr_team": 0.512,
-   "wr_team_star2": 0.475,
-   "wr_team_star3": 0.465,
-   "wr_duel": 0.815,
-   "n": 641,
-   "dmg": 1157,
-   "taken": 1659,
-   "heal": 2,
+   "wr_team": 0.474,
+   "wr_team_star2": 0.505,
+   "wr_team_star3": 0.456,
+   "wr_duel": 0.833,
+   "n": 1191,
+   "dmg": 1045,
+   "taken": 1555,
+   "heal": 1,
    "star_mult": [
-    1.1121,
-    1.1809,
-    1.2584
+    1.0462,
+    1.1491,
+    1.2226
    ]
   },
   {
@@ -4029,18 +4114,18 @@
    "origin": "torga",
    "cls": "shaman",
    "arche": "stun_aoe",
-   "wr_team": 0.502,
-   "wr_team_star2": 0.433,
-   "wr_team_star3": 0.474,
-   "wr_duel": 0.426,
-   "n": 609,
-   "dmg": 1887,
-   "taken": 1187,
+   "wr_team": 0.507,
+   "wr_team_star2": 0.505,
+   "wr_team_star3": 0.505,
+   "wr_duel": 0.444,
+   "n": 1210,
+   "dmg": 1910,
+   "taken": 1124,
    "heal": 1,
    "star_mult": [
-    1.1657,
-    1.1269,
-    1.134
+    1.1603,
+    1.1527,
+    1.1246
    ]
   },
   {
@@ -4050,18 +4135,18 @@
    "origin": "lumen",
    "cls": "priest",
    "arche": "heal_aoe",
-   "wr_team": 0.479,
-   "wr_team_star2": 0.526,
-   "wr_team_star3": 0.477,
-   "wr_duel": 0.0,
-   "n": 624,
-   "dmg": 415,
-   "taken": 1050,
-   "heal": 878,
+   "wr_team": 0.497,
+   "wr_team_star2": 0.487,
+   "wr_team_star3": 0.513,
+   "wr_duel": 0.019,
+   "n": 1190,
+   "dmg": 396,
+   "taken": 1097,
+   "heal": 792,
    "star_mult": [
-    0.7211,
-    0.6399,
-    0.6237
+    0.755,
+    0.6762,
+    0.652
    ]
   },
   {
@@ -4071,18 +4156,18 @@
    "origin": "lumen",
    "cls": "knight",
    "arche": "taunt_shield",
-   "wr_team": 0.529,
-   "wr_team_star2": 0.542,
-   "wr_team_star3": 0.546,
+   "wr_team": 0.477,
+   "wr_team_star2": 0.537,
+   "wr_team_star3": 0.543,
    "wr_duel": 0.13,
-   "n": 622,
-   "dmg": 281,
-   "taken": 1893,
-   "heal": 1,
+   "n": 1177,
+   "dmg": 232,
+   "taken": 1678,
+   "heal": 0,
    "star_mult": [
-    0.6758,
-    0.6145,
-    0.5367
+    0.6456,
+    0.6101,
+    0.5241
    ]
   },
   {
@@ -4092,18 +4177,18 @@
    "origin": "freelancer",
    "cls": "duelist",
    "arche": "burst_ad",
-   "wr_team": 0.511,
+   "wr_team": 0.48,
    "wr_team_star2": 0.535,
-   "wr_team_star3": 0.458,
+   "wr_team_star3": 0.505,
    "wr_duel": 0.889,
-   "n": 591,
-   "dmg": 1301,
-   "taken": 1413,
+   "n": 1197,
+   "dmg": 1098,
+   "taken": 1339,
    "heal": 2,
    "star_mult": [
-    1.1499,
-    1.1811,
-    1.1854
+    1.0707,
+    1.1679,
+    1.1857
    ]
   },
   {
@@ -4113,18 +4198,18 @@
    "origin": "freelancer",
    "cls": "artillerist",
    "arche": "execute_long",
-   "wr_team": 0.537,
-   "wr_team_star2": 0.491,
-   "wr_team_star3": 0.427,
-   "wr_duel": 0.685,
-   "n": 574,
-   "dmg": 2289,
-   "taken": 894,
+   "wr_team": 0.503,
+   "wr_team_star2": 0.478,
+   "wr_team_star3": 0.487,
+   "wr_duel": 0.722,
+   "n": 1209,
+   "dmg": 2207,
+   "taken": 886,
    "heal": 1,
    "star_mult": [
-    1.1662,
-    1.1906,
-    1.1744
+    1.139,
+    1.1886,
+    1.1802
    ]
   }
  ]
