@@ -47,7 +47,7 @@ def item_md():
     p = os.path.join(REP, "item_balance.json")
     if not os.path.exists(p): return
     r = json.load(open(p, encoding="utf-8"))
-    L = ["# 부록 B2. 아이템 밸런스 시뮬레이션 결과", "", f"기준: 계층 3 기준 팀 6종 미러전(5v5), 캐리어 1명에게 아이템 1개 장착 시 승률 상승분 Δ. 기준선(아이템 없음) 승률 {r['base']:.3f}.", "",
+    L = ["# 부록 B2. 아이템 밸런스 시뮬레이션 결과", "", f"기준: 계층 3 기준 팀 6종의 교차전(5v5, i≠j 30매치업, ★1·★2 혼합, 좌우 교대), 캐리어 1명에게 아이템 1개 장착 시 매치업별 승률 상승분 Δ의 평균. 기준선(아이템 없음) 평균 승률 {r['base']:.3f}.", "",
          "## 분류별 목표/결과", "", "| 분류 | 목표 Δ | 평균 Δ | 표준편차 | 개수 |", "|---|---|---|---|---|"]
     target = {"completed": 0.11, "radiant": 0.20, "artifact": 0.14, "support": 0.08, "national": 0.12}
     byc = defaultdict(list)

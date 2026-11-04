@@ -34,7 +34,7 @@ def item_block():
     target = {"completed": 0.11, "radiant": 0.20, "artifact": 0.14, "support": 0.08, "national": 0.12}
     byc = defaultdict(list)
     for x in r["items"]: byc[x["category"]].append(x)
-    L = [f"기준선(아이템 없는 미러전, 좌우 교대) 승률 {r['base']:.3f}.", "", "| 분류 | 개수 | 목표 Δ | 평균 Δ | 표준편차 | 목표 ±3%p 내 | 배율 범위 |", "|---|---|---|---|---|---|---|"]
+    L = [f"기준선(아이템 없는 기준 팀 간 교차전 평균, 좌우 교대) 승률 {r['base']:.3f}.", "", "| 분류 | 개수 | 목표 Δ | 평균 Δ | 표준편차 | 목표 ±3%p 내 | 배율 범위 |", "|---|---|---|---|---|---|---|"]
     for c, xs in byc.items():
         v = [x["delta"] for x in xs]; m = [x["mult"] for x in xs]
         L.append(f"| {c} | {len(xs)} | {target[c]:+.2f} | {statistics.mean(v):+.3f} | {statistics.pstdev(v):.3f} | {sum(1 for d in v if abs(d-target[c])<=0.03)/len(v):.0%} | {min(m):.2f}~{max(m):.2f} |")

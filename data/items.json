@@ -198,7 +198,10 @@
    "recipe": [
     "C01",
     "C01"
-   ]
+   ],
+   "balance": {
+    "mult": 0.422
+   }
   },
   {
    "id": "I002",
@@ -223,7 +226,10 @@
    "recipe": [
     "C01",
     "C02"
-   ]
+   ],
+   "balance": {
+    "mult": 1.2554
+   }
   },
   {
    "id": "I003",
@@ -250,7 +256,10 @@
    "recipe": [
     "C01",
     "C03"
-   ]
+   ],
+   "balance": {
+    "mult": 0.3596
+   }
   },
   {
    "id": "I004",
@@ -275,7 +284,10 @@
    "recipe": [
     "C01",
     "C04"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "I005",
@@ -299,7 +311,10 @@
    "recipe": [
     "C01",
     "C05"
-   ]
+   ],
+   "balance": {
+    "mult": 0.9928
+   }
   },
   {
    "id": "I006",
@@ -324,7 +339,10 @@
    "recipe": [
     "C01",
     "C06"
-   ]
+   ],
+   "balance": {
+    "mult": 0.6
+   }
   },
   {
    "id": "I007",
@@ -348,7 +366,10 @@
    "recipe": [
     "C01",
     "C07"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5593
+   }
   },
   {
    "id": "I008",
@@ -372,7 +393,10 @@
    "recipe": [
     "C01",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5398
+   }
   },
   {
    "id": "I009",
@@ -396,7 +420,10 @@
    "recipe": [
     "C01",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8714
+   }
   },
   {
    "id": "I010",
@@ -421,7 +448,10 @@
    "recipe": [
     "C01",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.6155
+   }
   },
   {
    "id": "I011",
@@ -437,7 +467,10 @@
    "recipe": [
     "C02",
     "C02"
-   ]
+   ],
+   "balance": {
+    "mult": 1.806
+   }
   },
   {
    "id": "I012",
@@ -463,7 +496,10 @@
    "recipe": [
     "C02",
     "C03"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5336
+   }
   },
   {
    "id": "I013",
@@ -488,7 +524,10 @@
    "recipe": [
     "C02",
     "C04"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5907
+   }
   },
   {
    "id": "I014",
@@ -512,7 +551,10 @@
    "recipe": [
     "C02",
     "C05"
-   ]
+   ],
+   "balance": {
+    "mult": 1.9303
+   }
   },
   {
    "id": "I015",
@@ -537,7 +579,10 @@
    "recipe": [
     "C02",
     "C06"
-   ]
+   ],
+   "balance": {
+    "mult": 0.48
+   }
   },
   {
    "id": "I016",
@@ -583,7 +628,10 @@
    "recipe": [
     "C02",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 1.6625
+   }
   },
   {
    "id": "I018",
@@ -632,7 +680,10 @@
    "recipe": [
     "C02",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8535
+   }
   },
   {
    "id": "I020",
@@ -648,7 +699,10 @@
    "recipe": [
     "C03",
     "C03"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "I021",
@@ -674,7 +728,10 @@
    "recipe": [
     "C03",
     "C04"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "I022",
@@ -699,7 +756,10 @@
    "recipe": [
     "C03",
     "C05"
-   ]
+   ],
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "I023",
@@ -726,7 +786,10 @@
    "recipe": [
     "C03",
     "C06"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "I024",
@@ -753,7 +816,10 @@
    "recipe": [
     "C03",
     "C07"
-   ]
+   ],
+   "balance": {
+    "mult": 0.64
+   }
   },
   {
    "id": "I025",
@@ -777,7 +843,10 @@
    "recipe": [
     "C03",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8463
+   }
   },
   {
    "id": "I026",
@@ -801,7 +870,10 @@
    "recipe": [
     "C03",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5463
+   }
   },
   {
    "id": "I027",
@@ -818,7 +890,10 @@
    "recipe": [
     "C03",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8168
+   }
   },
   {
    "id": "I028",
@@ -841,7 +916,10 @@
    "recipe": [
     "C04",
     "C04"
-   ]
+   ],
+   "balance": {
+    "mult": 0.3502
+   }
   },
   {
    "id": "I029",
@@ -865,7 +943,10 @@
    "recipe": [
     "C04",
     "C05"
-   ]
+   ],
+   "balance": {
+    "mult": 0.3184
+   }
   },
   {
    "id": "I030",
@@ -890,7 +971,10 @@
    "recipe": [
     "C04",
     "C06"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4502
+   }
   },
   {
    "id": "I031",
@@ -917,7 +1001,10 @@
    "recipe": [
     "C04",
     "C07"
-   ]
+   ],
+   "balance": {
+    "mult": 0.422
+   }
   },
   {
    "id": "I032",
@@ -942,7 +1029,10 @@
    "recipe": [
     "C04",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4788
+   }
   },
   {
    "id": "I033",
@@ -966,7 +1056,10 @@
    "recipe": [
     "C04",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5505
+   }
   },
   {
    "id": "I034",
@@ -983,7 +1076,10 @@
    "recipe": [
     "C04",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5598
+   }
   },
   {
    "id": "I035",
@@ -1006,7 +1102,10 @@
    "recipe": [
     "C05",
     "C05"
-   ]
+   ],
+   "balance": {
+    "mult": 2.7993
+   }
   },
   {
    "id": "I036",
@@ -1034,7 +1133,10 @@
    "recipe": [
     "C05",
     "C06"
-   ]
+   ],
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "I037",
@@ -1059,7 +1161,10 @@
    "recipe": [
     "C05",
     "C07"
-   ]
+   ],
+   "balance": {
+    "mult": 1.5625
+   }
   },
   {
    "id": "I038",
@@ -1133,7 +1238,10 @@
    "recipe": [
     "C05",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5618
+   }
   },
   {
    "id": "I041",
@@ -1156,7 +1264,10 @@
    "recipe": [
     "C06",
     "C06"
-   ]
+   ],
+   "balance": {
+    "mult": 0.422
+   }
   },
   {
    "id": "I042",
@@ -1180,7 +1291,10 @@
    "recipe": [
     "C06",
     "C07"
-   ]
+   ],
+   "balance": {
+    "mult": 0.7809
+   }
   },
   {
    "id": "I043",
@@ -1205,7 +1319,10 @@
    "recipe": [
     "C06",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5314
+   }
   },
   {
    "id": "I044",
@@ -1229,7 +1346,10 @@
    "recipe": [
     "C06",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 0.6435
+   }
   },
   {
    "id": "I045",
@@ -1246,7 +1366,10 @@
    "recipe": [
     "C06",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8859
+   }
   },
   {
    "id": "I046",
@@ -1270,7 +1393,10 @@
    "recipe": [
     "C07",
     "C07"
-   ]
+   ],
+   "balance": {
+    "mult": 1.1264
+   }
   },
   {
    "id": "I047",
@@ -1295,7 +1421,10 @@
    "recipe": [
     "C07",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "I048",
@@ -1319,7 +1448,10 @@
    "recipe": [
     "C07",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 1.3499
+   }
   },
   {
    "id": "I049",
@@ -1343,7 +1475,10 @@
    "recipe": [
     "C07",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.9742
+   }
   },
   {
    "id": "I050",
@@ -1366,7 +1501,10 @@
    "recipe": [
     "C08",
     "C08"
-   ]
+   ],
+   "balance": {
+    "mult": 0.3307
+   }
   },
   {
    "id": "I051",
@@ -1390,7 +1528,10 @@
    "recipe": [
     "C08",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 0.8801
+   }
   },
   {
    "id": "I052",
@@ -1415,7 +1556,10 @@
    "recipe": [
     "C08",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.7756
+   }
   },
   {
    "id": "I053",
@@ -1438,7 +1582,10 @@
    "recipe": [
     "C09",
     "C09"
-   ]
+   ],
+   "balance": {
+    "mult": 0.4423
+   }
   },
   {
    "id": "I054",
@@ -1462,7 +1609,10 @@
    "recipe": [
     "C09",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.3072
+   }
   },
   {
    "id": "I055",
@@ -1478,7 +1628,10 @@
    "recipe": [
     "C10",
     "C10"
-   ]
+   ],
+   "balance": {
+    "mult": 0.5398
+   }
   },
   {
    "id": "E001",
@@ -2181,7 +2334,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격력 +20%. 적 처치 시 공격력 +6% (최대 5중첩).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I001"
+   "base_item": "I001",
+   "balance": {
+    "mult": 0.5551
+   }
   },
   {
    "id": "R002",
@@ -2204,7 +2360,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 최대 체력 1800 이상의 적에게 주는 피해 +25%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I002"
+   "base_item": "I002",
+   "balance": {
+    "mult": 1.3846
+   }
   },
   {
    "id": "R003",
@@ -2229,7 +2388,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 체력이 60% 이하가 되면 최대 체력 30%의 방어막과 공격력 +25%를 6초간 얻는다.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I003"
+   "base_item": "I003",
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "R004",
@@ -2252,7 +2414,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 적중 시 대상 방어력 30% 감소(3초).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I004"
+   "base_item": "I004",
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "R005",
@@ -2274,7 +2439,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +18%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I005"
+   "base_item": "I005",
+   "balance": {
+    "mult": 1.0861
+   }
   },
   {
    "id": "R006",
@@ -2297,7 +2465,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 시 가장 가까운 다른 적 1명에게 공격력 45%의 추가 피해.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I006"
+   "base_item": "I006",
+   "balance": {
+    "mult": 0.524
+   }
   },
   {
    "id": "R007",
@@ -2319,7 +2490,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 시 마나 +5.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I007"
+   "base_item": "I007",
+   "balance": {
+    "mult": 0.7068
+   }
   },
   {
    "id": "R008",
@@ -2341,7 +2515,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +30%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I008"
+   "base_item": "I008",
+   "balance": {
+    "mult": 0.6955
+   }
   },
   {
    "id": "R009",
@@ -2363,7 +2540,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 적 처치 시 최대 체력의 15% 회복.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I009"
+   "base_item": "I009",
+   "balance": {
+    "mult": 0.9092
+   }
   },
   {
    "id": "R010",
@@ -2386,7 +2566,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 시작 시 최대 체력 20%의 방어막(8초).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I010"
+   "base_item": "I010",
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "R011",
@@ -2400,7 +2583,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주문력 +50.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I011"
+   "base_item": "I011",
+   "balance": {
+    "mult": 2.9191
+   }
   },
   {
    "id": "R012",
@@ -2424,7 +2610,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해를 준 적에게 6초간 매초 최대 체력 1% 화상 + 치유 감소 33%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I012"
+   "base_item": "I012",
+   "balance": {
+    "mult": 0.6497
+   }
   },
   {
    "id": "R013",
@@ -2447,7 +2636,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 시 최대 체력 12%의 방어막(4초).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I013"
+   "base_item": "I013",
+   "balance": {
+    "mult": 0.6073
+   }
   },
   {
    "id": "R014",
@@ -2469,7 +2661,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I014"
+   "base_item": "I014",
+   "balance": {
+    "mult": 1.8994
+   }
   },
   {
    "id": "R015",
@@ -2492,7 +2687,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격마다 공격 속도 +5% (최대 12중첩).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I015"
+   "base_item": "I015",
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "R016",
@@ -2514,7 +2712,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 후 마나 +20.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I016"
+   "base_item": "I016",
+   "balance": {
+    "mult": 1.1551
+   }
   },
   {
    "id": "R017",
@@ -2534,7 +2735,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬이 치명타를 입힐 수 있다.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I017"
+   "base_item": "I017",
+   "balance": {
+    "mult": 1.6779
+   }
   },
   {
    "id": "R018",
@@ -2556,7 +2760,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%(스킬 포함).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I018"
+   "base_item": "I018",
+   "balance": {
+    "mult": 1.1024
+   }
   },
   {
    "id": "R019",
@@ -2579,7 +2786,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 시 최대 체력 10%의 방어막.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I019"
+   "base_item": "I019",
+   "balance": {
+    "mult": 0.7626
+   }
   },
   {
    "id": "R020",
@@ -2593,7 +2803,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 체력 +700.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I020"
+   "base_item": "I020",
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "R021",
@@ -2617,7 +2830,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주변 2칸 적에게 매초 최대 체력 1% 화상 + 치유 감소.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I021"
+   "base_item": "I021",
+   "balance": {
+    "mult": 0.5073
+   }
   },
   {
    "id": "R022",
@@ -2640,7 +2856,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 인접 적의 공격 속도 -25%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I022"
+   "base_item": "I022",
+   "balance": {
+    "mult": 0.4577
+   }
   },
   {
    "id": "R023",
@@ -2665,7 +2884,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격/피격마다 공격력·주문력 +1.5% (최대 25). 최대 중첩 시 방어력·마저 +25.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I023"
+   "base_item": "I023",
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "R024",
@@ -2690,7 +2912,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 3초 후부터 5초마다 주변 1칸 아군의 잃은 체력 18% 회복.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I024"
+   "base_item": "I024",
+   "balance": {
+    "mult": 0.6744
+   }
   },
   {
    "id": "R025",
@@ -2712,7 +2937,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +20%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I025"
+   "base_item": "I025",
+   "balance": {
+    "mult": 0.7852
+   }
   },
   {
    "id": "R026",
@@ -2734,7 +2962,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +15%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I026"
+   "base_item": "I026",
+   "balance": {
+    "mult": 0.5222
+   }
   },
   {
    "id": "R027",
@@ -2749,7 +2980,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +10%, 체력 +150.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I027"
+   "base_item": "I027",
+   "balance": {
+    "mult": 0.5684
+   }
   },
   {
    "id": "R028",
@@ -2770,7 +3004,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 방어력 +60. 받은 물리 피해의 10%를 반사.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I028"
+   "base_item": "I028",
+   "balance": {
+    "mult": 0.3587
+   }
   },
   {
    "id": "R029",
@@ -2792,7 +3029,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 자신을 노리는 적 1명당 방어력·마저 +12.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I029"
+   "base_item": "I029",
+   "balance": {
+    "mult": 0.3488
+   }
   },
   {
    "id": "R030",
@@ -2815,7 +3055,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격마다 방어력 +2 (최대 20중첩).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I030"
+   "base_item": "I030",
+   "balance": {
+    "mult": 0.5019
+   }
   },
   {
    "id": "R031",
@@ -2840,7 +3083,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 체력 40% 이하 시 최대 체력 25% 방어막 + 방어력·마저 +20.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I031"
+   "base_item": "I031",
+   "balance": {
+    "mult": 0.4855
+   }
   },
   {
    "id": "R032",
@@ -2863,7 +3109,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 시 대상 방어력 30% 감소.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I032"
+   "base_item": "I032",
+   "balance": {
+    "mult": 0.5434
+   }
   },
   {
    "id": "R033",
@@ -2885,7 +3134,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I033"
+   "base_item": "I033",
+   "balance": {
+    "mult": 0.6047
+   }
   },
   {
    "id": "R034",
@@ -2900,7 +3152,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +10%, 방어력 +20.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I034"
+   "base_item": "I034",
+   "balance": {
+    "mult": 0.4733
+   }
   },
   {
    "id": "R035",
@@ -2921,7 +3176,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 마법 저항력 +60. 받는 마법 피해 -20%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I035"
+   "base_item": "I035",
+   "balance": {
+    "mult": 3.2471
+   }
   },
   {
    "id": "R036",
@@ -2947,7 +3205,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 3번째 공격마다 적 3명에게 60 마법 피해 + 마저 30% 감소.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I036"
+   "base_item": "I036",
+   "balance": {
+    "mult": 0.5231
+   }
   },
   {
    "id": "R037",
@@ -2970,7 +3231,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 스킬 사용 시 인접 아군 마나 +8.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I037"
+   "base_item": "I037",
+   "balance": {
+    "mult": 1.6206
+   }
   },
   {
    "id": "R038",
@@ -2993,7 +3257,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 시작 후 15초간 군중 제어 면역. 공격 속도 +10%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I038"
+   "base_item": "I038",
+   "balance": {
+    "mult": 1.2881
+   }
   },
   {
    "id": "R039",
@@ -3015,7 +3282,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I039"
+   "base_item": "I039",
+   "balance": {
+    "mult": 1.3437
+   }
   },
   {
    "id": "R040",
@@ -3038,7 +3308,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 시작 시 최대 체력 18% 방어막.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I040"
+   "base_item": "I040",
+   "balance": {
+    "mult": 0.475
+   }
   },
   {
    "id": "R041",
@@ -3059,7 +3332,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 속도 +30%, 사거리 +1.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I041"
+   "base_item": "I041",
+   "balance": {
+    "mult": 0.4515
+   }
   },
   {
    "id": "R042",
@@ -3081,7 +3357,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 공격 시 마나 +3.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I042"
+   "base_item": "I042",
+   "balance": {
+    "mult": 0.7904
+   }
   },
   {
    "id": "R043",
@@ -3104,7 +3383,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 시 대상 방어력 30% 감소.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I043"
+   "base_item": "I043",
+   "balance": {
+    "mult": 0.513
+   }
   },
   {
    "id": "R044",
@@ -3126,7 +3408,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +12%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I044"
+   "base_item": "I044",
+   "balance": {
+    "mult": 0.6862
+   }
   },
   {
    "id": "R045",
@@ -3141,7 +3426,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +10%, 공격 속도 +10%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I045"
+   "base_item": "I045",
+   "balance": {
+    "mult": 0.7148
+   }
   },
   {
    "id": "R046",
@@ -3186,7 +3474,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 주는 피해 +15%, 피해 흡혈 +15%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I047"
+   "base_item": "I047",
+   "balance": {
+    "mult": 0.5543
+   }
   },
   {
    "id": "R048",
@@ -3208,7 +3499,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 적 처치 시 마나 +20.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I048"
+   "base_item": "I048",
+   "balance": {
+    "mult": 1.25
+   }
   },
   {
    "id": "R049",
@@ -3230,7 +3524,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 매초 마나 +2.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I049"
+   "base_item": "I049",
+   "balance": {
+    "mult": 0.9039
+   }
   },
   {
    "id": "R050",
@@ -3251,7 +3548,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 +40%. 전투마다 무작위 조합 아이템 2개의 능력치를 얻는다.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I050"
+   "base_item": "I050",
+   "balance": {
+    "mult": 0.4125
+   }
   },
   {
    "id": "R051",
@@ -3273,7 +3573,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 피해 +25%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I051"
+   "base_item": "I051",
+   "balance": {
+    "mult": 0.9265
+   }
   },
   {
    "id": "R052",
@@ -3296,7 +3599,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 치명타 시 최대 체력 4%의 방어막.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I052"
+   "base_item": "I052",
+   "balance": {
+    "mult": 0.5835
+   }
   },
   {
    "id": "R053",
@@ -3317,7 +3623,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 피해 흡혈 +25%. 초과 치유량은 방어막이 된다(최대 체력 30%).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I053"
+   "base_item": "I053",
+   "balance": {
+    "mult": 0.5552
+   }
   },
   {
    "id": "R054",
@@ -3339,7 +3648,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 전투 중 1회 사망 시 체력 30%로 부활.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I054"
+   "base_item": "I054",
+   "balance": {
+    "mult": 0.3488
+   }
   },
   {
    "id": "R055",
@@ -3353,7 +3665,10 @@
    "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 내구력 +20%.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I055"
+   "base_item": "I055",
+   "balance": {
+    "mult": 0.5806
+   }
   },
   {
    "id": "A001",
@@ -3375,7 +3690,10 @@
    ],
    "desc": "적 처치 시 주변 1칸에 250 마법 피해.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5852
+   }
   },
   {
    "id": "A002",
@@ -3396,7 +3714,10 @@
    ],
    "desc": "스킬 사용 시 아군 전체 최대 체력 6% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5868
+   }
   },
   {
    "id": "A003",
@@ -3416,7 +3737,10 @@
    ],
    "desc": "매초 최대 체력 1.5% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A004",
@@ -3436,7 +3760,10 @@
    ],
    "desc": "스킬 피해의 10%만큼 고정 피해 추가.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 2.1559
+   }
   },
   {
    "id": "A005",
@@ -3458,7 +3785,10 @@
    ],
    "desc": "공격마다 공격 속도 +3% (최대 20중첩).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4264
+   }
   },
   {
    "id": "A006",
@@ -3488,7 +3818,10 @@
    ],
    "desc": "자신 재생 + 5초마다 인접 아군 잃은 체력 10% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5257
+   }
   },
   {
    "id": "A007",
@@ -3509,7 +3842,10 @@
    ],
    "desc": "치명타 피해 +40%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5248
+   }
   },
   {
    "id": "A008",
@@ -3530,7 +3866,10 @@
    ],
    "desc": "매초 마나 +3.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8155
+   }
   },
   {
    "id": "A009",
@@ -3551,7 +3890,10 @@
    ],
    "desc": "스킬 사용 후 마나 +30.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6676
+   }
   },
   {
    "id": "A010",
@@ -3573,7 +3915,10 @@
    ],
    "desc": "적 처치 시 망령 소환(최대 2).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.7228
+   }
   },
   {
    "id": "A011",
@@ -3594,7 +3939,10 @@
    ],
    "desc": "1회 부활(체력 50%).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3191
+   }
   },
   {
    "id": "A012",
@@ -3615,7 +3963,10 @@
    ],
    "desc": "첫 스킬의 피해/치유 +60%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.3063
+   }
   },
   {
    "id": "A013",
@@ -3637,7 +3988,10 @@
    ],
    "desc": "주변 2칸 적 공격 속도 -20%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4575
+   }
   },
   {
    "id": "A014",
@@ -3660,7 +4014,10 @@
    ],
    "desc": "인접 아군 방어력·마저 +15.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.7387
+   }
   },
   {
    "id": "A015",
@@ -3682,7 +4039,10 @@
    ],
    "desc": "처치마다 공격력 +8% (최대 5).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5776
+   }
   },
   {
    "id": "A016",
@@ -3703,7 +4063,10 @@
    ],
    "desc": "체력 15% 이하 적을 즉시 처형.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3294
+   }
   },
   {
    "id": "A017",
@@ -3727,7 +4090,10 @@
    ],
    "desc": "4초마다 아군 전체 잃은 체력 8% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A018",
@@ -3748,7 +4114,10 @@
    ],
    "desc": "받은 물리 피해 15% 반사.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A019",
@@ -3773,7 +4142,10 @@
    ],
    "desc": "스킬 치명타 가능 + 치명타 피해 +15%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.1483
+   }
   },
   {
    "id": "A020",
@@ -3795,7 +4167,10 @@
    ],
    "desc": "공격/피격마다 공격력 +2% (최대 20).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A021",
@@ -3816,7 +4191,10 @@
    ],
    "desc": "30초간 군중 제어 면역.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.2205
+   }
   },
   {
    "id": "A022",
@@ -3837,7 +4215,10 @@
    ],
    "desc": "초과 치유량이 방어막이 된다(최대 40%).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5578
+   }
   },
   {
    "id": "A023",
@@ -3858,7 +4239,10 @@
    ],
    "desc": "도약/강하 스킬 피해 +50%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6873
+   }
   },
   {
    "id": "A024",
@@ -3879,7 +4263,10 @@
    ],
    "desc": "자신을 노리는 적 1명당 방어력·마저 +15.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3072
+   }
   },
   {
    "id": "A025",
@@ -3899,7 +4286,10 @@
    ],
    "desc": "15% 확률로 공격을 회피.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5375
+   }
   },
   {
    "id": "A026",
@@ -3923,7 +4313,10 @@
    ],
    "desc": "3번째 공격마다 적 4명에게 90 마법 피해 + 마저 감소.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A027",
@@ -3945,7 +4338,10 @@
    ],
    "desc": "전투 승리 시 골드 +30%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8688
+   }
   },
   {
    "id": "A028",
@@ -3967,7 +4363,10 @@
    ],
    "desc": "피해를 준 적에게 매초 최대 체력 2% 화상 + 치유 감소 50%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3638
+   }
   },
   {
    "id": "A029",
@@ -3980,7 +4379,10 @@
    "hooks": [],
    "desc": "체력 +900.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.361
+   }
   },
   {
    "id": "A030",
@@ -4023,7 +4425,10 @@
    ],
    "desc": "스킬에 맞은 적 공격 속도 -40% (3초).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.9325
+   }
   },
   {
    "id": "A032",
@@ -4045,7 +4450,10 @@
    ],
    "desc": "체력 30% 이하 시 2초간 무적 정지(1회).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4342
+   }
   },
   {
    "id": "A033",
@@ -4067,7 +4475,10 @@
    ],
    "desc": "전투마다 무작위 조합 아이템 1개의 능력치를 얻는다.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4575
+   }
   },
   {
    "id": "A034",
@@ -4086,7 +4497,10 @@
    ],
    "desc": "전투 시작 시 적 후열로 도약한다.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 3.2471
+   }
   },
   {
    "id": "A035",
@@ -4108,7 +4522,10 @@
    ],
    "desc": "인접 아군 최대 체력 +10%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5989
+   }
   },
   {
    "id": "A036",
@@ -4130,7 +4547,10 @@
    ],
    "desc": "공격 시 인접 적 2명에게 공격력 40% 추가 피해.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5758
+   }
   },
   {
    "id": "A037",
@@ -4152,7 +4572,10 @@
    ],
    "desc": "피격/공격마다 공격력 +3% (최대 15).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5448
+   }
   },
   {
    "id": "A038",
@@ -4173,7 +4596,10 @@
    ],
    "desc": "사거리 +2.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.9378
+   }
   },
   {
    "id": "A039",
@@ -4197,7 +4623,10 @@
    ],
    "desc": "체력 50% 이하 시 최대 체력 40% 방어막 + 방어력·마저 +30.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3072
+   }
   },
   {
    "id": "A040",
@@ -4241,7 +4670,10 @@
    ],
    "desc": "공격 적중 시 방어력 40% 감소.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A042",
@@ -4262,7 +4694,10 @@
    ],
    "desc": "처치 시 최대 체력 20% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4718
+   }
   },
   {
    "id": "A043",
@@ -4283,7 +4718,10 @@
    ],
    "desc": "소환한 포탑/소환수 능력치 +50%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4526
+   }
   },
   {
    "id": "A044",
@@ -4305,7 +4743,10 @@
    ],
    "desc": "전투 시작 시 최대 체력 30% 방어막(10초).",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.353
+   }
   },
   {
    "id": "A045",
@@ -4326,7 +4767,10 @@
    ],
    "desc": "스킬 피해의 20%만큼 고정 피해 추가.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.7552
+   }
   },
   {
    "id": "A046",
@@ -4348,7 +4792,10 @@
    ],
    "desc": "인접 아군 공격 속도 +10%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.659
+   }
   },
   {
    "id": "A047",
@@ -4370,7 +4817,10 @@
    ],
    "desc": "인접 아군 공격력 +10%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.7143
+   }
   },
   {
    "id": "A048",
@@ -4392,7 +4842,10 @@
    ],
    "desc": "스킬 사용 시 아군 전체 마나 +5.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.13
+   }
   },
   {
    "id": "A049",
@@ -4414,7 +4867,10 @@
    ],
    "desc": "받는 마법 피해 -15%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5442
+   }
   },
   {
    "id": "A050",
@@ -4441,7 +4897,10 @@
    ],
    "desc": "체력 10% 이하 적 처형, 처치 시 10% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4772
+   }
   },
   {
    "id": "A051",
@@ -4463,7 +4922,10 @@
    ],
    "desc": "적 처치 시 주변 1칸 300 마법 피해.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8725
+   }
   },
   {
    "id": "A052",
@@ -4490,7 +4952,10 @@
    ],
    "desc": "스킬 사용 시 아군 4% 회복 + 자신 재생.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6414
+   }
   },
   {
    "id": "A053",
@@ -4511,7 +4976,10 @@
    ],
    "desc": "전투 승리 시 골드 +50%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.0903
+   }
   },
   {
    "id": "A054",
@@ -4533,7 +5001,10 @@
    ],
    "desc": "최대 체력 1600 이상 적에게 피해 +30%.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 2.9797
+   }
   },
   {
    "id": "A055",
@@ -4585,7 +5056,10 @@
    ],
    "desc": "4번째 공격마다 200 마법 피해.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "A057",
@@ -4612,7 +5086,10 @@
    ],
    "desc": "매초 마나 +2, 공격 시 마나 +2.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6979
+   }
   },
   {
    "id": "A058",
@@ -4639,7 +5116,10 @@
    ],
    "desc": "1회 부활(40%) + 부활 시 아군 10% 회복.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3454
+   }
   },
   {
    "id": "A059",
@@ -4661,7 +5141,10 @@
    ],
    "desc": "공격 시 인접 적 2명에게 공격력 30% 추가 피해.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5776
+   }
   },
   {
    "id": "A060",
@@ -4690,7 +5173,10 @@
    ],
    "desc": "화상 + 치유 감소 + 12% 이하 처형.",
    "price_gold": 2800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.3072
+   }
   },
   {
    "id": "S001",
@@ -4712,7 +5198,10 @@
    ],
    "desc": "인접 아군 공격력·주문력 +12%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8027
+   }
   },
   {
    "id": "S002",
@@ -4734,7 +5223,10 @@
    ],
    "desc": "인접 아군 방어력·마저 +20.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6832
+   }
   },
   {
    "id": "S003",
@@ -4757,7 +5249,10 @@
    ],
    "desc": "4초마다 인접 아군 잃은 체력 12% 회복.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5137
+   }
   },
   {
    "id": "S004",
@@ -4778,7 +5273,10 @@
    ],
    "desc": "인접 아군 공격 속도 +15%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.5354
+   }
   },
   {
    "id": "S005",
@@ -4799,7 +5297,10 @@
    ],
    "desc": "인접 아군 매초 마나 +2.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.0591
+   }
   },
   {
    "id": "S006",
@@ -4820,7 +5321,10 @@
    ],
    "desc": "인접 아군 전투 시작 시 15% 방어막.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.7243
+   }
   },
   {
    "id": "S007",
@@ -4842,7 +5346,10 @@
    ],
    "desc": "아군 전체 공격력·주문력 +6%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6714
+   }
   },
   {
    "id": "S008",
@@ -4864,7 +5371,10 @@
    ],
    "desc": "아군 전체 방어력·마저 +10.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "S009",
@@ -4886,7 +5396,10 @@
    ],
    "desc": "주변 2칸 적 방어력·마저 -15.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.681
+   }
   },
   {
    "id": "S010",
@@ -4907,7 +5420,10 @@
    ],
    "desc": "주변 2칸 적 공격 속도 -15%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.7207
+   }
   },
   {
    "id": "S011",
@@ -4928,7 +5444,10 @@
    ],
    "desc": "인접 아군 매초 1% 재생.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.9051
+   }
   },
   {
    "id": "S012",
@@ -4949,7 +5468,10 @@
    ],
    "desc": "아군 전체 시작 마나 +15.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8217
+   }
   },
   {
    "id": "S013",
@@ -4970,7 +5492,10 @@
    ],
    "desc": "인접 아군 피해 흡혈 +10%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8249
+   }
   },
   {
    "id": "S014",
@@ -4991,7 +5516,10 @@
    ],
    "desc": "인접 아군 치명타 +20%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.2332
+   }
   },
   {
    "id": "S015",
@@ -5012,7 +5540,10 @@
    ],
    "desc": "인접 아군 내구력 +8%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.8028
+   }
   },
   {
    "id": "S016",
@@ -5033,7 +5564,10 @@
    ],
    "desc": "인접 아군 사거리 +1.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.33
+   }
   },
   {
    "id": "S017",
@@ -5054,7 +5588,10 @@
    ],
    "desc": "인접 아군 물리 피해 8% 반사.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.5568
+   }
   },
   {
    "id": "S018",
@@ -5075,7 +5612,10 @@
    ],
    "desc": "인접 아군 최대 체력 +15%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.6314
+   }
   },
   {
    "id": "S019",
@@ -5096,7 +5636,10 @@
    ],
    "desc": "아군 전체 구조물에 주는 피해 +50%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 2.0781
+   }
   },
   {
    "id": "S020",
@@ -5117,7 +5660,10 @@
    ],
    "desc": "웨이브 종료 시 아군 전체 25% 회복(웨이브 전투).",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 2.0781
+   }
   },
   {
    "id": "S021",
@@ -5139,7 +5685,10 @@
    ],
    "desc": "전투 시작 6초간 아군 전체 공격 속도 +20%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 0.512
+   }
   },
   {
    "id": "S022",
@@ -5202,7 +5751,10 @@
    ],
    "desc": "인접 아군 주문력 +20.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.6625
+   }
   },
   {
    "id": "S025",
@@ -5223,7 +5775,10 @@
    ],
    "desc": "아군 전체 받는 치유 +20%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.6765
+   }
   },
   {
    "id": "S026",
@@ -5244,7 +5799,10 @@
    ],
    "desc": "아군 소환수 능력치 +30%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.746
+   }
   },
   {
    "id": "S027",
@@ -5292,7 +5850,10 @@
    ],
    "desc": "골드 +20%, 인접 아군 공격력 +5%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 1.33
+   }
   },
   {
    "id": "S029",
@@ -5312,7 +5873,10 @@
    ],
    "desc": "전투 보상 아이템 드랍률 +10%.",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 2.0781
+   }
   },
   {
    "id": "S030",
@@ -5332,7 +5896,10 @@
    ],
    "desc": "영웅 드랍 확률 +10% (조우 전투).",
    "price_gold": 1800,
-   "recipe": null
+   "recipe": null,
+   "balance": {
+    "mult": 2.0781
+   }
   },
   {
    "id": "N001",
@@ -5354,7 +5921,10 @@
    "desc": "[브로멜 자유도시 특산] 골드 +15%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "bromel"
+   "nation": "bromel",
+   "balance": {
+    "mult": 0.9347
+   }
   },
   {
    "id": "N002",
@@ -5377,7 +5947,10 @@
    "desc": "[아스텔 왕국 특산] 시작 시 12% 방어막.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "astel"
+   "nation": "astel",
+   "balance": {
+    "mult": 0.5533
+   }
   },
   {
    "id": "N003",
@@ -5398,7 +5971,10 @@
    "desc": "[미르 공국 특산] 매초 1% 재생.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "mir"
+   "nation": "mir",
+   "balance": {
+    "mult": 0.5631
+   }
   },
   {
    "id": "N004",
@@ -5421,7 +5997,10 @@
    "desc": "[하르벤 후국 특산] 처치마다 공격력 +5%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "harben"
+   "nation": "harben",
+   "balance": {
+    "mult": 1.1891
+   }
   },
   {
    "id": "N005",
@@ -5443,7 +6022,10 @@
    "desc": "[루멘 성교국 특산] 1회 부활(25%).",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "lumen"
+   "nation": "lumen",
+   "balance": {
+    "mult": 0.3512
+   }
   },
   {
    "id": "N006",
@@ -5465,7 +6047,10 @@
    "desc": "[리에스 연합 특산] 골드 +20%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "lies"
+   "nation": "lies",
+   "balance": {
+    "mult": 0.8959
+   }
   },
   {
    "id": "N007",
@@ -5490,7 +6075,10 @@
    "desc": "[발하임 특산] 체력 50% 이하 시 방어막 + 공격력.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "valheim"
+   "nation": "valheim",
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "N008",
@@ -5512,7 +6100,10 @@
    "desc": "[카르나 술탄국 특산] 첫 스킬 +40%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "karna"
+   "nation": "karna",
+   "balance": {
+    "mult": 1.1569
+   }
   },
   {
    "id": "N009",
@@ -5535,7 +6126,10 @@
    "desc": "[토르가 부족연맹 특산] 피격/공격마다 공격력 +2%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "torga"
+   "nation": "torga",
+   "balance": {
+    "mult": 0.5598
+   }
   },
   {
    "id": "N010",
@@ -5557,7 +6151,10 @@
    "desc": "[쿠르간 칸국 특산] 사거리 +1.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "kurgan"
+   "nation": "kurgan",
+   "balance": {
+    "mult": 0.5074
+   }
   },
   {
    "id": "N011",
@@ -5579,7 +6176,10 @@
    "desc": "[사이람 제국 특산] 치명타 피해 +20%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "sairam"
+   "nation": "sairam",
+   "balance": {
+    "mult": 0.6412
+   }
   },
   {
    "id": "N012",
@@ -5601,7 +6201,10 @@
    "desc": "[엘로웬 특산] 매초 1.2% 재생.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "elowen"
+   "nation": "elowen",
+   "balance": {
+    "mult": 0.5923
+   }
   },
   {
    "id": "N013",
@@ -5623,7 +6226,10 @@
    "desc": "[그란두르 특산] 물리 피해 8% 반사.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "grandur"
+   "nation": "grandur",
+   "balance": {
+    "mult": 0.5665
+   }
   },
   {
    "id": "N014",
@@ -5646,7 +6252,10 @@
    "desc": "[서리 제도 특산] 인접 적 공속 -15%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "frost_isles"
+   "nation": "frost_isles",
+   "balance": {
+    "mult": 0.6004
+   }
   },
   {
    "id": "N015",
@@ -5689,7 +6298,10 @@
    "desc": "[베일 요정 영지 특산] 10% 회피.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "veil"
+   "nation": "veil",
+   "balance": {
+    "mult": 0.6412
+   }
   },
   {
    "id": "N017",
@@ -5713,7 +6325,10 @@
    "desc": "[자이로스 정글 특산] 독(화상) + 치유 감소.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "zyros"
+   "nation": "zyros",
+   "balance": {
+    "mult": 0.4096
+   }
   },
   {
    "id": "N018",
@@ -5737,7 +6352,10 @@
    "desc": "[녹스 특산] 처치 시 망령 소환.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "nox"
+   "nation": "nox",
+   "balance": {
+    "mult": 1.0365
+   }
   },
   {
    "id": "N019",
@@ -5759,7 +6377,10 @@
    "desc": "[황혼 요새 특산] 처치 시 12% 회복.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "twilight"
+   "nation": "twilight",
+   "balance": {
+    "mult": 0.5734
+   }
   },
   {
    "id": "N020",
@@ -5781,7 +6402,10 @@
    "desc": "[마카브 화산령 특산] 노리는 적당 방어력·마저 +10.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "makab"
+   "nation": "makab",
+   "balance": {
+    "mult": 0.3231
+   }
   },
   {
    "id": "N021",
@@ -5803,7 +6427,10 @@
    "desc": "[네오스 특산] 스킬 후 마나 +15.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "neos"
+   "nation": "neos",
+   "balance": {
+    "mult": 0.7706
+   }
   },
   {
    "id": "N022",
@@ -5826,7 +6453,10 @@
    "desc": "[셀레스티아 특산] 스킬 시 인접 아군 마나 +6.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "celestia"
+   "nation": "celestia",
+   "balance": {
+    "mult": 1.3019
+   }
   },
   {
    "id": "N023",
@@ -5849,7 +6479,10 @@
    "desc": "[드라케스탄 특산] 받는 마법 피해 -10%.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "drakestan"
+   "nation": "drakestan",
+   "balance": {
+    "mult": 0.6265
+   }
   },
   {
    "id": "N024",
@@ -5880,7 +6513,10 @@
    "desc": "[애쉬펠 (재의 산맥) 특산] 화상 + 처치 시 폭발.",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "ashfell"
+   "nation": "ashfell",
+   "balance": {
+    "mult": 0.3302
+   }
   },
   {
    "id": "X001",

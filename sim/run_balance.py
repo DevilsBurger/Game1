@@ -125,34 +125,45 @@ def carriers_for_item(it):
 
 
 def _item_fight(args):
-    team, carrier_idx, item_id, seed, star = args
+    team, opp, carrier_idx, item_id, seed, star = args
     d = _G["data"]
     A = [d.hero_spec(h, star, items=([item_id] if (i == carrier_idx and item_id) else [])) for i, h in enumerate(team)]
-    B = [d.hero_spec(h, star) for h in team]
+    B = [d.hero_spec(h, star) for h in opp]
     side = seed & 1  # 잔여 배치 비대칭 상쇄: 절반은 아이템 팀을 우측에 배치
     r = Battle(d, A, B, seed=seed).run() if side == 0 else Battle(d, B, A, seed=seed).run()
-    return item_id, 1 if r["winner"] == side else 0
+    return item_id, (team[0], opp[0], star), 1 if r["winner"] == side else 0
 
 
-def item_phase_eval(pool, data, ref_teams, item_ids, fights, seed_base, star=1):
+def item_phase_eval(pool, data, ref_teams, item_ids, fights, seed_base):
+    """기준 팀 i(아이템 캐리어 보유) vs 상대 팀 j(i≠j), ★1·★2 혼합. Δ = (매치업별 승률 - 같은 매치업의 무아이템 승률)의 평균."""
     jobs = []
-    # 기준선: 아이템 없음 (배치 비대칭 보정)
-    for ti, (team, roles) in enumerate(ref_teams):
-        for k in range(fights):
-            jobs.append((team, 0, None, seed_base + ti * 1000 + k, star))
+    matchups = [(ti, tj) for ti in range(len(ref_teams)) for tj in range(len(ref_teams)) if ti != tj]
+    per = max(2, fights // len(matchups) * 2)  # 매치업당 전투 수 (★1, ★2 각각)
+    for ti, tj in matchups:
+        team, roles = ref_teams[ti]; opp, _ = ref_teams[tj]
+        for star in (1, 2):
+            for k in range(per):
+                jobs.append((team, opp, 0, None, seed_base + ti * 100000 + tj * 1000 + star * 100 + k, star))
     for iid in item_ids:
         it = data.items[iid]
         cands = carriers_for_item(it)
-        for ti, (team, roles) in enumerate(ref_teams):
+        for ti, tj in matchups:
+            team, roles = ref_teams[ti]; opp, _ = ref_teams[tj]
             idxs = [i for i, r in enumerate(roles) if r in cands] or [0]
-            for k in range(fights):
-                ci = idxs[k % len(idxs)]
-                jobs.append((team, ci, iid, seed_base + ti * 1000 + k, star))
+            for star in (1, 2):
+                for k in range(per):
+                    jobs.append((team, opp, idxs[k % len(idxs)], iid, seed_base + ti * 100000 + tj * 1000 + star * 100 + k, star))
     wins = {}; cnt = {}
-    for iid, w in pool.imap_unordered(_item_fight, jobs, chunksize=32):
-        wins[iid] = wins.get(iid, 0) + w; cnt[iid] = cnt.get(iid, 0) + 1
-    base = wins[None] / cnt[None]
-    return base, {iid: wins[iid] / cnt[iid] - base for iid in item_ids}
+    for iid, key, w in pool.imap_unordered(_item_fight, jobs, chunksize=32):
+        wins[(iid, key)] = wins.get((iid, key), 0) + w; cnt[(iid, key)] = cnt.get((iid, key), 0) + 1
+    base_keys = [k for (i, k) in wins if i is None]
+    base_wr = {k: wins[(None, k)] / cnt[(None, k)] for k in base_keys}
+    base = sum(base_wr.values()) / len(base_wr)
+    deltas = {}
+    for iid in item_ids:
+        ds = [wins[(iid, k)] / cnt[(iid, k)] - base_wr[k] for k in base_keys if (iid, k) in wins]
+        deltas[iid] = sum(ds) / len(ds)
+    return base, deltas
 
 
 ITEM_TARGET = {"completed": 0.11, "radiant": 0.20, "artifact": 0.14, "support": 0.08, "national": 0.12}
@@ -257,11 +268,12 @@ def main():
                 it_ = data.items[iid]; target = ITEM_TARGET[it_["category"]]
                 if abs(dl - target) <= 0.03: continue
                 f = ((target + 0.05) / max(0.01, dl + 0.05)) ** 0.6
-                f = max(0.8, min(1.25, f))
+                f = max(0.75, min(1.33, f))
                 scale_item(it_, f)
+                it_["balance"]["mult"] = max(0.2, min(5.0, it_["balance"]["mult"]))
             json.dump(items_doc, open(os.path.join(DATA, "items.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         with Pool(args.procs, initializer=_init, initargs=(heroes_doc, items_doc)) as pool:
-            base, deltas = item_phase_eval(pool, data, ref_teams, item_ids, max(args.item_fights, 60), args.seed + 900)
+            base, deltas = item_phase_eval(pool, data, ref_teams, item_ids, max(args.item_fights, 90), args.seed + 900)
         item_report = [dict(id=iid, name=data.items[iid]["name_ko"], category=data.items[iid]["category"], delta=round(dl, 3),
                             mult=data.items[iid].get("balance", {"mult": 1.0})["mult"], carriers=carriers_for_item(data.items[iid])) for iid, dl in deltas.items()]
         json.dump({"history": history["item"], "base": base, "ref_teams": ref_teams, "items": item_report}, open(os.path.join(REP, "item_balance.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
