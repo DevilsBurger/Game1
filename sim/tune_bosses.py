@@ -2,7 +2,8 @@
 """
 스토리 결전(decisive)·레이드(raid)·토벌(hunt) 전투의 보스 체력 배수 튜닝.
 목표(기대 팀 기준): 보통 65% / 어려움 45% / 악몽 25% (일반 전투보다 어렵게).
-방법: 각 전투를 난이도별 N회 시뮬레이션 → 보통 승률로 boss.hp_mult(1~5)를, 난이도별 승률로 difficulties[diff].tuned_power_mult(0.35~1.5, 적 HP·AD·AP 배수)를 조정. 결과를 battles.json에 기록.
+방법: 보스 체력 배수는 설계값(토벌 2.0/레이드 4.0/결전 3.0) 유지. 각 전투를 난이도별 N회 시뮬레이션 → 난이도별 승률로
+      difficulties[diff].tuned_power_mult(0.3~1.6, 적 HP·AD·AP 배수)를 지수 0.2·라운드당 ±10%로 6라운드 조정. 결과를 battles.json에 기록.
 출력: sim/reports/boss_tuning.json
 """
 import argparse, json, os, sys, random, statistics, time
@@ -37,13 +38,19 @@ def _run(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rounds", type=int, default=3); ap.add_argument("--fights", type=int, default=16); ap.add_argument("--procs", type=int, default=4)
+    ap.add_argument("--rounds", type=int, default=6); ap.add_argument("--fights", type=int, default=24); ap.add_argument("--procs", type=int, default=4)
+    ap.add_argument("--reset", action="store_true", help="보스 체력 배수를 설계값으로, 전력 배수를 1.0으로 초기화")
     args = ap.parse_args()
     path = os.path.join(DATA, "battles.json")
     doc = json.load(open(path, encoding="utf-8"))
     econ = json.load(open(os.path.join(DATA, "economy.json"), encoding="utf-8"))
     curve = econ.get("enemy_power_curve", {})
     targets = [b for b in doc["battles"] if b["kind"] == "story" and b["enemy"]["boss"] and b["type"] in ("decisive", "raid", "hunt")]
+    DESIGN_HP = {"hunt": 2.0, "raid": 4.0, "decisive": 3.0}
+    if args.reset:
+        for b in targets:
+            b["enemy"]["boss"]["hp_mult"] = DESIGN_HP[b["type"]]
+            for diff in TARGET: b["difficulties"][diff].pop("tuned_power_mult", None)
     hp = {b["id"]: b["enemy"]["boss"]["hp_mult"] for b in targets}
     pm = {b["id"]: {diff: b["difficulties"][diff].get("tuned_power_mult", 1.0) for diff in TARGET} for b in targets}
     hist = []
@@ -59,14 +66,12 @@ def main():
         hist.append({"round": rnd, "mean_dev": statistics.mean(devs), "sd": statistics.pstdev(devs)})
         if rnd == args.rounds: break
         for b in targets:
-            obs = wr[(b["id"], "normal")]
-            f = ((obs + 0.05) / (TARGET["normal"] + 0.05)) ** 0.5
-            hp[b["id"]] = round(max(1.0, min(5.0, hp[b["id"]] * max(0.75, min(1.3, f)))), 2)
+            # 보스 체력 배수는 설계값 유지(토벌 2.0/레이드 4.0/결전 3.0). 난이도별 전력 배수만 조정한다.
+            # 팀전 승률 곡선이 가파르므로(작은 전력 차 → 승패 반전) 지수 0.2, 라운드당 ±10%로 완만하게.
             for diff in ("normal", "hard", "nightmare"):
                 obs = wr[(b["id"], diff)]
-                # 전력 배수는 HP·AD·AP에 함께 곱해지므로 완만하게 (지수 0.3)
-                f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.3
-                pm[b["id"]][diff] = round(max(0.35, min(1.5, pm[b["id"]][diff] * max(0.75, min(1.3, f)))), 3)
+                f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.2
+                pm[b["id"]][diff] = round(max(0.3, min(1.6, pm[b["id"]][diff] * max(0.9, min(1.1, f)))), 3)
     for b in targets:
         b["enemy"]["boss"]["hp_mult"] = hp[b["id"]]
         b["enemy"]["boss"]["tuned"] = True

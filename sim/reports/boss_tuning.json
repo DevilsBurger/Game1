@@ -7,23 +7,38 @@
  "history": [
   {
    "round": 0,
-   "mean_dev": -0.2520833333333333,
-   "sd": 0.28949339130818014
+   "mean_dev": 0.12523148148148147,
+   "sd": 0.3599205057931512
   },
   {
    "round": 1,
-   "mean_dev": -0.22256944444444446,
-   "sd": 0.28482785134128186
+   "mean_dev": 0.1935185185185185,
+   "sd": 0.3117312217204688
   },
   {
    "round": 2,
-   "mean_dev": -0.23125,
-   "sd": 0.26335014450558236
+   "mean_dev": 0.08240740740740739,
+   "sd": 0.25057632472568425
   },
   {
    "round": 3,
-   "mean_dev": -0.22864583333333335,
-   "sd": 0.24525609754992161
+   "mean_dev": 0.08819444444444444,
+   "sd": 0.22110286661067238
+  },
+  {
+   "round": 4,
+   "mean_dev": -0.017129629629629644,
+   "sd": 0.19782716733156425
+  },
+  {
+   "round": 5,
+   "mean_dev": 0.18310185185185185,
+   "sd": 0.24030174985676855
+  },
+  {
+   "round": 6,
+   "mean_dev": 0.0031249999999999906,
+   "sd": 0.22960264715090656
   }
  ],
  "rows": [
@@ -34,11 +49,16 @@
    "type": "hunt",
    "level": 17,
    "boss": "화염 와이번",
-   "hp_mult": 1.0,
+   "hp_mult": 2.0,
+   "power_mult": {
+    "normal": 0.981,
+    "hard": 0.728,
+    "nightmare": 0.649
+   },
    "wr": {
-    "normal": 0.281,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "normal": 0.542,
+    "hard": 0.833,
+    "nightmare": 0.208
    }
   },
   {
@@ -48,11 +68,16 @@
    "type": "decisive",
    "level": 18,
    "boss": "재의 장군",
-   "hp_mult": 1.7,
+   "hp_mult": 3.0,
+   "power_mult": {
+    "normal": 1.473,
+    "hard": 1.201,
+    "nightmare": 0.911
+   },
    "wr": {
-    "normal": 0.594,
-    "hard": 0.031,
-    "nightmare": 0.0
+    "normal": 0.5,
+    "hard": 0.229,
+    "nightmare": 0.729
    }
   },
   {
@@ -62,11 +87,16 @@
    "type": "hunt",
    "level": 25,
    "boss": "바다뱀",
-   "hp_mult": 3.45,
+   "hp_mult": 2.0,
+   "power_mult": {
+    "normal": 1.062,
+    "hard": 0.908,
+    "nightmare": 0.826
+   },
    "wr": {
-    "normal": 0.594,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "normal": 0.917,
+    "hard": 0.812,
+    "nightmare": 0.021
    }
   },
   {
@@ -76,11 +106,16 @@
    "type": "hunt",
    "level": 29,
    "boss": "서리 거인",
-   "hp_mult": 1.0,
+   "hp_mult": 2.0,
+   "power_mult": {
+    "normal": 0.946,
+    "hard": 0.793,
+    "nightmare": 0.649
+   },
    "wr": {
-    "normal": 0.312,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "normal": 0.562,
+    "hard": 0.292,
+    "nightmare": 0.021
    }
   },
   {
@@ -90,11 +125,16 @@
    "type": "hunt",
    "level": 47,
    "boss": "서리 마녀",
-   "hp_mult": 3.67,
+   "hp_mult": 2.0,
+   "power_mult": {
+    "normal": 1.47,
+    "hard": 0.712,
+    "nightmare": 0.794
+   },
    "wr": {
-    "normal": 1.0,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "normal": 0.312,
+    "hard": 0.458,
+    "nightmare": 0.708
    }
   },
   {
@@ -104,11 +144,16 @@
    "type": "decisive",
    "level": 48,
    "boss": "재의 장군",
-   "hp_mult": 1.55,
+   "hp_mult": 3.0,
+   "power_mult": {
+    "normal": 1.376,
+    "hard": 1.146,
+    "nightmare": 0.834
+   },
    "wr": {
-    "normal": 0.5,
-    "hard": 0.031,
-    "nightmare": 0.0
+    "normal": 0.438,
+    "hard": 0.271,
+    "nightmare": 0.146
    }
   },
   {
@@ -118,11 +163,16 @@
    "type": "raid",
    "level": 73,
    "boss": "프로토타입 병기",
-   "hp_mult": 7.35,
+   "hp_mult": 4.0,
+   "power_mult": {
+    "normal": 1.6,
+    "hard": 1.022,
+    "nightmare": 1.005
+   },
    "wr": {
     "normal": 1.0,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "hard": 0.646,
+    "nightmare": 0.125
    }
   },
   {
@@ -132,11 +182,16 @@
    "type": "decisive",
    "level": 78,
    "boss": "재의 주술사",
-   "hp_mult": 3.06,
+   "hp_mult": 3.0,
+   "power_mult": {
+    "normal": 1.541,
+    "hard": 1.416,
+    "nightmare": 1.011
+   },
    "wr": {
-    "normal": 0.625,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "normal": 0.438,
+    "hard": 0.229,
+    "nightmare": 0.042
    }
   },
   {
@@ -146,11 +201,16 @@
    "type": "hunt",
    "level": 79,
    "boss": "용의 유령",
-   "hp_mult": 3.67,
+   "hp_mult": 2.0,
+   "power_mult": {
+    "normal": 1.328,
+    "hard": 1.299,
+    "nightmare": 0.854
+   },
    "wr": {
-    "normal": 1.0,
-    "hard": 0.375,
-    "nightmare": 0.156
+    "normal": 0.75,
+    "hard": 0.167,
+    "nightmare": 0.396
    }
   },
   {
@@ -160,11 +220,16 @@
    "type": "decisive",
    "level": 90,
    "boss": "재의 장군",
-   "hp_mult": 1.27,
+   "hp_mult": 3.0,
+   "power_mult": {
+    "normal": 1.346,
+    "hard": 1.183,
+    "nightmare": 1.235
+   },
    "wr": {
-    "normal": 0.188,
-    "hard": 0.125,
-    "nightmare": 0.0
+    "normal": 0.667,
+    "hard": 0.417,
+    "nightmare": 0.375
    }
   },
   {
@@ -174,11 +239,16 @@
    "type": "raid",
    "level": 93,
    "boss": "재의 장군",
-   "hp_mult": 7.13,
+   "hp_mult": 4.0,
+   "power_mult": {
+    "normal": 1.6,
+    "hard": 1.25,
+    "nightmare": 1.227
+   },
    "wr": {
     "normal": 1.0,
-    "hard": 0.0,
-    "nightmare": 0.0
+    "hard": 0.583,
+    "nightmare": 0.208
    }
   },
   {
@@ -188,11 +258,16 @@
    "type": "decisive",
    "level": 99,
    "boss": "재의 장군",
-   "hp_mult": 1.27,
+   "hp_mult": 3.0,
+   "power_mult": {
+    "normal": 1.492,
+    "hard": 1.473,
+    "nightmare": 0.977
+   },
    "wr": {
-    "normal": 0.031,
-    "hard": 0.125,
-    "nightmare": 0.0
+    "normal": 0.5,
+    "hard": 0.292,
+    "nightmare": 0.479
    }
   }
  ]

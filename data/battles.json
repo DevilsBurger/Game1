@@ -3897,7 +3897,7 @@
      "name_ko": "화염 와이번",
      "class": "dragoon",
      "tier": 5,
-     "hp_mult": 1.0,
+     "hp_mult": 2.0,
      "role": "보스",
      "tuned": true
     },
@@ -3949,7 +3949,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.981
     },
     "hard": {
      "name_ko": "어려움",
@@ -3992,7 +3993,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.728
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4039,7 +4041,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.649
     },
     "first_clear_bonus": {
      "gold": 1150,
@@ -4125,7 +4128,7 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 1.7,
+     "hp_mult": 3.0,
      "role": "보스",
      "tuned": true
     },
@@ -4177,7 +4180,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.473
     },
     "hard": {
      "name_ko": "어려움",
@@ -4220,7 +4224,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.201
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4264,7 +4269,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.911
     },
     "first_clear_bonus": {
      "gold": 1210,
@@ -5505,7 +5511,7 @@
      "name_ko": "바다뱀",
      "class": "dragoon",
      "tier": 4,
-     "hp_mult": 3.45,
+     "hp_mult": 2.0,
      "role": "보스",
      "tuned": true
     },
@@ -5562,7 +5568,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.062
     },
     "hard": {
      "name_ko": "어려움",
@@ -5610,7 +5617,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.908
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -5662,7 +5670,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.826
     },
     "first_clear_bonus": {
      "gold": 1600,
@@ -6228,7 +6237,7 @@
      "name_ko": "서리 거인",
      "class": "warrior",
      "tier": 5,
-     "hp_mult": 1.0,
+     "hp_mult": 2.0,
      "role": "보스",
      "tuned": true
     },
@@ -6286,7 +6295,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.946
     },
     "hard": {
      "name_ko": "어려움",
@@ -6334,7 +6344,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.793
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -6386,7 +6397,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.649
     },
     "first_clear_bonus": {
      "gold": 1820,
@@ -9487,7 +9499,7 @@
      "name_ko": "서리 마녀",
      "class": "mage",
      "tier": 4,
-     "hp_mult": 3.67,
+     "hp_mult": 2.0,
      "role": "보스",
      "tuned": true
     },
@@ -9549,7 +9561,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.47
     },
     "hard": {
      "name_ko": "어려움",
@@ -9602,7 +9615,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.712
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9659,7 +9673,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.794
     },
     "first_clear_bonus": {
      "gold": 2830,
@@ -9757,7 +9772,7 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 1.55,
+     "hp_mult": 3.0,
      "role": "보스",
      "tuned": true
     },
@@ -9820,7 +9835,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.376
     },
     "hard": {
      "name_ko": "어려움",
@@ -9873,7 +9889,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.146
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9927,7 +9944,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.834
     },
     "first_clear_bonus": {
      "gold": 2890,
@@ -13744,7 +13762,7 @@
      "name_ko": "프로토타입 병기",
      "class": "artillerist",
      "tier": 5,
-     "hp_mult": 7.35,
+     "hp_mult": 4.0,
      "role": "보스",
      "tuned": true
     },
@@ -13811,7 +13829,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.6
     },
     "hard": {
      "name_ko": "어려움",
@@ -13869,7 +13888,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.022
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -13933,7 +13953,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.005
     },
     "first_clear_bonus": {
      "gold": 4290,
@@ -14587,7 +14608,7 @@
      "name_ko": "재의 주술사",
      "class": "shaman",
      "tier": 5,
-     "hp_mult": 3.06,
+     "hp_mult": 3.0,
      "role": "보스",
      "tuned": true
     },
@@ -14654,7 +14675,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.541
     },
     "hard": {
      "name_ko": "어려움",
@@ -14712,7 +14734,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.416
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -14776,7 +14799,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.011
     },
     "first_clear_bonus": {
      "gold": 4570,
@@ -15120,7 +15144,7 @@
      "name_ko": "용의 유령",
      "class": "mage",
      "tier": 5,
-     "hp_mult": 3.67,
+     "hp_mult": 2.0,
      "role": "보스",
      "tuned": true
     },
@@ -15188,7 +15212,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.328
     },
     "hard": {
      "name_ko": "어려움",
@@ -15246,7 +15271,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.299
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15313,7 +15339,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.854
     },
     "first_clear_bonus": {
      "gold": 4620,
@@ -17338,7 +17365,7 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 1.27,
+     "hp_mult": 3.0,
      "role": "보스",
      "tuned": true
     },
@@ -17405,7 +17432,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.346
     },
     "hard": {
      "name_ko": "어려움",
@@ -17463,7 +17491,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.183
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -17527,7 +17556,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.235
     },
     "first_clear_bonus": {
      "gold": 5240,
@@ -18465,7 +18495,7 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 7.13,
+     "hp_mult": 4.0,
      "role": "보스",
      "tuned": true
     },
@@ -18532,7 +18562,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.6
     },
     "hard": {
      "name_ko": "어려움",
@@ -18590,7 +18621,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.25
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -18654,7 +18686,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.227
     },
     "first_clear_bonus": {
      "gold": 5410,
@@ -19861,7 +19894,7 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 1.27,
+     "hp_mult": 3.0,
      "role": "보스",
      "tuned": true
     },
@@ -19929,7 +19962,8 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.492
     },
     "hard": {
      "name_ko": "어려움",
@@ -19987,7 +20021,8 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.473
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -20051,7 +20086,8 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.977
     },
     "first_clear_bonus": {
      "gold": 5740,

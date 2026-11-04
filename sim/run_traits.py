@@ -5,7 +5,7 @@
 측정: 특성 T를 레벨 L로 활성화한 8인 팀 A(보유자 L명 + 무작위 비보유자) vs 계층 매칭 무작위 8인 팀 B.
       같은 시드로 '특성 활성'과 '특성 비활성(disable_traits)' 두 번 싸워 승리 차이의 평균 = 그 임계값의 **한계 가치**.
       (편성 자체의 강약 — 예: 수호자 6명은 화력 부족 — 을 분리해 시너지 효과만 잰다.)
-목표: 출신 2/4/6/8 → +5/+12/+20/+28%p, 직업 2/4/6 → +6/+15/+25%p (±4%p).
+목표: 출신 2/4/6/8 → +5/+14/+28/+42%p, 직업 2/4/6 → +6/+16/+32%p (±4%p).
 조정: traits.json effects에 balance.mult[level] 배율을 두고 엔진이 리스트형 수치에 곱한다.
 출력: sim/reports/trait_balance.json, data/traits.json 갱신
 """
@@ -17,8 +17,10 @@ from engine import GameData, Battle
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(ROOT, "data")
 REP = os.path.join(os.path.dirname(__file__), "reports")
-TARGET_ORIGIN = {2: 0.05, 4: 0.12, 6: 0.20, 8: 0.28}   # 한계 가치(승률 차이) 목표
-TARGET_CLASS = {2: 0.06, 4: 0.15, 6: 0.25}
+# 한계 가치(승률 차이) 목표. 1차 측정 결과 6·8단계 수직 구성의 한계 가치는 구조적으로 크므로(TFT에서도 수직 시너지가 승부를 가름)
+# 상위 단계 목표를 TFT 수준으로 상향: 출신 2/4/6/8 → +5/+14/+28/+42%p, 직업 2/4/6 → +6/+16/+32%p.
+TARGET_ORIGIN = {2: 0.05, 4: 0.14, 6: 0.28, 8: 0.42}
+TARGET_CLASS = {2: 0.06, 4: 0.16, 6: 0.32}
 _G = {}
 
 
@@ -106,8 +108,8 @@ def main():
                 tgt = (TARGET_ORIGIN if kind == "origin" else TARGET_CLASS)[L]
                 if abs(v - tgt) <= 0.02: continue
                 f = ((tgt + 0.08) / max(0.01, v + 0.08)) ** 0.6
-                f = max(0.75, min(1.35, f))
-                t["balance"]["mult"][li] = round(max(0.3, min(3.0, t["balance"]["mult"][li] * f)), 4)
+                f = max(0.7, min(1.4, f))
+                t["balance"]["mult"][li] = round(max(0.2, min(3.0, t["balance"]["mult"][li] * f)), 4)
         json.dump(traits_doc, open(os.path.join(DATA, "traits.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     rows = []
     name = {t["key"]: t["name_ko"] for t in traits_doc["origins"] + traits_doc["classes"]}
