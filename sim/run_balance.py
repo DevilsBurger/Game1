@@ -169,6 +169,14 @@ def item_phase_eval(pool, data, ref_teams, item_ids, fights, seed_base):
 
 
 ITEM_TARGET = {"completed": 0.11, "radiant": 0.20, "artifact": 0.14, "support": 0.08, "national": 0.12}
+# 캐리어 역할 보정: 전열(탱커/브루저)에 장착되는 방어형 아이템은 팀 승률 기여가 구조적으로 크다(전열 붕괴 = 패배).
+ROLE_TARGET_MULT = {"tank": 1.5, "bruiser": 1.25, "ad": 1.0, "ap": 1.0, "support": 1.0}
+
+
+def item_target(it):
+    base = ITEM_TARGET[it["category"]]
+    role = carriers_for_item(it)[0]
+    return round(base * ROLE_TARGET_MULT.get(role, 1.0), 4)
 
 
 def scale_item(it, f):
@@ -267,7 +275,7 @@ def main():
             print(f"[item iter {it}] base={base:.3f} {summary} t={time.time()-t0:.0f}s", flush=True)
             history["item"].append({"iter": it, "base": base, "summary": summary})
             for iid, dl in deltas.items():
-                it_ = data.items[iid]; target = ITEM_TARGET[it_["category"]]
+                it_ = data.items[iid]; target = item_target(it_)
                 if abs(dl - target) <= 0.03: continue
                 f = ((target + 0.05) / max(0.01, dl + 0.05)) ** 0.6
                 f = max(0.75, min(1.33, f))
@@ -278,12 +286,12 @@ def main():
             base, deltas = item_phase_eval(pool, data, ref_teams, item_ids, max(args.item_fights, 90), args.seed + 900)
         # 배율 상·하한에 걸린 채 목표 밖인 아이템 → 상황 의존형(context_dependent) 플래그: 디자이너 검토 대상
         for iid, dl in deltas.items():
-            it_ = data.items[iid]; b = it_.setdefault("balance", {"mult": 1.0}); target = ITEM_TARGET[it_["category"]]
+            it_ = data.items[iid]; b = it_.setdefault("balance", {"mult": 1.0}); target = item_target(it_)
             at_cap = b["mult"] >= ITEM_MULT_MAX - 1e-6 or b["mult"] <= ITEM_MULT_MIN + 1e-6
             if at_cap and abs(dl - target) > 0.03: b["flag"] = "context_dependent"
             else: b.pop("flag", None)
         json.dump(items_doc, open(os.path.join(DATA, "items.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-        item_report = [dict(id=iid, name=data.items[iid]["name_ko"], category=data.items[iid]["category"], delta=round(dl, 3),
+        item_report = [dict(id=iid, name=data.items[iid]["name_ko"], category=data.items[iid]["category"], delta=round(dl, 3), target=item_target(data.items[iid]),
                             mult=data.items[iid].get("balance", {"mult": 1.0})["mult"], flag=data.items[iid].get("balance", {}).get("flag", ""),
                             carriers=carriers_for_item(data.items[iid])) for iid, dl in deltas.items()]
         json.dump({"history": history["item"], "base": base, "ref_teams": ref_teams, "items": item_report}, open(os.path.join(REP, "item_balance.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -31,13 +31,13 @@ def item_block():
     p = os.path.join(REP, "item_balance.json")
     if not os.path.exists(p): return "(미실행)"
     r = json.load(open(p, encoding="utf-8"))
-    target = {"completed": 0.11, "radiant": 0.20, "artifact": 0.14, "support": 0.08, "national": 0.12}
     byc = defaultdict(list)
     for x in r["items"]: byc[x["category"]].append(x)
-    L = [f"기준선(아이템 없는 기준 팀 간 교차전 평균, 좌우 교대) 승률 {r['base']:.3f}.", "", "| 분류 | 개수 | 목표 Δ | 평균 Δ | 표준편차 | 목표 ±3%p 내 | 배율 범위 |", "|---|---|---|---|---|---|---|"]
+    L = [f"기준선(아이템 없는 기준 팀 간 교차전 평균, 좌우 교대) 승률 {r['base']:.3f}. 목표 Δ는 분류 기본값 × 캐리어 역할 보정(탱커 1.5, 브루저 1.25).", "",
+         "| 분류 | 개수 | 목표 Δ(평균) | 평균 Δ | 목표 대비 편차 | 목표 ±3%p 내 | 배율 범위 |", "|---|---|---|---|---|---|---|"]
     for c, xs in byc.items():
-        v = [x["delta"] for x in xs]; m = [x["mult"] for x in xs]
-        L.append(f"| {c} | {len(xs)} | {target[c]:+.2f} | {statistics.mean(v):+.3f} | {statistics.pstdev(v):.3f} | {sum(1 for d in v if abs(d-target[c])<=0.03)/len(v):.0%} | {min(m):.2f}~{max(m):.2f} |")
+        v = [x["delta"] for x in xs]; m = [x["mult"] for x in xs]; tg = [x.get("target", 0) for x in xs]
+        L.append(f"| {c} | {len(xs)} | {statistics.mean(tg):+.3f} | {statistics.mean(v):+.3f} | {statistics.pstdev(d - t for d, t in zip(v, tg)):.3f} | {sum(1 for d, t in zip(v, tg) if abs(d-t)<=0.03)/len(v):.0%} | {min(m):.2f}~{max(m):.2f} |")
     L += ["", "가장 크게 조정된 아이템(배율 기준):"]
     xs = sorted(r["items"], key=lambda x: abs(x["mult"] - 1), reverse=True)[:12]
     L.append(", ".join(f"{x['name']} ×{x['mult']:.2f}" for x in xs))
@@ -55,7 +55,9 @@ def battle_block():
     for d, v in r["summary"].items(): L.append(f"| {d} | {v['mean']:.1%} | {tgt[d]} |")
     L += ["", "레벨 구간별: " + ", ".join(f"{k} {v:.0%}" for k, v in r["by_level_band"].items())]
     if "calibration" in r:
-        L += ["", "몬스터 전력 보정 곡선(economy.json `enemy_power_curve`): " + ", ".join(f"{k}: ×{v:.2f}" for k, v in r["calibration"].items())]
+        L += ["", "몬스터 전력 보정 곡선(economy.json `enemy_power_curve`, 난이도 × 레벨 10 구간):", "", "| 난이도 | " + " | ".join(f"L{lo}" for lo in range(1, 100, 10)) + " |", "|---|" + "---|" * 10]
+        for d in ("normal", "hard", "nightmare"):
+            L.append(f"| {d} | " + " | ".join(f"×{r['calibration'][f'{d} L{lo}-{lo+9}']:.2f}" for lo in range(1, 100, 10)) + " |")
     return "\n".join(L)
 
 

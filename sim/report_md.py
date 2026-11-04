@@ -48,19 +48,20 @@ def item_md():
     if not os.path.exists(p): return
     r = json.load(open(p, encoding="utf-8"))
     L = ["# 부록 B2. 아이템 밸런스 시뮬레이션 결과", "", f"기준: 계층 3 기준 팀 6종의 교차전(5v5, i≠j 30매치업, ★1·★2 혼합, 좌우 교대), 캐리어 1명에게 아이템 1개 장착 시 매치업별 승률 상승분 Δ의 평균. 기준선(아이템 없음) 평균 승률 {r['base']:.3f}.", "",
-         "## 분류별 목표/결과", "", "| 분류 | 목표 Δ | 평균 Δ | 표준편차 | 개수 |", "|---|---|---|---|---|"]
-    target = {"completed": 0.11, "radiant": 0.20, "artifact": 0.14, "support": 0.08, "national": 0.12}
+         "## 분류별 목표/결과", "", "| 분류 | 목표 Δ | 평균 Δ | 편차 | 개수 |", "|---|---|---|---|---|"]
     byc = defaultdict(list)
-    for x in r["items"]: byc[x["category"]].append(x["delta"])
-    for c, v in byc.items(): L.append(f"| {c} | {target.get(c, '-')} | {statistics.mean(v):+.3f} | {statistics.pstdev(v):.3f} | {len(v)} |")
+    for x in r["items"]: byc[x["category"]].append(x)
+    for c, xs in byc.items():
+        L.append(f"| {c} | {statistics.mean(x.get('target', 0) for x in xs):+.3f}(역할 보정 평균) | {statistics.mean(x['delta'] for x in xs):+.3f} | {statistics.pstdev(x['delta'] - x.get('target', 0) for x in xs):.3f}(목표 대비) | {len(xs)} |")
+    L += ["", "역할 보정: 탱커 캐리어 ×1.5, 브루저 ×1.25 (전열 아이템은 구조적으로 팀 승률 기여가 큼)."]
     L += ["", "## 수렴 이력", ""]
     for h in r["history"]: L.append(f"- 반복 {h['iter']}: 기준선 {h['base']:.3f}, " + ", ".join(f"{c} 평균 {v[0]:+.3f}(sd {v[1]:.3f})" for c, v in h["summary"].items()))
     flagged = [x for x in r["items"] if x.get("flag")]
     L += ["", f"## 상황 의존형 아이템 (배율 한계 0.4~2.0에서도 목표 밖, 디자이너 검토 대상: {len(flagged)}개)", ""]
     for x in flagged: L.append(f"- {x['name']} ({x['category']}): Δ {x['delta']:+.3f}, 배율 ×{x['mult']:.2f}")
-    L += ["", "## 아이템별 결과", "", "| ID | 아이템 | 분류 | Δ 승률 | 배율 | 캐리어 역할 | 비고 |", "|---|---|---|---|---|---|---|"]
+    L += ["", "## 아이템별 결과", "", "| ID | 아이템 | 분류 | 목표 Δ | Δ 승률 | 배율 | 캐리어 역할 | 비고 |", "|---|---|---|---|---|---|---|---|"]
     for x in sorted(r["items"], key=lambda x: (x["category"], x["id"])):
-        L.append(f"| {x['id']} | {x['name']} | {x['category']} | {x['delta']:+.3f} | {x['mult']:.2f} | {', '.join(x['carriers'])} | {x.get('flag','')} |")
+        L.append(f"| {x['id']} | {x['name']} | {x['category']} | {x.get('target', 0):+.2f} | {x['delta']:+.3f} | {x['mult']:.2f} | {', '.join(x['carriers'])} | {x.get('flag','')} |")
     open(os.path.join(OUT, "B2_아이템_밸런스.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 

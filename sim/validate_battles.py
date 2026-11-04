@@ -41,8 +41,10 @@ def band_of(level):
 
 
 def enemy_power(level, diff, curve):
-    f = curve.get("bands", {}).get(band_of(level), 1.0) * curve.get("difficulty_mult", {}).get(diff, 1.0)
-    return f
+    bands = curve.get("bands", {})
+    if isinstance(bands.get(diff), dict):  # 난이도별 × 구간별
+        return bands[diff].get(band_of(level), 1.0)
+    return bands.get(band_of(level), 1.0) * curve.get("difficulty_mult", {}).get(diff, 1.0)
 
 
 def enemy_team(d, b, diff, curve=None):
@@ -95,30 +97,27 @@ def main():
     battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))["battles"]
     econ_path = os.path.join(DATA, "economy.json")
     econ = json.load(open(econ_path, encoding="utf-8"))
-    curve = econ.get("enemy_power_curve") or {"bands": {f"{lo}-{lo+9}": 1.0 for lo in range(1, 100, 10)}, "difficulty_mult": {"normal": 1.0, "hard": 1.0, "nightmare": 1.0}}
+    DIFFS = ("normal", "hard", "nightmare")
+    BANDS = [f"{lo}-{lo+9}" for lo in range(1, 100, 10)]
+    curve = econ.get("enemy_power_curve")
+    if not curve or not isinstance(curve.get("bands", {}).get("normal"), dict):
+        curve = {"bands": {d: {b: 1.0 for b in BANDS} for d in DIFFS}}
     rng = random.Random(7)
     pool_b = [b for b in battles if b["kind"] in ("regional", "story")]
     for rnd in range(args.calibrate):
-        sample = rng.sample(pool_b, max(120, args.sample * 2 // 3))
+        sample = rng.sample(pool_b, max(150, args.sample * 3 // 4))
         wins = evaluate(sample, max(6, args.fights * 2 // 3), args.procs, curve, seed0=1000 * rnd)
         bmap = {b["id"]: b for b in sample}
-        # 밴드별(보통) 보정
         acc = {}
         for (bid, diff), ws in wins.items():
-            if diff != "normal": continue
-            acc.setdefault(band_of(bmap[bid]["level"]), []).extend(ws)
-        for band, ws in acc.items():
+            acc.setdefault((diff, band_of(bmap[bid]["level"])), []).extend(ws)
+        for (diff, band), ws in acc.items():
             obs = sum(ws) / len(ws)
-            f = ((obs + 0.05) / (TARGET["normal"] + 0.05)) ** 0.6
-            curve["bands"][band] = round(max(0.3, min(3.0, curve["bands"].get(band, 1.0) * max(0.6, min(1.6, f)))), 3)
-        # 난이도 배수(어려움/악몽)
-        for diff in ("hard", "nightmare"):
-            ws = [w for (bid, d_), wl in wins.items() if d_ == diff for w in wl]
-            obs = sum(ws) / len(ws)
-            f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.6
-            curve["difficulty_mult"][diff] = round(max(0.3, min(3.0, curve["difficulty_mult"][diff] * max(0.6, min(1.6, f)))), 3)
-        print(f"[calibrate {rnd}] bands={curve['bands']} diff={curve['difficulty_mult']}", flush=True)
-        econ["enemy_power_curve"] = dict(curve, desc="기대 팀 기준 난이도 목표(보통 78%/어려움 55%/악몽 30%)로 피팅한 몬스터 능력치 배수. 레벨 10 구간별 × 난이도별. 클라이언트는 몬스터 HP·AD·AP에 곱한다.")
+            f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.3   # 능력치 배수는 HP·AD·AP에 함께 곱해지므로 완만하게
+            f = max(0.8, min(1.25, f))
+            curve["bands"][diff][band] = round(max(0.3, min(3.0, curve["bands"][diff].get(band, 1.0) * f)), 3)
+        print(f"[calibrate {rnd}] " + " | ".join(f"{d}: " + ",".join(f"{curve['bands'][d][b]:.2f}" for b in BANDS) for d in DIFFS), flush=True)
+        econ["enemy_power_curve"] = dict(curve, desc="기대 팀 기준 난이도 목표(보통 78%/어려움 55%/악몽 30%)로 피팅한 몬스터 능력치 배수. 난이도별 × 레벨 10 구간별. 클라이언트는 몬스터 HP·AD·AP에 곱한다.")
         json.dump(econ, open(econ_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     sample = rng.sample(pool_b, args.sample)
     wins = evaluate(sample, args.fights, args.procs, curve, seed0=99999)
@@ -137,7 +136,7 @@ def main():
         by_level.setdefault((band, r["diff"]), []).append(r["wr"])
     by_level = {f"{k[0]} {k[1]}": round(statistics.mean(v), 3) for k, v in sorted(by_level.items())}
     os.makedirs(REP, exist_ok=True)
-    calib = {**{f"L{k}": v for k, v in curve["bands"].items()}, **{k: v for k, v in curve["difficulty_mult"].items()}}
+    calib = {f"{d} L{b}": curve["bands"][d][b] for d in DIFFS for b in BANDS}
     json.dump({"summary": summary, "by_level_band": by_level, "calibration": calib, "rows": sorted(rows, key=lambda r: (r["level"], r["id"], r["diff"]))},
               open(os.path.join(REP, "battle_validation.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(summary); print(by_level)
