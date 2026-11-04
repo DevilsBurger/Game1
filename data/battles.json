@@ -3950,7 +3950,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.981
+     "tuned_power_mult": 0.98
     },
     "hard": {
      "name_ko": "어려움",
@@ -3994,7 +3994,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.728
+     "tuned_power_mult": 0.739
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4042,7 +4042,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.649
+     "tuned_power_mult": 0.604
     },
     "first_clear_bonus": {
      "gold": 1150,
@@ -4181,7 +4181,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.473
+     "tuned_power_mult": 1.428
     },
     "hard": {
      "name_ko": "어려움",
@@ -4225,7 +4225,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.201
+     "tuned_power_mult": 1.196
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4270,7 +4270,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.911
+     "tuned_power_mult": 0.983
     },
     "first_clear_bonus": {
      "gold": 1210,
@@ -5569,7 +5569,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.062
+     "tuned_power_mult": 1.061
     },
     "hard": {
      "name_ko": "어려움",
@@ -5618,7 +5618,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.908
+     "tuned_power_mult": 0.902
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -5671,7 +5671,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.826
+     "tuned_power_mult": 0.838
     },
     "first_clear_bonus": {
      "gold": 1600,
@@ -6296,7 +6296,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.946
+     "tuned_power_mult": 0.932
     },
     "hard": {
      "name_ko": "어려움",
@@ -6345,7 +6345,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.793
+     "tuned_power_mult": 0.794
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -6398,7 +6398,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.649
+     "tuned_power_mult": 0.629
     },
     "first_clear_bonus": {
      "gold": 1820,
@@ -9562,7 +9562,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.47
+     "tuned_power_mult": 1.439
     },
     "hard": {
      "name_ko": "어려움",
@@ -9616,7 +9616,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.712
+     "tuned_power_mult": 0.708
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9674,7 +9674,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.794
+     "tuned_power_mult": 0.795
     },
     "first_clear_bonus": {
      "gold": 2830,
@@ -9836,7 +9836,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.376
+     "tuned_power_mult": 1.352
     },
     "hard": {
      "name_ko": "어려움",
@@ -9890,7 +9890,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.146
+     "tuned_power_mult": 1.152
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9945,7 +9945,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.834
+     "tuned_power_mult": 0.817
     },
     "first_clear_bonus": {
      "gold": 2890,
@@ -13889,7 +13889,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.022
+     "tuned_power_mult": 1.049
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -13954,7 +13954,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.005
+     "tuned_power_mult": 1.004
     },
     "first_clear_bonus": {
      "gold": 4290,
@@ -14676,7 +14676,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.541
+     "tuned_power_mult": 1.493
     },
     "hard": {
      "name_ko": "어려움",
@@ -14735,7 +14735,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.416
+     "tuned_power_mult": 1.377
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -14800,7 +14800,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.011
+     "tuned_power_mult": 1.041
     },
     "first_clear_bonus": {
      "gold": 4570,
@@ -15213,7 +15213,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.328
+     "tuned_power_mult": 1.336
     },
     "hard": {
      "name_ko": "어려움",
@@ -15272,7 +15272,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.299
+     "tuned_power_mult": 1.277
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15340,7 +15340,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.854
+     "tuned_power_mult": 0.879
     },
     "first_clear_bonus": {
      "gold": 4620,
@@ -17433,7 +17433,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.346
+     "tuned_power_mult": 1.354
     },
     "hard": {
      "name_ko": "어려움",
@@ -17492,7 +17492,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.183
+     "tuned_power_mult": 1.214
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -17557,7 +17557,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.235
+     "tuned_power_mult": 1.158
     },
     "first_clear_bonus": {
      "gold": 5240,
@@ -18622,7 +18622,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.25
+     "tuned_power_mult": 1.241
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -18687,7 +18687,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.227
+     "tuned_power_mult": 1.251
     },
     "first_clear_bonus": {
      "gold": 5410,
@@ -19963,7 +19963,7 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.492
+     "tuned_power_mult": 1.462
     },
     "hard": {
      "name_ko": "어려움",
@@ -20022,7 +20022,7 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.473
+     "tuned_power_mult": 1.497
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -20087,7 +20087,7 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.977
+     "tuned_power_mult": 1.081
     },
     "first_clear_bonus": {
      "gold": 5740,
