@@ -55,7 +55,7 @@ def main():
     pm = {b["id"]: {diff: b["difficulties"][diff].get("tuned_power_mult", 1.0) for diff in TARGET} for b in targets}
     hist = []
     for rnd in range(args.rounds + 1):
-        jobs = [(b["id"], diff, 1000 * rnd + i, hp[b["id"]], pm[b["id"]]) for b in targets for diff in TARGET for i in range(args.fights if rnd < args.rounds else args.fights * 2)]
+        jobs = [(b["id"], diff, 1000 * rnd + i, hp[b["id"]], pm[b["id"]]) for b in targets for diff in TARGET for i in range(args.fights if rnd < args.rounds else args.fights * 3)]
         wins = {}
         with Pool(args.procs, initializer=_init, initargs=(curve,)) as pool:
             for bid, diff, w in pool.imap_unordered(_run, jobs, chunksize=8):
@@ -70,8 +70,8 @@ def main():
             # 팀전 승률 곡선이 가파르므로(작은 전력 차 → 승패 반전) 지수 0.2, 라운드당 ±10%로 완만하게.
             for diff in ("normal", "hard", "nightmare"):
                 obs = wr[(b["id"], diff)]
-                f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.2
-                pm[b["id"]][diff] = round(max(0.3, min(1.6, pm[b["id"]][diff] * max(0.9, min(1.1, f)))), 3)
+                f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.25
+                pm[b["id"]][diff] = round(max(0.3, min(1.6, pm[b["id"]][diff] * max(0.87, min(1.15, f)))), 3)
     for b in targets:
         b["enemy"]["boss"]["hp_mult"] = hp[b["id"]]
         b["enemy"]["boss"]["tuned"] = True

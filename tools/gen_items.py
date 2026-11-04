@@ -71,13 +71,13 @@ COMBOS = {
     (3, 9): ("흡혈귀의 흉갑", "Vampiric Plate", {}, [("omnivamp_bonus", {"pct": 15})], "피해 흡혈 +15%."),
     (3, 10): ("불굴의 심장", "Unyielding Heart", {"durability": 4}, [], "내구력 +10%, 체력 +150."),
     (4, 4): ("가시 갑옷", "Bramble Vest", {"armor": 20}, [("thorns", {"pct": 10})], "방어력 +60. 받은 물리 피해의 10%를 반사."),
-    (4, 5): ("가고일 돌갑옷", "Gargoyle Stoneplate", {}, [("gargoyle", {"per_enemy": 12})], "자신을 노리는 적 1명당 방어력·마저 +12."),
+    (4, 5): ("가고일 돌갑옷", "Gargoyle Stoneplate", {}, [("gargoyle", {"per_enemy": 10, "max_enemies": 4})], "자신을 노리는 적 1명당 방어력·마저 +10 (최대 4명)."),
     (4, 6): ("질풍 갑옷", "Gale Armor", {}, [("stack_on_hit", {"armor": 2, "max": 20})], "공격마다 방어력 +2 (최대 20중첩)."),
     (4, 7): ("수호자의 맹세", "Protector's Vow", {}, [("low_hp_shield", {"threshold": 40, "shield_pct": 25, "def": 20, "duration": 5})], "체력 40% 이하 시 최대 체력 25% 방어막 + 방어력·마저 +20."),
     (4, 8): ("파쇄 장갑", "Shatter Gauntlet", {}, [("shred_on_crit", {"pct": 30, "duration": 3})], "치명타 시 대상 방어력 30% 감소."),
     (4, 9): ("피의 갑옷", "Blood Armor", {}, [("omnivamp_bonus", {"pct": 12})], "피해 흡혈 +12%."),
     (4, 10): ("강철 요새", "Iron Fortress", {"durability": 4}, [], "내구력 +10%, 방어력 +20."),
-    (5, 5): ("용의 발톱", "Dragon's Claw", {"mr": 20}, [("magic_dr", {"pct": 20})], "마법 저항력 +60. 받는 마법 피해 -20%."),
+    (5, 5): ("용의 발톱", "Dragon's Claw", {"mr": 20}, [("magic_dr", {"pct": 15}), ("regen", {"pct_per_sec": 1.2})], "마법 저항력 +60. 받는 마법 피해 -15%. 매초 최대 체력 1.2% 회복."),
     (5, 6): ("정전기 망토", "Static Cloak", {}, [("shock_every_n", {"n": 3, "targets": 3, "dmg": 60, "mr_shred": 30, "duration": 4})], "3번째 공격마다 적 3명에게 60 마법 피해 + 마저 30% 감소."),
     (5, 7): ("은총의 성배", "Chalice of Grace", {}, [("cast_mana_allies", {"radius": 1, "mana": 8})], "스킬 사용 시 인접 아군 마나 +8."),
     (5, 8): ("수은 망토", "Quicksilver Cloak", {"as_pct": 10}, [("cc_immune", {"duration": 15})], "전투 시작 후 15초간 군중 제어 면역. 공격 속도 +10%."),
@@ -131,7 +131,7 @@ ARTIFACTS = [
     ("안개의 등불", "Mist Lantern", {"mr": 30, "hp": 150}, [("cc_immune", {"duration": 30})], "30초간 군중 제어 면역."),
     ("피의 성배", "Blood Chalice", {"omnivamp": 20, "ad_pct": 10}, [("overheal_shield", {"max_pct": 40})], "초과 치유량이 방어막이 된다(최대 40%)."),
     ("와이번의 발톱", "Wyvern Talon", {"ad_pct": 15, "as_pct": 10}, [("dash_dmg_bonus", {"pct": 50})], "도약/강하 스킬 피해 +50%."),
-    ("골렘의 핵", "Golem Core", {"armor": 35, "mr": 35}, [("gargoyle", {"per_enemy": 15})], "자신을 노리는 적 1명당 방어력·마저 +15."),
+    ("골렘의 핵", "Golem Core", {"armor": 35, "mr": 35}, [("gargoyle", {"per_enemy": 12, "max_enemies": 4})], "자신을 노리는 적 1명당 방어력·마저 +12 (최대 4명)."),
     ("요정의 가루", "Fairy Dust", {"as_pct": 25}, [("dodge", {"pct": 15})], "15% 확률로 공격을 회피."),
     ("폭풍의 눈", "Eye of the Storm", {"ap": 30}, [("shock_every_n", {"n": 3, "targets": 4, "dmg": 90, "mr_shred": 30, "duration": 4})], "3번째 공격마다 적 4명에게 90 마법 피해 + 마저 감소."),
     ("용병왕의 계약서", "Mercenary King's Contract", {"ad_pct": 10, "ap": 10, "hp": 150}, [("gold_bonus", {"pct": 30})], "전투 승리 시 골드 +30%."),
@@ -225,7 +225,7 @@ NATIONAL = [
     ("자이로스 독 송곳니", {"ad_pct": 10, "as_pct": 10}, [("burn_on_hit", {"pct_per_sec": 1.0, "duration": 4, "grievous": 33})], "독(화상) + 치유 감소."),
     ("녹스 흑요석 두개골", {"ap": 30, "omnivamp": 8}, [("summon_on_kill", {"hp_pct": 25, "ad_pct": 25, "max": 1})], "처치 시 망령 소환."),
     ("황혼 요새 핏빛 잔", {"omnivamp": 15, "hp": 150}, [("heal_on_kill", {"pct": 12})], "처치 시 12% 회복."),
-    ("마카브 흑요석 핵", {"armor": 25, "mr": 25}, [("gargoyle", {"per_enemy": 10})], "노리는 적당 방어력·마저 +10."),
+    ("마카브 흑요석 핵", {"armor": 25, "mr": 25}, [("gargoyle", {"per_enemy": 8, "max_enemies": 4})], "노리는 적당 방어력·마저 +8 (최대 4명)."),
     ("네오스 에너지 셀", {"ap": 20, "as_pct": 15}, [("mana_refund_on_cast", {"mana": 15})], "스킬 후 마나 +15."),
     ("셀레스티아 별의 서", {"ap": 35, "mana": 15}, [("cast_mana_allies", {"radius": 1, "mana": 6})], "스킬 시 인접 아군 마나 +6."),
     ("드라케스탄 용의 알 조각", {"hp": 300, "ap": 15, "ad_pct": 5}, [("magic_dr", {"pct": 10})], "받는 마법 피해 -10%."),
@@ -262,6 +262,9 @@ def merge_stats(*ds):
         for k, v in d.items():
             out[k] = out.get(k, 0) + v
     return out
+
+
+REDESIGNED = {"가고일 돌갑옷", "빛나는 가고일 돌갑옷", "용의 발톱", "빛나는 용의 발톱", "골렘의 핵", "마카브 흑요석 핵"}
 
 
 def main():
@@ -322,7 +325,7 @@ def main():
         for h in it["hooks"]:
             p = dict(h["params"])
             for pk in list(p.keys()):
-                if pk in ("pct", "mana", "dmg", "ad_ratio", "missing_pct", "bonus_pct", "shield_pct", "ap", "per_enemy", "per_sec", "hp_pct", "mr_shred", "omnivamp", "dmg_pct", "ad_pct", "armor"):
+                if pk in ("pct", "mana", "dmg", "ad_ratio", "missing_pct", "bonus_pct", "shield_pct", "ap", "per_enemy", "per_sec", "pct_per_sec", "hp_pct", "mr_shred", "omnivamp", "dmg_pct", "ad_pct", "armor"):
                     p[pk] = round(p[pk] * 1.5, 2) if isinstance(p[pk], (int, float)) else p[pk]
             hooks.append(dict(type=h["type"], params=p))
         items.append(dict(id=f"R{k+1:03d}", name_ko="빛나는 " + it["name_ko"], name_en="Radiant " + it["name_en"], category="radiant",
@@ -346,6 +349,14 @@ def main():
     from collections import Counter
     cnt = Counter(it["category"] for it in items)
     os.makedirs(OUT, exist_ok=True)
+    # 기존 밸런스 배율 보존(재설계 아이템은 1.0으로 초기화)
+    prev_path = os.path.join(OUT, "items.json")
+    if os.path.exists(prev_path) and "--reset-balance" not in sys.argv:
+        prev = {i["id"]: i for i in json.load(open(prev_path, encoding="utf-8"))["items"]}
+        for it in items:
+            pi = prev.get(it["id"])
+            if pi and pi.get("balance") and it["name_ko"] not in REDESIGNED and pi["name_ko"] == it["name_ko"]:
+                it["balance"] = pi["balance"]
     with open(os.path.join(OUT, "items.json"), "w", encoding="utf-8") as f:
         json.dump({"version": 1, "count": len(items), "by_category": dict(cnt), "prices": PRICES, "items": items}, f, ensure_ascii=False, indent=1)
     print("items:", len(items), dict(cnt))

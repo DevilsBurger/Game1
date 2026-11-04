@@ -124,6 +124,7 @@ class Battle:
         self.winner = None
         self.uid_seq = 0
         self.team_traits = {0: {}, 1: {}}
+        self.team_state = {0: {}, 1: {}}
         self.dmg_mult_global = 1.0
         self.pending_summons = []
         self.trait_counts_override = trait_counts

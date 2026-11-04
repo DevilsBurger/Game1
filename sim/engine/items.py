@@ -188,7 +188,7 @@ def h_thorns(b, u, p, m): u.on("damaged", _thorns, {"pct": p["pct"] * m})
 
 def h_gargoyle(b, u, p, m):
     def tick(b, u, p):
-        n = sum(1 for e in b.enemies_of(u) if e.target is u)
+        n = min(p.get("max_enemies", 99), sum(1 for e in b.enemies_of(u) if e.target is u))
         u.buffs = [x for x in u.buffs if x[0] != "garg_armor" and x[0] != "garg_mr"]
         u.add_buff("armor", n * p["per_enemy"] * p["m"], b.t + 1.1); u.add_buff("mr", n * p["per_enemy"] * p["m"], b.t + 1.1)
     u.on("tick1s", tick, dict(p, m=m))

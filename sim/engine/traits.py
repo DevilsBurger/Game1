@@ -125,13 +125,20 @@ def t_neos(b, units, holders, eff, lvl, n):
 
 def t_nox(b, units, holders, eff, lvl, n):
     ov = _v(eff["omnivamp"], lvl)
+    charges = _v(eff.get("wraith_charges", [0, 1, 2, 3]), lvl)
+    stat = _v(eff.get("wraith_stat_pct", [30, 30, 30, 30]), lvl)
+    team_state = b.team_state.setdefault(holders[0].team if holders else 0, {})
+    team_state["nox_charges"] = int(round(charges))
     def on_died(b, u, p, killer):
-        spec = summon_spec_from(u, 35, 35, name="망령", lifetime=10, t=b.t)
-        spec["hp"] = u.max_hp * 0.35; spec["ad"] = u.ad_base * 0.35
+        ts = b.team_state.setdefault(u.team, {})
+        if ts.get("nox_charges", 0) <= 0: return
+        ts["nox_charges"] -= 1
+        spec = summon_spec_from(u, p["stat"], p["stat"], name="망령", lifetime=10, t=b.t)
+        spec["hp"] = u.max_hp * p["stat"] / 100.0; spec["ad"] = u.ad_base * p["stat"] / 100.0
         b.spawn(u, spec, near=u.pos)
     for u in holders:
         u.mod["omnivamp"] += ov
-        if lvl >= 2: u.on("died", on_died)
+        if charges > 0: u.on("died", on_died, {"stat": stat})
 
 
 def t_celestia(b, units, holders, eff, lvl, n):
@@ -157,11 +164,15 @@ def t_torga(b, units, holders, eff, lvl, n):
 
 
 def t_lumen(b, units, holders, eff, lvl, n):
+    # 팀 단위 발동 횟수 제한: 2/4/6/8 → 1/2/3/4회 (수직 구성에서 8명 전원이 두 번 사는 것을 방지)
     heal = _v(eff["cheat_death_heal"], lvl)
     inv = _v(eff["invuln"], lvl) if isinstance(eff["invuln"], list) else eff["invuln"]
+    charges = int(round(_v(eff.get("charges", [1, 2, 3, 4]), lvl)))
+    if holders: b.team_state.setdefault(holders[0].team, {})["lumen_charges"] = charges
     def on_death(b, u, p, killer):
-        if u.state.get("lumen_used"): return None
-        u.state["lumen_used"] = True
+        ts = b.team_state.setdefault(u.team, {})
+        if u.state.get("lumen_used") or ts.get("lumen_charges", 0) <= 0: return None
+        u.state["lumen_used"] = True; ts["lumen_charges"] -= 1
         u.hp = max(1.0, u.max_hp * p["heal"] / 100.0); u.stasis_until = b.t + p["inv"]
         return "cancel"
     for u in holders: u.on("death", on_death, {"heal": heal, "inv": inv})

@@ -942,20 +942,17 @@
     {
      "type": "gargoyle",
      "params": {
-      "per_enemy": 12
+      "per_enemy": 10,
+      "max_enemies": 4
      }
     }
    ],
-   "desc": "자신을 노리는 적 1명당 방어력·마저 +12.",
+   "desc": "자신을 노리는 적 1명당 방어력·마저 +10 (최대 4명).",
    "price_gold": 900,
    "recipe": [
     "C04",
     "C05"
-   ],
-   "balance": {
-    "mult": 0.4,
-    "flag": "context_dependent"
-   }
+   ]
   },
   {
    "id": "I030",
@@ -1102,20 +1099,22 @@
     {
      "type": "magic_dr",
      "params": {
-      "pct": 20
+      "pct": 15
+     }
+    },
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 1.2
      }
     }
    ],
-   "desc": "마법 저항력 +60. 받는 마법 피해 -20%.",
+   "desc": "마법 저항력 +60. 받는 마법 피해 -15%. 매초 최대 체력 1.2% 회복.",
    "price_gold": 900,
    "recipe": [
     "C05",
     "C05"
-   ],
-   "balance": {
-    "mult": 2.0,
-    "flag": "context_dependent"
-   }
+   ]
   },
   {
    "id": "I036",
@@ -2618,7 +2617,7 @@
     {
      "type": "burn_on_hit",
      "params": {
-      "pct_per_sec": 1.0,
+      "pct_per_sec": 1.5,
       "duration": 6,
       "grievous": 33
      }
@@ -2839,7 +2838,7 @@
      "type": "burn_aura",
      "params": {
       "radius": 2,
-      "pct_per_sec": 1.0,
+      "pct_per_sec": 1.5,
       "grievous": 33
      }
     }
@@ -3039,17 +3038,15 @@
     {
      "type": "gargoyle",
      "params": {
-      "per_enemy": 18.0
+      "per_enemy": 15.0,
+      "max_enemies": 4
      }
     }
    ],
-   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 자신을 노리는 적 1명당 방어력·마저 +12.",
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 자신을 노리는 적 1명당 방어력·마저 +10 (최대 4명).",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I029",
-   "balance": {
-    "mult": 0.5436
-   }
+   "base_item": "I029"
   },
   {
    "id": "R030",
@@ -3186,18 +3183,20 @@
     {
      "type": "magic_dr",
      "params": {
-      "pct": 30.0
+      "pct": 22.5
+     }
+    },
+    {
+     "type": "regen",
+     "params": {
+      "pct_per_sec": 1.8
      }
     }
    ],
-   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 마법 저항력 +60. 받는 마법 피해 -20%.",
+   "desc": "빛나는 강화판: 능력치 ×1.6, 효과 ×1.5. 마법 저항력 +60. 받는 마법 피해 -15%. 매초 최대 체력 1.2% 회복.",
    "price_gold": 3500,
    "recipe": null,
-   "base_item": "I035",
-   "balance": {
-    "mult": 2.0,
-    "flag": "context_dependent"
-   }
+   "base_item": "I035"
   },
   {
    "id": "R036",
@@ -4280,17 +4279,14 @@
     {
      "type": "gargoyle",
      "params": {
-      "per_enemy": 15
+      "per_enemy": 12,
+      "max_enemies": 4
      }
     }
    ],
-   "desc": "자신을 노리는 적 1명당 방어력·마저 +15.",
+   "desc": "자신을 노리는 적 1명당 방어력·마저 +12 (최대 4명).",
    "price_gold": 2800,
-   "recipe": null,
-   "balance": {
-    "mult": 0.4,
-    "flag": "context_dependent"
-   }
+   "recipe": null
   },
   {
    "id": "A025",
@@ -6449,17 +6445,15 @@
     {
      "type": "gargoyle",
      "params": {
-      "per_enemy": 10
+      "per_enemy": 8,
+      "max_enemies": 4
      }
     }
    ],
-   "desc": "[마카브 화산령 특산] 노리는 적당 방어력·마저 +10.",
+   "desc": "[마카브 화산령 특산] 노리는 적당 방어력·마저 +8 (최대 4명).",
    "price_gold": 2200,
    "recipe": null,
-   "nation": "makab",
-   "balance": {
-    "mult": 0.4
-   }
+   "nation": "makab"
   },
   {
    "id": "N021",
