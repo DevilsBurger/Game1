@@ -7,11 +7,11 @@
   "assassin"
  ],
  "baseline_wr": {
-  "magic_heavy": 0.608,
-  "boss_hp": 0.0,
-  "siege": 0.379,
-  "waves": 0.567,
-  "assassin": 0.442
+  "magic_heavy": 0.617,
+  "boss_hp": 0.448,
+  "siege": 0.375,
+  "waves": 0.557,
+  "assassin": 0.445
  },
  "rows": [
   {
@@ -21,11 +21,11 @@
    "mult": 0.4,
    "target": 0.11,
    "delta": {
-    "magic_heavy": 0.104,
-    "boss_hp": 0.021,
-    "siege": 0.15,
-    "waves": 0.022,
-    "assassin": 0.254
+    "magic_heavy": 0.057,
+    "boss_hp": 0.07,
+    "siege": 0.133,
+    "waves": 0.051,
+    "assassin": 0.185
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -37,11 +37,11 @@
    "mult": 0.4,
    "target": 0.11,
    "delta": {
-    "magic_heavy": 0.121,
-    "boss_hp": 0.017,
-    "siege": 0.146,
-    "waves": 0.019,
-    "assassin": 0.163
+    "magic_heavy": 0.064,
+    "boss_hp": 0.104,
+    "siege": 0.13,
+    "waves": 0.079,
+    "assassin": 0.135
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -53,14 +53,14 @@
    "mult": 0.4,
    "target": 0.165,
    "delta": {
-    "magic_heavy": 0.146,
-    "boss_hp": 0.0,
-    "siege": 0.133,
-    "waves": 0.034,
-    "assassin": 0.113
+    "magic_heavy": 0.115,
+    "boss_hp": 0.12,
+    "siege": 0.13,
+    "waves": 0.072,
+    "assassin": 0.087
    },
-   "best_scenario": "magic_heavy",
-   "verdict": "상황 특화 OK"
+   "best_scenario": "siege",
+   "verdict": "재설계 필요"
   },
   {
    "id": "I035",
@@ -69,11 +69,11 @@
    "mult": 2.0,
    "target": 0.165,
    "delta": {
-    "magic_heavy": 0.175,
-    "boss_hp": 0.008,
-    "siege": 0.033,
-    "waves": 0.106,
-    "assassin": 0.05
+    "magic_heavy": 0.148,
+    "boss_hp": 0.13,
+    "siege": 0.039,
+    "waves": 0.109,
+    "assassin": 0.091
    },
    "best_scenario": "magic_heavy",
    "verdict": "상황 특화 OK"
@@ -85,13 +85,13 @@
    "mult": 0.4,
    "target": 0.165,
    "delta": {
-    "magic_heavy": 0.167,
-    "boss_hp": 0.004,
-    "siege": 0.262,
-    "waves": 0.047,
-    "assassin": 0.192
+    "magic_heavy": 0.133,
+    "boss_hp": 0.102,
+    "siege": 0.174,
+    "waves": 0.086,
+    "assassin": 0.176
    },
-   "best_scenario": "siege",
+   "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
   },
   {
@@ -101,13 +101,13 @@
    "mult": 2.0,
    "target": 0.3,
    "delta": {
-    "magic_heavy": 0.212,
-    "boss_hp": 0.017,
-    "siege": 0.042,
-    "waves": 0.153,
-    "assassin": 0.054
+    "magic_heavy": 0.176,
+    "boss_hp": 0.18,
+    "siege": 0.055,
+    "waves": 0.147,
+    "assassin": 0.107
    },
-   "best_scenario": "magic_heavy",
+   "best_scenario": "boss_hp",
    "verdict": "재설계 필요"
   },
   {
@@ -117,11 +117,11 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.108,
-    "boss_hp": 0.046,
-    "siege": 0.237,
-    "waves": 0.069,
-    "assassin": 0.3
+    "magic_heavy": 0.117,
+    "boss_hp": 0.201,
+    "siege": 0.174,
+    "waves": 0.102,
+    "assassin": 0.249
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -133,13 +133,13 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.196,
-    "boss_hp": 0.013,
-    "siege": 0.258,
-    "waves": 0.091,
-    "assassin": 0.238
+    "magic_heavy": 0.176,
+    "boss_hp": 0.094,
+    "siege": 0.156,
+    "waves": 0.109,
+    "assassin": 0.242
    },
-   "best_scenario": "siege",
+   "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
   },
   {
@@ -149,14 +149,14 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.171,
-    "boss_hp": 0.025,
-    "siege": 0.196,
-    "waves": 0.066,
-    "assassin": 0.117
+    "magic_heavy": 0.141,
+    "boss_hp": 0.156,
+    "siege": 0.161,
+    "waves": 0.092,
+    "assassin": 0.146
    },
    "best_scenario": "siege",
-   "verdict": "상황 특화 OK"
+   "verdict": "재설계 필요"
   },
   {
    "id": "A026",
@@ -165,11 +165,11 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.112,
-    "boss_hp": 0.008,
-    "siege": 0.179,
-    "waves": 0.075,
-    "assassin": 0.146
+    "magic_heavy": 0.086,
+    "boss_hp": 0.143,
+    "siege": 0.151,
+    "waves": 0.056,
+    "assassin": 0.118
    },
    "best_scenario": "siege",
    "verdict": "상황 특화 OK"
@@ -181,13 +181,13 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.204,
-    "boss_hp": 0.008,
-    "siege": 0.204,
-    "waves": 0.05,
-    "assassin": 0.117
+    "magic_heavy": 0.18,
+    "boss_hp": 0.146,
+    "siege": 0.286,
+    "waves": 0.049,
+    "assassin": 0.154
    },
-   "best_scenario": "magic_heavy",
+   "best_scenario": "siege",
    "verdict": "상황 특화 OK"
   },
   {
@@ -197,11 +197,11 @@
    "mult": 2.0,
    "target": 0.14,
    "delta": {
-    "magic_heavy": -0.163,
-    "boss_hp": 0.487,
+    "magic_heavy": -0.182,
+    "boss_hp": 0.268,
     "siege": -0.042,
-    "waves": 0.1,
-    "assassin": -0.029
+    "waves": 0.009,
+    "assassin": 0.158
    },
    "best_scenario": "boss_hp",
    "verdict": "상황 특화 OK"
@@ -213,11 +213,11 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.154,
-    "boss_hp": 0.071,
-    "siege": 0.263,
-    "waves": 0.053,
-    "assassin": 0.312
+    "magic_heavy": 0.119,
+    "boss_hp": 0.214,
+    "siege": 0.206,
+    "waves": 0.116,
+    "assassin": 0.257
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -229,11 +229,11 @@
    "mult": 0.4,
    "target": 0.21,
    "delta": {
-    "magic_heavy": 0.096,
-    "boss_hp": 0.033,
-    "siege": 0.263,
-    "waves": 0.059,
-    "assassin": 0.304
+    "magic_heavy": 0.09,
+    "boss_hp": 0.148,
+    "siege": 0.182,
+    "waves": 0.095,
+    "assassin": 0.26
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -245,11 +245,11 @@
    "mult": 0.4,
    "target": 0.14,
    "delta": {
-    "magic_heavy": 0.288,
-    "boss_hp": 0.062,
-    "siege": 0.358,
-    "waves": 0.097,
-    "assassin": 0.283
+    "magic_heavy": 0.262,
+    "boss_hp": 0.185,
+    "siege": 0.344,
+    "waves": 0.112,
+    "assassin": 0.299
    },
    "best_scenario": "siege",
    "verdict": "상황 특화 OK"
@@ -261,11 +261,11 @@
    "mult": 2.0,
    "target": 0.08,
    "delta": {
-    "magic_heavy": 0.013,
-    "boss_hp": 0.004,
-    "siege": 0.1,
-    "waves": 0.05,
-    "assassin": 0.163
+    "magic_heavy": 0.0,
+    "boss_hp": 0.018,
+    "siege": 0.076,
+    "waves": 0.089,
+    "assassin": 0.18
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -277,11 +277,11 @@
    "mult": 0.4,
    "target": 0.18,
    "delta": {
-    "magic_heavy": 0.117,
-    "boss_hp": 0.029,
-    "siege": 0.142,
-    "waves": 0.038,
-    "assassin": 0.2
+    "magic_heavy": 0.072,
+    "boss_hp": 0.104,
+    "siege": 0.117,
+    "waves": 0.065,
+    "assassin": 0.199
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -293,11 +293,11 @@
    "mult": 0.4,
    "target": 0.12,
    "delta": {
-    "magic_heavy": 0.075,
-    "boss_hp": 0.025,
-    "siege": 0.171,
-    "waves": 0.019,
-    "assassin": 0.254
+    "magic_heavy": 0.047,
+    "boss_hp": 0.081,
+    "siege": 0.154,
+    "waves": 0.061,
+    "assassin": 0.186
    },
    "best_scenario": "assassin",
    "verdict": "상황 특화 OK"
@@ -309,13 +309,13 @@
    "mult": 0.4,
    "target": 0.12,
    "delta": {
-    "magic_heavy": 0.171,
-    "boss_hp": 0.0,
-    "siege": 0.146,
-    "waves": 0.037,
-    "assassin": 0.142
+    "magic_heavy": 0.143,
+    "boss_hp": 0.104,
+    "siege": 0.195,
+    "waves": 0.048,
+    "assassin": 0.145
    },
-   "best_scenario": "magic_heavy",
+   "best_scenario": "siege",
    "verdict": "상황 특화 OK"
   }
  ]
