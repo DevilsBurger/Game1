@@ -26,8 +26,9 @@ grid = {(h["origin"], h["class"]): h for h in heroes["heroes"]}
 for o in traits["origins"]:
     L.append(f"| **{ON[o['key']]}** | " + " | ".join(f"{grid[(o['key'], c['key'])]['name_ko']} T{grid[(o['key'], c['key'])]['tier']}" for c in traits["classes"]) + " |")
 L += ["", "## 계층별 분포", "", "| 계층 | 등급 | 인원 |", "|---|---|---|"]
+RAR = {1: '일반', 2: '고급', 3: '희귀', 4: '영웅', 5: '전설'}
 for t in range(1, 6):
-    L.append(f"| {t} | {dict((1,'일반'),(2,'고급'),(3,'희귀'),(4,'영웅'),(5,'전설'))[t]} | {sum(1 for h in heroes['heroes'] if h['tier']==t)} |")
+    L.append(f"| {t} | {RAR[t]} | {sum(1 for h in heroes['heroes'] if h['tier']==t)} |")
 L += ["", "## 전체 목록", "", "| ID | 이름 | 칭호 | 출신 | 직업 | 계층 | HP | AD | AS | 방어 | 마저 | 사거리 | 마나 | 스킬 | 스킬 원형 | 스킬 설명 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
 for h in heroes["heroes"]:
     s = h["stats"]; b = h.get("balance", {})
