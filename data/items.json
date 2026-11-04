@@ -344,7 +344,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.5707
+    "mult": 0.6544
    }
   },
   {
@@ -472,7 +472,7 @@
     "C02"
    ],
    "balance": {
-    "mult": 0.8091
+    "mult": 0.7233
    }
   },
   {
@@ -501,7 +501,7 @@
     "C03"
    ],
    "balance": {
-    "mult": 0.7466
+    "mult": 0.6124
    }
   },
   {
@@ -710,7 +710,7 @@
     "C03"
    ],
    "balance": {
-    "mult": 0.4,
+    "mult": 0.5061,
     "flag": "context_dependent"
    }
   },
@@ -740,7 +740,7 @@
     "C04"
    ],
    "balance": {
-    "mult": 0.4,
+    "mult": 0.4941,
     "flag": "context_dependent"
    }
   },
@@ -769,7 +769,7 @@
     "C05"
    ],
    "balance": {
-    "mult": 0.5706
+    "mult": 0.7048
    }
   },
   {
@@ -829,7 +829,7 @@
     "C07"
    ],
    "balance": {
-    "mult": 0.5887
+    "mult": 0.7051
    }
   },
   {
@@ -856,7 +856,7 @@
     "C08"
    ],
    "balance": {
-    "mult": 1.0722
+    "mult": 0.9247
    }
   },
   {
@@ -883,7 +883,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.6152
+    "mult": 0.7033
    }
   },
   {
@@ -903,7 +903,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.8477
+    "mult": 0.9691
    }
   },
   {
@@ -986,7 +986,7 @@
     "C06"
    ],
    "balance": {
-    "mult": 0.4458
+    "mult": 0.4
    }
   },
   {
@@ -1071,7 +1071,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.5718
+    "mult": 0.6749
    }
   },
   {
@@ -1091,7 +1091,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.4481
+    "mult": 0.5408
    }
   },
   {
@@ -1231,7 +1231,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 1.1977
+    "mult": 1.3836
    }
   },
   {
@@ -1259,7 +1259,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.5054
+    "mult": 0.61
    }
   },
   {
@@ -1367,7 +1367,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 0.5489
+    "mult": 0.4693
    }
   },
   {
@@ -1387,7 +1387,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.9437
+    "mult": 0.8284
    }
   },
   {
@@ -1469,7 +1469,7 @@
     "C09"
    ],
    "balance": {
-    "mult": 1.353
+    "mult": 1.0756
    }
   },
   {
@@ -1650,7 +1650,7 @@
     "C10"
    ],
    "balance": {
-    "mult": 0.4789
+    "mult": 0.578
    }
   },
   {
@@ -2488,7 +2488,7 @@
    "recipe": null,
    "base_item": "I006",
    "balance": {
-    "mult": 0.5513
+    "mult": 0.6109
    }
   },
   {
@@ -2513,7 +2513,7 @@
    "recipe": null,
    "base_item": "I007",
    "balance": {
-    "mult": 0.7597
+    "mult": 0.6892
    }
   },
   {
@@ -2659,7 +2659,7 @@
    "recipe": null,
    "base_item": "I013",
    "balance": {
-    "mult": 0.6198
+    "mult": 0.5657
    }
   },
   {
@@ -2710,7 +2710,7 @@
    "recipe": null,
    "base_item": "I015",
    "balance": {
-    "mult": 0.5118
+    "mult": 0.4588
    }
   },
   {
@@ -2826,7 +2826,7 @@
    "recipe": null,
    "base_item": "I020",
    "balance": {
-    "mult": 0.401
+    "mult": 0.4914
    }
   },
   {
@@ -2853,7 +2853,7 @@
    "recipe": null,
    "base_item": "I021",
    "balance": {
-    "mult": 0.4613
+    "mult": 0.6135
    }
   },
   {
@@ -2879,7 +2879,7 @@
    "recipe": null,
    "base_item": "I022",
    "balance": {
-    "mult": 0.461
+    "mult": 0.5531
    }
   },
   {
@@ -2960,7 +2960,7 @@
    "recipe": null,
    "base_item": "I025",
    "balance": {
-    "mult": 0.9795
+    "mult": 0.8529
    }
   },
   {
@@ -2985,7 +2985,7 @@
    "recipe": null,
    "base_item": "I026",
    "balance": {
-    "mult": 0.5994
+    "mult": 0.6821
    }
   },
   {
@@ -3003,7 +3003,7 @@
    "recipe": null,
    "base_item": "I027",
    "balance": {
-    "mult": 0.7388
+    "mult": 0.9466
    }
   },
   {
@@ -3027,7 +3027,7 @@
    "recipe": null,
    "base_item": "I028",
    "balance": {
-    "mult": 0.4,
+    "mult": 0.4388,
     "flag": "context_dependent"
    }
   },
@@ -3053,7 +3053,7 @@
    "recipe": null,
    "base_item": "I029",
    "balance": {
-    "mult": 0.4,
+    "mult": 0.4311,
     "flag": "context_dependent"
    }
   },
@@ -3159,7 +3159,7 @@
    "recipe": null,
    "base_item": "I033",
    "balance": {
-    "mult": 0.7156
+    "mult": 0.7713
    }
   },
   {
@@ -3177,7 +3177,7 @@
    "recipe": null,
    "base_item": "I034",
    "balance": {
-    "mult": 0.495
+    "mult": 0.62
    }
   },
   {
@@ -3283,7 +3283,7 @@
    "recipe": null,
    "base_item": "I038",
    "balance": {
-    "mult": 1.508
+    "mult": 1.6999
    }
   },
   {
@@ -3308,7 +3308,7 @@
    "recipe": null,
    "base_item": "I039",
    "balance": {
-    "mult": 1.255
+    "mult": 1.5958
    }
   },
   {
@@ -3334,7 +3334,7 @@
    "recipe": null,
    "base_item": "I040",
    "balance": {
-    "mult": 0.4809
+    "mult": 0.581
    }
   },
   {
@@ -3477,7 +3477,7 @@
    "recipe": null,
    "base_item": "I046",
    "balance": {
-    "mult": 0.6106
+    "mult": 0.7006
    }
   },
   {
@@ -3528,7 +3528,7 @@
    "recipe": null,
    "base_item": "I048",
    "balance": {
-    "mult": 1.2655
+    "mult": 1.1277
    }
   },
   {
@@ -3652,7 +3652,7 @@
    "recipe": null,
    "base_item": "I053",
    "balance": {
-    "mult": 0.5943
+    "mult": 0.6501
    }
   },
   {
@@ -3695,7 +3695,7 @@
    "recipe": null,
    "base_item": "I055",
    "balance": {
-    "mult": 0.6042
+    "mult": 0.72
    }
   },
   {
@@ -3767,7 +3767,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.4086
+    "mult": 0.5079
    }
   },
   {
@@ -3790,7 +3790,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.9306
+    "mult": 0.8395
    }
   },
   {
@@ -3994,7 +3994,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.6822
+    "mult": 0.5923
    }
   },
   {
@@ -4019,7 +4019,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.5954
+    "mult": 0.74
    }
   },
   {
@@ -4122,7 +4122,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.4706
+    "mult": 0.5274
    }
   },
   {
@@ -4146,7 +4146,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.4
+    "mult": 0.4923
    }
   },
   {
@@ -4223,7 +4223,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 1.4155
+    "mult": 1.8327
    }
   },
   {
@@ -4414,7 +4414,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.4,
+    "mult": 0.4577,
     "flag": "context_dependent"
    }
   },
@@ -4514,7 +4514,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.5633
+    "mult": 0.6739
    }
   },
   {
@@ -4562,7 +4562,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.6568
+    "mult": 0.5579
    }
   },
   {
@@ -4739,7 +4739,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.5627
+    "mult": 0.633
    }
   },
   {
@@ -4763,7 +4763,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.663
+    "mult": 0.5714
    }
   },
   {
@@ -4788,7 +4788,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.4,
+    "mult": 0.439,
     "flag": "context_dependent"
    }
   },
@@ -4913,7 +4913,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.5425
+    "mult": 0.7215
    }
   },
   {
@@ -4998,7 +4998,7 @@
    "price_gold": 2800,
    "recipe": null,
    "balance": {
-    "mult": 0.7017
+    "mult": 0.628
    }
   },
   {
@@ -5349,7 +5349,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.0782
+    "mult": 0.941
    }
   },
   {
@@ -5520,7 +5520,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 0.8442
+    "mult": 0.6543
    }
   },
   {
@@ -5640,7 +5640,7 @@
    "price_gold": 1800,
    "recipe": null,
    "balance": {
-    "mult": 1.4291
+    "mult": 1.8348
    }
   },
   {
@@ -6032,7 +6032,7 @@
    "recipe": null,
    "nation": "mir",
    "balance": {
-    "mult": 0.6022
+    "mult": 0.7656
    }
   },
   {
@@ -6264,7 +6264,7 @@
    "recipe": null,
    "nation": "elowen",
    "balance": {
-    "mult": 0.6366
+    "mult": 0.8188
    }
   },
   {
@@ -6289,7 +6289,7 @@
    "recipe": null,
    "nation": "grandur",
    "balance": {
-    "mult": 0.4896
+    "mult": 0.6017
    }
   },
   {
@@ -6340,7 +6340,7 @@
    "recipe": null,
    "nation": "tiama",
    "balance": {
-    "mult": 0.8281
+    "mult": 0.9454
    }
   },
   {
