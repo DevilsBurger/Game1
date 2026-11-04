@@ -1,114 +1,107 @@
 {
  "summary": {
   "normal": {
-   "mean": 0.805,
-   "sd": 0.364
+   "mean": 0.789,
+   "sd": 0.368
   },
   "hard": {
-   "mean": 0.641,
-   "sd": 0.431
+   "mean": 0.548,
+   "sd": 0.45
   },
   "nightmare": {
-   "mean": 0.525,
-   "sd": 0.448
+   "mean": 0.34,
+   "sd": 0.425
   }
  },
  "by_level_band": {
-  "L1-20 hard": 0.649,
-  "L1-20 nightmare": 0.266,
-  "L1-20 normal": 0.811,
-  "L21-40 hard": 0.629,
-  "L21-40 nightmare": 0.448,
-  "L21-40 normal": 0.788,
-  "L41-60 hard": 0.585,
-  "L41-60 nightmare": 0.54,
-  "L41-60 normal": 0.775,
-  "L61-80 hard": 0.713,
-  "L61-80 nightmare": 0.722,
-  "L61-80 normal": 0.833,
-  "L81-100 hard": 0.718,
-  "L81-100 nightmare": 0.833,
-  "L81-100 normal": 0.923
+  "L1-20 hard": 0.567,
+  "L1-20 nightmare": 0.292,
+  "L1-20 normal": 0.829,
+  "L21-40 hard": 0.511,
+  "L21-40 nightmare": 0.297,
+  "L21-40 normal": 0.752,
+  "L41-60 hard": 0.519,
+  "L41-60 nightmare": 0.257,
+  "L41-60 normal": 0.74,
+  "L61-80 hard": 0.55,
+  "L61-80 nightmare": 0.534,
+  "L61-80 normal": 0.863,
+  "L81-100 hard": 0.839,
+  "L81-100 nightmare": 0.53,
+  "L81-100 normal": 0.917
  },
  "calibration": {
-  "L1-10": 0.588,
-  "L11-20": 0.677,
-  "L21-30": 0.736,
-  "L31-40": 0.741,
-  "L41-50": 0.975,
-  "L51-60": 0.96,
-  "L61-70": 0.825,
-  "L71-80": 0.923,
-  "L81-90": 1.099,
-  "L91-100": 1.214,
-  "normal": 1.0,
-  "hard": 0.906,
-  "nightmare": 0.68
+  "normal L1-10": 0.657,
+  "normal L11-20": 0.63,
+  "normal L21-30": 0.667,
+  "normal L31-40": 0.839,
+  "normal L41-50": 1.006,
+  "normal L51-60": 1.004,
+  "normal L61-70": 0.754,
+  "normal L71-80": 0.936,
+  "normal L81-90": 1.202,
+  "normal L91-100": 1.288,
+  "hard L1-10": 0.604,
+  "hard L11-20": 0.6,
+  "hard L21-30": 0.644,
+  "hard L31-40": 0.801,
+  "hard L41-50": 0.911,
+  "hard L51-60": 0.903,
+  "hard L61-70": 0.678,
+  "hard L71-80": 0.965,
+  "hard L81-90": 0.935,
+  "hard L91-100": 1.014,
+  "nightmare L1-10": 0.408,
+  "nightmare L11-20": 0.409,
+  "nightmare L21-30": 0.463,
+  "nightmare L31-40": 0.598,
+  "nightmare L41-50": 0.754,
+  "nightmare L51-60": 0.807,
+  "nightmare L61-70": 0.573,
+  "nightmare L71-80": 0.816,
+  "nightmare L81-90": 0.933,
+  "nightmare L91-100": 1.045
  },
  "rows": [
   {
-   "id": "B0001",
-   "name": "용병 대장 토벌",
-   "type": "hunt",
-   "level": 1,
-   "diff": "hard",
-   "wr": 0.583
-  },
-  {
-   "id": "B0001",
-   "name": "용병 대장 토벌",
-   "type": "hunt",
-   "level": 1,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0001",
-   "name": "용병 대장 토벌",
-   "type": "hunt",
-   "level": 1,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0005",
-   "name": "길드 거리 접전: 도적단",
-   "type": "skirmish",
-   "level": 3,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0005",
-   "name": "길드 거리 접전: 도적단",
-   "type": "skirmish",
-   "level": 3,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0005",
-   "name": "길드 거리 접전: 도적단",
-   "type": "skirmish",
-   "level": 3,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "S001",
-   "name": "하론 마을의 밤",
-   "type": "skirmish",
+   "id": "B0004",
+   "name": "길드 거리 정찰",
+   "type": "recon",
    "level": 3,
    "diff": "hard",
    "wr": 0.917
   },
   {
+   "id": "B0004",
+   "name": "길드 거리 정찰",
+   "type": "recon",
+   "level": 3,
+   "diff": "nightmare",
+   "wr": 0.167
+  },
+  {
+   "id": "B0004",
+   "name": "길드 거리 정찰",
+   "type": "recon",
+   "level": 3,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S001",
+   "name": "하론 마을의 밤",
+   "type": "skirmish",
+   "level": 3,
+   "diff": "hard",
+   "wr": 0.667
+  },
+  {
    "id": "S001",
    "name": "하론 마을의 밤",
    "type": "skirmish",
    "level": 3,
    "diff": "nightmare",
-   "wr": 0.667
+   "wr": 0.583
   },
   {
    "id": "S001",
@@ -124,7 +117,7 @@
    "type": "skirmish",
    "level": 4,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.5
   },
   {
    "id": "B0010",
@@ -139,6 +132,54 @@
    "name": "투기장 접전: 투기장 검투사",
    "type": "skirmish",
    "level": 4,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0012",
+   "name": "브로멜 투기장 토너먼트 3회전",
+   "type": "arena",
+   "level": 4,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0012",
+   "name": "브로멜 투기장 토너먼트 3회전",
+   "type": "arena",
+   "level": 4,
+   "diff": "nightmare",
+   "wr": 0.167
+  },
+  {
+   "id": "B0012",
+   "name": "브로멜 투기장 토너먼트 3회전",
+   "type": "arena",
+   "level": 4,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0008",
+   "name": "길드 거리 진압: 탈주 용병",
+   "type": "suppression",
+   "level": 5,
+   "diff": "hard",
+   "wr": 0.333
+  },
+  {
+   "id": "B0008",
+   "name": "길드 거리 진압: 탈주 용병",
+   "type": "suppression",
+   "level": 5,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0008",
+   "name": "길드 거리 진압: 탈주 용병",
+   "type": "suppression",
+   "level": 5,
    "diff": "normal",
    "wr": 1.0
   },
@@ -191,337 +232,361 @@
    "wr": 1.0
   },
   {
-   "id": "B0014",
-   "name": "투기장 탈출",
-   "type": "escape",
+   "id": "B0015",
+   "name": "투기장 공성: 밀수꾼 요새",
+   "type": "siege",
    "level": 6,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0014",
-   "name": "투기장 탈출",
-   "type": "escape",
-   "level": 6,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0014",
-   "name": "투기장 탈출",
-   "type": "escape",
-   "level": 6,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "S004",
-   "name": "회색 늑대의 문",
-   "type": "duel",
-   "level": 6,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "S004",
-   "name": "회색 늑대의 문",
-   "type": "duel",
-   "level": 6,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "S004",
-   "name": "회색 늑대의 문",
-   "type": "duel",
-   "level": 6,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0023",
-   "name": "빈민가 사냥: 도적 두목",
-   "type": "monster_hunt",
-   "level": 7,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0023",
-   "name": "빈민가 사냥: 도적 두목",
-   "type": "monster_hunt",
-   "level": 7,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0023",
-   "name": "빈민가 사냥: 도적 두목",
-   "type": "monster_hunt",
-   "level": 7,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0025",
-   "name": "현상금: 용병 대장",
-   "type": "bounty",
-   "level": 7,
-   "diff": "hard",
-   "wr": 0.25
-  },
-  {
-   "id": "B0025",
-   "name": "현상금: 용병 대장",
-   "type": "bounty",
-   "level": 7,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0025",
-   "name": "현상금: 용병 대장",
-   "type": "bounty",
-   "level": 7,
-   "diff": "normal",
-   "wr": 0.917
-  },
-  {
-   "id": "B0026",
-   "name": "빈민가 침공: 탈주 용병 대군",
-   "type": "invasion",
-   "level": 8,
    "diff": "hard",
    "wr": 0.083
   },
   {
-   "id": "B0026",
-   "name": "빈민가 침공: 탈주 용병 대군",
-   "type": "invasion",
-   "level": 8,
+   "id": "B0015",
+   "name": "투기장 공성: 밀수꾼 요새",
+   "type": "siege",
+   "level": 6,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0026",
-   "name": "빈민가 침공: 탈주 용병 대군",
-   "type": "invasion",
-   "level": 8,
+   "id": "B0015",
+   "name": "투기장 공성: 밀수꾼 요새",
+   "type": "siege",
+   "level": 6,
    "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S004",
+   "name": "회색 늑대의 문",
+   "type": "duel",
+   "level": 6,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S004",
+   "name": "회색 늑대의 문",
+   "type": "duel",
+   "level": 6,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S004",
+   "name": "회색 늑대의 문",
+   "type": "duel",
+   "level": 6,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0018",
+   "name": "투기장 방어전: 투기장 검투사의 공세",
+   "type": "defense",
+   "level": 7,
+   "diff": "hard",
    "wr": 0.917
   },
   {
-   "id": "B0028",
-   "name": "외곽 숲길 정찰",
-   "type": "recon",
-   "level": 8,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0028",
-   "name": "외곽 숲길 정찰",
-   "type": "recon",
-   "level": 8,
+   "id": "B0018",
+   "name": "투기장 방어전: 투기장 검투사의 공세",
+   "type": "defense",
+   "level": 7,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.167
   },
   {
-   "id": "B0028",
-   "name": "외곽 숲길 정찰",
-   "type": "recon",
-   "level": 8,
+   "id": "B0018",
+   "name": "투기장 방어전: 투기장 검투사의 공세",
+   "type": "defense",
+   "level": 7,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0030",
-   "name": "외곽 숲길 침공: 투기장 검투사 대군",
-   "type": "invasion",
+   "id": "B0022",
+   "name": "빈민가의 결투: 용병 대장",
+   "type": "duel",
+   "level": 7,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0022",
+   "name": "빈민가의 결투: 용병 대장",
+   "type": "duel",
+   "level": 7,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0022",
+   "name": "빈민가의 결투: 용병 대장",
+   "type": "duel",
+   "level": 7,
+   "diff": "normal",
+   "wr": 0.417
+  },
+  {
+   "id": "B0023",
+   "name": "빈민가 사냥: 도적 두목",
+   "type": "monster_hunt",
+   "level": 7,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0023",
+   "name": "빈민가 사냥: 도적 두목",
+   "type": "monster_hunt",
+   "level": 7,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0023",
+   "name": "빈민가 사냥: 도적 두목",
+   "type": "monster_hunt",
+   "level": 7,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0024",
+   "name": "빈민가 호위 임무",
+   "type": "escort",
+   "level": 7,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0024",
+   "name": "빈민가 호위 임무",
+   "type": "escort",
+   "level": 7,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0024",
+   "name": "빈민가 호위 임무",
+   "type": "escort",
+   "level": 7,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S006",
+   "name": "현상금: 검은 손",
+   "type": "bounty",
    "level": 8,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0030",
-   "name": "외곽 숲길 침공: 투기장 검투사 대군",
-   "type": "invasion",
+   "id": "S006",
+   "name": "현상금: 검은 손",
+   "type": "bounty",
    "level": 8,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0030",
-   "name": "외곽 숲길 침공: 투기장 검투사 대군",
-   "type": "invasion",
+   "id": "S006",
+   "name": "현상금: 검은 손",
+   "type": "bounty",
    "level": 8,
    "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "S007",
-   "name": "미르의 포도밭",
-   "type": "escort",
-   "level": 9,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "S007",
-   "name": "미르의 포도밭",
-   "type": "escort",
-   "level": 9,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "S007",
-   "name": "미르의 포도밭",
-   "type": "escort",
-   "level": 9,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "S008",
-   "name": "수도원의 비밀",
-   "type": "rescue",
-   "level": 10,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "S008",
-   "name": "수도원의 비밀",
-   "type": "rescue",
-   "level": 10,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "S008",
-   "name": "수도원의 비밀",
-   "type": "rescue",
-   "level": 10,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0049",
-   "name": "왕도 캐멀린 호위 임무",
-   "type": "escort",
-   "level": 11,
-   "diff": "hard",
    "wr": 0.333
   },
   {
-   "id": "B0049",
-   "name": "왕도 캐멀린 호위 임무",
+   "id": "B0032",
+   "name": "외곽 숲길 접전: 도적단",
+   "type": "skirmish",
+   "level": 9,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0032",
+   "name": "외곽 숲길 접전: 도적단",
+   "type": "skirmish",
+   "level": 9,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0032",
+   "name": "외곽 숲길 접전: 도적단",
+   "type": "skirmish",
+   "level": 9,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0036",
+   "name": "현상금: 도적 두목",
+   "type": "bounty",
+   "level": 10,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0036",
+   "name": "현상금: 도적 두목",
+   "type": "bounty",
+   "level": 10,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0036",
+   "name": "현상금: 도적 두목",
+   "type": "bounty",
+   "level": 10,
+   "diff": "normal",
+   "wr": 0.417
+  },
+  {
+   "id": "B0039",
+   "name": "현상금: 용병 대장",
+   "type": "bounty",
+   "level": 10,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0039",
+   "name": "현상금: 용병 대장",
+   "type": "bounty",
+   "level": 10,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0039",
+   "name": "현상금: 용병 대장",
+   "type": "bounty",
+   "level": 10,
+   "diff": "normal",
+   "wr": 0.667
+  },
+  {
+   "id": "B0091",
+   "name": "공작성 생존전",
+   "type": "survival",
+   "level": 10,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0091",
+   "name": "공작성 생존전",
+   "type": "survival",
+   "level": 10,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0091",
+   "name": "공작성 생존전",
+   "type": "survival",
+   "level": 10,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0044",
+   "name": "상인 가도 호위 임무",
+   "type": "escort",
+   "level": 11,
+   "diff": "hard",
+   "wr": 0.667
+  },
+  {
+   "id": "B0044",
+   "name": "상인 가도 호위 임무",
    "type": "escort",
    "level": 11,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0049",
-   "name": "왕도 캐멀린 호위 임무",
+   "id": "B0044",
+   "name": "상인 가도 호위 임무",
    "type": "escort",
    "level": 11,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0052",
-   "name": "왕도 캐멀린 접전: 탈영병",
-   "type": "skirmish",
+   "id": "B0051",
+   "name": "왕도 캐멀린 공성: 탈영병 요새",
+   "type": "siege",
    "level": 13,
    "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0051",
+   "name": "왕도 캐멀린 공성: 탈영병 요새",
+   "type": "siege",
+   "level": 13,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0051",
+   "name": "왕도 캐멀린 공성: 탈영병 요새",
+   "type": "siege",
+   "level": 13,
+   "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0052",
-   "name": "왕도 캐멀린 접전: 탈영병",
+   "id": "B0055",
+   "name": "동부 국경 하론 접전: 왕당파 군",
    "type": "skirmish",
+   "level": 13,
+   "diff": "hard",
+   "wr": 0.833
+  },
+  {
+   "id": "B0055",
+   "name": "동부 국경 하론 접전: 왕당파 군",
+   "type": "skirmish",
+   "level": 13,
+   "diff": "nightmare",
+   "wr": 0.333
+  },
+  {
+   "id": "B0055",
+   "name": "동부 국경 하론 접전: 왕당파 군",
+   "type": "skirmish",
+   "level": 13,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0093",
+   "name": "현상금: 도적 검사",
+   "type": "bounty",
+   "level": 13,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0093",
+   "name": "현상금: 도적 검사",
+   "type": "bounty",
    "level": 13,
    "diff": "nightmare",
    "wr": 0.083
   },
   {
-   "id": "B0052",
-   "name": "왕도 캐멀린 접전: 탈영병",
-   "type": "skirmish",
-   "level": 13,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0058",
-   "name": "왕당파 장군 토벌",
-   "type": "hunt",
-   "level": 13,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0058",
-   "name": "왕당파 장군 토벌",
-   "type": "hunt",
-   "level": 13,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0058",
-   "name": "왕당파 장군 토벌",
-   "type": "hunt",
-   "level": 13,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0098",
-   "name": "공작성 접전: 늑대 무리",
-   "type": "skirmish",
-   "level": 13,
-   "diff": "hard",
-   "wr": 0.083
-  },
-  {
-   "id": "B0098",
-   "name": "공작성 접전: 늑대 무리",
-   "type": "skirmish",
-   "level": 13,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0098",
-   "name": "공작성 접전: 늑대 무리",
-   "type": "skirmish",
-   "level": 13,
-   "diff": "normal",
-   "wr": 0.5
-  },
-  {
-   "id": "B0100",
-   "name": "포도밭 언덕 기습: 늑대 무리 후방",
-   "type": "strike",
-   "level": 13,
-   "diff": "hard",
-   "wr": 0.583
-  },
-  {
-   "id": "B0100",
-   "name": "포도밭 언덕 기습: 늑대 무리 후방",
-   "type": "strike",
-   "level": 13,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0100",
-   "name": "포도밭 언덕 기습: 늑대 무리 후방",
-   "type": "strike",
+   "id": "B0093",
+   "name": "현상금: 도적 검사",
+   "type": "bounty",
    "level": 13,
    "diff": "normal",
    "wr": 1.0
@@ -540,7 +605,7 @@
    "type": "guard",
    "level": 14,
    "diff": "nightmare",
-   "wr": 0.25
+   "wr": 0.917
   },
   {
    "id": "B0099",
@@ -551,28 +616,52 @@
    "wr": 1.0
   },
   {
-   "id": "B0109",
-   "name": "현상금: 다이어 울프",
-   "type": "bounty",
+   "id": "B0104",
+   "name": "포도밭 언덕 구출 작전",
+   "type": "rescue",
    "level": 14,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0104",
+   "name": "포도밭 언덕 구출 작전",
+   "type": "rescue",
+   "level": 14,
+   "diff": "nightmare",
+   "wr": 0.333
+  },
+  {
+   "id": "B0104",
+   "name": "포도밭 언덕 구출 작전",
+   "type": "rescue",
+   "level": 14,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0059",
+   "name": "현상금: 교황청 친위대",
+   "type": "bounty",
+   "level": 15,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0109",
-   "name": "현상금: 다이어 울프",
+   "id": "B0059",
+   "name": "현상금: 교황청 친위대",
    "type": "bounty",
-   "level": 14,
+   "level": 15,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0109",
-   "name": "현상금: 다이어 울프",
+   "id": "B0059",
+   "name": "현상금: 교황청 친위대",
    "type": "bounty",
-   "level": 14,
+   "level": 15,
    "diff": "normal",
-   "wr": 0.5
+   "wr": 0.833
   },
   {
    "id": "B0060",
@@ -588,7 +677,7 @@
    "type": "strike",
    "level": 15,
    "diff": "nightmare",
-   "wr": 0.25
+   "wr": 0.667
   },
   {
    "id": "B0060",
@@ -623,292 +712,196 @@
    "wr": 1.0
   },
   {
-   "id": "B0068",
-   "name": "서부 평원 사냥: 교황청 친위대",
-   "type": "monster_hunt",
-   "level": 16,
-   "diff": "hard",
-   "wr": 0.5
-  },
-  {
-   "id": "B0068",
-   "name": "서부 평원 사냥: 교황청 친위대",
-   "type": "monster_hunt",
-   "level": 16,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0068",
-   "name": "서부 평원 사냥: 교황청 친위대",
-   "type": "monster_hunt",
-   "level": 16,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0110",
-   "name": "강변 마을의 시련",
-   "type": "trial",
+   "id": "B0063",
+   "name": "동부 국경 하론 방어전: 국경 도적의 공세",
+   "type": "defense",
    "level": 16,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0110",
-   "name": "강변 마을의 시련",
-   "type": "trial",
+   "id": "B0063",
+   "name": "동부 국경 하론 방어전: 국경 도적의 공세",
+   "type": "defense",
    "level": 16,
    "diff": "nightmare",
-   "wr": 0.0
+   "wr": 1.0
   },
   {
-   "id": "B0110",
-   "name": "강변 마을의 시련",
-   "type": "trial",
+   "id": "B0063",
+   "name": "동부 국경 하론 방어전: 국경 도적의 공세",
+   "type": "defense",
    "level": 16,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0074",
-   "name": "남부 곡창지대 수호: 제단",
-   "type": "guard",
+   "id": "S014",
+   "name": "재의 사자",
+   "type": "hunt",
    "level": 17,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0074",
-   "name": "남부 곡창지대 수호: 제단",
-   "type": "guard",
+   "id": "S014",
+   "name": "재의 사자",
+   "type": "hunt",
    "level": 17,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0074",
-   "name": "남부 곡창지대 수호: 제단",
-   "type": "guard",
+   "id": "S014",
+   "name": "재의 사자",
+   "type": "hunt",
    "level": 17,
    "diff": "normal",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0113",
-   "name": "강변 마을 수호: 제단",
-   "type": "guard",
-   "level": 17,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0113",
-   "name": "강변 마을 수호: 제단",
-   "type": "guard",
-   "level": 17,
-   "diff": "nightmare",
-   "wr": 0.833
-  },
-  {
-   "id": "B0113",
-   "name": "강변 마을 수호: 제단",
-   "type": "guard",
-   "level": 17,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0114",
-   "name": "강변 마을 탈출",
-   "type": "escape",
-   "level": 17,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0114",
-   "name": "강변 마을 탈출",
-   "type": "escape",
-   "level": 17,
-   "diff": "nightmare",
-   "wr": 0.833
-  },
-  {
-   "id": "B0114",
-   "name": "강변 마을 탈출",
-   "type": "escape",
-   "level": 17,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0077",
-   "name": "남부 곡창지대 정찰",
-   "type": "recon",
+   "id": "B0084",
+   "name": "현상금: 왕당파 장군",
+   "type": "bounty",
    "level": 18,
    "diff": "hard",
-   "wr": 0.833
+   "wr": 0.0
   },
   {
-   "id": "B0077",
-   "name": "남부 곡창지대 정찰",
-   "type": "recon",
+   "id": "B0084",
+   "name": "현상금: 왕당파 장군",
+   "type": "bounty",
    "level": 18,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0077",
-   "name": "남부 곡창지대 정찰",
-   "type": "recon",
+   "id": "B0084",
+   "name": "현상금: 왕당파 장군",
+   "type": "bounty",
    "level": 18,
    "diff": "normal",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0083",
-   "name": "북부 요새선 정찰",
-   "type": "recon",
+   "id": "B0121",
+   "name": "수도원 접전: 왕당파 선발대",
+   "type": "skirmish",
    "level": 18,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0083",
-   "name": "북부 요새선 정찰",
-   "type": "recon",
+   "id": "B0121",
+   "name": "수도원 접전: 왕당파 선발대",
+   "type": "skirmish",
    "level": 18,
    "diff": "nightmare",
-   "wr": 0.083
+   "wr": 1.0
   },
   {
-   "id": "B0083",
-   "name": "북부 요새선 정찰",
-   "type": "recon",
+   "id": "B0121",
+   "name": "수도원 접전: 왕당파 선발대",
+   "type": "skirmish",
    "level": 18,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0078",
-   "name": "남부 곡창지대의 시련",
+   "id": "B0125",
+   "name": "수도원의 시련",
    "type": "trial",
+   "level": 18,
+   "diff": "hard",
+   "wr": 0.167
+  },
+  {
+   "id": "B0125",
+   "name": "수도원의 시련",
+   "type": "trial",
+   "level": 18,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0125",
+   "name": "수도원의 시련",
+   "type": "trial",
+   "level": 18,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0126",
+   "name": "수도원 방어전: 강도단의 공세",
+   "type": "defense",
+   "level": 19,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0126",
+   "name": "수도원 방어전: 강도단의 공세",
+   "type": "defense",
+   "level": 19,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0126",
+   "name": "수도원 방어전: 강도단의 공세",
+   "type": "defense",
+   "level": 19,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0129",
+   "name": "도적 검사 토벌",
+   "type": "hunt",
    "level": 19,
    "diff": "hard",
    "wr": 0.5
   },
   {
-   "id": "B0078",
-   "name": "남부 곡창지대의 시련",
-   "type": "trial",
-   "level": 19,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0078",
-   "name": "남부 곡창지대의 시련",
-   "type": "trial",
-   "level": 19,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0082",
-   "name": "도적 두목 토벌",
-   "type": "hunt",
-   "level": 19,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0082",
-   "name": "도적 두목 토벌",
+   "id": "B0129",
+   "name": "도적 검사 토벌",
    "type": "hunt",
    "level": 19,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0082",
-   "name": "도적 두목 토벌",
+   "id": "B0129",
+   "name": "도적 검사 토벌",
    "type": "hunt",
    "level": 19,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0128",
-   "name": "암살: 늑대 무리 지휘관",
-   "type": "assassination",
-   "level": 19,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0128",
-   "name": "암살: 늑대 무리 지휘관",
-   "type": "assassination",
-   "level": 19,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0128",
-   "name": "암살: 늑대 무리 지휘관",
-   "type": "assassination",
-   "level": 19,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0226",
-   "name": "포르토 리에스 항 사냥: 해적 선장",
-   "type": "monster_hunt",
-   "level": 19,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0226",
-   "name": "포르토 리에스 항 사냥: 해적 선장",
-   "type": "monster_hunt",
-   "level": 19,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0226",
-   "name": "포르토 리에스 항 사냥: 해적 선장",
-   "type": "monster_hunt",
-   "level": 19,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0081",
-   "name": "왕당파 장군 토벌",
-   "type": "hunt",
+   "id": "B0088",
+   "name": "북부 요새선 진압: 재의 날개 첩자",
+   "type": "suppression",
    "level": 20,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0081",
-   "name": "왕당파 장군 토벌",
-   "type": "hunt",
+   "id": "B0088",
+   "name": "북부 요새선 진압: 재의 날개 첩자",
+   "type": "suppression",
    "level": 20,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0081",
-   "name": "왕당파 장군 토벌",
-   "type": "hunt",
+   "id": "B0088",
+   "name": "북부 요새선 진압: 재의 날개 첩자",
+   "type": "suppression",
    "level": 20,
    "diff": "normal",
-   "wr": 0.0
+   "wr": 0.167
   },
   {
    "id": "B0139",
@@ -935,214 +928,286 @@
    "wr": 1.0
   },
   {
-   "id": "B0090",
-   "name": "북부 요새선 기습: 왕당파 군 후방",
-   "type": "strike",
-   "level": 21,
+   "id": "B0089",
+   "name": "북부 요새선 탈출",
+   "type": "escape",
+   "level": 22,
    "diff": "hard",
    "wr": 0.083
   },
   {
-   "id": "B0090",
-   "name": "북부 요새선 기습: 왕당파 군 후방",
+   "id": "B0089",
+   "name": "북부 요새선 탈출",
+   "type": "escape",
+   "level": 22,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0089",
+   "name": "북부 요새선 탈출",
+   "type": "escape",
+   "level": 22,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0140",
+   "name": "후작령 성채 기습: 폐광 괴물 후방",
    "type": "strike",
-   "level": 21,
-   "diff": "nightmare",
-   "wr": 0.0
+   "level": 22,
+   "diff": "hard",
+   "wr": 1.0
   },
   {
-   "id": "B0090",
-   "name": "북부 요새선 기습: 왕당파 군 후방",
+   "id": "B0140",
+   "name": "후작령 성채 기습: 폐광 괴물 후방",
    "type": "strike",
-   "level": 21,
-   "diff": "normal",
-   "wr": 0.833
-  },
-  {
-   "id": "B0133",
-   "name": "국경 숲 접전: 늑대 무리",
-   "type": "skirmish",
-   "level": 21,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0133",
-   "name": "국경 숲 접전: 늑대 무리",
-   "type": "skirmish",
-   "level": 21,
+   "level": 22,
    "diff": "nightmare",
-   "wr": 0.417
+   "wr": 0.333
   },
   {
-   "id": "B0133",
-   "name": "국경 숲 접전: 늑대 무리",
-   "type": "skirmish",
-   "level": 21,
+   "id": "B0140",
+   "name": "후작령 성채 기습: 폐광 괴물 후방",
+   "type": "strike",
+   "level": 22,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0182",
-   "name": "레이드: 교황청 친위대",
-   "type": "raid",
-   "level": 21,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0182",
-   "name": "레이드: 교황청 친위대",
-   "type": "raid",
-   "level": 21,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0182",
-   "name": "레이드: 교황청 친위대",
-   "type": "raid",
-   "level": 21,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0231",
-   "name": "포르토 리에스 항 매복: 해괴물",
+   "id": "B0142",
+   "name": "후작령 성채 매복: 적대 용병단 '검은 손'",
    "type": "ambush",
-   "level": 21,
+   "level": 22,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.083
   },
   {
-   "id": "B0231",
-   "name": "포르토 리에스 항 매복: 해괴물",
+   "id": "B0142",
+   "name": "후작령 성채 매복: 적대 용병단 '검은 손'",
    "type": "ambush",
-   "level": 21,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0231",
-   "name": "포르토 리에스 항 매복: 해괴물",
-   "type": "ambush",
-   "level": 21,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0185",
-   "name": "대성당 광장 호위 임무",
-   "type": "escort",
-   "level": 22,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0185",
-   "name": "대성당 광장 호위 임무",
-   "type": "escort",
-   "level": 22,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0185",
-   "name": "대성당 광장 호위 임무",
-   "type": "escort",
-   "level": 22,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0229",
-   "name": "포르토 리에스 항 접전: 용병 함대",
-   "type": "skirmish",
-   "level": 22,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0229",
-   "name": "포르토 리에스 항 접전: 용병 함대",
-   "type": "skirmish",
-   "level": 22,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0229",
-   "name": "포르토 리에스 항 접전: 용병 함대",
-   "type": "skirmish",
-   "level": 22,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0236",
-   "name": "해적섬 토르투가 탈출",
-   "type": "escape",
-   "level": 22,
-   "diff": "hard",
-   "wr": 0.25
-  },
-  {
-   "id": "B0236",
-   "name": "해적섬 토르투가 탈출",
-   "type": "escape",
    "level": 22,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0236",
-   "name": "해적섬 토르투가 탈출",
-   "type": "escape",
+   "id": "B0142",
+   "name": "후작령 성채 매복: 적대 용병단 '검은 손'",
+   "type": "ambush",
    "level": 22,
    "diff": "normal",
    "wr": 0.917
   },
   {
-   "id": "B0148",
-   "name": "갈대 늪 사냥: 늪지 괴물",
-   "type": "monster_hunt",
-   "level": 23,
+   "id": "B0143",
+   "name": "후작령 성채 접전: 늪지 괴물",
+   "type": "skirmish",
+   "level": 22,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.917
   },
   {
-   "id": "B0148",
-   "name": "갈대 늪 사냥: 늪지 괴물",
-   "type": "monster_hunt",
-   "level": 23,
+   "id": "B0143",
+   "name": "후작령 성채 접전: 늪지 괴물",
+   "type": "skirmish",
+   "level": 22,
    "diff": "nightmare",
-   "wr": 0.583
+   "wr": 0.0
   },
   {
-   "id": "B0148",
-   "name": "갈대 늪 사냥: 늪지 괴물",
-   "type": "monster_hunt",
-   "level": 23,
+   "id": "B0143",
+   "name": "후작령 성채 접전: 늪지 괴물",
+   "type": "skirmish",
+   "level": 22,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0196",
-   "name": "순례길 접전: 구울",
-   "type": "skirmish",
-   "level": 24,
+   "id": "B0191",
+   "name": "순례길 구출 작전",
+   "type": "rescue",
+   "level": 22,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0196",
-   "name": "순례길 접전: 구울",
-   "type": "skirmish",
-   "level": 24,
+   "id": "B0191",
+   "name": "순례길 구출 작전",
+   "type": "rescue",
+   "level": 22,
    "diff": "nightmare",
    "wr": 0.667
   },
   {
+   "id": "B0191",
+   "name": "순례길 구출 작전",
+   "type": "rescue",
+   "level": 22,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0230",
+   "name": "포르토 리에스 항 방어전: 밀수 조직의 공세",
+   "type": "defense",
+   "level": 22,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0230",
+   "name": "포르토 리에스 항 방어전: 밀수 조직의 공세",
+   "type": "defense",
+   "level": 22,
+   "diff": "nightmare",
+   "wr": 0.25
+  },
+  {
+   "id": "B0230",
+   "name": "포르토 리에스 항 방어전: 밀수 조직의 공세",
+   "type": "defense",
+   "level": 22,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0144",
+   "name": "후작령 성채 사냥: 폐광 괴물",
+   "type": "monster_hunt",
+   "level": 23,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0144",
+   "name": "후작령 성채 사냥: 폐광 괴물",
+   "type": "monster_hunt",
+   "level": 23,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0144",
+   "name": "후작령 성채 사냥: 폐광 괴물",
+   "type": "monster_hunt",
+   "level": 23,
+   "diff": "normal",
+   "wr": 0.833
+  },
+  {
+   "id": "B0154",
+   "name": "폐광 접전: 폐광 괴물",
+   "type": "skirmish",
+   "level": 23,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0154",
+   "name": "폐광 접전: 폐광 괴물",
+   "type": "skirmish",
+   "level": 23,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0154",
+   "name": "폐광 접전: 폐광 괴물",
+   "type": "skirmish",
+   "level": 23,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0149",
+   "name": "갈대 늪 접전: 폐광 괴물",
+   "type": "skirmish",
+   "level": 24,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0149",
+   "name": "갈대 늪 접전: 폐광 괴물",
+   "type": "skirmish",
+   "level": 24,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0149",
+   "name": "갈대 늪 접전: 폐광 괴물",
+   "type": "skirmish",
+   "level": 24,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0194",
+   "name": "순례길 기습: 구울 후방",
+   "type": "strike",
+   "level": 24,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0194",
+   "name": "순례길 기습: 구울 후방",
+   "type": "strike",
+   "level": 24,
+   "diff": "nightmare",
+   "wr": 0.583
+  },
+  {
+   "id": "B0194",
+   "name": "순례길 기습: 구울 후방",
+   "type": "strike",
+   "level": 24,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0195",
+   "name": "순례길 사냥: 광신도",
+   "type": "monster_hunt",
+   "level": 24,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0195",
+   "name": "순례길 사냥: 광신도",
+   "type": "monster_hunt",
+   "level": 24,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0195",
+   "name": "순례길 사냥: 광신도",
+   "type": "monster_hunt",
+   "level": 24,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0196",
+   "name": "순례길 접전: 구울",
+   "type": "skirmish",
+   "level": 24,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0196",
+   "name": "순례길 접전: 구울",
+   "type": "skirmish",
+   "level": 24,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
    "id": "B0196",
    "name": "순례길 접전: 구울",
    "type": "skirmish",
@@ -1151,121 +1216,73 @@
    "wr": 1.0
   },
   {
-   "id": "B0241",
-   "name": "해적섬 토르투가 공성: 무법 해적단 요새",
-   "type": "siege",
+   "id": "B0200",
+   "name": "이단 심문소 호위 임무",
+   "type": "escort",
    "level": 24,
    "diff": "hard",
-   "wr": 0.5
+   "wr": 0.083
   },
   {
-   "id": "B0241",
-   "name": "해적섬 토르투가 공성: 무법 해적단 요새",
-   "type": "siege",
+   "id": "B0200",
+   "name": "이단 심문소 호위 임무",
+   "type": "escort",
    "level": 24,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0241",
-   "name": "해적섬 토르투가 공성: 무법 해적단 요새",
-   "type": "siege",
+   "id": "B0200",
+   "name": "이단 심문소 호위 임무",
+   "type": "escort",
    "level": 24,
    "diff": "normal",
-   "wr": 1.0
+   "wr": 0.667
   },
   {
-   "id": "B0242",
-   "name": "해적섬 토르투가의 시련",
-   "type": "trial",
-   "level": 24,
+   "id": "B0203",
+   "name": "이단 심문소 생존전",
+   "type": "survival",
+   "level": 25,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0242",
-   "name": "해적섬 토르투가의 시련",
-   "type": "trial",
-   "level": 24,
+   "id": "B0203",
+   "name": "이단 심문소 생존전",
+   "type": "survival",
+   "level": 25,
+   "diff": "nightmare",
+   "wr": 0.667
+  },
+  {
+   "id": "B0203",
+   "name": "이단 심문소 생존전",
+   "type": "survival",
+   "level": 25,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0249",
+   "name": "폭풍 해협 매복: 심해 괴수",
+   "type": "ambush",
+   "level": 25,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0249",
+   "name": "폭풍 해협 매복: 심해 괴수",
+   "type": "ambush",
+   "level": 25,
    "diff": "nightmare",
    "wr": 0.917
   },
   {
-   "id": "B0242",
-   "name": "해적섬 토르투가의 시련",
-   "type": "trial",
-   "level": 24,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0155",
-   "name": "암살: 폐광 괴물 지휘관",
-   "type": "assassination",
-   "level": 25,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0155",
-   "name": "암살: 폐광 괴물 지휘관",
-   "type": "assassination",
-   "level": 25,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0155",
-   "name": "암살: 폐광 괴물 지휘관",
-   "type": "assassination",
-   "level": 25,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0197",
-   "name": "순례길 탐험",
-   "type": "expedition",
-   "level": 25,
-   "diff": "hard",
-   "wr": 0.417
-  },
-  {
-   "id": "B0197",
-   "name": "순례길 탐험",
-   "type": "expedition",
-   "level": 25,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0197",
-   "name": "순례길 탐험",
-   "type": "expedition",
-   "level": 25,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0210",
-   "name": "성유물 지하묘지 호위 임무",
-   "type": "escort",
-   "level": 25,
-   "diff": "hard",
-   "wr": 0.75
-  },
-  {
-   "id": "B0210",
-   "name": "성유물 지하묘지 호위 임무",
-   "type": "escort",
-   "level": 25,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0210",
-   "name": "성유물 지하묘지 호위 임무",
-   "type": "escort",
+   "id": "B0249",
+   "name": "폭풍 해협 매복: 심해 괴수",
+   "type": "ambush",
    "level": 25,
    "diff": "normal",
    "wr": 1.0
@@ -1292,14 +1309,6 @@
    "type": "trial",
    "level": 25,
    "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0198",
-   "name": "순례길 호위 임무",
-   "type": "escort",
-   "level": 26,
-   "diff": "hard",
    "wr": 0.333
   },
   {
@@ -1307,8 +1316,16 @@
    "name": "순례길 호위 임무",
    "type": "escort",
    "level": 26,
+   "diff": "hard",
+   "wr": 0.5
+  },
+  {
+   "id": "B0198",
+   "name": "순례길 호위 임무",
+   "type": "escort",
+   "level": 26,
    "diff": "nightmare",
-   "wr": 0.0
+   "wr": 0.167
   },
   {
    "id": "B0198",
@@ -1316,7 +1333,7 @@
    "type": "escort",
    "level": 26,
    "diff": "normal",
-   "wr": 0.75
+   "wr": 0.917
   },
   {
    "id": "B0208",
@@ -1340,129 +1357,177 @@
    "type": "siege",
    "level": 26,
    "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0167",
-   "name": "용병 야영지 생존전",
-   "type": "survival",
-   "level": 27,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0167",
-   "name": "용병 야영지 생존전",
-   "type": "survival",
-   "level": 27,
-   "diff": "nightmare",
-   "wr": 0.833
-  },
-  {
-   "id": "B0167",
-   "name": "용병 야영지 생존전",
-   "type": "survival",
-   "level": 27,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0172",
-   "name": "국경 다리 탈출",
-   "type": "escape",
-   "level": 27,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0172",
-   "name": "국경 다리 탈출",
-   "type": "escape",
-   "level": 27,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0172",
-   "name": "국경 다리 탈출",
-   "type": "escape",
-   "level": 27,
-   "diff": "normal",
-   "wr": 0.5
-  },
-  {
-   "id": "B0256",
-   "name": "현상금: 용병 대장",
-   "type": "bounty",
-   "level": 27,
-   "diff": "hard",
-   "wr": 0.167
-  },
-  {
-   "id": "B0256",
-   "name": "현상금: 용병 대장",
-   "type": "bounty",
-   "level": 27,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0256",
-   "name": "현상금: 용병 대장",
-   "type": "bounty",
-   "level": 27,
-   "diff": "normal",
-   "wr": 0.833
-  },
-  {
-   "id": "B0170",
-   "name": "용병 야영지 공성: 폐광 괴물 요새",
-   "type": "siege",
-   "level": 28,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0170",
-   "name": "용병 야영지 공성: 폐광 괴물 요새",
-   "type": "siege",
-   "level": 28,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0170",
-   "name": "용병 야영지 공성: 폐광 괴물 요새",
-   "type": "siege",
-   "level": 28,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0213",
-   "name": "성유물 지하묘지 사냥: 폭주 마법 구조물",
-   "type": "monster_hunt",
-   "level": 28,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0213",
-   "name": "성유물 지하묘지 사냥: 폭주 마법 구조물",
-   "type": "monster_hunt",
-   "level": 28,
-   "diff": "nightmare",
    "wr": 0.417
   },
   {
-   "id": "B0213",
-   "name": "성유물 지하묘지 사냥: 폭주 마법 구조물",
-   "type": "monster_hunt",
+   "id": "B0251",
+   "name": "폭풍 해협의 결투: 심해 공포",
+   "type": "duel",
+   "level": 26,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0251",
+   "name": "폭풍 해협의 결투: 심해 공포",
+   "type": "duel",
+   "level": 26,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0251",
+   "name": "폭풍 해협의 결투: 심해 공포",
+   "type": "duel",
+   "level": 26,
+   "diff": "normal",
+   "wr": 0.75
+  },
+  {
+   "id": "B0255",
+   "name": "상선 항로의 시련",
+   "type": "trial",
+   "level": 26,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0255",
+   "name": "상선 항로의 시련",
+   "type": "trial",
+   "level": 26,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0255",
+   "name": "상선 항로의 시련",
+   "type": "trial",
+   "level": 26,
+   "diff": "normal",
+   "wr": 0.667
+  },
+  {
+   "id": "B0160",
+   "name": "폐광 진압: 적대 용병단 '검은 손'",
+   "type": "suppression",
+   "level": 27,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0160",
+   "name": "폐광 진압: 적대 용병단 '검은 손'",
+   "type": "suppression",
+   "level": 27,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0160",
+   "name": "폐광 진압: 적대 용병단 '검은 손'",
+   "type": "suppression",
+   "level": 27,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0256",
+   "name": "현상금: 용병 대장",
+   "type": "bounty",
+   "level": 27,
+   "diff": "hard",
+   "wr": 0.25
+  },
+  {
+   "id": "B0256",
+   "name": "현상금: 용병 대장",
+   "type": "bounty",
+   "level": 27,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0256",
+   "name": "현상금: 용병 대장",
+   "type": "bounty",
+   "level": 27,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0263",
+   "name": "레이드: 심해 공포",
+   "type": "raid",
+   "level": 28,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0263",
+   "name": "레이드: 심해 공포",
+   "type": "raid",
+   "level": 28,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0263",
+   "name": "레이드: 심해 공포",
+   "type": "raid",
+   "level": 28,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0272",
+   "name": "피오르드 해안의 시련",
+   "type": "trial",
+   "level": 28,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0272",
+   "name": "피오르드 해안의 시련",
+   "type": "trial",
+   "level": 28,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0272",
+   "name": "피오르드 해안의 시련",
+   "type": "trial",
    "level": 28,
    "diff": "normal",
    "wr": 1.0
   },
   {
+   "id": "B0177",
+   "name": "국경 다리 정찰",
+   "type": "recon",
+   "level": 29,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0177",
+   "name": "국경 다리 정찰",
+   "type": "recon",
+   "level": 29,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0177",
+   "name": "국경 다리 정찰",
+   "type": "recon",
+   "level": 29,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
    "id": "B0215",
    "name": "성유물 지하묘지의 결투: 교황청 친위대",
    "type": "duel",
@@ -1476,804 +1541,1044 @@
    "type": "duel",
    "level": 29,
    "diff": "nightmare",
-   "wr": 0.167
-  },
-  {
-   "id": "B0215",
-   "name": "성유물 지하묘지의 결투: 교황청 친위대",
-   "type": "duel",
-   "level": 29,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0274",
-   "name": "서리 거인 토벌",
-   "type": "hunt",
-   "level": 29,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0274",
-   "name": "서리 거인 토벌",
-   "type": "hunt",
-   "level": 29,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0274",
-   "name": "서리 거인 토벌",
-   "type": "hunt",
-   "level": 29,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0221",
-   "name": "수도원 산지 구출 작전",
-   "type": "rescue",
-   "level": 30,
-   "diff": "hard",
-   "wr": 0.083
-  },
-  {
-   "id": "B0221",
-   "name": "수도원 산지 구출 작전",
-   "type": "rescue",
-   "level": 30,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0221",
-   "name": "수도원 산지 구출 작전",
-   "type": "rescue",
-   "level": 30,
-   "diff": "normal",
    "wr": 0.583
   },
   {
-   "id": "B0267",
-   "name": "침몰선 묘지의 결투: 크라켄 새끼",
+   "id": "B0215",
+   "name": "성유물 지하묘지의 결투: 교황청 친위대",
    "type": "duel",
+   "level": 29,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0216",
+   "name": "광신도 토벌",
+   "type": "hunt",
+   "level": 29,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0216",
+   "name": "광신도 토벌",
+   "type": "hunt",
+   "level": 29,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0216",
+   "name": "광신도 토벌",
+   "type": "hunt",
+   "level": 29,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0219",
+   "name": "암살: 교황청 친위대 지휘관",
+   "type": "assassination",
+   "level": 29,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0219",
+   "name": "암살: 교황청 친위대 지휘관",
+   "type": "assassination",
+   "level": 29,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0219",
+   "name": "암살: 교황청 친위대 지휘관",
+   "type": "assassination",
+   "level": 29,
+   "diff": "normal",
+   "wr": 0.75
+  },
+  {
+   "id": "B0318",
+   "name": "수도 자흐라 생존전",
+   "type": "survival",
+   "level": 29,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0318",
+   "name": "수도 자흐라 생존전",
+   "type": "survival",
+   "level": 29,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0318",
+   "name": "수도 자흐라 생존전",
+   "type": "survival",
+   "level": 29,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S024",
+   "name": "서리 거인 토벌",
+   "type": "hunt",
+   "level": 29,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S024",
+   "name": "서리 거인 토벌",
+   "type": "hunt",
+   "level": 29,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S024",
+   "name": "서리 거인 토벌",
+   "type": "hunt",
+   "level": 29,
+   "diff": "normal",
+   "wr": 0.083
+  },
+  {
+   "id": "B0221",
+   "name": "수도원 산지 구출 작전",
+   "type": "rescue",
    "level": 30,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0267",
-   "name": "침몰선 묘지의 결투: 크라켄 새끼",
-   "type": "duel",
+   "id": "B0221",
+   "name": "수도원 산지 구출 작전",
+   "type": "rescue",
    "level": 30,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0267",
-   "name": "침몰선 묘지의 결투: 크라켄 새끼",
-   "type": "duel",
+   "id": "B0221",
+   "name": "수도원 산지 구출 작전",
+   "type": "rescue",
    "level": 30,
    "diff": "normal",
-   "wr": 0.333
+   "wr": 0.917
   },
   {
-   "id": "B0319",
-   "name": "수도 자흐라 진압: 술탄 친위대",
-   "type": "suppression",
+   "id": "B0270",
+   "name": "침몰선 묘지 사냥: 심해 공포",
+   "type": "monster_hunt",
    "level": 30,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0319",
-   "name": "수도 자흐라 진압: 술탄 친위대",
-   "type": "suppression",
+   "id": "B0270",
+   "name": "침몰선 묘지 사냥: 심해 공포",
+   "type": "monster_hunt",
    "level": 30,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0319",
-   "name": "수도 자흐라 진압: 술탄 친위대",
-   "type": "suppression",
+   "id": "B0270",
+   "name": "침몰선 묘지 사냥: 심해 공포",
+   "type": "monster_hunt",
    "level": 30,
    "diff": "normal",
-   "wr": 0.0
+   "wr": 0.667
   },
   {
-   "id": "B0325",
-   "name": "대사막 카라반 길 수호: 성문",
-   "type": "guard",
+   "id": "B0273",
+   "name": "피오르드 해안 접전: 얼음 트롤",
+   "type": "skirmish",
    "level": 30,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0325",
-   "name": "대사막 카라반 길 수호: 성문",
-   "type": "guard",
+   "id": "B0273",
+   "name": "피오르드 해안 접전: 얼음 트롤",
+   "type": "skirmish",
    "level": 30,
    "diff": "nightmare",
    "wr": 0.75
   },
   {
-   "id": "B0325",
-   "name": "대사막 카라반 길 수호: 성문",
-   "type": "guard",
+   "id": "B0273",
+   "name": "피오르드 해안 접전: 얼음 트롤",
+   "type": "skirmish",
    "level": 30,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "S025",
-   "name": "여왕의 결투",
-   "type": "duel",
+   "id": "B0276",
+   "name": "피오르드 해안 사냥: 얼음 트롤",
+   "type": "monster_hunt",
    "level": 30,
    "diff": "hard",
-   "wr": 0.0
+   "wr": 0.167
   },
   {
-   "id": "S025",
-   "name": "여왕의 결투",
-   "type": "duel",
+   "id": "B0276",
+   "name": "피오르드 해안 사냥: 얼음 트롤",
+   "type": "monster_hunt",
    "level": 30,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "S025",
-   "name": "여왕의 결투",
-   "type": "duel",
+   "id": "B0276",
+   "name": "피오르드 해안 사냥: 얼음 트롤",
+   "type": "monster_hunt",
    "level": 30,
    "diff": "normal",
-   "wr": 0.25
+   "wr": 1.0
   },
   {
-   "id": "B0370",
-   "name": "뼈 산 탈출",
-   "type": "escape",
-   "level": 31,
+   "id": "B0408",
+   "name": "대초원 북부 매복: 약탈 기병",
+   "type": "ambush",
+   "level": 30,
    "diff": "hard",
-   "wr": 0.0
+   "wr": 1.0
   },
   {
-   "id": "B0370",
-   "name": "뼈 산 탈출",
-   "type": "escape",
-   "level": 31,
+   "id": "B0408",
+   "name": "대초원 북부 매복: 약탈 기병",
+   "type": "ambush",
+   "level": 30,
    "diff": "nightmare",
-   "wr": 0.0
+   "wr": 0.75
   },
   {
-   "id": "B0370",
-   "name": "뼈 산 탈출",
-   "type": "escape",
-   "level": 31,
+   "id": "B0408",
+   "name": "대초원 북부 매복: 약탈 기병",
+   "type": "ambush",
+   "level": 30,
    "diff": "normal",
-   "wr": 0.25
+   "wr": 1.0
   },
   {
-   "id": "B0413",
-   "name": "대초원 북부 호위 임무",
-   "type": "escort",
-   "level": 31,
+   "id": "B0411",
+   "name": "대초원 북부 탈출",
+   "type": "escape",
+   "level": 30,
    "diff": "hard",
    "wr": 0.667
   },
   {
-   "id": "B0413",
-   "name": "대초원 북부 호위 임무",
-   "type": "escort",
+   "id": "B0411",
+   "name": "대초원 북부 탈출",
+   "type": "escape",
+   "level": 30,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0411",
+   "name": "대초원 북부 탈출",
+   "type": "escape",
+   "level": 30,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0224",
+   "name": "수도원 산지 사냥: 피에 굶주린 구울",
+   "type": "monster_hunt",
+   "level": 31,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0224",
+   "name": "수도원 산지 사냥: 피에 굶주린 구울",
+   "type": "monster_hunt",
    "level": 31,
    "diff": "nightmare",
-   "wr": 0.083
+   "wr": 0.0
   },
   {
-   "id": "B0413",
-   "name": "대초원 북부 호위 임무",
-   "type": "escort",
+   "id": "B0224",
+   "name": "수도원 산지 사냥: 피에 굶주린 구울",
+   "type": "monster_hunt",
    "level": 31,
    "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0282",
-   "name": "설원 평야 생존전",
-   "type": "survival",
-   "level": 32,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0282",
-   "name": "설원 평야 생존전",
-   "type": "survival",
-   "level": 32,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0282",
-   "name": "설원 평야 생존전",
-   "type": "survival",
-   "level": 32,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0331",
-   "name": "대사막 카라반 길 사냥: 미라 군주",
-   "type": "monster_hunt",
-   "level": 32,
-   "diff": "hard",
-   "wr": 0.25
-  },
-  {
-   "id": "B0331",
-   "name": "대사막 카라반 길 사냥: 미라 군주",
-   "type": "monster_hunt",
-   "level": 32,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0331",
-   "name": "대사막 카라반 길 사냥: 미라 군주",
-   "type": "monster_hunt",
-   "level": 32,
-   "diff": "normal",
-   "wr": 0.583
-  },
-  {
-   "id": "B0367",
-   "name": "대초원 호위 임무",
-   "type": "escort",
-   "level": 32,
-   "diff": "hard",
-   "wr": 0.5
-  },
-  {
-   "id": "B0367",
-   "name": "대초원 호위 임무",
-   "type": "escort",
-   "level": 32,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0367",
-   "name": "대초원 호위 임무",
-   "type": "escort",
-   "level": 32,
-   "diff": "normal",
-   "wr": 0.917
-  },
-  {
-   "id": "B0414",
-   "name": "다이어 울프 토벌",
-   "type": "hunt",
-   "level": 32,
-   "diff": "hard",
-   "wr": 0.5
-  },
-  {
-   "id": "B0414",
-   "name": "다이어 울프 토벌",
-   "type": "hunt",
-   "level": 32,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0414",
-   "name": "다이어 울프 토벌",
-   "type": "hunt",
-   "level": 32,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "S026",
-   "name": "재의 선봉대",
-   "type": "invasion",
-   "level": 32,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "S026",
-   "name": "재의 선봉대",
-   "type": "invasion",
-   "level": 32,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "S026",
-   "name": "재의 선봉대",
-   "type": "invasion",
-   "level": 32,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0333",
-   "name": "대사막 카라반 길 구출 작전",
-   "type": "rescue",
-   "level": 33,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0333",
-   "name": "대사막 카라반 길 구출 작전",
-   "type": "rescue",
-   "level": 33,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0333",
-   "name": "대사막 카라반 길 구출 작전",
-   "type": "rescue",
-   "level": 33,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0375",
-   "name": "뼈 산의 시련",
-   "type": "trial",
-   "level": 33,
-   "diff": "hard",
-   "wr": 0.083
-  },
-  {
-   "id": "B0375",
-   "name": "뼈 산의 시련",
-   "type": "trial",
-   "level": 33,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0375",
-   "name": "뼈 산의 시련",
-   "type": "trial",
-   "level": 33,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0424",
-   "name": "성스러운 호수 호위 임무",
-   "type": "escort",
-   "level": 33,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0424",
-   "name": "성스러운 호수 호위 임무",
-   "type": "escort",
-   "level": 33,
-   "diff": "nightmare",
-   "wr": 0.917
-  },
-  {
-   "id": "B0424",
-   "name": "성스러운 호수 호위 임무",
-   "type": "escort",
-   "level": 33,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0338",
-   "name": "오아시스 도시 호위 임무",
-   "type": "escort",
-   "level": 34,
-   "diff": "hard",
-   "wr": 0.167
-  },
-  {
-   "id": "B0338",
-   "name": "오아시스 도시 호위 임무",
-   "type": "escort",
-   "level": 34,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0338",
-   "name": "오아시스 도시 호위 임무",
-   "type": "escort",
-   "level": 34,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0383",
-   "name": "고블린 굴 정찰",
-   "type": "recon",
-   "level": 34,
-   "diff": "hard",
    "wr": 0.833
   },
   {
-   "id": "B0383",
-   "name": "고블린 굴 정찰",
-   "type": "recon",
+   "id": "B0328",
+   "name": "대사막 카라반 길 진압: 모래 벌레",
+   "type": "suppression",
+   "level": 31,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0328",
+   "name": "대사막 카라반 길 진압: 모래 벌레",
+   "type": "suppression",
+   "level": 31,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0328",
+   "name": "대사막 카라반 길 진압: 모래 벌레",
+   "type": "suppression",
+   "level": 31,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0282",
+   "name": "설원 평야 생존전",
+   "type": "survival",
+   "level": 32,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0282",
+   "name": "설원 평야 생존전",
+   "type": "survival",
+   "level": 32,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0282",
+   "name": "설원 평야 생존전",
+   "type": "survival",
+   "level": 32,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0321",
+   "name": "수도 자흐라의 시련",
+   "type": "trial",
+   "level": 32,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0321",
+   "name": "수도 자흐라의 시련",
+   "type": "trial",
+   "level": 32,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0321",
+   "name": "수도 자흐라의 시련",
+   "type": "trial",
+   "level": 32,
+   "diff": "normal",
+   "wr": 0.833
+  },
+  {
+   "id": "B0368",
+   "name": "대초원 진압: 광포한 야수",
+   "type": "suppression",
+   "level": 32,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0368",
+   "name": "대초원 진압: 광포한 야수",
+   "type": "suppression",
+   "level": 32,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0368",
+   "name": "대초원 진압: 광포한 야수",
+   "type": "suppression",
+   "level": 32,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0369",
+   "name": "고블린 폭탄병 토벌",
+   "type": "hunt",
+   "level": 32,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0369",
+   "name": "고블린 폭탄병 토벌",
+   "type": "hunt",
+   "level": 32,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0369",
+   "name": "고블린 폭탄병 토벌",
+   "type": "hunt",
+   "level": 32,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0414",
+   "name": "다이어 울프 토벌",
+   "type": "hunt",
+   "level": 32,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0414",
+   "name": "다이어 울프 토벌",
+   "type": "hunt",
+   "level": 32,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0414",
+   "name": "다이어 울프 토벌",
+   "type": "hunt",
+   "level": 32,
+   "diff": "normal",
+   "wr": 0.583
+  },
+  {
+   "id": "S026",
+   "name": "재의 선봉대",
+   "type": "invasion",
+   "level": 32,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S026",
+   "name": "재의 선봉대",
+   "type": "invasion",
+   "level": 32,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S026",
+   "name": "재의 선봉대",
+   "type": "invasion",
+   "level": 32,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0284",
+   "name": "설원 평야 접전: 재의 날개 선봉",
+   "type": "skirmish",
+   "level": 33,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0284",
+   "name": "설원 평야 접전: 재의 날개 선봉",
+   "type": "skirmish",
+   "level": 33,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0284",
+   "name": "설원 평야 접전: 재의 날개 선봉",
+   "type": "skirmish",
+   "level": 33,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0333",
+   "name": "대사막 카라반 길 구출 작전",
+   "type": "rescue",
+   "level": 33,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0333",
+   "name": "대사막 카라반 길 구출 작전",
+   "type": "rescue",
+   "level": 33,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0333",
+   "name": "대사막 카라반 길 구출 작전",
+   "type": "rescue",
+   "level": 33,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0286",
+   "name": "설원 평야 사냥: 화염 와이번",
+   "type": "monster_hunt",
    "level": 34,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0286",
+   "name": "설원 평야 사냥: 화염 와이번",
+   "type": "monster_hunt",
+   "level": 34,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0286",
+   "name": "설원 평야 사냥: 화염 와이번",
+   "type": "monster_hunt",
+   "level": 34,
+   "diff": "normal",
+   "wr": 0.083
+  },
+  {
+   "id": "B0332",
+   "name": "대사막 카라반 길 침공: 술탄 친위대 대군",
+   "type": "invasion",
+   "level": 34,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0332",
+   "name": "대사막 카라반 길 침공: 술탄 친위대 대군",
+   "type": "invasion",
+   "level": 34,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0332",
+   "name": "대사막 카라반 길 침공: 술탄 친위대 대군",
+   "type": "invasion",
+   "level": 34,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0343",
+   "name": "암살: 미라 군단 지휘관",
+   "type": "assassination",
+   "level": 34,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0343",
+   "name": "암살: 미라 군단 지휘관",
+   "type": "assassination",
+   "level": 34,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0343",
+   "name": "암살: 미라 군단 지휘관",
+   "type": "assassination",
+   "level": 34,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0377",
+   "name": "뼈 산 생존전",
+   "type": "survival",
+   "level": 34,
+   "diff": "hard",
+   "wr": 0.417
+  },
+  {
+   "id": "B0377",
+   "name": "뼈 산 생존전",
+   "type": "survival",
+   "level": 34,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0377",
+   "name": "뼈 산 생존전",
+   "type": "survival",
+   "level": 34,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0378",
+   "name": "뼈 산 탐험",
+   "type": "expedition",
+   "level": 34,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0378",
+   "name": "뼈 산 탐험",
+   "type": "expedition",
+   "level": 34,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0378",
+   "name": "뼈 산 탐험",
+   "type": "expedition",
+   "level": 34,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0340",
+   "name": "오아시스 도시 접전: 모래 벌레",
+   "type": "skirmish",
+   "level": 35,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0340",
+   "name": "오아시스 도시 접전: 모래 벌레",
+   "type": "skirmish",
+   "level": 35,
+   "diff": "nightmare",
+   "wr": 0.167
+  },
+  {
+   "id": "B0340",
+   "name": "오아시스 도시 접전: 모래 벌레",
+   "type": "skirmish",
+   "level": 35,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0341",
+   "name": "오아시스 도시의 시련",
+   "type": "trial",
+   "level": 35,
+   "diff": "hard",
+   "wr": 0.667
+  },
+  {
+   "id": "B0341",
+   "name": "오아시스 도시의 시련",
+   "type": "trial",
+   "level": 35,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0341",
+   "name": "오아시스 도시의 시련",
+   "type": "trial",
+   "level": 35,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0344",
+   "name": "잊힌 피라미드 호위 임무",
+   "type": "escort",
+   "level": 35,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0344",
+   "name": "잊힌 피라미드 호위 임무",
+   "type": "escort",
+   "level": 35,
    "diff": "nightmare",
    "wr": 0.083
   },
   {
-   "id": "B0383",
-   "name": "고블린 굴 정찰",
-   "type": "recon",
-   "level": 34,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0425",
-   "name": "성스러운 호수 사냥: 다이어 울프",
-   "type": "monster_hunt",
-   "level": 34,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0425",
-   "name": "성스러운 호수 사냥: 다이어 울프",
-   "type": "monster_hunt",
-   "level": 34,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0425",
-   "name": "성스러운 호수 사냥: 다이어 울프",
-   "type": "monster_hunt",
-   "level": 34,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0341",
-   "name": "오아시스 도시의 시련",
-   "type": "trial",
-   "level": 35,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0341",
-   "name": "오아시스 도시의 시련",
-   "type": "trial",
-   "level": 35,
-   "diff": "nightmare",
-   "wr": 0.583
-  },
-  {
-   "id": "B0341",
-   "name": "오아시스 도시의 시련",
-   "type": "trial",
-   "level": 35,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0433",
-   "name": "고분 지대 방어전: 기마 궁수대의 공세",
-   "type": "defense",
-   "level": 35,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0433",
-   "name": "고분 지대 방어전: 기마 궁수대의 공세",
-   "type": "defense",
-   "level": 35,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0433",
-   "name": "고분 지대 방어전: 기마 궁수대의 공세",
-   "type": "defense",
-   "level": 35,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0345",
-   "name": "잊힌 피라미드 구출 작전",
-   "type": "rescue",
-   "level": 36,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0345",
-   "name": "잊힌 피라미드 구출 작전",
-   "type": "rescue",
-   "level": 36,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0345",
-   "name": "잊힌 피라미드 구출 작전",
-   "type": "rescue",
-   "level": 36,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0397",
-   "name": "투기 언덕 호위 임무",
+   "id": "B0344",
+   "name": "잊힌 피라미드 호위 임무",
    "type": "escort",
-   "level": 36,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0397",
-   "name": "투기 언덕 호위 임무",
-   "type": "escort",
-   "level": 36,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0397",
-   "name": "투기 언덕 호위 임무",
-   "type": "escort",
-   "level": 36,
+   "level": 35,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0398",
-   "name": "투기 언덕 사냥: 오우거",
-   "type": "monster_hunt",
-   "level": 36,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0398",
-   "name": "투기 언덕 사냥: 오우거",
-   "type": "monster_hunt",
-   "level": 36,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0398",
-   "name": "투기 언덕 사냥: 오우거",
-   "type": "monster_hunt",
-   "level": 36,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0435",
-   "name": "고분 지대의 결투: 약탈 기병",
-   "type": "duel",
-   "level": 36,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0435",
-   "name": "고분 지대의 결투: 약탈 기병",
-   "type": "duel",
-   "level": 36,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0435",
-   "name": "고분 지대의 결투: 약탈 기병",
-   "type": "duel",
-   "level": 36,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0443",
-   "name": "현상금: 약탈 기병",
-   "type": "bounty",
-   "level": 36,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0443",
-   "name": "현상금: 약탈 기병",
-   "type": "bounty",
-   "level": 36,
-   "diff": "nightmare",
-   "wr": 0.917
-  },
-  {
-   "id": "B0443",
-   "name": "현상금: 약탈 기병",
-   "type": "bounty",
-   "level": 36,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0356",
-   "name": "암살단 요새 정찰",
-   "type": "recon",
-   "level": 37,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0356",
-   "name": "암살단 요새 정찰",
-   "type": "recon",
-   "level": 37,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0356",
-   "name": "암살단 요새 정찰",
-   "type": "recon",
-   "level": 37,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0395",
-   "name": "수인 숲 생존전",
-   "type": "survival",
-   "level": 37,
+   "id": "B0384",
+   "name": "고블린 굴 침공: 광포한 야수 대군",
+   "type": "invasion",
+   "level": 35,
    "diff": "hard",
    "wr": 0.75
   },
   {
-   "id": "B0395",
-   "name": "수인 숲 생존전",
-   "type": "survival",
-   "level": 37,
+   "id": "B0384",
+   "name": "고블린 굴 침공: 광포한 야수 대군",
+   "type": "invasion",
+   "level": 35,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0395",
-   "name": "수인 숲 생존전",
-   "type": "survival",
-   "level": 37,
+   "id": "B0384",
+   "name": "고블린 굴 침공: 광포한 야수 대군",
+   "type": "invasion",
+   "level": 35,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0541",
-   "name": "아이언홀 호위 임무",
-   "type": "escort",
-   "level": 37,
+   "id": "B0390",
+   "name": "수인 숲 접전: 광포한 야수",
+   "type": "skirmish",
+   "level": 35,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0541",
-   "name": "아이언홀 호위 임무",
-   "type": "escort",
-   "level": 37,
+   "id": "B0390",
+   "name": "수인 숲 접전: 광포한 야수",
+   "type": "skirmish",
+   "level": 35,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B0541",
-   "name": "아이언홀 호위 임무",
-   "type": "escort",
-   "level": 37,
+   "id": "B0390",
+   "name": "수인 숲 접전: 광포한 야수",
+   "type": "skirmish",
+   "level": 35,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0350",
-   "name": "잊힌 피라미드의 결투: 도적 두목",
-   "type": "duel",
-   "level": 38,
+   "id": "B0423",
+   "name": "말 시장 구출 작전",
+   "type": "rescue",
+   "level": 35,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0423",
+   "name": "말 시장 구출 작전",
+   "type": "rescue",
+   "level": 35,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0423",
+   "name": "말 시장 구출 작전",
+   "type": "rescue",
+   "level": 35,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0429",
+   "name": "성스러운 호수 공성: 약탈 기병 요새",
+   "type": "siege",
+   "level": 35,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0429",
+   "name": "성스러운 호수 공성: 약탈 기병 요새",
+   "type": "siege",
+   "level": 35,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0429",
+   "name": "성스러운 호수 공성: 약탈 기병 요새",
+   "type": "siege",
+   "level": 35,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0433",
+   "name": "고분 지대 방어전: 기마 궁수대의 공세",
+   "type": "defense",
+   "level": 35,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0433",
+   "name": "고분 지대 방어전: 기마 궁수대의 공세",
+   "type": "defense",
+   "level": 35,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0433",
+   "name": "고분 지대 방어전: 기마 궁수대의 공세",
+   "type": "defense",
+   "level": 35,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0346",
+   "name": "잊힌 피라미드 기습: 사막 도적 후방",
+   "type": "strike",
+   "level": 36,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0346",
+   "name": "잊힌 피라미드 기습: 사막 도적 후방",
+   "type": "strike",
+   "level": 36,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0346",
+   "name": "잊힌 피라미드 기습: 사막 도적 후방",
+   "type": "strike",
+   "level": 36,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0387",
+   "name": "고블린 굴의 시련",
+   "type": "trial",
+   "level": 36,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0387",
+   "name": "고블린 굴의 시련",
+   "type": "trial",
+   "level": 36,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0387",
+   "name": "고블린 굴의 시련",
+   "type": "trial",
+   "level": 36,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S029",
+   "name": "잊힌 피라미드",
+   "type": "expedition",
+   "level": 36,
    "diff": "hard",
    "wr": 0.167
   },
   {
-   "id": "B0350",
-   "name": "잊힌 피라미드의 결투: 도적 두목",
-   "type": "duel",
-   "level": 38,
+   "id": "S029",
+   "name": "잊힌 피라미드",
+   "type": "expedition",
+   "level": 36,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0350",
-   "name": "잊힌 피라미드의 결투: 도적 두목",
-   "type": "duel",
-   "level": 38,
+   "id": "S029",
+   "name": "잊힌 피라미드",
+   "type": "expedition",
+   "level": 36,
    "diff": "normal",
-   "wr": 1.0
+   "wr": 0.833
   },
   {
-   "id": "B0354",
-   "name": "암살단 요새 매복: 사막 도적",
-   "type": "ambush",
-   "level": 38,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0354",
-   "name": "암살단 요새 매복: 사막 도적",
-   "type": "ambush",
-   "level": 38,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0354",
-   "name": "암살단 요새 매복: 사막 도적",
-   "type": "ambush",
-   "level": 38,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0355",
-   "name": "암살단 요새의 시련",
-   "type": "trial",
-   "level": 38,
+   "id": "B0297",
+   "name": "서리 산맥 구출 작전",
+   "type": "rescue",
+   "level": 37,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0355",
-   "name": "암살단 요새의 시련",
-   "type": "trial",
-   "level": 38,
+   "id": "B0297",
+   "name": "서리 산맥 구출 작전",
+   "type": "rescue",
+   "level": 37,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B0355",
-   "name": "암살단 요새의 시련",
-   "type": "trial",
-   "level": 38,
+   "id": "B0297",
+   "name": "서리 산맥 구출 작전",
+   "type": "rescue",
+   "level": 37,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0401",
-   "name": "투기 언덕 탈출",
-   "type": "escape",
+   "id": "B0305",
+   "name": "씨족 영지의 시련",
+   "type": "trial",
+   "level": 37,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0305",
+   "name": "씨족 영지의 시련",
+   "type": "trial",
+   "level": 37,
+   "diff": "nightmare",
+   "wr": 0.833
+  },
+  {
+   "id": "B0305",
+   "name": "씨족 영지의 시련",
+   "type": "trial",
+   "level": 37,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0396",
+   "name": "수인 숲 방어전: 트롤의 공세",
+   "type": "defense",
+   "level": 37,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0396",
+   "name": "수인 숲 방어전: 트롤의 공세",
+   "type": "defense",
+   "level": 37,
+   "diff": "nightmare",
+   "wr": 0.667
+  },
+  {
+   "id": "B0396",
+   "name": "수인 숲 방어전: 트롤의 공세",
+   "type": "defense",
+   "level": 37,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0400",
+   "name": "투기 언덕 접전: 오우거",
+   "type": "skirmish",
+   "level": 37,
+   "diff": "hard",
+   "wr": 0.667
+  },
+  {
+   "id": "B0400",
+   "name": "투기 언덕 접전: 오우거",
+   "type": "skirmish",
+   "level": 37,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0400",
+   "name": "투기 언덕 접전: 오우거",
+   "type": "skirmish",
+   "level": 37,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0444",
+   "name": "레이드: 기마 궁수",
+   "type": "raid",
+   "level": 37,
+   "diff": "hard",
+   "wr": 0.583
+  },
+  {
+   "id": "B0444",
+   "name": "레이드: 기마 궁수",
+   "type": "raid",
+   "level": 37,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0444",
+   "name": "레이드: 기마 궁수",
+   "type": "raid",
+   "level": 37,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0541",
+   "name": "아이언홀 호위 임무",
+   "type": "escort",
+   "level": 37,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0541",
+   "name": "아이언홀 호위 임무",
+   "type": "escort",
+   "level": 37,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0541",
+   "name": "아이언홀 호위 임무",
+   "type": "escort",
+   "level": 37,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0351",
+   "name": "잊힌 피라미드 접전: 사막 도적",
+   "type": "skirmish",
    "level": 38,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0401",
-   "name": "투기 언덕 탈출",
-   "type": "escape",
+   "id": "B0351",
+   "name": "잊힌 피라미드 접전: 사막 도적",
+   "type": "skirmish",
    "level": 38,
    "diff": "nightmare",
-   "wr": 0.917
+   "wr": 1.0
   },
   {
-   "id": "B0401",
-   "name": "투기 언덕 탈출",
-   "type": "escape",
+   "id": "B0351",
+   "name": "잊힌 피라미드 접전: 사막 도적",
+   "type": "skirmish",
    "level": 38,
    "diff": "normal",
    "wr": 1.0
@@ -2308,7 +2613,7 @@
    "type": "monster_hunt",
    "level": 38,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.75
   },
   {
    "id": "B0445",
@@ -2316,7 +2621,7 @@
    "type": "monster_hunt",
    "level": 38,
    "diff": "nightmare",
-   "wr": 0.583
+   "wr": 0.0
   },
   {
    "id": "B0445",
@@ -2327,724 +2632,604 @@
    "wr": 1.0
   },
   {
-   "id": "B0497",
-   "name": "세계수 도시 사냥: 거대 거미",
-   "type": "monster_hunt",
+   "id": "B0588",
+   "name": "흰 항구 진압: 유빙 거인",
+   "type": "suppression",
    "level": 38,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0497",
-   "name": "세계수 도시 사냥: 거대 거미",
-   "type": "monster_hunt",
+   "id": "B0588",
+   "name": "흰 항구 진압: 유빙 거인",
+   "type": "suppression",
    "level": 38,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0497",
-   "name": "세계수 도시 사냥: 거대 거미",
-   "type": "monster_hunt",
+   "id": "B0588",
+   "name": "흰 항구 진압: 유빙 거인",
+   "type": "suppression",
    "level": 38,
    "diff": "normal",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0313",
-   "name": "얼음 동굴 접전: 적대 씨족",
-   "type": "skirmish",
-   "level": 39,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0313",
-   "name": "얼음 동굴 접전: 적대 씨족",
-   "type": "skirmish",
-   "level": 39,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0313",
-   "name": "얼음 동굴 접전: 적대 씨족",
-   "type": "skirmish",
-   "level": 39,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0448",
-   "name": "국경 요새 공성: 기마 궁수대 요새",
-   "type": "siege",
-   "level": 39,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0448",
-   "name": "국경 요새 공성: 기마 궁수대 요새",
-   "type": "siege",
-   "level": 39,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0448",
-   "name": "국경 요새 공성: 기마 궁수대 요새",
-   "type": "siege",
-   "level": 39,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0454",
-   "name": "황도 교토라 진압: 원령",
-   "type": "suppression",
-   "level": 39,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0454",
-   "name": "황도 교토라 진압: 원령",
-   "type": "suppression",
-   "level": 39,
-   "diff": "nightmare",
-   "wr": 0.417
-  },
-  {
-   "id": "B0454",
-   "name": "황도 교토라 진압: 원령",
-   "type": "suppression",
-   "level": 39,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0543",
-   "name": "아이언홀 공성: 지하 야만족 요새",
-   "type": "siege",
-   "level": 39,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0543",
-   "name": "아이언홀 공성: 지하 야만족 요새",
-   "type": "siege",
-   "level": 39,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0543",
-   "name": "아이언홀 공성: 지하 야만족 요새",
-   "type": "siege",
-   "level": 39,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0405",
-   "name": "현상금: 오우거",
-   "type": "bounty",
-   "level": 40,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0405",
-   "name": "현상금: 오우거",
-   "type": "bounty",
-   "level": 40,
-   "diff": "nightmare",
-   "wr": 0.667
-  },
-  {
-   "id": "B0405",
-   "name": "현상금: 오우거",
-   "type": "bounty",
-   "level": 40,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0499",
-   "name": "세계수 도시 접전: 숲의 괴물",
-   "type": "skirmish",
-   "level": 40,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0499",
-   "name": "세계수 도시 접전: 숲의 괴물",
-   "type": "skirmish",
-   "level": 40,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0499",
-   "name": "세계수 도시 접전: 숲의 괴물",
-   "type": "skirmish",
-   "level": 40,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0502",
-   "name": "세계수 도시 진압: 시든 트렌트",
-   "type": "suppression",
-   "level": 40,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0502",
-   "name": "세계수 도시 진압: 시든 트렌트",
-   "type": "suppression",
-   "level": 40,
-   "diff": "nightmare",
-   "wr": 0.333
-  },
-  {
-   "id": "B0502",
-   "name": "세계수 도시 진압: 시든 트렌트",
-   "type": "suppression",
-   "level": 40,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0506",
-   "name": "고대 숲 침공: 타락한 정령 대군",
+   "id": "B0460",
+   "name": "벚꽃 가도 침공: 닌자 부대 대군",
    "type": "invasion",
-   "level": 40,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0506",
-   "name": "고대 숲 침공: 타락한 정령 대군",
-   "type": "invasion",
-   "level": 40,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0506",
-   "name": "고대 숲 침공: 타락한 정령 대군",
-   "type": "invasion",
-   "level": 40,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0547",
-   "name": "레이드: 용암 정령",
-   "type": "raid",
-   "level": 40,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0547",
-   "name": "레이드: 용암 정령",
-   "type": "raid",
-   "level": 40,
-   "diff": "nightmare",
-   "wr": 0.083
-  },
-  {
-   "id": "B0547",
-   "name": "레이드: 용암 정령",
-   "type": "raid",
-   "level": 40,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0548",
-   "name": "아이언홀 접전: 갱도 괴물",
-   "type": "skirmish",
-   "level": 40,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0548",
-   "name": "아이언홀 접전: 갱도 괴물",
-   "type": "skirmish",
-   "level": 40,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0548",
-   "name": "아이언홀 접전: 갱도 괴물",
-   "type": "skirmish",
-   "level": 40,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0589",
-   "name": "흰 항구 침공: 유령선 대군",
-   "type": "invasion",
-   "level": 40,
+   "level": 39,
    "diff": "hard",
    "wr": 0.583
   },
   {
-   "id": "B0589",
-   "name": "흰 항구 침공: 유령선 대군",
+   "id": "B0460",
+   "name": "벚꽃 가도 침공: 닌자 부대 대군",
    "type": "invasion",
-   "level": 40,
+   "level": 39,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0589",
-   "name": "흰 항구 침공: 유령선 대군",
+   "id": "B0460",
+   "name": "벚꽃 가도 침공: 닌자 부대 대군",
    "type": "invasion",
-   "level": 40,
+   "level": 39,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0457",
-   "name": "황도 교토라 생존전",
-   "type": "survival",
-   "level": 41,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0457",
-   "name": "황도 교토라 생존전",
-   "type": "survival",
-   "level": 41,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0457",
-   "name": "황도 교토라 생존전",
-   "type": "survival",
-   "level": 41,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0461",
-   "name": "벚꽃 가도 사냥: 쇼군의 장군",
-   "type": "monster_hunt",
-   "level": 41,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0461",
-   "name": "벚꽃 가도 사냥: 쇼군의 장군",
-   "type": "monster_hunt",
-   "level": 41,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0461",
-   "name": "벚꽃 가도 사냥: 쇼군의 장군",
-   "type": "monster_hunt",
-   "level": 41,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0592",
-   "name": "흰 항구 사냥: 유령선 선원",
-   "type": "monster_hunt",
-   "level": 41,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0592",
-   "name": "흰 항구 사냥: 유령선 선원",
-   "type": "monster_hunt",
-   "level": 41,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0592",
-   "name": "흰 항구 사냥: 유령선 선원",
-   "type": "monster_hunt",
-   "level": 41,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "S033",
-   "name": "벚꽃 아래의 검",
+   "id": "B0359",
+   "name": "암살단 요새의 결투: 모래 벌레",
    "type": "duel",
+   "level": 40,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0359",
+   "name": "암살단 요새의 결투: 모래 벌레",
+   "type": "duel",
+   "level": 40,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0359",
+   "name": "암살단 요새의 결투: 모래 벌레",
+   "type": "duel",
+   "level": 40,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0403",
+   "name": "투기 언덕의 결투: 트롤",
+   "type": "duel",
+   "level": 40,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0403",
+   "name": "투기 언덕의 결투: 트롤",
+   "type": "duel",
+   "level": 40,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0403",
+   "name": "투기 언덕의 결투: 트롤",
+   "type": "duel",
+   "level": 40,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0450",
+   "name": "국경 요새 접전: 초원 늑대",
+   "type": "skirmish",
+   "level": 40,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0450",
+   "name": "국경 요새 접전: 초원 늑대",
+   "type": "skirmish",
+   "level": 40,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0450",
+   "name": "국경 요새 접전: 초원 늑대",
+   "type": "skirmish",
+   "level": 40,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0458",
+   "name": "황도 교토라 수호: 성문",
+   "type": "guard",
+   "level": 40,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0458",
+   "name": "황도 교토라 수호: 성문",
+   "type": "guard",
+   "level": 40,
+   "diff": "nightmare",
+   "wr": 0.583
+  },
+  {
+   "id": "B0458",
+   "name": "황도 교토라 수호: 성문",
+   "type": "guard",
+   "level": 40,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0547",
+   "name": "레이드: 용암 정령",
+   "type": "raid",
+   "level": 40,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0547",
+   "name": "레이드: 용암 정령",
+   "type": "raid",
+   "level": 40,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0547",
+   "name": "레이드: 용암 정령",
+   "type": "raid",
+   "level": 40,
+   "diff": "normal",
+   "wr": 0.917
+  },
+  {
+   "id": "S032",
+   "name": "쇼군의 밀약",
+   "type": "strike",
+   "level": 40,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S032",
+   "name": "쇼군의 밀약",
+   "type": "strike",
+   "level": 40,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S032",
+   "name": "쇼군의 밀약",
+   "type": "strike",
+   "level": 40,
+   "diff": "normal",
+   "wr": 0.417
+  },
+  {
+   "id": "B0459",
+   "name": "암살: 원령 지휘관",
+   "type": "assassination",
    "level": 41,
    "diff": "hard",
    "wr": 0.417
   },
   {
-   "id": "S033",
-   "name": "벚꽃 아래의 검",
-   "type": "duel",
+   "id": "B0459",
+   "name": "암살: 원령 지휘관",
+   "type": "assassination",
    "level": 41,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "S033",
-   "name": "벚꽃 아래의 검",
-   "type": "duel",
+   "id": "B0459",
+   "name": "암살: 원령 지휘관",
+   "type": "assassination",
    "level": 41,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0469",
-   "name": "쇼군의 성 사냥: 쇼군의 장군",
-   "type": "monster_hunt",
-   "level": 42,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0469",
-   "name": "쇼군의 성 사냥: 쇼군의 장군",
-   "type": "monster_hunt",
-   "level": 42,
-   "diff": "nightmare",
-   "wr": 0.083
-  },
-  {
-   "id": "B0469",
-   "name": "쇼군의 성 사냥: 쇼군의 장군",
-   "type": "monster_hunt",
-   "level": 42,
    "diff": "normal",
    "wr": 0.833
   },
   {
-   "id": "B0509",
-   "name": "고대 숲 구출 작전",
+   "id": "B0463",
+   "name": "벚꽃 가도 구출 작전",
    "type": "rescue",
-   "level": 42,
+   "level": 41,
    "diff": "hard",
-   "wr": 0.0
+   "wr": 0.833
   },
   {
-   "id": "B0509",
-   "name": "고대 숲 구출 작전",
+   "id": "B0463",
+   "name": "벚꽃 가도 구출 작전",
    "type": "rescue",
-   "level": 42,
+   "level": 41,
    "diff": "nightmare",
-   "wr": 0.25
+   "wr": 0.0
   },
   {
-   "id": "B0509",
-   "name": "고대 숲 구출 작전",
+   "id": "B0463",
+   "name": "벚꽃 가도 구출 작전",
    "type": "rescue",
-   "level": 42,
+   "level": 41,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0511",
-   "name": "고대 숲의 결투: 시든 트렌트",
+   "id": "B0464",
+   "name": "벚꽃 가도의 결투: 쇼군의 장군",
    "type": "duel",
-   "level": 42,
+   "level": 41,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0511",
-   "name": "고대 숲의 결투: 시든 트렌트",
+   "id": "B0464",
+   "name": "벚꽃 가도의 결투: 쇼군의 장군",
    "type": "duel",
-   "level": 42,
+   "level": 41,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0511",
-   "name": "고대 숲의 결투: 시든 트렌트",
+   "id": "B0464",
+   "name": "벚꽃 가도의 결투: 쇼군의 장군",
    "type": "duel",
-   "level": 42,
+   "level": 41,
    "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0563",
-   "name": "현상금: 고대 자동인형",
-   "type": "bounty",
-   "level": 42,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0563",
-   "name": "현상금: 고대 자동인형",
-   "type": "bounty",
-   "level": 42,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0563",
-   "name": "현상금: 고대 자동인형",
-   "type": "bounty",
-   "level": 42,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0604",
-   "name": "바다 늑대(해적) 토벌",
-   "type": "hunt",
-   "level": 42,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0604",
-   "name": "바다 늑대(해적) 토벌",
-   "type": "hunt",
-   "level": 42,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0604",
-   "name": "바다 늑대(해적) 토벌",
-   "type": "hunt",
-   "level": 42,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0465",
-   "name": "벚꽃 가도 접전: 원령",
-   "type": "skirmish",
-   "level": 43,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0465",
-   "name": "벚꽃 가도 접전: 원령",
-   "type": "skirmish",
-   "level": 43,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0465",
-   "name": "벚꽃 가도 접전: 원령",
-   "type": "skirmish",
-   "level": 43,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0468",
-   "name": "암살: 낭인단 지휘관",
-   "type": "assassination",
-   "level": 43,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0468",
-   "name": "암살: 낭인단 지휘관",
-   "type": "assassination",
-   "level": 43,
-   "diff": "nightmare",
-   "wr": 0.083
-  },
-  {
-   "id": "B0468",
-   "name": "암살: 낭인단 지휘관",
-   "type": "assassination",
-   "level": 43,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0475",
-   "name": "쇼군의 성 생존전",
-   "type": "survival",
-   "level": 43,
-   "diff": "hard",
    "wr": 0.167
   },
   {
-   "id": "B0475",
-   "name": "쇼군의 성 생존전",
-   "type": "survival",
-   "level": 43,
-   "diff": "nightmare",
-   "wr": 0.083
-  },
-  {
-   "id": "B0475",
-   "name": "쇼군의 성 생존전",
-   "type": "survival",
-   "level": 43,
-   "diff": "normal",
-   "wr": 0.667
-  },
-  {
-   "id": "B0513",
-   "name": "고대 숲 기습: 숲의 괴물 후방",
-   "type": "strike",
-   "level": 43,
+   "id": "B0466",
+   "name": "벚꽃 가도 공성: 닌자 부대 요새",
+   "type": "siege",
+   "level": 41,
    "diff": "hard",
-   "wr": 0.917
+   "wr": 0.833
   },
   {
-   "id": "B0513",
-   "name": "고대 숲 기습: 숲의 괴물 후방",
-   "type": "strike",
-   "level": 43,
+   "id": "B0466",
+   "name": "벚꽃 가도 공성: 닌자 부대 요새",
+   "type": "siege",
+   "level": 41,
    "diff": "nightmare",
-   "wr": 0.25
+   "wr": 0.0
   },
   {
-   "id": "B0513",
-   "name": "고대 숲 기습: 숲의 괴물 후방",
-   "type": "strike",
-   "level": 43,
+   "id": "B0466",
+   "name": "벚꽃 가도 공성: 닌자 부대 요새",
+   "type": "siege",
+   "level": 41,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0518",
-   "name": "정령의 샘의 결투: 시든 트렌트",
-   "type": "duel",
-   "level": 43,
+   "id": "B0503",
+   "name": "세계수 도시 탈출",
+   "type": "escape",
+   "level": 41,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.417
   },
   {
-   "id": "B0518",
-   "name": "정령의 샘의 결투: 시든 트렌트",
-   "type": "duel",
-   "level": 43,
-   "diff": "nightmare",
-   "wr": 0.667
-  },
-  {
-   "id": "B0518",
-   "name": "정령의 샘의 결투: 시든 트렌트",
-   "type": "duel",
-   "level": 43,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0603",
-   "name": "고래 뼈 해안 정찰",
-   "type": "recon",
-   "level": 43,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0603",
-   "name": "고래 뼈 해안 정찰",
-   "type": "recon",
-   "level": 43,
+   "id": "B0503",
+   "name": "세계수 도시 탈출",
+   "type": "escape",
+   "level": 41,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B0603",
-   "name": "고래 뼈 해안 정찰",
-   "type": "recon",
-   "level": 43,
+   "id": "B0503",
+   "name": "세계수 도시 탈출",
+   "type": "escape",
+   "level": 41,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0606",
-   "name": "서리 마녀의 탑 접전: 바다 늑대",
-   "type": "skirmish",
-   "level": 43,
-   "diff": "hard",
-   "wr": 0.333
-  },
-  {
-   "id": "B0606",
-   "name": "서리 마녀의 탑 접전: 바다 늑대",
-   "type": "skirmish",
-   "level": 43,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0606",
-   "name": "서리 마녀의 탑 접전: 바다 늑대",
-   "type": "skirmish",
-   "level": 43,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0478",
-   "name": "안개 산맥의 시련",
-   "type": "trial",
-   "level": 44,
+   "id": "B0514",
+   "name": "레이드: 거대 거미",
+   "type": "raid",
+   "level": 41,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0478",
-   "name": "안개 산맥의 시련",
-   "type": "trial",
-   "level": 44,
+   "id": "B0514",
+   "name": "레이드: 거대 거미",
+   "type": "raid",
+   "level": 41,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0514",
+   "name": "레이드: 거대 거미",
+   "type": "raid",
+   "level": 41,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0596",
+   "name": "유령선 선원 토벌",
+   "type": "hunt",
+   "level": 41,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0596",
+   "name": "유령선 선원 토벌",
+   "type": "hunt",
+   "level": 41,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0596",
+   "name": "유령선 선원 토벌",
+   "type": "hunt",
+   "level": 41,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0597",
+   "name": "고래 뼈 해안 진압: 바다 늑대",
+   "type": "suppression",
+   "level": 41,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0597",
+   "name": "고래 뼈 해안 진압: 바다 늑대",
+   "type": "suppression",
+   "level": 41,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0597",
+   "name": "고래 뼈 해안 진압: 바다 늑대",
+   "type": "suppression",
+   "level": 41,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0469",
+   "name": "쇼군의 성 사냥: 쇼군의 장군",
+   "type": "monster_hunt",
+   "level": 42,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0469",
+   "name": "쇼군의 성 사냥: 쇼군의 장군",
+   "type": "monster_hunt",
+   "level": 42,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0469",
+   "name": "쇼군의 성 사냥: 쇼군의 장군",
+   "type": "monster_hunt",
+   "level": 42,
+   "diff": "normal",
+   "wr": 0.667
+  },
+  {
+   "id": "B0555",
+   "name": "대장간 지구 접전: 폭주 골렘",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0555",
+   "name": "대장간 지구 접전: 폭주 골렘",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0555",
+   "name": "대장간 지구 접전: 폭주 골렘",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0560",
+   "name": "깊은 갱도 사냥: 용암 정령",
+   "type": "monster_hunt",
+   "level": 42,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0560",
+   "name": "깊은 갱도 사냥: 용암 정령",
+   "type": "monster_hunt",
+   "level": 42,
    "diff": "nightmare",
    "wr": 0.083
   },
   {
-   "id": "B0478",
-   "name": "안개 산맥의 시련",
-   "type": "trial",
-   "level": 44,
+   "id": "B0560",
+   "name": "깊은 갱도 사냥: 용암 정령",
+   "type": "monster_hunt",
+   "level": 42,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0594",
+   "name": "흰 항구 접전: 바다 늑대",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0594",
+   "name": "흰 항구 접전: 바다 늑대",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0594",
+   "name": "흰 항구 접전: 바다 늑대",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0602",
+   "name": "고래 뼈 해안 접전: 서리 마녀단",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "hard",
+   "wr": 0.917
+  },
+  {
+   "id": "B0602",
+   "name": "고래 뼈 해안 접전: 서리 마녀단",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0602",
+   "name": "고래 뼈 해안 접전: 서리 마녀단",
+   "type": "skirmish",
+   "level": 42,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0467",
+   "name": "쇼군의 장군 토벌",
+   "type": "hunt",
+   "level": 43,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "B0467",
+   "name": "쇼군의 장군 토벌",
+   "type": "hunt",
+   "level": 43,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0467",
+   "name": "쇼군의 장군 토벌",
+   "type": "hunt",
+   "level": 43,
    "diff": "normal",
    "wr": 0.583
   },
   {
-   "id": "B0480",
-   "name": "안개 산맥 정찰",
-   "type": "recon",
-   "level": 44,
+   "id": "B0468",
+   "name": "암살: 낭인단 지휘관",
+   "type": "assassination",
+   "level": 43,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0480",
-   "name": "안개 산맥 정찰",
-   "type": "recon",
-   "level": 44,
+   "id": "B0468",
+   "name": "암살: 낭인단 지휘관",
+   "type": "assassination",
+   "level": 43,
    "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0468",
+   "name": "암살: 낭인단 지휘관",
+   "type": "assassination",
+   "level": 43,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0513",
+   "name": "고대 숲 기습: 숲의 괴물 후방",
+   "type": "strike",
+   "level": 43,
+   "diff": "hard",
    "wr": 0.917
   },
   {
-   "id": "B0480",
-   "name": "안개 산맥 정찰",
-   "type": "recon",
-   "level": 44,
+   "id": "B0513",
+   "name": "고대 숲 기습: 숲의 괴물 후방",
+   "type": "strike",
+   "level": 43,
+   "diff": "nightmare",
+   "wr": 0.083
+  },
+  {
+   "id": "B0513",
+   "name": "고대 숲 기습: 숲의 괴물 후방",
+   "type": "strike",
+   "level": 43,
    "diff": "normal",
    "wr": 1.0
+  },
+  {
+   "id": "B0558",
+   "name": "암살: 고대 자동인형 지휘관",
+   "type": "assassination",
+   "level": 43,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0558",
+   "name": "암살: 고대 자동인형 지휘관",
+   "type": "assassination",
+   "level": 43,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0558",
+   "name": "암살: 고대 자동인형 지휘관",
+   "type": "assassination",
+   "level": 43,
+   "diff": "normal",
+   "wr": 0.0
   },
   {
    "id": "B0520",
@@ -3060,7 +3245,7 @@
    "type": "trial",
    "level": 44,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.833
   },
   {
    "id": "B0520",
@@ -3071,28 +3256,76 @@
    "wr": 1.0
   },
   {
-   "id": "B0564",
-   "name": "깊은 갱도 수호: 봉인석",
-   "type": "guard",
+   "id": "B0565",
+   "name": "깊은 갱도 접전: 폭주 골렘",
+   "type": "skirmish",
    "level": 44,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0564",
-   "name": "깊은 갱도 수호: 봉인석",
-   "type": "guard",
+   "id": "B0565",
+   "name": "깊은 갱도 접전: 폭주 골렘",
+   "type": "skirmish",
    "level": 44,
    "diff": "nightmare",
-   "wr": 0.75
+   "wr": 0.0
   },
   {
-   "id": "B0564",
-   "name": "깊은 갱도 수호: 봉인석",
-   "type": "guard",
+   "id": "B0565",
+   "name": "깊은 갱도 접전: 폭주 골렘",
+   "type": "skirmish",
+   "level": 44,
+   "diff": "normal",
+   "wr": 0.25
+  },
+  {
+   "id": "B0567",
+   "name": "깊은 갱도 진압: 지하 야만족",
+   "type": "suppression",
+   "level": 44,
+   "diff": "hard",
+   "wr": 0.833
+  },
+  {
+   "id": "B0567",
+   "name": "깊은 갱도 진압: 지하 야만족",
+   "type": "suppression",
+   "level": 44,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0567",
+   "name": "깊은 갱도 진압: 지하 야만족",
+   "type": "suppression",
    "level": 44,
    "diff": "normal",
    "wr": 1.0
+  },
+  {
+   "id": "B0477",
+   "name": "닌자 토벌",
+   "type": "hunt",
+   "level": 45,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0477",
+   "name": "닌자 토벌",
+   "type": "hunt",
+   "level": 45,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0477",
+   "name": "닌자 토벌",
+   "type": "hunt",
+   "level": 45,
+   "diff": "normal",
+   "wr": 0.0
   },
   {
    "id": "B0488",
@@ -3108,60 +3341,12 @@
    "type": "strike",
    "level": 45,
    "diff": "nightmare",
-   "wr": 0.417
+   "wr": 0.083
   },
   {
    "id": "B0488",
    "name": "원령의 숲 기습: 쇼군군 후방",
    "type": "strike",
-   "level": 45,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0571",
-   "name": "룬 보관소 사냥: 폐광 괴물",
-   "type": "monster_hunt",
-   "level": 45,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0571",
-   "name": "룬 보관소 사냥: 폐광 괴물",
-   "type": "monster_hunt",
-   "level": 45,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0571",
-   "name": "룬 보관소 사냥: 폐광 괴물",
-   "type": "monster_hunt",
-   "level": 45,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0572",
-   "name": "룬 보관소 탈출",
-   "type": "escape",
-   "level": 45,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0572",
-   "name": "룬 보관소 탈출",
-   "type": "escape",
-   "level": 45,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0572",
-   "name": "룬 보관소 탈출",
-   "type": "escape",
    "level": 45,
    "diff": "normal",
    "wr": 1.0
@@ -3191,316 +3376,388 @@
    "wr": 0.0
   },
   {
-   "id": "S036",
-   "name": "아이언홀의 유적",
-   "type": "expedition",
+   "id": "B0612",
+   "name": "서리 마녀의 탑 기습: 바다 늑대 후방",
+   "type": "strike",
    "level": 45,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "S036",
-   "name": "아이언홀의 유적",
-   "type": "expedition",
+   "id": "B0612",
+   "name": "서리 마녀의 탑 기습: 바다 늑대 후방",
+   "type": "strike",
    "level": 45,
    "diff": "nightmare",
-   "wr": 0.333
+   "wr": 1.0
   },
   {
-   "id": "S036",
-   "name": "아이언홀의 유적",
-   "type": "expedition",
+   "id": "B0612",
+   "name": "서리 마녀의 탑 기습: 바다 늑대 후방",
+   "type": "strike",
    "level": 45,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0534",
-   "name": "시든 숲 접전: 거미 무리",
-   "type": "skirmish",
+   "id": "B0614",
+   "name": "유빙 지대 매복: 바다 늑대",
+   "type": "ambush",
+   "level": 45,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0614",
+   "name": "유빙 지대 매복: 바다 늑대",
+   "type": "ambush",
+   "level": 45,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0614",
+   "name": "유빙 지대 매복: 바다 늑대",
+   "type": "ambush",
+   "level": 45,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0528",
+   "name": "가시 덤불 지대 사냥: 숲의 괴물",
+   "type": "monster_hunt",
    "level": 46,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0534",
-   "name": "시든 숲 접전: 거미 무리",
-   "type": "skirmish",
+   "id": "B0528",
+   "name": "가시 덤불 지대 사냥: 숲의 괴물",
+   "type": "monster_hunt",
    "level": 46,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.083
   },
   {
-   "id": "B0534",
-   "name": "시든 숲 접전: 거미 무리",
-   "type": "skirmish",
+   "id": "B0528",
+   "name": "가시 덤불 지대 사냥: 숲의 괴물",
+   "type": "monster_hunt",
    "level": 46,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0617",
-   "name": "유빙 지대 기습: 유빙 거인 후방",
-   "type": "strike",
+   "id": "B0531",
+   "name": "가시 덤불 지대 탈출",
+   "type": "escape",
    "level": 46,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0617",
-   "name": "유빙 지대 기습: 유빙 거인 후방",
-   "type": "strike",
+   "id": "B0531",
+   "name": "가시 덤불 지대 탈출",
+   "type": "escape",
    "level": 46,
    "diff": "nightmare",
+   "wr": 0.083
+  },
+  {
+   "id": "B0531",
+   "name": "가시 덤불 지대 탈출",
+   "type": "escape",
+   "level": 46,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0494",
+   "name": "원령의 숲 생존전",
+   "type": "survival",
+   "level": 47,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0494",
+   "name": "원령의 숲 생존전",
+   "type": "survival",
+   "level": 47,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0494",
+   "name": "원령의 숲 생존전",
+   "type": "survival",
+   "level": 47,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0530",
+   "name": "가시 덤불 지대 수호: 보급고",
+   "type": "guard",
+   "level": 47,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0530",
+   "name": "가시 덤불 지대 수호: 보급고",
+   "type": "guard",
+   "level": 47,
+   "diff": "nightmare",
+   "wr": 0.917
+  },
+  {
+   "id": "B0530",
+   "name": "가시 덤불 지대 수호: 보급고",
+   "type": "guard",
+   "level": 47,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0582",
+   "name": "고대 유적층 침공: 갱도 괴물 대군",
+   "type": "invasion",
+   "level": 47,
+   "diff": "hard",
+   "wr": 0.833
+  },
+  {
+   "id": "B0582",
+   "name": "고대 유적층 침공: 갱도 괴물 대군",
+   "type": "invasion",
+   "level": 47,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0582",
+   "name": "고대 유적층 침공: 갱도 괴물 대군",
+   "type": "invasion",
+   "level": 47,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0678",
+   "name": "환영 괴물 토벌",
+   "type": "hunt",
+   "level": 47,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0678",
+   "name": "환영 괴물 토벌",
+   "type": "hunt",
+   "level": 47,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0678",
+   "name": "환영 괴물 토벌",
+   "type": "hunt",
+   "level": 47,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0539",
+   "name": "시든 숲 호위 임무",
+   "type": "escort",
+   "level": 48,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "B0539",
+   "name": "시든 숲 호위 임무",
+   "type": "escort",
+   "level": 48,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0539",
+   "name": "시든 숲 호위 임무",
+   "type": "escort",
+   "level": 48,
+   "diff": "normal",
    "wr": 0.75
   },
   {
-   "id": "B0617",
-   "name": "유빙 지대 기습: 유빙 거인 후방",
-   "type": "strike",
-   "level": 46,
-   "diff": "normal",
-   "wr": 1.0
+   "id": "B0631",
+   "name": "산호 궁전 사냥: 해저 망령",
+   "type": "monster_hunt",
+   "level": 48,
+   "diff": "hard",
+   "wr": 0.0
   },
   {
-   "id": "B0625",
-   "name": "유령선 선원 토벌",
-   "type": "hunt",
-   "level": 46,
+   "id": "B0631",
+   "name": "산호 궁전 사냥: 해저 망령",
+   "type": "monster_hunt",
+   "level": 48,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0631",
+   "name": "산호 궁전 사냥: 해저 망령",
+   "type": "monster_hunt",
+   "level": 48,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0721",
+   "name": "정글 외곽 탈출",
+   "type": "escape",
+   "level": 48,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0625",
-   "name": "유령선 선원 토벌",
-   "type": "hunt",
-   "level": 46,
+   "id": "B0721",
+   "name": "정글 외곽 탈출",
+   "type": "escape",
+   "level": 48,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B0625",
-   "name": "유령선 선원 토벌",
-   "type": "hunt",
-   "level": 46,
+   "id": "B0721",
+   "name": "정글 외곽 탈출",
+   "type": "escape",
+   "level": 48,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0629",
-   "name": "침묵의 섬 매복: 유령선",
-   "type": "ambush",
-   "level": 47,
+   "id": "B0726",
+   "name": "정글 외곽 방어전: 독 개구리 떼의 공세",
+   "type": "defense",
+   "level": 48,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0629",
-   "name": "침묵의 섬 매복: 유령선",
-   "type": "ambush",
-   "level": 47,
+   "id": "B0726",
+   "name": "정글 외곽 방어전: 독 개구리 떼의 공세",
+   "type": "defense",
+   "level": 48,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B0629",
-   "name": "침묵의 섬 매복: 유령선",
-   "type": "ambush",
-   "level": 47,
+   "id": "B0726",
+   "name": "정글 외곽 방어전: 독 개구리 떼의 공세",
+   "type": "defense",
+   "level": 48,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0722",
-   "name": "정글 외곽 기습: 거대 파충류 후방",
-   "type": "strike",
-   "level": 47,
+   "id": "B0635",
+   "name": "산호 궁전 정찰",
+   "type": "recon",
+   "level": 49,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0722",
-   "name": "정글 외곽 기습: 거대 파충류 후방",
-   "type": "strike",
-   "level": 47,
+   "id": "B0635",
+   "name": "산호 궁전 정찰",
+   "type": "recon",
+   "level": 49,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0635",
+   "name": "산호 궁전 정찰",
+   "type": "recon",
+   "level": 49,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0680",
+   "name": "안개 궁정 호위 임무",
+   "type": "escort",
+   "level": 49,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0680",
+   "name": "안개 궁정 호위 임무",
+   "type": "escort",
+   "level": 49,
    "diff": "nightmare",
    "wr": 0.25
   },
   {
-   "id": "B0722",
-   "name": "정글 외곽 기습: 거대 파충류 후방",
-   "type": "strike",
-   "level": 47,
+   "id": "B0680",
+   "name": "안개 궁정 호위 임무",
+   "type": "escort",
+   "level": 49,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0724",
-   "name": "정글 외곽 접전: 공룡",
-   "type": "skirmish",
-   "level": 47,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0724",
-   "name": "정글 외곽 접전: 공룡",
-   "type": "skirmish",
-   "level": 47,
-   "diff": "nightmare",
-   "wr": 0.583
-  },
-  {
-   "id": "B0724",
-   "name": "정글 외곽 접전: 공룡",
-   "type": "skirmish",
-   "level": 47,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0493",
-   "name": "원령의 숲 진압: 쇼군군",
-   "type": "suppression",
-   "level": 48,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0493",
-   "name": "원령의 숲 진압: 쇼군군",
-   "type": "suppression",
-   "level": 48,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0493",
-   "name": "원령의 숲 진압: 쇼군군",
-   "type": "suppression",
-   "level": 48,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0538",
-   "name": "시든 숲 방어전: 타락한 정령의 공세",
-   "type": "defense",
-   "level": 48,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0538",
-   "name": "시든 숲 방어전: 타락한 정령의 공세",
-   "type": "defense",
-   "level": 48,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0538",
-   "name": "시든 숲 방어전: 타락한 정령의 공세",
-   "type": "defense",
-   "level": 48,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0628",
-   "name": "레이드: 유빙 거인",
-   "type": "raid",
-   "level": 48,
-   "diff": "hard",
-   "wr": 0.167
-  },
-  {
-   "id": "B0628",
-   "name": "레이드: 유빙 거인",
-   "type": "raid",
-   "level": 48,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0628",
-   "name": "레이드: 유빙 거인",
-   "type": "raid",
-   "level": 48,
-   "diff": "normal",
-   "wr": 0.667
-  },
-  {
-   "id": "B0726",
-   "name": "정글 외곽 방어전: 독 개구리 떼의 공세",
-   "type": "defense",
-   "level": 48,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0726",
-   "name": "정글 외곽 방어전: 독 개구리 떼의 공세",
-   "type": "defense",
-   "level": 48,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0726",
-   "name": "정글 외곽 방어전: 독 개구리 떼의 공세",
-   "type": "defense",
-   "level": 48,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "S039",
-   "name": "심해의 문",
-   "type": "expedition",
-   "level": 48,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "S039",
-   "name": "심해의 문",
-   "type": "expedition",
-   "level": 48,
-   "diff": "nightmare",
-   "wr": 0.5
-  },
-  {
-   "id": "S039",
-   "name": "심해의 문",
-   "type": "expedition",
-   "level": 48,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0679",
-   "name": "안개 궁정 정찰",
-   "type": "recon",
+   "id": "B0685",
+   "name": "환상의 미로 사냥: 꿈 포식자",
+   "type": "monster_hunt",
    "level": 49,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0679",
-   "name": "안개 궁정 정찰",
-   "type": "recon",
+   "id": "B0685",
+   "name": "환상의 미로 사냥: 꿈 포식자",
+   "type": "monster_hunt",
    "level": 49,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0679",
-   "name": "안개 궁정 정찰",
-   "type": "recon",
+   "id": "B0685",
+   "name": "환상의 미로 사냥: 꿈 포식자",
+   "type": "monster_hunt",
    "level": 49,
    "diff": "normal",
    "wr": 0.0
+  },
+  {
+   "id": "B0643",
+   "name": "심해 해구 매복: 심해 괴수",
+   "type": "ambush",
+   "level": 50,
+   "diff": "hard",
+   "wr": 0.833
+  },
+  {
+   "id": "B0643",
+   "name": "심해 해구 매복: 심해 괴수",
+   "type": "ambush",
+   "level": 50,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0643",
+   "name": "심해 해구 매복: 심해 괴수",
+   "type": "ambush",
+   "level": 50,
+   "diff": "normal",
+   "wr": 1.0
   },
   {
    "id": "B0687",
@@ -3527,54 +3784,6 @@
    "wr": 0.0
   },
   {
-   "id": "B0729",
-   "name": "정글 외곽 정찰",
-   "type": "recon",
-   "level": 50,
-   "diff": "hard",
-   "wr": 0.667
-  },
-  {
-   "id": "B0729",
-   "name": "정글 외곽 정찰",
-   "type": "recon",
-   "level": 50,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0729",
-   "name": "정글 외곽 정찰",
-   "type": "recon",
-   "level": 50,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0731",
-   "name": "독 늪 수호: 보급고",
-   "type": "guard",
-   "level": 50,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0731",
-   "name": "독 늪 수호: 보급고",
-   "type": "guard",
-   "level": 50,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0731",
-   "name": "독 늪 수호: 보급고",
-   "type": "guard",
-   "level": 50,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
    "id": "B0732",
    "name": "독 늪 사냥: 거대 파충류",
    "type": "monster_hunt",
@@ -3595,1781 +3804,1565 @@
    "name": "독 늪 사냥: 거대 파충류",
    "type": "monster_hunt",
    "level": 50,
-   "diff": "normal",
-   "wr": 0.417
-  },
-  {
-   "id": "B0689",
-   "name": "환상의 미로 접전: 장난꾸러기 요정",
-   "type": "skirmish",
-   "level": 51,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0689",
-   "name": "환상의 미로 접전: 장난꾸러기 요정",
-   "type": "skirmish",
-   "level": 51,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0689",
-   "name": "환상의 미로 접전: 장난꾸러기 요정",
-   "type": "skirmish",
-   "level": 51,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0696",
-   "name": "꿈의 호수 접전: 장난꾸러기 요정",
-   "type": "skirmish",
-   "level": 51,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0696",
-   "name": "꿈의 호수 접전: 장난꾸러기 요정",
-   "type": "skirmish",
-   "level": 51,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0696",
-   "name": "꿈의 호수 접전: 장난꾸러기 요정",
-   "type": "skirmish",
-   "level": 51,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0740",
-   "name": "피라미드 도시의 시련",
-   "type": "trial",
-   "level": 51,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0740",
-   "name": "피라미드 도시의 시련",
-   "type": "trial",
-   "level": 51,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0740",
-   "name": "피라미드 도시의 시련",
-   "type": "trial",
-   "level": 51,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0695",
-   "name": "꿈의 호수 사냥: 안개 유령",
-   "type": "monster_hunt",
-   "level": 52,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0695",
-   "name": "꿈의 호수 사냥: 안개 유령",
-   "type": "monster_hunt",
-   "level": 52,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0695",
-   "name": "꿈의 호수 사냥: 안개 유령",
-   "type": "monster_hunt",
-   "level": 52,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0662",
-   "name": "조류 터널 접전: 심해 괴수",
-   "type": "skirmish",
-   "level": 53,
-   "diff": "hard",
-   "wr": 0.667
-  },
-  {
-   "id": "B0662",
-   "name": "조류 터널 접전: 심해 괴수",
-   "type": "skirmish",
-   "level": 53,
-   "diff": "nightmare",
-   "wr": 0.917
-  },
-  {
-   "id": "B0662",
-   "name": "조류 터널 접전: 심해 괴수",
-   "type": "skirmish",
-   "level": 53,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0743",
-   "name": "피라미드 도시 사냥: 식인 식물",
-   "type": "monster_hunt",
-   "level": 53,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0743",
-   "name": "피라미드 도시 사냥: 식인 식물",
-   "type": "monster_hunt",
-   "level": 53,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0743",
-   "name": "피라미드 도시 사냥: 식인 식물",
-   "type": "monster_hunt",
-   "level": 53,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "S042",
-   "name": "요정 여왕의 장난",
-   "type": "trial",
-   "level": 53,
-   "diff": "hard",
-   "wr": 0.833
-  },
-  {
-   "id": "S042",
-   "name": "요정 여왕의 장난",
-   "type": "trial",
-   "level": 53,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "S042",
-   "name": "요정 여왕의 장난",
-   "type": "trial",
-   "level": 53,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0661",
-   "name": "현상금: 크라켄 새끼",
-   "type": "bounty",
-   "level": 54,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0661",
-   "name": "현상금: 크라켄 새끼",
-   "type": "bounty",
-   "level": 54,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0661",
-   "name": "현상금: 크라켄 새끼",
-   "type": "bounty",
-   "level": 54,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0744",
-   "name": "피라미드 도시 공성: 거대 파충류 요새",
-   "type": "siege",
-   "level": 54,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0744",
-   "name": "피라미드 도시 공성: 거대 파충류 요새",
-   "type": "siege",
-   "level": 54,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0744",
-   "name": "피라미드 도시 공성: 거대 파충류 요새",
-   "type": "siege",
-   "level": 54,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0663",
-   "name": "암살: 타락 해족 지휘관",
-   "type": "assassination",
-   "level": 55,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0663",
-   "name": "암살: 타락 해족 지휘관",
-   "type": "assassination",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 0.167
-  },
-  {
-   "id": "B0663",
-   "name": "암살: 타락 해족 지휘관",
-   "type": "assassination",
-   "level": 55,
-   "diff": "normal",
-   "wr": 0.417
-  },
-  {
-   "id": "B0672",
-   "name": "크라켄의 둥지 방어전: 심해 괴수의 공세",
-   "type": "defense",
-   "level": 55,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0672",
-   "name": "크라켄의 둥지 방어전: 심해 괴수의 공세",
-   "type": "defense",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0672",
-   "name": "크라켄의 둥지 방어전: 심해 괴수의 공세",
-   "type": "defense",
-   "level": 55,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0708",
-   "name": "버섯 숲 방어전: 안개 유령의 공세",
-   "type": "defense",
-   "level": 55,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0708",
-   "name": "버섯 숲 방어전: 안개 유령의 공세",
-   "type": "defense",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0708",
-   "name": "버섯 숲 방어전: 안개 유령의 공세",
-   "type": "defense",
-   "level": 55,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0709",
-   "name": "버섯 숲 사냥: 장난꾸러기 요정",
-   "type": "monster_hunt",
-   "level": 55,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0709",
-   "name": "버섯 숲 사냥: 장난꾸러기 요정",
-   "type": "monster_hunt",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0709",
-   "name": "버섯 숲 사냥: 장난꾸러기 요정",
-   "type": "monster_hunt",
-   "level": 55,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0712",
-   "name": "시간이 멈춘 마을 호위 임무",
-   "type": "escort",
-   "level": 55,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0712",
-   "name": "시간이 멈춘 마을 호위 임무",
-   "type": "escort",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0712",
-   "name": "시간이 멈춘 마을 호위 임무",
-   "type": "escort",
-   "level": 55,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0717",
-   "name": "시간이 멈춘 마을 정찰",
-   "type": "recon",
-   "level": 55,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0717",
-   "name": "시간이 멈춘 마을 정찰",
-   "type": "recon",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0717",
-   "name": "시간이 멈춘 마을 정찰",
-   "type": "recon",
-   "level": 55,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0755",
-   "name": "거대 수목 지대의 결투: 거대 파충류",
-   "type": "duel",
-   "level": 55,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0755",
-   "name": "거대 수목 지대의 결투: 거대 파충류",
-   "type": "duel",
-   "level": 55,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0755",
-   "name": "거대 수목 지대의 결투: 거대 파충류",
-   "type": "duel",
-   "level": 55,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0756",
-   "name": "거대 수목 지대 진압: 공룡",
-   "type": "suppression",
-   "level": 56,
-   "diff": "hard",
-   "wr": 0.167
-  },
-  {
-   "id": "B0756",
-   "name": "거대 수목 지대 진압: 공룡",
-   "type": "suppression",
-   "level": 56,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0756",
-   "name": "거대 수목 지대 진압: 공룡",
-   "type": "suppression",
-   "level": 56,
-   "diff": "normal",
-   "wr": 0.917
-  },
-  {
-   "id": "B0766",
-   "name": "검은 성 사냥: 안개 괴물",
-   "type": "monster_hunt",
-   "level": 56,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0766",
-   "name": "검은 성 사냥: 안개 괴물",
-   "type": "monster_hunt",
-   "level": 56,
-   "diff": "nightmare",
-   "wr": 0.417
-  },
-  {
-   "id": "B0766",
-   "name": "검은 성 사냥: 안개 괴물",
-   "type": "monster_hunt",
-   "level": 56,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0770",
-   "name": "검은 성 진압: 안개 괴물",
-   "type": "suppression",
-   "level": 57,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0770",
-   "name": "검은 성 진압: 안개 괴물",
-   "type": "suppression",
-   "level": 57,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0770",
-   "name": "검은 성 진압: 안개 괴물",
-   "type": "suppression",
-   "level": 57,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0772",
-   "name": "암살: 리치의 하수인 지휘관",
-   "type": "assassination",
-   "level": 58,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0772",
-   "name": "암살: 리치의 하수인 지휘관",
-   "type": "assassination",
-   "level": 58,
-   "diff": "nightmare",
-   "wr": 0.5
-  },
-  {
-   "id": "B0772",
-   "name": "암살: 리치의 하수인 지휘관",
-   "type": "assassination",
-   "level": 58,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0818",
-   "name": "현상금: 뱀파이어 기사",
-   "type": "bounty",
-   "level": 58,
-   "diff": "hard",
-   "wr": 0.417
-  },
-  {
-   "id": "B0818",
-   "name": "현상금: 뱀파이어 기사",
-   "type": "bounty",
-   "level": 58,
-   "diff": "nightmare",
-   "wr": 0.083
-  },
-  {
-   "id": "B0818",
-   "name": "현상금: 뱀파이어 기사",
-   "type": "bounty",
-   "level": 58,
-   "diff": "normal",
-   "wr": 0.833
-  },
-  {
-   "id": "B0861",
-   "name": "흑요석 도시 수호: 보급고",
-   "type": "guard",
-   "level": 58,
-   "diff": "hard",
-   "wr": 0.667
-  },
-  {
-   "id": "B0861",
-   "name": "흑요석 도시 수호: 보급고",
-   "type": "guard",
-   "level": 58,
-   "diff": "nightmare",
-   "wr": 0.917
-  },
-  {
-   "id": "B0861",
-   "name": "흑요석 도시 수호: 보급고",
-   "type": "guard",
-   "level": 58,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0777",
-   "name": "망자의 들판의 결투: 리치의 하수인",
-   "type": "duel",
-   "level": 59,
-   "diff": "hard",
-   "wr": 0.583
-  },
-  {
-   "id": "B0777",
-   "name": "망자의 들판의 결투: 리치의 하수인",
-   "type": "duel",
-   "level": 59,
-   "diff": "nightmare",
-   "wr": 0.583
-  },
-  {
-   "id": "B0777",
-   "name": "망자의 들판의 결투: 리치의 하수인",
-   "type": "duel",
-   "level": 59,
-   "diff": "normal",
-   "wr": 0.667
-  },
-  {
-   "id": "B0860",
-   "name": "흑요석 도시의 시련",
-   "type": "trial",
-   "level": 59,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0860",
-   "name": "흑요석 도시의 시련",
-   "type": "trial",
-   "level": 59,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0860",
-   "name": "흑요석 도시의 시련",
-   "type": "trial",
-   "level": 59,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0864",
-   "name": "흑요석 도시 접전: 타락 정령술사",
-   "type": "skirmish",
-   "level": 59,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0864",
-   "name": "흑요석 도시 접전: 타락 정령술사",
-   "type": "skirmish",
-   "level": 59,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0864",
-   "name": "흑요석 도시 접전: 타락 정령술사",
-   "type": "skirmish",
-   "level": 59,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0867",
-   "name": "용암 호수 진압: 화염 도마뱀",
-   "type": "suppression",
-   "level": 59,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0867",
-   "name": "용암 호수 진압: 화염 도마뱀",
-   "type": "suppression",
-   "level": 59,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0867",
-   "name": "용암 호수 진압: 화염 도마뱀",
-   "type": "suppression",
-   "level": 59,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "S045",
-   "name": "백작의 만찬",
-   "type": "ambush",
-   "level": 59,
-   "diff": "hard",
-   "wr": 0.083
-  },
-  {
-   "id": "S045",
-   "name": "백작의 만찬",
-   "type": "ambush",
-   "level": 59,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "S045",
-   "name": "백작의 만찬",
-   "type": "ambush",
-   "level": 59,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0774",
-   "name": "검은 성 구출 작전",
-   "type": "rescue",
-   "level": 60,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0774",
-   "name": "검은 성 구출 작전",
-   "type": "rescue",
-   "level": 60,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0774",
-   "name": "검은 성 구출 작전",
-   "type": "rescue",
-   "level": 60,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0876",
-   "name": "유황 들판 탈출",
-   "type": "escape",
-   "level": 60,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0876",
-   "name": "유황 들판 탈출",
-   "type": "escape",
-   "level": 60,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0876",
-   "name": "유황 들판 탈출",
-   "type": "escape",
-   "level": 60,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0795",
-   "name": "뱀파이어 영지 매복: 리치의 하수인",
-   "type": "ambush",
-   "level": 62,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0795",
-   "name": "뱀파이어 영지 매복: 리치의 하수인",
-   "type": "ambush",
-   "level": 62,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0795",
-   "name": "뱀파이어 영지 매복: 리치의 하수인",
-   "type": "ambush",
-   "level": 62,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0838",
-   "name": "현상금: 뱀파이어 기사",
-   "type": "bounty",
-   "level": 62,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0838",
-   "name": "현상금: 뱀파이어 기사",
-   "type": "bounty",
-   "level": 62,
-   "diff": "nightmare",
-   "wr": 0.417
-  },
-  {
-   "id": "B0838",
-   "name": "현상금: 뱀파이어 기사",
-   "type": "bounty",
-   "level": 62,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0879",
-   "name": "유황 들판 호위 임무",
-   "type": "escort",
-   "level": 62,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0879",
-   "name": "유황 들판 호위 임무",
-   "type": "escort",
-   "level": 62,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0879",
-   "name": "유황 들판 호위 임무",
-   "type": "escort",
-   "level": 62,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0880",
-   "name": "유황 들판 탐험",
-   "type": "expedition",
-   "level": 62,
-   "diff": "hard",
-   "wr": 0.75
-  },
-  {
-   "id": "B0880",
-   "name": "유황 들판 탐험",
-   "type": "expedition",
-   "level": 62,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0880",
-   "name": "유황 들판 탐험",
-   "type": "expedition",
-   "level": 62,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0883",
-   "name": "골렘 작업장 진압: 용암 정령",
-   "type": "suppression",
-   "level": 62,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0883",
-   "name": "골렘 작업장 진압: 용암 정령",
-   "type": "suppression",
-   "level": 62,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0883",
-   "name": "골렘 작업장 진압: 용암 정령",
-   "type": "suppression",
-   "level": 62,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "S047",
-   "name": "금단의 서고",
-   "type": "rescue",
-   "level": 62,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "S047",
-   "name": "금단의 서고",
-   "type": "rescue",
-   "level": 62,
-   "diff": "nightmare",
-   "wr": 0.083
-  },
-  {
-   "id": "S047",
-   "name": "금단의 서고",
-   "type": "rescue",
-   "level": 62,
-   "diff": "normal",
-   "wr": 0.75
-  },
-  {
-   "id": "B0800",
-   "name": "뱀파이어 영지 사냥: 리치의 하수인",
-   "type": "monster_hunt",
-   "level": 63,
-   "diff": "hard",
-   "wr": 0.583
-  },
-  {
-   "id": "B0800",
-   "name": "뱀파이어 영지 사냥: 리치의 하수인",
-   "type": "monster_hunt",
-   "level": 63,
-   "diff": "nightmare",
-   "wr": 0.667
-  },
-  {
-   "id": "B0800",
-   "name": "뱀파이어 영지 사냥: 리치의 하수인",
-   "type": "monster_hunt",
-   "level": 63,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0801",
-   "name": "레이드: 뱀파이어 기사",
-   "type": "raid",
-   "level": 64,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0801",
-   "name": "레이드: 뱀파이어 기사",
-   "type": "raid",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0801",
-   "name": "레이드: 뱀파이어 기사",
-   "type": "raid",
-   "level": 64,
-   "diff": "normal",
-   "wr": 0.083
-  },
-  {
-   "id": "B0804",
-   "name": "금단의 서고 구출 작전",
-   "type": "rescue",
-   "level": 64,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0804",
-   "name": "금단의 서고 구출 작전",
-   "type": "rescue",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0804",
-   "name": "금단의 서고 구출 작전",
-   "type": "rescue",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0844",
-   "name": "박쥐 동굴 매복: 가고일",
-   "type": "ambush",
-   "level": 64,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0844",
-   "name": "박쥐 동굴 매복: 가고일",
-   "type": "ambush",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0844",
-   "name": "박쥐 동굴 매복: 가고일",
-   "type": "ambush",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0846",
-   "name": "박쥐 동굴 구출 작전",
-   "type": "rescue",
-   "level": 64,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0846",
-   "name": "박쥐 동굴 구출 작전",
-   "type": "rescue",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0846",
-   "name": "박쥐 동굴 구출 작전",
-   "type": "rescue",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0848",
-   "name": "황혼 마을 접전: 박쥐 떼",
-   "type": "skirmish",
-   "level": 64,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0848",
-   "name": "황혼 마을 접전: 박쥐 떼",
-   "type": "skirmish",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0848",
-   "name": "황혼 마을 접전: 박쥐 떼",
-   "type": "skirmish",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0849",
-   "name": "황혼 마을 방어전: 뱀파이어 기사의 공세",
-   "type": "defense",
-   "level": 64,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0849",
-   "name": "황혼 마을 방어전: 뱀파이어 기사의 공세",
-   "type": "defense",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0849",
-   "name": "황혼 마을 방어전: 뱀파이어 기사의 공세",
-   "type": "defense",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0892",
-   "name": "정령의 심장 탈출",
-   "type": "escape",
-   "level": 64,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0892",
-   "name": "정령의 심장 탈출",
-   "type": "escape",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0892",
-   "name": "정령의 심장 탈출",
-   "type": "escape",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0894",
-   "name": "정령의 심장 침공: 유황 괴물 대군",
-   "type": "invasion",
-   "level": 64,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0894",
-   "name": "정령의 심장 침공: 유황 괴물 대군",
-   "type": "invasion",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0894",
-   "name": "정령의 심장 침공: 유황 괴물 대군",
-   "type": "invasion",
-   "level": 64,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0895",
-   "name": "정령의 심장 사냥: 타락 정령술사",
-   "type": "monster_hunt",
-   "level": 64,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0895",
-   "name": "정령의 심장 사냥: 타락 정령술사",
-   "type": "monster_hunt",
-   "level": 64,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0895",
-   "name": "정령의 심장 사냥: 타락 정령술사",
-   "type": "monster_hunt",
-   "level": 64,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0845",
-   "name": "박쥐 동굴 접전: 피에 굶주린 구울",
-   "type": "skirmish",
-   "level": 65,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0845",
-   "name": "박쥐 동굴 접전: 피에 굶주린 구울",
-   "type": "skirmish",
-   "level": 65,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0845",
-   "name": "박쥐 동굴 접전: 피에 굶주린 구울",
-   "type": "skirmish",
-   "level": 65,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0893",
-   "name": "정령의 심장 생존전",
-   "type": "survival",
-   "level": 65,
-   "diff": "hard",
-   "wr": 0.75
-  },
-  {
-   "id": "B0893",
-   "name": "정령의 심장 생존전",
-   "type": "survival",
-   "level": 65,
-   "diff": "nightmare",
-   "wr": 0.833
-  },
-  {
-   "id": "B0893",
-   "name": "정령의 심장 생존전",
-   "type": "survival",
-   "level": 65,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0852",
-   "name": "암살: 가고일 지휘관",
-   "type": "assassination",
-   "level": 66,
-   "diff": "hard",
-   "wr": 0.667
-  },
-  {
-   "id": "B0852",
-   "name": "암살: 가고일 지휘관",
-   "type": "assassination",
-   "level": 66,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0852",
-   "name": "암살: 가고일 지휘관",
-   "type": "assassination",
-   "level": 66,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0950",
-   "name": "천공 도시 탈출",
-   "type": "escape",
-   "level": 66,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0950",
-   "name": "천공 도시 탈출",
-   "type": "escape",
-   "level": 66,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0950",
-   "name": "천공 도시 탈출",
-   "type": "escape",
-   "level": 66,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0955",
-   "name": "마법 학술원 호위 임무",
-   "type": "escort",
-   "level": 66,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0955",
-   "name": "마법 학술원 호위 임무",
-   "type": "escort",
-   "level": 66,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0955",
-   "name": "마법 학술원 호위 임무",
-   "type": "escort",
-   "level": 66,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0809",
-   "name": "금단의 서고 사냥: 흑마법 교단원",
-   "type": "monster_hunt",
-   "level": 67,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0809",
-   "name": "금단의 서고 사냥: 흑마법 교단원",
-   "type": "monster_hunt",
-   "level": 67,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0809",
-   "name": "금단의 서고 사냥: 흑마법 교단원",
-   "type": "monster_hunt",
-   "level": 67,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0906",
-   "name": "잿빛 황무지 사냥: 방어 자동인형",
-   "type": "monster_hunt",
-   "level": 67,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0906",
-   "name": "잿빛 황무지 사냥: 방어 자동인형",
-   "type": "monster_hunt",
-   "level": 67,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0906",
-   "name": "잿빛 황무지 사냥: 방어 자동인형",
-   "type": "monster_hunt",
-   "level": 67,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0912",
-   "name": "돔 외곽 방어선 방어전: 황무지 약탈자의 공세",
-   "type": "defense",
-   "level": 68,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0912",
-   "name": "돔 외곽 방어선 방어전: 황무지 약탈자의 공세",
-   "type": "defense",
-   "level": 68,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0912",
-   "name": "돔 외곽 방어선 방어전: 황무지 약탈자의 공세",
-   "type": "defense",
-   "level": 68,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0957",
-   "name": "마법 학술원 사냥: 쐐기 수호자",
-   "type": "monster_hunt",
-   "level": 68,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0957",
-   "name": "마법 학술원 사냥: 쐐기 수호자",
-   "type": "monster_hunt",
-   "level": 68,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0957",
-   "name": "마법 학술원 사냥: 쐐기 수호자",
-   "type": "monster_hunt",
-   "level": 68,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0960",
-   "name": "마법 학술원 방어전: 별의 수호 골렘의 공세",
-   "type": "defense",
-   "level": 68,
-   "diff": "hard",
-   "wr": 0.083
-  },
-  {
-   "id": "B0960",
-   "name": "마법 학술원 방어전: 별의 수호 골렘의 공세",
-   "type": "defense",
-   "level": 68,
-   "diff": "nightmare",
-   "wr": 0.167
-  },
-  {
-   "id": "B0960",
-   "name": "마법 학술원 방어전: 별의 수호 골렘의 공세",
-   "type": "defense",
-   "level": 68,
    "diff": "normal",
    "wr": 0.25
   },
   {
-   "id": "B0914",
-   "name": "돔 외곽 방어선 침공: 프로토타입 병기 대군",
-   "type": "invasion",
-   "level": 69,
+   "id": "B0642",
+   "name": "심해 해구 호위 임무",
+   "type": "escort",
+   "level": 51,
    "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0642",
+   "name": "심해 해구 호위 임무",
+   "type": "escort",
+   "level": 51,
+   "diff": "nightmare",
    "wr": 0.083
   },
   {
-   "id": "B0914",
-   "name": "돔 외곽 방어선 침공: 프로토타입 병기 대군",
-   "type": "invasion",
-   "level": 69,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0914",
-   "name": "돔 외곽 방어선 침공: 프로토타입 병기 대군",
-   "type": "invasion",
-   "level": 69,
-   "diff": "normal",
-   "wr": 0.667
-  },
-  {
-   "id": "B0919",
-   "name": "돔 도시 내부 진압: 폭주 전투 로봇",
-   "type": "suppression",
-   "level": 69,
-   "diff": "hard",
-   "wr": 0.0
-  },
-  {
-   "id": "B0919",
-   "name": "돔 도시 내부 진압: 폭주 전투 로봇",
-   "type": "suppression",
-   "level": 69,
-   "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0919",
-   "name": "돔 도시 내부 진압: 폭주 전투 로봇",
-   "type": "suppression",
-   "level": 69,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "S051",
-   "name": "돔의 문",
-   "type": "siege",
-   "level": 69,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "S051",
-   "name": "돔의 문",
-   "type": "siege",
-   "level": 69,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "S051",
-   "name": "돔의 문",
-   "type": "siege",
-   "level": 69,
+   "id": "B0642",
+   "name": "심해 해구 호위 임무",
+   "type": "escort",
+   "level": 51,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0920",
-   "name": "돔 도시 내부 매복: 방어 자동인형",
-   "type": "ambush",
-   "level": 70,
+   "id": "B0651",
+   "name": "침몰 도시 접전: 타락 해족",
+   "type": "skirmish",
+   "level": 51,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B0920",
-   "name": "돔 도시 내부 매복: 방어 자동인형",
-   "type": "ambush",
-   "level": 70,
+   "id": "B0651",
+   "name": "침몰 도시 접전: 타락 해족",
+   "type": "skirmish",
+   "level": 51,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B0920",
-   "name": "돔 도시 내부 매복: 방어 자동인형",
-   "type": "ambush",
-   "level": 70,
+   "id": "B0651",
+   "name": "침몰 도시 접전: 타락 해족",
+   "type": "skirmish",
+   "level": 51,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0962",
-   "name": "마법 학술원 매복: 쐐기 수호자",
-   "type": "ambush",
-   "level": 70,
+   "id": "B0693",
+   "name": "환상의 미로 탐험",
+   "type": "expedition",
+   "level": 51,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0693",
+   "name": "환상의 미로 탐험",
+   "type": "expedition",
+   "level": 51,
+   "diff": "nightmare",
+   "wr": 0.333
+  },
+  {
+   "id": "B0693",
+   "name": "환상의 미로 탐험",
+   "type": "expedition",
+   "level": 51,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0694",
+   "name": "꿈의 호수 생존전",
+   "type": "survival",
+   "level": 51,
    "diff": "hard",
    "wr": 0.0
   },
   {
-   "id": "B0962",
-   "name": "마법 학술원 매복: 쐐기 수호자",
-   "type": "ambush",
-   "level": 70,
+   "id": "B0694",
+   "name": "꿈의 호수 생존전",
+   "type": "survival",
+   "level": 51,
    "diff": "nightmare",
-   "wr": 0.0
-  },
-  {
-   "id": "B0962",
-   "name": "마법 학술원 매복: 쐐기 수호자",
-   "type": "ambush",
-   "level": 70,
-   "diff": "normal",
-   "wr": 0.0
-  },
-  {
-   "id": "B0966",
-   "name": "별의 관측소 구출 작전",
-   "type": "rescue",
-   "level": 70,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0966",
-   "name": "별의 관측소 구출 작전",
-   "type": "rescue",
-   "level": 70,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0966",
-   "name": "별의 관측소 구출 작전",
-   "type": "rescue",
-   "level": 70,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0971",
-   "name": "별의 관측소의 시련",
-   "type": "trial",
-   "level": 70,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0971",
-   "name": "별의 관측소의 시련",
-   "type": "trial",
-   "level": 70,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0971",
-   "name": "별의 관측소의 시련",
-   "type": "trial",
-   "level": 70,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0975",
-   "name": "암살: 별의 수호 골렘 지휘관",
-   "type": "assassination",
-   "level": 70,
-   "diff": "hard",
    "wr": 0.417
   },
   {
-   "id": "B0975",
-   "name": "암살: 별의 수호 골렘 지휘관",
-   "type": "assassination",
-   "level": 70,
+   "id": "B0694",
+   "name": "꿈의 호수 생존전",
+   "type": "survival",
+   "level": 51,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0696",
+   "name": "꿈의 호수 접전: 장난꾸러기 요정",
+   "type": "skirmish",
+   "level": 51,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0696",
+   "name": "꿈의 호수 접전: 장난꾸러기 요정",
+   "type": "skirmish",
+   "level": 51,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0696",
+   "name": "꿈의 호수 접전: 장난꾸러기 요정",
+   "type": "skirmish",
+   "level": 51,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0698",
+   "name": "꿈의 호수 공성: 안개 유령 요새",
+   "type": "siege",
+   "level": 51,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0698",
+   "name": "꿈의 호수 공성: 안개 유령 요새",
+   "type": "siege",
+   "level": 51,
+   "diff": "nightmare",
+   "wr": 0.083
+  },
+  {
+   "id": "B0698",
+   "name": "꿈의 호수 공성: 안개 유령 요새",
+   "type": "siege",
+   "level": 51,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0656",
+   "name": "침몰 도시 수호: 성문",
+   "type": "guard",
+   "level": 52,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0656",
+   "name": "침몰 도시 수호: 성문",
+   "type": "guard",
+   "level": 52,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0975",
-   "name": "암살: 별의 수호 골렘 지휘관",
-   "type": "assassination",
-   "level": 70,
+   "id": "B0656",
+   "name": "침몰 도시 수호: 성문",
+   "type": "guard",
+   "level": 52,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0928",
-   "name": "지하 연구소 정찰",
-   "type": "recon",
-   "level": 71,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0928",
-   "name": "지하 연구소 정찰",
-   "type": "recon",
-   "level": 71,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0928",
-   "name": "지하 연구소 정찰",
-   "type": "recon",
-   "level": 71,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0927",
-   "name": "돔 도시 내부 접전: 황무지 약탈자",
+   "id": "B0662",
+   "name": "조류 터널 접전: 심해 괴수",
    "type": "skirmish",
-   "level": 72,
-   "diff": "hard",
-   "wr": 0.167
-  },
-  {
-   "id": "B0927",
-   "name": "돔 도시 내부 접전: 황무지 약탈자",
-   "type": "skirmish",
-   "level": 72,
-   "diff": "nightmare",
-   "wr": 0.5
-  },
-  {
-   "id": "B0927",
-   "name": "돔 도시 내부 접전: 황무지 약탈자",
-   "type": "skirmish",
-   "level": 72,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0931",
-   "name": "지하 연구소 접전: 폭주 전투 로봇",
-   "type": "skirmish",
-   "level": 72,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0931",
-   "name": "지하 연구소 접전: 폭주 전투 로봇",
-   "type": "skirmish",
-   "level": 72,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0931",
-   "name": "지하 연구소 접전: 폭주 전투 로봇",
-   "type": "skirmish",
-   "level": 72,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0937",
-   "name": "폐기된 병기창 접전: 황무지 약탈자",
-   "type": "skirmish",
-   "level": 73,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0937",
-   "name": "폐기된 병기창 접전: 황무지 약탈자",
-   "type": "skirmish",
-   "level": 73,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0937",
-   "name": "폐기된 병기창 접전: 황무지 약탈자",
-   "type": "skirmish",
-   "level": 73,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0982",
-   "name": "쐐기의 성소의 시련",
-   "type": "trial",
-   "level": 73,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0982",
-   "name": "쐐기의 성소의 시련",
-   "type": "trial",
-   "level": 73,
-   "diff": "nightmare",
-   "wr": 0.917
-  },
-  {
-   "id": "B0982",
-   "name": "쐐기의 성소의 시련",
-   "type": "trial",
-   "level": 73,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0936",
-   "name": "지하 연구소 탈출",
-   "type": "escape",
-   "level": 74,
-   "diff": "hard",
-   "wr": 0.917
-  },
-  {
-   "id": "B0936",
-   "name": "지하 연구소 탈출",
-   "type": "escape",
-   "level": 74,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B0936",
-   "name": "지하 연구소 탈출",
-   "type": "escape",
-   "level": 74,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B0944",
-   "name": "폐기된 병기창 사냥: 방어 자동인형",
-   "type": "monster_hunt",
-   "level": 74,
+   "level": 53,
    "diff": "hard",
    "wr": 0.333
   },
   {
-   "id": "B0944",
-   "name": "폐기된 병기창 사냥: 방어 자동인형",
-   "type": "monster_hunt",
-   "level": 74,
+   "id": "B0662",
+   "name": "조류 터널 접전: 심해 괴수",
+   "type": "skirmish",
+   "level": 53,
    "diff": "nightmare",
-   "wr": 0.75
+   "wr": 0.0
   },
   {
-   "id": "B0944",
-   "name": "폐기된 병기창 사냥: 방어 자동인형",
-   "type": "monster_hunt",
-   "level": 74,
+   "id": "B0662",
+   "name": "조류 터널 접전: 심해 괴수",
+   "type": "skirmish",
+   "level": 53,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0994",
-   "name": "둥지 입구 방어전: 둥지 수호 용족(시험)의 공세",
-   "type": "defense",
-   "level": 74,
+   "id": "B0748",
+   "name": "암살: 공룡 지휘관",
+   "type": "assassination",
+   "level": 53,
    "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0748",
+   "name": "암살: 공룡 지휘관",
+   "type": "assassination",
+   "level": 53,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0748",
+   "name": "암살: 공룡 지휘관",
+   "type": "assassination",
+   "level": 53,
+   "diff": "normal",
+   "wr": 0.583
+  },
+  {
+   "id": "B0751",
+   "name": "거대 수목 지대 사냥: 식인 식물",
+   "type": "monster_hunt",
+   "level": 53,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0751",
+   "name": "거대 수목 지대 사냥: 식인 식물",
+   "type": "monster_hunt",
+   "level": 53,
+   "diff": "nightmare",
+   "wr": 0.833
+  },
+  {
+   "id": "B0751",
+   "name": "거대 수목 지대 사냥: 식인 식물",
+   "type": "monster_hunt",
+   "level": 53,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0661",
+   "name": "현상금: 크라켄 새끼",
+   "type": "bounty",
+   "level": 54,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0661",
+   "name": "현상금: 크라켄 새끼",
+   "type": "bounty",
+   "level": 54,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0661",
+   "name": "현상금: 크라켄 새끼",
+   "type": "bounty",
+   "level": 54,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0669",
+   "name": "암살: 심해 괴수 지휘관",
+   "type": "assassination",
+   "level": 54,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0669",
+   "name": "암살: 심해 괴수 지휘관",
+   "type": "assassination",
+   "level": 54,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0669",
+   "name": "암살: 심해 괴수 지휘관",
+   "type": "assassination",
+   "level": 54,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0702",
+   "name": "꿈의 호수 방어전: 안개 유령의 공세",
+   "type": "defense",
+   "level": 55,
+   "diff": "hard",
+   "wr": 0.917
+  },
+  {
+   "id": "B0702",
+   "name": "꿈의 호수 방어전: 안개 유령의 공세",
+   "type": "defense",
+   "level": 55,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0702",
+   "name": "꿈의 호수 방어전: 안개 유령의 공세",
+   "type": "defense",
+   "level": 55,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S043",
+   "name": "정글의 신왕",
+   "type": "siege",
+   "level": 55,
+   "diff": "hard",
+   "wr": 0.833
+  },
+  {
+   "id": "S043",
+   "name": "정글의 신왕",
+   "type": "siege",
+   "level": 55,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S043",
+   "name": "정글의 신왕",
+   "type": "siege",
+   "level": 55,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0670",
+   "name": "크라켄의 둥지 정찰",
+   "type": "recon",
+   "level": 56,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0670",
+   "name": "크라켄의 둥지 정찰",
+   "type": "recon",
+   "level": 56,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0670",
+   "name": "크라켄의 둥지 정찰",
+   "type": "recon",
+   "level": 56,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0711",
+   "name": "버섯 숲 공성: 환영 괴물 요새",
+   "type": "siege",
+   "level": 56,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0711",
+   "name": "버섯 숲 공성: 환영 괴물 요새",
+   "type": "siege",
+   "level": 56,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0711",
+   "name": "버섯 숲 공성: 환영 괴물 요새",
+   "type": "siege",
+   "level": 56,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0756",
+   "name": "거대 수목 지대 진압: 공룡",
+   "type": "suppression",
+   "level": 56,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "B0756",
+   "name": "거대 수목 지대 진압: 공룡",
+   "type": "suppression",
+   "level": 56,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0756",
+   "name": "거대 수목 지대 진압: 공룡",
+   "type": "suppression",
+   "level": 56,
+   "diff": "normal",
+   "wr": 0.833
+  },
+  {
+   "id": "B0675",
+   "name": "크라켄의 둥지 구출 작전",
+   "type": "rescue",
+   "level": 57,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0675",
+   "name": "크라켄의 둥지 구출 작전",
+   "type": "rescue",
+   "level": 57,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0675",
+   "name": "크라켄의 둥지 구출 작전",
+   "type": "rescue",
+   "level": 57,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0770",
+   "name": "검은 성 진압: 안개 괴물",
+   "type": "suppression",
+   "level": 57,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0770",
+   "name": "검은 성 진압: 안개 괴물",
+   "type": "suppression",
+   "level": 57,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0770",
+   "name": "검은 성 진압: 안개 괴물",
+   "type": "suppression",
+   "level": 57,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0771",
+   "name": "검은 성 기습: 안개 괴물 후방",
+   "type": "strike",
+   "level": 58,
+   "diff": "hard",
+   "wr": 0.333
+  },
+  {
+   "id": "B0771",
+   "name": "검은 성 기습: 안개 괴물 후방",
+   "type": "strike",
+   "level": 58,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0771",
+   "name": "검은 성 기습: 안개 괴물 후방",
+   "type": "strike",
+   "level": 58,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0775",
+   "name": "망자의 들판 탈출",
+   "type": "escape",
+   "level": 58,
+   "diff": "hard",
+   "wr": 0.417
+  },
+  {
+   "id": "B0775",
+   "name": "망자의 들판 탈출",
+   "type": "escape",
+   "level": 58,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0775",
+   "name": "망자의 들판 탈출",
+   "type": "escape",
+   "level": 58,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0818",
+   "name": "현상금: 뱀파이어 기사",
+   "type": "bounty",
+   "level": 58,
+   "diff": "hard",
+   "wr": 0.333
+  },
+  {
+   "id": "B0818",
+   "name": "현상금: 뱀파이어 기사",
+   "type": "bounty",
+   "level": 58,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0818",
+   "name": "현상금: 뱀파이어 기사",
+   "type": "bounty",
+   "level": 58,
+   "diff": "normal",
+   "wr": 0.667
+  },
+  {
+   "id": "B0819",
+   "name": "요새 성벽 사냥: 박쥐 떼",
+   "type": "monster_hunt",
+   "level": 58,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0819",
+   "name": "요새 성벽 사냥: 박쥐 떼",
+   "type": "monster_hunt",
+   "level": 58,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0819",
+   "name": "요새 성벽 사냥: 박쥐 떼",
+   "type": "monster_hunt",
+   "level": 58,
+   "diff": "normal",
+   "wr": 0.5
+  },
+  {
+   "id": "B0820",
+   "name": "핏빛 포도밭 매복: 피에 굶주린 구울",
+   "type": "ambush",
+   "level": 58,
+   "diff": "hard",
+   "wr": 0.75
+  },
+  {
+   "id": "B0820",
+   "name": "핏빛 포도밭 매복: 피에 굶주린 구울",
+   "type": "ambush",
+   "level": 58,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0820",
+   "name": "핏빛 포도밭 매복: 피에 굶주린 구울",
+   "type": "ambush",
+   "level": 58,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0859",
+   "name": "흑요석 도시 탐험",
+   "type": "expedition",
+   "level": 58,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0859",
+   "name": "흑요석 도시 탐험",
+   "type": "expedition",
+   "level": 58,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0859",
+   "name": "흑요석 도시 탐험",
+   "type": "expedition",
+   "level": 58,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0780",
+   "name": "망자의 들판 사냥: 망령",
+   "type": "monster_hunt",
+   "level": 59,
+   "diff": "hard",
+   "wr": 0.833
+  },
+  {
+   "id": "B0780",
+   "name": "망자의 들판 사냥: 망령",
+   "type": "monster_hunt",
+   "level": 59,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0780",
+   "name": "망자의 들판 사냥: 망령",
+   "type": "monster_hunt",
+   "level": 59,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0877",
+   "name": "유황 들판 생존전",
+   "type": "survival",
+   "level": 60,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0877",
+   "name": "유황 들판 생존전",
+   "type": "survival",
+   "level": 60,
+   "diff": "nightmare",
+   "wr": 0.083
+  },
+  {
+   "id": "B0877",
+   "name": "유황 들판 생존전",
+   "type": "survival",
+   "level": 60,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S046",
+   "name": "망자의 들판",
+   "type": "survival",
+   "level": 60,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S046",
+   "name": "망자의 들판",
+   "type": "survival",
+   "level": 60,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S046",
+   "name": "망자의 들판",
+   "type": "survival",
+   "level": 60,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0830",
+   "name": "레이드: 가고일",
+   "type": "raid",
+   "level": 61,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0830",
+   "name": "레이드: 가고일",
+   "type": "raid",
+   "level": 61,
+   "diff": "nightmare",
+   "wr": 0.833
+  },
+  {
+   "id": "B0830",
+   "name": "레이드: 가고일",
+   "type": "raid",
+   "level": 61,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0833",
+   "name": "지하 납골당 방어전: 박쥐 떼의 공세",
+   "type": "defense",
+   "level": 61,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0833",
+   "name": "지하 납골당 방어전: 박쥐 떼의 공세",
+   "type": "defense",
+   "level": 61,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0833",
+   "name": "지하 납골당 방어전: 박쥐 떼의 공세",
+   "type": "defense",
+   "level": 61,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0792",
+   "name": "안개 늪 구출 작전",
+   "type": "rescue",
+   "level": 62,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0792",
+   "name": "안개 늪 구출 작전",
+   "type": "rescue",
+   "level": 62,
+   "diff": "nightmare",
+   "wr": 0.75
+  },
+  {
+   "id": "B0792",
+   "name": "안개 늪 구출 작전",
+   "type": "rescue",
+   "level": 62,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0886",
+   "name": "골렘 작업장의 결투: 흑요석 골렘",
+   "type": "duel",
+   "level": 62,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "B0886",
+   "name": "골렘 작업장의 결투: 흑요석 골렘",
+   "type": "duel",
+   "level": 62,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0886",
+   "name": "골렘 작업장의 결투: 흑요석 골렘",
+   "type": "duel",
+   "level": 62,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0885",
+   "name": "골렘 작업장 기습: 용암 정령 후방",
+   "type": "strike",
+   "level": 63,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0885",
+   "name": "골렘 작업장 기습: 용암 정령 후방",
+   "type": "strike",
+   "level": 63,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0885",
+   "name": "골렘 작업장 기습: 용암 정령 후방",
+   "type": "strike",
+   "level": 63,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0848",
+   "name": "황혼 마을 접전: 박쥐 떼",
+   "type": "skirmish",
+   "level": 64,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0848",
+   "name": "황혼 마을 접전: 박쥐 떼",
+   "type": "skirmish",
+   "level": 64,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0848",
+   "name": "황혼 마을 접전: 박쥐 떼",
+   "type": "skirmish",
+   "level": 64,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0851",
+   "name": "황혼 마을 사냥: 가고일",
+   "type": "monster_hunt",
+   "level": 65,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0851",
+   "name": "황혼 마을 사냥: 가고일",
+   "type": "monster_hunt",
+   "level": 65,
+   "diff": "nightmare",
+   "wr": 0.833
+  },
+  {
+   "id": "B0851",
+   "name": "황혼 마을 사냥: 가고일",
+   "type": "monster_hunt",
+   "level": 65,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0891",
+   "name": "골렘 작업장 생존전",
+   "type": "survival",
+   "level": 65,
+   "diff": "hard",
+   "wr": 0.5
+  },
+  {
+   "id": "B0891",
+   "name": "골렘 작업장 생존전",
+   "type": "survival",
+   "level": 65,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0891",
+   "name": "골렘 작업장 생존전",
+   "type": "survival",
+   "level": 65,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0897",
+   "name": "레이드: 흑요석 골렘",
+   "type": "raid",
+   "level": 65,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0897",
+   "name": "레이드: 흑요석 골렘",
+   "type": "raid",
+   "level": 65,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0897",
+   "name": "레이드: 흑요석 골렘",
+   "type": "raid",
+   "level": 65,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0810",
+   "name": "현상금: 리치의 하수인",
+   "type": "bounty",
+   "level": 66,
+   "diff": "hard",
+   "wr": 0.917
+  },
+  {
+   "id": "B0810",
+   "name": "현상금: 리치의 하수인",
+   "type": "bounty",
+   "level": 66,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0810",
+   "name": "현상금: 리치의 하수인",
+   "type": "bounty",
+   "level": 66,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0852",
+   "name": "암살: 가고일 지휘관",
+   "type": "assassination",
+   "level": 66,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0852",
+   "name": "암살: 가고일 지휘관",
+   "type": "assassination",
+   "level": 66,
+   "diff": "nightmare",
+   "wr": 0.917
+  },
+  {
+   "id": "B0852",
+   "name": "암살: 가고일 지휘관",
+   "type": "assassination",
+   "level": 66,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0900",
+   "name": "정령의 심장 탐험",
+   "type": "expedition",
+   "level": 66,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0900",
+   "name": "정령의 심장 탐험",
+   "type": "expedition",
+   "level": 66,
+   "diff": "nightmare",
+   "wr": 0.667
+  },
+  {
+   "id": "B0900",
+   "name": "정령의 심장 탐험",
+   "type": "expedition",
+   "level": 66,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0902",
+   "name": "잿빛 황무지 공성: 황무지 약탈자 요새",
+   "type": "siege",
+   "level": 66,
+   "diff": "hard",
+   "wr": 0.583
+  },
+  {
+   "id": "B0902",
+   "name": "잿빛 황무지 공성: 황무지 약탈자 요새",
+   "type": "siege",
+   "level": 66,
+   "diff": "nightmare",
+   "wr": 0.25
+  },
+  {
+   "id": "B0902",
+   "name": "잿빛 황무지 공성: 황무지 약탈자 요새",
+   "type": "siege",
+   "level": 66,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0903",
+   "name": "프로토타입 병기 토벌",
+   "type": "hunt",
+   "level": 66,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0903",
+   "name": "프로토타입 병기 토벌",
+   "type": "hunt",
+   "level": 66,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0903",
+   "name": "프로토타입 병기 토벌",
+   "type": "hunt",
+   "level": 66,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0908",
+   "name": "잿빛 황무지 생존전",
+   "type": "survival",
+   "level": 67,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0908",
+   "name": "잿빛 황무지 생존전",
+   "type": "survival",
+   "level": 67,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0908",
+   "name": "잿빛 황무지 생존전",
+   "type": "survival",
+   "level": 67,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0953",
+   "name": "천공 도시 사냥: 공허 생물",
+   "type": "monster_hunt",
+   "level": 67,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0953",
+   "name": "천공 도시 사냥: 공허 생물",
+   "type": "monster_hunt",
+   "level": 67,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0953",
+   "name": "천공 도시 사냥: 공허 생물",
+   "type": "monster_hunt",
+   "level": 67,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0956",
+   "name": "마법 학술원 진압: 공허 생물",
+   "type": "suppression",
+   "level": 68,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0956",
+   "name": "마법 학술원 진압: 공허 생물",
+   "type": "suppression",
+   "level": 68,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0956",
+   "name": "마법 학술원 진압: 공허 생물",
+   "type": "suppression",
+   "level": 68,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0957",
+   "name": "마법 학술원 사냥: 쐐기 수호자",
+   "type": "monster_hunt",
+   "level": 68,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0957",
+   "name": "마법 학술원 사냥: 쐐기 수호자",
+   "type": "monster_hunt",
+   "level": 68,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0957",
+   "name": "마법 학술원 사냥: 쐐기 수호자",
+   "type": "monster_hunt",
+   "level": 68,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0961",
+   "name": "마법 학술원의 결투: 쐐기 수호자",
+   "type": "duel",
+   "level": 69,
+   "diff": "hard",
+   "wr": 0.5
+  },
+  {
+   "id": "B0961",
+   "name": "마법 학술원의 결투: 쐐기 수호자",
+   "type": "duel",
+   "level": 69,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0961",
+   "name": "마법 학술원의 결투: 쐐기 수호자",
+   "type": "duel",
+   "level": 69,
+   "diff": "normal",
+   "wr": 0.583
+  },
+  {
+   "id": "B0964",
+   "name": "별의 관측소 탈출",
+   "type": "escape",
+   "level": 69,
+   "diff": "hard",
+   "wr": 0.583
+  },
+  {
+   "id": "B0964",
+   "name": "별의 관측소 탈출",
+   "type": "escape",
+   "level": 69,
+   "diff": "nightmare",
    "wr": 0.167
   },
   {
-   "id": "B0994",
-   "name": "둥지 입구 방어전: 둥지 수호 용족(시험)의 공세",
+   "id": "B0964",
+   "name": "별의 관측소 탈출",
+   "type": "escape",
+   "level": 69,
+   "diff": "normal",
+   "wr": 0.917
+  },
+  {
+   "id": "B0963",
+   "name": "마법 학술원 접전: 폭주 마법 구조물",
+   "type": "skirmish",
+   "level": 70,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0963",
+   "name": "마법 학술원 접전: 폭주 마법 구조물",
+   "type": "skirmish",
+   "level": 70,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0963",
+   "name": "마법 학술원 접전: 폭주 마법 구조물",
+   "type": "skirmish",
+   "level": 70,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0966",
+   "name": "별의 관측소 구출 작전",
+   "type": "rescue",
+   "level": 70,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0966",
+   "name": "별의 관측소 구출 작전",
+   "type": "rescue",
+   "level": 70,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0966",
+   "name": "별의 관측소 구출 작전",
+   "type": "rescue",
+   "level": 70,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0969",
+   "name": "별의 관측소 수호: 세계수 뿌리",
+   "type": "guard",
+   "level": 70,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0969",
+   "name": "별의 관측소 수호: 세계수 뿌리",
+   "type": "guard",
+   "level": 70,
+   "diff": "nightmare",
+   "wr": 0.583
+  },
+  {
+   "id": "B0969",
+   "name": "별의 관측소 수호: 세계수 뿌리",
+   "type": "guard",
+   "level": 70,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0925",
+   "name": "돔 도시 내부 사냥: 프로토타입 병기",
+   "type": "monster_hunt",
+   "level": 71,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0925",
+   "name": "돔 도시 내부 사냥: 프로토타입 병기",
+   "type": "monster_hunt",
+   "level": 71,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0925",
+   "name": "돔 도시 내부 사냥: 프로토타입 병기",
+   "type": "monster_hunt",
+   "level": 71,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0932",
+   "name": "지하 연구소 방어전: 황무지 약탈자의 공세",
    "type": "defense",
+   "level": 71,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B0932",
+   "name": "지하 연구소 방어전: 황무지 약탈자의 공세",
+   "type": "defense",
+   "level": 71,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B0932",
+   "name": "지하 연구소 방어전: 황무지 약탈자의 공세",
+   "type": "defense",
+   "level": 71,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S052",
+   "name": "평의회의 시험",
+   "type": "trial",
+   "level": 71,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S052",
+   "name": "평의회의 시험",
+   "type": "trial",
+   "level": 71,
+   "diff": "nightmare",
+   "wr": 0.25
+  },
+  {
+   "id": "S052",
+   "name": "평의회의 시험",
+   "type": "trial",
+   "level": 71,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0934",
+   "name": "지하 연구소 기습: 폭주 전투 로봇 후방",
+   "type": "strike",
+   "level": 72,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0934",
+   "name": "지하 연구소 기습: 폭주 전투 로봇 후방",
+   "type": "strike",
+   "level": 72,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0934",
+   "name": "지하 연구소 기습: 폭주 전투 로봇 후방",
+   "type": "strike",
+   "level": 72,
+   "diff": "normal",
+   "wr": 0.75
+  },
+  {
+   "id": "B0972",
+   "name": "현상금: 쐐기 수호자",
+   "type": "bounty",
+   "level": 72,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0972",
+   "name": "현상금: 쐐기 수호자",
+   "type": "bounty",
+   "level": 72,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0972",
+   "name": "현상금: 쐐기 수호자",
+   "type": "bounty",
+   "level": 72,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0974",
+   "name": "공허의 가장자리 사냥: 쐐기 수호자",
+   "type": "monster_hunt",
+   "level": 72,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0974",
+   "name": "공허의 가장자리 사냥: 쐐기 수호자",
+   "type": "monster_hunt",
+   "level": 72,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0974",
+   "name": "공허의 가장자리 사냥: 쐐기 수호자",
+   "type": "monster_hunt",
+   "level": 72,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "B0981",
+   "name": "공허의 가장자리 공성: 쐐기 수호자 요새",
+   "type": "siege",
+   "level": 73,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0981",
+   "name": "공허의 가장자리 공성: 쐐기 수호자 요새",
+   "type": "siege",
+   "level": 73,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0981",
+   "name": "공허의 가장자리 공성: 쐐기 수호자 요새",
+   "type": "siege",
+   "level": 73,
+   "diff": "normal",
+   "wr": 0.0
+  },
+  {
+   "id": "S053",
+   "name": "폐기된 병기",
+   "type": "raid",
+   "level": 73,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "S053",
+   "name": "폐기된 병기",
+   "type": "raid",
+   "level": 73,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S053",
+   "name": "폐기된 병기",
+   "type": "raid",
+   "level": 73,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0985",
+   "name": "쐐기의 성소 침공: 쐐기 수호자 대군",
+   "type": "invasion",
+   "level": 74,
+   "diff": "hard",
+   "wr": 0.0
+  },
+  {
+   "id": "B0985",
+   "name": "쐐기의 성소 침공: 쐐기 수호자 대군",
+   "type": "invasion",
    "level": 74,
    "diff": "nightmare",
    "wr": 0.0
   },
   {
-   "id": "B0994",
-   "name": "둥지 입구 방어전: 둥지 수호 용족(시험)의 공세",
-   "type": "defense",
+   "id": "B0985",
+   "name": "쐐기의 성소 침공: 쐐기 수호자 대군",
+   "type": "invasion",
    "level": 74,
    "diff": "normal",
-   "wr": 0.917
+   "wr": 0.0
   },
   {
-   "id": "B0943",
-   "name": "폐기된 병기창 기습: 방어 자동인형 후방",
-   "type": "strike",
-   "level": 75,
+   "id": "B0986",
+   "name": "쐐기의 성소 접전: 쐐기 수호자",
+   "type": "skirmish",
+   "level": 74,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0943",
-   "name": "폐기된 병기창 기습: 방어 자동인형 후방",
-   "type": "strike",
-   "level": 75,
+   "id": "B0986",
+   "name": "쐐기의 성소 접전: 쐐기 수호자",
+   "type": "skirmish",
+   "level": 74,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B0943",
-   "name": "폐기된 병기창 기습: 방어 자동인형 후방",
-   "type": "strike",
-   "level": 75,
+   "id": "B0986",
+   "name": "쐐기의 성소 접전: 쐐기 수호자",
+   "type": "skirmish",
+   "level": 74,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B0945",
-   "name": "폐기된 병기창 공성: 변이 생물 요새",
-   "type": "siege",
+   "id": "B0987",
+   "name": "쐐기의 성소 생존전",
+   "type": "survival",
+   "level": 74,
+   "diff": "hard",
+   "wr": 0.167
+  },
+  {
+   "id": "B0987",
+   "name": "쐐기의 성소 생존전",
+   "type": "survival",
+   "level": 74,
+   "diff": "nightmare",
+   "wr": 0.5
+  },
+  {
+   "id": "B0987",
+   "name": "쐐기의 성소 생존전",
+   "type": "survival",
+   "level": 74,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0992",
+   "name": "둥지 입구의 시련",
+   "type": "trial",
+   "level": 74,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "B0992",
+   "name": "둥지 입구의 시련",
+   "type": "trial",
+   "level": 74,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "B0992",
+   "name": "둥지 입구의 시련",
+   "type": "trial",
+   "level": 74,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B0996",
+   "name": "현상금: 둥지 수호 용족",
+   "type": "bounty",
    "level": 76,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.583
   },
   {
-   "id": "B0945",
-   "name": "폐기된 병기창 공성: 변이 생물 요새",
-   "type": "siege",
+   "id": "B0996",
+   "name": "현상금: 둥지 수호 용족",
+   "type": "bounty",
    "level": 76,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.25
   },
   {
-   "id": "B0945",
-   "name": "폐기된 병기창 공성: 변이 생물 요새",
-   "type": "siege",
+   "id": "B0996",
+   "name": "현상금: 둥지 수호 용족",
+   "type": "bounty",
    "level": 76,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B1002",
-   "name": "현상금: 재의 날개 용족",
-   "type": "bounty",
+   "id": "S055",
+   "name": "대마법사의 시험",
+   "type": "trial",
    "level": 76,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "B1002",
-   "name": "현상금: 재의 날개 용족",
-   "type": "bounty",
+   "id": "S055",
+   "name": "대마법사의 시험",
+   "type": "trial",
    "level": 76,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.417
   },
   {
-   "id": "B1002",
-   "name": "현상금: 재의 날개 용족",
-   "type": "bounty",
+   "id": "S055",
+   "name": "대마법사의 시험",
+   "type": "trial",
    "level": 76,
    "diff": "normal",
    "wr": 1.0
@@ -5399,72 +5392,72 @@
    "wr": 1.0
   },
   {
-   "id": "B0998",
-   "name": "둥지 입구 수호: 제단",
-   "type": "guard",
-   "level": 77,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B0998",
-   "name": "둥지 입구 수호: 제단",
-   "type": "guard",
-   "level": 77,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B0998",
-   "name": "둥지 입구 수호: 제단",
-   "type": "guard",
-   "level": 77,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B1006",
-   "name": "타락 와이번 토벌",
-   "type": "hunt",
+   "id": "B1011",
+   "name": "용의 묘지 정찰",
+   "type": "recon",
    "level": 78,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B1006",
-   "name": "타락 와이번 토벌",
-   "type": "hunt",
+   "id": "B1011",
+   "name": "용의 묘지 정찰",
+   "type": "recon",
    "level": 78,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B1006",
-   "name": "타락 와이번 토벌",
-   "type": "hunt",
+   "id": "B1011",
+   "name": "용의 묘지 정찰",
+   "type": "recon",
    "level": 78,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B1008",
-   "name": "알의 동굴 사냥: 재의 날개 용족",
+   "id": "S056",
+   "name": "결전: 쐐기의 성소",
+   "type": "decisive",
+   "level": 78,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "S056",
+   "name": "결전: 쐐기의 성소",
+   "type": "decisive",
+   "level": 78,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S056",
+   "name": "결전: 쐐기의 성소",
+   "type": "decisive",
+   "level": 78,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B1018",
+   "name": "하늘 봉우리 사냥: 타락 와이번",
    "type": "monster_hunt",
    "level": 79,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B1008",
-   "name": "알의 동굴 사냥: 재의 날개 용족",
+   "id": "B1018",
+   "name": "하늘 봉우리 사냥: 타락 와이번",
    "type": "monster_hunt",
    "level": 79,
    "diff": "nightmare",
    "wr": 1.0
   },
   {
-   "id": "B1008",
-   "name": "알의 동굴 사냥: 재의 날개 용족",
+   "id": "B1018",
+   "name": "하늘 봉우리 사냥: 타락 와이번",
    "type": "monster_hunt",
    "level": 79,
    "diff": "normal",
@@ -5495,194 +5488,170 @@
    "wr": 1.0
   },
   {
-   "id": "B1021",
-   "name": "암살: 재의 날개 침입자 지휘관",
-   "type": "assassination",
+   "id": "S059",
+   "name": "하늘 봉우리",
+   "type": "survival",
+   "level": 81,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "S059",
+   "name": "하늘 봉우리",
+   "type": "survival",
+   "level": 81,
+   "diff": "nightmare",
+   "wr": 0.833
+  },
+  {
+   "id": "S059",
+   "name": "하늘 봉우리",
+   "type": "survival",
+   "level": 81,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B1022",
+   "name": "하늘 봉우리 수호: 성문",
+   "type": "guard",
    "level": 82,
    "diff": "hard",
-   "wr": 0.75
+   "wr": 1.0
   },
   {
-   "id": "B1021",
-   "name": "암살: 재의 날개 침입자 지휘관",
-   "type": "assassination",
+   "id": "B1022",
+   "name": "하늘 봉우리 수호: 성문",
+   "type": "guard",
    "level": 82,
    "diff": "nightmare",
-   "wr": 0.917
+   "wr": 1.0
   },
   {
-   "id": "B1021",
-   "name": "암살: 재의 날개 침입자 지휘관",
-   "type": "assassination",
+   "id": "B1022",
+   "name": "하늘 봉우리 수호: 성문",
+   "type": "guard",
    "level": 82,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "S060",
-   "name": "백룡의 시험",
-   "type": "duel",
+   "id": "B1023",
+   "name": "하늘 봉우리 진압: 재의 날개 침입자",
+   "type": "suppression",
    "level": 82,
    "diff": "hard",
-   "wr": 0.417
+   "wr": 1.0
   },
   {
-   "id": "S060",
-   "name": "백룡의 시험",
-   "type": "duel",
+   "id": "B1023",
+   "name": "하늘 봉우리 진압: 재의 날개 침입자",
+   "type": "suppression",
    "level": 82,
    "diff": "nightmare",
-   "wr": 0.583
+   "wr": 0.0
   },
   {
-   "id": "S060",
-   "name": "백룡의 시험",
-   "type": "duel",
+   "id": "B1023",
+   "name": "하늘 봉우리 진압: 재의 날개 침입자",
+   "type": "suppression",
    "level": 82,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B1046",
-   "name": "불타는 요새 진압: 재의 날개 용족",
-   "type": "suppression",
-   "level": 86,
+   "id": "B1027",
+   "name": "고대 용의 신전 접전: 둥지 수호 용족(시험)",
+   "type": "skirmish",
+   "level": 82,
    "diff": "hard",
-   "wr": 0.0
+   "wr": 1.0
   },
   {
-   "id": "B1046",
-   "name": "불타는 요새 진압: 재의 날개 용족",
-   "type": "suppression",
-   "level": 86,
+   "id": "B1027",
+   "name": "고대 용의 신전 접전: 둥지 수호 용족(시험)",
+   "type": "skirmish",
+   "level": 82,
    "diff": "nightmare",
-   "wr": 0.75
+   "wr": 0.167
   },
   {
-   "id": "B1046",
-   "name": "불타는 요새 진압: 재의 날개 용족",
-   "type": "suppression",
-   "level": 86,
+   "id": "B1027",
+   "name": "고대 용의 신전 접전: 둥지 수호 용족(시험)",
+   "type": "skirmish",
+   "level": 82,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B1049",
-   "name": "불타는 요새 공성: 화염 와이번 요새",
-   "type": "siege",
-   "level": 87,
+   "id": "B1026",
+   "name": "하늘 봉우리 정찰",
+   "type": "recon",
+   "level": 83,
    "diff": "hard",
-   "wr": 0.0
+   "wr": 1.0
   },
   {
-   "id": "B1049",
-   "name": "불타는 요새 공성: 화염 와이번 요새",
-   "type": "siege",
+   "id": "B1026",
+   "name": "하늘 봉우리 정찰",
+   "type": "recon",
+   "level": 83,
+   "diff": "nightmare",
+   "wr": 1.0
+  },
+  {
+   "id": "B1026",
+   "name": "하늘 봉우리 정찰",
+   "type": "recon",
+   "level": 83,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "B1053",
+   "name": "불타는 요새 접전: 재의 병사",
+   "type": "skirmish",
+   "level": 87,
+   "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "B1053",
+   "name": "불타는 요새 접전: 재의 병사",
+   "type": "skirmish",
    "level": 87,
    "diff": "nightmare",
-   "wr": 0.0
+   "wr": 1.0
   },
   {
-   "id": "B1049",
-   "name": "불타는 요새 공성: 화염 와이번 요새",
-   "type": "siege",
+   "id": "B1053",
+   "name": "불타는 요새 접전: 재의 병사",
+   "type": "skirmish",
    "level": 87,
    "diff": "normal",
-   "wr": 0.0
+   "wr": 1.0
   },
   {
-   "id": "B1051",
-   "name": "레이드: 재의 병사",
-   "type": "raid",
+   "id": "S064",
+   "name": "아젤리아의 결단",
+   "type": "guard",
    "level": 87,
    "diff": "hard",
+   "wr": 1.0
+  },
+  {
+   "id": "S064",
+   "name": "아젤리아의 결단",
+   "type": "guard",
+   "level": 87,
+   "diff": "nightmare",
    "wr": 0.5
   },
   {
-   "id": "B1051",
-   "name": "레이드: 재의 병사",
-   "type": "raid",
-   "level": 87,
-   "diff": "nightmare",
-   "wr": 0.75
-  },
-  {
-   "id": "B1051",
-   "name": "레이드: 재의 병사",
-   "type": "raid",
-   "level": 87,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B1054",
-   "name": "용의 발톱 협곡 구출 작전",
-   "type": "rescue",
-   "level": 87,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B1054",
-   "name": "용의 발톱 협곡 구출 작전",
-   "type": "rescue",
-   "level": 87,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B1054",
-   "name": "용의 발톱 협곡 구출 작전",
-   "type": "rescue",
-   "level": 87,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
    "id": "S064",
    "name": "아젤리아의 결단",
    "type": "guard",
    "level": 87,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "S064",
-   "name": "아젤리아의 결단",
-   "type": "guard",
-   "level": 87,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "S064",
-   "name": "아젤리아의 결단",
-   "type": "guard",
-   "level": 87,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B1052",
-   "name": "불타는 요새 방어전: 재의 장군의 공세",
-   "type": "defense",
-   "level": 88,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B1052",
-   "name": "불타는 요새 방어전: 재의 장군의 공세",
-   "type": "defense",
-   "level": 88,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B1052",
-   "name": "불타는 요새 방어전: 재의 장군의 공세",
-   "type": "defense",
-   "level": 88,
    "diff": "normal",
    "wr": 1.0
   },
@@ -5711,100 +5680,148 @@
    "wr": 1.0
   },
   {
-   "id": "B1063",
-   "name": "재의 왕좌 외곽 사냥: 화염 와이번",
-   "type": "monster_hunt",
-   "level": 88,
-   "diff": "hard",
-   "wr": 1.0
-  },
-  {
-   "id": "B1063",
-   "name": "재의 왕좌 외곽 사냥: 화염 와이번",
-   "type": "monster_hunt",
-   "level": 88,
-   "diff": "nightmare",
-   "wr": 1.0
-  },
-  {
-   "id": "B1063",
-   "name": "재의 왕좌 외곽 사냥: 화염 와이번",
-   "type": "monster_hunt",
-   "level": 88,
-   "diff": "normal",
-   "wr": 1.0
-  },
-  {
-   "id": "B1066",
-   "name": "화염 와이번 토벌",
-   "type": "hunt",
+   "id": "B1062",
+   "name": "용의 발톱 협곡 접전: 바르그라드",
+   "type": "skirmish",
    "level": 89,
    "diff": "hard",
-   "wr": 0.667
+   "wr": 1.0
   },
   {
-   "id": "B1066",
-   "name": "화염 와이번 토벌",
-   "type": "hunt",
+   "id": "B1062",
+   "name": "용의 발톱 협곡 접전: 바르그라드",
+   "type": "skirmish",
    "level": 89,
    "diff": "nightmare",
    "wr": 0.833
   },
   {
-   "id": "B1066",
-   "name": "화염 와이번 토벌",
-   "type": "hunt",
+   "id": "B1062",
+   "name": "용의 발톱 협곡 접전: 바르그라드",
+   "type": "skirmish",
    "level": 89,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "B1068",
-   "name": "재의 왕좌 외곽 접전: 재의 병사",
-   "type": "skirmish",
-   "level": 90,
+   "id": "S068",
+   "name": "불타는 요새 공성",
+   "type": "siege",
+   "level": 91,
+   "diff": "hard",
+   "wr": 0.667
+  },
+  {
+   "id": "S068",
+   "name": "불타는 요새 공성",
+   "type": "siege",
+   "level": 91,
+   "diff": "nightmare",
+   "wr": 0.083
+  },
+  {
+   "id": "S068",
+   "name": "불타는 요새 공성",
+   "type": "siege",
+   "level": 91,
+   "diff": "normal",
+   "wr": 0.5
+  },
+  {
+   "id": "B1076",
+   "name": "세계의 쐐기 방어전: 바르그라드의 공세",
+   "type": "defense",
+   "level": 92,
    "diff": "hard",
    "wr": 1.0
   },
   {
-   "id": "B1068",
-   "name": "재의 왕좌 외곽 접전: 재의 병사",
-   "type": "skirmish",
-   "level": 90,
+   "id": "B1076",
+   "name": "세계의 쐐기 방어전: 바르그라드의 공세",
+   "type": "defense",
+   "level": 92,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.917
   },
   {
-   "id": "B1068",
-   "name": "재의 왕좌 외곽 접전: 재의 병사",
-   "type": "skirmish",
-   "level": 90,
+   "id": "B1076",
+   "name": "세계의 쐐기 방어전: 바르그라드의 공세",
+   "type": "defense",
+   "level": 92,
    "diff": "normal",
    "wr": 1.0
   },
   {
-   "id": "S067",
-   "name": "재의 황야",
-   "type": "survival",
-   "level": 90,
+   "id": "S070",
+   "name": "재의 장군들",
+   "type": "raid",
+   "level": 93,
    "diff": "hard",
-   "wr": 1.0
+   "wr": 0.083
   },
   {
-   "id": "S067",
-   "name": "재의 황야",
-   "type": "survival",
-   "level": 90,
+   "id": "S070",
+   "name": "재의 장군들",
+   "type": "raid",
+   "level": 93,
    "diff": "nightmare",
-   "wr": 1.0
+   "wr": 0.0
   },
   {
-   "id": "S067",
-   "name": "재의 황야",
-   "type": "survival",
-   "level": 90,
+   "id": "S070",
+   "name": "재의 장군들",
+   "type": "raid",
+   "level": 93,
    "diff": "normal",
    "wr": 1.0
+  },
+  {
+   "id": "S071",
+   "name": "왕좌 외곽",
+   "type": "invasion",
+   "level": 94,
+   "diff": "hard",
+   "wr": 0.917
+  },
+  {
+   "id": "S071",
+   "name": "왕좌 외곽",
+   "type": "invasion",
+   "level": 94,
+   "diff": "nightmare",
+   "wr": 0.083
+  },
+  {
+   "id": "S071",
+   "name": "왕좌 외곽",
+   "type": "invasion",
+   "level": 94,
+   "diff": "normal",
+   "wr": 1.0
+  },
+  {
+   "id": "S076",
+   "name": "최후의 봉인",
+   "type": "guard",
+   "level": 100,
+   "diff": "hard",
+   "wr": 0.083
+  },
+  {
+   "id": "S076",
+   "name": "최후의 봉인",
+   "type": "guard",
+   "level": 100,
+   "diff": "nightmare",
+   "wr": 0.0
+  },
+  {
+   "id": "S076",
+   "name": "최후의 봉인",
+   "type": "guard",
+   "level": 100,
+   "diff": "normal",
+   "wr": 0.333
   }
  ]
 }
