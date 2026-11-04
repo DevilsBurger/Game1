@@ -1,0 +1,741 @@
+{
+ "version": 1,
+ "count": 24,
+ "nations": [
+  {
+   "key": "bromel",
+   "name_ko": "브로멜 자유도시",
+   "name_en": "Bromel",
+   "region_group": "중앙",
+   "category": "자유도시",
+   "civilization": "판타지",
+   "danger": 1,
+   "capital": "브로멜",
+   "ruler": "길드 평의회",
+   "desc": "대륙 한가운데의 자유도시. 용병 길드 '회색 늑대'의 본부가 있으며, 투기장과 현상금 게시판으로 유명하다. 레온의 고향.",
+   "native_origin": "freelancer",
+   "native_origin_ko": "자유용병",
+   "act": 1,
+   "regions": [
+    "길드 거리",
+    "투기장",
+    "빈민가",
+    "외곽 숲길",
+    "상인 가도"
+   ],
+   "enemy_factions": [
+    "도적단",
+    "탈주 용병",
+    "투기장 검투사",
+    "밀수꾼"
+   ],
+   "battle_count": 75,
+   "national_item": "N001"
+  },
+  {
+   "key": "astel",
+   "name_ko": "아스텔 왕국",
+   "name_en": "Astel",
+   "region_group": "중앙",
+   "category": "대국",
+   "civilization": "판타지",
+   "danger": 2,
+   "capital": "캐멀린",
+   "ruler": "공석(세 왕자의 내전)",
+   "desc": "대륙 중앙의 기사 왕국. 왕 알렉산더의 급사 후 첫째 왕자 알드릭(왕당파), 둘째 세드릭(개혁파), 셋째 루안(교단파)이 내전 중이다.",
+   "native_origin": "astel",
+   "native_origin_ko": "아스텔",
+   "act": 1,
+   "regions": [
+    "왕도 캐멀린",
+    "동부 국경 하론",
+    "서부 평원",
+    "남부 곡창지대",
+    "북부 요새선"
+   ],
+   "enemy_factions": [
+    "왕당파 군",
+    "루안 왕자군",
+    "국경 도적",
+    "탈영병",
+    "재의 날개 첩자"
+   ],
+   "battle_count": 78,
+   "national_item": "N002"
+  },
+  {
+   "key": "mir",
+   "name_ko": "미르 공국",
+   "name_en": "Mir",
+   "region_group": "중앙",
+   "category": "소국",
+   "civilization": "판타지",
+   "danger": 2,
+   "capital": "미르",
+   "ruler": "공작 레오폴드",
+   "desc": "아스텔의 속국. 내전의 불똥이 튀어 공작이 중립을 선언했으나 양쪽 군대가 밀고 들어온다.",
+   "native_origin": "astel",
+   "native_origin_ko": "아스텔",
+   "act": 1,
+   "regions": [
+    "공작성",
+    "포도밭 언덕",
+    "강변 마을",
+    "수도원",
+    "국경 숲"
+   ],
+   "enemy_factions": [
+    "왕당파 선발대",
+    "약탈병",
+    "늑대 무리",
+    "강도단"
+   ],
+   "battle_count": 58,
+   "national_item": "N003"
+  },
+  {
+   "key": "harben",
+   "name_ko": "하르벤 후국",
+   "name_en": "Harben",
+   "region_group": "중앙",
+   "category": "소국",
+   "civilization": "판타지",
+   "danger": 3,
+   "capital": "하르벤",
+   "ruler": "후작 부인 이네스",
+   "desc": "용병 전쟁의 땅. 후작이 죽은 뒤 후작 부인이 용병단을 고용해 영지를 지킨다. 매주 전투가 벌어진다.",
+   "native_origin": "freelancer",
+   "native_origin_ko": "자유용병",
+   "act": 2,
+   "regions": [
+    "후작령 성채",
+    "갈대 늪",
+    "폐광",
+    "용병 야영지",
+    "국경 다리"
+   ],
+   "enemy_factions": [
+    "적대 용병단 '검은 손'",
+    "늪지 괴물",
+    "폐광 괴물",
+    "하르벤 반란군"
+   ],
+   "battle_count": 59,
+   "national_item": "N004"
+  },
+  {
+   "key": "lumen",
+   "name_ko": "루멘 성교국",
+   "name_en": "Lumen",
+   "region_group": "중서부",
+   "category": "중견국",
+   "civilization": "신성마법",
+   "danger": 3,
+   "capital": "성도 루멘",
+   "ruler": "교황 인노첸시오 9세",
+   "desc": "성교국. 교황은 재의 날개를 '신의 심판'이라 선포했고, 성녀 요한나와 성기사단장 가브리엘은 이에 반발해 교단을 떠났다.",
+   "native_origin": "lumen",
+   "native_origin_ko": "루멘",
+   "act": 2,
+   "regions": [
+    "대성당 광장",
+    "순례길",
+    "이단 심문소",
+    "성유물 지하묘지",
+    "수도원 산지"
+   ],
+   "enemy_factions": [
+    "교황청 친위대",
+    "심문관",
+    "광신도",
+    "타락한 성유물",
+    "구울"
+   ],
+   "battle_count": 77,
+   "national_item": "N005"
+  },
+  {
+   "key": "lies",
+   "name_ko": "리에스 연합",
+   "name_en": "Lies",
+   "region_group": "서해",
+   "category": "대국",
+   "civilization": "판타지",
+   "danger": 3,
+   "capital": "포르토 리에스",
+   "ruler": "연합 평의회 (제독 카탈리나 벨)",
+   "desc": "서해의 도시국가 연합. 해적과 상인이 공존하며, 해족(인어)과 조약을 맺었다. 재의 날개의 습격으로 함대 절반을 잃었다.",
+   "native_origin": "lies",
+   "native_origin_ko": "리에스",
+   "act": 2,
+   "regions": [
+    "포르토 리에스 항",
+    "해적섬 토르투가",
+    "폭풍 해협",
+    "상선 항로",
+    "침몰선 묘지"
+   ],
+   "enemy_factions": [
+    "무법 해적단",
+    "해괴물",
+    "밀수 조직",
+    "용병 함대",
+    "심해 괴수"
+   ],
+   "battle_count": 72,
+   "national_item": "N006"
+  },
+  {
+   "key": "valheim",
+   "name_ko": "발하임",
+   "name_en": "Valheim",
+   "region_group": "북방",
+   "category": "대국",
+   "civilization": "판타지",
+   "danger": 4,
+   "capital": "스칼드헤임",
+   "ruler": "여왕 시그룬 아이언브로우",
+   "desc": "북방의 얼음 왕국. 씨족 연맹이며 왕은 결투로 뽑힌다. 재의 날개에게 북부 씨족 셋을 잃었다.",
+   "native_origin": "valheim",
+   "native_origin_ko": "발하임",
+   "act": 2,
+   "regions": [
+    "피오르드 해안",
+    "설원 평야",
+    "서리 산맥",
+    "씨족 영지",
+    "얼음 동굴"
+   ],
+   "enemy_factions": [
+    "적대 씨족",
+    "서리 거인",
+    "늑대 무리",
+    "얼음 트롤",
+    "재의 날개 선봉"
+   ],
+   "battle_count": 74,
+   "national_item": "N007"
+  },
+  {
+   "key": "karna",
+   "name_ko": "카르나 술탄국",
+   "name_en": "Karna",
+   "region_group": "남방",
+   "category": "대국",
+   "civilization": "판타지",
+   "danger": 4,
+   "capital": "자흐라",
+   "ruler": "술탄 무스타파 3세",
+   "desc": "남방 사막의 술탄국. 상인 길드와 암살단, 마신 계약자의 땅. 술탄은 재의 날개와 비밀 거래를 했다.",
+   "native_origin": "karna",
+   "native_origin_ko": "카르나",
+   "act": 2,
+   "regions": [
+    "수도 자흐라",
+    "대사막 카라반 길",
+    "오아시스 도시",
+    "잊힌 피라미드",
+    "암살단 요새"
+   ],
+   "enemy_factions": [
+    "술탄 친위대",
+    "사막 도적",
+    "모래 벌레",
+    "미라 군단",
+    "암살단"
+   ],
+   "battle_count": 73,
+   "national_item": "N008"
+  },
+  {
+   "key": "torga",
+   "name_ko": "토르가 부족연맹",
+   "name_en": "Torga",
+   "region_group": "동북",
+   "category": "중견국",
+   "civilization": "판타지",
+   "danger": 4,
+   "capital": "대족장 야영지",
+   "ruler": "대족장 그룸 블러드액스",
+   "desc": "초원과 산악의 부족 연맹. 오크·수인·거인·고블린이 함께 산다. 힘이 곧 법이다.",
+   "native_origin": "torga",
+   "native_origin_ko": "토르가",
+   "act": 2,
+   "regions": [
+    "대초원",
+    "뼈 산",
+    "고블린 굴",
+    "수인 숲",
+    "투기 언덕"
+   ],
+   "enemy_factions": [
+    "적대 부족",
+    "광포한 야수",
+    "고블린 약탈대",
+    "오우거",
+    "트롤"
+   ],
+   "battle_count": 67,
+   "national_item": "N009"
+  },
+  {
+   "key": "kurgan",
+   "name_ko": "쿠르간 칸국",
+   "name_en": "Kurgan",
+   "region_group": "동부",
+   "category": "중견국",
+   "civilization": "판타지",
+   "danger": 4,
+   "capital": "이동 수도 오르두",
+   "ruler": "칸 테무르",
+   "desc": "동부 초원의 기마 유목 칸국. 사이람과 토르가 사이에서 끊임없이 전쟁한다.",
+   "native_origin": "torga",
+   "native_origin_ko": "토르가",
+   "act": 2,
+   "regions": [
+    "대초원 북부",
+    "말 시장",
+    "성스러운 호수",
+    "고분 지대",
+    "국경 요새"
+   ],
+   "enemy_factions": [
+    "기마 궁수대",
+    "약탈 기병",
+    "초원 늑대",
+    "고분 망령"
+   ],
+   "battle_count": 55,
+   "national_item": "N010"
+  },
+  {
+   "key": "sairam",
+   "name_ko": "사이람 제국",
+   "name_en": "Sairam",
+   "region_group": "동방",
+   "category": "대국",
+   "civilization": "판타지",
+   "danger": 5,
+   "capital": "교토라",
+   "ruler": "황제 겐무 / 쇼군 오다 카게무네",
+   "desc": "동방의 제국. 황제와 쇼군이 권력을 나눈다. 쇼군은 재의 날개와 밀약을 맺고 황제를 몰아내려 한다.",
+   "native_origin": "sairam",
+   "native_origin_ko": "사이람",
+   "act": 2,
+   "regions": [
+    "황도 교토라",
+    "벚꽃 가도",
+    "쇼군의 성",
+    "안개 산맥",
+    "원령의 숲"
+   ],
+   "enemy_factions": [
+    "쇼군군",
+    "닌자 부대",
+    "낭인단",
+    "원령",
+    "오니"
+   ],
+   "battle_count": 81,
+   "national_item": "N011"
+  },
+  {
+   "key": "elowen",
+   "name_ko": "엘로웬",
+   "name_en": "Elowen",
+   "region_group": "서부",
+   "category": "대국",
+   "civilization": "자연마법",
+   "danger": 5,
+   "capital": "세계수 도시 아엘린",
+   "ruler": "여왕 실바나 아엘린",
+   "desc": "고대의 숲에 자리한 엘프 왕국. 세계수가 시들어가고 있으며 여왕은 그 원인이 쐐기임을 안다.",
+   "native_origin": "elowen",
+   "native_origin_ko": "엘로웬",
+   "act": 2,
+   "regions": [
+    "세계수 도시",
+    "고대 숲",
+    "정령의 샘",
+    "가시 덤불 지대",
+    "시든 숲"
+   ],
+   "enemy_factions": [
+    "타락한 정령",
+    "숲의 괴물",
+    "벌목 침입자",
+    "거미 무리",
+    "시든 트렌트"
+   ],
+   "battle_count": 72,
+   "national_item": "N012"
+  },
+  {
+   "key": "grandur",
+   "name_ko": "그란두르",
+   "name_en": "Grandur",
+   "region_group": "중북부",
+   "category": "대국",
+   "civilization": "증기기술",
+   "danger": 5,
+   "capital": "아이언홀",
+   "ruler": "대장장이 왕 토르딘 아이언핸드",
+   "desc": "산맥 아래 드워프 왕국. 대장간과 룬, 증기 기계의 본산. 고대 문명의 유적을 발굴하고 있다.",
+   "native_origin": "grandur",
+   "native_origin_ko": "그란두르",
+   "act": 2,
+   "regions": [
+    "아이언홀",
+    "대장간 지구",
+    "깊은 갱도",
+    "룬 보관소",
+    "고대 유적층"
+   ],
+   "enemy_factions": [
+    "갱도 괴물",
+    "폭주 골렘",
+    "지하 야만족",
+    "고대 자동인형",
+    "용암 정령"
+   ],
+   "battle_count": 79,
+   "national_item": "N013"
+  },
+  {
+   "key": "frost_isles",
+   "name_ko": "서리 제도",
+   "name_en": "Frost Isles",
+   "region_group": "북해",
+   "category": "소국",
+   "civilization": "판타지",
+   "danger": 5,
+   "capital": "흰 항구",
+   "ruler": "제도 족장 연합",
+   "desc": "북해의 섬들. 고래 사냥꾼과 서리 마녀가 산다. 발하임과 리에스 사이의 완충지대.",
+   "native_origin": "valheim",
+   "native_origin_ko": "발하임",
+   "act": 2,
+   "regions": [
+    "흰 항구",
+    "고래 뼈 해안",
+    "서리 마녀의 탑",
+    "유빙 지대",
+    "침묵의 섬"
+   ],
+   "enemy_factions": [
+    "서리 마녀단",
+    "바다 늑대",
+    "유빙 거인",
+    "유령선"
+   ],
+   "battle_count": 55,
+   "national_item": "N014"
+  },
+  {
+   "key": "tiama",
+   "name_ko": "티아마 수중도시",
+   "name_en": "Tiama",
+   "region_group": "서해 해저",
+   "category": "숨겨진 나라",
+   "civilization": "해양마법",
+   "danger": 6,
+   "capital": "티아마",
+   "ruler": "심해의 왕 트리톤 바르",
+   "desc": "해저의 해족(인어) 도시. 리에스와 조약을 맺었으나 외부인은 거의 들어갈 수 없다. 쐐기의 진동을 바다 밑에서 느꼈다.",
+   "native_origin": "lies",
+   "native_origin_ko": "리에스",
+   "act": 3,
+   "regions": [
+    "산호 궁전",
+    "심해 해구",
+    "침몰 도시",
+    "조류 터널",
+    "크라켄의 둥지"
+   ],
+   "enemy_factions": [
+    "심해 괴수",
+    "타락 해족",
+    "크라켄 새끼",
+    "해저 망령"
+   ],
+   "battle_count": 54,
+   "national_item": "N015"
+  },
+  {
+   "key": "veil",
+   "name_ko": "베일 요정 영지",
+   "name_en": "Veil",
+   "region_group": "서부 숲 심부",
+   "category": "숨겨진 나라",
+   "civilization": "환상마법",
+   "danger": 6,
+   "capital": "안개 궁정",
+   "ruler": "요정 여왕 티타니아",
+   "desc": "엘로웬 숲 깊은 곳, 안개 너머의 요정 영지. 들어간 사람은 시간 감각을 잃는다.",
+   "native_origin": "elowen",
+   "native_origin_ko": "엘로웬",
+   "act": 3,
+   "regions": [
+    "안개 궁정",
+    "환상의 미로",
+    "꿈의 호수",
+    "버섯 숲",
+    "시간이 멈춘 마을"
+   ],
+   "enemy_factions": [
+    "장난꾸러기 요정",
+    "환영 괴물",
+    "꿈 포식자",
+    "안개 유령"
+   ],
+   "battle_count": 54,
+   "national_item": "N016"
+  },
+  {
+   "key": "zyros",
+   "name_ko": "자이로스 정글",
+   "name_en": "Zyros",
+   "region_group": "남동",
+   "category": "소국",
+   "civilization": "원시마법",
+   "danger": 6,
+   "capital": "피라미드 도시 이츠",
+   "ruler": "리자드맨 신왕",
+   "desc": "남동 정글의 리자드맨 신정 국가. 거대 파충류와 독이 가득하다.",
+   "native_origin": "torga",
+   "native_origin_ko": "토르가",
+   "act": 3,
+   "regions": [
+    "정글 외곽",
+    "독 늪",
+    "피라미드 도시",
+    "거대 수목 지대",
+    "공룡 계곡"
+   ],
+   "enemy_factions": [
+    "리자드맨 전사",
+    "거대 파충류",
+    "독 개구리 떼",
+    "정글 식인 식물",
+    "공룡"
+   ],
+   "battle_count": 50,
+   "national_item": "N017"
+  },
+  {
+   "key": "nox",
+   "name_ko": "녹스",
+   "name_en": "Nox",
+   "region_group": "북서 반도",
+   "category": "고립국",
+   "civilization": "흑마법",
+   "danger": 7,
+   "capital": "검은 성 녹스",
+   "ruler": "사령술사 여왕 모르가나 녹스",
+   "desc": "안개에 갇힌 반도의 흑마법 국가. 사령술사와 뱀파이어가 다스린다. 쐐기의 피 봉인 의식 기록을 보관한다.",
+   "native_origin": "nox",
+   "native_origin_ko": "녹스",
+   "act": 3,
+   "regions": [
+    "검은 성",
+    "망자의 들판",
+    "안개 늪",
+    "뱀파이어 영지",
+    "금단의 서고"
+   ],
+   "enemy_factions": [
+    "망자 군단",
+    "뱀파이어 사병",
+    "리치의 하수인",
+    "안개 괴물",
+    "흑마법 교단"
+   ],
+   "battle_count": 70,
+   "national_item": "N018"
+  },
+  {
+   "key": "twilight",
+   "name_ko": "황혼 요새",
+   "name_en": "Twilight",
+   "region_group": "북서 국경",
+   "category": "소국",
+   "civilization": "흑마법",
+   "danger": 7,
+   "capital": "황혼 요새",
+   "ruler": "뱀파이어 백작 라즐로",
+   "desc": "녹스와 인간 세계의 경계에 선 뱀파이어 백작령. 밤에만 문이 열린다.",
+   "native_origin": "nox",
+   "native_origin_ko": "녹스",
+   "act": 3,
+   "regions": [
+    "요새 성벽",
+    "핏빛 포도밭",
+    "지하 납골당",
+    "박쥐 동굴",
+    "황혼 마을"
+   ],
+   "enemy_factions": [
+    "뱀파이어 기사",
+    "박쥐 떼",
+    "피에 굶주린 구울",
+    "가고일"
+   ],
+   "battle_count": 54,
+   "national_item": "N019"
+  },
+  {
+   "key": "makab",
+   "name_ko": "마카브 화산령",
+   "name_en": "Makab",
+   "region_group": "남방 화산",
+   "category": "소국",
+   "civilization": "정령술",
+   "danger": 7,
+   "capital": "흑요석 도시",
+   "ruler": "정령왕의 대리인",
+   "desc": "남방 화산 지대. 용암 정령과 흑요석 골렘이 산다. 고대의 정령 계약으로 유지된다.",
+   "native_origin": "karna",
+   "native_origin_ko": "카르나",
+   "act": 3,
+   "regions": [
+    "흑요석 도시",
+    "용암 호수",
+    "유황 들판",
+    "골렘 작업장",
+    "정령의 심장"
+   ],
+   "enemy_factions": [
+    "용암 정령",
+    "흑요석 골렘",
+    "화염 도마뱀",
+    "유황 괴물",
+    "타락 정령술사"
+   ],
+   "battle_count": 53,
+   "national_item": "N020"
+  },
+  {
+   "key": "neos",
+   "name_ko": "네오스",
+   "name_en": "Neos",
+   "region_group": "잿빛 황무지",
+   "category": "숨겨진 나라",
+   "civilization": "고도 과학(SF)",
+   "danger": 8,
+   "capital": "돔 도시 네오스",
+   "ruler": "과학 평의회",
+   "desc": "잿빛 황무지의 돔 아래 숨겨진 고도 과학 문명. 1000년 전 '첫 번째 재앙'을 일으킨 고대 문명의 생존자. 쐐기가 사실 고대의 '제어 장치'임을 안다.",
+   "native_origin": "neos",
+   "native_origin_ko": "네오스",
+   "act": 3,
+   "regions": [
+    "잿빛 황무지",
+    "돔 외곽 방어선",
+    "돔 도시 내부",
+    "지하 연구소",
+    "폐기된 병기창"
+   ],
+   "enemy_factions": [
+    "폭주 전투 로봇",
+    "황무지 약탈자",
+    "변이 생물",
+    "방어 자동인형",
+    "프로토타입 병기"
+   ],
+   "battle_count": 78,
+   "national_item": "N021"
+  },
+  {
+   "key": "celestia",
+   "name_ko": "셀레스티아",
+   "name_en": "Celestia",
+   "region_group": "하늘(부유섬)",
+   "category": "숨겨진 나라",
+   "civilization": "고마법",
+   "danger": 8,
+   "capital": "천공 도시 아스트룸",
+   "ruler": "대마법사 오리온 셀레스티아",
+   "desc": "하늘에 떠 있는 부유섬의 고마법 학술국. '세계의 쐐기'를 1000년간 지켜왔다.",
+   "native_origin": "celestia",
+   "native_origin_ko": "셀레스티아",
+   "act": 3,
+   "regions": [
+    "천공 도시",
+    "마법 학술원",
+    "별의 관측소",
+    "공허의 가장자리",
+    "쐐기의 성소"
+   ],
+   "enemy_factions": [
+    "폭주 마법 구조물",
+    "공허 생물",
+    "타락 마법사",
+    "별의 수호 골렘",
+    "쐐기 수호자"
+   ],
+   "battle_count": 77,
+   "national_item": "N022"
+  },
+  {
+   "key": "drakestan",
+   "name_ko": "드라케스탄",
+   "name_en": "Drakestan",
+   "region_group": "동쪽 끝 산맥",
+   "category": "숨겨진 나라",
+   "civilization": "용의 힘",
+   "danger": 9,
+   "capital": "용의 둥지",
+   "ruler": "청룡 아젤리아",
+   "desc": "선한 용족 '푸른 비늘'의 숨겨진 둥지. 부화하지 않는 알들이 잠들어 있다.",
+   "native_origin": "dragonkin",
+   "native_origin_ko": "용족",
+   "act": 4,
+   "regions": [
+    "둥지 입구",
+    "알의 동굴",
+    "용의 묘지",
+    "하늘 봉우리",
+    "고대 용의 신전"
+   ],
+   "enemy_factions": [
+    "둥지 수호 용족(시험)",
+    "재의 날개 침입자",
+    "타락 와이번",
+    "용의 유령"
+   ],
+   "battle_count": 74,
+   "national_item": "N023"
+  },
+  {
+   "key": "ashfell",
+   "name_ko": "애쉬펠 (재의 산맥)",
+   "name_en": "Ashfell",
+   "region_group": "세계의 끝",
+   "category": "적 본거지",
+   "civilization": "용의 힘/흑마법",
+   "danger": 10,
+   "capital": "재의 왕좌",
+   "ruler": "흑룡 바르그라드",
+   "desc": "재의 날개의 본거지. 불타는 산맥과 재의 하늘. 엘리아가 갇혀 있는 곳.",
+   "native_origin": "dragonkin",
+   "native_origin_ko": "용족",
+   "act": 5,
+   "regions": [
+    "재의 황야",
+    "불타는 요새",
+    "용의 발톱 협곡",
+    "재의 왕좌 외곽",
+    "세계의 쐐기"
+   ],
+   "enemy_factions": [
+    "재의 날개 용족",
+    "재의 병사",
+    "화염 와이번",
+    "재의 장군",
+    "바르그라드"
+   ],
+   "battle_count": 65,
+   "national_item": "N024"
+  }
+ ]
+}
