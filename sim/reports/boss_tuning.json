@@ -1,0 +1,199 @@
+{
+ "targets": {
+  "normal": 0.65,
+  "hard": 0.45,
+  "nightmare": 0.25
+ },
+ "history": [
+  {
+   "round": 0,
+   "mean_dev": -0.2520833333333333,
+   "sd": 0.28949339130818014
+  },
+  {
+   "round": 1,
+   "mean_dev": -0.22256944444444446,
+   "sd": 0.28482785134128186
+  },
+  {
+   "round": 2,
+   "mean_dev": -0.23125,
+   "sd": 0.26335014450558236
+  },
+  {
+   "round": 3,
+   "mean_dev": -0.22864583333333335,
+   "sd": 0.24525609754992161
+  }
+ ],
+ "rows": [
+  {
+   "id": "S014",
+   "name": "재의 사자",
+   "act": 1,
+   "type": "hunt",
+   "level": 17,
+   "boss": "화염 와이번",
+   "hp_mult": 1.0,
+   "wr": {
+    "normal": 0.281,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S015",
+   "name": "결전: 하론 재탈환",
+   "act": 1,
+   "type": "decisive",
+   "level": 18,
+   "boss": "재의 장군",
+   "hp_mult": 1.7,
+   "wr": {
+    "normal": 0.594,
+    "hard": 0.031,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S021",
+   "name": "폭풍 해협의 유령",
+   "act": 2,
+   "type": "hunt",
+   "level": 25,
+   "boss": "바다뱀",
+   "hp_mult": 3.45,
+   "wr": {
+    "normal": 0.594,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S024",
+   "name": "서리 거인 토벌",
+   "act": 2,
+   "type": "hunt",
+   "level": 29,
+   "boss": "서리 거인",
+   "hp_mult": 1.0,
+   "wr": {
+    "normal": 0.312,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S037",
+   "name": "서리 마녀의 예언",
+   "act": 2,
+   "type": "hunt",
+   "level": 47,
+   "boss": "서리 마녀",
+   "hp_mult": 3.67,
+   "wr": {
+    "normal": 1.0,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S038",
+   "name": "결전: 재의 함대",
+   "act": 2,
+   "type": "decisive",
+   "level": 48,
+   "boss": "재의 장군",
+   "hp_mult": 1.55,
+   "wr": {
+    "normal": 0.5,
+    "hard": 0.031,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S053",
+   "name": "폐기된 병기",
+   "act": 3,
+   "type": "raid",
+   "level": 73,
+   "boss": "프로토타입 병기",
+   "hp_mult": 7.35,
+   "wr": {
+    "normal": 1.0,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S056",
+   "name": "결전: 쐐기의 성소",
+   "act": 3,
+   "type": "decisive",
+   "level": 78,
+   "boss": "재의 주술사",
+   "hp_mult": 3.06,
+   "wr": {
+    "normal": 0.625,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S058",
+   "name": "용의 묘지",
+   "act": 4,
+   "type": "hunt",
+   "level": 79,
+   "boss": "용의 유령",
+   "hp_mult": 3.67,
+   "wr": {
+    "normal": 1.0,
+    "hard": 0.375,
+    "nightmare": 0.156
+   }
+  },
+  {
+   "id": "S066",
+   "name": "결전: 흑룡의 그림자",
+   "act": 4,
+   "type": "decisive",
+   "level": 90,
+   "boss": "재의 장군",
+   "hp_mult": 1.27,
+   "wr": {
+    "normal": 0.188,
+    "hard": 0.125,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S070",
+   "name": "재의 장군들",
+   "act": 5,
+   "type": "raid",
+   "level": 93,
+   "boss": "재의 장군",
+   "hp_mult": 7.13,
+   "wr": {
+    "normal": 1.0,
+    "hard": 0.0,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S075",
+   "name": "결전: 흑룡 바르그라드",
+   "act": 5,
+   "type": "decisive",
+   "level": 99,
+   "boss": "재의 장군",
+   "hp_mult": 1.27,
+   "wr": {
+    "normal": 0.031,
+    "hard": 0.125,
+    "nightmare": 0.0
+   }
+  }
+ ]
+}

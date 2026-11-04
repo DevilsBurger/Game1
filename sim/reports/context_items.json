@@ -1,0 +1,315 @@
+{
+ "scenarios": [
+  "magic_heavy",
+  "boss_hp",
+  "siege",
+  "waves",
+  "assassin"
+ ],
+ "rows": [
+  {
+   "id": "I003",
+   "name": "용맹의 맹세",
+   "category": "completed",
+   "mult": 0.4,
+   "target": 0.11,
+   "delta": {
+    "magic_heavy": 0.096,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.031,
+    "assassin": 0.154
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "I004",
+   "name": "약탈자의 발톱",
+   "category": "completed",
+   "mult": 0.4,
+   "target": 0.11,
+   "delta": {
+    "magic_heavy": 0.112,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.016,
+    "assassin": 0.05
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "I029",
+   "name": "가고일 돌갑옷",
+   "category": "completed",
+   "mult": 0.4,
+   "target": 0.165,
+   "delta": {
+    "magic_heavy": 0.158,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.05,
+    "assassin": 0.038
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "I035",
+   "name": "용의 발톱",
+   "category": "completed",
+   "mult": 2.0,
+   "target": 0.165,
+   "delta": {
+    "magic_heavy": 0.225,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.106,
+    "assassin": 0.092
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "I054",
+   "name": "불사의 심장",
+   "category": "completed",
+   "mult": 0.4,
+   "target": 0.165,
+   "delta": {
+    "magic_heavy": 0.179,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.038,
+    "assassin": 0.096
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "R035",
+   "name": "빛나는 용의 발톱",
+   "category": "radiant",
+   "mult": 2.0,
+   "target": 0.3,
+   "delta": {
+    "magic_heavy": 0.288,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.141,
+    "assassin": 0.121
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A011",
+   "name": "노른의 실",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.21,
+   "delta": {
+    "magic_heavy": 0.146,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.097,
+    "assassin": 0.229
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A016",
+   "name": "현상금 사냥꾼의 총",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": 0.188,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.072,
+    "assassin": 0.15
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A024",
+   "name": "골렘의 핵",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.21,
+   "delta": {
+    "magic_heavy": 0.183,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.078,
+    "assassin": 0.075
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A026",
+   "name": "폭풍의 눈",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": 0.158,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.05,
+    "assassin": 0.083
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A028",
+   "name": "태초의 불씨",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": 0.217,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.025,
+    "assassin": 0.142
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A034",
+   "name": "암살자의 가면",
+   "category": "artifact",
+   "mult": 2.0,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": -0.146,
+    "boss_hp": 0.375,
+    "siege": 0.0,
+    "waves": 0.034,
+    "assassin": 0.229
+   },
+   "best_scenario": "boss_hp",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A039",
+   "name": "불멸의 갑주",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.21,
+   "delta": {
+    "magic_heavy": 0.179,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.131,
+    "assassin": 0.267
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A058",
+   "name": "수호천사의 깃털",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.21,
+   "delta": {
+    "magic_heavy": 0.125,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.109,
+    "assassin": 0.238
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "A060",
+   "name": "심문관의 낙인",
+   "category": "artifact",
+   "mult": 0.4,
+   "target": 0.14,
+   "delta": {
+    "magic_heavy": 0.3,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.097,
+    "assassin": 0.271
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "S016",
+   "name": "사정거리 망원경",
+   "category": "support",
+   "mult": 2.0,
+   "target": 0.08,
+   "delta": {
+    "magic_heavy": -0.008,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.05,
+    "assassin": 0.121
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "N005",
+   "name": "루멘 성유물함",
+   "category": "national",
+   "mult": 0.4,
+   "target": 0.18,
+   "delta": {
+    "magic_heavy": 0.125,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.094,
+    "assassin": 0.121
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "재설계 필요"
+  },
+  {
+   "id": "N007",
+   "name": "발하임 늑대 가죽",
+   "category": "national",
+   "mult": 0.4,
+   "target": 0.12,
+   "delta": {
+    "magic_heavy": 0.117,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.053,
+    "assassin": 0.154
+   },
+   "best_scenario": "assassin",
+   "verdict": "상황 특화 OK"
+  },
+  {
+   "id": "N024",
+   "name": "애쉬펠 재의 비늘",
+   "category": "national",
+   "mult": 0.4,
+   "target": 0.12,
+   "delta": {
+    "magic_heavy": 0.158,
+    "boss_hp": 0.0,
+    "siege": 0.0,
+    "waves": 0.041,
+    "assassin": 0.129
+   },
+   "best_scenario": "magic_heavy",
+   "verdict": "상황 특화 OK"
+  }
+ ]
+}

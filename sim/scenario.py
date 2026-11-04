@@ -50,6 +50,7 @@ def build_enemies(d, b, diff, curve=None, boss_hp_override=None):
     star = dd["enemy_star"]; pm = dd["enemy_power_mult"]
     residual = max(0.75, min(1.6, (pm / (STAR_GAIN[star] / STAR_GAIN[b["difficulties"]["normal"]["enemy_star"]])) ** 0.5))
     residual *= enemy_power(b["level"], diff, curve)
+    residual *= dd.get("tuned_power_mult", 1.0)
     units = []
     for u in b["enemy"]["units"]:
         units.append(d.monster_spec(u["unit"], star=star, tier_override=u["tier"], power_mult=residual))
@@ -67,7 +68,9 @@ def build_enemies(d, b, diff, curve=None, boss_hp_override=None):
 def build_scenario(d, b, diff, rng, curve=None, allies=None, boss_hp_override=None):
     """반환: allies, enemies, rules"""
     btype = b["type"]
-    size = max(b["participation"]["min"], min(b["participation"]["max"], 6 if b["participation"]["mode"] != "solo" else 1))
+    mode = b["participation"]["mode"]
+    want = {"solo": 1, "squad": 4, "team": 6, "free": 6, "army": (10 if b["level"] >= 70 else 8)}[mode]
+    size = max(b["participation"]["min"], min(b["participation"]["max"], want))
     if allies is None:
         if b["participation"]["mode"] == "solo":
             tier = max(1, min(5, 1 + b["level"] // 22))

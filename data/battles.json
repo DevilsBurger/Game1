@@ -3897,8 +3897,9 @@
      "name_ko": "화염 와이번",
      "class": "dragoon",
      "tier": 5,
-     "hp_mult": 2.0,
-     "role": "보스"
+     "hp_mult": 1.0,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -4124,8 +4125,9 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 3.0,
-     "role": "보스"
+     "hp_mult": 1.7,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -5503,8 +5505,9 @@
      "name_ko": "바다뱀",
      "class": "dragoon",
      "tier": 4,
-     "hp_mult": 2.0,
-     "role": "보스"
+     "hp_mult": 3.45,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -6225,8 +6228,9 @@
      "name_ko": "서리 거인",
      "class": "warrior",
      "tier": 5,
-     "hp_mult": 2.0,
-     "role": "보스"
+     "hp_mult": 1.0,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -9483,8 +9487,9 @@
      "name_ko": "서리 마녀",
      "class": "mage",
      "tier": 4,
-     "hp_mult": 2.0,
-     "role": "보스"
+     "hp_mult": 3.67,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -9752,8 +9757,9 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 3.0,
-     "role": "보스"
+     "hp_mult": 1.55,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -13738,8 +13744,9 @@
      "name_ko": "프로토타입 병기",
      "class": "artillerist",
      "tier": 5,
-     "hp_mult": 4.0,
-     "role": "보스"
+     "hp_mult": 7.35,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -14580,8 +14587,9 @@
      "name_ko": "재의 주술사",
      "class": "shaman",
      "tier": 5,
-     "hp_mult": 3.0,
-     "role": "보스"
+     "hp_mult": 3.06,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -15112,8 +15120,9 @@
      "name_ko": "용의 유령",
      "class": "mage",
      "tier": 5,
-     "hp_mult": 2.0,
-     "role": "보스"
+     "hp_mult": 3.67,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -17329,8 +17338,9 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 3.0,
-     "role": "보스"
+     "hp_mult": 1.27,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -18455,8 +18465,9 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 4.0,
-     "role": "보스"
+     "hp_mult": 7.13,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -19850,8 +19861,9 @@
      "name_ko": "재의 장군",
      "class": "knight",
      "tier": 5,
-     "hp_mult": 3.0,
-     "role": "보스"
+     "hp_mult": 1.27,
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],

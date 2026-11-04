@@ -83,10 +83,10 @@ def trait_md():
     p = os.path.join(REP, "trait_balance.json")
     if not os.path.exists(p): return
     r = json.load(open(p, encoding="utf-8"))
-    L = ["# 부록 B4. 특성 임계값 가치 측정", "", "특성 T를 레벨 L로 활성화한 8인 팀(보유자 L명 + 무작위 비보유자) vs 계층 1:1 매칭 무작위 8인 팀(보유자 제외). 값 = 승률 - 50%.",
+    L = ["# 부록 B4. 특성 임계값 가치 측정", "", "특성 T를 레벨 L로 활성화한 8인 팀(보유자 L명 + 무작위 비보유자) vs 계층 1:1 매칭 무작위 8인 팀(보유자 제외). 같은 시드로 특성 활성/비활성 두 번 싸운 승리 차이의 평균 = **한계 가치**(편성 강약과 분리된 시너지 효과).",
          f"목표: 출신 {r['targets']['origin']}, 직업 {r['targets']['class']} (±4%p). 조정은 traits.json effects의 `balance.mult[레벨]`.", "", "## 수렴 이력", "", "| 반복 | 평균 편차 | 표준편차 | ±4%p 내 |", "|---|---|---|---|"]
     for h in r["history"]: L.append(f"| {h['iter']} | {h['mean_dev']:+.3f} | {h['sd']:.3f} | {h['in_band']:.0%} |")
-    L += ["", "## 특성별 결과", "", "| 구분 | 특성 | 레벨 | 가치(승률-50%) | 목표 | 배율 | 표본 |", "|---|---|---|---|---|---|---|"]
+    L += ["", "## 특성별 결과", "", "| 구분 | 특성 | 레벨 | 한계 가치(승률 차) | 목표 | 배율 | 표본 |", "|---|---|---|---|---|---|---|"]
     for x in r["rows"]:
         L.append(f"| {'출신' if x['kind']=='origin' else '직업'} | {x['name']} | {x['level']} | {x['value']:+.3f} {band(x['value'] - x['target'] + 0.5, 0.04)} | {x['target']:+.2f} | ×{x['mult']:.2f} | {x['n']} |")
     open(os.path.join(OUT, "B4_특성_가치.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
@@ -111,7 +111,9 @@ def context_md():
     if not os.path.exists(p): return
     r = json.load(open(p, encoding="utf-8"))
     sc = r["scenarios"]
-    L = ["# 부록 B6. 상황 의존형 아이템의 유형별 전투 재평가", "", "시나리오: magic_heavy(마법 중심 적), boss_hp(계층 5 보스 체력 ×4), siege(적 성벽), waves(3웨이브), assassin(암살자 캐리어). 값 = Δ승률.", "",
+    bw = r.get("baseline_wr", {})
+    L = ["# 부록 B6. 상황 의존형 아이템의 유형별 전투 재평가", "", "시나리오: magic_heavy(마법 중심 적), boss_hp(계층 4 보스 체력 ×2.2), siege(적 성벽 + 화살비), waves(3웨이브), assassin(암살자 캐리어). 값 = Δ승률.",
+         "기준선(아이템 없음) 승률: " + ", ".join(f"{k} {v:.2f}" for k, v in bw.items()), "",
          "| ID | 아이템 | 분류 | 배율 | 목표 Δ | " + " | ".join(sc) + " | 최적 상황 | 판정 |", "|---|---|---|---|---|" + "---|" * len(sc) + "---|---|"]
     for x in r["rows"]:
         L.append(f"| {x['id']} | {x['name']} | {x['category']} | ×{x['mult']:.2f} | {x['target']:+.2f} | " + " | ".join(f"{x['delta'][s]:+.2f}" if x['delta'].get(s) is not None else "-" for s in sc) + f" | {x['best_scenario']} | {x['verdict']} |")
@@ -123,9 +125,10 @@ def boss_md():
     if not os.path.exists(p): return
     r = json.load(open(p, encoding="utf-8"))
     L = ["# 부록 B7. 스토리 보스 전투 튜닝", "", f"목표(기대 팀): {r['targets']}. 보스 체력 배수(hp_mult)를 보통 승률로 조정, battles.json에 기록.", "",
-         "| ID | 전투 | 막 | 유형 | 레벨 | 보스 | 체력 배수 | 보통 | 어려움 | 악몽 |", "|---|---|---|---|---|---|---|---|---|---|"]
+         "| ID | 전투 | 막 | 유형 | 레벨 | 보스 | 체력 배수 | 전력 배수(보통/어려움/악몽) | 보통 | 어려움 | 악몽 |", "|---|---|---|---|---|---|---|---|---|---|---|"]
     for x in r["rows"]:
-        L.append(f"| {x['id']} | {x['name']} | {x['act']} | {x['type']} | {x['level']} | {x['boss']} | ×{x['hp_mult']:.2f} | {x['wr']['normal']:.2f} | {x['wr']['hard']:.2f} | {x['wr']['nightmare']:.2f} |")
+        pmv = x.get("power_mult", {})
+        L.append(f"| {x['id']} | {x['name']} | {x['act']} | {x['type']} | {x['level']} | {x['boss']} | ×{x['hp_mult']:.2f} | {pmv.get('normal', 1):.2f}/{pmv.get('hard', 1):.2f}/{pmv.get('nightmare', 1):.2f} | {x['wr']['normal']:.2f} | {x['wr']['hard']:.2f} | {x['wr']['nightmare']:.2f} |")
     open(os.path.join(OUT, "B7_보스_튜닝.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 

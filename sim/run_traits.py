@@ -3,7 +3,8 @@
 특성(출신/직업) 임계값 가치 측정 및 조정.
 
 측정: 특성 T를 레벨 L로 활성화한 8인 팀 A(보유자 L명 + 무작위 비보유자) vs 계층 매칭 무작위 8인 팀 B.
-      A의 승률 - 50% = 해당 임계값의 '시너지 묶음 가치'(보유자 개개인은 영웅 밸런스로 등가이므로).
+      같은 시드로 '특성 활성'과 '특성 비활성(disable_traits)' 두 번 싸워 승리 차이의 평균 = 그 임계값의 **한계 가치**.
+      (편성 자체의 강약 — 예: 수호자 6명은 화력 부족 — 을 분리해 시너지 효과만 잰다.)
 목표: 출신 2/4/6/8 → +5/+12/+20/+28%p, 직업 2/4/6 → +6/+15/+25%p (±4%p).
 조정: traits.json effects에 balance.mult[level] 배율을 두고 엔진이 리스트형 수치에 곱한다.
 출력: sim/reports/trait_balance.json, data/traits.json 갱신
@@ -16,7 +17,7 @@ from engine import GameData, Battle
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(ROOT, "data")
 REP = os.path.join(os.path.dirname(__file__), "reports")
-TARGET_ORIGIN = {2: 0.05, 4: 0.12, 6: 0.20, 8: 0.28}
+TARGET_ORIGIN = {2: 0.05, 4: 0.12, 6: 0.20, 8: 0.28}   # 한계 가치(승률 차이) 목표
 TARGET_CLASS = {2: 0.06, 4: 0.15, 6: 0.25}
 _G = {}
 
@@ -26,12 +27,17 @@ def _init(heroes_doc, traits_doc):
 
 
 def _fight(args):
+    """같은 시드·편성으로 특성 활성/비활성 2회 → 한계 가치(활성 승 - 비활성 승)."""
     a_ids, b_ids, star, seed, key = args
     d = _G["d"]
     side = seed & 1
     A = [d.hero_spec(h, star) for h in a_ids]; B = [d.hero_spec(h, star) for h in b_ids]
-    r = Battle(d, A, B, seed=seed).run() if side == 0 else Battle(d, B, A, seed=seed).run()
-    return key, 1 if r["winner"] == side else 0
+    out = []
+    for disable in (False, True):
+        rules = {"disable_traits": {side: {key[1]}}} if disable else {}
+        r = Battle(d, A, B, seed=seed, rules=rules).run() if side == 0 else Battle(d, B, A, seed=seed, rules=rules).run()
+        out.append(1 if r["winner"] == side else 0)
+    return key, out[0] - out[1]
 
 
 def build_jobs(heroes, traits, fights, seed_base, team_size=8):
@@ -65,9 +71,9 @@ def build_jobs(heroes, traits, fights, seed_base, team_size=8):
 def evaluate(pool, heroes, traits, fights, seed_base):
     jobs = build_jobs(heroes, traits, fights, seed_base)
     wins = {}; cnt = {}
-    for key, w in pool.imap_unordered(_fight, jobs, chunksize=32):
+    for key, w in pool.imap_unordered(_fight, jobs, chunksize=16):
         wins[key] = wins.get(key, 0) + w; cnt[key] = cnt.get(key, 0) + 1
-    return {k: wins[k] / cnt[k] - 0.5 for k in wins}, {k: cnt[k] for k in cnt}
+    return {k: wins[k] / cnt[k] for k in wins}, {k: cnt[k] for k in cnt}
 
 
 def main():

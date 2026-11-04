@@ -46,7 +46,9 @@ def apply_traits(b, only_units=None):
                     if tr in data.origins or tr in data.classes:
                         counts[tr] = counts.get(tr, 0) + mult
         active = {}
+        disabled = set(b.rules.get("disable_traits", {}).get(team, ()))
         for tr, c in counts.items():
+            if tr in disabled: continue
             if tr in data.origins:
                 lvl = _lvl(c, data.origins[tr]["thresholds"])
             else:
@@ -155,7 +157,8 @@ def t_torga(b, units, holders, eff, lvl, n):
 
 
 def t_lumen(b, units, holders, eff, lvl, n):
-    heal, inv = _v(eff["cheat_death_heal"], lvl), eff["invuln"]
+    heal = _v(eff["cheat_death_heal"], lvl)
+    inv = _v(eff["invuln"], lvl) if isinstance(eff["invuln"], list) else eff["invuln"]
     def on_death(b, u, p, killer):
         if u.state.get("lumen_used"): return None
         u.state["lumen_used"] = True
@@ -165,7 +168,8 @@ def t_lumen(b, units, holders, eff, lvl, n):
 
 
 def t_freelancer(b, units, holders, eff, lvl, n):
-    pct = _v(eff["pct_per_origin"], lvl) * max(0, n - 1)
+    # 기본 보너스 + 다른 출신 1종당 추가 (자유용병만으로 구성된 팀도 기본 보너스는 받는다)
+    pct = _v(eff.get("base_pct", [0, 0, 0, 0]), lvl) + _v(eff["pct_per_origin"], lvl) * max(0, n - 1)
     for u in holders:
         u.mod["ad_pct"] += pct; u.mod["ap"] += pct
 

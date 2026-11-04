@@ -2,7 +2,7 @@
 """
 스토리 결전(decisive)·레이드(raid)·토벌(hunt) 전투의 보스 체력 배수 튜닝.
 목표(기대 팀 기준): 보통 65% / 어려움 45% / 악몽 25% (일반 전투보다 어렵게).
-방법: 각 전투를 난이도별 N회 시뮬레이션 → 보통 승률로 boss.hp_mult를 조정(±25%/라운드), 3라운드. 결과를 battles.json에 기록.
+방법: 각 전투를 난이도별 N회 시뮬레이션 → 보통 승률로 boss.hp_mult(1~5)를, 난이도별 승률로 difficulties[diff].tuned_power_mult(0.35~1.5, 적 HP·AD·AP 배수)를 조정. 결과를 battles.json에 기록.
 출력: sim/reports/boss_tuning.json
 """
 import argparse, json, os, sys, random, statistics, time
@@ -26,8 +26,9 @@ def _init(curve):
 
 
 def _run(args):
-    bid, diff, seed, hp_mult = args
+    bid, diff, seed, hp_mult, pmult = args
     d = _G["d"]; b = _G["b"][bid]
+    b = dict(b); b["difficulties"] = {k: dict(v, tuned_power_mult=pmult.get(k, 1.0)) if isinstance(v, dict) and "rewards" in v else v for k, v in b["difficulties"].items()}
     rng = random.Random(seed)
     allies, enemies, rules = build_scenario(d, b, diff, rng, curve=_G["curve"], boss_hp_override=hp_mult)
     r = Battle(d, allies, enemies, seed=seed, rules=rules).run()
@@ -44,9 +45,10 @@ def main():
     curve = econ.get("enemy_power_curve", {})
     targets = [b for b in doc["battles"] if b["kind"] == "story" and b["enemy"]["boss"] and b["type"] in ("decisive", "raid", "hunt")]
     hp = {b["id"]: b["enemy"]["boss"]["hp_mult"] for b in targets}
+    pm = {b["id"]: {diff: b["difficulties"][diff].get("tuned_power_mult", 1.0) for diff in TARGET} for b in targets}
     hist = []
     for rnd in range(args.rounds + 1):
-        jobs = [(b["id"], diff, 1000 * rnd + i, hp[b["id"]]) for b in targets for diff in TARGET for i in range(args.fights if rnd < args.rounds else args.fights * 2)]
+        jobs = [(b["id"], diff, 1000 * rnd + i, hp[b["id"]], pm[b["id"]]) for b in targets for diff in TARGET for i in range(args.fights if rnd < args.rounds else args.fights * 2)]
         wins = {}
         with Pool(args.procs, initializer=_init, initargs=(curve,)) as pool:
             for bid, diff, w in pool.imap_unordered(_run, jobs, chunksize=8):
@@ -59,13 +61,20 @@ def main():
         for b in targets:
             obs = wr[(b["id"], "normal")]
             f = ((obs + 0.05) / (TARGET["normal"] + 0.05)) ** 0.5
-            hp[b["id"]] = round(max(1.0, min(8.0, hp[b["id"]] * max(0.75, min(1.3, f)))), 2)
+            hp[b["id"]] = round(max(1.0, min(5.0, hp[b["id"]] * max(0.75, min(1.3, f)))), 2)
+            for diff in ("normal", "hard", "nightmare"):
+                obs = wr[(b["id"], diff)]
+                # 전력 배수는 HP·AD·AP에 함께 곱해지므로 완만하게 (지수 0.3)
+                f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.3
+                pm[b["id"]][diff] = round(max(0.35, min(1.5, pm[b["id"]][diff] * max(0.75, min(1.3, f)))), 3)
     for b in targets:
         b["enemy"]["boss"]["hp_mult"] = hp[b["id"]]
         b["enemy"]["boss"]["tuned"] = True
+        for diff in TARGET:
+            b["difficulties"][diff]["tuned_power_mult"] = pm[b["id"]][diff]
     json.dump(doc, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     rows = [dict(id=b["id"], name=b["name_ko"], act=b["act"], type=b["type"], level=b["level"], boss=b["enemy"]["boss"]["name_ko"], hp_mult=hp[b["id"]],
-                 wr={diff: round(wr[(b["id"], diff)], 3) for diff in TARGET}) for b in targets]
+                 power_mult=pm[b["id"]], wr={diff: round(wr[(b["id"], diff)], 3) for diff in TARGET}) for b in targets]
     json.dump({"targets": TARGET, "history": hist, "rows": rows}, open(os.path.join(REP, "boss_tuning.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for r in rows: print(r["id"], r["name"], r["boss"], r["hp_mult"], r["wr"])
 

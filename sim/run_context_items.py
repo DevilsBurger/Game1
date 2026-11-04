@@ -67,8 +67,9 @@ def main():
     mages = [h["id"] for h in heroes_doc["heroes"] if h["tier"] == 3 and h["class"] in ("mage", "shaman")]
     scenarios = {
         "magic_heavy": dict(teams=teams, opp=lambda: [pick("tank", [])] + rng.sample(mages, 3) + [pick("support", [])], rules={}),
-        "boss_hp": dict(teams=teams, opp=lambda: [{"monster": "ash_general", "tier": 5, "hp_mult": 4.0}] + [pick("ad", []), pick("ap", [])], rules={}),
-        "siege": dict(teams=teams, opp=lambda: [structure_spec("성벽", 6000, state={"priority": True, "arrow_aura_pct": 0.8})] + [pick("tank", []), pick("ad", []), pick("ap", [])], rules={}),
+        # 보스/공성은 기준선 승률이 20~80% 구간에 오도록 강도를 맞춘다(0% 또는 100%면 Δ를 잴 수 없음)
+        "boss_hp": dict(teams=teams, opp=lambda: [{"monster": "ash_general", "tier": 4, "hp_mult": 2.2}] + [pick("ad", [])], rules={}),
+        "siege": dict(teams=teams, opp=lambda: [structure_spec("성벽", 2500, state={"priority": True, "arrow_aura_pct": 0.5})] + [pick("tank", []), pick("ad", [])], rules={}),
         "waves": dict(teams=teams, opp=lambda: [pick("tank", []), pick("ad", []), pick("ap", [])], rules={"waves": 3}),
         "assassin": dict(teams=teams_assassin, opp=lambda: [pick("tank", []), pick("bruiser", []), pick("ad", []), pick("ap", []), pick("support", [])], rules={}),
     }
@@ -97,6 +98,11 @@ def main():
     with Pool(args.procs, initializer=_init, initargs=(heroes_doc, items_doc, battles_doc)) as pool:
         for key, mk, w in pool.imap_unordered(_fight, jobs, chunksize=32):
             wins[(key, mk)] = wins.get((key, mk), 0) + w; cnt[(key, mk)] = cnt.get((key, mk), 0) + 1
+    base_wr = {}
+    for scen in scenarios:
+        mks = [mk for (k, mk) in wins if k is None and mk[0] == scen]
+        base_wr[scen] = round(sum(wins[(None, mk)] for mk in mks) / sum(cnt[(None, mk)] for mk in mks), 3)
+    print("baseline win-rate by scenario:", base_wr, flush=True)
     rows = []
     for it in flagged:
         row = dict(id=it["id"], name=it["name_ko"], category=it["category"], mult=it.get("balance", {}).get("mult", 1.0), target=item_target(it), delta={})
@@ -108,7 +114,7 @@ def main():
         row["best_scenario"] = max(row["delta"], key=lambda s: row["delta"][s] if row["delta"][s] is not None else -9)
         row["verdict"] = "상황 특화 OK" if best >= row["target"] - 0.03 else ("전반 과강" if min(v for v in row["delta"].values() if v is not None) > row["target"] + 0.05 else "재설계 필요")
         rows.append(row)
-    json.dump({"scenarios": list(scenarios), "rows": rows}, open(os.path.join(REP, "context_items.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump({"scenarios": list(scenarios), "baseline_wr": base_wr, "rows": rows}, open(os.path.join(REP, "context_items.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"done {len(rows)} items, t={time.time()-t0:.0f}s")
     for r in rows: print(r["name"], r["delta"], r["verdict"])
 

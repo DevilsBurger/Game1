@@ -1,0 +1,3085 @@
+{
+ "engine_version": 1,
+ "dt": 0.05,
+ "count": 41,
+ "vectors": [
+  {
+   "name": "random_0",
+   "seed": 1000,
+   "allies": [
+    {
+     "hero": "H069",
+     "star": 2,
+     "items": [
+      "A033",
+      "I014"
+     ]
+    },
+    {
+     "hero": "H023",
+     "star": 1,
+     "items": [
+      "A032"
+     ]
+    },
+    {
+     "hero": "H105",
+     "star": 3,
+     "items": [
+      "A008",
+      "I042"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H071",
+     "star": 1,
+     "items": [
+      "I023"
+     ]
+    },
+    {
+     "hero": "H029",
+     "star": 3,
+     "items": [
+      "I018"
+     ]
+    },
+    {
+     "hero": "H010",
+     "star": 1,
+     "items": [
+      "A060"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 15.75,
+    "survivors": [
+     "실바나 아엘린",
+     "카게토라"
+    ],
+    "total_damage": {
+     "0": 2407,
+     "1": 6079
+    }
+   }
+  },
+  {
+   "name": "random_1",
+   "seed": 1001,
+   "allies": [
+    {
+     "hero": "H012",
+     "star": 2,
+     "items": [
+      "S008",
+      "A013",
+      "S006"
+     ]
+    },
+    {
+     "hero": "H024",
+     "star": 1,
+     "items": [
+      "A033",
+      "S019"
+     ]
+    },
+    {
+     "hero": "H171",
+     "star": 2,
+     "items": [
+      "S020"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H039",
+     "star": 3,
+     "items": [
+      "I004"
+     ]
+    },
+    {
+     "hero": "H035",
+     "star": 2,
+     "items": [
+      "S017",
+      "A057"
+     ]
+    },
+    {
+     "hero": "H006",
+     "star": 3,
+     "items": [
+      "S010",
+      "S019"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 11.6,
+    "survivors": [
+     "사쿠야",
+     "타츠마",
+     "하워드 크레인"
+    ],
+    "total_damage": {
+     "0": 2497,
+     "1": 6274
+    }
+   }
+  },
+  {
+   "name": "random_2",
+   "seed": 1002,
+   "allies": [
+    {
+     "hero": "H108",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H096",
+     "star": 3,
+     "items": [
+      "A045",
+      "A032",
+      "I005"
+     ]
+    },
+    {
+     "hero": "H131",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H009",
+     "star": 3,
+     "items": [
+      "I004",
+      "A036"
+     ]
+    },
+    {
+     "hero": "H194",
+     "star": 1,
+     "items": [
+      "S022",
+      "S014",
+      "I016"
+     ]
+    },
+    {
+     "hero": "H166",
+     "star": 3,
+     "items": [
+      "S012",
+      "A005"
+     ]
+    },
+    {
+     "hero": "H047",
+     "star": 3,
+     "items": [
+      "I046",
+      "I040",
+      "S023"
+     ]
+    },
+    {
+     "hero": "H186",
+     "star": 2,
+     "items": [
+      "S004",
+      "I012",
+      "I003"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H023",
+     "star": 1,
+     "items": [
+      "I050"
+     ]
+    },
+    {
+     "hero": "H129",
+     "star": 1,
+     "items": [
+      "A036"
+     ]
+    },
+    {
+     "hero": "H175",
+     "star": 3,
+     "items": [
+      "A057"
+     ]
+    },
+    {
+     "hero": "H070",
+     "star": 3,
+     "items": [
+      "I001"
+     ]
+    },
+    {
+     "hero": "H045",
+     "star": 1,
+     "items": [
+      "I017",
+      "S016"
+     ]
+    },
+    {
+     "hero": "H088",
+     "star": 2,
+     "items": [
+      "I023",
+      "I022"
+     ]
+    },
+    {
+     "hero": "H089",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H147",
+     "star": 3,
+     "items": [
+      "I019"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 18.2,
+    "survivors": [
+     "오마르",
+     "윌라",
+     "지크",
+     "핌"
+    ],
+    "total_damage": {
+     "0": 17513,
+     "1": 10761
+    }
+   }
+  },
+  {
+   "name": "random_3",
+   "seed": 1003,
+   "allies": [
+    {
+     "hero": "H178",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H163",
+     "star": 3,
+     "items": [
+      "A041"
+     ]
+    },
+    {
+     "hero": "H104",
+     "star": 3,
+     "items": [
+      "I021"
+     ]
+    },
+    {
+     "hero": "H008",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H083",
+     "star": 3,
+     "items": [
+      "S023",
+      "A024",
+      "I038"
+     ]
+    },
+    {
+     "hero": "H068",
+     "star": 3,
+     "items": [
+      "A045",
+      "A040"
+     ]
+    },
+    {
+     "hero": "H121",
+     "star": 1,
+     "items": [
+      "S018",
+      "I031"
+     ]
+    },
+    {
+     "hero": "H009",
+     "star": 3,
+     "items": [
+      "A044"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H150",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H090",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H112",
+     "star": 2,
+     "items": [
+      "I006",
+      "A035"
+     ]
+    },
+    {
+     "hero": "H094",
+     "star": 2,
+     "items": [
+      "S001",
+      "A023"
+     ]
+    },
+    {
+     "hero": "H007",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H171",
+     "star": 1,
+     "items": [
+      "A029",
+      "S018"
+     ]
+    },
+    {
+     "hero": "H170",
+     "star": 3,
+     "items": [
+      "I036",
+      "A033"
+     ]
+    },
+    {
+     "hero": "H044",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 35.35,
+    "survivors": [
+     "가브리엘 아르망",
+     "마리엘",
+     "베르나",
+     "샤흐라자드",
+     "피피",
+     "헬라"
+    ],
+    "total_damage": {
+     "0": 22052,
+     "1": 32969
+    }
+   }
+  },
+  {
+   "name": "random_4",
+   "seed": 1004,
+   "allies": [
+    {
+     "hero": "H186",
+     "star": 1,
+     "items": [
+      "I005"
+     ]
+    },
+    {
+     "hero": "H095",
+     "star": 1,
+     "items": [
+      "S030",
+      "A005"
+     ]
+    },
+    {
+     "hero": "H058",
+     "star": 1,
+     "items": [
+      "I022",
+      "A033"
+     ]
+    },
+    {
+     "hero": "H146",
+     "star": 3,
+     "items": [
+      "S022"
+     ]
+    },
+    {
+     "hero": "H088",
+     "star": 1,
+     "items": [
+      "S012",
+      "A047",
+      "I008"
+     ]
+    },
+    {
+     "hero": "H024",
+     "star": 2,
+     "items": [
+      "A033",
+      "A047",
+      "A003"
+     ]
+    },
+    {
+     "hero": "H070",
+     "star": 3,
+     "items": [
+      "I002"
+     ]
+    },
+    {
+     "hero": "H130",
+     "star": 3,
+     "items": [
+      "A033",
+      "I032",
+      "I014"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H065",
+     "star": 2,
+     "items": [
+      "A038"
+     ]
+    },
+    {
+     "hero": "H054",
+     "star": 3,
+     "items": [
+      "A026"
+     ]
+    },
+    {
+     "hero": "H086",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H071",
+     "star": 2,
+     "items": [
+      "I050"
+     ]
+    },
+    {
+     "hero": "H107",
+     "star": 1,
+     "items": [
+      "I016"
+     ]
+    },
+    {
+     "hero": "H012",
+     "star": 2,
+     "items": [
+      "S014"
+     ]
+    },
+    {
+     "hero": "H135",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H021",
+     "star": 3,
+     "items": [
+      "A040"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 36.45,
+    "survivors": [
+     "그림로크",
+     "올리버",
+     "우나",
+     "윌라"
+    ],
+    "total_damage": {
+     "0": 26529,
+     "1": 18620
+    }
+   }
+  },
+  {
+   "name": "random_5",
+   "seed": 1005,
+   "allies": [
+    {
+     "hero": "H076",
+     "star": 1,
+     "items": [
+      "I014",
+      "A045",
+      "A022"
+     ]
+    },
+    {
+     "hero": "H032",
+     "star": 1,
+     "items": [
+      "A029",
+      "A008",
+      "A060"
+     ]
+    },
+    {
+     "hero": "H068",
+     "star": 2,
+     "items": [
+      "S030",
+      "A034",
+      "A009"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H132",
+     "star": 3,
+     "items": [
+      "S014"
+     ]
+    },
+    {
+     "hero": "H158",
+     "star": 3,
+     "items": [
+      "A032"
+     ]
+    },
+    {
+     "hero": "H086",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 10.9,
+    "survivors": [
+     "브롬 스톤하트",
+     "세레노",
+     "타이라"
+    ],
+    "total_damage": {
+     "0": 1994,
+     "1": 4676
+    }
+   }
+  },
+  {
+   "name": "random_6",
+   "seed": 1006,
+   "allies": [
+    {
+     "hero": "H006",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H110",
+     "star": 2,
+     "items": [
+      "A029"
+     ]
+    },
+    {
+     "hero": "H170",
+     "star": 2,
+     "items": [
+      "I009"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H130",
+     "star": 2,
+     "items": [
+      "A019",
+      "I004"
+     ]
+    },
+    {
+     "hero": "H191",
+     "star": 2,
+     "items": [
+      "A044",
+      "A004"
+     ]
+    },
+    {
+     "hero": "H035",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 40.05,
+    "survivors": [
+     "가브리엘 아르망",
+     "하워드 크레인"
+    ],
+    "total_damage": {
+     "0": 10571,
+     "1": 7174
+    }
+   }
+  },
+  {
+   "name": "random_7",
+   "seed": 1007,
+   "allies": [
+    {
+     "hero": "H073",
+     "star": 1,
+     "items": [
+      "I012"
+     ]
+    },
+    {
+     "hero": "H044",
+     "star": 2,
+     "items": [
+      "S021"
+     ]
+    },
+    {
+     "hero": "H107",
+     "star": 1,
+     "items": [
+      "S013",
+      "S005"
+     ]
+    },
+    {
+     "hero": "H092",
+     "star": 1,
+     "items": [
+      "S021",
+      "I024"
+     ]
+    },
+    {
+     "hero": "H109",
+     "star": 1,
+     "items": [
+      "S025",
+      "S028",
+      "A017"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H012",
+     "star": 1,
+     "items": [
+      "I018",
+      "A046"
+     ]
+    },
+    {
+     "hero": "H161",
+     "star": 2,
+     "items": [
+      "I029"
+     ]
+    },
+    {
+     "hero": "H004",
+     "star": 1,
+     "items": [
+      "A056",
+      "A057"
+     ]
+    },
+    {
+     "hero": "H133",
+     "star": 3,
+     "items": [
+      "I040"
+     ]
+    },
+    {
+     "hero": "H178",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 21.85,
+    "survivors": [
+     "베가",
+     "에드릭 몬타뉴",
+     "토마스 플레처"
+    ],
+    "total_damage": {
+     "0": 4456,
+     "1": 10436
+    }
+   }
+  },
+  {
+   "name": "random_8",
+   "seed": 1008,
+   "allies": [
+    {
+     "hero": "H055",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H062",
+     "star": 1,
+     "items": [
+      "A028",
+      "S026",
+      "I008"
+     ]
+    },
+    {
+     "hero": "H010",
+     "star": 1,
+     "items": [
+      "A057"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H066",
+     "star": 3,
+     "items": [
+      "I048"
+     ]
+    },
+    {
+     "hero": "H056",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H020",
+     "star": 2,
+     "items": [
+      "A029",
+      "I055"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 12.7,
+    "survivors": [
+     "아스트리드",
+     "엘사"
+    ],
+    "total_damage": {
+     "0": 1417,
+     "1": 6117
+    }
+   }
+  },
+  {
+   "name": "random_9",
+   "seed": 1009,
+   "allies": [
+    {
+     "hero": "H007",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H192",
+     "star": 2,
+     "items": [
+      "S007"
+     ]
+    },
+    {
+     "hero": "H093",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H040",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H120",
+     "star": 2,
+     "items": [
+      "S027",
+      "I005"
+     ]
+    },
+    {
+     "hero": "H058",
+     "star": 2,
+     "items": [
+      "A019",
+      "A038"
+     ]
+    },
+    {
+     "hero": "H107",
+     "star": 1,
+     "items": [
+      "I013",
+      "I028",
+      "S016"
+     ]
+    },
+    {
+     "hero": "H057",
+     "star": 1,
+     "items": [
+      "I022",
+      "I053"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H138",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H177",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H118",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H106",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H151",
+     "star": 1,
+     "items": [
+      "I009"
+     ]
+    },
+    {
+     "hero": "H051",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H105",
+     "star": 1,
+     "items": [
+      "A056"
+     ]
+    },
+    {
+     "hero": "H021",
+     "star": 1,
+     "items": [
+      "A049",
+      "I016"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 18.95,
+    "survivors": [
+     "노리",
+     "마리엘",
+     "에스메",
+     "카라즈",
+     "카탈리나 벨",
+     "크루거",
+     "트리톤 바르"
+    ],
+    "total_damage": {
+     "0": 13761,
+     "1": 5735
+    }
+   }
+  },
+  {
+   "name": "random_10",
+   "seed": 1010,
+   "allies": [
+    {
+     "hero": "H039",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H030",
+     "star": 2,
+     "items": [
+      "I053",
+      "A007",
+      "A006"
+     ]
+    },
+    {
+     "hero": "H119",
+     "star": 2,
+     "items": [
+      "I037",
+      "I023"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H182",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H024",
+     "star": 2,
+     "items": [
+      "A048"
+     ]
+    },
+    {
+     "hero": "H036",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 18.25,
+    "survivors": [
+     "네리사",
+     "호렌"
+    ],
+    "total_damage": {
+     "0": 10291,
+     "1": 4055
+    }
+   }
+  },
+  {
+   "name": "random_11",
+   "seed": 1011,
+   "allies": [
+    {
+     "hero": "H015",
+     "star": 1,
+     "items": [
+      "S028"
+     ]
+    },
+    {
+     "hero": "H141",
+     "star": 1,
+     "items": [
+      "A053",
+      "S028"
+     ]
+    },
+    {
+     "hero": "H017",
+     "star": 2,
+     "items": [
+      "I034",
+      "A052"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H031",
+     "star": 1,
+     "items": [
+      "A020",
+      "A035"
+     ]
+    },
+    {
+     "hero": "H066",
+     "star": 2,
+     "items": [
+      "I001",
+      "A035"
+     ]
+    },
+    {
+     "hero": "H076",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 15.55,
+    "survivors": [
+     "엘라리온",
+     "엘사"
+    ],
+    "total_damage": {
+     "0": 3178,
+     "1": 6525
+    }
+   }
+  },
+  {
+   "name": "random_12",
+   "seed": 1012,
+   "allies": [
+    {
+     "hero": "H076",
+     "star": 1,
+     "items": [
+      "I053"
+     ]
+    },
+    {
+     "hero": "H021",
+     "star": 3,
+     "items": [
+      "A055",
+      "S009"
+     ]
+    },
+    {
+     "hero": "H097",
+     "star": 2,
+     "items": [
+      "A045"
+     ]
+    },
+    {
+     "hero": "H185",
+     "star": 1,
+     "items": [
+      "I008",
+      "I042"
+     ]
+    },
+    {
+     "hero": "H048",
+     "star": 1,
+     "items": [
+      "I048",
+      "I026"
+     ]
+    },
+    {
+     "hero": "H157",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H084",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H114",
+     "star": 1,
+     "items": [
+      "I015",
+      "A011"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H028",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H196",
+     "star": 2,
+     "items": [
+      "I024"
+     ]
+    },
+    {
+     "hero": "H160",
+     "star": 3,
+     "items": [
+      "S018"
+     ]
+    },
+    {
+     "hero": "H143",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H053",
+     "star": 3,
+     "items": [
+      "I031",
+      "A030"
+     ]
+    },
+    {
+     "hero": "H108",
+     "star": 2,
+     "items": [
+      "A024",
+      "A058"
+     ]
+    },
+    {
+     "hero": "H170",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H181",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 26.3,
+    "survivors": [
+     "BLADE-2",
+     "가브리엘 아르망",
+     "갈란드",
+     "로지",
+     "야스민",
+     "토르토",
+     "헬가"
+    ],
+    "total_damage": {
+     "0": 6396,
+     "1": 16648
+    }
+   }
+  },
+  {
+   "name": "random_13",
+   "seed": 1013,
+   "allies": [
+    {
+     "hero": "H026",
+     "star": 2,
+     "items": [
+      "I044",
+      "A045",
+      "A024"
+     ]
+    },
+    {
+     "hero": "H113",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H100",
+     "star": 1,
+     "items": [
+      "A014",
+      "I014",
+      "S025"
+     ]
+    },
+    {
+     "hero": "H092",
+     "star": 3,
+     "items": [
+      "A025"
+     ]
+    },
+    {
+     "hero": "H173",
+     "star": 2,
+     "items": [
+      "I006",
+      "I038"
+     ]
+    },
+    {
+     "hero": "H047",
+     "star": 2,
+     "items": [
+      "I052",
+      "A055"
+     ]
+    },
+    {
+     "hero": "H034",
+     "star": 1,
+     "items": [
+      "I012",
+      "A054",
+      "I017"
+     ]
+    },
+    {
+     "hero": "H001",
+     "star": 1,
+     "items": [
+      "I013"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H114",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H058",
+     "star": 1,
+     "items": [
+      "I049"
+     ]
+    },
+    {
+     "hero": "H066",
+     "star": 2,
+     "items": [
+      "A057",
+      "S022"
+     ]
+    },
+    {
+     "hero": "H003",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H037",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H023",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H049",
+     "star": 3,
+     "items": [
+      "I008"
+     ]
+    },
+    {
+     "hero": "H145",
+     "star": 1,
+     "items": [
+      "I010",
+      "I040"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 38.1,
+    "survivors": [
+     "오마르",
+     "피를리"
+    ],
+    "total_damage": {
+     "0": 33326,
+     "1": 18510
+    }
+   }
+  },
+  {
+   "name": "random_14",
+   "seed": 1014,
+   "allies": [
+    {
+     "hero": "H135",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H026",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H183",
+     "star": 1,
+     "items": [
+      "I035"
+     ]
+    },
+    {
+     "hero": "H013",
+     "star": 3,
+     "items": [
+      "A039",
+      "S016"
+     ]
+    },
+    {
+     "hero": "H106",
+     "star": 2,
+     "items": [
+      "A018",
+      "A051"
+     ]
+    },
+    {
+     "hero": "H188",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H121",
+     "star": 1,
+     "items": [
+      "S019"
+     ]
+    },
+    {
+     "hero": "H158",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H101",
+     "star": 2,
+     "items": [
+      "A009",
+      "S027"
+     ]
+    },
+    {
+     "hero": "H088",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H176",
+     "star": 2,
+     "items": [
+      "S005"
+     ]
+    },
+    {
+     "hero": "H049",
+     "star": 2,
+     "items": [
+      "A018",
+      "S023"
+     ]
+    },
+    {
+     "hero": "H171",
+     "star": 3,
+     "items": [
+      "A032",
+      "I051"
+     ]
+    },
+    {
+     "hero": "H175",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H107",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H113",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 15.65,
+    "survivors": [
+     "AEGIS-1",
+     "그림로크",
+     "라일라",
+     "레이븐",
+     "말라키",
+     "안젤로",
+     "클레어"
+    ],
+    "total_damage": {
+     "0": 9582,
+     "1": 17382
+    }
+   }
+  },
+  {
+   "name": "random_15",
+   "seed": 1015,
+   "allies": [
+    {
+     "hero": "H096",
+     "star": 3,
+     "items": [
+      "I035",
+      "S015",
+      "I026"
+     ]
+    },
+    {
+     "hero": "H194",
+     "star": 2,
+     "items": [
+      "S020"
+     ]
+    },
+    {
+     "hero": "H108",
+     "star": 2,
+     "items": [
+      "A026",
+      "A052"
+     ]
+    },
+    {
+     "hero": "H170",
+     "star": 3,
+     "items": [
+      "A032",
+      "S009"
+     ]
+    },
+    {
+     "hero": "H046",
+     "star": 1,
+     "items": [
+      "I027"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H027",
+     "star": 3,
+     "items": [
+      "I014",
+      "S018"
+     ]
+    },
+    {
+     "hero": "H173",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H162",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H019",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H061",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 42.55,
+    "survivors": [],
+    "total_damage": {
+     "0": 19630,
+     "1": 20404
+    }
+   }
+  },
+  {
+   "name": "random_16",
+   "seed": 1016,
+   "allies": [
+    {
+     "hero": "H176",
+     "star": 2,
+     "items": [
+      "A003",
+      "I018",
+      "A055"
+     ]
+    },
+    {
+     "hero": "H103",
+     "star": 3,
+     "items": [
+      "A047",
+      "A027",
+      "I013"
+     ]
+    },
+    {
+     "hero": "H191",
+     "star": 3,
+     "items": [
+      "A052",
+      "I023",
+      "A029"
+     ]
+    },
+    {
+     "hero": "H046",
+     "star": 2,
+     "items": [
+      "I004",
+      "I029",
+      "I010"
+     ]
+    },
+    {
+     "hero": "H143",
+     "star": 3,
+     "items": [
+      "A039",
+      "A028"
+     ]
+    },
+    {
+     "hero": "H064",
+     "star": 1,
+     "items": [
+      "A033",
+      "A005",
+      "I009"
+     ]
+    },
+    {
+     "hero": "H131",
+     "star": 1,
+     "items": [
+      "A060"
+     ]
+    },
+    {
+     "hero": "H168",
+     "star": 1,
+     "items": [
+      "A055",
+      "I004",
+      "A035"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H048",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H128",
+     "star": 2,
+     "items": [
+      "S025"
+     ]
+    },
+    {
+     "hero": "H133",
+     "star": 2,
+     "items": [
+      "I019",
+      "A034"
+     ]
+    },
+    {
+     "hero": "H179",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H002",
+     "star": 1,
+     "items": [
+      "I033",
+      "S018"
+     ]
+    },
+    {
+     "hero": "H124",
+     "star": 1,
+     "items": [
+      "S010",
+      "S017"
+     ]
+    },
+    {
+     "hero": "H040",
+     "star": 2,
+     "items": [
+      "S013"
+     ]
+    },
+    {
+     "hero": "H073",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 16.55,
+    "survivors": [
+     "GHOST-3",
+     "갈란드",
+     "나디아",
+     "로완",
+     "바실",
+     "스니크",
+     "아스트라",
+     "안젤로"
+    ],
+    "total_damage": {
+     "0": 16076,
+     "1": 6294
+    }
+   }
+  },
+  {
+   "name": "random_17",
+   "seed": 1017,
+   "allies": [
+    {
+     "hero": "H090",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H059",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H085",
+     "star": 2,
+     "items": [
+      "I027",
+      "I051",
+      "A011"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H182",
+     "star": 1,
+     "items": [
+      "I031",
+      "A040"
+     ]
+    },
+    {
+     "hero": "H110",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H192",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 9.45,
+    "survivors": [
+     "블랙 모건",
+     "토르딘 아이언핸드",
+     "헬라"
+    ],
+    "total_damage": {
+     "0": 3284,
+     "1": 832
+    }
+   }
+  },
+  {
+   "name": "random_18",
+   "seed": 1018,
+   "allies": [
+    {
+     "hero": "H166",
+     "star": 1,
+     "items": [
+      "S015",
+      "A046"
+     ]
+    },
+    {
+     "hero": "H168",
+     "star": 2,
+     "items": [
+      "A040",
+      "A035"
+     ]
+    },
+    {
+     "hero": "H115",
+     "star": 1,
+     "items": [
+      "I048",
+      "I031"
+     ]
+    },
+    {
+     "hero": "H187",
+     "star": 1,
+     "items": [
+      "A046",
+      "S014",
+      "A028"
+     ]
+    },
+    {
+     "hero": "H112",
+     "star": 1,
+     "items": [
+      "A019"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H117",
+     "star": 2,
+     "items": [
+      "A019",
+      "I039"
+     ]
+    },
+    {
+     "hero": "H188",
+     "star": 2,
+     "items": [
+      "S006",
+      "A038"
+     ]
+    },
+    {
+     "hero": "H011",
+     "star": 1,
+     "items": [
+      "I009",
+      "S006"
+     ]
+    },
+    {
+     "hero": "H107",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H014",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 32.7,
+    "survivors": [
+     "아그네스"
+    ],
+    "total_damage": {
+     "0": 7658,
+     "1": 6943
+    }
+   }
+  },
+  {
+   "name": "random_19",
+   "seed": 1019,
+   "allies": [
+    {
+     "hero": "H122",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H143",
+     "star": 3,
+     "items": [
+      "S005",
+      "I026",
+      "A028"
+     ]
+    },
+    {
+     "hero": "H057",
+     "star": 2,
+     "items": [
+      "A005"
+     ]
+    },
+    {
+     "hero": "H080",
+     "star": 1,
+     "items": [
+      "A052"
+     ]
+    },
+    {
+     "hero": "H042",
+     "star": 3,
+     "items": [
+      "A015",
+      "A006",
+      "A020"
+     ]
+    },
+    {
+     "hero": "H051",
+     "star": 1,
+     "items": [
+      "A052"
+     ]
+    },
+    {
+     "hero": "H119",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H124",
+     "star": 3,
+     "items": [
+      "S026",
+      "I017",
+      "A040"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H089",
+     "star": 2,
+     "items": [
+      "I035",
+      "I044"
+     ]
+    },
+    {
+     "hero": "H129",
+     "star": 2,
+     "items": [
+      "I033",
+      "I036"
+     ]
+    },
+    {
+     "hero": "H169",
+     "star": 2,
+     "items": [
+      "I040"
+     ]
+    },
+    {
+     "hero": "H120",
+     "star": 1,
+     "items": [
+      "A014"
+     ]
+    },
+    {
+     "hero": "H126",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H073",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H116",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H193",
+     "star": 3,
+     "items": [
+      "I013",
+      "A025"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 26.4,
+    "survivors": [
+     "네리사",
+     "카탈리나 벨",
+     "피트",
+     "히데요"
+    ],
+    "total_damage": {
+     "0": 22153,
+     "1": 18900
+    }
+   }
+  },
+  {
+   "name": "random_20",
+   "seed": 1020,
+   "allies": [
+    {
+     "hero": "H157",
+     "star": 3,
+     "items": [
+      "A029"
+     ]
+    },
+    {
+     "hero": "H115",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H007",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H048",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H042",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H087",
+     "star": 2,
+     "items": [
+      "I045"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 19.3,
+    "survivors": [
+     "라가르",
+     "마리엘"
+    ],
+    "total_damage": {
+     "0": 5827,
+     "1": 3506
+    }
+   }
+  },
+  {
+   "name": "random_21",
+   "seed": 1021,
+   "allies": [
+    {
+     "hero": "H143",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H135",
+     "star": 2,
+     "items": [
+      "A006"
+     ]
+    },
+    {
+     "hero": "H013",
+     "star": 3,
+     "items": [
+      "I044",
+      "S001"
+     ]
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H159",
+     "star": 1,
+     "items": [
+      "A040",
+      "A048"
+     ]
+    },
+    {
+     "hero": "H172",
+     "star": 1,
+     "items": [
+      "S010",
+      "A025"
+     ]
+    },
+    {
+     "hero": "H062",
+     "star": 2,
+     "items": [
+      "I041"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 12.85,
+    "survivors": [
+     "갈란드",
+     "핀"
+    ],
+    "total_damage": {
+     "0": 5169,
+     "1": 3003
+    }
+   }
+  },
+  {
+   "name": "random_22",
+   "seed": 1022,
+   "allies": [
+    {
+     "hero": "H037",
+     "star": 1,
+     "items": [
+      "I031",
+      "I025",
+      "A023"
+     ]
+    },
+    {
+     "hero": "H050",
+     "star": 3,
+     "items": [
+      "I005"
+     ]
+    },
+    {
+     "hero": "H059",
+     "star": 2,
+     "items": [
+      "A005",
+      "S027",
+      "A056"
+     ]
+    },
+    {
+     "hero": "H077",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H191",
+     "star": 2,
+     "items": [
+      "S029",
+      "A022"
+     ]
+    },
+    {
+     "hero": "H173",
+     "star": 2,
+     "items": [
+      "I039"
+     ]
+    },
+    {
+     "hero": "H113",
+     "star": 3,
+     "items": [
+      "I049"
+     ]
+    },
+    {
+     "hero": "H130",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H039",
+     "star": 2,
+     "items": [
+      "A023",
+      "S010"
+     ]
+    },
+    {
+     "hero": "H181",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H157",
+     "star": 2,
+     "items": [
+      "S015"
+     ]
+    },
+    {
+     "hero": "H187",
+     "star": 1,
+     "items": [
+      "S025"
+     ]
+    },
+    {
+     "hero": "H053",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H042",
+     "star": 2,
+     "items": [
+      "I007",
+      "I037"
+     ]
+    },
+    {
+     "hero": "H142",
+     "star": 2,
+     "items": [
+      "I033"
+     ]
+    },
+    {
+     "hero": "H045",
+     "star": 2,
+     "items": [
+      "S005",
+      "A023"
+     ]
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 20.2,
+    "survivors": [
+     "말라키",
+     "카림"
+    ],
+    "total_damage": {
+     "0": 17077,
+     "1": 14284
+    }
+   }
+  },
+  {
+   "name": "random_23",
+   "seed": 1023,
+   "allies": [
+    {
+     "hero": "H179",
+     "star": 1,
+     "items": [
+      "A011",
+      "A014"
+     ]
+    },
+    {
+     "hero": "H127",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H123",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H090",
+     "star": 3,
+     "items": [
+      "A034",
+      "A041"
+     ]
+    },
+    {
+     "hero": "H096",
+     "star": 2,
+     "items": [
+      "A045"
+     ]
+    },
+    {
+     "hero": "H032",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 14.85,
+    "survivors": [
+     "오리온 셀레스티아"
+    ],
+    "total_damage": {
+     "0": 4718,
+     "1": 4826
+    }
+   }
+  },
+  {
+   "name": "duel_0",
+   "seed": 2000,
+   "allies": [
+    {
+     "hero": "H062",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H046",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 17.3,
+    "survivors": [
+     "나디아"
+    ],
+    "total_damage": {
+     "0": 1382,
+     "1": 1732
+    }
+   }
+  },
+  {
+   "name": "duel_1",
+   "seed": 2001,
+   "allies": [
+    {
+     "hero": "H167",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H173",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 31.25,
+    "survivors": [
+     "두둠"
+    ],
+    "total_damage": {
+     "0": 1588,
+     "1": 820
+    }
+   }
+  },
+  {
+   "name": "duel_2",
+   "seed": 2002,
+   "allies": [
+    {
+     "hero": "H086",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H053",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 29.2,
+    "survivors": [
+     "브롬 스톤하트"
+    ],
+    "total_damage": {
+     "0": 1220,
+     "1": 2016
+    }
+   }
+  },
+  {
+   "name": "duel_3",
+   "seed": 2003,
+   "allies": [
+    {
+     "hero": "H185",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H116",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 11.0,
+    "survivors": [
+     "헥사"
+    ],
+    "total_damage": {
+     "0": 1086,
+     "1": 1790
+    }
+   }
+  },
+  {
+   "name": "duel_4",
+   "seed": 2004,
+   "allies": [
+    {
+     "hero": "H194",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H037",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 35.25,
+    "survivors": [
+     "류자키"
+    ],
+    "total_damage": {
+     "0": 1076,
+     "1": 2859
+    }
+   }
+  },
+  {
+   "name": "duel_5",
+   "seed": 2005,
+   "allies": [
+    {
+     "hero": "H173",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H141",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 15.9,
+    "survivors": [
+     "아젤리아"
+    ],
+    "total_damage": {
+     "0": 331,
+     "1": 1592
+    }
+   }
+  },
+  {
+   "name": "duel_6",
+   "seed": 2006,
+   "allies": [
+    {
+     "hero": "H063",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H189",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 6.8,
+    "survivors": [
+     "잭 스캐빈"
+    ],
+    "total_damage": {
+     "0": 757,
+     "1": 1099
+    }
+   }
+  },
+  {
+   "name": "duel_7",
+   "seed": 2007,
+   "allies": [
+    {
+     "hero": "H110",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H096",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 23.4,
+    "survivors": [
+     "핌"
+    ],
+    "total_damage": {
+     "0": 693,
+     "1": 1887
+    }
+   }
+  },
+  {
+   "name": "duel_8",
+   "seed": 2008,
+   "allies": [
+    {
+     "hero": "H097",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H042",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 16.25,
+    "survivors": [
+     "히데요"
+    ],
+    "total_damage": {
+     "0": 1027,
+     "1": 1680
+    }
+   }
+  },
+  {
+   "name": "duel_9",
+   "seed": 2009,
+   "allies": [
+    {
+     "hero": "H067",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H147",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 10.15,
+    "survivors": [
+     "니르"
+    ],
+    "total_damage": {
+     "0": 799,
+     "1": 1469
+    }
+   }
+  },
+  {
+   "name": "duel_10",
+   "seed": 2010,
+   "allies": [
+    {
+     "hero": "H094",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H102",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 32.7,
+    "survivors": [
+     "이오"
+    ],
+    "total_damage": {
+     "0": 1319,
+     "1": 3625
+    }
+   }
+  },
+  {
+   "name": "duel_11",
+   "seed": 2011,
+   "allies": [
+    {
+     "hero": "H137",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H180",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 11.4,
+    "survivors": [
+     "테오"
+    ],
+    "total_damage": {
+     "0": 1226,
+     "1": 1101
+    }
+   }
+  },
+  {
+   "name": "waves_3",
+   "seed": 3001,
+   "allies": [
+    {
+     "hero": "H111",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H176",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H167",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H002",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H181",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H061",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H124",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H059",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H177",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "rules": {
+    "waves": [
+     [
+      {
+       "hero": "H061",
+       "star": 1,
+       "items": []
+      },
+      {
+       "hero": "H124",
+       "star": 1,
+       "items": []
+      },
+      {
+       "hero": "H059",
+       "star": 1,
+       "items": []
+      },
+      {
+       "hero": "H177",
+       "star": 1,
+       "items": []
+      }
+     ],
+     [
+      {
+       "hero": "H061",
+       "star": 1,
+       "items": []
+      },
+      {
+       "hero": "H124",
+       "star": 1,
+       "items": []
+      },
+      {
+       "hero": "H059",
+       "star": 1,
+       "items": []
+      },
+      {
+       "hero": "H177",
+       "star": 1,
+       "items": []
+      }
+     ]
+    ]
+   },
+   "expected": {
+    "winner": 0,
+    "time": 25.25,
+    "survivors": [
+     "두둠",
+     "리듬",
+     "세드릭 아스텔",
+     "안젤로"
+    ],
+    "total_damage": {
+     "0": 12883,
+     "1": 4100
+    }
+   }
+  },
+  {
+   "name": "siege_wall",
+   "seed": 3002,
+   "allies": [
+    {
+     "hero": "H111",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H176",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H167",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H002",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H181",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H061",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H124",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H059",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H177",
+     "star": 1,
+     "items": []
+    },
+    {
+     "structure": "성벽",
+     "hp": 6000,
+     "state": {
+      "priority": true,
+      "arrow_aura_pct": 0.8
+     }
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 0,
+    "time": 19.0,
+    "survivors": [
+     "두둠",
+     "리듬",
+     "세드릭 아스텔",
+     "안젤로"
+    ],
+    "total_damage": {
+     "0": 10283,
+     "1": 1177
+    }
+   }
+  },
+  {
+   "name": "guard_altar",
+   "seed": 3003,
+   "allies": [
+    {
+     "hero": "H111",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H176",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H167",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H002",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H181",
+     "star": 1,
+     "items": []
+    },
+    {
+     "structure": "제단",
+     "hp": 2500,
+     "state": {
+      "must_survive": true
+     }
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H061",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H124",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H059",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H177",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {},
+   "expected": {
+    "winner": 1,
+    "time": 29.9,
+    "survivors": [
+     "요나",
+     "제단",
+     "피트"
+    ],
+    "total_damage": {
+     "0": 4382,
+     "1": 6053
+    }
+   }
+  },
+  {
+   "name": "escape_30s",
+   "seed": 3004,
+   "allies": [
+    {
+     "hero": "H111",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H176",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H167",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H002",
+     "star": 1,
+     "items": []
+    },
+    {
+     "hero": "H181",
+     "star": 1,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H061",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H124",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H059",
+     "star": 3,
+     "items": []
+    },
+    {
+     "hero": "H177",
+     "star": 3,
+     "items": []
+    }
+   ],
+   "rules": {
+    "escape": true
+   },
+   "expected": {
+    "winner": 1,
+    "time": 16.4,
+    "survivors": [
+     "마르틴",
+     "블랙 모건",
+     "요나",
+     "피트"
+    ],
+    "total_damage": {
+     "0": 3276,
+     "1": 5988
+    }
+   }
+  },
+  {
+   "name": "assassination",
+   "seed": 3005,
+   "allies": [
+    {
+     "hero": "H111",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H176",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H167",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H002",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H181",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "enemies": [
+    {
+     "hero": "H061",
+     "star": 2,
+     "items": [],
+     "state": {
+      "commander": true
+     }
+    },
+    {
+     "hero": "H124",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H059",
+     "star": 2,
+     "items": []
+    },
+    {
+     "hero": "H177",
+     "star": 2,
+     "items": []
+    }
+   ],
+   "rules": {
+    "assassination": true
+   },
+   "expected": {
+    "winner": 0,
+    "time": 11.6,
+    "survivors": [
+     "두둠",
+     "리듬",
+     "세드릭 아스텔",
+     "안젤로"
+    ],
+    "total_damage": {
+     "0": 7681,
+     "1": 2387
+    }
+   }
+  }
+ ]
+}
