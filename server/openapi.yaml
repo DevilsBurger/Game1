@@ -1,0 +1,935 @@
+openapi: 3.1.0
+info:
+  title: Arken Ashen Wings — Meta API
+  version: 1.0.0-draft
+  description: |
+    《아르켄: 잿빛 날개》 서버 권위 메타 API. 클라이언트(Unity, Arken.Net)와 .NET 게임 서버 사이의 계약.
+    - 모든 상태 변경은 서버 권위(docs/10 §7, docs/15 §3.6). 보상·드랍·호감도 RNG는 서버.
+    - 전투: `/battle/start`가 시드·편성 스냅샷을 발급하고, `/battle/finish`가 클라이언트 결과를 받아 동일 시드로 재시뮬(샘플링 10% + 의심 계정 전수)한다.
+    - 모든 변경 POST는 `Idempotency-Key` 헤더를 받는다(24h 보관, 동일 키 재요청은 최초 응답을 그대로 반환).
+    - 시각은 모두 서버 UTC ISO-8601. 스태미너 회복은 서버가 계산하고 클라이언트는 보간만 한다.
+    - 데이터 ID는 문자열(H001, I008, S001, B0101, HQ001)을 그대로 사용한다(schemas/*.json 참조).
+servers:
+  - url: https://api.arken.example.com/v1
+    description: production (placeholder)
+  - url: https://api-dev.arken.example.com/v1
+    description: development
+security:
+  - bearerAuth: []
+tags:
+  - { name: auth, description: "게스트/연동 로그인, 토큰 갱신" }
+  - { name: profile, description: "프로필·용병 레벨·설정" }
+  - { name: roster, description: "보유 영웅·승급·장비·프리셋" }
+  - { name: inventory, description: "아이템·재료·재화·조합·판매·소모품" }
+  - { name: battle, description: "전투 세션 발급·결과 제출·검증·보상" }
+  - { name: shop, description: "상점 6탭·보석·IAP" }
+  - { name: quest, description: "퀘스트 103·일일 의뢰·출석" }
+  - { name: progress, description: "막/국가/지역/전투 해금 상태" }
+  - { name: config, description: "버전·점검·밸런스 패치" }
+  - { name: mail, description: "우편함" }
+  - { name: ftue, description: "온보딩 단계 저장" }
+  - { name: telemetry, description: "애널리틱스 이벤트 수집" }
+paths:
+  /time:
+    get:
+      tags: [config]
+      security: []
+      summary: 서버 시각
+      operationId: getTime
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/ServerTime' } } } }
+  /config/version:
+    get:
+      tags: [config]
+      security: []
+      summary: 최소 클라이언트 버전·점검 상태·데이터/밸런스 버전
+      operationId: getConfigVersion
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/VersionInfo' } } } }
+        '503': { $ref: '#/components/responses/Maintenance' }
+  /config/balance:
+    get:
+      tags: [config]
+      summary: 밸런스 패치(핫픽스) — Registry 오버레이
+      operationId: getBalancePatch
+      parameters:
+        - { name: If-None-Match, in: header, schema: { type: string }, description: "보유 중인 balance_version ETag" }
+      responses:
+        '200':
+          description: OK
+          headers: { ETag: { schema: { type: string } } }
+          content: { application/json: { schema: { $ref: '#/components/schemas/BalancePatch' } } }
+        '304': { description: "변경 없음" }
+  /auth/guest:
+    post:
+      tags: [auth]
+      security: []
+      summary: 게스트(기기) 로그인 — 계정 생성 또는 복원
+      operationId: authGuest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [device_id, platform, client_version]
+              properties:
+                device_id: { type: string, description: "앱 설치 단위 UUID(키체인/키스토어 보관)" }
+                platform: { type: string, enum: [ios, android, editor] }
+                client_version: { type: string, example: 1.0.0 }
+                locale: { type: string, example: ko-KR }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/TokenPair' } } } }
+        '426': { $ref: '#/components/responses/VersionOutdated' }
+  /auth/link:
+    post:
+      tags: [auth]
+      summary: 외부 계정 연동(Apple/Google) — 기기 변경 복구용
+      operationId: authLink
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [provider, id_token]
+              properties:
+                provider: { type: string, enum: [apple, google, gamecenter, playgames] }
+                id_token: { type: string }
+      responses:
+        '200': { description: "연동 완료", content: { application/json: { schema: { $ref: '#/components/schemas/Profile' } } } }
+        '409': { description: "이미 다른 계정에 연동됨(ACCOUNT_CONFLICT) — 클라이언트가 전환 여부를 묻고 `/auth/switch` 호출", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /auth/switch:
+    post:
+      tags: [auth]
+      summary: 연동된 외부 계정의 기존 데이터로 전환(현재 게스트 데이터 포기)
+      operationId: authSwitch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [provider, id_token, confirm]
+              properties:
+                provider: { type: string, enum: [apple, google, gamecenter, playgames] }
+                id_token: { type: string }
+                confirm: { type: boolean, description: "클라이언트 확인 모달 통과 여부(true 필수)" }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/TokenPair' } } } }
+  /auth/refresh:
+    post:
+      tags: [auth]
+      security: []
+      summary: 액세스 토큰 갱신
+      operationId: authRefresh
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [refresh_token], properties: { refresh_token: { type: string } } } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/TokenPair' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+  /auth/session:
+    delete:
+      tags: [auth]
+      summary: 로그아웃(리프레시 토큰 폐기)
+      operationId: authLogout
+      responses:
+        '204': { description: "OK" }
+  /profile:
+    get:
+      tags: [profile]
+      summary: 프로필·재화·용병 레벨·스태미너 요약
+      operationId: getProfile
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/Profile' } } } }
+    patch:
+      tags: [profile]
+      summary: 닉네임·설정 변경
+      operationId: patchProfile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nickname: { type: string, minLength: 2, maxLength: 12 }
+                settings: { $ref: '#/components/schemas/ClientSettings' }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/Profile' } } } }
+        '409': { description: "닉네임 중복(NICKNAME_TAKEN)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /roster:
+    get:
+      tags: [roster]
+      summary: 보유 영웅 전체(성급·스태미너·호감도·장비)
+      operationId: getRoster
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/Roster' } } } }
+  /roster/{hero_id}:
+    patch:
+      tags: [roster]
+      summary: 즐겨찾기·로비 배치 토글
+      operationId: patchHero
+      parameters: [ { $ref: '#/components/parameters/HeroId' } ]
+      requestBody:
+        content: { application/json: { schema: { type: object, properties: { favorite: { type: boolean }, lobby_display: { type: boolean } } } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/HeroInstance' } } } }
+  /roster/{hero_id}/star-up:
+    post:
+      tags: [roster]
+      summary: 승급(★1→★2→★3). economy.star_up_cost 기준 골드·재료·파편 차감
+      operationId: starUp
+      parameters: [ { $ref: '#/components/parameters/HeroId' }, { $ref: '#/components/parameters/IdempotencyKey' } ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [hero, wallet]
+                properties:
+                  hero: { $ref: '#/components/schemas/HeroInstance' }
+                  wallet: { $ref: '#/components/schemas/Wallet' }
+        '402': { $ref: '#/components/responses/InsufficientFunds' }
+        '409': { description: "이미 최대 성급(STAR_MAX)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /roster/{hero_id}/equip:
+    put:
+      tags: [roster]
+      summary: 장비 슬롯 3개 설정(아이템 인스턴스 ID 배열, null = 해제). 지원 아이템은 슬롯 규칙 서버 검증
+      operationId: setEquipment
+      parameters: [ { $ref: '#/components/parameters/HeroId' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [slots]
+              properties:
+                slots:
+                  type: array
+                  minItems: 3
+                  maxItems: 3
+                  items: { type: [string, 'null'], description: "아이템 인스턴스 ID" }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/HeroInstance' } } } }
+        '409': { description: "다른 영웅이 장착 중(ITEM_IN_USE) 또는 상징 중복(EMBLEM_DUPLICATE)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /roster/presets:
+    get:
+      tags: [roster]
+      summary: 편성 프리셋 목록(최대 10)
+      operationId: getPresets
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Preset' } } } } }
+    put:
+      tags: [roster]
+      summary: 프리셋 전체 저장(클라이언트 소유, 서버는 보관만)
+      operationId: putPresets
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: array, maxItems: 10, items: { $ref: '#/components/schemas/Preset' } } } }
+      responses:
+        '204': { description: "OK" }
+  /inventory:
+    get:
+      tags: [inventory]
+      summary: 아이템 인스턴스·재료·소모품·재화
+      operationId: getInventory
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/Inventory' } } } }
+  /inventory/craft:
+    post:
+      tags: [inventory]
+      summary: 재료 2개 조합 → 완성 아이템(items.json recipes). 상징 조합 포함
+      operationId: craft
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [component_a, component_b]
+              properties:
+                component_a: { type: string, description: "재료 아이템 인스턴스 ID" }
+                component_b: { type: string }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/InventoryDelta' } } } }
+        '422': { description: "레시피 없음(RECIPE_INVALID)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /inventory/sell:
+    post:
+      tags: [inventory]
+      summary: 아이템 판매(구매가 30%). 장착 중이면 거부
+      operationId: sell
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [instance_ids], properties: { instance_ids: { type: array, minItems: 1, maxItems: 50, items: { type: string } } } } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/InventoryDelta' } } } }
+  /inventory/use:
+    post:
+      tags: [inventory]
+      summary: 소모품 사용(스태미너 물약·부대 보급·매력 징표 등). 서약서는 전투 시작 시 사용
+      operationId: useConsumable
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [item_id]
+              properties:
+                item_id: { type: string, pattern: '^X[0-9]{2,3}$' }
+                qty: { type: integer, minimum: 1, default: 1 }
+                target_hero_id: { type: string, description: "영웅 대상 소모품(스태미너 물약·징표)일 때" }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/InventoryDelta' } } } }
+        '429': { description: "일일 사용 한도(DAILY_LIMIT)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /battle/start:
+    post:
+      tags: [battle]
+      summary: 전투 세션 시작 — 조건 검증·스태미너 차감·시드·스냅샷 발급
+      description: |
+        서버는 (1) 전투 해금·난이도 해금, (2) 참전 인원·제약(participation, quest condition), (3) 영웅별 스태미너,
+        (4) 서약서/징표 소모를 검증한 뒤 세션을 만든다. 스냅샷은 서버가 보유 데이터로 구성하므로 클라이언트가 보낸 수치는 무시된다.
+        세션은 10분 후 만료되며, 만료 전 `/battle/finish` 또는 `/battle/abort`가 없으면 패배 처리(스태미너 50% 환불 규칙 적용).
+      operationId: battleStart
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/BattleStartRequest' } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/BattleStartResponse' } } } }
+        '402': { description: "스태미너 부족(STAMINA_INSUFFICIENT)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+        '403': { description: "전투 미해금(BATTLE_LOCKED) 또는 난이도 미해금(DIFFICULTY_LOCKED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+        '409': { description: "진행 중 세션 존재(SESSION_ACTIVE) — `/battle/sessions`로 복구", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+        '422': { description: "편성 조건 불충족(CONDITION_UNMET, details.failed[] 조건 키)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /battle/finish:
+    post:
+      tags: [battle]
+      summary: 전투 결과 제출 → 검증 → 보상
+      description: |
+        클라이언트는 `Battle.Run()`/`Step()` 결과 요약과 `EventChecksum`을 보낸다. 서버는 같은 시드·스냅샷으로 Core DLL을 실행해
+        체크섬을 비교한다(전수 또는 샘플링). 불일치 시 서버 결과를 채택하고 `adopted = server`로 알린다. 보상은 항상 서버 RNG.
+      operationId: battleFinish
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/BattleFinishRequest' } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/BattleFinishResponse' } } } }
+        '404': { description: "세션 없음/만료(SESSION_EXPIRED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /battle/abort:
+    post:
+      tags: [battle]
+      summary: 전투 포기(패배 처리, 스태미너 50% 환불)
+      operationId: battleAbort
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [session_id], properties: { session_id: { type: string } } } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/BattleFinishResponse' } } } }
+  /battle/sessions:
+    get:
+      tags: [battle]
+      summary: 미종료 세션 조회(앱 재시작·오프라인 복구용)
+      operationId: getBattleSessions
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/BattleStartResponse' } } } } }
+  /shop/catalog:
+    get:
+      tags: [shop]
+      summary: 상점 6탭 카탈로그(가격·일일 한도·잔여·월정액 할인 반영)
+      operationId: getShopCatalog
+      parameters:
+        - { name: tab, in: query, schema: { type: string, enum: [forge, armory, relic, supply, gem, sell] } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/ShopCatalog' } } } }
+  /shop/buy:
+    post:
+      tags: [shop]
+      summary: 골드/보석 구매(아이템·재료·소모품·코스메틱)
+      operationId: shopBuy
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [sku, qty]
+              properties:
+                sku: { type: string, description: "카탈로그 sku(아이템 ID 또는 상품 코드)" }
+                qty: { type: integer, minimum: 1, maximum: 99 }
+                currency: { type: string, enum: [gold, gem], description: "두 경로 모두 가능한 소모품일 때 선택" }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/InventoryDelta' } } } }
+        '402': { $ref: '#/components/responses/InsufficientFunds' }
+        '429': { description: "일일 구매 한도(DAILY_LIMIT)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /shop/exchange:
+    post:
+      tags: [shop]
+      summary: 보석 → 골드 일방향 교환(1:100)
+      operationId: shopExchange
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [gems], properties: { gems: { type: integer, minimum: 1, maximum: 10000 } } } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/Wallet' } } } }
+  /shop/iap/verify:
+    post:
+      tags: [shop]
+      summary: 스토어 영수증 검증 → 보석/월정액 지급(Apple App Store Server API / Google Play Developer API)
+      operationId: iapVerify
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [store, product_id, receipt]
+              properties:
+                store: { type: string, enum: [apple, google] }
+                product_id: { type: string, example: com.arken.gem.300 }
+                receipt: { type: string, description: "Apple signedTransaction / Google purchaseToken" }
+                order_id: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, wallet]
+                properties:
+                  status: { type: string, enum: [granted, already_granted, pending] }
+                  wallet: { $ref: '#/components/schemas/Wallet' }
+                  subscription: { $ref: '#/components/schemas/Subscription' }
+        '422': { description: "영수증 무효(RECEIPT_INVALID)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /quests:
+    get:
+      tags: [quest]
+      summary: 퀘스트 103 진행 상태(해금·단계·보상 수령 여부)
+      operationId: getQuests
+      parameters:
+        - { name: kind, in: query, schema: { type: string, enum: [story, hero_chain, origin_pact, class_trial] } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/QuestState' } } } } }
+  /quests/{quest_id}/claim:
+    post:
+      tags: [quest]
+      summary: 완료 퀘스트 보상 수령(확정 영입 포함)
+      operationId: claimQuest
+      parameters:
+        - { name: quest_id, in: path, required: true, schema: { type: string, pattern: '^[A-Z]{2,3}[0-9]{3}$' } }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/RewardGrant' } } } }
+        '409': { description: "미완료(QUEST_INCOMPLETE) 또는 이미 수령(ALREADY_CLAIMED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /daily:
+    get:
+      tags: [quest]
+      summary: 일일 의뢰 3·출석·현상금 주간 상태(리셋 시각 포함)
+      operationId: getDaily
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/DailyState' } } } }
+  /daily/checkin:
+    post:
+      tags: [quest]
+      summary: 출석 보상 수령
+      operationId: dailyCheckin
+      parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/RewardGrant' } } } }
+        '409': { description: "이미 수령(ALREADY_CLAIMED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /daily/commissions/{commission_id}/claim:
+    post:
+      tags: [quest]
+      summary: 일일 의뢰 보상 수령
+      operationId: claimCommission
+      parameters:
+        - { name: commission_id, in: path, required: true, schema: { type: string } }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/RewardGrant' } } } }
+  /progress:
+    get:
+      tags: [progress]
+      summary: 막/국가/지역 해금, 전투별 클리어 난이도·첫 클리어, 호감도 요약
+      operationId: getProgress
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/Progress' } } } }
+  /mail:
+    get:
+      tags: [mail]
+      summary: 우편함(보상 첨부, 30일 보관)
+      operationId: getMail
+      parameters:
+        - { name: cursor, in: query, schema: { type: string } }
+        - { name: limit, in: query, schema: { type: integer, default: 20, maximum: 50 } }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items: { type: array, items: { $ref: '#/components/schemas/Mail' } }
+                  next_cursor: { type: [string, 'null'] }
+  /mail/{mail_id}/claim:
+    post:
+      tags: [mail]
+      summary: 첨부 수령
+      operationId: claimMail
+      parameters:
+        - { name: mail_id, in: path, required: true, schema: { type: string } }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/RewardGrant' } } } }
+  /ftue:
+    get:
+      tags: [ftue]
+      summary: 온보딩 단계 완료 상태(docs/20)
+      operationId: getFtue
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/FtueState' } } } }
+  /ftue/steps:
+    post:
+      tags: [ftue]
+      summary: 단계 완료 기록(멱등, 순서 검증 없음)
+      operationId: completeFtueStep
+      requestBody:
+        required: true
+        content: { application/json: { schema: { type: object, required: [step_id], properties: { step_id: { type: string, example: deploy_drag } } } } }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/FtueState' } } } }
+  /telemetry/events:
+    post:
+      tags: [telemetry]
+      summary: 애널리틱스 이벤트 배치 수집(docs/22). 최대 100개/요청, 64KB
+      operationId: postTelemetry
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/TelemetryBatch' } } }
+      responses:
+        '202': { description: "수락(비동기 처리). 중복 event_id는 무시" }
+        '413': { description: "배치 초과" }
+  /account:
+    delete:
+      tags: [auth]
+      summary: 계정 삭제 요청(개인정보 보호법/GDPR). 7일 유예 후 영구 삭제, 유예 중 로그인 시 취소 가능
+      operationId: deleteAccount
+      responses:
+        '202': { description: "삭제 예약됨" }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer, bearerFormat: JWT, description: "액세스 토큰 1시간, 리프레시 30일" }
+  parameters:
+    HeroId:
+      name: hero_id
+      in: path
+      required: true
+      schema: { type: string, pattern: '^(H[0-9]{3}|P000)$' }
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema: { type: string, format: uuid }
+      description: 클라이언트 생성 UUID. 24시간 내 동일 키는 최초 응답을 재전송(재시도·오프라인 큐 안전)
+  responses:
+    Unauthorized: { description: "토큰 만료/무효(AUTH_EXPIRED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+    InsufficientFunds: { description: "재화 부족(INSUFFICIENT_GOLD/INSUFFICIENT_GEM/INSUFFICIENT_MATERIAL)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+    VersionOutdated: { description: "클라이언트 업데이트 필요(VERSION_OUTDATED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+    Maintenance: { description: "점검 중(MAINTENANCE, details.until)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  schemas:
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+          enum: [AUTH_EXPIRED, AUTH_INVALID, VERSION_OUTDATED, MAINTENANCE, ACCOUNT_CONFLICT, NICKNAME_TAKEN,
+                 INSUFFICIENT_GOLD, INSUFFICIENT_GEM, INSUFFICIENT_MATERIAL, STAMINA_INSUFFICIENT, DAILY_LIMIT,
+                 BATTLE_LOCKED, DIFFICULTY_LOCKED, CONDITION_UNMET, SESSION_ACTIVE, SESSION_EXPIRED, SNAPSHOT_MISMATCH,
+                 STAR_MAX, ITEM_IN_USE, EMBLEM_DUPLICATE, RECIPE_INVALID, RECEIPT_INVALID, QUEST_INCOMPLETE, ALREADY_CLAIMED,
+                 RATE_LIMITED, VALIDATION_ERROR, INTERNAL]
+        message: { type: string, description: "개발자용 영문 메시지. 사용자 문구는 클라이언트 문자열 테이블 `error.{code}`" }
+        details: { type: object, additionalProperties: true }
+        request_id: { type: string }
+    ServerTime:
+      type: object
+      required: [now]
+      properties:
+        now: { type: string, format: date-time }
+        daily_reset_at: { type: string, format: date-time, description: "다음 일일 리셋(KST 05:00)" }
+    VersionInfo:
+      type: object
+      required: [min_client_version, latest_client_version, data_version, balance_version, maintenance]
+      properties:
+        min_client_version: { type: string }
+        latest_client_version: { type: string }
+        data_version: { type: string, description: "data/*.json 번들 버전(Addressables 카탈로그)" }
+        balance_version: { type: string }
+        maintenance: { type: object, properties: { active: { type: boolean }, until: { type: string, format: date-time }, message_key: { type: string } } }
+        cdn_base_url: { type: string, format: uri }
+    TokenPair:
+      type: object
+      required: [access_token, refresh_token, expires_in, player_id, is_new]
+      properties:
+        access_token: { type: string }
+        refresh_token: { type: string }
+        expires_in: { type: integer, description: "초" }
+        player_id: { type: string }
+        is_new: { type: boolean, description: "신규 계정 생성 여부(FTUE 진입 판단)" }
+    ClientSettings:
+      type: object
+      properties:
+        language: { type: string, enum: [ko, en] }
+        battle_speed: { type: integer, enum: [1, 2, 3] }
+        auto_skip: { type: boolean }
+        push_stamina_full: { type: boolean }
+        push_daily_reset: { type: boolean }
+        graphics_tier: { type: string, enum: [low, mid, high, auto] }
+    Wallet:
+      type: object
+      required: [gold, gem, materials]
+      properties:
+        gold: { type: integer, minimum: 0 }
+        gem: { type: integer, minimum: 0 }
+        gem_paid: { type: integer, description: "유료 보석(환불·법적 구분용)" }
+        materials:
+          type: object
+          description: 'M001 영혼의 파편, M002 용의 정수, M003 별의 결정'
+          additionalProperties: { type: integer }
+    Subscription:
+      type: object
+      properties:
+        product_id: { type: string }
+        active: { type: boolean }
+        expires_at: { type: string, format: date-time }
+        daily_gem_claimed: { type: boolean }
+    Profile:
+      type: object
+      required: [player_id, nickname, level, exp, wallet, team_slots, server_time]
+      properties:
+        player_id: { type: string }
+        nickname: { type: string }
+        level: { type: integer, minimum: 1, maximum: 60 }
+        exp: { type: integer }
+        exp_next: { type: integer }
+        team_slots: { type: integer, description: "economy.team_size_by_player_level[level]" }
+        wallet: { $ref: '#/components/schemas/Wallet' }
+        subscription: { $ref: '#/components/schemas/Subscription' }
+        settings: { $ref: '#/components/schemas/ClientSettings' }
+        linked_providers: { type: array, items: { type: string } }
+        created_at: { type: string, format: date-time }
+        server_time: { type: string, format: date-time }
+    HeroInstance:
+      type: object
+      required: [hero_id, star, stamina, stamina_at, affinity, equipment]
+      properties:
+        hero_id: { type: string, pattern: '^(H[0-9]{3}|P000)$' }
+        star: { type: integer, minimum: 1, maximum: 3 }
+        shards: { type: integer, description: "중복 획득 환산 파편(승급 재료)" }
+        stamina: { type: integer, description: "stamina_at 시점의 값. 클라이언트는 6분당 +1로 보간" }
+        stamina_at: { type: string, format: date-time }
+        stamina_max: { type: integer, example: 100 }
+        affinity: { type: integer, minimum: 0, maximum: 100 }
+        equipment: { type: array, minItems: 3, maxItems: 3, items: { type: [string, 'null'] } }
+        favorite: { type: boolean }
+        lobby_display: { type: boolean }
+        acquired_at: { type: string, format: date-time }
+        battles: { type: integer }
+    Roster:
+      type: object
+      required: [heroes, server_time]
+      properties:
+        heroes: { type: array, items: { $ref: '#/components/schemas/HeroInstance' } }
+        affinity_others:
+          type: object
+          description: 미보유 영웅의 호감도(조우 실패 누적)
+          additionalProperties: { type: integer }
+        server_time: { type: string, format: date-time }
+    Preset:
+      type: object
+      required: [name, slots]
+      properties:
+        name: { type: string, maxLength: 12 }
+        slots: { type: array, maxItems: 10, items: { $ref: '#/components/schemas/FormationSlot' } }
+    FormationSlot:
+      type: object
+      required: [hero_id, col, row]
+      properties:
+        hero_id: { type: string }
+        col: { type: integer, minimum: 0, maximum: 7, description: "odd-q 열(아군 0~3)" }
+        row: { type: integer, minimum: 0, maximum: 6 }
+    ItemInstance:
+      type: object
+      required: [instance_id, item_id]
+      properties:
+        instance_id: { type: string }
+        item_id: { type: string, pattern: '^[CIERASNXM][0-9]{2,3}$' }
+        equipped_by: { type: [string, 'null'] }
+        acquired_at: { type: string, format: date-time }
+    Inventory:
+      type: object
+      required: [items, consumables, wallet]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/ItemInstance' } }
+        consumables: { type: object, additionalProperties: { type: integer }, description: 'X.. 아이템 ID → 수량' }
+        wallet: { $ref: '#/components/schemas/Wallet' }
+        daily_limits: { type: object, additionalProperties: { type: object, properties: { used: { type: integer }, max: { type: integer } } } }
+    InventoryDelta:
+      type: object
+      required: [wallet]
+      properties:
+        added: { type: array, items: { $ref: '#/components/schemas/ItemInstance' } }
+        removed: { type: array, items: { type: string }, description: "제거된 instance_id" }
+        consumables: { type: object, additionalProperties: { type: integer } }
+        wallet: { $ref: '#/components/schemas/Wallet' }
+        heroes: { type: array, items: { $ref: '#/components/schemas/HeroInstance' }, description: "영향받은 영웅(스태미너 등)" }
+    BattleStartRequest:
+      type: object
+      required: [battle_id, difficulty, formation]
+      properties:
+        battle_id: { type: string, pattern: '^(S[0-9]{3}|B[0-9]{4}|E[0-9]{3}|Q[0-9]{3}-[1-3])$' }
+        difficulty: { type: string, enum: [normal, hard, nightmare] }
+        formation: { type: array, minItems: 1, maxItems: 10, items: { $ref: '#/components/schemas/FormationSlot' } }
+        pledge_item_id: { type: string, description: "영웅 서약서(조우 전투만)" }
+        skip: { type: boolean, default: false, description: "첫 클리어가 아니면 서버가 바로 결과를 계산해 finish 없이 보상(BattleStartResponse.result 포함)" }
+        client_version: { type: string }
+    BattleStartResponse:
+      type: object
+      required: [session_id, seed, snapshot, snapshot_hash, balance_version, expires_at, server_time]
+      properties:
+        session_id: { type: string }
+        seed: { type: integer, format: int64, description: "xorshift64* 시드(splitmix64 입력). JSON number 범위 내 uint64 하위 53비트 보장" }
+        snapshot: { $ref: '#/components/schemas/BattleSnapshot' }
+        snapshot_hash: { type: string, description: "SHA-256(정규화 JSON) — 클라이언트가 로컬 구성과 비교" }
+        balance_version: { type: string }
+        stamina_charged: { type: object, additionalProperties: { type: integer }, description: "hero_id → 차감량" }
+        expires_at: { type: string, format: date-time }
+        server_time: { type: string, format: date-time }
+        result: { $ref: '#/components/schemas/BattleFinishResponse', description: "skip 요청 시 즉시 결과" }
+    BattleSnapshot:
+      type: object
+      description: 전투 입력의 완전한 사본. Core.Battle은 이 객체와 seed만으로 결정론적으로 실행된다.
+      required: [battle_id, difficulty, allies, enemies, rules]
+      properties:
+        battle_id: { type: string }
+        difficulty: { type: string }
+        allies: { type: array, items: { $ref: '#/components/schemas/UnitSnapshot' } }
+        enemies: { type: array, items: { $ref: '#/components/schemas/UnitSnapshot' } }
+        rules: { type: object, additionalProperties: true, description: "유형별 규칙(웨이브·구조물·호위·시간) battles.json 파생" }
+        enemy_power_mult: { type: number }
+        active_traits: { type: object, additionalProperties: { type: integer } }
+    UnitSnapshot:
+      type: object
+      required: [uid, def_id, star, col, row]
+      properties:
+        uid: { type: string }
+        def_id: { type: string, description: "hero_id 또는 monster key" }
+        star: { type: integer }
+        col: { type: integer }
+        row: { type: integer }
+        items: { type: array, items: { type: string } }
+        stat_overrides: { type: object, additionalProperties: { type: number } }
+    EventChecksum:
+      type: object
+      required: [count, by_type, damage_sum, heal_sum]
+      properties:
+        count: { type: integer }
+        by_type: { type: object, additionalProperties: { type: integer } }
+        damage_sum: { type: number, description: "IEEE double 합(엔진과 동일 순서)" }
+        heal_sum: { type: number }
+    BattleFinishRequest:
+      type: object
+      required: [session_id, outcome, ticks, checksum]
+      properties:
+        session_id: { type: string }
+        outcome: { type: string, enum: [win, lose, timeout] }
+        ticks: { type: integer, description: "경과 틱(DT 0.05s)" }
+        survivors: { type: array, items: { type: string }, description: "생존 아군 uid" }
+        checksum: { $ref: '#/components/schemas/EventChecksum' }
+        stats: { $ref: '#/components/schemas/BattleStats' }
+        skipped: { type: boolean }
+        speed: { type: integer, enum: [1, 2, 3] }
+        client_sim_ms: { type: integer }
+    BattleStats:
+      type: object
+      properties:
+        damage_by_unit: { type: object, additionalProperties: { type: number } }
+        heal_by_unit: { type: object, additionalProperties: { type: number } }
+        kills_by_unit: { type: object, additionalProperties: { type: integer } }
+        no_death: { type: boolean }
+        elapsed_sec: { type: number }
+    BattleFinishResponse:
+      type: object
+      required: [session_id, outcome, verified, adopted, rewards, quest_progress]
+      properties:
+        session_id: { type: string }
+        outcome: { type: string, enum: [win, lose, timeout] }
+        verified: { type: string, enum: [match, mismatch, sampled_out], description: "재시뮬 결과" }
+        adopted: { type: string, enum: [client, server] }
+        server_checksum: { $ref: '#/components/schemas/EventChecksum' }
+        rewards: { $ref: '#/components/schemas/RewardGrant' }
+        first_clear: { type: boolean }
+        quest_progress: { type: array, items: { $ref: '#/components/schemas/QuestStepResult' } }
+        unlocked: { type: array, items: { type: string }, description: "새로 해금된 전투/지역/국가/기능 키" }
+        level_up: { type: object, properties: { from: { type: integer }, to: { type: integer }, team_slots: { type: integer } } }
+        stamina_refund: { type: object, additionalProperties: { type: integer } }
+    RewardGrant:
+      type: object
+      required: [wallet]
+      properties:
+        gold: { type: integer }
+        exp: { type: integer }
+        gem: { type: integer }
+        items: { type: array, items: { $ref: '#/components/schemas/ItemInstance' } }
+        consumables: { type: object, additionalProperties: { type: integer } }
+        materials: { type: object, additionalProperties: { type: integer } }
+        hero_drop:
+          type: object
+          properties:
+            hero_id: { type: string }
+            rolled_pct: { type: number, description: "공개 확률(기본×난이도×서약서+부적, 상한 90)" }
+            acquired: { type: boolean }
+            duplicate: { type: boolean }
+            shards: { type: integer }
+            affinity_delta: { type: integer }
+            affinity: { type: integer }
+            guaranteed_by: { type: string, enum: [affinity_pity, quest, none] }
+        wallet: { $ref: '#/components/schemas/Wallet' }
+    QuestStepResult:
+      type: object
+      required: [quest_id, step, passed]
+      properties:
+        quest_id: { type: string }
+        step: { type: integer }
+        passed: { type: boolean }
+        failed_conditions: { type: array, items: { type: string } }
+    QuestState:
+      type: object
+      required: [quest_id, kind, status, steps]
+      properties:
+        quest_id: { type: string }
+        kind: { type: string, enum: [story, hero_chain, origin_pact, class_trial] }
+        status: { type: string, enum: [locked, available, in_progress, completed, claimed] }
+        steps: { type: array, items: { type: object, properties: { battle_id: { type: string }, done: { type: boolean }, condition: { type: string } } } }
+        unlock_hint: { type: string }
+    DailyState:
+      type: object
+      required: [reset_at, commissions, checkin]
+      properties:
+        reset_at: { type: string, format: date-time }
+        commissions:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              key: { type: string, example: clear_battles:3 }
+              progress: { type: integer }
+              target: { type: integer }
+              claimed: { type: boolean }
+              reward: { $ref: '#/components/schemas/RewardGrant' }
+        checkin: { type: object, properties: { day: { type: integer }, claimed_today: { type: boolean }, streak: { type: integer } } }
+        bounty: { type: object, properties: { week_id: { type: string }, cleared: { type: integer }, total: { type: integer }, ends_at: { type: string, format: date-time } } }
+        stamina_gem_buys: { type: object, properties: { used: { type: integer }, max: { type: integer, example: 10 } } }
+    Progress:
+      type: object
+      required: [act, nations, battles]
+      properties:
+        act: { type: integer, minimum: 1, maximum: 5 }
+        nations: { type: object, additionalProperties: { type: object, properties: { unlocked: { type: boolean }, regions_unlocked: { type: array, items: { type: integer } } } } }
+        battles:
+          type: object
+          description: battle_id → 클리어 상태
+          additionalProperties:
+            type: object
+            properties:
+              cleared: { type: array, items: { type: string, enum: [normal, hard, nightmare] } }
+              first_clear_claimed: { type: array, items: { type: string } }
+              best_time_sec: { type: number }
+              attempts: { type: integer }
+        features: { type: object, additionalProperties: { type: boolean }, description: 'worldmap, heroes, shop, craft, star_up, quests, arena, bounty, gem_shop, hard, nightmare' }
+    BalancePatch:
+      type: object
+      required: [balance_version, generated_at]
+      properties:
+        balance_version: { type: string }
+        generated_at: { type: string, format: date-time }
+        heroes: { type: object, additionalProperties: { type: object, properties: { mult: { type: number }, star_mult: { type: array, items: { type: number } } } } }
+        items: { type: object, additionalProperties: { type: object, properties: { mult: { type: number } } } }
+        traits: { type: object, additionalProperties: { type: object, properties: { mult: { type: array, items: { type: number } } } } }
+        enemy_power_curve: { type: object, additionalProperties: true }
+        tuned_power_mult: { type: object, additionalProperties: { type: number } }
+        economy_overrides: { type: object, additionalProperties: true }
+    ShopCatalog:
+      type: object
+      required: [tabs, server_time]
+      properties:
+        tabs:
+          type: array
+          items:
+            type: object
+            properties:
+              tab: { type: string, enum: [forge, armory, relic, supply, gem, sell] }
+              entries:
+                type: array
+                items:
+                  type: object
+                  required: [sku]
+                  properties:
+                    sku: { type: string }
+                    item_id: { type: string }
+                    name_key: { type: string }
+                    price_gold: { type: integer }
+                    price_gem: { type: integer }
+                    discount_pct: { type: integer }
+                    daily_limit: { type: integer }
+                    daily_used: { type: integer }
+                    store_product_id: { type: string, description: "IAP 상품일 때" }
+        server_time: { type: string, format: date-time }
+    Mail:
+      type: object
+      required: [id, title_key, created_at, expires_at, claimed]
+      properties:
+        id: { type: string }
+        title_key: { type: string }
+        body_key: { type: string }
+        params: { type: object, additionalProperties: true }
+        attachments: { $ref: '#/components/schemas/RewardGrant' }
+        created_at: { type: string, format: date-time }
+        expires_at: { type: string, format: date-time }
+        claimed: { type: boolean }
+    FtueState:
+      type: object
+      required: [steps]
+      properties:
+        steps: { type: object, additionalProperties: { type: string, format: date-time }, description: "step_id → 완료 시각" }
+        completed: { type: boolean, description: "필수 단계(deploy_drag … lobby_coach_shop) 전부 완료" }
+    TelemetryBatch:
+      type: object
+      required: [events]
+      properties:
+        session_id: { type: string }
+        events:
+          type: array
+          maxItems: 100
+          items:
+            type: object
+            required: [event_id, name, ts]
+            properties:
+              event_id: { type: string, format: uuid }
+              name: { type: string, pattern: '^[a-z][a-z0-9_]{2,40}$' }
+              ts: { type: string, format: date-time, description: "클라이언트 시각" }
+              props: { type: object, additionalProperties: true }

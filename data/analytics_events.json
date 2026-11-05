@@ -1,0 +1,650 @@
+{
+ "version": 1,
+ "context": [
+  {
+   "name": "event_id",
+   "type": "uuid",
+   "desc": "클라이언트 생성, 서버 중복 제거 키"
+  },
+  {
+   "name": "ts",
+   "type": "datetime",
+   "desc": "클라이언트 시각(서버 수신 시각 별도 기록)"
+  },
+  {
+   "name": "session_id",
+   "type": "string",
+   "desc": "앱 포그라운드 세션"
+  },
+  {
+   "name": "player_id",
+   "type": "string(hash)",
+   "desc": "분석 저장소에는 해시만"
+  },
+  {
+   "name": "client_version",
+   "type": "string",
+   "desc": ""
+  },
+  {
+   "name": "data_version",
+   "type": "string",
+   "desc": "data/*.json 번들"
+  },
+  {
+   "name": "balance_version",
+   "type": "string",
+   "desc": "BalancePatch"
+  },
+  {
+   "name": "platform",
+   "type": "ios|android",
+   "desc": ""
+  },
+  {
+   "name": "os_version",
+   "type": "string",
+   "desc": ""
+  },
+  {
+   "name": "device_model",
+   "type": "string",
+   "desc": ""
+  },
+  {
+   "name": "device_tier",
+   "type": "low|mid|high",
+   "desc": "GPU·RAM 기준 자동 분류"
+  },
+  {
+   "name": "locale",
+   "type": "string",
+   "desc": "ko-KR 등"
+  },
+  {
+   "name": "player_level",
+   "type": "int",
+   "desc": ""
+  },
+  {
+   "name": "act",
+   "type": "int",
+   "desc": "현재 막"
+  },
+  {
+   "name": "hero_count",
+   "type": "int",
+   "desc": "보유 영웅 수"
+  },
+  {
+   "name": "ab_group",
+   "type": "string",
+   "desc": "실험 배정"
+  },
+  {
+   "name": "network",
+   "type": "wifi|cell|offline",
+   "desc": ""
+  },
+  {
+   "name": "is_subscriber",
+   "type": "bool",
+   "desc": "월정액"
+  }
+ ],
+ "events": [
+  {
+   "name": "app_open",
+   "group": "세션·앱",
+   "source": "client",
+   "props": {
+    "cold_start": "bool",
+    "launch_ms": "int"
+   },
+   "desc": "앱 실행"
+  },
+  {
+   "name": "session_start",
+   "group": "세션·앱",
+   "source": "client",
+   "props": {},
+   "desc": "포그라운드 진입"
+  },
+  {
+   "name": "session_end",
+   "group": "세션·앱",
+   "source": "client",
+   "props": {
+    "duration_sec": "int",
+    "battles": "int",
+    "screens": "int"
+   },
+   "desc": "백그라운드/종료"
+  },
+  {
+   "name": "boot_step",
+   "group": "세션·앱",
+   "source": "client",
+   "props": {
+    "step": "patch|registry|addressables|login",
+    "ms": "int",
+    "ok": "bool"
+   },
+   "desc": "부팅 단계별 시간"
+  },
+  {
+   "name": "error",
+   "group": "세션·앱",
+   "source": "client",
+   "props": {
+    "code": "string",
+    "screen": "string",
+    "endpoint": "string",
+    "http_status": "int"
+   },
+   "desc": "API/런타임 오류(크래시는 Crashlytics)"
+  },
+  {
+   "name": "ftue_step",
+   "group": "FTUE",
+   "source": "client",
+   "props": {
+    "step_id": "string",
+    "elapsed_sec_from_open": "int",
+    "skipped": "bool"
+   },
+   "desc": "20 문서 단계 완료"
+  },
+  {
+   "name": "ftue_complete",
+   "group": "FTUE",
+   "source": "client",
+   "props": {
+    "total_sec": "int"
+   },
+   "desc": "필수 10단계 완료"
+  },
+  {
+   "name": "cutscene_view",
+   "group": "FTUE",
+   "source": "client",
+   "props": {
+    "cutscene_id": "string",
+    "skipped": "bool",
+    "shot_index": "int"
+   },
+   "desc": "컷신 시청/스킵"
+  },
+  {
+   "name": "screen_view",
+   "group": "화면·UI",
+   "source": "client",
+   "props": {
+    "screen_id": "S01..S15",
+    "from_screen": "string",
+    "load_ms": "int"
+   },
+   "desc": "화면 진입"
+  },
+  {
+   "name": "ui_click",
+   "group": "화면·UI",
+   "source": "client",
+   "props": {
+    "screen_id": "string",
+    "element_id": "string"
+   },
+   "desc": "주요 버튼(샘플 10%)"
+  },
+  {
+   "name": "coachmark_shown",
+   "group": "화면·UI",
+   "source": "client",
+   "props": {
+    "key": "string",
+    "dismissed_by": "next|skip|action"
+   },
+   "desc": "코치마크"
+  },
+  {
+   "name": "dialog_view",
+   "group": "화면·UI",
+   "source": "client",
+   "props": {
+    "dialog_id": "string",
+    "result": "string"
+   },
+   "desc": "모달/팝업"
+  },
+  {
+   "name": "battle_prepare",
+   "group": "전투",
+   "source": "client",
+   "props": {
+    "battle_id": "string",
+    "kind": "string",
+    "type": "string",
+    "difficulty": "string",
+    "conditions_met": "bool",
+    "team_size": "int",
+    "team_power": "number"
+   },
+   "desc": "S05/S06 진입"
+  },
+  {
+   "name": "battle_start",
+   "group": "전투",
+   "source": "server",
+   "props": {
+    "session_id": "string",
+    "battle_id": "string",
+    "kind": "string",
+    "type": "string",
+    "difficulty": "string",
+    "team_size": "int",
+    "team_hero_ids": "string[]",
+    "team_stars": "int[]",
+    "items_equipped": "int",
+    "active_traits": "object",
+    "stamina_cost": "int",
+    "pledge_used": "string|null",
+    "attempt_no": "int"
+   },
+   "desc": "세션 발급"
+  },
+  {
+   "name": "battle_end",
+   "group": "전투",
+   "source": "server",
+   "props": {
+    "session_id": "string",
+    "battle_id": "string",
+    "difficulty": "string",
+    "outcome": "win|lose|timeout|abort",
+    "elapsed_sec": "number",
+    "ticks": "int",
+    "skipped": "bool",
+    "speed": "int",
+    "survivors": "int",
+    "no_death": "bool",
+    "verified": "match|mismatch|sampled_out",
+    "adopted": "client|server",
+    "client_sim_ms": "int",
+    "fps_avg": "number",
+    "fps_min": "number"
+   },
+   "desc": "결과 제출·검증"
+  },
+  {
+   "name": "battle_reward",
+   "group": "전투",
+   "source": "server",
+   "props": {
+    "session_id": "string",
+    "gold": "int",
+    "exp": "int",
+    "gem": "int",
+    "items": "string[]",
+    "materials": "object",
+    "first_clear": "bool"
+   },
+   "desc": "보상 지급"
+  },
+  {
+   "name": "battle_retry",
+   "group": "전투",
+   "source": "client",
+   "props": {
+    "battle_id": "string",
+    "attempt_no": "int",
+    "changed_formation": "bool"
+   },
+   "desc": "재도전"
+  },
+  {
+   "name": "hero_acquired",
+   "group": "영웅",
+   "source": "server",
+   "props": {
+    "hero_id": "string",
+    "tier": "int",
+    "origin": "string",
+    "class": "string",
+    "source": "drop|pity|quest|story|gift",
+    "encounter_count": "int",
+    "rolled_pct": "number"
+   },
+   "desc": "영입"
+  },
+  {
+   "name": "hero_duplicate",
+   "group": "영웅",
+   "source": "server",
+   "props": {
+    "hero_id": "string",
+    "shards": "int"
+   },
+   "desc": "중복 → 파편"
+  },
+  {
+   "name": "affinity_change",
+   "group": "영웅",
+   "source": "server",
+   "props": {
+    "hero_id": "string",
+    "delta": "int",
+    "source": "fail|duplicate|charm",
+    "total": "int"
+   },
+   "desc": "호감도"
+  },
+  {
+   "name": "star_up",
+   "group": "영웅",
+   "source": "server",
+   "props": {
+    "hero_id": "string",
+    "from": "int",
+    "to": "int",
+    "gold": "int",
+    "materials": "object"
+   },
+   "desc": "승급"
+  },
+  {
+   "name": "equip_change",
+   "group": "영웅",
+   "source": "client",
+   "props": {
+    "hero_id": "string",
+    "slot": "int",
+    "item_id": "string|null",
+    "prev_item_id": "string|null"
+   },
+   "desc": "장비 변경"
+  },
+  {
+   "name": "preset_save",
+   "group": "영웅",
+   "source": "client",
+   "props": {
+    "preset_index": "int",
+    "slot_count": "int"
+   },
+   "desc": "프리셋"
+  },
+  {
+   "name": "currency_change",
+   "group": "경제·상점",
+   "source": "server",
+   "props": {
+    "currency": "gold|gem|M001|M002|M003",
+    "delta": "int",
+    "balance_after": "int",
+    "reason": "battle_reward|first_clear|quest|sell|buy|craft|star_up|exchange|iap|mail|checkin|commission|subscription",
+    "ref_id": "string"
+   },
+   "desc": "원장 파생(모든 재화 변동)"
+  },
+  {
+   "name": "shop_view",
+   "group": "경제·상점",
+   "source": "client",
+   "props": {
+    "tab": "forge|armory|relic|supply|gem|sell"
+   },
+   "desc": "탭 진입"
+  },
+  {
+   "name": "shop_buy",
+   "group": "경제·상점",
+   "source": "server",
+   "props": {
+    "sku": "string",
+    "item_id": "string",
+    "qty": "int",
+    "currency": "gold|gem",
+    "price": "int",
+    "discount_pct": "int"
+   },
+   "desc": "구매"
+  },
+  {
+   "name": "craft",
+   "group": "경제·상점",
+   "source": "server",
+   "props": {
+    "component_a": "string",
+    "component_b": "string",
+    "result": "string",
+    "first": "bool"
+   },
+   "desc": "조합"
+  },
+  {
+   "name": "sell",
+   "group": "경제·상점",
+   "source": "server",
+   "props": {
+    "item_ids": "string[]",
+    "gold": "int"
+   },
+   "desc": "판매"
+  },
+  {
+   "name": "consumable_use",
+   "group": "경제·상점",
+   "source": "server",
+   "props": {
+    "item_id": "string",
+    "target_hero_id": "string|null",
+    "qty": "int"
+   },
+   "desc": "소모품"
+  },
+  {
+   "name": "exchange",
+   "group": "경제·상점",
+   "source": "server",
+   "props": {
+    "gems": "int",
+    "gold": "int"
+   },
+   "desc": "보석→골드"
+  },
+  {
+   "name": "iap_view",
+   "group": "BM",
+   "source": "client",
+   "props": {
+    "product_id": "string",
+    "screen": "string"
+   },
+   "desc": "상품 노출(클릭 기준)"
+  },
+  {
+   "name": "iap_start",
+   "group": "BM",
+   "source": "client",
+   "props": {
+    "product_id": "string",
+    "price_local": "number",
+    "currency": "string"
+   },
+   "desc": "결제 시작"
+  },
+  {
+   "name": "iap_result",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "product_id": "string",
+    "status": "granted|already_granted|pending|failed|cancelled",
+    "order_hash": "string",
+    "revenue_usd": "number"
+   },
+   "desc": "결제 결과"
+  },
+  {
+   "name": "subscription_state",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "active": "bool",
+    "days_left": "int",
+    "daily_gem_claimed": "bool"
+   },
+   "desc": "월정액 일일 상태"
+  },
+  {
+   "name": "stamina_gem_buy",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "count_today": "int",
+    "gems": "int"
+   },
+   "desc": "보석 스태미너 구매"
+  },
+  {
+   "name": "pledge_use",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "tier": "normal|advanced|legend",
+    "battle_id": "string",
+    "target_hero_id": "string"
+   },
+   "desc": "서약서"
+  },
+  {
+   "name": "charm_use",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "hero_id": "string",
+    "qty": "int",
+    "affinity_after": "int"
+   },
+   "desc": "매력 징표"
+  },
+  {
+   "name": "progress_unlock",
+   "group": "진행·퀘스트",
+   "source": "server",
+   "props": {
+    "kind": "act|nation|region|battle|feature|difficulty",
+    "key": "string"
+   },
+   "desc": "해금"
+  },
+  {
+   "name": "quest_step",
+   "group": "진행·퀘스트",
+   "source": "server",
+   "props": {
+    "quest_id": "string",
+    "step": "int",
+    "passed": "bool",
+    "failed_conditions": "string[]"
+   },
+   "desc": "퀘스트 단계 판정"
+  },
+  {
+   "name": "quest_claim",
+   "group": "진행·퀘스트",
+   "source": "server",
+   "props": {
+    "quest_id": "string",
+    "kind": "string",
+    "reward_hero_id": "string|null"
+   },
+   "desc": "보상 수령"
+  },
+  {
+   "name": "daily_checkin",
+   "group": "진행·퀘스트",
+   "source": "server",
+   "props": {
+    "day": "int",
+    "streak": "int"
+   },
+   "desc": "출석"
+  },
+  {
+   "name": "commission_claim",
+   "group": "진행·퀘스트",
+   "source": "server",
+   "props": {
+    "key": "string"
+   },
+   "desc": "일일 의뢰"
+  },
+  {
+   "name": "mail_claim",
+   "group": "진행·퀘스트",
+   "source": "server",
+   "props": {
+    "mail_id": "string",
+    "type": "string"
+   },
+   "desc": "우편"
+  },
+  {
+   "name": "settings_change",
+   "group": "설정·기술",
+   "source": "client",
+   "props": {
+    "key": "string",
+    "value": "string"
+   },
+   "desc": "설정"
+  },
+  {
+   "name": "push_permission",
+   "group": "설정·기술",
+   "source": "client",
+   "props": {
+    "granted": "bool",
+    "prompt_no": "int"
+   },
+   "desc": "푸시 권한"
+  },
+  {
+   "name": "perf_sample",
+   "group": "설정·기술",
+   "source": "client",
+   "props": {
+    "screen": "string",
+    "fps_avg": "number",
+    "fps_1pct_low": "number",
+    "mem_mb": "int",
+    "units": "int"
+   },
+   "desc": "성능(세션 1% 샘플)"
+  },
+  {
+   "name": "network_retry",
+   "group": "설정·기술",
+   "source": "client",
+   "props": {
+    "endpoint": "string",
+    "attempts": "int",
+    "final_status": "int"
+   },
+   "desc": "재시도"
+  },
+  {
+   "name": "asset_download",
+   "group": "설정·기술",
+   "source": "client",
+   "props": {
+    "bundle": "string",
+    "bytes": "int",
+    "ms": "int",
+    "ok": "bool"
+   },
+   "desc": "어드레서블"
+  }
+ ]
+}
