@@ -13,16 +13,20 @@ items = {i["id"]: i for i in json.load(open(os.path.join(ROOT, "data", "items.js
 MULT_LO, MULT_HI = 0.2, 3.0
 
 def effect_summary(t, L):
-    """임계값 L의 효과 수치 요약(리스트형 수치의 해당 단계 값)."""
+    """임계값 L의 효과 요약: effects가 dict면 리스트형 수치의 해당 단계 값, 문자열이면 그대로(앞 60자)."""
+    idx = t["thresholds"].index(L)
     out = []
-    for e in t.get("effects", []):
-        idx = t["thresholds"].index(L)
-        parts = []
-        for k, v in e.items():
-            if isinstance(v, list) and len(v) == len(t["thresholds"]):
-                parts.append(f"{k}={v[idx]}")
-        if parts: out.append(e.get("type", e.get("kind", "")) + "(" + ", ".join(parts) + ")")
-    return "; ".join(out) or "—"
+    effs = t.get("effects", [])
+    if isinstance(effs, dict): effs = [effs]
+    for e in effs:
+        if isinstance(e, dict):
+            parts = [f"{k}={v[idx]}" for k, v in e.items() if isinstance(v, list) and len(v) == len(t["thresholds"])]
+            out.append((e.get("type") or e.get("kind") or "") + "(" + ", ".join(parts) + ")" if parts else (e.get("type") or e.get("kind") or str(e)[:40]))
+        else:
+            out.append(str(e)[:60])
+    desc = t.get("desc_ko") or t.get("desc") or ""
+    return "; ".join(out) if out else (desc[:60] or "—")
+
 
 rows = []
 tmap = {t["key"]: t for t in traits["origins"] + traits["classes"]}
