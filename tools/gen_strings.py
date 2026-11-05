@@ -60,6 +60,14 @@ def main():
     put("hero.NPC_ELIA.name", "엘리아", "Elia"); put("hero.NPC_ELIA.title", "하론의 치유사", SPECIAL_EN["엘리아"][0]); put("hero.NPC_ELIA.lore", "레온의 연인. 국경 마을 하론의 치유사이자 자신도 모르는 이셀라의 마지막 후손.", SPECIAL_EN["엘리아"][2])
     for it in items["items"]:
         put(f"item.{it['id']}.name", it["name_ko"], it["name_en"]); put(f"item.{it['id']}.desc", it["desc"], item_desc_en(it))
+    # 상황 의존형 아이템 툴팁(부록 B6·B8): sim/reports/context_items.json의 최적 상황 → 2줄째 문구 + 상점 태그
+    SITU = {"magic_heavy": ("마법 피해가 많은 적에게 유리", "Strong against magic-heavy enemies"), "boss_hp": ("체력이 높은 단일 대상(보스)에게 유리", "Strong against high-health bosses"),
+            "siege": ("공성·구조물 전투에 유리", "Strong in siege battles"), "waves": ("연속 웨이브 전투에 유리", "Strong across wave battles"), "assassin": ("암살자·돌진형 캐리어에 장착 시 유리", "Best on assassin or dive carries")}
+    ctx_path = os.path.join(ROOT, "sim", "reports", "context_items.json")
+    if os.path.exists(ctx_path):
+        for r in json.load(open(ctx_path, encoding="utf-8"))["rows"]:
+            ko_, en_ = SITU[r["best_scenario"]]; put(f"item.{r['id']}.situational", ko_, en_)
+    put("ui.shop.tag.situational", "상황 아이템", "Situational")
     for n in nations["nations"]:
         nk = n["key"]; e = NATION_EN[nk]
         put(f"nation.{nk}.name", n["name_ko"], n["name_en"]); put(f"nation.{nk}.desc", n["desc"], e[0]); put(f"nation.{nk}.capital", n["capital"], e[1]); put(f"nation.{nk}.ruler", n["ruler"], e[2])

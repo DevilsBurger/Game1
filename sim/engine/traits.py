@@ -142,11 +142,16 @@ def t_nox(b, units, holders, eff, lvl, n):
 
 
 def t_celestia(b, units, holders, eff, lvl, n):
+    # 수신자별 쿨다운(mana_cd, 기본 1.0s): 8인 수직 구성에서 시전→마나→시전의 연쇄 폭주를 막는다(2~6단계에는 거의 작용하지 않음).
     ap, mana = _v(eff["ap"], lvl), _v(eff["cast_mana_allies"], lvl)
+    cd = eff.get("mana_cd", 1.0)
     def on_cast(b, u, p):
-        for a in b.allies_of(u): a.mana = min(a.mana_max, a.mana + p["mana"])
+        for a in b.allies_of(u):
+            if a is u or a.state.get("celestia_cd", -1.0) > b.t: continue
+            a.state["celestia_cd"] = b.t + p["cd"]
+            a.mana = min(a.mana_max, a.mana + p["mana"])
     for u in holders:
-        u.mod["ap"] += ap; u.on("cast", on_cast, {"mana": mana})
+        u.mod["ap"] += ap; u.on("cast", on_cast, {"mana": mana, "cd": cd})
 
 
 def t_dragonkin(b, units, holders, eff, lvl, n):
@@ -169,6 +174,8 @@ def t_lumen(b, units, holders, eff, lvl, n):
     inv = _v(eff["invuln"], lvl) if isinstance(eff["invuln"], list) else eff["invuln"]
     charges = int(round(_v(eff.get("charges", [1, 2, 3, 4]), lvl)))
     if holders: b.team_state.setdefault(holders[0].team, {})["lumen_charges"] = charges
+    mr = _v(eff.get("mr", [0, 0, 0, 0]), lvl)   # 2단계 즉시 체감 효과(B8 결정): 루멘 영웅 마법 저항
+    for u in holders: u.mod["mr"] += mr
     def on_death(b, u, p, killer):
         ts = b.team_state.setdefault(u.team, {})
         if u.state.get("lumen_used") or ts.get("lumen_charges", 0) <= 0: return None

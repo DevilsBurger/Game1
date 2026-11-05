@@ -102,6 +102,6 @@
 
 ## 9. 클라이언트 구현 메모 (Arken.Net)
 - `ApiClient`: UnityWebRequest + UniTask. 5xx/네트워크 오류는 3회 지수 백오프(1/2/4s, 멱등 키 유지), 401은 리프레시 1회 후 재시도. 변경 요청은 직렬 큐(동시 1건), 읽기는 병렬.
-- DTO: `unity/Generated/Dtos.cs`(게임 데이터)와 별도로 OpenAPI에서 생성한 `NetDtos.cs`(NSwag 또는 openapi-generator `csharp`).
+- DTO: `unity/Generated/Dtos.cs`(게임 데이터)와 별도로 `tools/gen_netdtos.py`가 OpenAPI에서 생성한 `unity/Generated/NetDtos.cs`(네임스페이스 `Arken.Net.Generated`: 스키마 33 + 인라인 중첩 클래스, `ErrorCodes`, `Enums.*` 문자열 상수, `Routes` 메서드+경로 상수). 필드명은 JSON 키 그대로(snake_case)이므로 Newtonsoft/JsonUtility 모두 그대로 매핑된다. `tests/test_openapi.py`가 스펙과의 일치를 검사한다.
 - 목 서버: M3까지는 같은 OpenAPI로 Prism 모킹 + 로컬 JSON 상태, M5에서 실서버 교체(15 §6 WBS).
 - 시각: 모든 화면 타이머는 `server_time` 기준 오프셋으로 계산, 기기 시각 사용 금지.

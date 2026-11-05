@@ -47,6 +47,7 @@ Tests/ EditMode/ (Core 벡터 재현, 데이터 무결성)  PlayMode/ (씬 전�
 | `unity/UI/theme.uss` | UI Toolkit 테마 변수(`--ember-500` …)와 기본 컴포넌트 클래스 | 〃 |
 | `schemas/*.schema.json`, `schemas/enums.json` | 데이터 스키마·열거형 | `tools/gen_schemas.py` |
 | `tests/vectors/battle_vectors.json` | RNG 알려진 답 + 전투 벡터 41(이벤트 체크섬 포함) | `sim/make_vectors.py` |
+- `unity/Generated/NetDtos.cs` — 서버 API 요청/응답 DTO·에러 코드·라우트 상수 (`tools/gen_netdtos.py`, 원본 `server/openapi.yaml`, 21 문서).
 
 ## 3. 모듈 설계
 

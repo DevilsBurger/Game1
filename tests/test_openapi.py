@@ -54,3 +54,13 @@ def test_battle_contract_matches_engine(spec):
     req = spec["components"]["schemas"]["BattleStartRequest"]["properties"]
     assert req["difficulty"]["enum"] == ["normal", "hard", "nightmare"]
     assert req["formation"]["maxItems"] == 10
+
+
+def test_netdtos_generated_from_spec(spec):
+    src = open(os.path.join(ROOT, "unity", "Generated", "NetDtos.cs"), encoding="utf-8").read()
+    for name in spec["components"]["schemas"]:
+        assert f"public sealed class {name} " in src, name
+    for code in spec["components"]["schemas"]["Error"]["properties"]["code"]["enum"]:
+        assert f'public const string {code} = "{code}";' in src
+    ops = sum(1 for p in spec["paths"].values() for m in p if m in ("get", "post", "put", "patch", "delete"))
+    assert src.count("public const string") >= ops

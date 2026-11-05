@@ -10,7 +10,36 @@
   "nightmare": 1.035
  },
  "scope": "story",
- "history": [],
+ "history": [
+  {
+   "step": 0,
+   "mean_cliff": 0.85
+  },
+  {
+   "step": 1,
+   "mean_cliff": 0.575
+  },
+  {
+   "step": 2,
+   "mean_cliff": 0.5979166666666667
+  },
+  {
+   "step": 3,
+   "mean_cliff": 0.5979166666666667
+  },
+  {
+   "step": 4,
+   "mean_cliff": 0.5864583333333333
+  },
+  {
+   "step": 5,
+   "mean_cliff": 0.5950520833333333
+  },
+  {
+   "step": 6,
+   "mean_cliff": 0.5936197916666666
+  }
+ ],
  "rows": [
   {
    "id": "S001",
@@ -497,19 +526,19 @@
    "boss": null,
    "hp_mult": null,
    "cliff": {
-    "normal": 0.498,
-    "hard": 0.412,
-    "nightmare": 0.309
+    "normal": 0.635,
+    "hard": 0.498,
+    "nightmare": 0.36
    },
    "power_mult": {
-    "normal": 0.478,
-    "hard": 0.412,
-    "nightmare": 0.32
+    "normal": 0.61,
+    "hard": 0.498,
+    "nightmare": 0.373
    },
    "wr": {
-    "normal": 0.604,
-    "hard": 0.292,
-    "nightmare": 0.271
+    "normal": 0.812,
+    "hard": 0.771,
+    "nightmare": 0.604
    }
   },
   {
@@ -1147,19 +1176,19 @@
    "boss": null,
    "hp_mult": null,
    "cliff": {
-    "normal": 0.446,
-    "hard": 0.395,
-    "nightmare": 0.326
+    "normal": 0.687,
+    "hard": 0.601,
+    "nightmare": 0.532
    },
    "power_mult": {
-    "normal": 0.428,
-    "hard": 0.395,
-    "nightmare": 0.337
+    "normal": 0.66,
+    "hard": 0.601,
+    "nightmare": 0.551
    },
    "wr": {
-    "normal": 0.479,
-    "hard": 0.146,
-    "nightmare": 0.188
+    "normal": 0.833,
+    "hard": 0.375,
+    "nightmare": 0.167
    }
   },
   {
@@ -1472,19 +1501,19 @@
    "boss": "타락 와이번",
    "hp_mult": 1.5,
    "cliff": {
-    "normal": 0.48,
-    "hard": 0.377,
-    "nightmare": 0.377
+    "normal": 0.721,
+    "hard": 0.549,
+    "nightmare": 0.549
    },
    "power_mult": {
-    "normal": 0.461,
-    "hard": 0.377,
-    "nightmare": 0.39
+    "normal": 0.692,
+    "hard": 0.549,
+    "nightmare": 0.568
    },
    "wr": {
-    "normal": 0.583,
-    "hard": 0.333,
-    "nightmare": 0.208
+    "normal": 0.521,
+    "hard": 0.583,
+    "nightmare": 0.396
    }
   },
   {
@@ -1572,19 +1601,19 @@
    "boss": "용의 유령",
    "hp_mult": 1.5,
    "cliff": {
-    "normal": 0.498,
-    "hard": 0.412,
-    "nightmare": 0.412
+    "normal": 0.755,
+    "hard": 0.618,
+    "nightmare": 0.618
    },
    "power_mult": {
-    "normal": 0.478,
-    "hard": 0.412,
-    "nightmare": 0.426
+    "normal": 0.725,
+    "hard": 0.618,
+    "nightmare": 0.64
    },
    "wr": {
-    "normal": 0.75,
-    "hard": 0.583,
-    "nightmare": 0.417
+    "normal": 0.792,
+    "hard": 0.5,
+    "nightmare": 0.25
    }
   },
   {

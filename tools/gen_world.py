@@ -216,6 +216,7 @@ def add_battle(bid, name, nation_key, region, btype, level, act, mode, comp, dif
 
 # ───────── 1. 스토리 전투 ─────────
 ACT_LEVEL = {1: (3, 18), 2: (18, 48), 3: (48, 78), 4: (78, 90), 5: (90, 100)}
+STORY_COMP_OVERRIDES = {"S020": {"units": 5}, "S046": {"units": 4, "waves": 4}, "S059": {"units": 4, "waves": 4}, "S063": {"units": 5, "waves": 2}}
 story_ids = []
 for idx, (act, nk, region, name, btype, mode, syn, boss, reward_hero) in enumerate(STORY_BATTLES):
     lo, hi = ACT_LEVEL[act]
@@ -224,12 +225,16 @@ for idx, (act, nk, region, name, btype, mode, syn, boss, reward_hero) in enumera
     level = int(round(lo + (hi - lo) * pos / max(1, len(same_act) - 1)))
     mode = mode or BT[btype][3]
     comp = build_composition(nk, level, mode, btype, boss_key=boss)
+    bid = f"S{idx+1:03d}"
+    if bid in STORY_COMP_OVERRIDES:   # B9 콘텐츠 재설계: 기대 팀 대비 2배 이상 강했던 전투의 적 수·웨이브 축소 (rng 소비 없음 → 다른 전투 불변)
+        ov = STORY_COMP_OVERRIDES[bid]
+        comp["units"] = comp["units"][:ov.get("units", len(comp["units"]))]
+        comp["waves"] = ov.get("waves", comp["waves"])
     first = {"gold": gold_for(level, 2.0, 1.0), "gems": 20 + act * 10, "items": [{"pool": "completed", "qty": 1}] if act >= 2 else [{"pool": "component", "qty": 2}]}
     if reward_hero:
         h = HERO_BY_NAME[reward_hero]
         first["hero_guaranteed"] = {"hero_id": h["id"], "name_ko": h["name_ko"], "tier": h["tier"]}
     diffs = make_difficulties(level, btype, nk, first_clear=first)
-    bid = f"S{idx+1:03d}"
     add_battle(bid, name, nk, region, btype, level, act, mode, comp, diffs, syn, "story",
                extra={"story_order": idx + 1, "unlock_after": story_ids[-1] if story_ids else None})
     story_ids.append(bid)

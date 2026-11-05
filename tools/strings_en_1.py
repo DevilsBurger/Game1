@@ -111,7 +111,7 @@ TRAIT_EN = {  # key: (desc_en, synergy_en)
  "celestia": ("The high-magic academy on floating sky islands, guardians of the World Spire.", "Celestia heroes gain Ability Power; casting grants mana to all allies."),
  "dragonkin": ("Dragons in human form, split between the Bluescale (coexistence) and the Ashwing (destruction).", "Dragonkin heroes gain max HP and skill damage."),
  "torga": ("The tribal federation of orcs, beastfolk, giants and goblins on the steppes and mountains.", "Torga heroes gain stacking Attack Damage whenever they take damage or score a kill."),
- "lumen": ("The theocracy of paladins, inquisitors and angel-summoners.", "When a Lumen hero would die, they become briefly invulnerable and heal (limited times per team per battle)."),
+ "lumen": ("The theocracy of paladins, inquisitors and angel-summoners.", "Lumen heroes gain magic resist, and when they would die they become briefly invulnerable and heal (limited times per team per battle)."),
  "freelancer": ("Mercenaries of the Bromel guild — stateless wanderers.", "Freelancer heroes gain a base Attack/Ability Power bonus plus more for every other origin on the team."),
  "knight": ("Frontline tank with high Armor, taunts and shields.", "Allies in the front two columns take reduced damage."),
  "warrior": ("Melee bruiser with high HP and close-range area damage.", "Warriors gain bonus max HP."),

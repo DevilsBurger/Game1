@@ -79,13 +79,15 @@ def main():
     ap.add_argument("--reset", action="store_true", help="보스 체력 배수를 설계값으로 초기화")
     ap.add_argument("--scope", choices=["boss", "story"], default="boss")
     ap.add_argument("--reapply", action="store_true", help="이분 탐색 생략: battles.json에 저장된 power_cliff에 여유 배수만 다시 적용하고 승률만 재측정")
+    ap.add_argument("--ids", type=str, default="", help="쉼표 구분 전투 ID만 튜닝하고 기존 결과에 병합")
     args = ap.parse_args()
+    only_ids = set(x for x in args.ids.split(",") if x)
     path = os.path.join(DATA, "battles.json")
     doc = json.load(open(path, encoding="utf-8"))
     econ = json.load(open(os.path.join(DATA, "economy.json"), encoding="utf-8"))
     curve = econ.get("enemy_power_curve", {})
     if args.scope == "story":
-        targets = [b for b in doc["battles"] if b["kind"] == "story"]
+        targets = [b for b in doc["battles"] if b["kind"] == "story" and (not only_ids or b["id"] in only_ids)]
     else:
         targets = [b for b in doc["battles"] if b["kind"] == "story" and b["enemy"]["boss"] and b["type"] in ("decisive", "raid", "hunt")]
     DESIGN_HP = {"hunt": 2.0, "raid": 4.0, "decisive": 3.0}
@@ -125,7 +127,14 @@ def main():
                  boss=(b["enemy"]["boss"]["name_ko"] if b["enemy"]["boss"] else None), hp_mult=(b["enemy"]["boss"]["hp_mult"] if b["enemy"]["boss"] else None),
                  cliff={d: cliff[(b["id"], d)] for d in TARGET}, power_mult=pm[b["id"]], wr={d: round(wr[(b["id"], d)], 3) for d in TARGET}) for b in targets]
     out_name = "story_tuning.json" if args.scope == "story" else "boss_tuning.json"
-    json.dump({"targets": TARGET, "margin": MARGIN, "scope": args.scope, "history": hist, "rows": rows}, open(os.path.join(REP, out_name), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    outp = os.path.join(REP, out_name)
+    if only_ids and os.path.exists(outp):
+        prev = json.load(open(outp, encoding="utf-8"))
+        rows = sorted([r for r in prev["rows"] if r["id"] not in only_ids] + rows, key=lambda r: r["id"])
+        wr = {(r["id"], d): r["wr"][d] for r in rows for d in TARGET}
+        targets = [b for b in doc["battles"] if b["id"] in {r["id"] for r in rows}]
+        devs = [wr[(b["id"], d)] - TARGET[d] for b in targets for d in TARGET]
+    json.dump({"targets": TARGET, "margin": MARGIN, "scope": args.scope, "history": hist, "rows": rows}, open(outp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for r in rows: print(r["id"], r["name"], r["boss"], r["cliff"], r["wr"])
     if args.scope == "story":
         L = ["# 부록 B9. 스토리 전투 76 개별 튜닝", "",
@@ -137,7 +146,9 @@ def main():
         for r in rows:
             L.append(f"| {r['act']} | {r['id']} | {r['name']} | {r['type']} · {r['mode']} | {r['level']} | {r['boss'] or '—'} | {r['cliff']['normal']:.2f}/{r['cliff']['hard']:.2f}/{r['cliff']['nightmare']:.2f} | {r['power_mult']['normal']:.2f}/{r['power_mult']['hard']:.2f}/{r['power_mult']['nightmare']:.2f} | {r['wr']['normal']:.0%}/{r['wr']['hard']:.0%}/{r['wr']['nightmare']:.0%} |")
         low = [r for r in rows if r["cliff"]["normal"] < 0.5]
-        L += ["", "- 절벽(보통) < 0.5인 전투는 기대 팀 대비 설계 편성이 2배 이상 강하다는 뜻이다(적 수·웨이브 과다). 전력 배수로 맞춰 두었지만 콘텐츠 측 재설계(적 수 감소) 후보: " + (", ".join(f"{r['id']}({r['cliff']['normal']:.2f})" for r in low) if low else "없음") + "."]
+        L += ["", "- 절벽(보통) < 0.5인 전투는 기대 팀 대비 설계 편성이 2배 이상 강하다는 뜻이다(적 수·웨이브 과다). 콘텐츠 측 재설계(적 수 감소) 후보: " + (", ".join(f"{r['id']}({r['cliff']['normal']:.2f})" for r in low) if low else "없음") + ".",
+              "- 1차 결과의 후보 S020·S046·S059·S063은 `tools/gen_world.py STORY_COMP_OVERRIDES`로 적 수·웨이브를 줄인 뒤(`S020 7→5유닛, S046 6×5→4×4, S059 6×5→4×4, S063 7×3→5×2`) `--ids`로 재튜닝했다.",
+              "- 절벽(보통) > 2.4인 전투는 설계 편성이 기대 팀 대비 지나치게 약해 전력 배수 상한(2.5) 근처에 붙은 것이다(어려움·악몽 승률이 목표보다 높게 남을 수 있음). 적 수 증가 후보: " + (", ".join(f"{r['id']}({r['cliff']['normal']:.2f})" for r in rows if r["cliff"]["normal"] > 2.4) or "없음") + "."]
         open(os.path.join(ROOT, "docs", "appendix", "B9_스토리_전투_튜닝.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 

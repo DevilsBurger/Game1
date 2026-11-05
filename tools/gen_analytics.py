@@ -131,7 +131,7 @@ def main():
 - `Track(name, props)`: 공통 컨텍스트 병합 → 메모리 큐 → 디스크 `analytics_queue.jsonl`(최대 5,000건/2MB, 초과 시 오래된 것부터 폐기).
 - 플러시: 20건 또는 30초 또는 백그라운드 진입. 전송 실패는 보존·지수 백오프, `event_id`로 서버 중복 제거.
 - 서버 이벤트는 핸들러 → 큐(Kafka 등) → 같은 스키마로 적재. 원본 JSONL 일별 파티션 → DWH(BigQuery/ClickHouse) `events` 테이블 + 그룹별 뷰.
-- 스키마 검증: CI에서 클라이언트가 발행하는 이벤트 이름·속성이 `data/analytics_events.json`에 있는지 검사(`tests/test_data.py` 확장 예정).
+- 스키마 검증: `tests/test_data.py::test_analytics_dictionary`가 사전의 이름 규칙·속성 수·공통 컨텍스트를 검사한다. Unity 측 `AnalyticsService.Track`은 사전에 없는 이름을 개발 빌드에서 경고로 막는다.
 - 서드파티(Firebase/GA4 등) 미러링은 선택. 사용 시 동일 이름, 속성 25개 제한에 맞춰 축약.
 
 ## 7. 개인정보·보관

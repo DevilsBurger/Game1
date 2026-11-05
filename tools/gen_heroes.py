@@ -131,10 +131,10 @@ ORIGIN_EFFECTS = {
     "grandur":    dict(hook="grandur",    allies_armor=[10, 20, 30, 45], allies_mr=[10, 20, 30, 45], item_mult=[1.15, 1.3, 1.5, 1.8]),
     "neos":       dict(hook="neos",       start_as=[15, 25, 40, 60], start_as_dur=8, kill_explode=[100, 150, 250, 400]),
     "nox":        dict(hook="nox",        omnivamp=[8, 12, 18, 25], wraith_charges=[0, 1, 2, 3], wraith_stat_pct=[30, 30, 35, 40]),
-    "celestia":   dict(hook="celestia",   ap=[20, 35, 55, 80], cast_mana_allies=[5, 8, 12, 20]),
+    "celestia":   dict(hook="celestia",   ap=[20, 35, 55, 80], cast_mana_allies=[5, 8, 12, 20], mana_cd=1.0),  # mana_cd: 수신자별 쿨다운(8인 연쇄 방지, B8)
     "dragonkin":  dict(hook="dragonkin",  hp_pct=[15, 25, 40, 60], skill_dmg_pct=[10, 20, 30, 45]),
     "torga":      dict(hook="torga",      ad_pct_per_stack=[2, 3, 4, 6], max_stacks=10),
-    "lumen":      dict(hook="lumen",      cheat_death_heal=[20, 30, 40, 60], invuln=[1.0, 1.5, 2.0, 2.5], charges=[1, 2, 3, 4]),
+    "lumen":      dict(hook="lumen",      cheat_death_heal=[20, 30, 40, 60], invuln=[1.0, 1.5, 2.0, 2.5], charges=[1, 2, 3, 4], mr=[10, 15, 20, 25]),  # mr: 2단계 즉시 체감 효과(B8)
     "freelancer": dict(hook="freelancer", base_pct=[4, 8, 14, 22], pct_per_origin=[3, 5, 7, 10]),
 }
 CLASS_EFFECTS = {

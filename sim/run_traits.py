@@ -42,13 +42,14 @@ def _fight(args):
     return key, out[0] - out[1]
 
 
-def build_jobs(heroes, traits, fights, seed_base, team_size=8):
+def build_jobs(heroes, traits, fights, seed_base, team_size=8, only=None):
     rng = random.Random(seed_base)
     by_tier = {}
     for h in heroes: by_tier.setdefault(h["tier"], []).append(h["id"])
     hid = {h["id"]: h for h in heroes}
     jobs = []
     specs = [("origin", o["key"], o["thresholds"]) for o in traits["origins"]] + [("class", c["key"], c["thresholds"]) for c in traits["classes"]]
+    if only: specs = [sp for sp in specs if sp[1] in only]
     for kind, key, ths in specs:
         holders = [h["id"] for h in heroes if (h["origin"] if kind == "origin" else h["class"]) == key]
         others = [h["id"] for h in heroes if h["id"] not in holders]
@@ -70,8 +71,8 @@ def build_jobs(heroes, traits, fights, seed_base, team_size=8):
     return jobs
 
 
-def evaluate(pool, heroes, traits, fights, seed_base):
-    jobs = build_jobs(heroes, traits, fights, seed_base)
+def evaluate(pool, heroes, traits, fights, seed_base, only=None):
+    jobs = build_jobs(heroes, traits, fights, seed_base, only=only)
     wins = {}; cnt = {}
     for key, w in pool.imap_unordered(_fight, jobs, chunksize=16):
         wins[key] = wins.get(key, 0) + w; cnt[key] = cnt.get(key, 0) + 1
@@ -82,7 +83,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--iters", type=int, default=3); ap.add_argument("--fights", type=int, default=120); ap.add_argument("--procs", type=int, default=4)
     ap.add_argument("--seed", type=int, default=777)
+    ap.add_argument("--only", type=str, default="", help="쉼표 구분 특성 키만 측정·조정하고 기존 trait_balance.json에 병합")
     args = ap.parse_args()
+    only = set(k for k in args.only.split(",") if k) or None
     heroes_doc = json.load(open(os.path.join(DATA, "heroes.json"), encoding="utf-8"))
     traits_doc = json.load(open(os.path.join(DATA, "traits.json"), encoding="utf-8"))
     heroes = heroes_doc["heroes"]
@@ -92,7 +95,7 @@ def main():
     t0 = time.time()
     for it in range(args.iters + 1):
         with Pool(args.procs, initializer=_init, initargs=(heroes_doc, traits_doc)) as pool:
-            val, n = evaluate(pool, heroes, traits_doc, args.fights if it < args.iters else args.fights * 2, args.seed + it * 10000)
+            val, n = evaluate(pool, heroes, traits_doc, args.fights if it < args.iters else args.fights * 2, args.seed + it * 10000, only=only)
         devs = []
         for (kind, key, L), v in val.items():
             tgt = (TARGET_ORIGIN if kind == "origin" else TARGET_CLASS)[L]
@@ -102,6 +105,7 @@ def main():
         if it == args.iters: break
         for t in traits_doc["origins"] + traits_doc["classes"]:
             kind = "origin" if t in traits_doc["origins"] else "class"
+            if only and t["key"] not in only: continue
             for li, L in enumerate(t["thresholds"]):
                 v = val.get((kind, t["key"], L))
                 if v is None: continue
@@ -118,7 +122,13 @@ def main():
         tgt = (TARGET_ORIGIN if kind == "origin" else TARGET_CLASS)[L]
         ths = next(t["thresholds"] for t in traits_doc["origins"] + traits_doc["classes"] if t["key"] == key)
         rows.append(dict(kind=kind, key=key, name=name[key], level=L, value=round(v, 3), target=tgt, n=n[(kind, key, L)], mult=mult[key][ths.index(L)]))
-    json.dump({"history": history, "targets": {"origin": TARGET_ORIGIN, "class": TARGET_CLASS}, "rows": rows}, open(os.path.join(REP, "trait_balance.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    outp = os.path.join(REP, "trait_balance.json")
+    if only and os.path.exists(outp):
+        prev = json.load(open(outp, encoding="utf-8"))
+        keep = [r for r in prev["rows"] if r["key"] not in only]
+        rows = sorted(keep + rows, key=lambda r: (r["kind"], r["key"], r["level"]))
+        history = prev.get("history", []) + [dict(h, only=sorted(only)) for h in history]
+    json.dump({"history": history, "targets": {"origin": TARGET_ORIGIN, "class": TARGET_CLASS}, "rows": rows}, open(outp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("done")
 
 

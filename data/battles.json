@@ -5380,18 +5380,6 @@
       "name_ko": "바다뱀",
       "class": "dragoon",
       "tier": 3
-     },
-     {
-      "unit": "sea_serpent",
-      "name_ko": "바다뱀",
-      "class": "dragoon",
-      "tier": 3
-     },
-     {
-      "unit": "sea_serpent",
-      "name_ko": "바다뱀",
-      "class": "dragoon",
-      "tier": 3
      }
     ],
     "boss": null,
@@ -5448,8 +5436,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.478,
-     "power_cliff": 0.498
+     "tuned_power_mult": 0.61,
+     "power_cliff": 0.635
     },
     "hard": {
      "name_ko": "어려움",
@@ -5501,8 +5489,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.412,
-     "power_cliff": 0.412
+     "tuned_power_mult": 0.498,
+     "power_cliff": 0.498
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -5558,8 +5546,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.32,
-     "power_cliff": 0.309
+     "tuned_power_mult": 0.373,
+     "power_cliff": 0.36
     },
     "first_clear_bonus": {
      "gold": 1490,
@@ -12140,22 +12128,10 @@
       "name_ko": "뱀파이어 기사",
       "class": "knight",
       "tier": 4
-     },
-     {
-      "unit": "vampire_knight",
-      "name_ko": "뱀파이어 기사",
-      "class": "knight",
-      "tier": 4
-     },
-     {
-      "unit": "vampire_knight",
-      "name_ko": "뱀파이어 기사",
-      "class": "knight",
-      "tier": 4
      }
     ],
     "boss": null,
-    "waves": 5,
+    "waves": 4,
     "structures": [],
     "factions": [
      "뱀파이어 사병"
@@ -12218,8 +12194,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.428,
-     "power_cliff": 0.446
+     "tuned_power_mult": 0.66,
+     "power_cliff": 0.687
     },
     "hard": {
      "name_ko": "어려움",
@@ -12281,8 +12257,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.395,
-     "power_cliff": 0.395
+     "tuned_power_mult": 0.601,
+     "power_cliff": 0.601
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -12348,8 +12324,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.337,
-     "power_cliff": 0.326
+     "tuned_power_mult": 0.551,
+     "power_cliff": 0.532
     },
     "first_clear_bonus": {
      "gold": 3560,
@@ -15753,18 +15729,6 @@
       "name_ko": "재의 병사",
       "class": "warrior",
       "tier": 3
-     },
-     {
-      "unit": "ash_dragonkin",
-      "name_ko": "재의 날개 용족",
-      "class": "duelist",
-      "tier": 4
-     },
-     {
-      "unit": "ash_archer",
-      "name_ko": "재의 사수",
-      "class": "ranger",
-      "tier": 3
      }
     ],
     "boss": {
@@ -15776,7 +15740,7 @@
      "role": "보스",
      "tuned": true
     },
-    "waves": 5,
+    "waves": 4,
     "structures": [],
     "factions": [
      "재의 날개 침입자"
@@ -15839,8 +15803,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.461,
-     "power_cliff": 0.48
+     "tuned_power_mult": 0.692,
+     "power_cliff": 0.721
     },
     "hard": {
      "name_ko": "어려움",
@@ -15902,8 +15866,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.377,
-     "power_cliff": 0.377
+     "tuned_power_mult": 0.549,
+     "power_cliff": 0.549
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15974,8 +15938,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.39,
-     "power_cliff": 0.377
+     "tuned_power_mult": 0.568,
+     "power_cliff": 0.549
     },
     "first_clear_bonus": {
      "gold": 4740,
@@ -16849,18 +16813,6 @@
       "name_ko": "둥지 수호 용족",
       "class": "dragoon",
       "tier": 4
-     },
-     {
-      "unit": "nest_guardian",
-      "name_ko": "둥지 수호 용족",
-      "class": "dragoon",
-      "tier": 4
-     },
-     {
-      "unit": "nest_guardian",
-      "name_ko": "둥지 수호 용족",
-      "class": "dragoon",
-      "tier": 4
      }
     ],
     "boss": {
@@ -16872,7 +16824,7 @@
      "role": "보스",
      "tuned": true
     },
-    "waves": 3,
+    "waves": 2,
     "structures": [],
     "factions": [
      "둥지 수호 용족(시험)"
@@ -16935,8 +16887,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.478,
-     "power_cliff": 0.498
+     "tuned_power_mult": 0.725,
+     "power_cliff": 0.755
     },
     "hard": {
      "name_ko": "어려움",
@@ -16998,8 +16950,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.412,
-     "power_cliff": 0.412
+     "tuned_power_mult": 0.618,
+     "power_cliff": 0.618
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -17070,8 +17022,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.426,
-     "power_cliff": 0.412
+     "tuned_power_mult": 0.64,
+     "power_cliff": 0.618
     },
     "first_clear_bonus": {
      "gold": 5020,

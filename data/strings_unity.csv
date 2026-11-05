@@ -355,7 +355,7 @@ origin.torga.desc,초원과 산악의 부족 연맹. 오크·수인·거인·고
 origin.torga.synergy,토르가 영웅은 적을 처치하거나 피해를 받을 때마다 공격력이 누적 증가한다.,Torga heroes gain stacking Attack Damage whenever they take damage or score a kill.
 origin.lumen.name,루멘,Lumen
 origin.lumen.desc,"성교국. 성기사단과 이단 심문소, 천사 소환술을 보유한다.","The theocracy of paladins, inquisitors and angel-summoners."
-origin.lumen.synergy,루멘 영웅은 치명적 피해를 받으면 잠시 무적이 되며 체력을 회복한다(팀 전체 전투당 1/2/3/4회).,"When a Lumen hero would die, they become briefly invulnerable and heal (limited times per team per battle)."
+origin.lumen.synergy,"루멘 영웅은 마법 저항이 증가하고, 치명적 피해를 받으면 잠시 무적이 되며 체력을 회복한다(팀 전체 전투당 1/2/3/4회).","Lumen heroes gain magic resist, and when they would die they become briefly invulnerable and heal (limited times per team per battle)."
 origin.freelancer.name,자유용병,Freelancer
 origin.freelancer.desc,브로멜 자유도시의 용병 길드 소속. 국적 없는 떠돌이들.,Mercenaries of the Bromel guild — stateless wanderers.
 origin.freelancer.synergy,"자유용병 영웅은 기본 공격력·주문력 보너스를 얻고, 팀 내 다른 출신 1종마다 추가로 증가한다.",Freelancer heroes gain a base Attack/Ability Power bonus plus more for every other origin on the team.
@@ -1953,6 +1953,22 @@ item.M002.name,용의 정수,Dragon Essence
 item.M002.desc,2성·3성 승급 재료. 토벌/레이드/고난도 전투에서 드랍.,
 item.M003.name,별의 결정,Star Crystal
 item.M003.desc,"3성 승급 재료. 악몽 난이도, 레이드, 결전에서 드랍.",
+item.I003.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.I004.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.R039.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A011.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A016.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A020.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A026.situational,공성·구조물 전투에 유리,Strong in siege battles
+item.A028.situational,공성·구조물 전투에 유리,Strong in siege battles
+item.A032.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A034.situational,체력이 높은 단일 대상(보스)에게 유리,Strong against high-health bosses
+item.A039.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A041.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A058.situational,암살자·돌진형 캐리어에 장착 시 유리,Best on assassin or dive carries
+item.A060.situational,공성·구조물 전투에 유리,Strong in siege battles
+item.N024.situational,공성·구조물 전투에 유리,Strong in siege battles
+ui.shop.tag.situational,상황 아이템,Situational
 nation.bromel.name,브로멜 자유도시,Bromel
 nation.bromel.desc,"대륙 한가운데의 자유도시. 용병 길드 '회색 늑대'의 본부가 있으며, 투기장과 현상금 게시판으로 유명하다. 레온의 고향.","The free city at the heart of the continent, home of the Grey Wolf mercenary guild, its arena and bounty board. Leon's hometown."
 nation.bromel.capital,브로멜,Bromel
