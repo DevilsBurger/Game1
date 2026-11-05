@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""아트 제작 관리 시트: data/prompts.json → data/art_tracker.csv (ID, 분류, 대상, 우선순위, 규격, sref, 상태, 담당, 검수, 프롬프트)."""
+"""아트 제작 관리 시트: data/prompts.json → data/art_tracker.csv (ID, 분류, 대상, 우선순위, 제작 배치, 규격, sref, 상태, 담당, 검수, 프롬프트).
+배치: B0 앵커·UI(스타일 확정) → B1 1막(소프트 런치 필수) → B2 2막 → B3 3막 → B4 4~5막."""
 import json, os, csv
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 P = json.load(open(os.path.join(ROOT, "data", "prompts.json"), encoding="utf-8"))
@@ -29,9 +30,12 @@ for c in P["cutscenes"]:
     rows.append([c["id"], "cutscene", f"막 {c['act']}", prio_of_act(max(1, c["act"])), "1920x1080", "SREF_BG", "todo", "", "", c["prompt"]])
 for u in P["ui"]:
     rows.append([u["id"], "ui", u["id"], "P0", "var", "SREF_UI", "todo", "", "", u["prompt"]])
+BATCH = {"P0": "B0-앵커·UI", "P1": "B1-1막", "P2": "B2-2막", "P3": "B3-3막", "P4": "B4-4~5막"}
+rows = [r[:4] + [BATCH[r[3]]] + r[4:] for r in rows]
 rows.sort(key=lambda r: (r[3], r[1], r[0]))
 with open(os.path.join(ROOT, "data", "art_tracker.csv"), "w", encoding="utf-8", newline="") as f:
-    w = csv.writer(f); w.writerow(["asset_id", "category", "subject", "priority", "spec", "sref_slot", "status", "owner", "review", "prompt"])
+    w = csv.writer(f); w.writerow(["asset_id", "category", "subject", "priority", "batch", "spec", "sref_slot", "status", "owner", "review", "prompt"])
     w.writerows(rows)
 from collections import Counter
 print("art tracker rows:", len(rows), dict(Counter(r[3] for r in rows)))
+print("by batch/category:", {b: dict(Counter(r[1] for r in rows if r[4] == b)) for b in BATCH.values()})

@@ -1,0 +1,284 @@
+{
+ "fights": 200,
+ "assist": {
+  "S001": 0.85,
+  "S002": 0.85
+ },
+ "rows": [
+  {
+   "id": "S001",
+   "name": "하론 마을의 밤",
+   "type": "소규모 접전",
+   "mode": "단독",
+   "level": 3,
+   "player_level": 1,
+   "team": [
+    "P000"
+   ],
+   "win_rate": 0.995,
+   "avg_time": 10.9,
+   "target": 0.97,
+   "n": 200,
+   "win_rate_assist": 1.0,
+   "ok": true
+  },
+  {
+   "id": "S002",
+   "name": "잿더미 속의 흔적",
+   "type": "사냥",
+   "mode": "단독",
+   "level": 4,
+   "player_level": 1,
+   "team": [
+    "P000"
+   ],
+   "win_rate": 0.96,
+   "avg_time": 30.9,
+   "target": 0.95,
+   "n": 200,
+   "win_rate_assist": 1.0,
+   "ok": true
+  },
+  {
+   "id": "S003",
+   "name": "브로멜로 가는 길",
+   "type": "소규모 접전",
+   "mode": "소대",
+   "level": 5,
+   "player_level": 1,
+   "team": [
+    "P000",
+    "H009"
+   ],
+   "win_rate": 0.0,
+   "avg_time": 14.0,
+   "target": 0.9,
+   "n": 200,
+   "ok": false
+  },
+  {
+   "id": "S004",
+   "name": "회색 늑대의 문",
+   "type": "결투",
+   "mode": "단독",
+   "level": 6,
+   "player_level": 1,
+   "team": [
+    "P000"
+   ],
+   "win_rate": 0.87,
+   "avg_time": 13.6,
+   "target": 0.85,
+   "n": 200,
+   "ok": true
+  },
+  {
+   "id": "S005",
+   "name": "첫 번째 동료",
+   "type": "투기장",
+   "mode": "소대",
+   "level": 7,
+   "player_level": 2,
+   "team": [
+    "P000",
+    "H009"
+   ],
+   "win_rate": 0.0,
+   "avg_time": 27.1,
+   "target": 0.75,
+   "n": 200,
+   "ok": false
+  },
+  {
+   "id": "S006",
+   "name": "현상금: 검은 손",
+   "type": "현상금",
+   "mode": "소대",
+   "level": 8,
+   "player_level": 3,
+   "team": [
+    "P000",
+    "H009",
+    "H188"
+   ],
+   "win_rate": 0.54,
+   "avg_time": 21.1,
+   "target": 0.75,
+   "n": 200,
+   "ok": false
+  },
+  {
+   "id": "S007",
+   "name": "미르의 포도밭",
+   "type": "호위",
+   "mode": "부대",
+   "level": 9,
+   "player_level": 3,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190"
+   ],
+   "win_rate": 0.36,
+   "avg_time": 30.5,
+   "target": 0.75,
+   "n": 200,
+   "ok": false
+  },
+  {
+   "id": "S008",
+   "name": "수도원의 비밀",
+   "type": "구출",
+   "mode": "부대",
+   "level": 10,
+   "player_level": 4,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190"
+   ],
+   "win_rate": 0.005,
+   "avg_time": 43.6,
+   "target": 0.75,
+   "n": 200,
+   "ok": false
+  },
+  {
+   "id": "S009",
+   "name": "왕당파의 선발대",
+   "type": "방어전",
+   "mode": "부대",
+   "level": 12,
+   "player_level": 4,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190"
+   ],
+   "win_rate": 0.895,
+   "avg_time": 57.9,
+   "target": 0.75,
+   "n": 200,
+   "ok": true
+  },
+  {
+   "id": "S010",
+   "name": "서부 평원의 전투",
+   "type": "침공",
+   "mode": "대군",
+   "level": 13,
+   "player_level": 5,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190",
+    "H194",
+    "H012"
+   ],
+   "win_rate": 0.125,
+   "avg_time": 23.6,
+   "target": 0.75,
+   "n": 200,
+   "ok": false
+  },
+  {
+   "id": "S011",
+   "name": "첩자의 둥지",
+   "type": "암살",
+   "mode": "소대",
+   "level": 14,
+   "player_level": 6,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190"
+   ],
+   "win_rate": 1.0,
+   "avg_time": 5.3,
+   "target": 0.75,
+   "n": 200,
+   "ok": true
+  },
+  {
+   "id": "S012",
+   "name": "캐멀린의 밤",
+   "type": "기습",
+   "mode": "소대",
+   "level": 15,
+   "player_level": 6,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190"
+   ],
+   "win_rate": 1.0,
+   "avg_time": 13.3,
+   "target": 0.75,
+   "n": 200,
+   "ok": true
+  },
+  {
+   "id": "S013",
+   "name": "왕자의 결투",
+   "type": "결투",
+   "mode": "단독",
+   "level": 16,
+   "player_level": 1,
+   "team": [
+    "P000"
+   ],
+   "win_rate": 0.85,
+   "avg_time": 28.8,
+   "target": 0.75,
+   "n": 200,
+   "ok": true
+  },
+  {
+   "id": "S014",
+   "name": "재의 사자",
+   "type": "토벌",
+   "mode": "부대",
+   "level": 17,
+   "player_level": 7,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190",
+    "H194"
+   ],
+   "win_rate": 0.99,
+   "avg_time": 30.7,
+   "target": 0.75,
+   "n": 200,
+   "ok": true
+  },
+  {
+   "id": "S015",
+   "name": "결전: 하론 재탈환",
+   "type": "결전",
+   "mode": "대군",
+   "level": 18,
+   "player_level": 8,
+   "team": [
+    "P000",
+    "H009",
+    "H188",
+    "H190",
+    "H194",
+    "H012"
+   ],
+   "win_rate": 0.11,
+   "avg_time": 36.4,
+   "target": 0.75,
+   "n": 200,
+   "ok": false
+  }
+ ]
+}

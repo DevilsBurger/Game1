@@ -1,0 +1,1945 @@
+{
+ "targets": {
+  "normal": 0.65,
+  "hard": 0.45,
+  "nightmare": 0.25
+ },
+ "margin": {
+  "normal": 0.96,
+  "hard": 1.0,
+  "nightmare": 1.035
+ },
+ "scope": "story",
+ "history": [
+  {
+   "step": 0,
+   "mean_cliff": 1.0912280701754387
+  },
+  {
+   "step": 1,
+   "mean_cliff": 1.0743421052631579
+  },
+  {
+   "step": 2,
+   "mean_cliff": 1.0586622807017543
+  },
+  {
+   "step": 3,
+   "mean_cliff": 1.0598684210526315
+  },
+  {
+   "step": 4,
+   "mean_cliff": 1.0668037280701754
+  },
+  {
+   "step": 5,
+   "mean_cliff": 1.065748355263158
+  },
+  {
+   "step": 6,
+   "mean_cliff": 1.0654468201754386
+  }
+ ],
+ "rows": [
+  {
+   "id": "S001",
+   "name": "하론 마을의 밤",
+   "act": 1,
+   "type": "skirmish",
+   "mode": "solo",
+   "level": 3,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 2.423,
+    "hard": 1.873,
+    "nightmare": 1.529
+   },
+   "power_mult": {
+    "normal": 2.326,
+    "hard": 1.873,
+    "nightmare": 1.583
+   },
+   "wr": {
+    "normal": 0.958,
+    "hard": 0.583,
+    "nightmare": 0.021
+   }
+  },
+  {
+   "id": "S002",
+   "name": "잿더미 속의 흔적",
+   "act": 1,
+   "type": "monster_hunt",
+   "mode": "solo",
+   "level": 4,
+   "boss": "교황청 친위대",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.099,
+    "hard": 0.893,
+    "nightmare": 0.738
+   },
+   "power_mult": {
+    "normal": 1.055,
+    "hard": 0.893,
+    "nightmare": 0.764
+   },
+   "wr": {
+    "normal": 0.958,
+    "hard": 0.521,
+    "nightmare": 0.0
+   }
+  },
+  {
+   "id": "S003",
+   "name": "브로멜로 가는 길",
+   "act": 1,
+   "type": "skirmish",
+   "mode": "squad",
+   "level": 5,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.873,
+    "hard": 1.426,
+    "nightmare": 1.134
+   },
+   "power_mult": {
+    "normal": 1.798,
+    "hard": 1.426,
+    "nightmare": 1.174
+   },
+   "wr": {
+    "normal": 0.896,
+    "hard": 0.479,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S004",
+   "name": "회색 늑대의 문",
+   "act": 1,
+   "type": "duel",
+   "mode": "solo",
+   "level": 6,
+   "boss": "용병 대장",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.34,
+    "hard": 0.979,
+    "nightmare": 0.738
+   },
+   "power_mult": {
+    "normal": 1.286,
+    "hard": 0.979,
+    "nightmare": 0.764
+   },
+   "wr": {
+    "normal": 0.958,
+    "hard": 0.521,
+    "nightmare": 0.125
+   }
+  },
+  {
+   "id": "S005",
+   "name": "첫 번째 동료",
+   "act": 1,
+   "type": "arena",
+   "mode": "squad",
+   "level": 7,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.013,
+    "hard": 0.79,
+    "nightmare": 0.601
+   },
+   "power_mult": {
+    "normal": 0.972,
+    "hard": 0.79,
+    "nightmare": 0.622
+   },
+   "wr": {
+    "normal": 0.812,
+    "hard": 0.625,
+    "nightmare": 0.562
+   }
+  },
+  {
+   "id": "S006",
+   "name": "현상금: 검은 손",
+   "act": 1,
+   "type": "bounty",
+   "mode": "squad",
+   "level": 8,
+   "boss": "용병 대장",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.065,
+    "hard": 0.79,
+    "nightmare": 0.566
+   },
+   "power_mult": {
+    "normal": 1.022,
+    "hard": 0.79,
+    "nightmare": 0.586
+   },
+   "wr": {
+    "normal": 0.521,
+    "hard": 0.292,
+    "nightmare": 0.312
+   }
+  },
+  {
+   "id": "S007",
+   "name": "미르의 포도밭",
+   "act": 1,
+   "type": "escort",
+   "mode": "team",
+   "level": 9,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.58,
+    "hard": 1.202,
+    "nightmare": 0.962
+   },
+   "power_mult": {
+    "normal": 1.517,
+    "hard": 1.202,
+    "nightmare": 0.996
+   },
+   "wr": {
+    "normal": 0.625,
+    "hard": 0.417,
+    "nightmare": 0.229
+   }
+  },
+  {
+   "id": "S008",
+   "name": "수도원의 비밀",
+   "act": 1,
+   "type": "rescue",
+   "mode": "team",
+   "level": 10,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.529,
+    "hard": 1.202,
+    "nightmare": 0.945
+   },
+   "power_mult": {
+    "normal": 1.468,
+    "hard": 1.202,
+    "nightmare": 0.978
+   },
+   "wr": {
+    "normal": 0.646,
+    "hard": 0.312,
+    "nightmare": 0.167
+   }
+  },
+  {
+   "id": "S009",
+   "name": "왕당파의 선발대",
+   "act": 1,
+   "type": "defense",
+   "mode": "team",
+   "level": 12,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.876,
+    "hard": 0.687,
+    "nightmare": 0.515
+   },
+   "power_mult": {
+    "normal": 0.841,
+    "hard": 0.687,
+    "nightmare": 0.533
+   },
+   "wr": {
+    "normal": 0.833,
+    "hard": 0.479,
+    "nightmare": 0.438
+   }
+  },
+  {
+   "id": "S010",
+   "name": "서부 평원의 전투",
+   "act": 1,
+   "type": "invasion",
+   "mode": "army",
+   "level": 13,
+   "boss": "왕당파 장군",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.945,
+    "hard": 0.721,
+    "nightmare": 0.549
+   },
+   "power_mult": {
+    "normal": 0.907,
+    "hard": 0.721,
+    "nightmare": 0.568
+   },
+   "wr": {
+    "normal": 0.792,
+    "hard": 0.521,
+    "nightmare": 0.229
+   }
+  },
+  {
+   "id": "S011",
+   "name": "첩자의 둥지",
+   "act": 1,
+   "type": "assassination",
+   "mode": "squad",
+   "level": 14,
+   "boss": "재의 날개 첩자",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.701,
+    "hard": 1.409,
+    "nightmare": 1.134
+   },
+   "power_mult": {
+    "normal": 1.633,
+    "hard": 1.409,
+    "nightmare": 1.174
+   },
+   "wr": {
+    "normal": 0.688,
+    "hard": 0.521,
+    "nightmare": 0.354
+   }
+  },
+  {
+   "id": "S012",
+   "name": "캐멀린의 밤",
+   "act": 1,
+   "type": "strike",
+   "mode": "squad",
+   "level": 15,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 2.199,
+    "hard": 1.718,
+    "nightmare": 1.323
+   },
+   "power_mult": {
+    "normal": 2.111,
+    "hard": 1.718,
+    "nightmare": 1.369
+   },
+   "wr": {
+    "normal": 0.646,
+    "hard": 0.354,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S013",
+   "name": "왕자의 결투",
+   "act": 1,
+   "type": "duel",
+   "mode": "solo",
+   "level": 16,
+   "boss": "왕당파 기사",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.718,
+    "hard": 1.357,
+    "nightmare": 1.082
+   },
+   "power_mult": {
+    "normal": 1.649,
+    "hard": 1.357,
+    "nightmare": 1.12
+   },
+   "wr": {
+    "normal": 0.938,
+    "hard": 0.438,
+    "nightmare": 0.104
+   }
+  },
+  {
+   "id": "S014",
+   "name": "재의 사자",
+   "act": 1,
+   "type": "hunt",
+   "mode": "team",
+   "level": 17,
+   "boss": "화염 와이번",
+   "hp_mult": 2.0,
+   "cliff": {
+    "normal": 0.979,
+    "hard": 0.79,
+    "nightmare": 0.618
+   },
+   "power_mult": {
+    "normal": 0.94,
+    "hard": 0.79,
+    "nightmare": 0.64
+   },
+   "wr": {
+    "normal": 0.667,
+    "hard": 0.292,
+    "nightmare": 0.125
+   }
+  },
+  {
+   "id": "S015",
+   "name": "결전: 하론 재탈환",
+   "act": 1,
+   "type": "decisive",
+   "mode": "army",
+   "level": 18,
+   "boss": "재의 장군",
+   "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.46,
+    "hard": 1.116,
+    "nightmare": 0.945
+   },
+   "power_mult": {
+    "normal": 1.402,
+    "hard": 1.116,
+    "nightmare": 0.978
+   },
+   "wr": {
+    "normal": 0.688,
+    "hard": 0.75,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S016",
+   "name": "하르벤 용병 전쟁",
+   "act": 2,
+   "type": "skirmish",
+   "mode": "team",
+   "level": 18,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.976,
+    "hard": 1.632,
+    "nightmare": 1.409
+   },
+   "power_mult": {
+    "normal": 1.897,
+    "hard": 1.632,
+    "nightmare": 1.458
+   },
+   "wr": {
+    "normal": 0.792,
+    "hard": 0.5,
+    "nightmare": 0.146
+   }
+  },
+  {
+   "id": "S017",
+   "name": "검은 손의 두목",
+   "act": 2,
+   "type": "bounty",
+   "mode": "squad",
+   "level": 19,
+   "boss": "용병 대장",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.116,
+    "hard": 0.876,
+    "nightmare": 0.67
+   },
+   "power_mult": {
+    "normal": 1.071,
+    "hard": 0.876,
+    "nightmare": 0.693
+   },
+   "wr": {
+    "normal": 0.688,
+    "hard": 0.396,
+    "nightmare": 0.5
+   }
+  },
+  {
+   "id": "S018",
+   "name": "성도의 소문",
+   "act": 2,
+   "type": "suppression",
+   "mode": "team",
+   "level": 21,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.876,
+    "hard": 0.704,
+    "nightmare": 0.532
+   },
+   "power_mult": {
+    "normal": 0.841,
+    "hard": 0.704,
+    "nightmare": 0.551
+   },
+   "wr": {
+    "normal": 0.812,
+    "hard": 0.604,
+    "nightmare": 0.417
+   }
+  },
+  {
+   "id": "S019",
+   "name": "성녀의 탈출",
+   "act": 2,
+   "type": "rescue",
+   "mode": "team",
+   "level": 22,
+   "boss": "심문관",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.03,
+    "hard": 0.893,
+    "nightmare": 0.687
+   },
+   "power_mult": {
+    "normal": 0.989,
+    "hard": 0.893,
+    "nightmare": 0.711
+   },
+   "wr": {
+    "normal": 0.5,
+    "hard": 0.292,
+    "nightmare": 0.479
+   }
+  },
+  {
+   "id": "S020",
+   "name": "포르토 리에스 방어",
+   "act": 2,
+   "type": "defense",
+   "mode": "team",
+   "level": 23,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.498,
+    "hard": 0.412,
+    "nightmare": 0.309
+   },
+   "power_mult": {
+    "normal": 0.478,
+    "hard": 0.412,
+    "nightmare": 0.32
+   },
+   "wr": {
+    "normal": 0.604,
+    "hard": 0.292,
+    "nightmare": 0.271
+   }
+  },
+  {
+   "id": "S021",
+   "name": "폭풍 해협의 유령",
+   "act": 2,
+   "type": "hunt",
+   "mode": "team",
+   "level": 25,
+   "boss": "바다뱀",
+   "hp_mult": 2.0,
+   "cliff": {
+    "normal": 1.151,
+    "hard": 0.962,
+    "nightmare": 0.755
+   },
+   "power_mult": {
+    "normal": 1.105,
+    "hard": 0.962,
+    "nightmare": 0.781
+   },
+   "wr": {
+    "normal": 0.729,
+    "hard": 0.354,
+    "nightmare": 0.104
+   }
+  },
+  {
+   "id": "S022",
+   "name": "제독의 요청",
+   "act": 2,
+   "type": "expedition",
+   "mode": "team",
+   "level": 26,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.048,
+    "hard": 0.876,
+    "nightmare": 0.67
+   },
+   "power_mult": {
+    "normal": 1.006,
+    "hard": 0.876,
+    "nightmare": 0.693
+   },
+   "wr": {
+    "normal": 0.854,
+    "hard": 0.562,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S023",
+   "name": "북으로",
+   "act": 2,
+   "type": "skirmish",
+   "mode": "team",
+   "level": 28,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.962,
+    "hard": 0.773,
+    "nightmare": 0.618
+   },
+   "power_mult": {
+    "normal": 0.924,
+    "hard": 0.773,
+    "nightmare": 0.64
+   },
+   "wr": {
+    "normal": 0.688,
+    "hard": 0.479,
+    "nightmare": 0.167
+   }
+  },
+  {
+   "id": "S024",
+   "name": "서리 거인 토벌",
+   "act": 2,
+   "type": "hunt",
+   "mode": "team",
+   "level": 29,
+   "boss": "서리 거인",
+   "hp_mult": 2.0,
+   "cliff": {
+    "normal": 0.962,
+    "hard": 0.773,
+    "nightmare": 0.584
+   },
+   "power_mult": {
+    "normal": 0.924,
+    "hard": 0.773,
+    "nightmare": 0.604
+   },
+   "wr": {
+    "normal": 0.562,
+    "hard": 0.375,
+    "nightmare": 0.208
+   }
+  },
+  {
+   "id": "S025",
+   "name": "여왕의 결투",
+   "act": 2,
+   "type": "duel",
+   "mode": "solo",
+   "level": 30,
+   "boss": "씨족 광전사",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.426,
+    "hard": 1.116,
+    "nightmare": 0.824
+   },
+   "power_mult": {
+    "normal": 1.369,
+    "hard": 1.116,
+    "nightmare": 0.853
+   },
+   "wr": {
+    "normal": 0.979,
+    "hard": 0.479,
+    "nightmare": 0.083
+   }
+  },
+  {
+   "id": "S026",
+   "name": "재의 선봉대",
+   "act": 2,
+   "type": "invasion",
+   "mode": "army",
+   "level": 32,
+   "boss": "화염 와이번",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.962,
+    "hard": 0.687,
+    "nightmare": 0.549
+   },
+   "power_mult": {
+    "normal": 0.924,
+    "hard": 0.687,
+    "nightmare": 0.568
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.479,
+    "nightmare": 0.104
+   }
+  },
+  {
+   "id": "S027",
+   "name": "사막의 거래",
+   "act": 2,
+   "type": "assassination",
+   "mode": "squad",
+   "level": 33,
+   "boss": "술탄 친위대",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.099,
+    "hard": 0.859,
+    "nightmare": 0.687
+   },
+   "power_mult": {
+    "normal": 1.055,
+    "hard": 0.859,
+    "nightmare": 0.711
+   },
+   "wr": {
+    "normal": 0.479,
+    "hard": 0.333,
+    "nightmare": 0.271
+   }
+  },
+  {
+   "id": "S028",
+   "name": "암살단의 계약",
+   "act": 2,
+   "type": "ambush",
+   "mode": "team",
+   "level": 34,
+   "boss": "닌자",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.841,
+    "hard": 0.601,
+    "nightmare": 0.463
+   },
+   "power_mult": {
+    "normal": 0.807,
+    "hard": 0.601,
+    "nightmare": 0.479
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.417,
+    "nightmare": 0.271
+   }
+  },
+  {
+   "id": "S029",
+   "name": "잊힌 피라미드",
+   "act": 2,
+   "type": "expedition",
+   "mode": "team",
+   "level": 36,
+   "boss": "미라 군주",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.807,
+    "hard": 0.601,
+    "nightmare": 0.446
+   },
+   "power_mult": {
+    "normal": 0.775,
+    "hard": 0.601,
+    "nightmare": 0.462
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.208,
+    "nightmare": 0.146
+   }
+  },
+  {
+   "id": "S030",
+   "name": "대족장의 시험",
+   "act": 2,
+   "type": "arena",
+   "mode": "squad",
+   "level": 37,
+   "boss": "오우거",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.962,
+    "hard": 0.429,
+    "nightmare": 0.549
+   },
+   "power_mult": {
+    "normal": 0.924,
+    "hard": 0.429,
+    "nightmare": 0.568
+   },
+   "wr": {
+    "normal": 0.438,
+    "hard": 0.375,
+    "nightmare": 0.375
+   }
+  },
+  {
+   "id": "S031",
+   "name": "칸의 기마대",
+   "act": 2,
+   "type": "invasion",
+   "mode": "army",
+   "level": 38,
+   "boss": "약탈 기병",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.58,
+    "hard": 0.687,
+    "nightmare": 0.893
+   },
+   "power_mult": {
+    "normal": 1.517,
+    "hard": 0.687,
+    "nightmare": 0.924
+   },
+   "wr": {
+    "normal": 0.771,
+    "hard": 0.479,
+    "nightmare": 0.292
+   }
+  },
+  {
+   "id": "S032",
+   "name": "쇼군의 밀약",
+   "act": 2,
+   "type": "strike",
+   "mode": "squad",
+   "level": 40,
+   "boss": "쇼군의 장군",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.048,
+    "hard": 0.893,
+    "nightmare": 0.704
+   },
+   "power_mult": {
+    "normal": 1.006,
+    "hard": 0.893,
+    "nightmare": 0.729
+   },
+   "wr": {
+    "normal": 0.896,
+    "hard": 0.271,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S033",
+   "name": "벚꽃 아래의 검",
+   "act": 2,
+   "type": "duel",
+   "mode": "solo",
+   "level": 41,
+   "boss": "사무라이",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.048,
+    "hard": 0.79,
+    "nightmare": 0.515
+   },
+   "power_mult": {
+    "normal": 1.006,
+    "hard": 0.79,
+    "nightmare": 0.533
+   },
+   "wr": {
+    "normal": 0.979,
+    "hard": 0.542,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S034",
+   "name": "시든 숲",
+   "act": 2,
+   "type": "monster_hunt",
+   "mode": "team",
+   "level": 43,
+   "boss": "시든 트렌트",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.305,
+    "hard": 1.099,
+    "nightmare": 0.824
+   },
+   "power_mult": {
+    "normal": 1.253,
+    "hard": 1.099,
+    "nightmare": 0.853
+   },
+   "wr": {
+    "normal": 0.458,
+    "hard": 0.375,
+    "nightmare": 0.229
+   }
+  },
+  {
+   "id": "S035",
+   "name": "세계수의 눈물",
+   "act": 2,
+   "type": "guard",
+   "mode": "team",
+   "level": 44,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 1.821,
+    "hard": 1.477,
+    "nightmare": 0.996
+   },
+   "power_mult": {
+    "normal": 1.748,
+    "hard": 1.477,
+    "nightmare": 1.031
+   },
+   "wr": {
+    "normal": 0.708,
+    "hard": 0.229,
+    "nightmare": 0.167
+   }
+  },
+  {
+   "id": "S036",
+   "name": "아이언홀의 유적",
+   "act": 2,
+   "type": "expedition",
+   "mode": "team",
+   "level": 45,
+   "boss": "고대 자동인형",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.927,
+    "hard": 0.721,
+    "nightmare": 0.48
+   },
+   "power_mult": {
+    "normal": 0.89,
+    "hard": 0.721,
+    "nightmare": 0.497
+   },
+   "wr": {
+    "normal": 0.438,
+    "hard": 0.271,
+    "nightmare": 0.333
+   }
+  },
+  {
+   "id": "S037",
+   "name": "서리 마녀의 예언",
+   "act": 2,
+   "type": "hunt",
+   "mode": "team",
+   "level": 47,
+   "boss": "서리 마녀",
+   "hp_mult": 2.0,
+   "cliff": {
+    "normal": 1.409,
+    "hard": 0.704,
+    "nightmare": 0.807
+   },
+   "power_mult": {
+    "normal": 1.353,
+    "hard": 0.704,
+    "nightmare": 0.835
+   },
+   "wr": {
+    "normal": 0.833,
+    "hard": 0.438,
+    "nightmare": 0.354
+   }
+  },
+  {
+   "id": "S038",
+   "name": "결전: 재의 함대",
+   "act": 2,
+   "type": "decisive",
+   "mode": "army",
+   "level": 48,
+   "boss": "재의 장군",
+   "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.409,
+    "hard": 1.134,
+    "nightmare": 0.79
+   },
+   "power_mult": {
+    "normal": 1.353,
+    "hard": 1.134,
+    "nightmare": 0.818
+   },
+   "wr": {
+    "normal": 0.458,
+    "hard": 0.292,
+    "nightmare": 0.146
+   }
+  },
+  {
+   "id": "S039",
+   "name": "심해의 문",
+   "act": 3,
+   "type": "expedition",
+   "mode": "team",
+   "level": 48,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.927,
+    "hard": 0.738,
+    "nightmare": 0.515
+   },
+   "power_mult": {
+    "normal": 0.89,
+    "hard": 0.738,
+    "nightmare": 0.533
+   },
+   "wr": {
+    "normal": 0.542,
+    "hard": 0.354,
+    "nightmare": 0.083
+   }
+  },
+  {
+   "id": "S040",
+   "name": "심해의 왕",
+   "act": 3,
+   "type": "duel",
+   "mode": "solo",
+   "level": 50,
+   "boss": "심해 공포",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.512,
+    "hard": 0.807,
+    "nightmare": 0.841
+   },
+   "power_mult": {
+    "normal": 1.452,
+    "hard": 0.807,
+    "nightmare": 0.87
+   },
+   "wr": {
+    "normal": 0.917,
+    "hard": 0.604,
+    "nightmare": 0.688
+   }
+  },
+  {
+   "id": "S041",
+   "name": "안개 너머",
+   "act": 3,
+   "type": "survival",
+   "mode": "team",
+   "level": 52,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.79,
+    "hard": 0.652,
+    "nightmare": 0.463
+   },
+   "power_mult": {
+    "normal": 0.758,
+    "hard": 0.652,
+    "nightmare": 0.479
+   },
+   "wr": {
+    "normal": 0.417,
+    "hard": 0.646,
+    "nightmare": 0.292
+   }
+  },
+  {
+   "id": "S042",
+   "name": "요정 여왕의 장난",
+   "act": 3,
+   "type": "trial",
+   "mode": "team",
+   "level": 53,
+   "boss": "꿈 포식자",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.271,
+    "hard": 1.116,
+    "nightmare": 0.962
+   },
+   "power_mult": {
+    "normal": 1.22,
+    "hard": 1.116,
+    "nightmare": 0.996
+   },
+   "wr": {
+    "normal": 0.812,
+    "hard": 0.5,
+    "nightmare": 0.167
+   }
+  },
+  {
+   "id": "S043",
+   "name": "정글의 신왕",
+   "act": 3,
+   "type": "siege",
+   "mode": "army",
+   "level": 55,
+   "boss": "폭군 도마뱀",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.752,
+    "hard": 1.477,
+    "nightmare": 0.979
+   },
+   "power_mult": {
+    "normal": 1.682,
+    "hard": 1.477,
+    "nightmare": 1.013
+   },
+   "wr": {
+    "normal": 0.479,
+    "hard": 0.375,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S044",
+   "name": "황혼 요새의 문",
+   "act": 3,
+   "type": "siege",
+   "mode": "army",
+   "level": 57,
+   "boss": "뱀파이어 기사",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.357,
+    "hard": 1.22,
+    "nightmare": 0.841
+   },
+   "power_mult": {
+    "normal": 1.303,
+    "hard": 1.22,
+    "nightmare": 0.87
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.438,
+    "nightmare": 0.375
+   }
+  },
+  {
+   "id": "S045",
+   "name": "백작의 만찬",
+   "act": 3,
+   "type": "ambush",
+   "mode": "team",
+   "level": 59,
+   "boss": "뱀파이어 기사",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.924,
+    "hard": 0.945,
+    "nightmare": 1.065
+   },
+   "power_mult": {
+    "normal": 1.847,
+    "hard": 0.945,
+    "nightmare": 1.102
+   },
+   "wr": {
+    "normal": 0.458,
+    "hard": 0.396,
+    "nightmare": 0.292
+   }
+  },
+  {
+   "id": "S046",
+   "name": "망자의 들판",
+   "act": 3,
+   "type": "survival",
+   "mode": "team",
+   "level": 60,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.446,
+    "hard": 0.395,
+    "nightmare": 0.326
+   },
+   "power_mult": {
+    "normal": 0.428,
+    "hard": 0.395,
+    "nightmare": 0.337
+   },
+   "wr": {
+    "normal": 0.479,
+    "hard": 0.146,
+    "nightmare": 0.188
+   }
+  },
+  {
+   "id": "S047",
+   "name": "금단의 서고",
+   "act": 3,
+   "type": "rescue",
+   "mode": "team",
+   "level": 62,
+   "boss": "리치의 하수인",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.065,
+    "hard": 0.859,
+    "nightmare": 0.67
+   },
+   "power_mult": {
+    "normal": 1.022,
+    "hard": 0.859,
+    "nightmare": 0.693
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.354,
+    "nightmare": 0.312
+   }
+  },
+  {
+   "id": "S048",
+   "name": "여왕의 거래",
+   "act": 3,
+   "type": "duel",
+   "mode": "solo",
+   "level": 64,
+   "boss": "본 드래곤",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.598,
+    "hard": 1.323,
+    "nightmare": 0.773
+   },
+   "power_mult": {
+    "normal": 1.534,
+    "hard": 1.323,
+    "nightmare": 0.8
+   },
+   "wr": {
+    "normal": 0.792,
+    "hard": 0.396,
+    "nightmare": 0.167
+   }
+  },
+  {
+   "id": "S049",
+   "name": "정령의 심장",
+   "act": 3,
+   "type": "guard",
+   "mode": "team",
+   "level": 66,
+   "boss": "흑요석 골렘",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.082,
+    "hard": 0.927,
+    "nightmare": 0.738
+   },
+   "power_mult": {
+    "normal": 1.039,
+    "hard": 0.927,
+    "nightmare": 0.764
+   },
+   "wr": {
+    "normal": 0.604,
+    "hard": 0.521,
+    "nightmare": 0.188
+   }
+  },
+  {
+   "id": "S050",
+   "name": "잿빛 황무지",
+   "act": 3,
+   "type": "survival",
+   "mode": "team",
+   "level": 67,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.927,
+    "hard": 0.721,
+    "nightmare": 0.412
+   },
+   "power_mult": {
+    "normal": 0.89,
+    "hard": 0.721,
+    "nightmare": 0.426
+   },
+   "wr": {
+    "normal": 0.646,
+    "hard": 0.646,
+    "nightmare": 0.479
+   }
+  },
+  {
+   "id": "S051",
+   "name": "돔의 문",
+   "act": 3,
+   "type": "siege",
+   "mode": "army",
+   "level": 69,
+   "boss": "방어 자동인형",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 2.491,
+    "hard": 2.13,
+    "nightmare": 1.22
+   },
+   "power_mult": {
+    "normal": 2.391,
+    "hard": 2.13,
+    "nightmare": 1.263
+   },
+   "wr": {
+    "normal": 0.896,
+    "hard": 0.583,
+    "nightmare": 0.312
+   }
+  },
+  {
+   "id": "S052",
+   "name": "평의회의 시험",
+   "act": 3,
+   "type": "trial",
+   "mode": "team",
+   "level": 71,
+   "boss": "레이저 포탑",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.752,
+    "hard": 1.065,
+    "nightmare": 0.927
+   },
+   "power_mult": {
+    "normal": 1.682,
+    "hard": 1.065,
+    "nightmare": 0.959
+   },
+   "wr": {
+    "normal": 0.625,
+    "hard": 0.188,
+    "nightmare": 0.083
+   }
+  },
+  {
+   "id": "S053",
+   "name": "폐기된 병기",
+   "act": 3,
+   "type": "raid",
+   "mode": "army",
+   "level": 73,
+   "boss": "프로토타입 병기",
+   "hp_mult": 4.0,
+   "cliff": {
+    "normal": 1.976,
+    "hard": 1.082,
+    "nightmare": 0.945
+   },
+   "power_mult": {
+    "normal": 1.897,
+    "hard": 1.082,
+    "nightmare": 0.978
+   },
+   "wr": {
+    "normal": 0.875,
+    "hard": 0.292,
+    "nightmare": 0.271
+   }
+  },
+  {
+   "id": "S054",
+   "name": "하늘로",
+   "act": 3,
+   "type": "escape",
+   "mode": "team",
+   "level": 74,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 2.44,
+    "hard": 1.649,
+    "nightmare": 1.477
+   },
+   "power_mult": {
+    "normal": 2.342,
+    "hard": 1.649,
+    "nightmare": 1.529
+   },
+   "wr": {
+    "normal": 0.396,
+    "hard": 0.396,
+    "nightmare": 0.208
+   }
+  },
+  {
+   "id": "S055",
+   "name": "대마법사의 시험",
+   "act": 3,
+   "type": "trial",
+   "mode": "team",
+   "level": 76,
+   "boss": "별의 수호 골렘",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.374,
+    "hard": 0.841,
+    "nightmare": 0.738
+   },
+   "power_mult": {
+    "normal": 1.319,
+    "hard": 0.841,
+    "nightmare": 0.764
+   },
+   "wr": {
+    "normal": 0.521,
+    "hard": 0.312,
+    "nightmare": 0.271
+   }
+  },
+  {
+   "id": "S056",
+   "name": "결전: 쐐기의 성소",
+   "act": 3,
+   "type": "decisive",
+   "mode": "army",
+   "level": 78,
+   "boss": "재의 주술사",
+   "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.529,
+    "hard": 1.34,
+    "nightmare": 0.945
+   },
+   "power_mult": {
+    "normal": 1.468,
+    "hard": 1.34,
+    "nightmare": 0.978
+   },
+   "wr": {
+    "normal": 0.771,
+    "hard": 0.479,
+    "nightmare": 0.104
+   }
+  },
+  {
+   "id": "S057",
+   "name": "둥지 입구의 시험",
+   "act": 4,
+   "type": "trial",
+   "mode": "team",
+   "level": 78,
+   "boss": "둥지 수호 용족",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.202,
+    "hard": 1.099,
+    "nightmare": 0.755
+   },
+   "power_mult": {
+    "normal": 1.154,
+    "hard": 1.099,
+    "nightmare": 0.781
+   },
+   "wr": {
+    "normal": 0.562,
+    "hard": 0.333,
+    "nightmare": 0.188
+   }
+  },
+  {
+   "id": "S058",
+   "name": "용의 묘지",
+   "act": 4,
+   "type": "hunt",
+   "mode": "team",
+   "level": 79,
+   "boss": "용의 유령",
+   "hp_mult": 2.0,
+   "cliff": {
+    "normal": 1.374,
+    "hard": 1.202,
+    "nightmare": 0.859
+   },
+   "power_mult": {
+    "normal": 1.319,
+    "hard": 1.202,
+    "nightmare": 0.889
+   },
+   "wr": {
+    "normal": 0.833,
+    "hard": 0.604,
+    "nightmare": 0.354
+   }
+  },
+  {
+   "id": "S059",
+   "name": "하늘 봉우리",
+   "act": 4,
+   "type": "survival",
+   "mode": "team",
+   "level": 81,
+   "boss": "타락 와이번",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.48,
+    "hard": 0.377,
+    "nightmare": 0.377
+   },
+   "power_mult": {
+    "normal": 0.461,
+    "hard": 0.377,
+    "nightmare": 0.39
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.333,
+    "nightmare": 0.208
+   }
+  },
+  {
+   "id": "S060",
+   "name": "백룡의 시험",
+   "act": 4,
+   "type": "duel",
+   "mode": "solo",
+   "level": 82,
+   "boss": "둥지 수호 용족",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.288,
+    "hard": 0.635,
+    "nightmare": 0.807
+   },
+   "power_mult": {
+    "normal": 1.236,
+    "hard": 0.635,
+    "nightmare": 0.835
+   },
+   "wr": {
+    "normal": 0.958,
+    "hard": 0.521,
+    "nightmare": 0.083
+   }
+  },
+  {
+   "id": "S061",
+   "name": "알의 동굴 방어",
+   "act": 4,
+   "type": "defense",
+   "mode": "team",
+   "level": 83,
+   "boss": "재의 날개 용족",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.649,
+    "hard": 0.79,
+    "nightmare": 0.962
+   },
+   "power_mult": {
+    "normal": 1.583,
+    "hard": 0.79,
+    "nightmare": 0.996
+   },
+   "wr": {
+    "normal": 0.542,
+    "hard": 0.146,
+    "nightmare": 0.188
+   }
+  },
+  {
+   "id": "S062",
+   "name": "이그니스의 반역",
+   "act": 4,
+   "type": "rescue",
+   "mode": "team",
+   "level": 85,
+   "boss": "재의 장군",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.824,
+    "hard": 0.704,
+    "nightmare": 0.704
+   },
+   "power_mult": {
+    "normal": 0.791,
+    "hard": 0.704,
+    "nightmare": 0.729
+   },
+   "wr": {
+    "normal": 0.812,
+    "hard": 0.542,
+    "nightmare": 0.396
+   }
+  },
+  {
+   "id": "S063",
+   "name": "고대 용의 신전",
+   "act": 4,
+   "type": "expedition",
+   "mode": "team",
+   "level": 86,
+   "boss": "용의 유령",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 0.498,
+    "hard": 0.412,
+    "nightmare": 0.412
+   },
+   "power_mult": {
+    "normal": 0.478,
+    "hard": 0.412,
+    "nightmare": 0.426
+   },
+   "wr": {
+    "normal": 0.75,
+    "hard": 0.583,
+    "nightmare": 0.417
+   }
+  },
+  {
+   "id": "S064",
+   "name": "아젤리아의 결단",
+   "act": 4,
+   "type": "guard",
+   "mode": "team",
+   "level": 87,
+   "boss": "화염 와이번",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.168,
+    "hard": 0.996,
+    "nightmare": 0.996
+   },
+   "power_mult": {
+    "normal": 1.121,
+    "hard": 0.996,
+    "nightmare": 1.031
+   },
+   "wr": {
+    "normal": 0.729,
+    "hard": 0.312,
+    "nightmare": 0.146
+   }
+  },
+  {
+   "id": "S065",
+   "name": "재의 침공",
+   "act": 4,
+   "type": "invasion",
+   "mode": "army",
+   "level": 89,
+   "boss": "재의 장군",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.151,
+    "hard": 0.927,
+    "nightmare": 0.945
+   },
+   "power_mult": {
+    "normal": 1.105,
+    "hard": 0.927,
+    "nightmare": 0.978
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.562,
+    "nightmare": 0.292
+   }
+  },
+  {
+   "id": "S066",
+   "name": "결전: 흑룡의 그림자",
+   "act": 4,
+   "type": "decisive",
+   "mode": "army",
+   "level": 90,
+   "boss": "재의 장군",
+   "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.391,
+    "hard": 1.168,
+    "nightmare": 1.202
+   },
+   "power_mult": {
+    "normal": 1.335,
+    "hard": 1.168,
+    "nightmare": 1.244
+   },
+   "wr": {
+    "normal": 0.688,
+    "hard": 0.438,
+    "nightmare": 0.208
+   }
+  },
+  {
+   "id": "S067",
+   "name": "재의 황야",
+   "act": 5,
+   "type": "survival",
+   "mode": "team",
+   "level": 90,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 0.566,
+    "hard": 0.463,
+    "nightmare": 0.48
+   },
+   "power_mult": {
+    "normal": 0.543,
+    "hard": 0.463,
+    "nightmare": 0.497
+   },
+   "wr": {
+    "normal": 0.625,
+    "hard": 0.625,
+    "nightmare": 0.229
+   }
+  },
+  {
+   "id": "S068",
+   "name": "불타는 요새 공성",
+   "act": 5,
+   "type": "siege",
+   "mode": "army",
+   "level": 91,
+   "boss": "재의 장군",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.529,
+    "hard": 1.495,
+    "nightmare": 1.048
+   },
+   "power_mult": {
+    "normal": 1.468,
+    "hard": 1.495,
+    "nightmare": 1.085
+   },
+   "wr": {
+    "normal": 0.562,
+    "hard": 0.458,
+    "nightmare": 0.333
+   }
+  },
+  {
+   "id": "S069",
+   "name": "용의 발톱 협곡",
+   "act": 5,
+   "type": "ambush",
+   "mode": "team",
+   "level": 92,
+   "boss": "화염 와이번",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.77,
+    "hard": 1.632,
+    "nightmare": 1.134
+   },
+   "power_mult": {
+    "normal": 1.699,
+    "hard": 1.632,
+    "nightmare": 1.174
+   },
+   "wr": {
+    "normal": 0.583,
+    "hard": 0.396,
+    "nightmare": 0.25
+   }
+  },
+  {
+   "id": "S070",
+   "name": "재의 장군들",
+   "act": 5,
+   "type": "raid",
+   "mode": "army",
+   "level": 93,
+   "boss": "재의 장군",
+   "hp_mult": 4.0,
+   "cliff": {
+    "normal": 2.182,
+    "hard": 1.185,
+    "nightmare": 1.048
+   },
+   "power_mult": {
+    "normal": 2.095,
+    "hard": 1.185,
+    "nightmare": 1.085
+   },
+   "wr": {
+    "normal": 0.604,
+    "hard": 0.667,
+    "nightmare": 0.521
+   }
+  },
+  {
+   "id": "S071",
+   "name": "왕좌 외곽",
+   "act": 5,
+   "type": "invasion",
+   "mode": "army",
+   "level": 94,
+   "boss": "재의 날개 용족",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.752,
+    "hard": 1.632,
+    "nightmare": 1.116
+   },
+   "power_mult": {
+    "normal": 1.682,
+    "hard": 1.632,
+    "nightmare": 1.155
+   },
+   "wr": {
+    "normal": 0.688,
+    "hard": 0.458,
+    "nightmare": 0.396
+   }
+  },
+  {
+   "id": "S072",
+   "name": "바르그라드의 시험",
+   "act": 5,
+   "type": "trial",
+   "mode": "team",
+   "level": 96,
+   "boss": "재의 주술사",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.598,
+    "hard": 1.495,
+    "nightmare": 1.048
+   },
+   "power_mult": {
+    "normal": 1.534,
+    "hard": 1.495,
+    "nightmare": 1.085
+   },
+   "wr": {
+    "normal": 0.729,
+    "hard": 0.5,
+    "nightmare": 0.292
+   }
+  },
+  {
+   "id": "S073",
+   "name": "쐐기로 가는 길",
+   "act": 5,
+   "type": "escape",
+   "mode": "team",
+   "level": 97,
+   "boss": null,
+   "hp_mult": null,
+   "cliff": {
+    "normal": 2.491,
+    "hard": 2.491,
+    "nightmare": 2.216
+   },
+   "power_mult": {
+    "normal": 2.391,
+    "hard": 2.491,
+    "nightmare": 2.294
+   },
+   "wr": {
+    "normal": 0.812,
+    "hard": 0.812,
+    "nightmare": 0.438
+   }
+  },
+  {
+   "id": "S074",
+   "name": "엘리아 구출",
+   "act": 5,
+   "type": "rescue",
+   "mode": "team",
+   "level": 98,
+   "boss": "재의 장군",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.288,
+    "hard": 1.237,
+    "nightmare": 0.841
+   },
+   "power_mult": {
+    "normal": 1.236,
+    "hard": 1.237,
+    "nightmare": 0.87
+   },
+   "wr": {
+    "normal": 0.562,
+    "hard": 0.312,
+    "nightmare": 0.312
+   }
+  },
+  {
+   "id": "S075",
+   "name": "결전: 흑룡 바르그라드",
+   "act": 5,
+   "type": "decisive",
+   "mode": "army",
+   "level": 99,
+   "boss": "재의 장군",
+   "hp_mult": 3.0,
+   "cliff": {
+    "normal": 1.563,
+    "hard": 1.477,
+    "nightmare": 1.065
+   },
+   "power_mult": {
+    "normal": 1.5,
+    "hard": 1.477,
+    "nightmare": 1.102
+   },
+   "wr": {
+    "normal": 0.521,
+    "hard": 0.354,
+    "nightmare": 0.229
+   }
+  },
+  {
+   "id": "S076",
+   "name": "최후의 봉인",
+   "act": 5,
+   "type": "guard",
+   "mode": "army",
+   "level": 100,
+   "boss": "재의 날개 용족",
+   "hp_mult": 1.5,
+   "cliff": {
+    "normal": 1.357,
+    "hard": 1.254,
+    "nightmare": 0.927
+   },
+   "power_mult": {
+    "normal": 1.303,
+    "hard": 1.254,
+    "nightmare": 0.959
+   },
+   "wr": {
+    "normal": 0.708,
+    "hard": 0.542,
+    "nightmare": 0.229
+   }
+  }
+ ]
+}

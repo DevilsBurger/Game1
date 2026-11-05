@@ -561,7 +561,7 @@ components:
                  BATTLE_LOCKED, DIFFICULTY_LOCKED, CONDITION_UNMET, SESSION_ACTIVE, SESSION_EXPIRED, SNAPSHOT_MISMATCH,
                  STAR_MAX, ITEM_IN_USE, EMBLEM_DUPLICATE, RECIPE_INVALID, RECEIPT_INVALID, QUEST_INCOMPLETE, ALREADY_CLAIMED,
                  RATE_LIMITED, VALIDATION_ERROR, INTERNAL]
-        message: { type: string, description: "개발자용 영문 메시지. 사용자 문구는 클라이언트 문자열 테이블 `error.{code}`" }
+        message: { type: string, description: "개발자용 영문 메시지. 사용자 문구는 클라이언트 문자열 테이블 `ui.error.{CODE}`" }
         details: { type: object, additionalProperties: true }
         request_id: { type: string }
     ServerTime:

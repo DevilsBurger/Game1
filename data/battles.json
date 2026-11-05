@@ -1182,7 +1182,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 2.326,
+     "power_cliff": 2.423
     },
     "hard": {
      "name_ko": "어려움",
@@ -1228,7 +1230,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.873,
+     "power_cliff": 1.873
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -1278,7 +1282,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.583,
+     "power_cliff": 1.529
     },
     "first_clear_bonus": {
      "gold": 370,
@@ -1329,7 +1335,8 @@
      "class": "guardian",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "우두머리"
+     "role": "우두머리",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -1378,7 +1385,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.055,
+     "power_cliff": 1.099
     },
     "hard": {
      "name_ko": "어려움",
@@ -1424,7 +1433,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.893,
+     "power_cliff": 0.893
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -1474,7 +1485,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.764,
+     "power_cliff": 0.738
     },
     "first_clear_bonus": {
      "gold": 420,
@@ -1584,7 +1597,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.798,
+     "power_cliff": 1.873
     },
     "hard": {
      "name_ko": "어려움",
@@ -1630,7 +1645,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.426,
+     "power_cliff": 1.426
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -1680,7 +1697,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.174,
+     "power_cliff": 1.134
     },
     "first_clear_bonus": {
      "gold": 480,
@@ -1724,7 +1743,8 @@
      "class": "duelist",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -1774,7 +1794,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.286,
+     "power_cliff": 1.34
     },
     "hard": {
      "name_ko": "어려움",
@@ -1820,7 +1842,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.979,
+     "power_cliff": 0.979
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -1870,7 +1894,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.764,
+     "power_cliff": 0.738
     },
     "first_clear_bonus": {
      "gold": 540,
@@ -1975,7 +2001,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.972,
+     "power_cliff": 1.013
     },
     "hard": {
      "name_ko": "어려움",
@@ -2021,7 +2049,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.79,
+     "power_cliff": 0.79
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -2071,7 +2101,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.622,
+     "power_cliff": 0.601
     },
     "first_clear_bonus": {
      "gold": 590,
@@ -2145,7 +2177,8 @@
      "class": "duelist",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "현상금 대상"
+     "role": "현상금 대상",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -2194,7 +2227,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.022,
+     "power_cliff": 1.065
     },
     "hard": {
      "name_ko": "어려움",
@@ -2240,7 +2275,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.79,
+     "power_cliff": 0.79
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -2290,7 +2327,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.586,
+     "power_cliff": 0.566
     },
     "first_clear_bonus": {
      "gold": 650,
@@ -2421,7 +2460,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.517,
+     "power_cliff": 1.58
     },
     "hard": {
      "name_ko": "어려움",
@@ -2467,7 +2508,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.202,
+     "power_cliff": 1.202
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -2517,7 +2560,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.996,
+     "power_cliff": 0.962
     },
     "first_clear_bonus": {
      "gold": 700,
@@ -2635,7 +2680,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.468,
+     "power_cliff": 1.529
     },
     "hard": {
      "name_ko": "어려움",
@@ -2681,7 +2728,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.202,
+     "power_cliff": 1.202
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -2731,7 +2780,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.978,
+     "power_cliff": 0.945
     },
     "first_clear_bonus": {
      "gold": 760,
@@ -2860,7 +2911,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.841,
+     "power_cliff": 0.876
     },
     "hard": {
      "name_ko": "어려움",
@@ -2906,7 +2959,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.687,
+     "power_cliff": 0.687
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -2956,7 +3011,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.533,
+     "power_cliff": 0.515
     },
     "first_clear_bonus": {
      "gold": 870,
@@ -3061,7 +3118,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -3110,7 +3168,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.907,
+     "power_cliff": 0.945
     },
     "hard": {
      "name_ko": "어려움",
@@ -3156,7 +3216,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.721,
+     "power_cliff": 0.721
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -3206,7 +3268,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.568,
+     "power_cliff": 0.549
     },
     "first_clear_bonus": {
      "gold": 930,
@@ -3275,7 +3339,8 @@
      "class": "assassin",
      "tier": 2,
      "hp_mult": 1.5,
-     "role": "지휘관"
+     "role": "지휘관",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -3324,7 +3389,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.633,
+     "power_cliff": 1.701
     },
     "hard": {
      "name_ko": "어려움",
@@ -3370,7 +3437,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.409,
+     "power_cliff": 1.409
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -3420,7 +3489,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.174,
+     "power_cliff": 1.134
     },
     "first_clear_bonus": {
      "gold": 980,
@@ -3526,7 +3597,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 2.111,
+     "power_cliff": 2.199
     },
     "hard": {
      "name_ko": "어려움",
@@ -3572,7 +3645,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.718,
+     "power_cliff": 1.718
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -3622,7 +3697,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.369,
+     "power_cliff": 1.323
     },
     "first_clear_bonus": {
      "gold": 1040,
@@ -3671,7 +3748,8 @@
      "class": "knight",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -3721,7 +3799,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.649,
+     "power_cliff": 1.718
     },
     "hard": {
      "name_ko": "어려움",
@@ -3767,7 +3847,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.357,
+     "power_cliff": 1.357
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -3817,7 +3899,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.12,
+     "power_cliff": 1.082
     },
     "first_clear_bonus": {
      "gold": 1100,
@@ -3995,8 +4079,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.773,
-     "power_cliff": 0.773
+     "tuned_power_mult": 0.79,
+     "power_cliff": 0.79
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4044,8 +4128,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.657,
-     "power_cliff": 0.635
+     "tuned_power_mult": 0.64,
+     "power_cliff": 0.618
     },
     "first_clear_bonus": {
      "gold": 1150,
@@ -4229,8 +4313,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.168,
-     "power_cliff": 1.168
+     "tuned_power_mult": 1.116,
+     "power_cliff": 1.116
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4275,8 +4359,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.996,
-     "power_cliff": 0.962
+     "tuned_power_mult": 0.978,
+     "power_cliff": 0.945
     },
     "first_clear_bonus": {
      "gold": 1210,
@@ -4394,7 +4478,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.897,
+     "power_cliff": 1.976
     },
     "hard": {
      "name_ko": "어려움",
@@ -4440,7 +4526,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.632,
+     "power_cliff": 1.632
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4490,7 +4578,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.458,
+     "power_cliff": 1.409
     },
     "first_clear_bonus": {
      "gold": 1210,
@@ -4559,7 +4649,8 @@
      "class": "duelist",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "현상금 대상"
+     "role": "현상금 대상",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -4608,7 +4699,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.071,
+     "power_cliff": 1.116
     },
     "hard": {
      "name_ko": "어려움",
@@ -4654,7 +4747,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.876,
+     "power_cliff": 0.876
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4704,7 +4799,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.693,
+     "power_cliff": 0.67
     },
     "first_clear_bonus": {
      "gold": 1260,
@@ -4862,7 +4959,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.841,
+     "power_cliff": 0.876
     },
     "hard": {
      "name_ko": "어려움",
@@ -4913,7 +5012,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.704,
+     "power_cliff": 0.704
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -4968,7 +5069,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.551,
+     "power_cliff": 0.532
     },
     "first_clear_bonus": {
      "gold": 1380,
@@ -5043,7 +5146,8 @@
      "class": "assassin",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -5097,7 +5201,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.989,
+     "power_cliff": 1.03
     },
     "hard": {
      "name_ko": "어려움",
@@ -5148,7 +5254,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.893,
+     "power_cliff": 0.893
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -5203,7 +5311,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.711,
+     "power_cliff": 0.687
     },
     "first_clear_bonus": {
      "gold": 1430,
@@ -5337,7 +5447,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.478,
+     "power_cliff": 0.498
     },
     "hard": {
      "name_ko": "어려움",
@@ -5388,7 +5500,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.412,
+     "power_cliff": 0.412
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -5443,7 +5557,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.32,
+     "power_cliff": 0.309
     },
     "first_clear_bonus": {
      "gold": 1490,
@@ -5575,8 +5691,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.121,
-     "power_cliff": 1.168
+     "tuned_power_mult": 1.105,
+     "power_cliff": 1.151
     },
     "hard": {
      "name_ko": "어려움",
@@ -5814,7 +5930,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.006,
+     "power_cliff": 1.048
     },
     "hard": {
      "name_ko": "어려움",
@@ -5865,7 +5983,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.876,
+     "power_cliff": 0.876
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -5920,7 +6040,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.693,
+     "power_cliff": 0.67
     },
     "first_clear_bonus": {
      "gold": 1660,
@@ -6054,7 +6176,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.924,
+     "power_cliff": 0.962
     },
     "hard": {
      "name_ko": "어려움",
@@ -6105,7 +6229,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.773,
+     "power_cliff": 0.773
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -6160,7 +6286,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.64,
+     "power_cliff": 0.618
     },
     "first_clear_bonus": {
      "gold": 1770,
@@ -6305,8 +6433,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 0.94,
-     "power_cliff": 0.979
+     "tuned_power_mult": 0.924,
+     "power_cliff": 0.962
     },
     "hard": {
      "name_ko": "어려움",
@@ -6454,7 +6582,8 @@
      "class": "duelist",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -6513,7 +6642,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.369,
+     "power_cliff": 1.426
     },
     "hard": {
      "name_ko": "어려움",
@@ -6569,7 +6700,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.116,
+     "power_cliff": 1.116
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -6629,7 +6762,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.853,
+     "power_cliff": 0.824
     },
     "first_clear_bonus": {
      "gold": 1880,
@@ -6740,7 +6875,8 @@
      "class": "dragoon",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -6800,7 +6936,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.924,
+     "power_cliff": 0.962
     },
     "hard": {
      "name_ko": "어려움",
@@ -6856,7 +6994,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.687,
+     "power_cliff": 0.687
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -6916,7 +7056,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.568,
+     "power_cliff": 0.549
     },
     "first_clear_bonus": {
      "gold": 1990,
@@ -6979,7 +7121,8 @@
      "class": "knight",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "지휘관"
+     "role": "지휘관",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -7039,7 +7182,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.055,
+     "power_cliff": 1.099
     },
     "hard": {
      "name_ko": "어려움",
@@ -7095,7 +7240,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.859,
+     "power_cliff": 0.859
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -7155,7 +7302,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.711,
+     "power_cliff": 0.687
     },
     "first_clear_bonus": {
      "gold": 2050,
@@ -7236,7 +7385,8 @@
      "class": "assassin",
      "tier": 2,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -7295,7 +7445,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.807,
+     "power_cliff": 0.841
     },
     "hard": {
      "name_ko": "어려움",
@@ -7351,7 +7503,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.601,
+     "power_cliff": 0.601
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -7411,7 +7565,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.479,
+     "power_cliff": 0.463
     },
     "first_clear_bonus": {
      "gold": 2100,
@@ -7498,7 +7654,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 3,
     "structures": [],
@@ -7558,7 +7715,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.775,
+     "power_cliff": 0.807
     },
     "hard": {
      "name_ko": "어려움",
@@ -7614,7 +7773,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.601,
+     "power_cliff": 0.601
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -7674,7 +7835,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.462,
+     "power_cliff": 0.446
     },
     "first_clear_bonus": {
      "gold": 2220,
@@ -7737,7 +7900,8 @@
      "class": "warrior",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 3,
     "structures": [],
@@ -7796,7 +7960,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.924,
+     "power_cliff": 0.962
     },
     "hard": {
      "name_ko": "어려움",
@@ -7852,7 +8018,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.429,
+     "power_cliff": 0.429
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -7912,7 +8080,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.568,
+     "power_cliff": 0.549
     },
     "first_clear_bonus": {
      "gold": 2270,
@@ -8017,7 +8187,8 @@
      "class": "dragoon",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -8076,7 +8247,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.517,
+     "power_cliff": 1.58
     },
     "hard": {
      "name_ko": "어려움",
@@ -8132,7 +8305,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.687,
+     "power_cliff": 0.687
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -8192,7 +8367,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.924,
+     "power_cliff": 0.893
     },
     "first_clear_bonus": {
      "gold": 2330,
@@ -8261,7 +8438,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -8320,7 +8498,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.006,
+     "power_cliff": 1.048
     },
     "hard": {
      "name_ko": "어려움",
@@ -8376,7 +8556,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.893,
+     "power_cliff": 0.893
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -8436,7 +8618,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.729,
+     "power_cliff": 0.704
     },
     "first_clear_bonus": {
      "gold": 2440,
@@ -8480,7 +8664,8 @@
      "class": "duelist",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -8540,7 +8725,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.006,
+     "power_cliff": 1.048
     },
     "hard": {
      "name_ko": "어려움",
@@ -8596,7 +8783,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.79,
+     "power_cliff": 0.79
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -8656,7 +8845,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.533,
+     "power_cliff": 0.515
     },
     "first_clear_bonus": {
      "gold": 2500,
@@ -8731,7 +8922,8 @@
      "class": "guardian",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "우두머리"
+     "role": "우두머리",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -8790,7 +8982,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.253,
+     "power_cliff": 1.305
     },
     "hard": {
      "name_ko": "어려움",
@@ -8846,7 +9040,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.099,
+     "power_cliff": 1.099
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -8906,7 +9102,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.853,
+     "power_cliff": 0.824
     },
     "first_clear_bonus": {
      "gold": 2610,
@@ -9052,7 +9250,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.748,
+     "power_cliff": 1.821
     },
     "hard": {
      "name_ko": "어려움",
@@ -9108,7 +9308,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.477,
+     "power_cliff": 1.477
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9168,7 +9370,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.031,
+     "power_cliff": 0.996
     },
     "first_clear_bonus": {
      "gold": 2660,
@@ -9249,7 +9453,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 3,
     "structures": [],
@@ -9309,7 +9514,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.89,
+     "power_cliff": 0.927
     },
     "hard": {
      "name_ko": "어려움",
@@ -9365,7 +9572,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.721,
+     "power_cliff": 0.721
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9425,7 +9634,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.497,
+     "power_cliff": 0.48
     },
     "first_clear_bonus": {
      "gold": 2720,
@@ -9574,8 +9785,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.369,
-     "power_cliff": 1.426
+     "tuned_power_mult": 1.353,
+     "power_cliff": 1.409
     },
     "hard": {
      "name_ko": "어려움",
@@ -9629,8 +9840,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 0.687,
-     "power_cliff": 0.687
+     "tuned_power_mult": 0.704,
+     "power_cliff": 0.704
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -9906,8 +10117,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.082,
-     "power_cliff": 1.082
+     "tuned_power_mult": 1.134,
+     "power_cliff": 1.134
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -10101,7 +10312,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.89,
+     "power_cliff": 0.927
     },
     "hard": {
      "name_ko": "어려움",
@@ -10157,7 +10370,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.738,
+     "power_cliff": 0.738
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -10217,7 +10432,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.533,
+     "power_cliff": 0.515
     },
     "first_clear_bonus": {
      "gold": 2890,
@@ -10261,7 +10478,8 @@
      "class": "mage",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -10325,7 +10543,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.452,
+     "power_cliff": 1.512
     },
     "hard": {
      "name_ko": "어려움",
@@ -10386,7 +10606,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.807,
+     "power_cliff": 0.807
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -10451,7 +10673,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.87,
+     "power_cliff": 0.841
     },
     "first_clear_bonus": {
      "gold": 3000,
@@ -10583,7 +10807,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.758,
+     "power_cliff": 0.79
     },
     "hard": {
      "name_ko": "어려움",
@@ -10644,7 +10870,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.652,
+     "power_cliff": 0.652
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -10709,7 +10937,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.479,
+     "power_cliff": 0.463
     },
     "first_clear_bonus": {
      "gold": 3110,
@@ -10784,7 +11014,8 @@
      "class": "mage",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -10849,7 +11080,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.22,
+     "power_cliff": 1.271
     },
     "hard": {
      "name_ko": "어려움",
@@ -10910,7 +11143,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.116,
+     "power_cliff": 1.116
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -10975,7 +11210,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.996,
+     "power_cliff": 0.962
     },
     "first_clear_bonus": {
      "gold": 3170,
@@ -11062,7 +11299,8 @@
      "class": "warrior",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -11134,7 +11372,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.682,
+     "power_cliff": 1.752
     },
     "hard": {
      "name_ko": "어려움",
@@ -11195,7 +11435,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.477,
+     "power_cliff": 1.477
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -11260,7 +11502,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.013,
+     "power_cliff": 0.979
     },
     "first_clear_bonus": {
      "gold": 3280,
@@ -11347,7 +11591,8 @@
      "class": "knight",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -11418,7 +11663,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.303,
+     "power_cliff": 1.357
     },
     "hard": {
      "name_ko": "어려움",
@@ -11479,7 +11726,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.22,
+     "power_cliff": 1.22
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -11544,7 +11793,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.87,
+     "power_cliff": 0.841
     },
     "first_clear_bonus": {
      "gold": 3390,
@@ -11631,7 +11882,8 @@
      "class": "knight",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -11695,7 +11947,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.847,
+     "power_cliff": 1.924
     },
     "hard": {
      "name_ko": "어려움",
@@ -11756,7 +12010,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.945,
+     "power_cliff": 0.945
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -11821,7 +12077,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.102,
+     "power_cliff": 1.065
     },
     "first_clear_bonus": {
      "gold": 3500,
@@ -11959,7 +12217,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.428,
+     "power_cliff": 0.446
     },
     "hard": {
      "name_ko": "어려움",
@@ -12020,7 +12280,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.395,
+     "power_cliff": 0.395
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -12085,7 +12347,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.337,
+     "power_cliff": 0.326
     },
     "first_clear_bonus": {
      "gold": 3560,
@@ -12166,7 +12430,8 @@
      "class": "summoner",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -12230,7 +12495,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.022,
+     "power_cliff": 1.065
     },
     "hard": {
      "name_ko": "어려움",
@@ -12291,7 +12558,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.859,
+     "power_cliff": 0.859
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -12356,7 +12625,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.693,
+     "power_cliff": 0.67
     },
     "first_clear_bonus": {
      "gold": 3670,
@@ -12400,7 +12671,8 @@
      "class": "dragoon",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -12464,7 +12736,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.534,
+     "power_cliff": 1.598
     },
     "hard": {
      "name_ko": "어려움",
@@ -12525,7 +12799,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.323,
+     "power_cliff": 1.323
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -12590,7 +12866,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.8,
+     "power_cliff": 0.773
     },
     "first_clear_bonus": {
      "gold": 3780,
@@ -12677,7 +12955,8 @@
      "class": "knight",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -12748,7 +13027,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.039,
+     "power_cliff": 1.082
     },
     "hard": {
      "name_ko": "어려움",
@@ -12809,7 +13090,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.927,
+     "power_cliff": 0.927
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -12874,7 +13157,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.764,
+     "power_cliff": 0.738
     },
     "first_clear_bonus": {
      "gold": 3900,
@@ -13007,7 +13292,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.89,
+     "power_cliff": 0.927
     },
     "hard": {
      "name_ko": "어려움",
@@ -13068,7 +13355,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.721,
+     "power_cliff": 0.721
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -13133,7 +13422,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.426,
+     "power_cliff": 0.412
     },
     "first_clear_bonus": {
      "gold": 3950,
@@ -13220,7 +13511,8 @@
      "class": "guardian",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -13291,7 +13583,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 2.391,
+     "power_cliff": 2.491
     },
     "hard": {
      "name_ko": "어려움",
@@ -13352,7 +13646,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 2.13,
+     "power_cliff": 2.13
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -13417,7 +13713,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.263,
+     "power_cliff": 1.22
     },
     "first_clear_bonus": {
      "gold": 4060,
@@ -13498,7 +13796,8 @@
      "class": "engineer",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -13563,7 +13862,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.682,
+     "power_cliff": 1.752
     },
     "hard": {
      "name_ko": "어려움",
@@ -13624,7 +13925,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.065,
+     "power_cliff": 1.065
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -13694,7 +13997,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.959,
+     "power_cliff": 0.927
     },
     "first_clear_bonus": {
      "gold": 4180,
@@ -13908,8 +14213,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.048,
-     "power_cliff": 1.048
+     "tuned_power_mult": 1.082,
+     "power_cliff": 1.082
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -14124,7 +14429,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 2.342,
+     "power_cliff": 2.44
     },
     "hard": {
      "name_ko": "어려움",
@@ -14185,7 +14492,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.649,
+     "power_cliff": 1.649
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -14255,7 +14564,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.529,
+     "power_cliff": 1.477
     },
     "first_clear_bonus": {
      "gold": 4340,
@@ -14342,7 +14653,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -14406,7 +14718,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.319,
+     "power_cliff": 1.374
     },
     "hard": {
      "name_ko": "어려움",
@@ -14467,7 +14781,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.841,
+     "power_cliff": 0.841
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -14537,7 +14853,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.764,
+     "power_cliff": 0.738
     },
     "first_clear_bonus": {
      "gold": 4460,
@@ -14697,8 +15015,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.5,
-     "power_cliff": 1.563
+     "tuned_power_mult": 1.468,
+     "power_cliff": 1.529
     },
     "hard": {
      "name_ko": "어려움",
@@ -14823,8 +15141,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 0.959,
-     "power_cliff": 0.927
+     "tuned_power_mult": 0.978,
+     "power_cliff": 0.945
     },
     "first_clear_bonus": {
      "gold": 4570,
@@ -14899,7 +15217,8 @@
      "class": "dragoon",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -14963,7 +15282,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.154,
+     "power_cliff": 1.202
     },
     "hard": {
      "name_ko": "어려움",
@@ -15024,7 +15345,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.099,
+     "power_cliff": 1.099
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15094,7 +15417,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.781,
+     "power_cliff": 0.755
     },
     "first_clear_bonus": {
      "gold": 4570,
@@ -15237,8 +15562,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.335,
-     "power_cliff": 1.391
+     "tuned_power_mult": 1.319,
+     "power_cliff": 1.374
     },
     "hard": {
      "name_ko": "어려움",
@@ -15297,8 +15622,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.22,
-     "power_cliff": 1.22
+     "tuned_power_mult": 1.202,
+     "power_cliff": 1.202
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15448,7 +15773,8 @@
      "class": "dragoon",
      "tier": 3,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 5,
     "structures": [],
@@ -15512,7 +15838,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.461,
+     "power_cliff": 0.48
     },
     "hard": {
      "name_ko": "어려움",
@@ -15573,7 +15901,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.377,
+     "power_cliff": 0.377
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15643,7 +15973,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.39,
+     "power_cliff": 0.377
     },
     "first_clear_bonus": {
      "gold": 4740,
@@ -15687,7 +16019,8 @@
      "class": "dragoon",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -15751,7 +16084,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.236,
+     "power_cliff": 1.288
     },
     "hard": {
      "name_ko": "어려움",
@@ -15812,7 +16147,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.635,
+     "power_cliff": 0.635
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -15882,7 +16219,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.835,
+     "power_cliff": 0.807
     },
     "first_clear_bonus": {
      "gold": 4790,
@@ -15957,7 +16296,8 @@
      "class": "duelist",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 3,
     "structures": [],
@@ -16022,7 +16362,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.583,
+     "power_cliff": 1.649
     },
     "hard": {
      "name_ko": "어려움",
@@ -16083,7 +16425,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.79,
+     "power_cliff": 0.79
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -16153,7 +16497,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.996,
+     "power_cliff": 0.962
     },
     "first_clear_bonus": {
      "gold": 4850,
@@ -16234,7 +16580,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -16298,7 +16645,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.791,
+     "power_cliff": 0.824
     },
     "hard": {
      "name_ko": "어려움",
@@ -16359,7 +16708,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.704,
+     "power_cliff": 0.704
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -16429,7 +16780,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.729,
+     "power_cliff": 0.704
     },
     "first_clear_bonus": {
      "gold": 4960,
@@ -16516,7 +16869,8 @@
      "class": "mage",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 3,
     "structures": [],
@@ -16580,7 +16934,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.478,
+     "power_cliff": 0.498
     },
     "hard": {
      "name_ko": "어려움",
@@ -16641,7 +16997,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.412,
+     "power_cliff": 0.412
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -16711,7 +17069,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.426,
+     "power_cliff": 0.412
     },
     "first_clear_bonus": {
      "gold": 5020,
@@ -16792,7 +17152,8 @@
      "class": "dragoon",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -16863,7 +17224,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.121,
+     "power_cliff": 1.168
     },
     "hard": {
      "name_ko": "어려움",
@@ -16924,7 +17287,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.996,
+     "power_cliff": 0.996
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -16994,7 +17359,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.031,
+     "power_cliff": 0.996
     },
     "first_clear_bonus": {
      "gold": 5070,
@@ -17110,7 +17477,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -17175,7 +17543,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.105,
+     "power_cliff": 1.151
     },
     "hard": {
      "name_ko": "어려움",
@@ -17236,7 +17606,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.927,
+     "power_cliff": 0.927
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -17306,7 +17678,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.978,
+     "power_cliff": 0.945
     },
     "first_clear_bonus": {
      "gold": 5180,
@@ -17520,8 +17894,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.151,
-     "power_cliff": 1.151
+     "tuned_power_mult": 1.168,
+     "power_cliff": 1.168
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -17586,8 +17960,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.226,
-     "power_cliff": 1.185
+     "tuned_power_mult": 1.244,
+     "power_cliff": 1.202
     },
     "first_clear_bonus": {
      "gold": 5240,
@@ -17724,7 +18098,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 0.543,
+     "power_cliff": 0.566
     },
     "hard": {
      "name_ko": "어려움",
@@ -17785,7 +18161,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 0.463,
+     "power_cliff": 0.463
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -17855,7 +18233,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.497,
+     "power_cliff": 0.48
     },
     "first_clear_bonus": {
      "gold": 5240,
@@ -17954,7 +18334,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -18026,7 +18407,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.468,
+     "power_cliff": 1.529
     },
     "hard": {
      "name_ko": "어려움",
@@ -18087,7 +18470,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.495,
+     "power_cliff": 1.495
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -18157,7 +18542,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.085,
+     "power_cliff": 1.048
     },
     "first_clear_bonus": {
      "gold": 5300,
@@ -18232,7 +18619,8 @@
      "class": "dragoon",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -18296,7 +18684,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.699,
+     "power_cliff": 1.77
     },
     "hard": {
      "name_ko": "어려움",
@@ -18357,7 +18747,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.632,
+     "power_cliff": 1.632
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -18427,7 +18819,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.174,
+     "power_cliff": 1.134
     },
     "first_clear_bonus": {
      "gold": 5350,
@@ -18593,8 +18987,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.996,
-     "power_cliff": 2.079
+     "tuned_power_mult": 2.095,
+     "power_cliff": 2.182
     },
     "hard": {
      "name_ko": "어려움",
@@ -18653,8 +19047,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.254,
-     "power_cliff": 1.254
+     "tuned_power_mult": 1.185,
+     "power_cliff": 1.185
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -18719,8 +19113,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.191,
-     "power_cliff": 1.151
+     "tuned_power_mult": 1.085,
+     "power_cliff": 1.048
     },
     "first_clear_bonus": {
      "gold": 5410,
@@ -18831,7 +19225,8 @@
      "class": "duelist",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -18895,7 +19290,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.682,
+     "power_cliff": 1.752
     },
     "hard": {
      "name_ko": "어려움",
@@ -18956,7 +19353,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.632,
+     "power_cliff": 1.632
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -19026,7 +19425,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.155,
+     "power_cliff": 1.116
     },
     "first_clear_bonus": {
      "gold": 5460,
@@ -19113,7 +19514,8 @@
      "class": "shaman",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -19177,7 +19579,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.534,
+     "power_cliff": 1.598
     },
     "hard": {
      "name_ko": "어려움",
@@ -19238,7 +19642,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.495,
+     "power_cliff": 1.495
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -19308,7 +19714,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 1.085,
+     "power_cliff": 1.048
     },
     "first_clear_bonus": {
      "gold": 5580,
@@ -19440,7 +19848,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 2.391,
+     "power_cliff": 2.491
     },
     "hard": {
      "name_ko": "어려움",
@@ -19501,7 +19911,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 2.491,
+     "power_cliff": 2.491
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -19571,7 +19983,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 2.294,
+     "power_cliff": 2.216
     },
     "first_clear_bonus": {
      "gold": 5630,
@@ -19646,7 +20060,8 @@
      "class": "knight",
      "tier": 5,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [],
@@ -19710,7 +20125,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.236,
+     "power_cliff": 1.288
     },
     "hard": {
      "name_ko": "어려움",
@@ -19771,7 +20188,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.237,
+     "power_cliff": 1.237
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -19841,7 +20260,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.87,
+     "power_cliff": 0.841
     },
     "first_clear_bonus": {
      "gold": 5690,
@@ -19996,8 +20417,8 @@
        "chance_pct": 2
       }
      },
-     "tuned_power_mult": 1.452,
-     "power_cliff": 1.512
+     "tuned_power_mult": 1.5,
+     "power_cliff": 1.563
     },
     "hard": {
      "name_ko": "어려움",
@@ -20056,8 +20477,8 @@
        "chance_pct": 3
       }
      },
-     "tuned_power_mult": 1.495,
-     "power_cliff": 1.495
+     "tuned_power_mult": 1.477,
+     "power_cliff": 1.477
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -20122,8 +20543,8 @@
        "chance_pct": 5
       }
      },
-     "tuned_power_mult": 1.013,
-     "power_cliff": 0.979
+     "tuned_power_mult": 1.102,
+     "power_cliff": 1.065
     },
     "first_clear_bonus": {
      "gold": 5740,
@@ -20222,7 +20643,8 @@
      "class": "duelist",
      "tier": 4,
      "hp_mult": 1.5,
-     "role": "보스"
+     "role": "보스",
+     "tuned": true
     },
     "waves": 1,
     "structures": [
@@ -20293,7 +20715,9 @@
        ],
        "chance_pct": 2
       }
-     }
+     },
+     "tuned_power_mult": 1.303,
+     "power_cliff": 1.357
     },
     "hard": {
      "name_ko": "어려움",
@@ -20354,7 +20778,9 @@
        ],
        "chance_pct": 3
       }
-     }
+     },
+     "tuned_power_mult": 1.254,
+     "power_cliff": 1.254
     },
     "nightmare": {
      "name_ko": "악몽",
@@ -20424,7 +20850,9 @@
        ],
        "chance_pct": 5
       }
-     }
+     },
+     "tuned_power_mult": 0.959,
+     "power_cliff": 0.927
     },
     "first_clear_bonus": {
      "gold": 5800,

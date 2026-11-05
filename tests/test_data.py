@@ -70,3 +70,39 @@ def test_economy_star_up_uniform_materials():
         for t in range(1, 6):
             c = econ["star_up_cost"][key][str(t)]
             assert set(c.keys()) == {"M001", "M002", "M003", "gold"}
+
+
+def test_analytics_dictionary():
+    import re
+    a = D("analytics_events.json")
+    names = [e["name"] for e in a["events"]]
+    assert len(names) == len(set(names)) and len(names) >= 40
+    for e in a["events"]:
+        assert e["source"] in ("client", "server") and re.match(r"^[a-z][a-z0-9_]{2,40}$", e["name"]), e["name"]
+        assert len(e["props"]) <= 20
+    ctx = {c["name"] for c in a["context"]}
+    assert {"event_id", "ts", "session_id", "player_id", "client_version", "balance_version"} <= ctx
+
+
+def test_art_tracker_matches_prompts():
+    import csv
+    rows = list(csv.DictReader(open(os.path.join(ROOT, "data", "art_tracker.csv"), encoding="utf-8")))
+    p = D("prompts.json")
+    expected = (sum(len(h["prompts"]) for h in p["heroes"]) + sum(len(m["prompts"]) for m in p["monsters"]) + len(p["items"]) + len(p["backgrounds"]) + len(p["cutscenes"]) + len(p["ui"]))
+    assert len(rows) == expected
+    assert len({r["asset_id"] for r in rows}) == len(rows)
+    assert {r["priority"] for r in rows} <= {"P0", "P1", "P2", "P3", "P4"} and all(r["batch"] for r in rows)
+
+
+def test_strings_cover_ftue_and_errors():
+    import yaml
+    ko = D("strings_ko.json"); en = D("strings_en.json")
+    steps = ["deploy_drag", "deploy_start", "battle_hud", "result_reward", "speed_intro", "hero_acquired", "hero_detail", "lobby_coach_worldmap", "lobby_coach_heroes", "lobby_coach_shop",
+             "deploy_second", "trait_intro", "guild_join", "craft_first", "equip_first", "encounter_intro", "affinity_intro", "stamina_intro", "daily_intro", "star_up_intro", "quest_intro", "hard_intro"]
+    for st in steps:
+        for part in ("title", "body"):
+            k = f"ui.ftue.{st}.{part}"
+            assert ko.get(k) and en.get(k), k
+    spec = yaml.safe_load(open(os.path.join(ROOT, "server", "openapi.yaml"), encoding="utf-8"))
+    for code in spec["components"]["schemas"]["Error"]["properties"]["code"]["enum"]:
+        assert ko.get(f"ui.error.{code}") and en.get(f"ui.error.{code}"), code

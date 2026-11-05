@@ -103,4 +103,9 @@ def build_scenario(d, b, diff, rng, curve=None, allies=None, boss_hp_override=No
     if btype == "rescue" and allies:
         allies = [dict(a) for a in allies]
         allies[-1]["state"] = dict(allies[-1].get("state", {}), captive=True)
+        if not any(e.get("state", {}).get("jailer") for e in enemies):
+            # 보스가 없는 구출 전투: 가장 강한(계층 높은) 적 유닛이 간수. 간수 처치 시 속박 해제 (없으면 포로가 영원히 묶여 사실상 1인 결손이 된다)
+            enemies = [dict(e) for e in enemies]
+            j = max(range(len(enemies)), key=lambda i: (enemies[i]["tier"], enemies[i]["hp"]))
+            enemies[j]["state"] = dict(enemies[j].get("state", {}), jailer=True)
     return allies, enemies, rules

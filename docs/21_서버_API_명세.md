@@ -31,7 +31,7 @@
 ## 3. 공통 규약
 - JSON snake_case, 시각은 ISO-8601 UTC, 재화는 정수. 데이터 ID는 문자열 그대로(H001, I008, S001, B0101, HQ001).
 - **멱등성**: 변경 POST/PUT은 `Idempotency-Key`(UUID) 필수. Redis 24h 보관, 같은 키의 재요청은 최초 응답을 그대로 반환. 같은 키 + 다른 바디는 `422 VALIDATION_ERROR`. 오프라인 큐·재시도가 안전해진다.
-- **에러**: `{ code, message, details, request_id }`. 사용자 문구는 클라이언트 문자열 `error.{code}`(17 문서).
+- **에러**: `{ code, message, details, request_id }`. 사용자 문구는 클라이언트 문자열 `ui.error.{CODE}`(17 문서, 27개 + `ui.error.NETWORK`).
 
 | HTTP | code | 클라이언트 동작 |
 |---|---|---|

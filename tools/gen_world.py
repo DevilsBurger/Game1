@@ -43,8 +43,10 @@ ECON = {
     "stamina": {"hero_max": 100, "regen_minutes_per_point": 6, "player_max": 150,
                 "cost_per_hero": {"normal": 10, "hard": 14, "nightmare": 18},
                 "multi_wave_mult": 1.5, "multi_wave_types": ["defense", "survival", "expedition", "arena", "raid", "decisive"]},
-    "team_size_by_player_level": {str(lv): min(10, 1 + lv // 4) for lv in range(1, 61)},
-    "player_level_exp": {str(lv): int(100 * (lv ** 1.6)) for lv in range(1, 61)},
+    # 팀 슬롯: 1막 스토리의 참전 모드(소대 4 → 부대 6 → 대군 8)를 용병 레벨이 따라가도록 초반을 빠르게(Lv4 4명, Lv8 6명, Lv12 8명, Lv20 10명). 20 문서 §4.
+    "team_size_by_player_level": {str(lv): (1 if lv < 2 else 2 if lv < 3 else 3 if lv < 4 else 4 if lv < 6 else 5 if lv < 8 else 6 if lv < 10 else 7 if lv < 12 else 8 if lv < 16 else 9 if lv < 20 else 10) for lv in range(1, 61)},
+    # 레벨업 필요 EXP(해당 레벨에서 다음 레벨까지): 120 + 60×Lv. 누적 Lv8 ≈ 2,520(약 25전투), Lv12 ≈ 5,280, Lv20 ≈ 13,680(1막 완주), Lv36 ≈ 42,000.
+    "player_level_exp": {str(lv): 120 + 60 * lv for lv in range(1, 61)},
     "star_up_cost": {
         "1_to_2": {str(t): {"M001": [30, 50, 80, 120, 180][t - 1], "M002": [0, 2, 4, 8, 12][t - 1], "M003": 0, "gold": [500, 1000, 2000, 4000, 8000][t - 1]} for t in range(1, 6)},
         "2_to_3": {str(t): {"M001": [80, 130, 200, 300, 450][t - 1], "M002": [5, 10, 16, 25, 40][t - 1], "M003": [1, 2, 3, 5, 8][t - 1], "gold": [2000, 4000, 8000, 16000, 32000][t - 1]} for t in range(1, 6)},
@@ -407,6 +409,25 @@ for n in NATIONS:
 os.makedirs(OUT, exist_ok=True)
 json.dump({"version": 1, "count": len(nations_out), "nations": nations_out}, open(os.path.join(OUT, "nations.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 from collections import Counter
+# ── 튜닝 결과 보존: 기존 battles.json의 보스 체력 배수·tuned_power_mult·power_cliff, economy.json의 enemy_power_curve(난이도 보정 곡선)는 재생성 시 유지한다.
+_bp = os.path.join(OUT, "battles.json")
+if os.path.exists(_bp):
+    _prev = {b["id"]: b for b in json.load(open(_bp, encoding="utf-8"))["battles"]}
+    _kept = 0
+    for b in BATTLES:
+        pb = _prev.get(b["id"])
+        if not pb: continue
+        if b["enemy"]["boss"] and pb["enemy"]["boss"] and pb["enemy"]["boss"].get("tuned"):
+            b["enemy"]["boss"]["hp_mult"] = pb["enemy"]["boss"]["hp_mult"]; b["enemy"]["boss"]["tuned"] = True
+        for d, dd in b["difficulties"].items():
+            pd = pb["difficulties"].get(d, {})
+            for k in ("tuned_power_mult", "power_cliff"):
+                if k in pd: dd[k] = pd[k]; _kept += 1
+    print("preserved tuning fields:", _kept)
+_ep = os.path.join(OUT, "economy.json")
+if os.path.exists(_ep):
+    _pe = json.load(open(_ep, encoding="utf-8"))
+    if "enemy_power_curve" in _pe: ECON["enemy_power_curve"] = _pe["enemy_power_curve"]
 json.dump({"version": 1, "count": len(BATTLES), "by_kind": dict(Counter(b["kind"] for b in BATTLES)), "by_type": dict(Counter(b["type"] for b in BATTLES)),
            "battle_types": [{"key": b[0], "name_ko": b[1], "desc": b[2], "participation": b[3], "reward_mult": b[4], "rule": b[5]} for b in BATTLE_TYPES],
            "participation": PARTICIPATION, "difficulties": [{"key": d[0], "name_ko": d[1], "enemy_mult": d[2], "reward_mult": d[3], "hero_drop_mult": d[4]} for d in DIFFICULTIES],

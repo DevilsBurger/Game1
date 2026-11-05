@@ -108,7 +108,7 @@ class BalancePatch { 런타임 JSON: heroes.balance, items.balance, traits.balan
 | `RewardService` | 드랍 테이블 해석(아이템 풀·재료·영웅 드랍·호감도·서약서 배수) | 서버 RNG, 클라는 표시만 |
 | `QuestService` | 103 퀘스트 진행·조건 판정(전원 생존·시간·인원·출신 수 등) | 조건 키 11종 |
 | `ShopService` | 6탭 상점, 일일 한도, 보석 교환 | |
-| `ProgressService` | 막/국가/지역/전투 해금, 첫 클리어, 호감도 천장 | |
+| `ProgressService` | 막/국가/지역/전투 해금, 첫 클리어, 호감도 천장, 참전 슬롯 = clamp(max(레벨 슬롯, participation.min), min, max) | 20 §4 |
 
 ### 3.4 Presentation (전투 뷰)
 - `BoardView`: odd-q 헥스 8×7 렌더(스프라이트 타일 + 틴트), 셀 ↔ 월드 좌표, 배치 가능 하이라이트, 배경 스프라이트(국가·지역).
