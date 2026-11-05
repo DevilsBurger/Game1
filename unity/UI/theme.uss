@@ -1,0 +1,91 @@
+/* auto-generated from design/tokens.json — UI Toolkit theme variables (Unity 6 USS custom properties) */
+:root {
+    --ash-950: #0B0D10;
+    --ash-900: #121417;
+    --ash-800: #1C1F24;
+    --ash-700: #2A2F36;
+    --ash-600: #3A414A;
+    --ash-500: #596270;
+    --ash-300: #9AA3AF;
+    --ivory-100: #F2EAD8;
+    --ivory-50: #FFF8EA;
+    --ember-600: #D9601A;
+    --ember-500: #FF7A1A;
+    --ember-300: #FFB366;
+    --gold-500: #D9A441;
+    --gold-300: #F2CC7A;
+    --gem-500: #7FD1FF;
+    --ally-500: #3FA7D6;
+    --enemy-500: #D64545;
+    --hp-500: #4CCB5A;
+    --shield-500: #E8EEF5;
+    --mana-500: #4C8DFF;
+    --stamina-500: #F5C542;
+    --semantic-success: #5CB85C;
+    --semantic-warning: #F5A623;
+    --semantic-danger: #E04B4B;
+    --semantic-info: #5BA7E6;
+    --star-1: #C9CED6;
+    --star-2: #F2B134;
+    --star-3: #FF9E3D;
+    --difficulty-normal: #58B36B;
+    --difficulty-hard: #F5A623;
+    --difficulty-nightmare: #C04BFF;
+    --tier-1: #9AA3AF; --tier-1-dark: #4D545C;
+    --tier-2: #58B36B; --tier-2-dark: #2E6B3C;
+    --tier-3: #4C8DFF; --tier-3-dark: #2A4F8F;
+    --tier-4: #A06CF0; --tier-4-dark: #5A3C8F;
+    --tier-5: #F2B134; --tier-5-dark: #8F6A1E;
+    --itemcat-component: #9AA3AF;
+    --itemcat-completed: #F2EAD8;
+    --itemcat-radiant: #F2CC7A;
+    --itemcat-artifact: #A06CF0;
+    --itemcat-support: #5BA7E6;
+    --itemcat-emblem: #FF7A1A;
+    --itemcat-consumable: #7FD1FF;
+    --itemcat-material: #58B36B;
+    --font-display: 48px;
+    --font-display_xl: 64px;
+    --font-h1: 36px;
+    --font-h2: 28px;
+    --font-body: 22px;
+    --font-secondary: 18px;
+    --font-caption: 16px;
+    --font-badge: 14px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+    --radius-card: 12px;
+    --radius-button: 8px;
+    --radius-panel: 16px;
+    --radius-portrait: 6px;
+    --radius-circle: 9999px;
+    --size-top-bar: 80px;
+    --size-bottom-tab: 80px;
+    --size-side-panel: 320px;
+    --size-touch-min: 88px;
+    --size-hex-diameter: 96px;
+}
+
+/* 기본 컴포넌트 */
+.screen { background-color: var(--ash-900); color: var(--ivory-100); -unity-font-definition: resource('Fonts/NotoSansKR'); font-size: var(--font-body); }
+.top-bar { height: var(--size-top-bar); background-color: var(--ash-800); flex-direction: row; align-items: center; padding: 0 44px; }
+.bottom-tab { height: var(--size-bottom-tab); background-color: var(--ash-800); flex-direction: row; justify-content: space-around; }
+.panel { background-color: var(--ash-800); border-color: var(--gold-500); border-width: 1px; border-radius: var(--radius-panel); padding: var(--space-sm); }
+.card { background-color: var(--ash-700); border-radius: var(--radius-card); border-width: 2px; border-color: var(--ash-600); }
+.btn { height: 56px; padding: 0 28px; border-radius: var(--radius-button); -unity-font-style: bold; font-size: 20px; border-width: 0; }
+.btn-primary { background-color: var(--ember-500); color: var(--ash-800); } .btn-primary:active { background-color: var(--ember-600); }
+.btn-secondary { background-color: var(--ash-700); color: var(--ivory-100); border-width: 1px; border-color: var(--ivory-100); }
+.btn-danger { background-color: var(--semantic-danger); color: white; } .btn-premium { background-color: var(--gem-500); color: var(--ash-950); }
+.btn:disabled { background-color: var(--ash-600); color: var(--ash-500); }
+.h1 { font-size: var(--font-h1); color: var(--ivory-50); -unity-font-definition: resource('Fonts/NotoSerifKR'); } .h2 { font-size: var(--font-h2); -unity-font-style: bold; }
+.text-secondary { color: var(--ash-300); font-size: var(--font-secondary); } .caption { font-size: var(--font-caption); }
+.bar { height: 16px; background-color: var(--ash-700); border-width: 1px; border-color: var(--ash-600); border-radius: 4px; overflow: hidden; }
+.bar-hp { background-color: var(--hp-500); } .bar-mana { background-color: var(--mana-500); } .bar-stamina { background-color: var(--stamina-500); } .bar-progress { background-color: var(--ember-500); }
+.tier-1 { border-color: var(--tier-1); } .tier-2 { border-color: var(--tier-2); } .tier-3 { border-color: var(--tier-3); } .tier-4 { border-color: var(--tier-4); } .tier-5 { border-color: var(--tier-5); }
+.hex-ally { background-color: rgba(63, 167, 214, 0.12); } .hex-enemy { background-color: rgba(214, 69, 69, 0.12); } .hex-selected { border-color: var(--ember-500); border-width: 2px; }
+.toast { position: absolute; top: 96px; align-self: center; background-color: var(--ash-800); border-color: var(--gold-500); border-width: 1px; border-radius: 8px; padding: 8px 16px; }
+.modal-dim { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(11, 13, 16, 0.8); }

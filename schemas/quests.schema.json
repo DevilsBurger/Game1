@@ -1,0 +1,114 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "arken/quests",
+ "title": "Quests",
+ "type": "object",
+ "properties": {
+  "version": {
+   "type": "integer"
+  },
+  "count": {
+   "type": "integer"
+  },
+  "by_kind": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "quests": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "story",
+       "hero_chain",
+       "origin_pact",
+       "class_trial"
+      ]
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "hero_id": {
+      "type": "string"
+     },
+     "steps": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "battle_id": {
+         "type": "string"
+        },
+        "condition": {
+         "type": [
+          "object",
+          "null"
+         ]
+        }
+       },
+       "required": [
+        "battle_id"
+       ],
+       "additionalProperties": true
+      }
+     },
+     "unlock": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": true
+     },
+     "reward": {
+      "type": "object",
+      "properties": {
+       "hero_guaranteed": {
+        "type": "string"
+       },
+       "gold": {
+        "type": "integer"
+       },
+       "gems": {
+        "type": "integer"
+       },
+       "items": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {},
+         "required": [],
+         "additionalProperties": true
+        }
+       }
+      },
+      "required": [],
+      "additionalProperties": true
+     },
+     "desc": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "kind",
+     "name_ko",
+     "steps",
+     "reward"
+    ],
+    "additionalProperties": true
+   }
+  }
+ },
+ "required": [
+  "count",
+  "quests"
+ ],
+ "additionalProperties": true
+}

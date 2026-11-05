@@ -11,7 +11,7 @@
 | 2D 애니메이션 | **Spine 2D**(spine-unity) | 파츠 리깅·스킨·믹스 |
 | 에셋 | Addressables (국가별 그룹, 원격 CDN) | 초기 용량 150MB 제한 |
 | 데이터 | JSON(`data/*.json`) → 빌드 시 **ScriptableObject 변환**(에디터 임포터) + 런타임 핫픽스는 JSON 패치(밸런스 배율·보정 곡선) | 디자이너 파이프라인 유지, 런타임 파싱 비용 제거 |
-| 결정론 | 전투 코어는 **고정소수점(long, 1/1000)** + `System.Random` 대체 시드 RNG(xorshift) | 서버 재검증·리플레이 |
+| 결정론 | 전투 코어는 **IEEE 754 double + xorshift64\* RNG(splitmix64 시드)**, 연산 순서 고정, 초월함수 금지, Burst fast-math 금지 | 파이썬 레퍼런스(CPython double)와 비트 단위 동일 결과 → 서버 재검증·리플레이. 고정소수점 전면 정수화보다 포팅 위험이 작다 |
 | 네트워크 | REST(UnityWebRequest) + JWT, 전투 결과 서버 재시뮬 검증 | |
 | 저장 | 서버 권위, 로컬 캐시(설정·프리셋) | |
 | 테스트 | Unity Test Framework(EditMode: 코어, PlayMode: UI 스모크), 벡터 재현 테스트 | |
@@ -37,15 +37,34 @@ Tests/ EditMode/ (Core 벡터 재현, 데이터 무결성)  PlayMode/ (씬 전�
 ```
 의존 방향: `UI → Presentation → Meta → Core`, `Data`는 모두가 참조, `Net`은 Meta만 참조. Core는 Unity API 금지(서버 .NET에서 동일 DLL 재사용).
 
+## 2.1 사전 생성 산출물 (저장소 `unity/`, 복사해서 사용)
+| 파일 | 내용 | 생성기 |
+|---|---|---|
+| `unity/Generated/Enums.cs` | Origin·HeroClass·Archetype·ItemCategory·StatKey·HookType·BattleType·BattleKind·Participation·Difficulty·QuestKind·BattleEventType + 문자열 키 변환 | `tools/gen_csharp.py` |
+| `unity/Generated/Dtos.cs` | data/*.json 1:1 DTO(Newtonsoft), BalancePatchDoc, BattleEvent/EventChecksum | 〃 |
+| `unity/Generated/DesignTokens.cs` | 색·폰트·크기·간격·모션 상수, NationPalettes 24 | 〃 (design/tokens.json) |
+| `unity/Generated/TraitKeys.cs` | 특성 효과 키 열거 | 〃 |
+| `unity/UI/theme.uss` | UI Toolkit 테마 변수(`--ember-500` …)와 기본 컴포넌트 클래스 | 〃 |
+| `schemas/*.schema.json`, `schemas/enums.json` | 데이터 스키마·열거형 | `tools/gen_schemas.py` |
+| `tests/vectors/battle_vectors.json` | RNG 알려진 답 + 전투 벡터 41(이벤트 체크섬 포함) | `sim/make_vectors.py` |
+
 ## 3. 모듈 설계
 
 ### 3.1 Core (결정론 전투 코어) — `sim/engine` 1:1 포팅
 ```csharp
 namespace Arken.Core.Combat {
-  public struct Fx { /* 고정소수점 1/1000, 연산자 오버로드, FromInt/FromFloat, Mul/Div 반올림 규칙 고정 */ }
-  public sealed class Rng { ulong s; public Rng(ulong seed); public int Next(int n); public Fx Next01(); }  // xorshift64*
+  // 수치는 double. 파이썬 레퍼런스와 같은 순서로 연산한다(괄호·곱셈 순서 유지). Math.Round는 MidpointRounding.ToEven(파이썬 round와 동일).
+  public sealed class Rng {   // sim/engine/rng.py 와 동일: splitmix64 시드, xorshift64*
+    ulong s; public Rng(ulong seed);
+    public ulong NextU64();                 // x^=x>>12; x^=x<<25; x^=x>>27; return x*0x2545F4914F6CDD1D (unchecked)
+    public double Random();                 // (NextU64()>>11) * (1.0/9007199254740992.0)
+    public int RandRange(int n);            // (int)(NextU64() % (ulong)n)
+    public void Shuffle<T>(IList<T> a);     // Fisher–Yates i=n-1..1, j=RandRange(i+1)
+    public List<T> Sample<T>(IList<T> a, int k);  // partial Fisher–Yates
+  }
+  // tests/vectors/battle_vectors.json 의 rng.known_answers(시드 5종 × u64/random/randrange/shuffle/sample)를 먼저 통과시킨다.
   public readonly struct Hex { public readonly int Col, Row; /* odd-q */ public static int Dist(Hex a, Hex b); public static Hex[] Neighbors(Hex h); }
-  public sealed class UnitSpec { string Id; string Name; string Origin; string Class; int Tier; int Star; Fx Hp, Ad, As, Armor, Mr; int Range; Fx ManaStart, ManaMax, Crit, CritDmg, Ap; SkillSpec Skill; Fx SkillMult; ItemDef[] Items; UnitFlags Flags; Dictionary<string,object> State; }
+  public sealed class UnitSpec { string Id; string Name; string Origin; string Class; int Tier; int Star; double Hp, Ad, As, Armor, Mr; int Range; double ManaStart, ManaMax, Crit, CritDmg, Ap; SkillSpec Skill; double SkillMult; ItemDef[] Items; UnitFlags Flags; Dictionary<string,object> State; }
   public sealed class Unit { /* combat.py Unit과 동일 필드: mod, buffs, shields, 타이머, hooks, stats */ }
   public interface IHook { void Register(Battle b, Unit u, HookParams p, Fx mult); }   // items.py / traits.py 훅 ↔ 이벤트 핸들러
   public enum HookEvent { Start, Attack, DamageDealt, Damaged, Cast, Kill, Death, Died, Tick1s, Crit, PreDamage, PreTaken, WaveEnd, Revived }
@@ -55,15 +74,18 @@ namespace Arken.Core.Combat {
     public bool Step();                        // 1틱(0.05s) 진행 → 뷰가 이벤트 큐를 소비 (클라이언트 렌더)
     public IReadOnlyList<BattleEvent> DrainEvents();   // Damage, Heal, Cast, Move, Death, Spawn, Wave, Stun …
   }
-  public sealed class BattleRules { List<List<UnitSpec>> Waves; bool Assassination, Escape; Dictionary<int,HashSet<string>> DisableTraits; }
-  public sealed class BattleResult { int Winner; Fx Time; int Waves; List<UnitResult> Units; }
+  public sealed class BattleRules { List<List<UnitSpec>> Waves; bool Assassination, Escape; Dictionary<int,HashSet<string>> DisableTraits; bool RecordEvents; }
+  public sealed class BattleResult { int Winner; double Time; int Waves; List<UnitResult> Units; EventChecksum Events; }
+  // BattleEvent (파이썬 Battle.emit 과 동일 필드): spawn{uid,team,name,cell,owner,hid,star,hp} move{uid,frm,to} attack{uid,target,empowered}
+  //   cast{uid,skill,archetype,target} damage{src,dst,amount,kind,crit,skill} heal{src,dst,amount,vamp} death{uid,killer} revive{uid,hp} stun{uid,duration} wave{index,units} end{winner}; 모두 t(초) 포함
+  // EventChecksum{count, by_type, damage_sum, heal_sum} — 벡터 검증·서버 결과 서명에 사용
   public static class Abilities { /* 34 원형 switch: abilities.py cast_ability */ }
   public static class Traits { /* 28 특성 적용: traits.py, scale_eff 포함 */ }
   public static class ItemHooks { /* 55 훅: items.py */ }
 }
 ```
-- 포팅 규칙: 파이썬의 `float` 연산을 `Fx`로 치환할 때 **곱셈 후 반올림**, 나눗셈은 `(a*1000)/b`. 틱 순서·RNG 호출 순서를 파이썬과 동일하게 유지(랜덤 셔플은 Fisher–Yates, `rng.random()`은 `Next01`).
-- 검증: `tests/vectors/battle_vectors.json` → EditMode 테스트가 승자·시간(±0.05)·생존자·총 피해(±1%)를 비교. 고정소수점 오차로 피해 합이 다를 수 있으므로 1% 허용, 승자·생존자는 엄격.
+- 포팅 규칙: (1) 수치는 `double`, 파이썬과 같은 식·같은 순서로 계산(예: `raw * 100.0 / (100.0 + armor)`를 `raw / (1 + armor/100)`로 바꾸지 말 것). (2) RNG 호출 순서·횟수 동일(정렬 타이브레이크의 `rng.random()`은 후보를 같은 순서로 순회하며 키를 먼저 계산한 뒤 정렬). (3) 유닛 순회는 리스트 순서, 딕셔너리는 삽입 순서(C#은 `List`/순서 보장 컬렉션), 틱 순서는 짝수 틱 정방향·홀수 틱 역방향. (4) `round()`는 ToEven, 정수 변환은 절삭.
+- 검증: `tests/vectors/battle_vectors.json` → EditMode 테스트가 RNG 알려진 답(5시드) → 승자·시간·생존자·총 피해·**이벤트 체크섬**(종류별 개수·피해/치유 합) 순으로 엄격 비교. 어긋나면 첫 불일치 이벤트(t, type)로 역추적한다.
 - 성능: 10v10 30초 ≤ 20ms(Run), Step당 ≤ 0.3ms. 유닛/셀 조회는 배열 인덱스(`Unit[] byCell[56]`).
 
 ### 3.2 Data
@@ -136,12 +158,12 @@ sim/run_balance.py 등 ──balance JSON──▶ 서버 /config/balance ──
 합계 약 27주. 아트 제작(미드저니 1,200장 + 리깅 329)은 M0부터 병렬 진행하며 M3 전까지 1막 분량, M6까지 전량.
 
 ### 6.1 M1 상세 작업 분해
-1. `Fx` 고정소수점 + 단위 테스트(곱/나눗셈 반올림) · 2. `Rng` + 파이썬 `random.Random` 호환 여부 검토(비호환 시 파이썬 쪽을 xorshift로 교체 후 벡터 재생성) · 3. `Hex`(odd-q, 거리·이웃·반경) · 4. `UnitSpec/Unit/모드/버프/방어막` · 5. `Battle` 틱 루프(이동·타겟·공격·마나·시전·연장) · 6. 피해 공식·치유·사망·부활 · 7. 원형 34 · 8. 특성 28 + `scale_eff` · 9. 훅 55 + 오라 · 10. 규칙(웨이브/구조물/호위/구출/암살/탈출) · 11. `BattleEvent` 큐 · 12. 벡터 테스트·성능 벤치.
+1. `Rng`(xorshift64*) + 알려진 답 테스트 · 2. `Hex`(odd-q, 거리·이웃·반경) + 대칭 테스트 · 4. `UnitSpec/Unit/모드/버프/방어막` · 5. `Battle` 틱 루프(이동·타겟·공격·마나·시전·연장) · 6. 피해 공식·치유·사망·부활 · 7. 원형 34 · 8. 특성 28 + `scale_eff` · 9. 훅 55 + 오라 · 10. 규칙(웨이브/구조물/호위/구출/암살/탈출) · 11. `BattleEvent` 큐 + 체크섬 · 12. 벡터 테스트·성능 벤치.
 
 ### 6.2 리스크
 | 리스크 | 대응 |
 |---|---|
-| 파이썬 float ↔ C# 고정소수점 불일치로 벡터 미재현 | 파이썬 엔진에 고정소수점 모드 추가(동일 반올림) 후 벡터 재생성; 승자·생존자만 엄격 비교 |
+| 파이썬 ↔ C# double 연산 순서 차이로 벡터 미재현 | 이벤트 체크섬으로 첫 불일치 지점을 찾는다. 플랫폼 간(x86/ARM) 기본 사칙연산은 IEEE 동일. FMA 자동 결합·Burst fast-math·float32 사용 금지 |
 | UI Toolkit 드래그·월드 좌표 변환 복잡 | 편성 보드만 UGUI로 대체 가능(인터페이스 분리) |
 | 미드저니 일관성 | 앵커 `--sref` 고정, 영웅 `--cref`, 검수 체크리스트, 1막 분량으로 파이프라인 먼저 검증 |
 | 어드레서블 용량 | 국가 단위 원격 번들, 초상 아틀라스 출신별 분할 |

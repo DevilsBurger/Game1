@@ -1,0 +1,214 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "arken/economy",
+ "title": "Economy",
+ "type": "object",
+ "properties": {
+  "gold_base": {
+   "type": "object",
+   "properties": {
+    "const": {
+     "type": "number"
+    },
+    "per_level": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "const",
+    "per_level"
+   ],
+   "additionalProperties": true
+  },
+  "exp_per_level": {
+   "type": "number"
+  },
+  "stamina": {
+   "type": "object",
+   "properties": {
+    "hero_max": {
+     "type": "integer"
+    },
+    "regen_minutes_per_point": {
+     "type": "number"
+    },
+    "player_max": {
+     "type": "integer"
+    },
+    "cost_per_hero": {
+     "type": "object",
+     "properties": {
+      "normal": {
+       "type": "integer"
+      },
+      "hard": {
+       "type": "integer"
+      },
+      "nightmare": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "normal",
+      "hard",
+      "nightmare"
+     ],
+     "additionalProperties": true
+    },
+    "multi_wave_mult": {
+     "type": "number"
+    },
+    "multi_wave_types": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   },
+   "required": [
+    "hero_max",
+    "cost_per_hero"
+   ],
+   "additionalProperties": true
+  },
+  "team_size_by_player_level": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "player_level_exp": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "star_up_cost": {
+   "type": "object",
+   "properties": {
+    "1_to_2": {
+     "type": "object",
+     "properties": {},
+     "required": [],
+     "additionalProperties": true
+    },
+    "2_to_3": {
+     "type": "object",
+     "properties": {},
+     "required": [],
+     "additionalProperties": true
+    }
+   },
+   "required": [
+    "1_to_2",
+    "2_to_3"
+   ],
+   "additionalProperties": true
+  },
+  "hero_value_gold_equiv": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "hero_drop_base_pct": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "hero_drop_difficulty_mult": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "hero_drop_cap_pct": {
+   "type": "number"
+  },
+  "duplicate_hero_conversion": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "affinity_pity": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "regional_native_hero_drop_pct": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "item_drop": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "material_drop": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "premium_currency": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "enemy_power_curve": {
+   "type": "object",
+   "properties": {
+    "bands": {
+     "type": "object",
+     "properties": {
+      "normal": {
+       "type": "object",
+       "properties": {},
+       "required": [],
+       "additionalProperties": true
+      },
+      "hard": {
+       "type": "object",
+       "properties": {},
+       "required": [],
+       "additionalProperties": true
+      },
+      "nightmare": {
+       "type": "object",
+       "properties": {},
+       "required": [],
+       "additionalProperties": true
+      }
+     },
+     "required": [
+      "normal",
+      "hard",
+      "nightmare"
+     ],
+     "additionalProperties": true
+    }
+   },
+   "required": [
+    "bands"
+   ],
+   "additionalProperties": true
+  }
+ },
+ "required": [
+  "gold_base",
+  "stamina",
+  "team_size_by_player_level",
+  "star_up_cost",
+  "hero_drop_base_pct",
+  "item_drop",
+  "material_drop"
+ ],
+ "additionalProperties": true
+}

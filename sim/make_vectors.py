@@ -45,7 +45,19 @@ def main():
         res = run_vector(d, v)
         out.append({**v, "expected": res})
     os.makedirs(OUT, exist_ok=True)
-    json.dump({"engine_version": 1, "dt": 0.05, "count": len(out), "vectors": out}, open(os.path.join(OUT, "battle_vectors.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    from engine.rng import Rng, known_answers
+    rng_vec = []
+    for seed in (0, 1, 42, 2026, 123456789):
+        r = Rng(seed); u = [r.next_u64() for _ in range(5)]
+        r2 = Rng(seed); fl = [r2.random() for _ in range(3)]
+        r3 = Rng(seed); rr = [r3.randrange(n) for n in (7, 100, 56, 10000)]
+        r4 = Rng(seed); lst = list(range(8)); r4.shuffle(lst)
+        r5 = Rng(seed); sm = r5.sample(list(range(20)), 5)
+        rng_vec.append({"seed": seed, "u64": [str(x) for x in u], "random": fl, "randrange": rr, "shuffle8": lst, "sample20_5": sm})
+    json.dump({"engine_version": 2, "dt": 0.05, "numeric": "IEEE754 double, no transcendental functions, Python round()=banker's rounding",
+               "rng": {"algorithm": "xorshift64* seeded by splitmix64; random()=(u64>>11)*2^-53; randrange(n)=u64%n; shuffle=Fisher-Yates(i=n-1..1, j=randrange(i+1)); sample=partial Fisher-Yates",
+                       "known_answers": rng_vec},
+               "count": len(out), "vectors": out}, open(os.path.join(OUT, "battle_vectors.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("vectors:", len(out))
 
 
@@ -61,9 +73,11 @@ def run_vector(d, v):
     rules = dict(v.get("rules", {}))
     if rules.get("waves"):
         rules["waves"] = [[to_spec(d, u) for u in wave] for wave in rules["waves"]]
+    rules["record_events"] = True
     r = Battle(d, [to_spec(d, u) for u in v["allies"]], [to_spec(d, u) for u in v["enemies"]], seed=v["seed"], rules=rules).run()
     return {"winner": r["winner"], "time": r["time"], "survivors": sorted([u["name"] for u in r["units"] if u["alive"] and not u["is_summon"]]),
-            "total_damage": {str(t): round(sum(u["stats"]["dmg"] for u in r["units"] if u["team"] == t)) for t in (0, 1)}}
+            "total_damage": {str(t): round(sum(u["stats"]["dmg"] for u in r["units"] if u["team"] == t)) for t in (0, 1)},
+            "events": r["events"]}
 
 
 if __name__ == "__main__":

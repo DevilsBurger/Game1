@@ -1,0 +1,567 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "arken/heroes",
+ "title": "Heroes",
+ "type": "object",
+ "properties": {
+  "version": {
+   "type": "integer"
+  },
+  "count": {
+   "type": "integer"
+  },
+  "player_unit": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^(H[0-9]{3}|P000)$"
+    },
+    "name_ko": {
+     "type": "string"
+    },
+    "name_en": {
+     "type": "string"
+    },
+    "title": {
+     "type": "string"
+    },
+    "origin": {
+     "type": "string",
+     "enum": [
+      "astel",
+      "valheim",
+      "sairam",
+      "karna",
+      "lies",
+      "elowen",
+      "grandur",
+      "neos",
+      "nox",
+      "celestia",
+      "dragonkin",
+      "torga",
+      "lumen",
+      "freelancer"
+     ]
+    },
+    "class": {
+     "type": "string",
+     "enum": [
+      "knight",
+      "warrior",
+      "assassin",
+      "ranger",
+      "mage",
+      "priest",
+      "guardian",
+      "duelist",
+      "summoner",
+      "artillerist",
+      "shaman",
+      "bard",
+      "dragoon",
+      "engineer"
+     ]
+    },
+    "tier": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "rarity": {
+     "type": "string"
+    },
+    "stats": {
+     "type": "object",
+     "properties": {
+      "hp": {
+       "type": "number"
+      },
+      "ad": {
+       "type": "number"
+      },
+      "attack_speed": {
+       "type": "number"
+      },
+      "armor": {
+       "type": "number"
+      },
+      "mr": {
+       "type": "number"
+      },
+      "range": {
+       "type": "integer"
+      },
+      "mana_start": {
+       "type": "number"
+      },
+      "mana_max": {
+       "type": "number"
+      },
+      "crit_chance": {
+       "type": "number"
+      },
+      "crit_damage": {
+       "type": "number"
+      },
+      "ap": {
+       "type": "number"
+      }
+     },
+     "required": [
+      "hp",
+      "ad",
+      "attack_speed",
+      "armor",
+      "mr",
+      "range",
+      "mana_start",
+      "mana_max",
+      "crit_chance",
+      "crit_damage",
+      "ap"
+     ],
+     "additionalProperties": false
+    },
+    "star_scaling": {
+     "type": "object",
+     "properties": {
+      "hp": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 3,
+       "maxItems": 3
+      },
+      "ad": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 3,
+       "maxItems": 3
+      }
+     },
+     "required": [
+      "hp",
+      "ad"
+     ],
+     "additionalProperties": true
+    },
+    "skill": {
+     "type": "object",
+     "properties": {
+      "name": {
+       "type": "string"
+      },
+      "archetype": {
+       "type": "string",
+       "enum": [
+        "burst_st",
+        "burst_ad",
+        "burst_ad_long",
+        "aoe_target",
+        "aoe_target_ad",
+        "aoe_self",
+        "aoe_line",
+        "aoe_line_ad",
+        "chain",
+        "chain_ad",
+        "heal_lowest",
+        "heal_aoe",
+        "shield_self",
+        "shield_allies",
+        "taunt_shield",
+        "buff_as_self",
+        "buff_as_allies",
+        "buff_ad_allies",
+        "buff_ap_allies",
+        "stun_st",
+        "stun_aoe",
+        "dot_target",
+        "armor_shred",
+        "lifesteal_strike",
+        "execute",
+        "execute_long",
+        "multishot",
+        "dash_strike",
+        "dash_aoe",
+        "summon",
+        "summon_big",
+        "summon_multi",
+        "turret",
+        "turret_big"
+       ]
+      },
+      "desc": {
+       "type": "string"
+      },
+      "params": {
+       "type": "object",
+       "properties": {
+        "kind": {
+         "type": "string",
+         "enum": [
+          "damage",
+          "heal",
+          "shield",
+          "buff",
+          "dot",
+          "empower",
+          "summon",
+          "turret"
+         ]
+        }
+       },
+       "required": [
+        "kind"
+       ],
+       "additionalProperties": true
+      }
+     },
+     "required": [
+      "name",
+      "archetype",
+      "params"
+     ],
+     "additionalProperties": true
+    },
+    "archetype_power": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     },
+     "minItems": 3,
+     "maxItems": 3
+    },
+    "lore": {
+     "type": "string"
+    },
+    "balance": {
+     "type": "object",
+     "properties": {
+      "hp_mult": {
+       "type": "number"
+      },
+      "ad_mult": {
+       "type": "number"
+      },
+      "skill_mult": {
+       "type": "number"
+      },
+      "star_mult": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 3,
+       "maxItems": 3
+      }
+     },
+     "required": [
+      "hp_mult",
+      "ad_mult",
+      "skill_mult"
+     ],
+     "additionalProperties": true
+    }
+   },
+   "required": [
+    "id",
+    "name_ko",
+    "origin",
+    "class",
+    "tier",
+    "stats",
+    "star_scaling",
+    "skill",
+    "balance"
+   ],
+   "additionalProperties": true
+  },
+  "heroes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^(H[0-9]{3}|P000)$"
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "name_en": {
+      "type": "string"
+     },
+     "title": {
+      "type": "string"
+     },
+     "origin": {
+      "type": "string",
+      "enum": [
+       "astel",
+       "valheim",
+       "sairam",
+       "karna",
+       "lies",
+       "elowen",
+       "grandur",
+       "neos",
+       "nox",
+       "celestia",
+       "dragonkin",
+       "torga",
+       "lumen",
+       "freelancer"
+      ]
+     },
+     "class": {
+      "type": "string",
+      "enum": [
+       "knight",
+       "warrior",
+       "assassin",
+       "ranger",
+       "mage",
+       "priest",
+       "guardian",
+       "duelist",
+       "summoner",
+       "artillerist",
+       "shaman",
+       "bard",
+       "dragoon",
+       "engineer"
+      ]
+     },
+     "tier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+     },
+     "rarity": {
+      "type": "string"
+     },
+     "stats": {
+      "type": "object",
+      "properties": {
+       "hp": {
+        "type": "number"
+       },
+       "ad": {
+        "type": "number"
+       },
+       "attack_speed": {
+        "type": "number"
+       },
+       "armor": {
+        "type": "number"
+       },
+       "mr": {
+        "type": "number"
+       },
+       "range": {
+        "type": "integer"
+       },
+       "mana_start": {
+        "type": "number"
+       },
+       "mana_max": {
+        "type": "number"
+       },
+       "crit_chance": {
+        "type": "number"
+       },
+       "crit_damage": {
+        "type": "number"
+       },
+       "ap": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "hp",
+       "ad",
+       "attack_speed",
+       "armor",
+       "mr",
+       "range",
+       "mana_start",
+       "mana_max",
+       "crit_chance",
+       "crit_damage",
+       "ap"
+      ],
+      "additionalProperties": false
+     },
+     "star_scaling": {
+      "type": "object",
+      "properties": {
+       "hp": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 3,
+        "maxItems": 3
+       },
+       "ad": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 3,
+        "maxItems": 3
+       }
+      },
+      "required": [
+       "hp",
+       "ad"
+      ],
+      "additionalProperties": true
+     },
+     "skill": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string"
+       },
+       "archetype": {
+        "type": "string",
+        "enum": [
+         "burst_st",
+         "burst_ad",
+         "burst_ad_long",
+         "aoe_target",
+         "aoe_target_ad",
+         "aoe_self",
+         "aoe_line",
+         "aoe_line_ad",
+         "chain",
+         "chain_ad",
+         "heal_lowest",
+         "heal_aoe",
+         "shield_self",
+         "shield_allies",
+         "taunt_shield",
+         "buff_as_self",
+         "buff_as_allies",
+         "buff_ad_allies",
+         "buff_ap_allies",
+         "stun_st",
+         "stun_aoe",
+         "dot_target",
+         "armor_shred",
+         "lifesteal_strike",
+         "execute",
+         "execute_long",
+         "multishot",
+         "dash_strike",
+         "dash_aoe",
+         "summon",
+         "summon_big",
+         "summon_multi",
+         "turret",
+         "turret_big"
+        ]
+       },
+       "desc": {
+        "type": "string"
+       },
+       "params": {
+        "type": "object",
+        "properties": {
+         "kind": {
+          "type": "string",
+          "enum": [
+           "damage",
+           "heal",
+           "shield",
+           "buff",
+           "dot",
+           "empower",
+           "summon",
+           "turret"
+          ]
+         }
+        },
+        "required": [
+         "kind"
+        ],
+        "additionalProperties": true
+       }
+      },
+      "required": [
+       "name",
+       "archetype",
+       "params"
+      ],
+      "additionalProperties": true
+     },
+     "archetype_power": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+     },
+     "lore": {
+      "type": "string"
+     },
+     "balance": {
+      "type": "object",
+      "properties": {
+       "hp_mult": {
+        "type": "number"
+       },
+       "ad_mult": {
+        "type": "number"
+       },
+       "skill_mult": {
+        "type": "number"
+       },
+       "star_mult": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 3,
+        "maxItems": 3
+       }
+      },
+      "required": [
+       "hp_mult",
+       "ad_mult",
+       "skill_mult"
+      ],
+      "additionalProperties": true
+     }
+    },
+    "required": [
+     "id",
+     "name_ko",
+     "origin",
+     "class",
+     "tier",
+     "stats",
+     "star_scaling",
+     "skill",
+     "balance"
+    ],
+    "additionalProperties": true
+   },
+   "minItems": 196,
+   "maxItems": 196
+  }
+ },
+ "required": [
+  "version",
+  "count",
+  "heroes"
+ ],
+ "additionalProperties": true
+}

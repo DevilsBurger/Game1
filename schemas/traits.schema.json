@@ -1,0 +1,204 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "arken/traits",
+ "title": "Traits",
+ "type": "object",
+ "properties": {
+  "origins": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string",
+      "enum": [
+       "astel",
+       "valheim",
+       "sairam",
+       "karna",
+       "lies",
+       "elowen",
+       "grandur",
+       "neos",
+       "nox",
+       "celestia",
+       "dragonkin",
+       "torga",
+       "lumen",
+       "freelancer"
+      ]
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "name_en": {
+      "type": "string"
+     },
+     "desc": {
+      "type": "string"
+     },
+     "synergy_desc": {
+      "type": "string"
+     },
+     "thresholds": {
+      "type": "array",
+      "items": {
+       "type": "integer"
+      }
+     },
+     "effects": {
+      "type": "object",
+      "properties": {
+       "hook": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "hook"
+      ],
+      "additionalProperties": true
+     },
+     "balance": {
+      "type": "object",
+      "properties": {
+       "mult": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        }
+       }
+      },
+      "required": [],
+      "additionalProperties": true
+     }
+    },
+    "required": [
+     "key",
+     "name_ko",
+     "thresholds",
+     "effects"
+    ],
+    "additionalProperties": true
+   },
+   "minItems": 14,
+   "maxItems": 14
+  },
+  "classes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string",
+      "enum": [
+       "knight",
+       "warrior",
+       "assassin",
+       "ranger",
+       "mage",
+       "priest",
+       "guardian",
+       "duelist",
+       "summoner",
+       "artillerist",
+       "shaman",
+       "bard",
+       "dragoon",
+       "engineer"
+      ]
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "name_en": {
+      "type": "string"
+     },
+     "desc": {
+      "type": "string"
+     },
+     "synergy_desc": {
+      "type": "string"
+     },
+     "thresholds": {
+      "type": "array",
+      "items": {
+       "type": "integer"
+      }
+     },
+     "effects": {
+      "type": "object",
+      "properties": {
+       "hook": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "hook"
+      ],
+      "additionalProperties": true
+     },
+     "balance": {
+      "type": "object",
+      "properties": {
+       "mult": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        }
+       }
+      },
+      "required": [],
+      "additionalProperties": true
+     }
+    },
+    "required": [
+     "key",
+     "name_ko",
+     "thresholds",
+     "effects"
+    ],
+    "additionalProperties": true
+   },
+   "minItems": 14,
+   "maxItems": 14
+  },
+  "archetypes": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "class_base": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "tier_mult": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "tier_def_add": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "star_scaling": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  }
+ },
+ "required": [
+  "origins",
+  "classes",
+  "archetypes",
+  "class_base",
+  "tier_mult"
+ ],
+ "additionalProperties": true
+}

@@ -1,0 +1,120 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "arken/nations",
+ "title": "Nations",
+ "type": "object",
+ "properties": {
+  "version": {
+   "type": "integer"
+  },
+  "count": {
+   "type": "integer"
+  },
+  "nations": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string"
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "name_en": {
+      "type": "string"
+     },
+     "region_group": {
+      "type": "string"
+     },
+     "category": {
+      "type": "string"
+     },
+     "civilization": {
+      "type": "string"
+     },
+     "danger": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+     },
+     "capital": {
+      "type": "string"
+     },
+     "ruler": {
+      "type": "string"
+     },
+     "desc": {
+      "type": "string"
+     },
+     "native_origin": {
+      "type": "string",
+      "enum": [
+       "astel",
+       "valheim",
+       "sairam",
+       "karna",
+       "lies",
+       "elowen",
+       "grandur",
+       "neos",
+       "nox",
+       "celestia",
+       "dragonkin",
+       "torga",
+       "lumen",
+       "freelancer"
+      ]
+     },
+     "native_origin_ko": {
+      "type": "string"
+     },
+     "act": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+     },
+     "regions": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "minItems": 5,
+      "maxItems": 5
+     },
+     "enemy_factions": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "battle_count": {
+      "type": "integer"
+     },
+     "national_item": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "key",
+     "name_ko",
+     "danger",
+     "native_origin",
+     "act",
+     "regions",
+     "enemy_factions"
+    ],
+    "additionalProperties": true
+   },
+   "minItems": 24,
+   "maxItems": 24
+  }
+ },
+ "required": [
+  "nations"
+ ],
+ "additionalProperties": true
+}

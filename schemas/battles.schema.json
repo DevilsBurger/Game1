@@ -1,0 +1,556 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "arken/battles",
+ "title": "Battles",
+ "type": "object",
+ "properties": {
+  "version": {
+   "type": "integer"
+  },
+  "count": {
+   "type": "integer"
+  },
+  "by_kind": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "by_type": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "battle_types": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": true
+   }
+  },
+  "participation": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": true
+  },
+  "difficulties": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": true
+   }
+  },
+  "monsters": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string"
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "class": {
+      "type": "string",
+      "enum": [
+       "knight",
+       "warrior",
+       "assassin",
+       "ranger",
+       "mage",
+       "priest",
+       "guardian",
+       "duelist",
+       "summoner",
+       "artillerist",
+       "shaman",
+       "bard",
+       "dragoon",
+       "engineer"
+      ]
+     },
+     "tier": {
+      "type": "integer"
+     },
+     "tag": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "key",
+     "name_ko",
+     "class",
+     "tier"
+    ],
+    "additionalProperties": true
+   }
+  },
+  "battles": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "name_ko": {
+      "type": "string"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "story",
+       "regional",
+       "encounter",
+       "quest"
+      ]
+     },
+     "nation": {
+      "type": "string"
+     },
+     "nation_ko": {
+      "type": "string"
+     },
+     "region": {
+      "type": "string"
+     },
+     "type": {
+      "type": "string",
+      "enum": [
+       "skirmish",
+       "siege",
+       "defense",
+       "escort",
+       "hunt",
+       "duel",
+       "ambush",
+       "expedition",
+       "bounty",
+       "invasion",
+       "survival",
+       "encounter",
+       "trial",
+       "raid",
+       "rescue",
+       "assassination",
+       "strike",
+       "suppression",
+       "monster_hunt",
+       "decisive",
+       "arena",
+       "escape",
+       "recon",
+       "guard"
+      ]
+     },
+     "type_ko": {
+      "type": "string"
+     },
+     "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+     },
+     "act": {
+      "type": "integer"
+     },
+     "participation": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string"
+       },
+       "min": {
+        "type": "integer"
+       },
+       "max": {
+        "type": "integer"
+       },
+       "mode": {
+        "type": "string",
+        "enum": [
+         "solo",
+         "squad",
+         "team",
+         "army",
+         "free"
+        ]
+       },
+       "constraints": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      },
+      "required": [
+       "min",
+       "max",
+       "mode"
+      ],
+      "additionalProperties": true
+     },
+     "enemy": {
+      "type": "object",
+      "properties": {
+       "units": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {
+          "unit": {
+           "type": "string"
+          },
+          "name_ko": {
+           "type": "string"
+          },
+          "class": {
+           "type": "string",
+           "enum": [
+            "knight",
+            "warrior",
+            "assassin",
+            "ranger",
+            "mage",
+            "priest",
+            "guardian",
+            "duelist",
+            "summoner",
+            "artillerist",
+            "shaman",
+            "bard",
+            "dragoon",
+            "engineer"
+           ]
+          },
+          "tier": {
+           "type": "integer"
+          }
+         },
+         "required": [
+          "unit",
+          "tier"
+         ],
+         "additionalProperties": true
+        }
+       },
+       "boss": {
+        "type": [
+         "object",
+         "null"
+        ]
+       },
+       "waves": {
+        "type": "integer"
+       },
+       "structures": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {},
+         "required": [],
+         "additionalProperties": true
+        }
+       },
+       "factions": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "hero_enemy": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+       }
+      },
+      "required": [
+       "units",
+       "waves"
+      ],
+      "additionalProperties": true
+     },
+     "difficulties": {
+      "type": "object",
+      "properties": {
+       "normal": {
+        "type": "object",
+        "properties": {
+         "name_ko": {
+          "type": "string"
+         },
+         "enemy_power_mult": {
+          "type": "number"
+         },
+         "enemy_star": {
+          "type": "integer"
+         },
+         "stamina_per_hero": {
+          "type": "integer"
+         },
+         "tuned_power_mult": {
+          "type": "number"
+         },
+         "power_cliff": {
+          "type": "number"
+         },
+         "rewards": {
+          "type": "object",
+          "properties": {
+           "gold": {
+            "type": "integer"
+           },
+           "exp": {
+            "type": "integer"
+           },
+           "items": {
+            "type": "array",
+            "items": {
+             "type": "object",
+             "properties": {},
+             "required": [],
+             "additionalProperties": true
+            }
+           },
+           "materials": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": true
+           },
+           "hero_drop": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": true
+           }
+          },
+          "required": [
+           "gold",
+           "exp",
+           "items",
+           "materials"
+          ],
+          "additionalProperties": true
+         }
+        },
+        "required": [
+         "enemy_power_mult",
+         "enemy_star",
+         "stamina_per_hero",
+         "rewards"
+        ],
+        "additionalProperties": true
+       },
+       "hard": {
+        "type": "object",
+        "properties": {
+         "name_ko": {
+          "type": "string"
+         },
+         "enemy_power_mult": {
+          "type": "number"
+         },
+         "enemy_star": {
+          "type": "integer"
+         },
+         "stamina_per_hero": {
+          "type": "integer"
+         },
+         "tuned_power_mult": {
+          "type": "number"
+         },
+         "power_cliff": {
+          "type": "number"
+         },
+         "rewards": {
+          "type": "object",
+          "properties": {
+           "gold": {
+            "type": "integer"
+           },
+           "exp": {
+            "type": "integer"
+           },
+           "items": {
+            "type": "array",
+            "items": {
+             "type": "object",
+             "properties": {},
+             "required": [],
+             "additionalProperties": true
+            }
+           },
+           "materials": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": true
+           },
+           "hero_drop": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": true
+           }
+          },
+          "required": [
+           "gold",
+           "exp",
+           "items",
+           "materials"
+          ],
+          "additionalProperties": true
+         }
+        },
+        "required": [
+         "enemy_power_mult",
+         "enemy_star",
+         "stamina_per_hero",
+         "rewards"
+        ],
+        "additionalProperties": true
+       },
+       "nightmare": {
+        "type": "object",
+        "properties": {
+         "name_ko": {
+          "type": "string"
+         },
+         "enemy_power_mult": {
+          "type": "number"
+         },
+         "enemy_star": {
+          "type": "integer"
+         },
+         "stamina_per_hero": {
+          "type": "integer"
+         },
+         "tuned_power_mult": {
+          "type": "number"
+         },
+         "power_cliff": {
+          "type": "number"
+         },
+         "rewards": {
+          "type": "object",
+          "properties": {
+           "gold": {
+            "type": "integer"
+           },
+           "exp": {
+            "type": "integer"
+           },
+           "items": {
+            "type": "array",
+            "items": {
+             "type": "object",
+             "properties": {},
+             "required": [],
+             "additionalProperties": true
+            }
+           },
+           "materials": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": true
+           },
+           "hero_drop": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": true
+           }
+          },
+          "required": [
+           "gold",
+           "exp",
+           "items",
+           "materials"
+          ],
+          "additionalProperties": true
+         }
+        },
+        "required": [
+         "enemy_power_mult",
+         "enemy_star",
+         "stamina_per_hero",
+         "rewards"
+        ],
+        "additionalProperties": true
+       },
+       "first_clear_bonus": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+       }
+      },
+      "required": [
+       "normal",
+       "hard",
+       "nightmare"
+      ],
+      "additionalProperties": true
+     },
+     "flavor": {
+      "type": "string"
+     },
+     "special_rule": {
+      "type": "string"
+     },
+     "unlock_after": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "hero_id": {
+      "type": "string"
+     },
+     "quest_id": {
+      "type": "string"
+     },
+     "step": {
+      "type": "integer"
+     },
+     "clear_condition": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": true
+     }
+    },
+    "required": [
+     "id",
+     "name_ko",
+     "kind",
+     "nation",
+     "type",
+     "level",
+     "act",
+     "participation",
+     "enemy",
+     "difficulties"
+    ],
+    "additionalProperties": true
+   },
+   "minItems": 1000
+  }
+ },
+ "required": [
+  "count",
+  "monsters",
+  "battles"
+ ],
+ "additionalProperties": true
+}

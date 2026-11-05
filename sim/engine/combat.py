@@ -2,7 +2,8 @@
 """
 결정론적 자동전투 엔진 (TFT 규칙). 헥스 8×7, 틱 0.05초, 30초 + 연장 15초.
 """
-import math, random
+import math
+from .rng import Rng
 from .hexgrid import COLS, ROWS, hdist, hneighbors, cells_within, ALL_CELLS
 
 DT = 0.05
@@ -115,8 +116,10 @@ class Battle:
     def __init__(self, data, allies, enemies, seed=0, rules=None, trait_counts=None):
         """allies/enemies: 유닛 스펙 리스트(각각 pos 옵션). rules: dict(overtime, waves 등)."""
         self.data = data
-        self.rng = random.Random(seed)
         self.rules = rules or {}
+        self.rng = Rng(seed)
+        self.record_events = bool(self.rules.get("record_events", False))
+        self.events = []
         self.t = 0.0
         self.units = []
         self.occ = {}
@@ -180,6 +183,8 @@ class Battle:
             u.next_attack = self.t + self.rng.random() * 0.3
             u.next_move = self.t
             if u.state.get("captive"): u.stasis_until = 1e9
+        for u in units:
+            self.emit("spawn", uid=u.uid, team=u.team, name=u.name, cell=list(u.pos), owner=-1, hid=u.hid, star=u.star, hp=round(u.max_hp))
         for u in list(units):
             u.fire(self, "start")
 
@@ -193,6 +198,7 @@ class Battle:
                 u.target = None
                 u.fire(self, "wave_end")
         self.wave_t0 = self.t; self.dmg_mult_global = 1.0
+        self.emit("wave", index=self.wave_index, units=[x.uid for x in new_units])
 
     # ── 유틸
     def alive_units(self, team=None):
@@ -213,7 +219,9 @@ class Battle:
 
     def move_to(self, u, cell):
         if cell in self.occ: return False
+        frm = u.pos
         del self.occ[u.pos]; u.pos = cell; self.occ[cell] = u
+        self.emit("move", uid=u.uid, frm=list(frm), to=list(cell))
         return True
 
     def spawn(self, owner, spec, near=None):
@@ -225,6 +233,7 @@ class Battle:
         s.next_attack = self.t + 0.3
         s.recalc()
         self.units.append(s); owner.summons.append(s)
+        self.emit("spawn", uid=s.uid, team=s.team, name=s.name, cell=list(cell), owner=owner.uid)
         # 소환수 특성/아이템 보정
         bonus = owner.state.get("summon_bonus_pct", 0.0) if not s.is_turret else owner.state.get("turret_bonus_pct", 0.0)
         if bonus:
@@ -263,6 +272,7 @@ class Battle:
             take = min(s[0], remaining); s[0] -= take; remaining -= take
         dst.hp -= remaining
         dealt = mit
+        self.emit("damage", src=(src.uid if src is not None else -1), dst=dst.uid, amount=round(dealt, 1), kind=kind, crit=crit, skill=is_skill)
         if src is not None:
             src.stats["dmg"] += dealt
             if src.e_omnivamp > 0: self.heal(src, src, dealt * src.e_omnivamp / 100.0, from_vamp=True)
@@ -285,6 +295,7 @@ class Battle:
         missing = dst.max_hp - dst.hp
         healed = min(missing, amount)
         dst.hp += healed
+        if healed > 0: self.emit("heal", src=(src.uid if src is not None else -1), dst=dst.uid, amount=round(healed, 1), vamp=from_vamp)
         over = amount - healed
         if over > 0 and dst.state.get("overheal_shield_pct"):
             cap = dst.max_hp * dst.state["overheal_shield_pct"] / 100.0
@@ -299,9 +310,11 @@ class Battle:
             r = u.fire(self, "death", killer)
             if r == "cancel":
                 u.death_cancel_used = True
+                self.emit("revive", uid=u.uid, hp=round(u.hp))
                 return
         u.alive = False; u.dead_time = self.t
         if u.pos in self.occ and self.occ[u.pos] is u: del self.occ[u.pos]
+        self.emit("death", uid=u.uid, killer=(killer.uid if killer is not None else -1))
         if killer is not None and killer.alive:
             killer.stats["kills"] += 1
             killer.fire(self, "kill", u)
@@ -316,6 +329,12 @@ class Battle:
                 if c.alive and c.team != u.team and c.state.get("captive"):
                     c.state["captive"] = False; c.stasis_until = 0.0
 
+    def emit(self, etype, **kw):
+        """전투 이벤트 기록 (record_events=True일 때만). C# BattleEvent 큐와 동일 필드."""
+        if self.record_events:
+            kw["t"] = round(self.t, 2); kw["type"] = etype
+            self.events.append(kw)
+
     def unit_by_uid(self, uid):
         for u in self.units:
             if u.uid == uid: return u
@@ -325,6 +344,7 @@ class Battle:
     def stun(self, u, dur):
         if u.cc_immune_until > self.t or u.is_structure: return
         u.stun_until = max(u.stun_until, self.t + dur)
+        self.emit("stun", uid=u.uid, duration=dur)
 
     def slow(self, u, pct, dur):
         if u.cc_immune_until > self.t: return
@@ -396,6 +416,7 @@ class Battle:
 
     def attack(self, u, tgt):
         u.attack_count += 1
+        self.emit("attack", uid=u.uid, target=tgt.uid, empowered=u.empowered > 0)
         dmg = u.e_ad
         bonus_phys = 0.0
         if u.empowered > 0:
@@ -414,6 +435,7 @@ class Battle:
         u.mana = 0.0
         u.cast_until = self.t + CAST_TIME
         u.stats["casts"] += 1
+        self.emit("cast", uid=u.uid, skill=(u.skill.get("name") if u.skill else None), archetype=u.skill.get("archetype"), target=(u.target.uid if u.target is not None else -1))
         cast_ability(self, u)
         u.fire(self, "cast")
         u.mana = min(u.mana_max, u.mana + u.state.pop("mana_refund", 0.0))
@@ -470,8 +492,18 @@ class Battle:
                 break
         return self.result()
 
+    def event_checksum(self):
+        """이벤트 스트림 체크섬: 종류별 개수 + 피해/치유 합(소수 1자리 반올림)."""
+        if not self.record_events: return None
+        from collections import Counter
+        c = Counter(e["type"] for e in self.events)
+        return {"count": len(self.events), "by_type": dict(sorted(c.items())),
+                "damage_sum": round(sum(e["amount"] for e in self.events if e["type"] == "damage"), 1),
+                "heal_sum": round(sum(e["amount"] for e in self.events if e["type"] == "heal"), 1)}
+
     def result(self):
-        return {"winner": self.winner, "time": round(self.t, 2), "waves": self.wave_index,
+        self.emit("end", winner=self.winner)
+        return {"winner": self.winner, "time": round(self.t, 2), "waves": self.wave_index, "events": (self.event_checksum() if self.record_events else None),
                 "units": [{"uid": u.uid, "team": u.team, "id": u.hid, "name": u.name, "alive": u.alive, "hp": round(max(0, u.hp)), "max_hp": round(u.max_hp),
                            "is_summon": u.is_summon or u.is_turret, "stats": {k: round(v) for k, v in u.stats.items()}} for u in self.units]}
 
