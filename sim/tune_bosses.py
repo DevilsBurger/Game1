@@ -148,7 +148,7 @@ def main():
         low = [r for r in rows if r["cliff"]["normal"] < 0.5]
         L += ["", "- 절벽(보통) < 0.5인 전투는 기대 팀 대비 설계 편성이 2배 이상 강하다는 뜻이다(적 수·웨이브 과다). 콘텐츠 측 재설계(적 수 감소) 후보: " + (", ".join(f"{r['id']}({r['cliff']['normal']:.2f})" for r in low) if low else "없음") + ".",
               "- 1차 결과의 후보 S020·S046·S059·S063은 `tools/gen_world.py STORY_COMP_OVERRIDES`로 적 수·웨이브를 줄인 뒤(`S020 7→5유닛, S046 6×5→4×4, S059 6×5→4×4, S063 7×3→5×2`) `--ids`로 재튜닝했다.",
-              "- 절벽(보통) > 2.4인 전투는 설계 편성이 기대 팀 대비 지나치게 약해 전력 배수 상한(2.5) 근처에 붙은 것이다(어려움·악몽 승률이 목표보다 높게 남을 수 있음). 적 수 증가 후보: " + (", ".join(f"{r['id']}({r['cliff']['normal']:.2f})" for r in rows if r["cliff"]["normal"] > 2.4) or "없음") + "."]
+              "- 절벽(보통) > 2.4인 전투는 설계 편성이 기대 팀 대비 지나치게 약해 전력 배수 상한(2.5) 근처에 붙은 것이다(어려움·악몽 승률이 목표보다 높게 남을 수 있음). 1막은 온보딩 로스터(레온 계층 3 상당) 기준이라 의도된 것이고, 2막 이후 적 수 증가 후보: " + (", ".join(f"{r['id']}({r['cliff']['normal']:.2f})" for r in rows if r["cliff"]["normal"] > 2.4 and r["act"] >= 2) or "없음") + "."]
         open(os.path.join(ROOT, "docs", "appendix", "B9_스토리_전투_튜닝.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 

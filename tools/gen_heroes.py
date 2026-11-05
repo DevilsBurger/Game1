@@ -134,7 +134,7 @@ ORIGIN_EFFECTS = {
     "celestia":   dict(hook="celestia",   ap=[20, 35, 55, 80], cast_mana_allies=[5, 8, 12, 20], mana_cd=1.0),  # mana_cd: 수신자별 쿨다운(8인 연쇄 방지, B8)
     "dragonkin":  dict(hook="dragonkin",  hp_pct=[15, 25, 40, 60], skill_dmg_pct=[10, 20, 30, 45]),
     "torga":      dict(hook="torga",      ad_pct_per_stack=[2, 3, 4, 6], max_stacks=10),
-    "lumen":      dict(hook="lumen",      cheat_death_heal=[20, 30, 40, 60], invuln=[1.0, 1.5, 2.0, 2.5], charges=[1, 2, 3, 4], mr=[10, 15, 20, 25]),  # mr: 2단계 즉시 체감 효과(B8)
+    "lumen":      dict(hook="lumen",      cheat_death_heal=[20, 30, 40, 60], invuln=[1.0, 1.5, 2.0, 2.5], charges=[1, 1, 2, 2], mr=[10, 15, 20, 25]),  # charges: 팀 전체 부활 횟수(배율 미적용, B8) · mr: 2단계 즉시 체감 효과
     "freelancer": dict(hook="freelancer", base_pct=[4, 8, 14, 22], pct_per_origin=[3, 5, 7, 10]),
 }
 CLASS_EFFECTS = {

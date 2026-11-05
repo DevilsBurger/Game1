@@ -355,7 +355,7 @@
  "origin.torga.synergy": "토르가 영웅은 적을 처치하거나 피해를 받을 때마다 공격력이 누적 증가한다.",
  "origin.lumen.name": "루멘",
  "origin.lumen.desc": "성교국. 성기사단과 이단 심문소, 천사 소환술을 보유한다.",
- "origin.lumen.synergy": "루멘 영웅은 마법 저항이 증가하고, 치명적 피해를 받으면 잠시 무적이 되며 체력을 회복한다(팀 전체 전투당 1/2/3/4회).",
+ "origin.lumen.synergy": "루멘 영웅은 마법 저항이 증가하고, 치명적 피해를 받으면 잠시 무적이 되며 체력을 회복한다(팀 전체 전투당 1/1/2/2회).",
  "origin.freelancer.name": "자유용병",
  "origin.freelancer.desc": "브로멜 자유도시의 용병 길드 소속. 국적 없는 떠돌이들.",
  "origin.freelancer.synergy": "자유용병 영웅은 기본 공격력·주문력 보너스를 얻고, 팀 내 다른 출신 1종마다 추가로 증가한다.",

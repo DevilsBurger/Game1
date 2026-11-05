@@ -10,36 +10,7 @@
   "nightmare": 1.035
  },
  "scope": "story",
- "history": [
-  {
-   "step": 0,
-   "mean_cliff": 0.85
-  },
-  {
-   "step": 1,
-   "mean_cliff": 0.575
-  },
-  {
-   "step": 2,
-   "mean_cliff": 0.5979166666666667
-  },
-  {
-   "step": 3,
-   "mean_cliff": 0.5979166666666667
-  },
-  {
-   "step": 4,
-   "mean_cliff": 0.5864583333333333
-  },
-  {
-   "step": 5,
-   "mean_cliff": 0.5950520833333333
-  },
-  {
-   "step": 6,
-   "mean_cliff": 0.5936197916666666
-  }
- ],
+ "history": [],
  "rows": [
   {
    "id": "S001",
@@ -436,7 +407,7 @@
     "nightmare": 1.458
    },
    "wr": {
-    "normal": 0.792,
+    "normal": 0.812,
     "hard": 0.5,
     "nightmare": 0.146
    }
@@ -462,7 +433,7 @@
    },
    "wr": {
     "normal": 0.688,
-    "hard": 0.396,
+    "hard": 0.417,
     "nightmare": 0.5
    }
   },
@@ -486,7 +457,7 @@
     "nightmare": 0.551
    },
    "wr": {
-    "normal": 0.812,
+    "normal": 0.771,
     "hard": 0.604,
     "nightmare": 0.417
    }
@@ -537,8 +508,8 @@
    },
    "wr": {
     "normal": 0.812,
-    "hard": 0.771,
-    "nightmare": 0.604
+    "hard": 0.75,
+    "nightmare": 0.583
    }
   },
   {
@@ -562,7 +533,7 @@
    },
    "wr": {
     "normal": 0.729,
-    "hard": 0.354,
+    "hard": 0.375,
     "nightmare": 0.104
    }
   },
@@ -586,9 +557,9 @@
     "nightmare": 0.693
    },
    "wr": {
-    "normal": 0.854,
-    "hard": 0.562,
-    "nightmare": 0.25
+    "normal": 0.875,
+    "hard": 0.583,
+    "nightmare": 0.271
    }
   },
   {
@@ -611,7 +582,7 @@
     "nightmare": 0.64
    },
    "wr": {
-    "normal": 0.688,
+    "normal": 0.708,
     "hard": 0.479,
     "nightmare": 0.167
    }
@@ -636,8 +607,8 @@
     "nightmare": 0.604
    },
    "wr": {
-    "normal": 0.562,
-    "hard": 0.375,
+    "normal": 0.604,
+    "hard": 0.396,
     "nightmare": 0.208
    }
   },
@@ -686,9 +657,9 @@
     "nightmare": 0.568
    },
    "wr": {
-    "normal": 0.583,
-    "hard": 0.479,
-    "nightmare": 0.104
+    "normal": 0.521,
+    "hard": 0.5,
+    "nightmare": 0.083
    }
   },
   {
@@ -711,8 +682,8 @@
     "nightmare": 0.711
    },
    "wr": {
-    "normal": 0.479,
-    "hard": 0.333,
+    "normal": 0.521,
+    "hard": 0.354,
     "nightmare": 0.271
    }
   },
@@ -761,9 +732,9 @@
     "nightmare": 0.462
    },
    "wr": {
-    "normal": 0.583,
+    "normal": 0.604,
     "hard": 0.208,
-    "nightmare": 0.146
+    "nightmare": 0.125
    }
   },
   {
@@ -786,9 +757,9 @@
     "nightmare": 0.568
    },
    "wr": {
-    "normal": 0.438,
-    "hard": 0.375,
-    "nightmare": 0.375
+    "normal": 0.458,
+    "hard": 0.354,
+    "nightmare": 0.333
    }
   },
   {
@@ -812,7 +783,7 @@
    },
    "wr": {
     "normal": 0.771,
-    "hard": 0.479,
+    "hard": 0.521,
     "nightmare": 0.292
    }
   },
@@ -837,8 +808,8 @@
    },
    "wr": {
     "normal": 0.896,
-    "hard": 0.271,
-    "nightmare": 0.25
+    "hard": 0.292,
+    "nightmare": 0.229
    }
   },
   {
@@ -886,8 +857,8 @@
     "nightmare": 0.853
    },
    "wr": {
-    "normal": 0.458,
-    "hard": 0.375,
+    "normal": 0.479,
+    "hard": 0.354,
     "nightmare": 0.229
    }
   },
@@ -912,7 +883,7 @@
    },
    "wr": {
     "normal": 0.708,
-    "hard": 0.229,
+    "hard": 0.25,
     "nightmare": 0.167
    }
   },
@@ -961,9 +932,9 @@
     "nightmare": 0.835
    },
    "wr": {
-    "normal": 0.833,
+    "normal": 0.854,
     "hard": 0.438,
-    "nightmare": 0.354
+    "nightmare": 0.375
    }
   },
   {
@@ -986,8 +957,8 @@
     "nightmare": 0.818
    },
    "wr": {
-    "normal": 0.458,
-    "hard": 0.292,
+    "normal": 0.438,
+    "hard": 0.271,
     "nightmare": 0.146
    }
   },
@@ -1011,8 +982,8 @@
     "nightmare": 0.533
    },
    "wr": {
-    "normal": 0.542,
-    "hard": 0.354,
+    "normal": 0.562,
+    "hard": 0.375,
     "nightmare": 0.083
    }
   },
@@ -1062,8 +1033,8 @@
    },
    "wr": {
     "normal": 0.417,
-    "hard": 0.646,
-    "nightmare": 0.292
+    "hard": 0.667,
+    "nightmare": 0.312
    }
   },
   {
@@ -1086,8 +1057,8 @@
     "nightmare": 0.996
    },
    "wr": {
-    "normal": 0.812,
-    "hard": 0.5,
+    "normal": 0.833,
+    "hard": 0.521,
     "nightmare": 0.167
    }
   },
@@ -1112,8 +1083,8 @@
    },
    "wr": {
     "normal": 0.479,
-    "hard": 0.375,
-    "nightmare": 0.25
+    "hard": 0.396,
+    "nightmare": 0.271
    }
   },
   {
@@ -1137,7 +1108,7 @@
    },
    "wr": {
     "normal": 0.583,
-    "hard": 0.438,
+    "hard": 0.458,
     "nightmare": 0.375
    }
   },
@@ -1161,9 +1132,9 @@
     "nightmare": 1.102
    },
    "wr": {
-    "normal": 0.458,
-    "hard": 0.396,
-    "nightmare": 0.292
+    "normal": 0.479,
+    "hard": 0.417,
+    "nightmare": 0.312
    }
   },
   {
@@ -1187,8 +1158,8 @@
    },
    "wr": {
     "normal": 0.833,
-    "hard": 0.375,
-    "nightmare": 0.167
+    "hard": 0.396,
+    "nightmare": 0.188
    }
   },
   {
@@ -1211,7 +1182,7 @@
     "nightmare": 0.693
    },
    "wr": {
-    "normal": 0.583,
+    "normal": 0.604,
     "hard": 0.354,
     "nightmare": 0.312
    }
@@ -1286,7 +1257,7 @@
     "nightmare": 0.426
    },
    "wr": {
-    "normal": 0.646,
+    "normal": 0.688,
     "hard": 0.646,
     "nightmare": 0.479
    }
@@ -1313,7 +1284,7 @@
    "wr": {
     "normal": 0.896,
     "hard": 0.583,
-    "nightmare": 0.312
+    "nightmare": 0.333
    }
   },
   {
@@ -1361,9 +1332,9 @@
     "nightmare": 0.978
    },
    "wr": {
-    "normal": 0.875,
+    "normal": 0.854,
     "hard": 0.292,
-    "nightmare": 0.271
+    "nightmare": 0.25
    }
   },
   {
@@ -1436,9 +1407,9 @@
     "nightmare": 0.978
    },
    "wr": {
-    "normal": 0.771,
+    "normal": 0.792,
     "hard": 0.479,
-    "nightmare": 0.104
+    "nightmare": 0.146
    }
   },
   {
@@ -1561,7 +1532,7 @@
     "nightmare": 0.996
    },
    "wr": {
-    "normal": 0.542,
+    "normal": 0.521,
     "hard": 0.146,
     "nightmare": 0.188
    }
@@ -1661,8 +1632,8 @@
     "nightmare": 0.978
    },
    "wr": {
-    "normal": 0.583,
-    "hard": 0.562,
+    "normal": 0.542,
+    "hard": 0.521,
     "nightmare": 0.292
    }
   },
@@ -1686,9 +1657,9 @@
     "nightmare": 1.244
    },
    "wr": {
-    "normal": 0.688,
-    "hard": 0.438,
-    "nightmare": 0.208
+    "normal": 0.708,
+    "hard": 0.396,
+    "nightmare": 0.188
    }
   },
   {
@@ -1736,9 +1707,9 @@
     "nightmare": 1.085
    },
    "wr": {
-    "normal": 0.562,
-    "hard": 0.458,
-    "nightmare": 0.333
+    "normal": 0.604,
+    "hard": 0.479,
+    "nightmare": 0.375
    }
   },
   {
@@ -1762,7 +1733,7 @@
    },
    "wr": {
     "normal": 0.583,
-    "hard": 0.396,
+    "hard": 0.417,
     "nightmare": 0.25
    }
   },
@@ -1786,9 +1757,9 @@
     "nightmare": 1.085
    },
    "wr": {
-    "normal": 0.604,
-    "hard": 0.667,
-    "nightmare": 0.521
+    "normal": 0.583,
+    "hard": 0.708,
+    "nightmare": 0.5
    }
   },
   {
@@ -1813,7 +1784,7 @@
    "wr": {
     "normal": 0.688,
     "hard": 0.458,
-    "nightmare": 0.396
+    "nightmare": 0.354
    }
   },
   {
@@ -1863,7 +1834,7 @@
    "wr": {
     "normal": 0.812,
     "hard": 0.812,
-    "nightmare": 0.438
+    "nightmare": 0.458
    }
   },
   {
@@ -1886,7 +1857,7 @@
     "nightmare": 0.87
    },
    "wr": {
-    "normal": 0.562,
+    "normal": 0.583,
     "hard": 0.312,
     "nightmare": 0.312
    }
@@ -1913,7 +1884,7 @@
    "wr": {
     "normal": 0.521,
     "hard": 0.354,
-    "nightmare": 0.229
+    "nightmare": 0.271
    }
   },
   {
@@ -1936,9 +1907,9 @@
     "nightmare": 0.959
    },
    "wr": {
-    "normal": 0.708,
+    "normal": 0.667,
     "hard": 0.542,
-    "nightmare": 0.229
+    "nightmare": 0.146
    }
   }
  ]

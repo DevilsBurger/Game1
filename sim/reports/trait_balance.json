@@ -17,6 +17,108 @@
    "mean_dev": 0.0007738095238095196,
    "sd": 0.025794970967436354,
    "in_band": 0.8979591836734694
+  },
+  {
+   "iter": 0,
+   "mean_dev": -0.0011403508771929873,
+   "sd": 0.040900151673244796,
+   "in_band": 0.7894736842105263,
+   "only": [
+    "assassin",
+    "celestia",
+    "lies",
+    "lumen",
+    "nox"
+   ]
+  },
+  {
+   "iter": 1,
+   "mean_dev": 0.0022807017543859617,
+   "sd": 0.029881395795916556,
+   "in_band": 0.8947368421052632,
+   "only": [
+    "assassin",
+    "celestia",
+    "lies",
+    "lumen",
+    "nox"
+   ]
+  },
+  {
+   "iter": 0,
+   "mean_dev": 0.0012499999999999942,
+   "sd": 0.0695159354233098,
+   "in_band": 0.25,
+   "only": [
+    "lumen"
+   ]
+  },
+  {
+   "iter": 1,
+   "mean_dev": 0.04604166666666666,
+   "sd": 0.08091142061607316,
+   "in_band": 0.25,
+   "only": [
+    "lumen"
+   ]
+  },
+  {
+   "iter": 0,
+   "mean_dev": 0.11291666666666665,
+   "sd": 0.12845165000454017,
+   "in_band": 0.375,
+   "only": [
+    "lumen",
+    "nox"
+   ]
+  },
+  {
+   "iter": 1,
+   "mean_dev": 0.07468749999999999,
+   "sd": 0.07378640520956418,
+   "in_band": 0.375,
+   "only": [
+    "lumen",
+    "nox"
+   ]
+  },
+  {
+   "iter": 0,
+   "mean_dev": 0.05458333333333332,
+   "sd": 0.06070620277661546,
+   "in_band": 0.5,
+   "only": [
+    "lumen",
+    "nox"
+   ]
+  },
+  {
+   "iter": 1,
+   "mean_dev": 0.03541666666666666,
+   "sd": 0.04692451088953642,
+   "in_band": 0.75,
+   "only": [
+    "lumen",
+    "nox"
+   ]
+  },
+  {
+   "iter": 0,
+   "mean_dev": 0.021666666666666654,
+   "sd": 0.03619008458434743,
+   "in_band": 0.5,
+   "only": [
+    "lumen"
+   ]
+  },
+  {
+   "iter": 1,
+   "mean_dev": 0.008333333333333328,
+   "sd": 0.046558654762926,
+   "in_band": 0.5,
+   "only": [
+    "lumen"
+   ]
   }
  ],
  "targets": {
@@ -68,7 +170,7 @@
    "key": "assassin",
    "name": "암살자",
    "level": 2,
-   "value": 0.046,
+   "value": 0.064,
    "target": 0.06,
    "n": 1200,
    "mult": 0.9525
@@ -78,20 +180,20 @@
    "key": "assassin",
    "name": "암살자",
    "level": 4,
-   "value": 0.212,
+   "value": 0.181,
    "target": 0.16,
    "n": 1200,
-   "mult": 0.6928
+   "mult": 0.62
   },
   {
    "kind": "class",
    "key": "assassin",
    "name": "암살자",
    "level": 6,
-   "value": 0.296,
+   "value": 0.312,
    "target": 0.32,
    "n": 1200,
-   "mult": 0.5029
+   "mult": 0.5214
   },
   {
    "kind": "class",
@@ -498,7 +600,7 @@
    "key": "celestia",
    "name": "셀레스티아",
    "level": 2,
-   "value": 0.055,
+   "value": 0.028,
    "target": 0.05,
    "n": 1200,
    "mult": 0.4617
@@ -508,30 +610,30 @@
    "key": "celestia",
    "name": "셀레스티아",
    "level": 4,
-   "value": 0.124,
+   "value": 0.136,
    "target": 0.14,
    "n": 1200,
-   "mult": 0.3679
+   "mult": 0.4127
   },
   {
    "kind": "origin",
    "key": "celestia",
    "name": "셀레스티아",
    "level": 6,
-   "value": 0.273,
+   "value": 0.243,
    "target": 0.28,
    "n": 1200,
-   "mult": 0.2779
+   "mult": 0.3243
   },
   {
    "kind": "origin",
    "key": "celestia",
    "name": "셀레스티아",
    "level": 8,
-   "value": 0.47,
+   "value": 0.428,
    "target": 0.42,
    "n": 1200,
-   "mult": 0.2
+   "mult": 0.293
   },
   {
    "kind": "origin",
@@ -738,7 +840,7 @@
    "key": "lies",
    "name": "리에스",
    "level": 2,
-   "value": 0.051,
+   "value": 0.074,
    "target": 0.05,
    "n": 1200,
    "mult": 0.8708
@@ -748,27 +850,27 @@
    "key": "lies",
    "name": "리에스",
    "level": 4,
-   "value": 0.192,
+   "value": 0.131,
    "target": 0.14,
    "n": 1200,
-   "mult": 0.7263
+   "mult": 0.64
   },
   {
    "kind": "origin",
    "key": "lies",
    "name": "리에스",
    "level": 6,
-   "value": 0.33,
+   "value": 0.286,
    "target": 0.28,
    "n": 1200,
-   "mult": 0.7227
+   "mult": 0.67
   },
   {
    "kind": "origin",
    "key": "lies",
    "name": "리에스",
    "level": 8,
-   "value": 0.417,
+   "value": 0.436,
    "target": 0.42,
    "n": 1200,
    "mult": 0.5471
@@ -778,40 +880,40 @@
    "key": "lumen",
    "name": "루멘",
    "level": 2,
-   "value": 0.0,
+   "value": 0.084,
    "target": 0.05,
    "n": 1200,
-   "mult": 0.4399
+   "mult": 0.3313
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 4,
-   "value": 0.157,
+   "value": 0.153,
    "target": 0.14,
    "n": 1200,
-   "mult": 0.5483
+   "mult": 0.4341
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 6,
-   "value": 0.163,
+   "value": 0.334,
    "target": 0.28,
    "n": 1200,
-   "mult": 0.4761
+   "mult": 0.4025
   },
   {
    "kind": "origin",
    "key": "lumen",
    "name": "루멘",
    "level": 8,
-   "value": 0.425,
+   "value": 0.352,
    "target": 0.42,
    "n": 1200,
-   "mult": 0.5296
+   "mult": 0.431
   },
   {
    "kind": "origin",
@@ -858,7 +960,7 @@
    "key": "nox",
    "name": "녹스",
    "level": 2,
-   "value": 0.043,
+   "value": 0.036,
    "target": 0.05,
    "n": 1200,
    "mult": 1.3102
@@ -868,7 +970,7 @@
    "key": "nox",
    "name": "녹스",
    "level": 4,
-   "value": 0.135,
+   "value": 0.149,
    "target": 0.14,
    "n": 1200,
    "mult": 0.7756
@@ -878,20 +980,20 @@
    "key": "nox",
    "name": "녹스",
    "level": 6,
-   "value": 0.325,
+   "value": 0.307,
    "target": 0.28,
    "n": 1200,
-   "mult": 0.7536
+   "mult": 0.7079
   },
   {
    "kind": "origin",
    "key": "nox",
    "name": "녹스",
    "level": 8,
-   "value": 0.402,
+   "value": 0.445,
    "target": 0.42,
    "n": 1200,
-   "mult": 0.6489
+   "mult": 0.564
   },
   {
    "kind": "origin",

@@ -15,12 +15,17 @@ def _v(arr, lvl):
     return arr[min(lvl, len(arr)) - 1]
 
 
+NO_SCALE_KEYS = {"charges", "wraith_charges"}   # 횟수형 수치는 배율 미적용(반올림 불연속으로 0회가 되는 것을 방지, B8)
+
+
 def scale_eff(eff, mult):
-    """리스트형 수치에 임계값 배율 적용. '_mult'로 끝나는 키는 (v-1)*mult+1 형태로 적용."""
+    """리스트형 수치에 임계값 배율 적용. '_mult'로 끝나는 키는 (v-1)*mult+1 형태로 적용. 횟수형(NO_SCALE_KEYS)은 그대로."""
     if abs(mult - 1.0) < 1e-9: return eff
     out = {}
     for k, v in eff.items():
-        if isinstance(v, list) and v and all(isinstance(x, (int, float)) for x in v):
+        if k in NO_SCALE_KEYS:
+            out[k] = v
+        elif isinstance(v, list) and v and all(isinstance(x, (int, float)) for x in v):
             out[k] = [((x - 1) * mult + 1) if k.endswith("_mult") else x * mult for x in v]
         else:
             out[k] = v
@@ -169,10 +174,10 @@ def t_torga(b, units, holders, eff, lvl, n):
 
 
 def t_lumen(b, units, holders, eff, lvl, n):
-    # 팀 단위 발동 횟수 제한: 2/4/6/8 → 1/2/3/4회 (수직 구성에서 8명 전원이 두 번 사는 것을 방지)
+    # 팀 단위 발동 횟수 제한: 2/4/6/8 → 1/1/2/2회 (수직 구성에서 8명 전원이 두 번 사는 것을 방지; 횟수는 배율 미적용)
     heal = _v(eff["cheat_death_heal"], lvl)
     inv = _v(eff["invuln"], lvl) if isinstance(eff["invuln"], list) else eff["invuln"]
-    charges = int(round(_v(eff.get("charges", [1, 2, 3, 4]), lvl)))
+    charges = int(round(_v(eff.get("charges", [1, 1, 2, 2]), lvl)))
     if holders: b.team_state.setdefault(holders[0].team, {})["lumen_charges"] = charges
     mr = _v(eff.get("mr", [0, 0, 0, 0]), lvl)   # 2단계 즉시 체감 효과(B8 결정): 루멘 영웅 마법 저항
     for u in holders: u.mod["mr"] += mr
