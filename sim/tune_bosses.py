@@ -62,7 +62,7 @@ def measure(pool, targets, pm_of, fights, seed0):
 
 
 MARGIN = {"normal": 0.96, "hard": 1.0, "nightmare": 1.035}   # 50% 교차점(절벽) 대비 전력 배수 (전이 폭이 ±5% 수준으로 좁다)
-MARGIN_ACT1 = {"normal": 0.85, "hard": 0.95, "nightmare": 1.02}        # 1막(온보딩): 보통 승률 ≥ 75% 목표 (20 §5)
+MARGIN_ACT1 = {"normal": 0.90, "hard": 0.95, "nightmare": 1.02}        # 1막(온보딩): 보통 승률 ≥ 75% 목표 (20 §5), 약한 로스터 여유
 MARGIN_TUTORIAL = {"normal": 0.75, "hard": 0.92, "nightmare": 1.0}     # S001~S004: 보통 ≥ 85~97%
 TUTORIAL_IDS = {"S001", "S002", "S003", "S004"}
 
@@ -78,6 +78,7 @@ def main():
     ap.add_argument("--steps", type=int, default=7, help="이분 탐색 단계"); ap.add_argument("--fights", type=int, default=24); ap.add_argument("--procs", type=int, default=4)
     ap.add_argument("--reset", action="store_true", help="보스 체력 배수를 설계값으로 초기화")
     ap.add_argument("--scope", choices=["boss", "story"], default="boss")
+    ap.add_argument("--reapply", action="store_true", help="이분 탐색 생략: battles.json에 저장된 power_cliff에 여유 배수만 다시 적용하고 승률만 재측정")
     args = ap.parse_args()
     path = os.path.join(DATA, "battles.json")
     doc = json.load(open(path, encoding="utf-8"))
@@ -95,7 +96,13 @@ def main():
     lo = {(b["id"], d): 0.3 for b in targets for d in TARGET}; hi = {(b["id"], d): 2.5 for b in targets for d in TARGET}
     hist = []
     with Pool(args.procs, initializer=_init, initargs=(curve, args.scope)) as pool:
-        for step in range(args.steps):
+        if args.reapply:
+            for b in targets:
+                for d in TARGET:
+                    c = b["difficulties"][d].get("power_cliff")
+                    assert c is not None, f"{b['id']} {d}: power_cliff 없음 — 먼저 전체 튜닝을 실행"
+                    lo[(b["id"], d)] = hi[(b["id"], d)] = c
+        for step in range(0 if args.reapply else args.steps):
             mid = {k: (lo[k] + hi[k]) / 2 for k in lo}
             wr = measure(pool, targets, lambda bid, d: mid[(bid, d)], args.fights, 10000 * step)
             for k in lo:

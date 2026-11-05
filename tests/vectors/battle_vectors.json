@@ -493,31 +493,29 @@
    "rules": {},
    "expected": {
     "winner": 0,
-    "time": 19.3,
+    "time": 23.75,
     "survivors": [
      "오마르",
-     "윌라",
-     "지크",
-     "핌"
+     "지크"
     ],
     "total_damage": {
-     "0": 18529,
-     "1": 12875
+     "0": 21829,
+     "1": 14965
     },
     "events": {
-     "count": 428,
+     "count": 492,
      "by_type": {
-      "attack": 132,
-      "cast": 33,
-      "damage": 192,
-      "death": 14,
+      "attack": 151,
+      "cast": 37,
+      "damage": 224,
+      "death": 17,
       "end": 1,
-      "heal": 23,
-      "move": 15,
-      "spawn": 18
+      "heal": 25,
+      "move": 18,
+      "spawn": 19
      },
-     "damage_sum": 31401.8,
-     "heal_sum": 1361.4
+     "damage_sum": 36830.6,
+     "heal_sum": 2004.4
     }
    }
   },
@@ -639,33 +637,32 @@
    "rules": {},
    "expected": {
     "winner": 1,
-    "time": 35.65,
+    "time": 37.5,
     "survivors": [
-     "가브리엘 아르망",
      "마리엘",
      "베르나",
      "샤흐라자드",
      "헬라"
     ],
     "total_damage": {
-     "0": 23080,
-     "1": 26907
+     "0": 24866,
+     "1": 24342
     },
     "events": {
      "count": 883,
      "by_type": {
       "attack": 295,
-      "cast": 53,
-      "damage": 394,
+      "cast": 55,
+      "damage": 387,
       "death": 14,
       "end": 1,
-      "heal": 67,
-      "move": 33,
+      "heal": 76,
+      "move": 29,
       "spawn": 23,
       "stun": 3
      },
-     "damage_sum": 51584.4,
-     "heal_sum": 2756.7
+     "damage_sum": 50808.9,
+     "heal_sum": 3479.1
     }
    }
   },
@@ -795,31 +792,32 @@
    "rules": {},
    "expected": {
     "winner": 0,
-    "time": 36.5,
+    "time": 34.95,
     "survivors": [
+     "아틀라스",
      "올리버",
      "우나",
      "윌라"
     ],
     "total_damage": {
-     "0": 24209,
-     "1": 17012
+     "0": 24724,
+     "1": 16007
     },
     "events": {
-     "count": 801,
+     "count": 781,
      "by_type": {
-      "attack": 306,
-      "cast": 51,
-      "damage": 337,
-      "death": 16,
+      "attack": 308,
+      "cast": 52,
+      "damage": 333,
+      "death": 15,
       "end": 1,
-      "heal": 46,
-      "move": 18,
+      "heal": 30,
+      "move": 17,
       "spawn": 24,
-      "stun": 2
+      "stun": 1
      },
-     "damage_sum": 41217.2,
-     "heal_sum": 932.9
+     "damage_sum": 40729.6,
+     "heal_sum": 512.0
     }
    }
   },
@@ -1073,7 +1071,7 @@
      "에드릭 몬타뉴"
     ],
     "total_damage": {
-     "0": 7189,
+     "0": 7165,
      "1": 14585
     },
     "events": {
@@ -1088,7 +1086,7 @@
       "move": 21,
       "spawn": 14
      },
-     "damage_sum": 21907.2,
+     "damage_sum": 21885.4,
      "heal_sum": 1582.0
     }
    }
@@ -1144,29 +1142,29 @@
    "rules": {},
    "expected": {
     "winner": 1,
-    "time": 14.6,
+    "time": 12.7,
     "survivors": [
      "아스트리드",
      "엘사"
     ],
     "total_damage": {
-     "0": 1795,
-     "1": 6973
+     "0": 1750,
+     "1": 6002
     },
     "events": {
-     "count": 190,
+     "count": 173,
      "by_type": {
-      "attack": 62,
-      "cast": 11,
-      "damage": 79,
+      "attack": 55,
+      "cast": 10,
+      "damage": 72,
       "death": 6,
       "end": 1,
-      "heal": 11,
+      "heal": 9,
       "move": 11,
       "spawn": 9
      },
-     "damage_sum": 8866.3,
-     "heal_sum": 231.9
+     "damage_sum": 7851.0,
+     "heal_sum": 198.1
     }
    }
   },
@@ -1466,7 +1464,7 @@
       "spawn": 6
      },
      "damage_sum": 10187.0,
-     "heal_sum": 412.4
+     "heal_sum": 401.1
     }
    }
   },
@@ -1740,30 +1738,30 @@
    "rules": {},
    "expected": {
     "winner": 1,
-    "time": 35.75,
+    "time": 35.55,
     "survivors": [
      "라일라",
      "모르가나 녹스",
      "엘사"
     ],
     "total_damage": {
-     "0": 16769,
-     "1": 21411
+     "0": 16741,
+     "1": 20902
     },
     "events": {
-     "count": 654,
+     "count": 651,
      "by_type": {
-      "attack": 235,
-      "cast": 42,
-      "damage": 278,
+      "attack": 234,
+      "cast": 41,
+      "damage": 277,
       "death": 17,
       "end": 1,
       "heal": 18,
       "move": 37,
       "spawn": 26
      },
-     "damage_sum": 38209.0,
-     "heal_sum": 2340.4
+     "damage_sum": 37672.3,
+     "heal_sum": 2339.7
     }
    }
   },
@@ -1878,9 +1876,8 @@
    "rules": {},
    "expected": {
     "winner": 1,
-    "time": 19.1,
+    "time": 18.85,
     "survivors": [
-     "AEGIS-1",
      "그림로크",
      "라일라",
      "레이븐",
@@ -1888,23 +1885,23 @@
      "안젤로"
     ],
     "total_damage": {
-     "0": 10886,
-     "1": 17473
+     "0": 9779,
+     "1": 18321
     },
     "events": {
-     "count": 443,
+     "count": 410,
      "by_type": {
-      "attack": 156,
-      "cast": 40,
-      "damage": 184,
-      "death": 11,
+      "attack": 142,
+      "cast": 35,
+      "damage": 168,
+      "death": 13,
       "end": 1,
-      "heal": 11,
-      "move": 23,
-      "spawn": 17
+      "heal": 15,
+      "move": 18,
+      "spawn": 18
      },
-     "damage_sum": 28450.1,
-     "heal_sum": 374.7
+     "damage_sum": 28186.8,
+     "heal_sum": 519.7
     }
    }
   },
@@ -2005,7 +2002,7 @@
       "stun": 8
      },
      "damage_sum": 42197.6,
-     "heal_sum": 1851.4
+     "heal_sum": 1843.4
     }
    }
   },
@@ -2229,7 +2226,7 @@
     ],
     "total_damage": {
      "0": 3376,
-     "1": 938
+     "1": 939
     },
     "events": {
      "count": 109,
@@ -2242,7 +2239,7 @@
       "move": 8,
       "spawn": 8
      },
-     "damage_sum": 4313.6,
+     "damage_sum": 4315.1,
      "heal_sum": 0
     }
    }
@@ -2339,8 +2336,8 @@
      "올란도"
     ],
     "total_damage": {
-     "0": 5093,
-     "1": 7176
+     "0": 5039,
+     "1": 7188
     },
     "events": {
      "count": 361,
@@ -2355,8 +2352,8 @@
       "spawn": 12,
       "stun": 5
      },
-     "damage_sum": 12381.8,
-     "heal_sum": 1248.0
+     "damage_sum": 12339.4,
+     "heal_sum": 1243.0
     }
    }
   },
@@ -2481,30 +2478,32 @@
    "rules": {},
    "expected": {
     "winner": 0,
-    "time": 29.75,
+    "time": 29.85,
     "survivors": [
      "카탈리나 벨",
-     "피트"
+     "파리드",
+     "피트",
+     "히데요"
     ],
     "total_damage": {
-     "0": 27251,
-     "1": 24104
+     "0": 24846,
+     "1": 20544
     },
     "events": {
-     "count": 992,
+     "count": 931,
      "by_type": {
-      "attack": 252,
+      "attack": 245,
       "cast": 51,
-      "damage": 368,
-      "death": 18,
+      "damage": 338,
+      "death": 14,
       "end": 1,
-      "heal": 255,
-      "move": 21,
+      "heal": 229,
+      "move": 24,
       "spawn": 23,
-      "stun": 3
+      "stun": 6
      },
-     "damage_sum": 51904.3,
-     "heal_sum": 11713.9
+     "damage_sum": 45665.9,
+     "heal_sum": 10943.2
     }
    }
   },
@@ -2780,32 +2779,33 @@
    "rules": {},
    "expected": {
     "winner": 0,
-    "time": 21.7,
+    "time": 20.35,
     "survivors": [
+     "로완",
      "말라키",
      "브람블",
      "블랙 모건",
      "카림"
     ],
     "total_damage": {
-     "0": 15616,
-     "1": 12897
+     "0": 15110,
+     "1": 12509
     },
     "events": {
-     "count": 485,
+     "count": 492,
      "by_type": {
-      "attack": 147,
-      "cast": 31,
-      "damage": 189,
-      "death": 14,
+      "attack": 151,
+      "cast": 30,
+      "damage": 192,
+      "death": 13,
       "end": 1,
-      "heal": 45,
-      "move": 16,
+      "heal": 49,
+      "move": 14,
       "spawn": 18,
       "stun": 24
      },
-     "damage_sum": 28513.2,
-     "heal_sum": 1928.1
+     "damage_sum": 27620.1,
+     "heal_sum": 1923.4
     }
    }
   },
@@ -2862,7 +2862,7 @@
      "오리온 셀레스티아"
     ],
     "total_damage": {
-     "0": 4098,
+     "0": 4107,
      "1": 4375
     },
     "events": {
@@ -2878,7 +2878,7 @@
       "spawn": 6,
       "stun": 1
      },
-     "damage_sum": 8473.6,
+     "damage_sum": 8483.1,
      "heal_sum": 0
     }
    }
@@ -3511,7 +3511,7 @@
    },
    "expected": {
     "winner": 0,
-    "time": 24.35,
+    "time": 22.3,
     "survivors": [
      "두둠",
      "리듬",
@@ -3519,25 +3519,25 @@
      "안젤로"
     ],
     "total_damage": {
-     "0": 12901,
-     "1": 3904
+     "0": 12743,
+     "1": 4300
     },
     "events": {
-     "count": 364,
+     "count": 362,
      "by_type": {
-      "attack": 131,
-      "cast": 22,
-      "damage": 147,
+      "attack": 126,
+      "cast": 23,
+      "damage": 146,
       "death": 16,
       "end": 1,
-      "heal": 2,
+      "heal": 3,
       "move": 18,
       "spawn": 20,
-      "stun": 5,
+      "stun": 7,
       "wave": 2
      },
-     "damage_sum": 16802.3,
-     "heal_sum": 92.4
+     "damage_sum": 17042.8,
+     "heal_sum": 156.5
     }
    }
   },
@@ -3604,7 +3604,7 @@
    "rules": {},
    "expected": {
     "winner": 0,
-    "time": 16.7,
+    "time": 17.65,
     "survivors": [
      "두둠",
      "로렌",
@@ -3613,24 +3613,24 @@
      "안젤로"
     ],
     "total_damage": {
-     "0": 10660,
-     "1": 1214
+     "0": 10355,
+     "1": 1309
     },
     "events": {
-     "count": 305,
+     "count": 320,
      "by_type": {
-      "attack": 80,
+      "attack": 85,
       "cast": 12,
-      "damage": 179,
+      "damage": 189,
       "death": 6,
       "end": 1,
       "heal": 1,
-      "move": 12,
+      "move": 11,
       "spawn": 11,
-      "stun": 3
+      "stun": 4
      },
-     "damage_sum": 13105.4,
-     "heal_sum": 38.3
+     "damage_sum": 12970.9,
+     "heal_sum": 39.5
     }
    }
   },
@@ -3703,8 +3703,8 @@
      "피트"
     ],
     "total_damage": {
-     "0": 3383,
-     "1": 6162
+     "0": 3373,
+     "1": 6194
     },
     "events": {
      "count": 238,
@@ -3719,8 +3719,8 @@
       "spawn": 11,
       "stun": 3
      },
-     "damage_sum": 9545.5,
-     "heal_sum": 63.1
+     "damage_sum": 9568.3,
+     "heal_sum": 65.1
     }
    }
   },
@@ -3781,7 +3781,7 @@
    },
    "expected": {
     "winner": 1,
-    "time": 11.3,
+    "time": 11.4,
     "survivors": [
      "마르틴",
      "블랙 모건",
@@ -3789,11 +3789,11 @@
      "피트"
     ],
     "total_damage": {
-     "0": 2220,
-     "1": 5693
+     "0": 2146,
+     "1": 5965
     },
     "events": {
-     "count": 162,
+     "count": 163,
      "by_type": {
       "attack": 57,
       "cast": 10,
@@ -3801,12 +3801,12 @@
       "death": 5,
       "end": 1,
       "heal": 2,
-      "move": 12,
+      "move": 13,
       "spawn": 10,
       "stun": 2
      },
-     "damage_sum": 7914.1,
-     "heal_sum": 295.7
+     "damage_sum": 8112.3,
+     "heal_sum": 281.8
     }
    }
   },
@@ -3878,8 +3878,8 @@
      "안젤로"
     ],
     "total_damage": {
-     "0": 7711,
-     "1": 3006
+     "0": 7659,
+     "1": 3043
     },
     "events": {
      "count": 195,
@@ -3894,8 +3894,8 @@
       "spawn": 11,
       "stun": 8
      },
-     "damage_sum": 10717.0,
-     "heal_sum": 73.6
+     "damage_sum": 10700.9,
+     "heal_sum": 75.9
     }
    }
   }
