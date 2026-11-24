@@ -34,6 +34,7 @@ DECAY_STEPS = sorted(E["repeat_gold_decay"]["steps"], key=lambda x: -x["from_win
 POTION_GOLD = _ITEMS["X003"]["price_gold"]; POTION_STAMINA = _ITEMS["X003"]["effect"]["stamina"]; POTION_GOLD_LIMIT = E["stamina"]["gold_potion_daily_limit"]
 GIFT_BUDGET_SHARE = 0.25   # 보유 영웅 호감도 선물: 승급·시설 뒤 남은 골드의 이 비율까지
 FACILITY_BUDGET_SHARE = 0.6
+GOLD_SCALE = {"normal": 1.0, "hard": 1.0, "nightmare": 1.0}   # 난이도별 골드 보상 가정 실험용 배율(기본 1.0 = battles.json 그대로)
 GOLD_RESERVE = 3000   # 소모품은 이만큼의 여유 골드가 있을 때만 산다(승급·아이템 우선)
 TIER_POWER = {1: 10, 2: 18, 3: 26, 4: 34, 5: 42}; STAR_POWER = {1: 0, 2: 14, 3: 28}
 
@@ -54,6 +55,7 @@ class Player:
         # 시작: 레온 + 1막 스토리 보상 2명(브랜든·마리엘 상당) 대신 계층1 영웅 2명
         for h in [x for x in HEROES if x["tier"] == 1][:2]: self.add_hero(h["id"])
         self.exp_total = 0
+        self.gold_by = {}; self.wins_by = {}
         self.fac = {k: 0 for k in FAC_KEYS}; self.wins_today = {}; self.gold_potions_today = 0; self.gold_decayed = 0; self.gifted_full = 0
         self.spent = {"star": 0, "items": 0, "mats": 0, "consumables": 0, "facilities": 0, "gifts": 0}; self.equipped_radiant = 0; self.tokens_today = 0
         self.gems_spent = 0; self.gold_earned = 0; self.gold_spent = 0; self.stamina_blocked_days = 0; self.battles_fought = 0; self.wins = 0; self.rotations = 0
@@ -140,8 +142,9 @@ class Player:
             # 반복 클리어 골드 체감(같은 전투의 당일 N번째 승리)
             nth = self.wins_today.get(b["id"], 0) + 1; self.wins_today[b["id"]] = nth
             mult = next((st["gold_mult"] for st in DECAY_STEPS if nth >= st["from_win"]), 1.0)
-            gold = int(rw["gold"] * mult); self.gold_decayed += rw["gold"] - gold
-            self.gold += gold; self.gold_earned += gold
+            base_gold = rw["gold"] * GOLD_SCALE[diff]
+            gold = int(base_gold * mult); self.gold_decayed += int(base_gold) - gold
+            self.gold += gold; self.gold_earned += gold; self.gold_by[diff] = self.gold_by.get(diff, 0) + gold; self.wins_by[diff] = self.wins_by.get(diff, 0) + 1
             exp = int(rw["exp"] * (1 + self.fac_bonus("training_ground") / 100.0))
             self.exp += exp; self.exp_total += exp
             while self.level < 60 and self.exp >= E["player_level_exp"][str(self.level)]:
@@ -155,7 +158,7 @@ class Player:
                 if self.rng.random() * 100 < it["chance_pct"]: self.items[it["pool"]] = self.items.get(it["pool"], 0) + it["qty"]
             if b["id"] not in self.cleared:
                 self.cleared.add(b["id"]); fc = b["difficulties"].get("first_clear_bonus", {})
-                self.gold += fc.get("gold", 0); self.gold_earned += fc.get("gold", 0); self.gems += fc.get("gems", 0)
+                self.gold += fc.get("gold", 0); self.gold_earned += fc.get("gold", 0); self.gold_by["first_clear"] = self.gold_by.get("first_clear", 0) + fc.get("gold", 0); self.gems += fc.get("gems", 0)
                 for k, v in fc.get("materials", {}).items(): self.mats[k] += v
                 if fc.get("hero_guaranteed"): self.add_hero(fc["hero_guaranteed"]["hero_id"])
                 if b["kind"] == "story" and b.get("story_order"):
@@ -242,7 +245,7 @@ def simulate(profile, days=90, seed=0):
         if d in (7, 30, 60, 90):
             tiers = {t: sum(1 for h, s in pl.owned.items() if TIER_OF[h] == t) for t in range(1, 6)}
             snaps[d] = dict(heroes=len(pl.owned), by_tier=tiers, star2=sum(1 for s in pl.owned.values() if s >= 2), star3=sum(1 for s in pl.owned.values() if s == 3),
-                            power=round(pl.power_level(), 1), act=pl.act, level=pl.level, gold=int(pl.gold), gold_earned=int(pl.gold_earned), gold_spent=int(pl.gold_spent), spent_star=pl.spent["star"], spent_items=pl.spent["items"], spent_mats=pl.spent["mats"], spent_consumables=pl.spent["consumables"], spent_facilities=pl.spent["facilities"], spent_gifts=pl.spent["gifts"], facility_levels=sum(pl.fac.values()), gold_decayed=int(pl.gold_decayed), gifted_full=pl.gifted_full, exp_total=pl.exp_total,
+                            power=round(pl.power_level(), 1), act=pl.act, level=pl.level, gold=int(pl.gold), gold_earned=int(pl.gold_earned), gold_spent=int(pl.gold_spent), spent_star=pl.spent["star"], spent_items=pl.spent["items"], spent_mats=pl.spent["mats"], spent_consumables=pl.spent["consumables"], spent_facilities=pl.spent["facilities"], spent_gifts=pl.spent["gifts"], facility_levels=sum(pl.fac.values()), gold_decayed=int(pl.gold_decayed), gold_by=dict({"normal": 0, "hard": 0, "nightmare": 0, "first_clear": 0}, **pl.gold_by), wins_by=dict({"normal": 0, "hard": 0, "nightmare": 0}, **pl.wins_by), gifted_full=pl.gifted_full, exp_total=pl.exp_total,
                             gems_spent=pl.gems_spent, items_completed=pl.items["completed"], artifacts=pl.items["artifact"], battles=pl.battles_fought, winrate=round(pl.wins / max(1, pl.battles_fought), 3),
                             stamina_blocked_days=pl.stamina_blocked_days, rotation_rate=round(pl.rotations / max(1, pl.battles_fought), 3), cleared=len(pl.cleared), m001=pl.mats["M001"], m002=pl.mats["M002"], m003=pl.mats["M003"])
     return snaps, pl.log

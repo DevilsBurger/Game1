@@ -27,6 +27,17 @@
     "spent_gifts": 25875,
     "facility_levels": 12.3,
     "gold_decayed": 52.9,
+    "gold_by": {
+     "normal": 140422.1,
+     "hard": 37380,
+     "nightmare": 22590,
+     "first_clear": 148899.2
+    },
+    "wins_by": {
+     "normal": 87.4,
+     "hard": 24.3,
+     "nightmare": 12.5
+    },
     "gifted_full": 4.6,
     "exp_total": 53628.8,
     "gems_spent": 0,
@@ -66,6 +77,17 @@
     "spent_gifts": 130958.3,
     "facility_levels": 18.6,
     "gold_decayed": 1146.6,
+    "gold_by": {
+     "normal": 709456.6,
+     "hard": 190196.5,
+     "nightmare": 44423.7,
+     "first_clear": 422500
+    },
+    "wins_by": {
+     "normal": 343.7,
+     "hard": 85.2,
+     "nightmare": 18.8
+    },
     "gifted_full": 24.8,
     "exp_total": 306491.2,
     "gems_spent": 0,
@@ -105,6 +127,17 @@
     "spent_gifts": 295708.3,
     "facility_levels": 22.8,
     "gold_decayed": 5826.3,
+    "gold_by": {
+     "normal": 1553240.5,
+     "hard": 251163.2,
+     "nightmare": 559066.7,
+     "first_clear": 676802.5
+    },
+    "wins_by": {
+     "normal": 634.9,
+     "hard": 110.8,
+     "nightmare": 199.4
+    },
     "gifted_full": 57.9,
     "exp_total": 776037.3,
     "gems_spent": 0,
@@ -144,6 +177,17 @@
     "spent_gifts": 883625,
     "facility_levels": 33.8,
     "gold_decayed": 8287.8,
+    "gold_by": {
+     "normal": 3102891.6,
+     "hard": 251163.2,
+     "nightmare": 559066.7,
+     "first_clear": 786111.7
+    },
+    "wins_by": {
+     "normal": 1105.1,
+     "hard": 110.8,
+     "nightmare": 199.4
+    },
     "gifted_full": 176.9,
     "exp_total": 1249820.8,
     "gems_spent": 0,
@@ -194,6 +238,17 @@
     "spent_gifts": 48250,
     "facility_levels": 18.2,
     "gold_decayed": 145,
+    "gold_by": {
+     "normal": 201920,
+     "hard": 34335.8,
+     "nightmare": 19325,
+     "first_clear": 203045.8
+    },
+    "wins_by": {
+     "normal": 122.3,
+     "hard": 22.2,
+     "nightmare": 10.6
+    },
     "gifted_full": 9.1,
     "exp_total": 72185.2,
     "gems_spent": 1558.7,
@@ -233,6 +288,17 @@
     "spent_gifts": 257250,
     "facility_levels": 24.7,
     "gold_decayed": 3071.2,
+    "gold_by": {
+     "normal": 913249.2,
+     "hard": 245513.6,
+     "nightmare": 188775.2,
+     "first_clear": 515611.7
+    },
+    "wins_by": {
+     "normal": 432,
+     "hard": 108.9,
+     "nightmare": 56.4
+    },
     "gifted_full": 50.3,
     "exp_total": 458146,
     "gems_spent": 4898.7,
@@ -272,6 +338,17 @@
     "spent_gifts": 770458.3,
     "facility_levels": 34.6,
     "gold_decayed": 13415.7,
+    "gold_by": {
+     "normal": 2525793.8,
+     "hard": 245513.6,
+     "nightmare": 562344.4,
+     "first_clear": 754149.2
+    },
+    "wins_by": {
+     "normal": 946,
+     "hard": 108.9,
+     "nightmare": 198.7
+    },
     "gifted_full": 153.8,
     "exp_total": 1101356.1,
     "gems_spent": 8498.7,
@@ -311,6 +388,17 @@
     "spent_gifts": 978750,
     "facility_levels": 44.5,
     "gold_decayed": 23505.8,
+    "gold_by": {
+     "normal": 4885116.2,
+     "hard": 255677.8,
+     "nightmare": 562344.4,
+     "first_clear": 832413.3
+    },
+    "wins_by": {
+     "normal": 1625.2,
+     "hard": 110.6,
+     "nightmare": 198.7
+    },
     "gifted_full": 196,
     "exp_total": 1859633.7,
     "gems_spent": 8738.7,
@@ -361,6 +449,17 @@
     "spent_gifts": 65166.7,
     "facility_levels": 20.2,
     "gold_decayed": 819.7,
+    "gold_by": {
+     "normal": 281062.8,
+     "hard": 26876.7,
+     "nightmare": 11897.5,
+     "first_clear": 240821.7
+    },
+    "wins_by": {
+     "normal": 170.9,
+     "hard": 20.5,
+     "nightmare": 7.4
+    },
     "gifted_full": 12.6,
     "exp_total": 95540.9,
     "gems_spent": 2299,
@@ -400,6 +499,17 @@
     "spent_gifts": 416083.3,
     "facility_levels": 30.8,
     "gold_decayed": 15117.6,
+    "gold_by": {
+     "normal": 1313699.2,
+     "hard": 202426,
+     "nightmare": 526794.8,
+     "first_clear": 668591.7
+    },
+    "wins_by": {
+     "normal": 594.5,
+     "hard": 93.4,
+     "nightmare": 182.8
+    },
     "gifted_full": 82.8,
     "exp_total": 715588.8,
     "gems_spent": 6356.3,
@@ -439,6 +549,17 @@
     "spent_gifts": 978833.3,
     "facility_levels": 44.6,
     "gold_decayed": 46774.9,
+    "gold_by": {
+     "normal": 4591495.7,
+     "hard": 232172.7,
+     "nightmare": 547781.8,
+     "first_clear": 834060.8
+    },
+    "wins_by": {
+     "normal": 1555.2,
+     "hard": 98.3,
+     "nightmare": 194.7
+    },
     "gifted_full": 196,
     "exp_total": 1779050.1,
     "gems_spent": 7691.3,
@@ -478,6 +599,17 @@
     "spent_gifts": 978833.3,
     "facility_levels": 50,
     "gold_decayed": 150144.8,
+    "gold_by": {
+     "normal": 6268187.7,
+     "hard": 4269666.6,
+     "nightmare": 1448515.1,
+     "first_clear": 837415.8
+    },
+    "wins_by": {
+     "normal": 2043.3,
+     "hard": 786.8,
+     "nightmare": 279.9
+    },
     "gifted_full": 196,
     "exp_total": 4001176.6,
     "gems_spent": 7691.3,
