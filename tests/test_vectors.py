@@ -20,6 +20,7 @@ def test_vectors_reproduce():
         assert got["survivors"] == v["expected"]["survivors"], v["name"]
         assert got["total_damage"] == v["expected"]["total_damage"], v["name"]
         assert got["events"] == v["expected"]["events"], v["name"]
+        assert got["report"] == v["expected"]["report"], v["name"]
 
 
 def test_rng_known_answers():

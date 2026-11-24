@@ -76,7 +76,8 @@ namespace Arken.Core.Combat {
     public IReadOnlyList<BattleEvent> DrainEvents();   // Damage, Heal, Cast, Move, Death, Spawn, Wave, Stun …
   }
   public sealed class BattleRules { List<List<UnitSpec>> Waves; bool Assassination, Escape; Dictionary<int,HashSet<string>> DisableTraits; bool RecordEvents; }
-  public sealed class BattleResult { int Winner; double Time; int Waves; List<UnitResult> Units; EventChecksum Events; }
+  public sealed class BattleResult { int Winner; double Time; int Waves; List<UnitResult> Units; EventChecksum Events; BattleReport Report; }
+  // BattleReport: 08 §8.1(유닛별 상세·피해 행렬·쓰러진 순서·위협·시간대·MVP·패배 원인). report.py와 동일 규칙, 읽기 전용 수집
   // BattleEvent (파이썬 Battle.emit 과 동일 필드): spawn{uid,team,name,cell,owner,hid,star,hp} move{uid,frm,to} attack{uid,target,empowered}
   //   cast{uid,skill,archetype,target} damage{src,dst,amount,kind,crit,skill} heal{src,dst,amount,vamp} death{uid,killer} revive{uid,hp} stun{uid,duration} wave{index,units} end{winner}; 모두 t(초) 포함
   // EventChecksum{count, by_type, damage_sum, heal_sum} — 벡터 검증·서버 결과 서명에 사용

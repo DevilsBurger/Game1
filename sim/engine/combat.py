@@ -120,6 +120,10 @@ class Battle:
         self.rng = Rng(seed)
         self.record_events = bool(self.rules.get("record_events", False))
         self.events = []
+        self.rep = None
+        if self.rules.get("report"):
+            from .report import ReportCollector
+            self.rep = ReportCollector()
         self.t = 0.0
         self.units = []
         self.occ = {}
@@ -273,6 +277,7 @@ class Battle:
         dst.hp -= remaining
         dealt = mit
         self.emit("damage", src=(src.uid if src is not None else -1), dst=dst.uid, amount=round(dealt, 1), kind=kind, crit=crit, skill=is_skill)
+        if self.rep is not None: self.rep.on_damage(self.t, src, dst, dealt, mit - remaining, kind, is_skill, is_attack)
         if src is not None:
             src.stats["dmg"] += dealt
             if src.e_omnivamp > 0: self.heal(src, src, dealt * src.e_omnivamp / 100.0, from_vamp=True)
@@ -295,6 +300,7 @@ class Battle:
         missing = dst.max_hp - dst.hp
         healed = min(missing, amount)
         dst.hp += healed
+        if self.rep is not None: self.rep.on_heal(src, dst, healed, from_vamp)
         if healed > 0: self.emit("heal", src=(src.uid if src is not None else -1), dst=dst.uid, amount=round(healed, 1), vamp=from_vamp)
         over = amount - healed
         if over > 0 and dst.state.get("overheal_shield_pct"):
@@ -315,6 +321,7 @@ class Battle:
         u.alive = False; u.dead_time = self.t
         if u.pos in self.occ and self.occ[u.pos] is u: del self.occ[u.pos]
         self.emit("death", uid=u.uid, killer=(killer.uid if killer is not None else -1))
+        if self.rep is not None: self.rep.on_death(self.t, u, killer)
         if killer is not None and killer.alive:
             killer.stats["kills"] += 1
             killer.fire(self, "kill", u)
@@ -341,8 +348,9 @@ class Battle:
         return None
 
     # ── CC
-    def stun(self, u, dur):
+    def stun(self, u, dur, src=None):
         if u.cc_immune_until > self.t or u.is_structure: return
+        if self.rep is not None: self.rep.on_stun(src, u, max(0.0, self.t + dur - max(self.t, u.stun_until)))
         u.stun_until = max(u.stun_until, self.t + dur)
         self.emit("stun", uid=u.uid, duration=dur)
 
@@ -504,6 +512,7 @@ class Battle:
     def result(self):
         self.emit("end", winner=self.winner)
         return {"winner": self.winner, "time": round(self.t, 2), "waves": self.wave_index, "events": (self.event_checksum() if self.record_events else None),
+                "report": (self.rep.build(self) if self.rep is not None else None),
                 "units": [{"uid": u.uid, "team": u.team, "id": u.hid, "name": u.name, "alive": u.alive, "hp": round(max(0, u.hp)), "max_hp": round(u.max_hp),
                            "is_summon": u.is_summon or u.is_turret, "stats": {k: round(v) for k, v in u.stats.items()}} for u in self.units]}
 

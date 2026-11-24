@@ -89,7 +89,7 @@ def cast_ability(b, u):
             dealt = b.damage(u, v, base, dtype, is_skill=True, can_crit=can_crit, crit_forced=bool(params.get("crit")) and v is tgt)
             if params.get("heal_pct"): b.heal(u, u, dealt * params["heal_pct"] / 100.0)
             if shred and v.alive: b.shred(v, shred, params.get("shred_dur", 6))
-            if stun and v.alive: b.stun(v, stun)
+            if stun and v.alive: b.stun(v, stun, u)
             if slow and v.alive: b.slow(v, slow, params.get("slow_dur", 3))
             if u.state.get("shaman_shred") and v.alive: b.shred(v, u.state["shaman_shred"], 6)
             if before_alive and not v.alive and v is tgt: killed_main = True

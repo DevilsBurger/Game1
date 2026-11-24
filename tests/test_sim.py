@@ -74,3 +74,56 @@ def test_traits_activate():
     astel = [h["id"] for h in D.heroes.values() if h["origin"] == "astel"][:4]
     b = Battle(D, [D.hero_spec(h) for h in astel], [D.hero_spec("H017")], seed=1)
     assert b.team_traits[0].get("astel") == 2
+
+
+# ── 전투 분석 리포트 (08 §8.1)
+def _report_pair(ids, ids2, seed, star2=1):
+    mk = lambda hs, st: [D.hero_spec(h, st) for h in hs]
+    plain = Battle(D, mk(ids, 1), mk(ids2, star2), seed=seed, rules={"record_events": True}).run()
+    rep = Battle(D, mk(ids, 1), mk(ids2, star2), seed=seed, rules={"record_events": True, "report": True}).run()
+    return plain, rep
+
+
+def test_report_has_no_side_effects():
+    ids = ["H001", "H010", "H020", "H030", "H040"]; ids2 = ["H050", "H060", "H070", "H080", "H090"]
+    plain, rep = _report_pair(ids, ids2, 42)
+    assert plain["report"] is None and rep["report"] is not None
+    for k in ("winner", "time", "waves", "events", "units"):
+        assert plain[k] == rep[k], k
+
+
+def test_report_consistent_with_unit_stats():
+    ids = ["H001", "H010", "H020", "H030", "H040"]; ids2 = ["H050", "H060", "H070", "H080", "H090"]
+    for seed in (1, 7, 42):
+        _, r = _report_pair(ids, ids2, seed)
+        R = r["report"]; stats = {u["uid"]: u["stats"] for u in r["units"]}; team = {u["uid"]: u["team"] for u in r["units"]}
+        for row in R["units"]:
+            assert abs(sum(row["dealt"].values()) - stats[row["uid"]]["dmg"]) <= 3
+            assert abs(sum(row["taken"].values()) - stats[row["uid"]]["taken"]) <= 3
+            assert row["dealt_attack"] + row["dealt_skill"] <= sum(row["dealt"].values()) + 3
+        # 행렬 합 = 받은 피해 합, 시간대 합 = 유닛이 준 피해 합
+        assert abs(sum(m["amount"] for m in R["matrix"]) - sum(s["taken"] for s in stats.values())) <= len(R["matrix"])
+        assert abs(sum(a + b for a, b in R["timeline"]) - sum(s["dmg"] for s in stats.values())) <= 2 * len(R["timeline"]) + len(stats)
+        # 사망 기록은 실제 사망 유닛과 일치하고 시간 순
+        dead = {u["uid"] for u in r["units"] if not u["alive"] and not u["is_summon"]}
+        assert dead <= {d["uid"] for d in R["deaths"]}
+        assert [d["t"] for d in R["deaths"]] == sorted(d["t"] for d in R["deaths"])
+        for d in R["deaths"]:
+            assert len(d["sources"]) <= 3 and sum(s["share"] for s in d["sources"]) <= 1.005
+        assert team[R["mvp"]] == 0 and team[R["enemy_mvp"]] == 1
+        assert sum(t["share"] for t in R["threats"]) <= 1.001
+
+
+def test_report_hints_only_on_defeat():
+    weak = ["H001", "H002", "H003"]; strong = ["H050", "H060", "H070", "H080", "H090"]
+    _, lose = _report_pair(weak, strong, 5, star2=3)
+    assert lose["winner"] == 1
+    hints = lose["report"]["hints"]
+    assert 1 <= len(hints) <= 3
+    known = {"frontline_collapsed", "backline_dived", "single_threat", "physical_heavy", "magic_heavy", "cc_locked", "enemy_sustain", "damage_short"}
+    assert all(h["code"] in known for h in hints)
+    strings = json.load(open(os.path.join(ROOT, "data", "strings_ko.json"), encoding="utf-8"))
+    assert all(f"ui.report.hint.{c}" in strings for c in known)
+    mk = lambda hs, st: [D.hero_spec(h, st) for h in hs]
+    win = Battle(D, mk(strong, 3), mk(weak, 1), seed=5, rules={"report": True}).run()
+    assert win["winner"] == 0 and win["report"]["hints"] == []

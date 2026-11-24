@@ -73,11 +73,18 @@ def run_vector(d, v):
     rules = dict(v.get("rules", {}))
     if rules.get("waves"):
         rules["waves"] = [[to_spec(d, u) for u in wave] for wave in rules["waves"]]
-    rules["record_events"] = True
+    rules["record_events"] = True; rules["report"] = True
     r = Battle(d, [to_spec(d, u) for u in v["allies"]], [to_spec(d, u) for u in v["enemies"]], seed=v["seed"], rules=rules).run()
     return {"winner": r["winner"], "time": r["time"], "survivors": sorted([u["name"] for u in r["units"] if u["alive"] and not u["is_summon"]]),
             "total_damage": {str(t): round(sum(u["stats"]["dmg"] for u in r["units"] if u["team"] == t)) for t in (0, 1)},
-            "events": r["events"]}
+            "events": r["events"], "report": report_digest(r["report"])}
+
+
+def report_digest(R):
+    """전투 분석 리포트(08 §8.1) 요약: C# `BattleReport`가 같은 값을 내야 한다."""
+    return {"mvp": R["mvp"], "enemy_mvp": R["enemy_mvp"], "deaths": [[d["uid"], d["t"], d["killer"]] for d in R["deaths"]],
+            "threats": [[t["uid"], t["amount"]] for t in R["threats"]], "hints": [h["code"] for h in R["hints"]],
+            "timeline": R["timeline"], "matrix_sum": sum(m["amount"] for m in R["matrix"])}
 
 
 if __name__ == "__main__":
