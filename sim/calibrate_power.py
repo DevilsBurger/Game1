@@ -22,8 +22,26 @@ LEVELS = list(range(5, 96, 5))   # 지역 전투 최고 레벨 94
 _G = {}
 
 
-def _init():
+# 적 강화 가정(진행 속도 조정안 측정용). battles.json은 건드리지 않고 메모리에서만 바꾼다. 몬스터 전력 보정 곡선은 그대로 둔다.
+VARIANTS = {
+    "base": None,
+    # 보통·어려움의 적 성급을 올린다: 레벨 35 이상 보통 ★2 고정, 70 이상 ★3. 어려움은 35 이상 ★3
+    "enemy_star": lambda lv, diff, dd: dd.update(enemy_star=({"normal": 3 if lv >= 70 else 2, "hard": 3}.get(diff, dd["enemy_star"]) if lv >= 35 else dd["enemy_star"])),
+    # 위에 더해 레벨 50 이상 악몽(이미 ★3)의 능력치 ×1.25
+    "enemy_star_nm125": lambda lv, diff, dd: (VARIANTS["enemy_star"](lv, diff, dd), dd.update(tuned_power_mult=dd.get("tuned_power_mult", 1.0) * (1.25 if diff == "nightmare" and lv >= 50 else 1.0))),
+}
+
+
+def _init(variant="base"):
     battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))
+    fn = VARIANTS[variant]
+    if fn:
+        for b in battles["battles"]:
+            star_n = b["difficulties"]["normal"]["enemy_star"]
+            for diff in ("normal", "hard", "nightmare"):
+                fn(b["level"], diff, b["difficulties"][diff])
+            # build_enemies는 '보통 대비 성급 증가분'만큼 전력 배수를 깎는다. 보통 성급을 올려도 어려움·악몽의 기준이 흔들리지 않게 원래 보통 성급을 기준으로 남긴다
+            b["difficulties"]["normal_star_ref"] = star_n
     _G["d"] = GameData(battles=battles)
     _G["b"] = {b["id"]: b for b in battles["battles"]}
     _G["curve"] = json.load(open(os.path.join(DATA, "economy.json"), encoding="utf-8")).get("enemy_power_curve", {})
@@ -68,6 +86,7 @@ def fit(points):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--battles", type=int, default=8); ap.add_argument("--fights", type=int, default=8); ap.add_argument("--procs", type=int, default=4)
+    ap.add_argument("--variant", default="base", choices=sorted(VARIANTS))
     args = ap.parse_args()
     battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))["battles"]
     rng = random.Random(7); by_level = {}
@@ -84,7 +103,7 @@ def main():
                         for _ in range(args.fights):
                             seed += 1; jobs.append((tier, star, st, diff, bid, seed))
     res = {}
-    with Pool(args.procs, initializer=_init) as pool:
+    with Pool(args.procs, initializer=_init, initargs=(args.variant,)) as pool:
         for key, w in pool.imap_unordered(_run, jobs, chunksize=64):
             t, s, st, diff, lv = key; grid = min(LEVELS, key=lambda g: abs(g - lv))
             c = res.setdefault((t, s, st, diff), {}).setdefault(grid, [0, 0]); c[0] += w; c[1] += 1
@@ -95,7 +114,9 @@ def main():
         out["configs"][f"t{t}_s{s}_{st}_{diff}"] = {"tier": t, "star": s, "items": st, "difficulty": diff, "winrate": {str(lv): round(w / n, 3) for lv, w, n in pts},
                                              "L50": (f[0] if f else None), "k": (f[1] if f else None), "L76": (round(f[0] - f[1] * math.log(0.76 / 0.24), 1) if f else None)}
     os.makedirs(REP, exist_ok=True)
-    json.dump(out, open(os.path.join(REP, "power_calibration.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    out["variant"] = args.variant
+    name = "power_calibration.json" if args.variant == "base" else f"power_calibration_{args.variant}.json"
+    json.dump(out, open(os.path.join(REP, name), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for k, v in out["configs"].items(): print(k, "L76", v["L76"], "k", v["k"], [v["winrate"][str(l)] for l in (10, 30, 50, 70, 90)])
 
 

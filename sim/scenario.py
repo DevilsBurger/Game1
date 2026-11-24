@@ -48,7 +48,7 @@ def structure_spec(name, hp, armor=30, mr=30, state=None):
 def build_enemies(d, b, diff, curve=None, boss_hp_override=None):
     dd = b["difficulties"][diff]
     star = dd["enemy_star"]; pm = dd["enemy_power_mult"]
-    residual = max(0.75, min(1.6, (pm / (STAR_GAIN[star] / STAR_GAIN[b["difficulties"]["normal"]["enemy_star"]])) ** 0.5))
+    residual = max(0.75, min(1.6, (pm / (STAR_GAIN[star] / STAR_GAIN[b["difficulties"].get("normal_star_ref", b["difficulties"]["normal"]["enemy_star"])])) ** 0.5))
     residual *= enemy_power(b["level"], diff, curve)
     residual *= dd.get("tuned_power_mult", 1.0)
     units = []

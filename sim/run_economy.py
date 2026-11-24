@@ -46,7 +46,34 @@ DIFF_OFFSET = {"normal": 0, "hard": 12, "nightmare": 24}; WIN_K = 12.0; WIN_BASE
 PRICE_RADIANT = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "radiant")
 
 
-def hero_power(tier, star): return TIER_POWER[tier] + STAR_POWER[star]
+# 난이도별 환산표: 기본은 보통 난이도 표에서 난이도 간격을 뺀 값. 적 강화 가정 실험(experiments)에서는 난이도별 측정표로 교체한다.
+POWER_TABLE = {d: ({t: v - off for t, v in TIER_POWER.items()}, dict(STAR_POWER)) for d, off in DIFF_OFFSET.items()}
+M003_DROP_SCALE = 1.0   # 실험용: 별의 결정 확률 드랍 배율(기본 1.0)
+
+
+def load_power_model(path):
+    """power_calibration*.json → (난이도별 환산표, 조합 아이템 보정, 빛나는 아이템 보정). 난이도별로 '계층 효과 + 성급 효과' 가법 모형을 최소제곱으로 맞춘다(측정 범위 밖 null 칸은 외삽)."""
+    C = json.load(open(path, encoding="utf-8"))["configs"]
+    table = {}
+    for d in ("normal", "hard", "nightmare"):
+        cells = {(t, st): C[f"t{t}_s{st}_none_{d}"]["L76"] for t in range(1, 6) for st in (1, 2, 3)}
+        cells = {k: v for k, v in cells.items() if v is not None}
+        tt = {t: 0.0 for t in range(1, 6)}; ss = {1: 0.0, 2: 0.0, 3: 0.0}
+        for _ in range(200):   # 교대 최소제곱
+            for t in tt:
+                v = [cells[(t, x)] - ss[x] for x in ss if (t, x) in cells]; tt[t] = statistics.mean(v) if v else tt[t]
+            for x in ss:
+                v = [cells[(t, x)] - tt[t] for t in tt if (t, x) in cells]; ss[x] = statistics.mean(v) if v else ss[x]
+        table[d] = ({t: tt[t] + ss[1] for t in tt}, {x: ss[x] - ss[1] for x in ss})
+    def bonus(kind):
+        v = [C[f"t{t}_s{st}_{kind}_normal"]["L76"] - C[f"t{t}_s{st}_none_normal"]["L76"] for t in range(1, 6) for st in (1, 2, 3)
+             if C[f"t{t}_s{st}_{kind}_normal"]["L76"] is not None and C[f"t{t}_s{st}_none_normal"]["L76"] is not None]
+        return statistics.mean(v)
+    return table, bonus("completed"), bonus("radiant")
+
+
+def hero_power(tier, star, diff="normal"):
+    tt, st = POWER_TABLE[diff]; return tt[tier] + st[star]
 
 
 class Player:
@@ -76,15 +103,15 @@ class Player:
 
     def team_slots(self): return E["team_size_by_player_level"][str(min(60, self.level))]
 
-    def power_level(self, team=None):
+    def power_level(self, team=None, diff="normal"):
         """전력 레벨: 실제 출전 팀(미지정 시 최강 팀)의 평균 전력 + 인원·아이템 보정. 로테이션(약한 영웅 출전)은 승률 손실로 나타난다."""
         if team is None:
-            pw = sorted([hero_power(TIER_OF[hid], st) for hid, st in self.owned.items()], reverse=True)
+            pw = sorted([hero_power(TIER_OF[hid], st, diff) for hid, st in self.owned.items()], reverse=True)
             team_pw = pw[:max(1, min(self.team_slots(), len(pw)))]
         else:
-            team_pw = [hero_power(TIER_OF[hid], self.owned[hid]) for hid in team]
+            team_pw = [hero_power(TIER_OF[hid], self.owned[hid], diff) for hid in team]
         # 레온: 계층 3 상당, 스토리로 승급(2막 클리어 ★2, 4막 클리어 ★3 — 03 §5)
-        team_pw = team_pw + [hero_power(3, 3 if self.act >= 5 else 2 if self.act >= 3 else 1)]
+        team_pw = team_pw + [hero_power(3, 3 if self.act >= 5 else 2 if self.act >= 3 else 1, diff)]
         # 아이템: 장착 슬롯(영웅당 3) 기준. 빛나는 아이템이 먼저 슬롯을 차지하고 나머지를 조합 아이템이 채운다
         slots = 3 * len(team_pw)
         rad = min(self.items.get("radiant", 0), slots); comp = min(self.items["completed"], slots - rad)
@@ -103,11 +130,12 @@ class Player:
         return self.rng.choice(sorted(reg, key=lambda b: -b["level"])[:30]) if reg else self.rng.choice(cands)
 
     def choose_difficulty(self, b):
-        margin = self.power_level() - b["level"]
-        return "nightmare" if margin >= DIFF_OFFSET["nightmare"] else ("hard" if margin >= DIFF_OFFSET["hard"] else "normal")
+        for diff in ("nightmare", "hard"):
+            if self.power_level(None, diff) >= b["level"]: return diff
+        return "normal"
 
     def win_prob(self, b, diff, team=None):
-        margin = self.power_level(team) - b["level"] - DIFF_OFFSET[diff]
+        margin = self.power_level(team, diff) - b["level"]
         return 1 / (1 + math.exp(-(margin / WIN_K + WIN_BASE)))   # margin 0 → 76%
 
     def fac_bonus(self, key):
@@ -167,7 +195,7 @@ class Player:
                 for h in self.stamina: self.stamina[h] = 100
             for k, v in rw["materials"].items():
                 if k.endswith("_chance"):
-                    if self.rng.random() * 100 < v["pct"]: self.mats[k.split("_")[0]] += v["qty"]
+                    if self.rng.random() * 100 < v["pct"] * (M003_DROP_SCALE if k.startswith("M003") else 1.0): self.mats[k.split("_")[0]] += v["qty"]
                 else: self.mats[k] += v
             for it in rw["items"]:
                 if self.rng.random() * 100 < it["chance_pct"]: self.items[it["pool"]] = self.items.get(it["pool"], 0) + it["qty"]
@@ -207,29 +235,44 @@ class Player:
 
     def spend(self):
         self.tokens_today = 0
-        # 승급: 전력 기여 큰 영웅부터. 부족한 재료는 보급소에서 일일 한도 내로 구매(07 §1)
+        # 승급. 부족한 재료는 보급소에서 일일 한도 내로 구매(07 §1), 하루 한도로 못 채우면 여러 날에 걸쳐 비축
         bought = {"M001": 0, "M002": 0, "M003": 0}
-        stockpiled = False
         dep = 1 + self.fac_bonus("supply_depot") / 100.0
         limit = {m: int(MAT_DAILY_LIMIT[m] * (dep if m in FAC_BY_KEY["supply_depot"]["applies_to"] else 1)) for m in MAT_DAILY_LIMIT}
-        for hid, st in sorted(self.owned.items(), key=lambda kv: -hero_power(TIER_OF[kv[0]], kv[1])):
-            if st >= 3: continue
-            t = TIER_OF[hid]; cost = E["star_up_cost"]["1_to_2" if st == 1 else "2_to_3"][str(t)]
+
+        def try_up(hid, stockpile):
+            st = self.owned[hid]; cost = E["star_up_cost"]["1_to_2" if st == 1 else "2_to_3"][str(TIER_OF[hid])]
             need = {m: max(0, cost[m] - self.mats[m]) for m in bought}
-            if any(need[m] > limit[m] - bought[m] for m in bought):
-                # 하루 한도로 못 채우는 재료는 여러 날에 걸쳐 비축한다(최우선 영웅 1명분만)
-                if not stockpiled:
-                    stockpiled = True
+            if any(need[m] > limit[m] - bought[m] for m in bought) or self.gold < cost["gold"] + sum(need[m] * MAT_PRICE[m] for m in bought):
+                if stockpile:
                     for m in bought:
                         q = min(need[m], limit[m] - bought[m], int(max(0, self.gold - cost["gold"]) // MAT_PRICE[m]))
                         if q > 0: bought[m] += q; self.mats[m] += q; self.pay(q * MAT_PRICE[m], "mats")
-                continue
-            mat_gold = sum(need[m] * MAT_PRICE[m] for m in bought)
-            if self.gold < cost["gold"] + mat_gold: continue
+                return False
             for m in bought:
+                if need[m]: self.pay(need[m] * MAT_PRICE[m], "mats")
                 bought[m] += need[m]; self.mats[m] += need[m] - cost[m]
-            if mat_gold: self.pay(mat_gold, "mats")
             self.pay(cost["gold"], "star"); self.owned[hid] = st + 1
+            return True
+
+        # ① ★1 → ★2 (별의 결정 불필요): 전력 큰 영웅부터, 첫 번째로 막힌 영웅의 재료만 비축
+        first_block = True
+        for hid in sorted((h for h, st in self.owned.items() if st == 1), key=lambda h: -TIER_OF[h]):
+            if not try_up(hid, first_block): first_block = False
+        # ② ★2 → ★3: 별의 결정 1개당 주력 팀 전력 이득이 가장 큰 영웅을 목표로 삼고, 살 수 있을 때까지 결정을 그 영웅 몫으로 남겨 둔다.
+        #    주력 팀에 더 올릴 영웅이 없으면(이득 0) 결정이 적게 드는 영웅부터 수집용으로 올린다.
+        n = self.team_slots()
+        while True:
+            cands = [h for h, st in self.owned.items() if st == 2]
+            if not cands: break
+            top = sorted((hero_power(TIER_OF[h], st) for h, st in self.owned.items()), reverse=True)[:n]
+            floor = top[-1] if len(top) >= n else 0.0
+
+            def gain(h):
+                cur = hero_power(TIER_OF[h], 2); post = hero_power(TIER_OF[h], 3)
+                return max(0.0, post - max(cur, floor)) / max(1, E["star_up_cost"]["2_to_3"][str(TIER_OF[h])]["M003"])
+            target = max(cands, key=lambda h: (gain(h), -E["star_up_cost"]["2_to_3"][str(TIER_OF[h])]["M003"], h))
+            if not try_up(target, True): break
         # 아이템: 남은 골드의 35% 예산. 조합 아이템으로 주력 팀 슬롯(영웅당 3, 레온 포함)을 채운 뒤 빛나는 아이템으로 교체
         budget = self.gold * 0.35
         slots = 3 * (self.team_slots() + 1)
