@@ -4,9 +4,9 @@
 모델:
   - 하루 세션: 프로필별 목표 참전 횟수. 영웅별 스태미너 100, 6분당 1 회복(하루 240), 참전 시 영웅당 난이도별 소모(웨이브형 ×1.5).
   - 전투 선택: 현재 '전력 레벨'(보유 상위 팀의 계층·성급) 근처의 지역/조우/스토리 전투. 난이도는 전력 여유에 따라 보통/어려움/악몽.
-    승률 = 로지스틱(전력 레벨 − 전투 레벨) (등가 모델·난이도 검증 결과를 근사: 여유 0 → 보통 78%).
+    승률 = 로지스틱((전력 − 전투 레벨 − 난이도 간격) / 12) (여유 0 → 76%). 전력 환산은 실제 엔진 측정값(calibrate_power.py).
   - 보상: economy.json 공식(골드·재료·아이템 드랍·영웅 드랍·호감도 천장). 중복 영웅 → 파편.
-  - 지출(07 §2.2의 골드 소비처 전부): 승급 골드, 부족 재료 상점 구매(일일 한도 M001 200/M002 20/M003 2), 조합 아이템(팀 슬롯분),
+  - 지출(07 §2.2의 골드 소비처 전부): 승급 골드, 부족 재료 상점 구매(일일 한도 M001 200/M002 20/M003 2), 조합 아이템(주력 팀 슬롯분)·빛나는 아이템 교체,
     골드 소모품(조우 서약서·매력 징표). 보석은 프로필별(물약·계층 4·5 조우 고급 서약서).
 출력: sim/reports/economy_sim.json, docs/07 §9 자동 삽입
 """
@@ -35,8 +35,15 @@ POTION_GOLD = _ITEMS["X003"]["price_gold"]; POTION_STAMINA = _ITEMS["X003"]["eff
 GIFT_BUDGET_SHARE = 0.25   # 보유 영웅 호감도 선물: 승급·시설 뒤 남은 골드의 이 비율까지
 FACILITY_BUDGET_SHARE = 0.6
 GOLD_SCALE = {"normal": 1.0, "hard": 1.0, "nightmare": 1.0}   # 난이도별 골드 보상 가정 실험용 배율(기본 1.0 = battles.json 그대로)
+DAILY_GOLD_SOFTCAP = None   # 실험용: 하루 전투 골드가 (한도, 배율)의 한도를 넘으면 초과분에 배율 적용. None = 미적용(현재 규칙)
 GOLD_RESERVE = 3000   # 소모품은 이만큼의 여유 골드가 있을 때만 산다(승급·아이템 우선)
-TIER_POWER = {1: 10, 2: 18, 3: 26, 4: 34, 5: 42}; STAR_POWER = {1: 0, 2: 14, 3: 28}
+# 전력 = '보통 난이도 승률 76%가 되는 전투 레벨'. 실제 전투 엔진 측정값(sim/calibrate_power.py → reports/power_calibration.json)을 가법 모형으로 맞춘 것.
+#   계층 기본(★1, 아이템 없음) 22/32/40/47/60, ★2 +28, ★3 +59. 조합 아이템 3개 장착 +16, 빛나는 3개 장착 +26. 어려움 −12, 악몽 −24. 로지스틱 기울기 12.
+#   레벨 95를 넘는 구성(계층 4·5 ★3 등)은 측정 범위 밖이라 가법 모형의 외삽값이다.
+TIER_POWER = {1: 22, 2: 32, 3: 40, 4: 47, 5: 60}; STAR_POWER = {1: 0, 2: 28, 3: 59}
+ITEM_POWER_COMPLETED = 16.0; ITEM_POWER_RADIANT = 26.0   # 팀 전원이 3슬롯을 해당 등급으로 채웠을 때
+DIFF_OFFSET = {"normal": 0, "hard": 12, "nightmare": 24}; WIN_K = 12.0; WIN_BASE = math.log(0.76 / 0.24)   # 여유 0 → 76%
+PRICE_RADIANT = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "radiant")
 
 
 def hero_power(tier, star): return TIER_POWER[tier] + STAR_POWER[star]
@@ -55,7 +62,7 @@ class Player:
         # 시작: 레온 + 1막 스토리 보상 2명(브랜든·마리엘 상당) 대신 계층1 영웅 2명
         for h in [x for x in HEROES if x["tier"] == 1][:2]: self.add_hero(h["id"])
         self.exp_total = 0
-        self.gold_by = {}; self.wins_by = {}
+        self.gold_by = {}; self.wins_by = {}; self.gold_today = 0; self.gold_capped = 0
         self.fac = {k: 0 for k in FAC_KEYS}; self.wins_today = {}; self.gold_potions_today = 0; self.gold_decayed = 0; self.gifted_full = 0
         self.spent = {"star": 0, "items": 0, "mats": 0, "consumables": 0, "facilities": 0, "gifts": 0}; self.equipped_radiant = 0; self.tokens_today = 0
         self.gems_spent = 0; self.gold_earned = 0; self.gold_spent = 0; self.stamina_blocked_days = 0; self.battles_fought = 0; self.wins = 0; self.rotations = 0
@@ -78,14 +85,17 @@ class Player:
             team_pw = [hero_power(TIER_OF[hid], self.owned[hid]) for hid in team]
         # 레온: 계층 3 상당, 스토리로 승급(2막 클리어 ★2, 4막 클리어 ★3 — 03 §5)
         team_pw = team_pw + [hero_power(3, 3 if self.act >= 5 else 2 if self.act >= 3 else 1)]
-        return statistics.mean(team_pw) + 0.6 * min(len(team_pw), 6) + 0.15 * self.items["completed"]
+        # 아이템: 장착 슬롯(영웅당 3) 기준. 빛나는 아이템이 먼저 슬롯을 차지하고 나머지를 조합 아이템이 채운다
+        slots = 3 * len(team_pw)
+        rad = min(self.items.get("radiant", 0), slots); comp = min(self.items["completed"], slots - rad)
+        return statistics.mean(team_pw) + (ITEM_POWER_RADIANT * rad + ITEM_POWER_COMPLETED * comp) / slots
 
     def pick_battle(self):
         pl = self.power_level()
-        cands = [b for b in BATTLES if b["act"] <= self.act and b["level"] <= pl + 12]
+        cands = [b for b in BATTLES if b["act"] <= self.act and b["level"] <= pl + 24]
         if not cands: cands = [b for b in BATTLES if b["act"] <= self.act]
-        enc = [b for b in cands if b["kind"] == "encounter" and b["hero_id"] not in self.owned and b["level"] <= pl + 6]
-        story = [b for b in cands if b["kind"] == "story" and b["id"] not in self.cleared and b["level"] <= pl + 8]
+        enc = [b for b in cands if b["kind"] == "encounter" and b["hero_id"] not in self.owned and b["level"] <= pl + 12]
+        story = [b for b in cands if b["kind"] == "story" and b["id"] not in self.cleared and b["level"] <= pl + 16]
         reg = [b for b in cands if b["kind"] == "regional"]
         r = self.rng.random()
         if story and r < 0.25: return self.rng.choice(story)
@@ -94,11 +104,11 @@ class Player:
 
     def choose_difficulty(self, b):
         margin = self.power_level() - b["level"]
-        return "nightmare" if margin >= 24 else ("hard" if margin >= 10 else "normal")
+        return "nightmare" if margin >= DIFF_OFFSET["nightmare"] else ("hard" if margin >= DIFF_OFFSET["hard"] else "normal")
 
     def win_prob(self, b, diff, team=None):
-        margin = self.power_level(team) - b["level"] - {"normal": 0, "hard": 10, "nightmare": 24}[diff]
-        return 1 / (1 + math.exp(-(margin + 7) / 6.0))   # margin 0 → 76%
+        margin = self.power_level(team) - b["level"] - DIFF_OFFSET[diff]
+        return 1 / (1 + math.exp(-(margin / WIN_K + WIN_BASE)))   # margin 0 → 76%
 
     def fac_bonus(self, key):
         f = FAC_BY_KEY[key]; lv = self.fac[key]
@@ -107,7 +117,7 @@ class Player:
 
     def day(self, day_idx):
         p = self.p
-        self.wins_today = {}; self.gold_potions_today = 0
+        self.wins_today = {}; self.gold_potions_today = 0; self.gold_today = 0
         for hid in self.stamina: self.stamina[hid] = min(100, self.stamina[hid] + (240 * (1.5 if p["pass_"] else 1.0)) / 1)
         if day_idx % 30 == 0: self.gems += p["gems_per_month"] + (30 * 50 if p["pass_"] else 0)
         fought = 0; blocked = False
@@ -144,6 +154,11 @@ class Player:
             mult = next((st["gold_mult"] for st in DECAY_STEPS if nth >= st["from_win"]), 1.0)
             base_gold = rw["gold"] * GOLD_SCALE[diff]
             gold = int(base_gold * mult); self.gold_decayed += int(base_gold) - gold
+            if DAILY_GOLD_SOFTCAP is not None:
+                cap, cmult = DAILY_GOLD_SOFTCAP
+                over = max(0, self.gold_today + gold - cap) if self.gold_today < cap else gold
+                cut = int(over * (1 - cmult)); gold -= cut; self.gold_capped += cut
+            self.gold_today += gold
             self.gold += gold; self.gold_earned += gold; self.gold_by[diff] = self.gold_by.get(diff, 0) + gold; self.wins_by[diff] = self.wins_by.get(diff, 0) + 1
             exp = int(rw["exp"] * (1 + self.fac_bonus("training_ground") / 100.0))
             self.exp += exp; self.exp_total += exp
@@ -215,10 +230,13 @@ class Player:
                 bought[m] += need[m]; self.mats[m] += need[m] - cost[m]
             if mat_gold: self.pay(mat_gold, "mats")
             self.pay(cost["gold"], "star"); self.owned[hid] = st + 1
-        # 아이템: 남은 골드의 35% 예산으로 조합 아이템을 팀 슬롯(영웅당 3)까지 구매. 이후 보강은 전투 드랍
+        # 아이템: 남은 골드의 35% 예산. 조합 아이템으로 주력 팀 슬롯(영웅당 3, 레온 포함)을 채운 뒤 빛나는 아이템으로 교체
         budget = self.gold * 0.35
-        while budget >= PRICE_COMPLETED and self.items["completed"] < 3 * self.team_slots():
+        slots = 3 * (self.team_slots() + 1)
+        while budget >= PRICE_COMPLETED and self.items["completed"] + self.items.get("radiant", 0) < slots:
             self.pay(PRICE_COMPLETED, "items"); budget -= PRICE_COMPLETED; self.items["completed"] += 1
+        while budget >= PRICE_RADIANT and self.items["completed"] + self.items.get("radiant", 0) >= slots and self.items.get("radiant", 0) < slots:
+            self.pay(PRICE_RADIANT, "items"); budget -= PRICE_RADIANT; self.items["radiant"] = self.items.get("radiant", 0) + 1
         # 용병단 본부 시설(2막부터): 승급·아이템 뒤 남은 골드의 일부로 가장 싼 다음 단계부터
         if self.act >= 2:
             budget = max(0, self.gold - GOLD_RESERVE) * FACILITY_BUDGET_SHARE
@@ -245,7 +263,7 @@ def simulate(profile, days=90, seed=0):
         if d in (7, 30, 60, 90):
             tiers = {t: sum(1 for h, s in pl.owned.items() if TIER_OF[h] == t) for t in range(1, 6)}
             snaps[d] = dict(heroes=len(pl.owned), by_tier=tiers, star2=sum(1 for s in pl.owned.values() if s >= 2), star3=sum(1 for s in pl.owned.values() if s == 3),
-                            power=round(pl.power_level(), 1), act=pl.act, level=pl.level, gold=int(pl.gold), gold_earned=int(pl.gold_earned), gold_spent=int(pl.gold_spent), spent_star=pl.spent["star"], spent_items=pl.spent["items"], spent_mats=pl.spent["mats"], spent_consumables=pl.spent["consumables"], spent_facilities=pl.spent["facilities"], spent_gifts=pl.spent["gifts"], facility_levels=sum(pl.fac.values()), gold_decayed=int(pl.gold_decayed), gold_by=dict({"normal": 0, "hard": 0, "nightmare": 0, "first_clear": 0}, **pl.gold_by), wins_by=dict({"normal": 0, "hard": 0, "nightmare": 0}, **pl.wins_by), gifted_full=pl.gifted_full, exp_total=pl.exp_total,
+                            power=round(pl.power_level(), 1), act=pl.act, level=pl.level, gold=int(pl.gold), gold_earned=int(pl.gold_earned), gold_spent=int(pl.gold_spent), spent_star=pl.spent["star"], spent_items=pl.spent["items"], spent_mats=pl.spent["mats"], spent_consumables=pl.spent["consumables"], spent_facilities=pl.spent["facilities"], spent_gifts=pl.spent["gifts"], facility_levels=sum(pl.fac.values()), gold_decayed=int(pl.gold_decayed), radiant=pl.items.get("radiant", 0), gold_by=dict({"normal": 0, "hard": 0, "nightmare": 0, "first_clear": 0}, **pl.gold_by), wins_by=dict({"normal": 0, "hard": 0, "nightmare": 0}, **pl.wins_by), gifted_full=pl.gifted_full, exp_total=pl.exp_total, gold_capped=int(pl.gold_capped),
                             gems_spent=pl.gems_spent, items_completed=pl.items["completed"], artifacts=pl.items["artifact"], battles=pl.battles_fought, winrate=round(pl.wins / max(1, pl.battles_fought), 3),
                             stamina_blocked_days=pl.stamina_blocked_days, rotation_rate=round(pl.rotations / max(1, pl.battles_fought), 3), cleared=len(pl.cleared), m001=pl.mats["M001"], m002=pl.mats["M002"], m003=pl.mats["M003"])
     return snaps, pl.log
@@ -270,8 +288,8 @@ def main():
     doc = os.path.join(ROOT, "docs", "07_경제_및_비즈니스모델.md")
     s = open(doc, encoding="utf-8").read()
     L = ["## 9. 경제 진행 시뮬레이션 결과 (자동 생성: `python sim/run_economy.py`)", "",
-         "가상 플레이어 3프로필 × 12회 × 90일 몬테카를로. 승률은 전력 레벨 − 전투 레벨의 로지스틱(여유 0 → 76%), 보상·드랍·호감도·승급·구매는 `economy.json`·`battles.json`·`items.json` 규칙 그대로.",
-         "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(팀 슬롯분), 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개), 골드 물약(일 3회 한도), 용병단 본부 시설, 보유 영웅 호감도 선물을 모두 포함한다. 반복 클리어 골드 체감을 적용한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
+         "가상 플레이어 3프로필 × 12회 × 90일 몬테카를로. 전력은 '보통 난이도 승률 76%가 되는 전투 레벨'로 환산하며 실제 전투 엔진 측정값을 쓴다(`sim/calibrate_power.py`: 계층 기본 22/32/40/47/60, ★2 +28, ★3 +59, 조합 아이템 +16, 빛나는 +26, 어려움 −12, 악몽 −24, 기울기 12). 보상·드랍·호감도·승급·구매는 `economy.json`·`battles.json`·`items.json` 규칙 그대로.",
+         "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(주력 팀 슬롯분)과 빛나는 아이템 교체, 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개), 골드 물약(일 3회 한도), 용병단 본부 시설, 보유 영웅 호감도 선물을 모두 포함한다. 반복 클리어 골드 체감을 적용한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
          "| 프로필 | 일차 | 보유 영웅 | T4/T5 | ★2 이상 | 전력 | 막 | 용병 레벨 | 누적 골드 | 누적 지출 | 소진율 | 보석 지출 | 조합 아이템 | 클리어 전투 | 승률 | 최강팀 스태미너 소진 비율 | 참전 불가일 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for prof, r in out.items():
         for d, s_ in r["snapshots"].items():
@@ -285,7 +303,7 @@ def main():
     def ratio(k, d): return out[k]["snapshots"][d]["gold_spent"] / max(1, out[k]["snapshots"][d]["gold_earned"])
     tot = max(1, f90["gold_spent"])
     L += ["- 골드 소진율(누적 지출/누적 수입, 수입에 첫 클리어 보너스 포함): " + "; ".join(f"{out[k]['profile'].split('(')[0]} 30일 {ratio(k, 30):.0%} · 60일 {ratio(k, 60):.0%} · 90일 {ratio(k, 90):.0%}" for k in ("free", "light", "heavy"))
-          + f". 무과금 90일 지출 구성은 승급 골드 {f90['spent_star']/tot:.0%}, 재료 구매 {f90['spent_mats']/tot:.0%}, 골드 소모품(서약서·징표·물약) {f90['spent_consumables']/tot:.0%}, 본부 시설 {f90['spent_facilities']/tot:.0%}, 호감도 선물 {f90['spent_gifts']/tot:.0%}, 조합 아이템 {f90['spent_items']/tot:.0%}."
+          + f". 무과금 90일 지출 구성은 승급 골드 {f90['spent_star']/tot:.0%}, 재료 구매 {f90['spent_mats']/tot:.0%}, 골드 소모품(서약서·징표·물약) {f90['spent_consumables']/tot:.0%}, 본부 시설 {f90['spent_facilities']/tot:.0%}, 호감도 선물 {f90['spent_gifts']/tot:.0%}, 아이템(조합·빛나는) {f90['spent_items']/tot:.0%}."
           " 모델은 승급·아이템 뒤 남은 골드의 60%를 시설에, 25%를 선물에 쓰는 적극적인 소비자를 가정하므로, 소진율은 '쓸 곳이 남아 있는 동안은 거의 다 쓴다'는 뜻으로 읽는다. 실제 지표는 소비처의 용량이다.",
           f"- 후반 소비처 용량(§2.5·§2.6): 본부 시설 5종 × 10단계 = {sum(FAC_COST.values()) * len(FAC_KEYS):,}골드, 보유 영웅 호감도 선물 약 {196 * TOKEN_GOLD * 10:,}골드. 90일 시점 시설 단계 합계(최대 {FAC['max_level'] * len(FAC_KEYS)}) — "
           + ", ".join(f"{out[k]['profile'].split('(')[0]} {out[k]['snapshots'][90]['facility_levels']:.0f}" for k in ("free", "light", "heavy"))
@@ -296,14 +314,17 @@ def main():
           "- 재료 병목은 별의 결정(M003: 악몽 드랍 + 보급소 일 2개)이며 ★3 승급이 엔드게임 목표로 작동한다. 무과금 ★3 영웅 수: "
           + ", ".join(f"{d}일 {out['free']['snapshots'][d]['star3']:.0f}명" for d in (30, 60, 90)) + ".",
           "- 용병 레벨(필요 EXP = 120 + 60×Lv + 40×max(0, Lv−20)²): " + "; ".join(f"{out[k]['profile'].split('(')[0]} " + " → ".join(f"{d}일 Lv{out[k]['snapshots'][d]['level']:.0f}" for d in (7, 30, 60, 90)) for k in ("free", "light", "heavy"))
-          + ". 팀 슬롯이 끝나는 Lv20까지는 첫 주 안에 도달하고, 이후 레벨업(스태미너 전체 회복)은 90일에 걸쳐 이어지는 장기 보상이다.",
+          + ". 악몽 난이도는 EXP도 ×3.0이라, 악몽 위주로 도는 시점부터 레벨업이 빨라진다.",
           ]
-    a4 = {k: out[k]["act_reach_day_mean"].get("act4") for k in ("free", "light", "heavy")}
-    a4s = ", ".join(f"{out[k]['profile'].split('(')[0]} {('%.0f일' % a4[k]) if a4[k] is not None else '90일 내 미도달'}" for k in a4)
-    if a4["free"] is not None and a4["free"] <= 60:
-        L += [f"- **4막 진입**: 드라케스탄(레벨 74~90)은 ★2 후반·★3 전력을 요구한다. 4막 도달 평균 일차 — {a4s}. 무과금도 기준(60일) 안에 들어온다. 보급소 재료 구매(별의 결정 일 2개 포함)와 골드 서약서·징표를 모델에 넣기 전에는 87일이었으므로, 3막 장기 정체는 설계 문제가 아니라 시뮬레이션이 상점을 쓰지 않아 생긴 결과였다. 드라케스탄 위험도 하향·어려움 난이도 M003 드랍·3막 악몽 보상 증량은 적용하지 않는다. 대신 3막 진입 시 보급소의 별의 결정 구매를 안내한다(20 문서 기능 해금 표).", ""]
-    else:
-        L += [f"- **4막 진입 장벽**: 드라케스탄(레벨 74~90)은 ★2 후반·★3 전력을 요구한다. 4막 도달 평균 일차 — {a4s}. 무과금 4막 도달이 60일을 넘으므로 (a) 드라케스탄 위험도 9 → 8, (b) 어려움 난이도 M003 소량 드랍(5%), (c) 3막 악몽 보상 M003 +1 중 하나 이상이 필요하다.", ""]
+    def actday(k, a):
+        v = out[k]["act_reach_day_mean"].get(a); return ("%.0f일" % v) if v is not None else "90일 내 미도달"
+    nm = {k: out[k]["snapshots"][90]["gold_by"]["nightmare"] / max(1, out[k]["snapshots"][90]["gold_earned"]) for k in ("free", "light", "heavy")}
+    L += ["- **막 진행**: 4막 도달 — " + ", ".join(f"{out[k]['profile'].split('(')[0]} {actday(k, 'act4')}" for k in ("free", "light", "heavy"))
+          + "; 5막 도달 — " + ", ".join(f"{out[k]['profile'].split('(')[0]} {actday(k, 'act5')}" for k in ("free", "light", "heavy"))
+          + ". 엔진 측정 전력으로는 전력이 막 진행을 막지 않는다. 스토리 전투 수(76)와 하루 참전 횟수가 속도를 정한다.",
+          "- **전력이 콘텐츠를 앞선다**: 엔진 측정상 계층 1 ★3 팀(아이템 없음)의 전력은 82로 계층 5 ★1(60)보다 높고, 계층 1의 ★3 승급은 별의 결정 1개(보급소 1,500골드)면 된다. 여기에 빛나는 아이템(+26, 전 품목 골드 구매)을 더하면 첫 주에 레벨 90대 보통 전투를 이긴다."
+          f" 그 결과 수입의 대부분이 악몽 난이도에서 나온다(90일 누적 골드 중 악몽 비중: 무과금 {nm['free']:.0%}, 소과금 {nm['light']:.0%}, 헤비 {nm['heavy']:.0%})."
+          " 성급 배율(체력 ×1.8·공격력 ×1.5/성)이 계층 배율(×1.00~1.70)보다 훨씬 크고 저계층 승급이 싼 것이 원인이며, 진행 속도를 늦추려면 저계층 ★3 비용·별의 결정 공급·고레벨 적 성급 중 하나를 조정해야 한다(미결정).", ""]
     marker = "## 9. 경제 진행 시뮬레이션 결과"
     s = s[:s.index(marker)] if marker in s else s
     open(doc, "w", encoding="utf-8").write(s.rstrip() + "\n\n" + "\n".join(L))

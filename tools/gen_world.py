@@ -48,7 +48,7 @@ ECON = {
     # 팀 슬롯: 1막 스토리의 참전 모드(소대 4 → 부대 6 → 대군 8)를 용병 레벨이 따라가도록 초반을 빠르게(Lv4 4명, Lv8 6명, Lv12 8명, Lv20 10명). 20 문서 §4.
     "team_size_by_player_level": {str(lv): (1 if lv < 2 else 2 if lv < 3 else 3 if lv < 4 else 4 if lv < 6 else 5 if lv < 8 else 6 if lv < 10 else 7 if lv < 12 else 8 if lv < 16 else 9 if lv < 20 else 10) for lv in range(1, 61)},
     # 레벨업 필요 EXP(해당 레벨에서 다음 레벨까지): 120 + 60×Lv + 40×max(0, Lv−20)². 누적 Lv8 ≈ 2,520(약 25전투), Lv12 ≈ 5,280, Lv20 ≈ 13,680(1막 완주).
-    # Lv20(팀 슬롯 10)까지는 FTUE 검증 곡선 그대로이고, 이후는 2차 항으로 늘려 Lv60을 90일 안팎의 장기 목표로 둔다(누적 Lv30 ≈ 4만, Lv40 ≈ 15만, Lv50 ≈ 42만, Lv60 ≈ 93만. 07 §9).
+    # Lv20(팀 슬롯 10)까지는 FTUE 검증 곡선 그대로이고, 이후는 2차 항으로 늘린다(누적 Lv30 ≈ 4만, Lv40 ≈ 15만, Lv50 ≈ 42만, Lv60 ≈ 93만. 07 §9).
     "player_level_exp": {str(lv): 120 + 60 * lv + 40 * max(0, lv - 20) ** 2 for lv in range(1, 61)},
     "star_up_cost": {
         "1_to_2": {str(t): {"M001": [30, 50, 80, 120, 180][t - 1], "M002": [0, 2, 4, 8, 12][t - 1], "M003": 0, "gold": [500, 1000, 2000, 4000, 8000][t - 1]} for t in range(1, 6)},

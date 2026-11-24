@@ -87,3 +87,24 @@ def test_repeat_gold_decay_and_facilities():
     ao = econ["affinity_owned"]
     cost_gold = ao["shard_reward_every"] / items["X008"]["effect"]["affinity"] * items["X008"]["price_gold"]
     assert ao["shard_reward_M001"] * items["M001"]["price_gold"] < cost_gold
+
+
+def test_economy_power_model_matches_engine_calibration():
+    """경제 시뮬레이션의 전력 환산(가법 모형)이 엔진 측정값(power_calibration.json)과 맞아야 한다. 측정 범위 상단(L76 > 85)은 포화되므로 제외."""
+    path = os.path.join(ROOT, "sim", "reports", "power_calibration.json")
+    if not os.path.exists(path): return
+    import run_economy as R
+    C = json.load(open(path, encoding="utf-8"))["configs"]
+    get = lambda t, s, i, d: C[f"t{t}_s{s}_{i}_{d}"]["L76"]
+    checked = 0
+    for t in range(1, 6):
+        for s in (1, 2, 3):
+            base = get(t, s, "none", "normal")
+            if base is None or base > 85: continue
+            assert abs(R.hero_power(t, s) - base) <= 6, (t, s, base); checked += 1
+            hard = get(t, s, "none", "hard"); nm = get(t, s, "none", "nightmare")
+            if hard is not None: assert abs((base - hard) - R.DIFF_OFFSET["hard"]) <= 5, (t, s)
+            if nm is not None: assert abs((base - nm) - R.DIFF_OFFSET["nightmare"]) <= 6, (t, s)
+            comp = get(t, s, "completed", "normal")
+            if comp is not None and comp <= 85: assert abs((comp - base) - R.ITEM_POWER_COMPLETED) <= 6, (t, s)
+    assert checked >= 8
