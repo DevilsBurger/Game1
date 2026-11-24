@@ -86,6 +86,9 @@ SCHEMAS = {
         "team_size_by_player_level": obj({}), "player_level_exp": obj({}), "star_up_cost": obj({"1_to_2": obj({}), "2_to_3": obj({})}, ["1_to_2", "2_to_3"]),
         "hero_value_gold_equiv": obj({}), "hero_drop_base_pct": obj({}), "hero_drop_difficulty_mult": obj({}), "hero_drop_cap_pct": num, "duplicate_hero_conversion": obj({}),
         "affinity_pity": obj({}), "regional_native_hero_drop_pct": obj({}), "item_drop": obj({}), "material_drop": obj({}), "premium_currency": obj({}),
+        "repeat_gold_decay": obj({"steps": arr(obj({"from_win": integer, "gold_mult": num}, ["from_win", "gold_mult"]))}, ["steps"]),
+        "facilities": obj({"max_level": integer, "cost_base": num, "cost_growth": num, "cost_by_level": obj({}), "list": arr(obj({"key": string, "name_ko": string, "name_en": string, "effect": string, "desc": string}, ["key", "name_ko", "effect"]))}, ["max_level", "cost_by_level", "list"]),
+        "affinity_owned": obj({"cosmetic_unlock_at": integer, "shard_reward_every": integer, "shard_reward_M001": integer}),
         "enemy_power_curve": obj({"bands": obj({d: obj({}) for d in DIFFS}, DIFFS)}, ["bands"])},
         ["gold_base", "stamina", "team_size_by_player_level", "star_up_cost", "hero_drop_base_pct", "item_drop", "material_drop"])},
 }

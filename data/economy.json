@@ -22,7 +22,9 @@
    "arena",
    "raid",
    "decisive"
-  ]
+  ],
+  "gold_potion_daily_limit": 3,
+  "gem_purchase_daily_limit": 10
  },
  "team_size_by_player_level": {
   "1": 1,
@@ -309,6 +311,103 @@
     "decisive"
    ]
   }
+ },
+ "repeat_gold_decay": {
+  "scope": "same_battle_per_day",
+  "steps": [
+   {
+    "from_win": 4,
+    "gold_mult": 0.7
+   },
+   {
+    "from_win": 7,
+    "gold_mult": 0.4
+   }
+  ],
+  "desc": "같은 전투의 당일 4번째 승리부터 골드 ×0.7, 7번째부터 ×0.4. 첫 클리어 보너스·재료·드랍·EXP에는 적용하지 않는다."
+ },
+ "facilities": {
+  "max_level": 10,
+  "cost_base": 5000,
+  "cost_growth": 1.6,
+  "cost_by_level": {
+   "1": 5000,
+   "2": 8000,
+   "3": 12800,
+   "4": 20500,
+   "5": 32800,
+   "6": 52400,
+   "7": 83900,
+   "8": 134200,
+   "9": 214700,
+   "10": 343600
+  },
+  "unlock": "2막 진입",
+  "list": [
+   {
+    "key": "training_ground",
+    "name_ko": "훈련장",
+    "name_en": "Training Ground",
+    "effect": "player_exp_pct",
+    "per_level": 3,
+    "desc": "전투 용병 EXP +3%/단계(최대 +30%)"
+   },
+   {
+    "key": "supply_depot",
+    "name_ko": "보급 창고",
+    "name_en": "Supply Depot",
+    "effect": "material_daily_limit_pct",
+    "per_level": 10,
+    "applies_to": [
+     "M001",
+     "M002"
+    ],
+    "desc": "보급소 영혼의 파편·용의 정수 일일 한도 +10%/단계(최대 400/40). 별의 결정은 제외"
+   },
+   {
+    "key": "intel_room",
+    "name_ko": "정보실",
+    "name_en": "Intel Room",
+    "effect": "report_archive",
+    "per_level": 5,
+    "milestones": {
+     "5": "nightmare_enemy_silhouette",
+     "10": "nightmare_enemy_formation"
+    },
+    "desc": "전투 분석 리포트 보관 +5건/단계. 5단계: 악몽 난이도 적 실루엣 공개, 10단계: 악몽 적 배치 공개"
+   },
+   {
+    "key": "banquet_hall",
+    "name_ko": "연회장",
+    "name_en": "Banquet Hall",
+    "effect": "encounter_fail_affinity_bonus",
+    "milestones": {
+     "3": 1,
+     "6": 2,
+     "10": 3
+    },
+    "desc": "조우 실패 시 호감도 누적 +1(3단계) / +2(6단계) / +3(10단계)"
+   },
+   {
+    "key": "armory",
+    "name_ko": "무기고",
+    "name_en": "Armory",
+    "effect": "formation_presets",
+    "milestones": {
+     "2": 4,
+     "4": 5,
+     "6": 6,
+     "8": 7,
+     "10": 8
+    },
+    "desc": "편성 프리셋 슬롯 3 → 8(2단계마다 +1)"
+   }
+  ]
+ },
+ "affinity_owned": {
+  "cosmetic_unlock_at": 100,
+  "shard_reward_every": 50,
+  "shard_reward_M001": 30
  },
  "premium_currency": {
   "name": "용의 보석",

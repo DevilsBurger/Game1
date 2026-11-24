@@ -59,3 +59,31 @@ def test_difficulty_scales_enemy_power():
         _, enemies, _ = build_scenario(D, b, diff, random.Random(1), curve=CURVE)
         hp[diff] = sum(e["hp"] for e in enemies if not e.get("is_structure"))
     assert hp["normal"] < hp["hard"] < hp["nightmare"]
+
+
+# ── 후반 골드 경제 규칙 (07 §2.4~2.6, §3)
+def test_gold_potion_cannot_loop_unbounded():
+    """골드 물약은 전투 골드보다 싸므로 반드시 일일 한도가 있어야 한다."""
+    items = {i["id"]: i for i in json.load(open(os.path.join(ROOT, "data", "items.json"), encoding="utf-8"))["items"]}
+    battles = json.load(open(os.path.join(ROOT, "data", "battles.json"), encoding="utf-8"))["battles"]
+    per_stamina = items["X003"]["price_gold"] / items["X003"]["effect"]["stamina"]
+    profitable = sum(1 for b in battles if b["kind"] == "regional"
+                     and b["difficulties"]["nightmare"]["rewards"]["gold"] > per_stamina * b["difficulties"]["nightmare"]["stamina_per_hero"] * b["participation"]["max"])
+    assert profitable > 0                                   # 루프가 실제로 이득인 전투가 존재하고
+    assert 1 <= econ["stamina"]["gold_potion_daily_limit"] <= 5   # 그래서 한도로 막는다
+
+
+def test_repeat_gold_decay_and_facilities():
+    steps = econ["repeat_gold_decay"]["steps"]
+    assert [s["from_win"] for s in steps] == sorted(s["from_win"] for s in steps)
+    assert all(0 < s["gold_mult"] < 1 for s in steps) and [s["gold_mult"] for s in steps] == sorted((s["gold_mult"] for s in steps), reverse=True)
+    fac = econ["facilities"]; cost = [fac["cost_by_level"][str(n)] for n in range(1, fac["max_level"] + 1)]
+    assert cost == sorted(cost) and cost[0] == fac["cost_base"]
+    assert len(fac["list"]) == 5 and len({f["key"] for f in fac["list"]}) == 5
+    # 시설은 전투 능력치·스태미너를 건드리지 않는다
+    assert not any(k in f["effect"] for f in fac["list"] for k in ("hp", "ad", "ap", "armor", "stamina", "damage"))
+    # 보유 영웅 호감도 파편 보상은 골드 → 파편 차익이 되면 안 된다
+    items = {i["id"]: i for i in json.load(open(os.path.join(ROOT, "data", "items.json"), encoding="utf-8"))["items"]}
+    ao = econ["affinity_owned"]
+    cost_gold = ao["shard_reward_every"] / items["X008"]["effect"]["affinity"] * items["X008"]["price_gold"]
+    assert ao["shard_reward_M001"] * items["M001"]["price_gold"] < cost_gold

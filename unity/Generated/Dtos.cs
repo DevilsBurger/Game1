@@ -38,7 +38,7 @@ namespace Arken.Generated {
     [System.Serializable] public sealed class QuestDto { public string id, kind, name_ko, hero_id, hero_name, origin, @class, nation, desc; public int tier, act; public List<QuestStepDto> steps; public Dictionary<string, object> unlock, reward; }
     [System.Serializable] public sealed class QuestsDoc { public int version, count; public List<QuestDto> quests; }
 
-    [System.Serializable] public sealed class EconomyDoc { public Dictionary<string, object> gold_base, stamina, team_size_by_player_level, player_level_exp, star_up_cost, hero_value_gold_equiv, hero_drop_base_pct, hero_drop_difficulty_mult, duplicate_hero_conversion, affinity_pity, regional_native_hero_drop_pct, item_drop, material_drop, premium_currency, enemy_power_curve; public double exp_per_level, hero_drop_cap_pct; }
+    [System.Serializable] public sealed class EconomyDoc { public Dictionary<string, object> gold_base, stamina, team_size_by_player_level, player_level_exp, star_up_cost, hero_value_gold_equiv, hero_drop_base_pct, hero_drop_difficulty_mult, duplicate_hero_conversion, affinity_pity, regional_native_hero_drop_pct, item_drop, material_drop, premium_currency, enemy_power_curve, repeat_gold_decay, facilities, affinity_owned; public double exp_per_level, hero_drop_cap_pct; }
 
     // 밸런스 핫픽스 패치(서버 /config/balance): 앱 업데이트 없이 오버레이
     [System.Serializable] public sealed class BalancePatchDoc { public int version; public Dictionary<string, BalanceDto> heroes, items; public Dictionary<string, double[]> traits; public Dictionary<string, object> enemy_power_curve; public Dictionary<string, Dictionary<string, double>> tuned_power_mult; }

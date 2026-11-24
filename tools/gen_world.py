@@ -42,7 +42,9 @@ ECON = {
     "exp_per_level": 10,
     "stamina": {"hero_max": 100, "regen_minutes_per_point": 6, "player_max": 150,
                 "cost_per_hero": {"normal": 10, "hard": 14, "nightmare": 18},
-                "multi_wave_mult": 1.5, "multi_wave_types": ["defense", "survival", "expedition", "arena", "raid", "decisive"]},
+                "multi_wave_mult": 1.5, "multi_wave_types": ["defense", "survival", "expedition", "arena", "raid", "decisive"],
+                # 골드 물약은 전투 1회 골드 수입보다 싸서 무제한이면 '물약 → 전투 → 골드' 루프가 된다(07 §3). 보석 구매 한도(10회)와 별도.
+                "gold_potion_daily_limit": 3, "gem_purchase_daily_limit": 10},
     # 팀 슬롯: 1막 스토리의 참전 모드(소대 4 → 부대 6 → 대군 8)를 용병 레벨이 따라가도록 초반을 빠르게(Lv4 4명, Lv8 6명, Lv12 8명, Lv20 10명). 20 문서 §4.
     "team_size_by_player_level": {str(lv): (1 if lv < 2 else 2 if lv < 3 else 3 if lv < 4 else 4 if lv < 6 else 5 if lv < 8 else 6 if lv < 10 else 7 if lv < 12 else 8 if lv < 16 else 9 if lv < 20 else 10) for lv in range(1, 61)},
     # 레벨업 필요 EXP(해당 레벨에서 다음 레벨까지): 120 + 60×Lv + 40×max(0, Lv−20)². 누적 Lv8 ≈ 2,520(약 25전투), Lv12 ≈ 5,280, Lv20 ≈ 13,680(1막 완주).
@@ -66,6 +68,24 @@ ECON = {
     "material_drop": {"M001_formula": "round(3 + level×0.12) × 난이도 보상 배수 (사냥/정찰 ×1.5)",
                       "M002": {"guaranteed_types": ["hunt", "raid", "decisive"], "chance_pct_hard": 25, "chance_pct_nightmare": 50},
                       "M003": {"nightmare_only": True, "chance_pct": 15, "guaranteed_types": ["raid", "decisive"]}},
+    # 같은 전투를 하루에 반복 승리하면 골드만 줄인다(재료·영웅·아이템 드랍·EXP는 그대로). 일일 리셋 05:00 KST.
+    "repeat_gold_decay": {"scope": "same_battle_per_day", "steps": [{"from_win": 4, "gold_mult": 0.7}, {"from_win": 7, "gold_mult": 0.4}],
+                          "desc": "같은 전투의 당일 4번째 승리부터 골드 ×0.7, 7번째부터 ×0.4. 첫 클리어 보너스·재료·드랍·EXP에는 적용하지 않는다."},
+    # 용병단 본부 시설: 후반 골드 소비처. 전투 능력치·스태미너에는 관여하지 않는다(07 §2.5).
+    "facilities": {
+        "max_level": 10, "cost_base": 5000, "cost_growth": 1.6,
+        "cost_by_level": {str(n): int(round(5000 * 1.6 ** (n - 1) / 100.0) * 100) for n in range(1, 11)},
+        "unlock": "2막 진입",
+        "list": [
+            {"key": "training_ground", "name_ko": "훈련장", "name_en": "Training Ground", "effect": "player_exp_pct", "per_level": 3, "desc": "전투 용병 EXP +3%/단계(최대 +30%)"},
+            {"key": "supply_depot", "name_ko": "보급 창고", "name_en": "Supply Depot", "effect": "material_daily_limit_pct", "per_level": 10, "applies_to": ["M001", "M002"], "desc": "보급소 영혼의 파편·용의 정수 일일 한도 +10%/단계(최대 400/40). 별의 결정은 제외"},
+            {"key": "intel_room", "name_ko": "정보실", "name_en": "Intel Room", "effect": "report_archive", "per_level": 5, "milestones": {"5": "nightmare_enemy_silhouette", "10": "nightmare_enemy_formation"}, "desc": "전투 분석 리포트 보관 +5건/단계. 5단계: 악몽 난이도 적 실루엣 공개, 10단계: 악몽 적 배치 공개"},
+            {"key": "banquet_hall", "name_ko": "연회장", "name_en": "Banquet Hall", "effect": "encounter_fail_affinity_bonus", "milestones": {"3": 1, "6": 2, "10": 3}, "desc": "조우 실패 시 호감도 누적 +1(3단계) / +2(6단계) / +3(10단계)"},
+            {"key": "armory", "name_ko": "무기고", "name_en": "Armory", "effect": "formation_presets", "milestones": {"2": 4, "4": 5, "6": 6, "8": 7, "10": 8}, "desc": "편성 프리셋 슬롯 3 → 8(2단계마다 +1)"},
+        ],
+    },
+    # 보유 영웅 호감도: 매력 징표로 올린다. 100에서 전용 대사·초상 테두리, 이후 50마다 파편(징표 5개 2,500골드 대비 보급소 가치 1,200골드 — 차익 없음).
+    "affinity_owned": {"cosmetic_unlock_at": 100, "shard_reward_every": 50, "shard_reward_M001": 30},
     "premium_currency": {"name": "용의 보석", "en": "Dragon Gem", "sources": ["첫 클리어 보상", "업적", "구매"], "gold_exchange": "1 보석 = 100 골드(일방향)"},
 }
 

@@ -28,6 +28,12 @@ MAT_DAILY_LIMIT = {"M001": 200, "M002": 20, "M003": 2}   # 07 §1, 21 §5
 PRICE_COMPLETED = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "completed")
 PACT_GOLD = [(_ITEMS["X006"]["price_gold"], _ITEMS["X006"]["effect"]["hero_drop_mult"]), (_ITEMS["X005"]["price_gold"], _ITEMS["X005"]["effect"]["hero_drop_mult"])]
 TOKEN_GOLD = _ITEMS["X008"]["price_gold"]; TOKEN_AFFINITY = _ITEMS["X008"]["effect"]["affinity"]; TOKENS_PER_DAY = 4
+FAC = E["facilities"]; FAC_COST = {int(k): v for k, v in FAC["cost_by_level"].items()}; FAC_KEYS = [f["key"] for f in FAC["list"]]
+FAC_BY_KEY = {f["key"]: f for f in FAC["list"]}
+DECAY_STEPS = sorted(E["repeat_gold_decay"]["steps"], key=lambda x: -x["from_win"])
+POTION_GOLD = _ITEMS["X003"]["price_gold"]; POTION_STAMINA = _ITEMS["X003"]["effect"]["stamina"]; POTION_GOLD_LIMIT = E["stamina"]["gold_potion_daily_limit"]
+GIFT_BUDGET_SHARE = 0.25   # 보유 영웅 호감도 선물: 승급·시설 뒤 남은 골드의 이 비율까지
+FACILITY_BUDGET_SHARE = 0.6
 GOLD_RESERVE = 3000   # 소모품은 이만큼의 여유 골드가 있을 때만 산다(승급·아이템 우선)
 TIER_POWER = {1: 10, 2: 18, 3: 26, 4: 34, 5: 42}; STAR_POWER = {1: 0, 2: 14, 3: 28}
 
@@ -48,7 +54,8 @@ class Player:
         # 시작: 레온 + 1막 스토리 보상 2명(브랜든·마리엘 상당) 대신 계층1 영웅 2명
         for h in [x for x in HEROES if x["tier"] == 1][:2]: self.add_hero(h["id"])
         self.exp_total = 0
-        self.spent = {"star": 0, "items": 0, "mats": 0, "consumables": 0}; self.equipped_radiant = 0; self.tokens_today = 0
+        self.fac = {k: 0 for k in FAC_KEYS}; self.wins_today = {}; self.gold_potions_today = 0; self.gold_decayed = 0; self.gifted_full = 0
+        self.spent = {"star": 0, "items": 0, "mats": 0, "consumables": 0, "facilities": 0, "gifts": 0}; self.equipped_radiant = 0; self.tokens_today = 0
         self.gems_spent = 0; self.gold_earned = 0; self.gold_spent = 0; self.stamina_blocked_days = 0; self.battles_fought = 0; self.wins = 0; self.rotations = 0
 
     def add_hero(self, hid):
@@ -91,8 +98,14 @@ class Player:
         margin = self.power_level(team) - b["level"] - {"normal": 0, "hard": 10, "nightmare": 24}[diff]
         return 1 / (1 + math.exp(-(margin + 7) / 6.0))   # margin 0 → 76%
 
+    def fac_bonus(self, key):
+        f = FAC_BY_KEY[key]; lv = self.fac[key]
+        if "per_level" in f: return f["per_level"] * lv
+        return max([v for k, v in f["milestones"].items() if int(k) <= lv and isinstance(v, (int, float))] or [0])
+
     def day(self, day_idx):
         p = self.p
+        self.wins_today = {}; self.gold_potions_today = 0
         for hid in self.stamina: self.stamina[hid] = min(100, self.stamina[hid] + (240 * (1.5 if p["pass_"] else 1.0)) / 1)
         if day_idx % 30 == 0: self.gems += p["gems_per_month"] + (30 * 50 if p["pass_"] else 0)
         fought = 0; blocked = False
@@ -102,7 +115,12 @@ class Player:
             n = max(b["participation"]["min"], min(b["participation"]["max"], self.team_slots()))
             ready = sorted([h for h, s in self.stamina.items() if s >= cost], key=lambda h: -hero_power(TIER_OF[h], self.owned[h]))
             best = sorted(self.stamina, key=lambda h: -hero_power(TIER_OF[h], self.owned[h]))[:n]
+            # 골드 물약(일일 한도): 주력 영웅의 스태미너가 모자라면 여유 골드로 보충
+            for h in best:
+                if self.stamina[h] < cost and self.gold_potions_today < POTION_GOLD_LIMIT and self.gold >= GOLD_RESERVE + POTION_GOLD:
+                    self.pay(POTION_GOLD, "consumables"); self.gold_potions_today += 1; self.stamina[h] = min(100, self.stamina[h] + POTION_STAMINA)
             if any(self.stamina[h] < cost for h in best): self.rotations += 1
+            ready = sorted([h for h, s in self.stamina.items() if s >= cost], key=lambda h: -hero_power(TIER_OF[h], self.owned[h]))
             if len(ready) < min(n, 1):
                 # 물약으로 보충 (보석)
                 if p["potion_gems_cap"] and self.gems >= 22 and self.gems_spent_today < p["potion_gems_cap"] / 30:
@@ -119,8 +137,13 @@ class Player:
                 continue
             self.wins += 1
             rw = b["difficulties"][diff]["rewards"]
-            gold = rw["gold"]; self.gold += gold; self.gold_earned += gold
-            self.exp += rw["exp"]; self.exp_total += rw["exp"]
+            # 반복 클리어 골드 체감(같은 전투의 당일 N번째 승리)
+            nth = self.wins_today.get(b["id"], 0) + 1; self.wins_today[b["id"]] = nth
+            mult = next((st["gold_mult"] for st in DECAY_STEPS if nth >= st["from_win"]), 1.0)
+            gold = int(rw["gold"] * mult); self.gold_decayed += rw["gold"] - gold
+            self.gold += gold; self.gold_earned += gold
+            exp = int(rw["exp"] * (1 + self.fac_bonus("training_ground") / 100.0))
+            self.exp += exp; self.exp_total += exp
             while self.level < 60 and self.exp >= E["player_level_exp"][str(self.level)]:
                 self.exp -= E["player_level_exp"][str(self.level)]; self.level += 1
                 for h in self.stamina: self.stamina[h] = 100
@@ -151,7 +174,7 @@ class Player:
                     if self.affinity.get(hid, 0) >= 100 or self.rng.random() * 100 < chance:
                         if self.add_hero(hid): self.affinity[hid] = 0
                     else:
-                        self.affinity[hid] = self.affinity.get(hid, 0) + E["affinity_pity"]["per_failed_encounter"][str(tier)]
+                        self.affinity[hid] = self.affinity.get(hid, 0) + E["affinity_pity"]["per_failed_encounter"][str(tier)] + self.fac_bonus("banquet_hall")
                         # 매력 징표(골드): 계층 4·5 조우 실패 시 천장까지의 거리를 줄인다
                         while tier >= 4 and self.tokens_today < TOKENS_PER_DAY and self.affinity[hid] < 100 and self.gold >= GOLD_RESERVE + TOKEN_GOLD * 6:
                             self.pay(TOKEN_GOLD, "consumables"); self.affinity[hid] += TOKEN_AFFINITY; self.tokens_today += 1
@@ -169,16 +192,18 @@ class Player:
         # 승급: 전력 기여 큰 영웅부터. 부족한 재료는 보급소에서 일일 한도 내로 구매(07 §1)
         bought = {"M001": 0, "M002": 0, "M003": 0}
         stockpiled = False
+        dep = 1 + self.fac_bonus("supply_depot") / 100.0
+        limit = {m: int(MAT_DAILY_LIMIT[m] * (dep if m in FAC_BY_KEY["supply_depot"]["applies_to"] else 1)) for m in MAT_DAILY_LIMIT}
         for hid, st in sorted(self.owned.items(), key=lambda kv: -hero_power(TIER_OF[kv[0]], kv[1])):
             if st >= 3: continue
             t = TIER_OF[hid]; cost = E["star_up_cost"]["1_to_2" if st == 1 else "2_to_3"][str(t)]
             need = {m: max(0, cost[m] - self.mats[m]) for m in bought}
-            if any(need[m] > MAT_DAILY_LIMIT[m] - bought[m] for m in bought):
+            if any(need[m] > limit[m] - bought[m] for m in bought):
                 # 하루 한도로 못 채우는 재료는 여러 날에 걸쳐 비축한다(최우선 영웅 1명분만)
                 if not stockpiled:
                     stockpiled = True
                     for m in bought:
-                        q = min(need[m], MAT_DAILY_LIMIT[m] - bought[m], int(max(0, self.gold - cost["gold"]) // MAT_PRICE[m]))
+                        q = min(need[m], limit[m] - bought[m], int(max(0, self.gold - cost["gold"]) // MAT_PRICE[m]))
                         if q > 0: bought[m] += q; self.mats[m] += q; self.pay(q * MAT_PRICE[m], "mats")
                 continue
             mat_gold = sum(need[m] * MAT_PRICE[m] for m in bought)
@@ -191,6 +216,21 @@ class Player:
         budget = self.gold * 0.35
         while budget >= PRICE_COMPLETED and self.items["completed"] < 3 * self.team_slots():
             self.pay(PRICE_COMPLETED, "items"); budget -= PRICE_COMPLETED; self.items["completed"] += 1
+        # 용병단 본부 시설(2막부터): 승급·아이템 뒤 남은 골드의 일부로 가장 싼 다음 단계부터
+        if self.act >= 2:
+            budget = max(0, self.gold - GOLD_RESERVE) * FACILITY_BUDGET_SHARE
+            while True:
+                opts = sorted((FAC_COST[self.fac[k] + 1], i, k) for i, k in enumerate(FAC_KEYS) if self.fac[k] < FAC["max_level"])
+                if not opts or opts[0][0] > budget: break
+                c, _, k = opts[0]; self.pay(c, "facilities"); budget -= c; self.fac[k] += 1
+        # 보유 영웅 호감도 선물(매력 징표, 100까지 — 전용 대사·초상 테두리)
+        budget = max(0, self.gold - GOLD_RESERVE) * GIFT_BUDGET_SHARE
+        cap = E["affinity_owned"]["cosmetic_unlock_at"]
+        for hid in sorted(self.owned, key=lambda h: -hero_power(TIER_OF[h], self.owned[h])):
+            while self.affinity.get(hid, 0) < cap and budget >= TOKEN_GOLD:
+                self.pay(TOKEN_GOLD, "gifts"); budget -= TOKEN_GOLD; self.affinity[hid] = self.affinity.get(hid, 0) + TOKEN_AFFINITY
+                if self.affinity[hid] >= cap: self.gifted_full += 1
+            if budget < TOKEN_GOLD: break
 
 
 def simulate(profile, days=90, seed=0):
@@ -202,7 +242,7 @@ def simulate(profile, days=90, seed=0):
         if d in (7, 30, 60, 90):
             tiers = {t: sum(1 for h, s in pl.owned.items() if TIER_OF[h] == t) for t in range(1, 6)}
             snaps[d] = dict(heroes=len(pl.owned), by_tier=tiers, star2=sum(1 for s in pl.owned.values() if s >= 2), star3=sum(1 for s in pl.owned.values() if s == 3),
-                            power=round(pl.power_level(), 1), act=pl.act, level=pl.level, gold=int(pl.gold), gold_earned=int(pl.gold_earned), gold_spent=int(pl.gold_spent), spent_star=pl.spent["star"], spent_items=pl.spent["items"], spent_mats=pl.spent["mats"], spent_consumables=pl.spent["consumables"], exp_total=pl.exp_total,
+                            power=round(pl.power_level(), 1), act=pl.act, level=pl.level, gold=int(pl.gold), gold_earned=int(pl.gold_earned), gold_spent=int(pl.gold_spent), spent_star=pl.spent["star"], spent_items=pl.spent["items"], spent_mats=pl.spent["mats"], spent_consumables=pl.spent["consumables"], spent_facilities=pl.spent["facilities"], spent_gifts=pl.spent["gifts"], facility_levels=sum(pl.fac.values()), gold_decayed=int(pl.gold_decayed), gifted_full=pl.gifted_full, exp_total=pl.exp_total,
                             gems_spent=pl.gems_spent, items_completed=pl.items["completed"], artifacts=pl.items["artifact"], battles=pl.battles_fought, winrate=round(pl.wins / max(1, pl.battles_fought), 3),
                             stamina_blocked_days=pl.stamina_blocked_days, rotation_rate=round(pl.rotations / max(1, pl.battles_fought), 3), cleared=len(pl.cleared), m001=pl.mats["M001"], m002=pl.mats["M002"], m003=pl.mats["M003"])
     return snaps, pl.log
@@ -228,7 +268,7 @@ def main():
     s = open(doc, encoding="utf-8").read()
     L = ["## 9. 경제 진행 시뮬레이션 결과 (자동 생성: `python sim/run_economy.py`)", "",
          "가상 플레이어 3프로필 × 12회 × 90일 몬테카를로. 승률은 전력 레벨 − 전투 레벨의 로지스틱(여유 0 → 76%), 보상·드랍·호감도·승급·구매는 `economy.json`·`battles.json`·`items.json` 규칙 그대로.",
-         "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(팀 슬롯분), 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개)를 모두 포함한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
+         "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(팀 슬롯분), 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개), 골드 물약(일 3회 한도), 용병단 본부 시설, 보유 영웅 호감도 선물을 모두 포함한다. 반복 클리어 골드 체감을 적용한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
          "| 프로필 | 일차 | 보유 영웅 | T4/T5 | ★2 이상 | 전력 | 막 | 용병 레벨 | 누적 골드 | 누적 지출 | 소진율 | 보석 지출 | 조합 아이템 | 클리어 전투 | 승률 | 최강팀 스태미너 소진 비율 | 참전 불가일 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for prof, r in out.items():
         for d, s_ in r["snapshots"].items():
@@ -242,8 +282,14 @@ def main():
     def ratio(k, d): return out[k]["snapshots"][d]["gold_spent"] / max(1, out[k]["snapshots"][d]["gold_earned"])
     tot = max(1, f90["gold_spent"])
     L += ["- 골드 소진율(누적 지출/누적 수입, 수입에 첫 클리어 보너스 포함): " + "; ".join(f"{out[k]['profile'].split('(')[0]} 30일 {ratio(k, 30):.0%} · 60일 {ratio(k, 60):.0%} · 90일 {ratio(k, 90):.0%}" for k in ("free", "light", "heavy"))
-          + f". 무과금 90일 지출 구성은 승급 골드 {f90['spent_star']/tot:.0%}, 재료 구매 {f90['spent_mats']/tot:.0%}, 골드 소모품(서약서·징표) {f90['spent_consumables']/tot:.0%}, 조합 아이템 {f90['spent_items']/tot:.0%}."
-          " 수집과 ★2 승급이 끝나는 시점부터 소비처가 ★3 승급(별의 결정 일 2개 한도)만 남아 소진율이 떨어지고, 참전이 많은 프로필일수록 골드가 쌓인다. §2.2의 목표 비율(승급 35 / 아이템 35 / 소모품 20 / 재료 10)과 달리 조합 아이템 비중이 작은데, 팀 슬롯을 한 번 채우면 추가 구매 이유가 없기 때문이다. 후반 골드 소비처(빛나는·유물 교체 수요)는 실제 플레이 데이터로 다시 본다.",
+          + f". 무과금 90일 지출 구성은 승급 골드 {f90['spent_star']/tot:.0%}, 재료 구매 {f90['spent_mats']/tot:.0%}, 골드 소모품(서약서·징표·물약) {f90['spent_consumables']/tot:.0%}, 본부 시설 {f90['spent_facilities']/tot:.0%}, 호감도 선물 {f90['spent_gifts']/tot:.0%}, 조합 아이템 {f90['spent_items']/tot:.0%}."
+          " 모델은 승급·아이템 뒤 남은 골드의 60%를 시설에, 25%를 선물에 쓰는 적극적인 소비자를 가정하므로, 소진율은 '쓸 곳이 남아 있는 동안은 거의 다 쓴다'는 뜻으로 읽는다. 실제 지표는 소비처의 용량이다.",
+          f"- 후반 소비처 용량(§2.5·§2.6): 본부 시설 5종 × 10단계 = {sum(FAC_COST.values()) * len(FAC_KEYS):,}골드, 보유 영웅 호감도 선물 약 {196 * TOKEN_GOLD * 10:,}골드. 90일 시점 시설 단계 합계(최대 {FAC['max_level'] * len(FAC_KEYS)}) — "
+          + ", ".join(f"{out[k]['profile'].split('(')[0]} {out[k]['snapshots'][90]['facility_levels']:.0f}" for k in ("free", "light", "heavy"))
+          + "; 호감도 100 달성 영웅 — " + ", ".join(f"{out[k]['profile'].split('(')[0]} {out[k]['snapshots'][90]['gifted_full']:.0f}명" for k in ("free", "light", "heavy"))
+          + ". 시설과 선물을 모두 끝낸 프로필은 다시 골드가 쌓인다(헤비의 90일 소진율 하락).",
+          "- 반복 클리어 골드 체감(§2.4)으로 줄어든 골드(90일 누적): " + ", ".join(f"{out[k]['profile'].split('(')[0]} {out[k]['snapshots'][90]['gold_decayed']:,.0f}({out[k]['snapshots'][90]['gold_decayed'] / max(1, out[k]['snapshots'][90]['gold_earned'] + out[k]['snapshots'][90]['gold_decayed']):.1%})" for k in ("free", "light", "heavy"))
+          + ". 이 모델의 플레이어는 상위 30개 지역 전투를 고르게 돌기 때문에 체감에 거의 걸리지 않는다. 체감은 '한 전투만 반복하는' 플레이를 막는 장치이고, 수입 총량을 줄이는 효과는 작다.",
           "- 재료 병목은 별의 결정(M003: 악몽 드랍 + 보급소 일 2개)이며 ★3 승급이 엔드게임 목표로 작동한다. 무과금 ★3 영웅 수: "
           + ", ".join(f"{d}일 {out['free']['snapshots'][d]['star3']:.0f}명" for d in (30, 60, 90)) + ".",
           "- 용병 레벨(필요 EXP = 120 + 60×Lv + 40×max(0, Lv−20)²): " + "; ".join(f"{out[k]['profile'].split('(')[0]} " + " → ".join(f"{d}일 Lv{out[k]['snapshots'][d]['level']:.0f}" for d in (7, 30, 60, 90)) for k in ("free", "light", "heavy"))

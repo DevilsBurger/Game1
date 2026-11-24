@@ -162,6 +162,105 @@
    "required": [],
    "additionalProperties": true
   },
+  "repeat_gold_decay": {
+   "type": "object",
+   "properties": {
+    "steps": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "from_win": {
+        "type": "integer"
+       },
+       "gold_mult": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "from_win",
+       "gold_mult"
+      ],
+      "additionalProperties": true
+     }
+    }
+   },
+   "required": [
+    "steps"
+   ],
+   "additionalProperties": true
+  },
+  "facilities": {
+   "type": "object",
+   "properties": {
+    "max_level": {
+     "type": "integer"
+    },
+    "cost_base": {
+     "type": "number"
+    },
+    "cost_growth": {
+     "type": "number"
+    },
+    "cost_by_level": {
+     "type": "object",
+     "properties": {},
+     "required": [],
+     "additionalProperties": true
+    },
+    "list": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "key": {
+        "type": "string"
+       },
+       "name_ko": {
+        "type": "string"
+       },
+       "name_en": {
+        "type": "string"
+       },
+       "effect": {
+        "type": "string"
+       },
+       "desc": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "key",
+       "name_ko",
+       "effect"
+      ],
+      "additionalProperties": true
+     }
+    }
+   },
+   "required": [
+    "max_level",
+    "cost_by_level",
+    "list"
+   ],
+   "additionalProperties": true
+  },
+  "affinity_owned": {
+   "type": "object",
+   "properties": {
+    "cosmetic_unlock_at": {
+     "type": "integer"
+    },
+    "shard_reward_every": {
+     "type": "integer"
+    },
+    "shard_reward_M001": {
+     "type": "integer"
+    }
+   },
+   "required": [],
+   "additionalProperties": true
+  },
   "enemy_power_curve": {
    "type": "object",
    "properties": {
