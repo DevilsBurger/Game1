@@ -117,6 +117,8 @@ namespace Arken.Net.Generated {
         public int stamina_max;
         /// <summary>required</summary>
         public int affinity;
+        /// <summary>보유 영웅이 100을 넘겨 쌓은 호감도(다음 파편 보상까지 0~49 진행도 = affinity_bonus % 50)</summary>
+        public int affinity_bonus;
         /// <summary>required</summary>
         public List<string> equipment;
         public bool favorite;
@@ -184,6 +186,12 @@ namespace Arken.Net.Generated {
         public Wallet wallet;
         /// <summary>영향받은 영웅(스태미너 등)</summary>
         public List<HeroInstance> heroes;
+        /// <summary>증가한 재료(M001 등) — 보유 영웅 호감도 보상</summary>
+        public Dictionary<string, int> materials;
+        /// <summary>매력 징표로 호감도 구간(100, 이후 50마다)을 넘겼을 때</summary>
+        public List<InventoryDelta_AffinityRewards> affinity_rewards;
+        /// <summary>이 요청으로 바뀐 일일 한도(키: M001·M002·M003·radiant·gold_potion)</summary>
+        public Dictionary<string, InventoryDelta_DailyLimits> daily_limits;
     }
 
     [System.Serializable]
@@ -221,6 +229,19 @@ namespace Arken.Net.Generated {
         public string server_time;
         /// <summary>skip 요청 시 즉시 결과</summary>
         public BattleFinishResponse result;
+        public RepeatGold repeat_gold;
+    }
+
+    /// <summary>같은 전투의 당일 반복 승리 골드 체감(economy.repeat_gold_decay). 골드에만 적용, 첫 클리어·재료·드랍·EXP 제외</summary>
+    [System.Serializable]
+    public sealed class RepeatGold {
+        /// <summary>required · 오늘 이 전투에서 이긴 횟수(이번 전투 전)</summary>
+        public int wins_today;
+        /// <summary>required · 이번에 이기면 적용될 골드 배율(1.0 / 0.7 / 0.4)</summary>
+        public double gold_mult;
+        /// <summary>배율이 다음으로 낮아지는 승리 횟수(없으면 생략)</summary>
+        public int next_step_at;
+        public double next_gold_mult;
     }
 
     /// <summary>전투 입력의 완전한 사본. Core.Battle은 이 객체와 seed만으로 결정론적으로 실행된다.</summary>
@@ -322,6 +343,8 @@ namespace Arken.Net.Generated {
         public int gold;
         public int exp;
         public int gem;
+        /// <summary>반복 클리어 체감으로 gold에 이미 적용된 배율(1.0이면 생략 가능)</summary>
+        public double gold_mult;
         public List<ItemInstance> items;
         public Dictionary<string, int> consumables;
         public Dictionary<string, int> materials;
@@ -364,6 +387,12 @@ namespace Arken.Net.Generated {
         public DailyState_Checkin checkin;
         public DailyState_Bounty bounty;
         public DailyState_StaminaGemBuys stamina_gem_buys;
+        /// <summary>골드 스태미너 물약 사용(economy.stamina.gold_potion_daily_limit)</summary>
+        public DailyState_GoldPotionUses gold_potion_uses;
+        /// <summary>상점 일일 한도(키: M001·M002·M003·radiant). max는 보급 창고 시설 반영값</summary>
+        public Dictionary<string, DailyState_ShopLimits> shop_limits;
+        /// <summary>battle_id → 오늘 승리 횟수(반복 클리어 골드 체감 표시용, 1회 이상인 전투만)</summary>
+        public Dictionary<string, int> battle_wins;
     }
 
     [System.Serializable]
@@ -374,7 +403,7 @@ namespace Arken.Net.Generated {
         public Dictionary<string, Progress_Nations> nations;
         /// <summary>required · battle_id → 클리어 상태</summary>
         public Dictionary<string, Progress_Battles> battles;
-        /// <summary>worldmap, heroes, shop, craft, star_up, quests, arena, bounty, gem_shop, hard, nightmare</summary>
+        /// <summary>worldmap, heroes, shop, craft, star_up, quests, arena, bounty, gem_shop, hard, nightmare, facilities</summary>
         public Dictionary<string, bool> features;
     }
 
@@ -398,6 +427,14 @@ namespace Arken.Net.Generated {
         public List<ShopCatalog_Tabs> tabs;
         /// <summary>required</summary>
         public string server_time;
+    }
+
+    [System.Serializable]
+    public sealed class FacilityState {
+        /// <summary>required</summary>
+        public List<FacilityState_Facilities> facilities;
+        /// <summary>required</summary>
+        public Wallet wallet;
     }
 
     [System.Serializable]
@@ -441,6 +478,19 @@ namespace Arken.Net.Generated {
 
     [System.Serializable]
     public sealed class Inventory_DailyLimits {
+        public int used;
+        public int max;
+    }
+
+    [System.Serializable]
+    public sealed class InventoryDelta_AffinityRewards {
+        public string hero_id;
+        public string kind;
+        public int qty;
+    }
+
+    [System.Serializable]
+    public sealed class InventoryDelta_DailyLimits {
         public int used;
         public int max;
     }
@@ -503,6 +553,19 @@ namespace Arken.Net.Generated {
         public int max;
     }
 
+    /// <summary>골드 스태미너 물약 사용(economy.stamina.gold_potion_daily_limit)</summary>
+    [System.Serializable]
+    public sealed class DailyState_GoldPotionUses {
+        public int used;
+        public int max;
+    }
+
+    [System.Serializable]
+    public sealed class DailyState_ShopLimits {
+        public int used;
+        public int max;
+    }
+
     [System.Serializable]
     public sealed class Progress_Nations {
         public bool unlocked;
@@ -540,6 +603,23 @@ namespace Arken.Net.Generated {
     }
 
     [System.Serializable]
+    public sealed class FacilityState_Facilities {
+        /// <summary>required</summary>
+        public string key;
+        /// <summary>required</summary>
+        public int level;
+        /// <summary>required</summary>
+        public int max_level;
+        /// <summary>다음 단계 비용. 최대 단계면 생략</summary>
+        public int next_cost_gold;
+        /// <summary>현재 효과 수치(훈련장 EXP %, 보급 창고 한도 %, 정보실 리포트 보관 수, 연회장 호감도 가산, 무기고 프리셋 수)</summary>
+        public double effect_value;
+        public double next_effect_value;
+        /// <summary>도달한 단계 보상 키(예: nightmare_enemy_silhouette)</summary>
+        public List<string> milestones_reached;
+    }
+
+    [System.Serializable]
     public sealed class TelemetryBatch_Events {
         /// <summary>required</summary>
         public string event_id;
@@ -561,6 +641,8 @@ namespace Arken.Net.Generated {
         public int discount_pct;
         public int daily_limit;
         public int daily_used;
+        /// <summary>한도를 품목이 아니라 묶음으로 셀 때의 키(예: radiant — 빛나는 아이템 전체로 하루 1개). daily_limit·daily_used는 묶음 기준 값</summary>
+        public string limit_group;
         /// <summary>IAP 상품일 때</summary>
         public string store_product_id;
     }
@@ -590,6 +672,8 @@ namespace Arken.Net.Generated {
         public const string RECEIPT_INVALID = "RECEIPT_INVALID";
         public const string QUEST_INCOMPLETE = "QUEST_INCOMPLETE";
         public const string ALREADY_CLAIMED = "ALREADY_CLAIMED";
+        public const string FEATURE_LOCKED = "FEATURE_LOCKED";
+        public const string FACILITY_MAX = "FACILITY_MAX";
         public const string RATE_LIMITED = "RATE_LIMITED";
         public const string VALIDATION_ERROR = "VALIDATION_ERROR";
         public const string INTERNAL = "INTERNAL";
@@ -597,7 +681,7 @@ namespace Arken.Net.Generated {
 
     /// <summary>문자열 enum 값 상수 (필드별)</summary>
     public static class Enums {
-        public static class ErrorCode { public const string AUTHEXPIRED = "AUTH_EXPIRED"; public const string AUTHINVALID = "AUTH_INVALID"; public const string VERSIONOUTDATED = "VERSION_OUTDATED"; public const string MAINTENANCE = "MAINTENANCE"; public const string ACCOUNTCONFLICT = "ACCOUNT_CONFLICT"; public const string NICKNAMETAKEN = "NICKNAME_TAKEN"; public const string INSUFFICIENTGOLD = "INSUFFICIENT_GOLD"; public const string INSUFFICIENTGEM = "INSUFFICIENT_GEM"; public const string INSUFFICIENTMATERIAL = "INSUFFICIENT_MATERIAL"; public const string STAMINAINSUFFICIENT = "STAMINA_INSUFFICIENT"; public const string DAILYLIMIT = "DAILY_LIMIT"; public const string BATTLELOCKED = "BATTLE_LOCKED"; public const string DIFFICULTYLOCKED = "DIFFICULTY_LOCKED"; public const string CONDITIONUNMET = "CONDITION_UNMET"; public const string SESSIONACTIVE = "SESSION_ACTIVE"; public const string SESSIONEXPIRED = "SESSION_EXPIRED"; public const string SNAPSHOTMISMATCH = "SNAPSHOT_MISMATCH"; public const string STARMAX = "STAR_MAX"; public const string ITEMINUSE = "ITEM_IN_USE"; public const string EMBLEMDUPLICATE = "EMBLEM_DUPLICATE"; public const string RECIPEINVALID = "RECIPE_INVALID"; public const string RECEIPTINVALID = "RECEIPT_INVALID"; public const string QUESTINCOMPLETE = "QUEST_INCOMPLETE"; public const string ALREADYCLAIMED = "ALREADY_CLAIMED"; public const string RATELIMITED = "RATE_LIMITED"; public const string VALIDATIONERROR = "VALIDATION_ERROR"; public const string INTERNAL = "INTERNAL"; }
+        public static class ErrorCode { public const string AUTHEXPIRED = "AUTH_EXPIRED"; public const string AUTHINVALID = "AUTH_INVALID"; public const string VERSIONOUTDATED = "VERSION_OUTDATED"; public const string MAINTENANCE = "MAINTENANCE"; public const string ACCOUNTCONFLICT = "ACCOUNT_CONFLICT"; public const string NICKNAMETAKEN = "NICKNAME_TAKEN"; public const string INSUFFICIENTGOLD = "INSUFFICIENT_GOLD"; public const string INSUFFICIENTGEM = "INSUFFICIENT_GEM"; public const string INSUFFICIENTMATERIAL = "INSUFFICIENT_MATERIAL"; public const string STAMINAINSUFFICIENT = "STAMINA_INSUFFICIENT"; public const string DAILYLIMIT = "DAILY_LIMIT"; public const string BATTLELOCKED = "BATTLE_LOCKED"; public const string DIFFICULTYLOCKED = "DIFFICULTY_LOCKED"; public const string CONDITIONUNMET = "CONDITION_UNMET"; public const string SESSIONACTIVE = "SESSION_ACTIVE"; public const string SESSIONEXPIRED = "SESSION_EXPIRED"; public const string SNAPSHOTMISMATCH = "SNAPSHOT_MISMATCH"; public const string STARMAX = "STAR_MAX"; public const string ITEMINUSE = "ITEM_IN_USE"; public const string EMBLEMDUPLICATE = "EMBLEM_DUPLICATE"; public const string RECIPEINVALID = "RECIPE_INVALID"; public const string RECEIPTINVALID = "RECEIPT_INVALID"; public const string QUESTINCOMPLETE = "QUEST_INCOMPLETE"; public const string ALREADYCLAIMED = "ALREADY_CLAIMED"; public const string FEATURELOCKED = "FEATURE_LOCKED"; public const string FACILITYMAX = "FACILITY_MAX"; public const string RATELIMITED = "RATE_LIMITED"; public const string VALIDATIONERROR = "VALIDATION_ERROR"; public const string INTERNAL = "INTERNAL"; }
         public static class ClientSettingsLanguage { public const string Ko = "ko"; public const string En = "en"; }
         public static class ClientSettingsGraphicsTier { public const string Low = "low"; public const string Mid = "mid"; public const string High = "high"; public const string Auto = "auto"; }
         public static class BattleStartRequestDifficulty { public const string Normal = "normal"; public const string Hard = "hard"; public const string Nightmare = "nightmare"; }
@@ -607,9 +691,11 @@ namespace Arken.Net.Generated {
         public static class BattleFinishResponseAdopted { public const string Client = "client"; public const string Server = "server"; }
         public static class QuestStateKind { public const string Story = "story"; public const string HeroChain = "hero_chain"; public const string OriginPact = "origin_pact"; public const string ClassTrial = "class_trial"; }
         public static class QuestStateStatus { public const string Locked = "locked"; public const string Available = "available"; public const string InProgress = "in_progress"; public const string Completed = "completed"; public const string Claimed = "claimed"; }
+        public static class InventoryDeltaAffinityRewardsKind { public const string CosmeticUnlock = "cosmetic_unlock"; public const string Shards = "shards"; }
         public static class RewardGrantHeroDropGuaranteedBy { public const string AffinityPity = "affinity_pity"; public const string Quest = "quest"; public const string None = "none"; }
         public static class ProgressBattlesCleared { public const string Normal = "normal"; public const string Hard = "hard"; public const string Nightmare = "nightmare"; }
         public static class ShopCatalogTabsTab { public const string Forge = "forge"; public const string Armory = "armory"; public const string Relic = "relic"; public const string Supply = "supply"; public const string Gem = "gem"; public const string Sell = "sell"; }
+        public static class FacilityStateFacilitiesKey { public const string TrainingGround = "training_ground"; public const string SupplyDepot = "supply_depot"; public const string IntelRoom = "intel_room"; public const string BanquetHall = "banquet_hall"; public const string Armory = "armory"; }
     }
 
     /// <summary>엔드포인트 상수: Method + Path (경로 변수는 {name})</summary>
@@ -647,6 +733,8 @@ namespace Arken.Net.Generated {
         public const string GetDaily = "GET /daily";
         public const string DailyCheckin = "POST /daily/checkin";  // Idempotency-Key 필수
         public const string ClaimCommission = "POST /daily/commissions/{commission_id}/claim";  // Idempotency-Key 필수
+        public const string GetFacilities = "GET /facilities";
+        public const string UpgradeFacility = "POST /facilities/{facility_key}/upgrade";  // Idempotency-Key 필수
         public const string GetProgress = "GET /progress";
         public const string GetMail = "GET /mail";
         public const string ClaimMail = "POST /mail/{mail_id}/claim";  // Idempotency-Key 필수

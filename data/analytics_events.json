@@ -524,9 +524,45 @@
    "props": {
     "hero_id": "string",
     "qty": "int",
-    "affinity_after": "int"
+    "affinity_after": "int",
+    "owned": "bool",
+    "reward": "none|cosmetic_unlock|shards"
    },
-   "desc": "매력 징표"
+   "desc": "매력 징표(보유 영웅 선물 포함)"
+  },
+  {
+   "name": "facility_upgrade",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "facility_key": "string",
+    "level": "int",
+    "gold": "int",
+    "gold_after": "int"
+   },
+   "desc": "본부 시설 강화"
+  },
+  {
+   "name": "daily_limit_hit",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "limit_group": "M001|M002|M003|radiant|gold_potion|stamina_gem",
+    "max": "int"
+   },
+   "desc": "일일 한도 도달(구매·사용 거절)"
+  },
+  {
+   "name": "repeat_gold_decay",
+   "group": "BM",
+   "source": "server",
+   "props": {
+    "battle_id": "string",
+    "wins_today": "int",
+    "gold_mult": "number",
+    "gold_cut": "int"
+   },
+   "desc": "반복 클리어 골드 체감 적용"
   },
   {
    "name": "progress_unlock",

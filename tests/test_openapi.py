@@ -64,3 +64,33 @@ def test_netdtos_generated_from_spec(spec):
         assert f'public const string {code} = "{code}";' in src
     ops = sum(1 for p in spec["paths"].values() for m in p if m in ("get", "post", "put", "patch", "delete"))
     assert src.count("public const string") >= ops
+
+
+def test_facilities_and_limits_match_economy(spec):
+    """본부 시설·일일 한도 계약이 economy.json·문자열 테이블과 맞아야 한다."""
+    import json
+    econ = json.load(open(os.path.join(ROOT, "data", "economy.json"), encoding="utf-8"))
+    ko = json.load(open(os.path.join(ROOT, "data", "strings_ko.json"), encoding="utf-8"))
+    en = json.load(open(os.path.join(ROOT, "data", "strings_en.json"), encoding="utf-8"))
+    keys = [f["key"] for f in econ["facilities"]["list"]]
+    up = spec["paths"]["/facilities/{facility_key}/upgrade"]["post"]
+    path_enum = next(p for p in up["parameters"] if p.get("name") == "facility_key")["schema"]["enum"]
+    state_enum = spec["components"]["schemas"]["FacilityState"]["properties"]["facilities"]["items"]["properties"]["key"]["enum"]
+    assert sorted(path_enum) == sorted(keys) == sorted(state_enum)
+    assert up["requestBody"]["content"]["application/json"]["schema"]["properties"]["to_level"]["maximum"] == econ["facilities"]["max_level"]
+    for f in econ["facilities"]["list"]:
+        for part in ("name", "effect"):
+            k = f"ui.facility.{f['key']}.{part}"
+            assert ko.get(k) and en.get(k), k
+        for lv, v in f.get("milestones", {}).items():
+            if isinstance(v, str):
+                k = f"ui.facility.{f['key']}.milestone.{lv}"
+                assert ko.get(k) and en.get(k), k
+    daily = spec["components"]["schemas"]["DailyState"]["properties"]
+    assert daily["gold_potion_uses"]["properties"]["max"]["example"] == econ["stamina"]["gold_potion_daily_limit"]
+    assert "shop_limits" in daily and "battle_wins" in daily
+    assert "limit_group" in spec["components"]["schemas"]["ShopCatalog"]["properties"]["tabs"]["items"]["properties"]["entries"]["items"]["properties"]
+    rg = spec["components"]["schemas"]["RepeatGold"]["properties"]
+    assert {"wins_today", "gold_mult"} <= set(rg)
+    for k in ("ui.shop.radiant_limit", "ui.battle.repeat_gold", "ui.shop.gold_potion_limit", "ui.hero.gift"):
+        assert ko.get(k) and en.get(k), k

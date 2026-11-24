@@ -63,7 +63,10 @@ EVENTS = {
         ("subscription_state", "server", {"active": "bool", "days_left": "int", "daily_gem_claimed": "bool"}, "월정액 일일 상태"),
         ("stamina_gem_buy", "server", {"count_today": "int", "gems": "int"}, "보석 스태미너 구매"),
         ("pledge_use", "server", {"tier": "normal|advanced|legend", "battle_id": "string", "target_hero_id": "string"}, "서약서"),
-        ("charm_use", "server", {"hero_id": "string", "qty": "int", "affinity_after": "int"}, "매력 징표"),
+        ("charm_use", "server", {"hero_id": "string", "qty": "int", "affinity_after": "int", "owned": "bool", "reward": "none|cosmetic_unlock|shards"}, "매력 징표(보유 영웅 선물 포함)"),
+        ("facility_upgrade", "server", {"facility_key": "string", "level": "int", "gold": "int", "gold_after": "int"}, "본부 시설 강화"),
+        ("daily_limit_hit", "server", {"limit_group": "M001|M002|M003|radiant|gold_potion|stamina_gem", "max": "int"}, "일일 한도 도달(구매·사용 거절)"),
+        ("repeat_gold_decay", "server", {"battle_id": "string", "wins_today": "int", "gold_mult": "number", "gold_cut": "int"}, "반복 클리어 골드 체감 적용"),
     ],
     "진행·퀘스트": [
         ("progress_unlock", "server", {"kind": "act|nation|region|battle|feature|difficulty", "key": "string"}, "해금"),

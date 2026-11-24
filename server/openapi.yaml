@@ -273,6 +273,10 @@ paths:
     post:
       tags: [inventory]
       summary: 소모품 사용(스태미너 물약·부대 보급·매력 징표 등). 서약서는 전투 시작 시 사용
+      description: |
+        골드로 산 스태미너 물약 사용은 하루 `economy.stamina.gold_potion_daily_limit`회(3)로 제한한다(초과 시 DAILY_LIMIT, 잔여는 `DailyState.gold_potion_uses`).
+        매력 징표는 보유 영웅에게도 쓸 수 있다. 보유 영웅은 호감도 100에서 전용 대사·초상 테두리가 열리고, 이후 50마다 영혼의 파편
+        `economy.affinity_owned.shard_reward_M001`개를 받는다(응답 `affinity_rewards`).
       operationId: useConsumable
       parameters: [ { $ref: '#/components/parameters/IdempotencyKey' } ]
       requestBody:
@@ -369,7 +373,7 @@ paths:
       responses:
         '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/InventoryDelta' } } } }
         '402': { $ref: '#/components/responses/InsufficientFunds' }
-        '429': { description: "일일 구매 한도(DAILY_LIMIT)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+        '429': { description: "일일 구매 한도(DAILY_LIMIT, details.limit_group·used·max). 빛나는 아이템은 품목이 아니라 분류 전체로 하루 1개", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
   /shop/exchange:
     post:
       tags: [shop]
@@ -458,6 +462,36 @@ paths:
         - { $ref: '#/components/parameters/IdempotencyKey' }
       responses:
         '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/RewardGrant' } } } }
+  /facilities:
+    get:
+      tags: [facilities]
+      summary: 용병단 본부 시설 5종의 단계·효과·다음 단계 비용(2막 진입 후 해금)
+      operationId: getFacilities
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/FacilityState' } } } }
+        '403': { description: "기능 미해금(FEATURE_LOCKED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /facilities/{facility_key}/upgrade:
+    post:
+      tags: [facilities]
+      summary: 시설 1단계 강화(골드). 비용은 `economy.facilities.cost_by_level[현재 단계 + 1]`
+      operationId: upgradeFacility
+      parameters:
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+        - { name: facility_key, in: path, required: true, schema: { type: string, enum: [training_ground, supply_depot, intel_room, banquet_hall, armory] } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [to_level]
+              properties:
+                to_level: { type: integer, minimum: 1, maximum: 10, description: "강화 후 단계(현재 단계 + 1이어야 한다 — 화면과 서버 상태가 어긋난 중복 강화 방지)" }
+      responses:
+        '200': { description: "OK", content: { application/json: { schema: { $ref: '#/components/schemas/FacilityState' } } } }
+        '402': { $ref: '#/components/responses/InsufficientFunds' }
+        '403': { description: "기능 미해금(FEATURE_LOCKED)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+        '409': { description: "최대 단계(FACILITY_MAX) 또는 단계 불일치(VALIDATION_ERROR)", content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
   /progress:
     get:
       tags: [progress]
@@ -560,7 +594,7 @@ components:
                  INSUFFICIENT_GOLD, INSUFFICIENT_GEM, INSUFFICIENT_MATERIAL, STAMINA_INSUFFICIENT, DAILY_LIMIT,
                  BATTLE_LOCKED, DIFFICULTY_LOCKED, CONDITION_UNMET, SESSION_ACTIVE, SESSION_EXPIRED, SNAPSHOT_MISMATCH,
                  STAR_MAX, ITEM_IN_USE, EMBLEM_DUPLICATE, RECIPE_INVALID, RECEIPT_INVALID, QUEST_INCOMPLETE, ALREADY_CLAIMED,
-                 RATE_LIMITED, VALIDATION_ERROR, INTERNAL]
+                 FEATURE_LOCKED, FACILITY_MAX, RATE_LIMITED, VALIDATION_ERROR, INTERNAL]
         message: { type: string, description: "개발자용 영문 메시지. 사용자 문구는 클라이언트 문자열 테이블 `ui.error.{CODE}`" }
         details: { type: object, additionalProperties: true }
         request_id: { type: string }
@@ -643,6 +677,7 @@ components:
         stamina_at: { type: string, format: date-time }
         stamina_max: { type: integer, example: 100 }
         affinity: { type: integer, minimum: 0, maximum: 100 }
+        affinity_bonus: { type: integer, minimum: 0, description: "보유 영웅이 100을 넘겨 쌓은 호감도(다음 파편 보상까지 0~49 진행도 = affinity_bonus % 50)" }
         equipment: { type: array, minItems: 3, maxItems: 3, items: { type: [string, 'null'] } }
         favorite: { type: boolean }
         lobby_display: { type: boolean }
@@ -696,6 +731,9 @@ components:
         consumables: { type: object, additionalProperties: { type: integer } }
         wallet: { $ref: '#/components/schemas/Wallet' }
         heroes: { type: array, items: { $ref: '#/components/schemas/HeroInstance' }, description: "영향받은 영웅(스태미너 등)" }
+        materials: { type: object, additionalProperties: { type: integer }, description: "증가한 재료(M001 등) — 보유 영웅 호감도 보상" }
+        affinity_rewards: { type: array, items: { type: object, properties: { hero_id: { type: string }, kind: { type: string, enum: [cosmetic_unlock, shards] }, qty: { type: integer } } }, description: "매력 징표로 호감도 구간(100, 이후 50마다)을 넘겼을 때" }
+        daily_limits: { type: object, additionalProperties: { type: object, properties: { used: { type: integer }, max: { type: integer } } }, description: "이 요청으로 바뀐 일일 한도(키: M001·M002·M003·radiant·gold_potion)" }
     BattleStartRequest:
       type: object
       required: [battle_id, difficulty, formation]
@@ -719,6 +757,16 @@ components:
         expires_at: { type: string, format: date-time }
         server_time: { type: string, format: date-time }
         result: { $ref: '#/components/schemas/BattleFinishResponse', description: "skip 요청 시 즉시 결과" }
+        repeat_gold: { $ref: '#/components/schemas/RepeatGold' }
+    RepeatGold:
+      type: object
+      description: 같은 전투의 당일 반복 승리 골드 체감(economy.repeat_gold_decay). 골드에만 적용, 첫 클리어·재료·드랍·EXP 제외
+      required: [wins_today, gold_mult]
+      properties:
+        wins_today: { type: integer, description: "오늘 이 전투에서 이긴 횟수(이번 전투 전)" }
+        gold_mult: { type: number, description: "이번에 이기면 적용될 골드 배율(1.0 / 0.7 / 0.4)" }
+        next_step_at: { type: integer, description: "배율이 다음으로 낮아지는 승리 횟수(없으면 생략)" }
+        next_gold_mult: { type: number }
     BattleSnapshot:
       type: object
       description: 전투 입력의 완전한 사본. Core.Battle은 이 객체와 seed만으로 결정론적으로 실행된다.
@@ -793,6 +841,7 @@ components:
         gold: { type: integer }
         exp: { type: integer }
         gem: { type: integer }
+        gold_mult: { type: number, description: "반복 클리어 체감으로 gold에 이미 적용된 배율(1.0이면 생략 가능)" }
         items: { type: array, items: { $ref: '#/components/schemas/ItemInstance' } }
         consumables: { type: object, additionalProperties: { type: integer } }
         materials: { type: object, additionalProperties: { type: integer } }
@@ -844,6 +893,9 @@ components:
         checkin: { type: object, properties: { day: { type: integer }, claimed_today: { type: boolean }, streak: { type: integer } } }
         bounty: { type: object, properties: { week_id: { type: string }, cleared: { type: integer }, total: { type: integer }, ends_at: { type: string, format: date-time } } }
         stamina_gem_buys: { type: object, properties: { used: { type: integer }, max: { type: integer, example: 10 } } }
+        gold_potion_uses: { type: object, properties: { used: { type: integer }, max: { type: integer, example: 3 } }, description: "골드 스태미너 물약 사용(economy.stamina.gold_potion_daily_limit)" }
+        shop_limits: { type: object, additionalProperties: { type: object, properties: { used: { type: integer }, max: { type: integer } } }, description: "상점 일일 한도(키: M001·M002·M003·radiant). max는 보급 창고 시설 반영값" }
+        battle_wins: { type: object, additionalProperties: { type: integer }, description: "battle_id → 오늘 승리 횟수(반복 클리어 골드 체감 표시용, 1회 이상인 전투만)" }
     Progress:
       type: object
       required: [act, nations, battles]
@@ -860,7 +912,7 @@ components:
               first_clear_claimed: { type: array, items: { type: string } }
               best_time_sec: { type: number }
               attempts: { type: integer }
-        features: { type: object, additionalProperties: { type: boolean }, description: 'worldmap, heroes, shop, craft, star_up, quests, arena, bounty, gem_shop, hard, nightmare' }
+        features: { type: object, additionalProperties: { type: boolean }, description: 'worldmap, heroes, shop, craft, star_up, quests, arena, bounty, gem_shop, hard, nightmare, facilities' }
     BalancePatch:
       type: object
       required: [balance_version, generated_at]
@@ -897,8 +949,27 @@ components:
                     discount_pct: { type: integer }
                     daily_limit: { type: integer }
                     daily_used: { type: integer }
+                    limit_group: { type: string, description: "한도를 품목이 아니라 묶음으로 셀 때의 키(예: radiant — 빛나는 아이템 전체로 하루 1개). daily_limit·daily_used는 묶음 기준 값" }
                     store_product_id: { type: string, description: "IAP 상품일 때" }
         server_time: { type: string, format: date-time }
+    FacilityState:
+      type: object
+      required: [facilities, wallet]
+      properties:
+        facilities:
+          type: array
+          items:
+            type: object
+            required: [key, level, max_level]
+            properties:
+              key: { type: string, enum: [training_ground, supply_depot, intel_room, banquet_hall, armory] }
+              level: { type: integer, minimum: 0, maximum: 10 }
+              max_level: { type: integer, example: 10 }
+              next_cost_gold: { type: integer, description: "다음 단계 비용. 최대 단계면 생략" }
+              effect_value: { type: number, description: "현재 효과 수치(훈련장 EXP %, 보급 창고 한도 %, 정보실 리포트 보관 수, 연회장 호감도 가산, 무기고 프리셋 수)" }
+              next_effect_value: { type: number }
+              milestones_reached: { type: array, items: { type: string }, description: "도달한 단계 보상 키(예: nightmare_enemy_silhouette)" }
+        wallet: { $ref: '#/components/schemas/Wallet' }
     Mail:
       type: object
       required: [id, title_key, created_at, expires_at, claimed]

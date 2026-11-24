@@ -1,6 +1,6 @@
 # 21. 서버 API 명세 (설계 요약)
 
-> 정본은 [`server/openapi.yaml`](../server/openapi.yaml)(OpenAPI 3.1, 40 오퍼레이션). 이 문서는 프로토콜·정책·에러·보안을 설명한다. Unity 클라이언트 `Arken.Net`(15 §3.6)과 .NET 서버가 공유하며, `tests/test_openapi.py`가 정합성을 검사한다.
+> 정본은 [`server/openapi.yaml`](../server/openapi.yaml)(OpenAPI 3.1, 42 오퍼레이션). 이 문서는 프로토콜·정책·에러·보안을 설명한다. Unity 클라이언트 `Arken.Net`(15 §3.6)과 .NET 서버가 공유하며, `tests/test_openapi.py`가 정합성을 검사한다.
 
 ## 1. 개요
 - **서버 권위 메타 + 클라이언트 전투 시뮬 + 서버 재시뮬 검증**(10 §7). 보상·드랍·호감도 RNG는 서버.
@@ -17,6 +17,7 @@
 | battle | `POST /battle/start`, `/battle/finish`, `/battle/abort`, `GET /battle/sessions` | §4 |
 | shop | `GET /shop/catalog`, `POST /shop/buy`, `/shop/exchange`, `/shop/iap/verify` | |
 | quest | `GET /quests`, `POST /quests/{id}/claim`, `GET /daily`, `POST /daily/checkin`, `/daily/commissions/{id}/claim` | |
+| facilities | `GET /facilities`, `POST /facilities/{key}/upgrade` | 본부 시설(07 §2.5). 2막 해금, 강화는 `to_level` = 현재 + 1 |
 | progress | `GET /progress` | 해금·클리어·기능 플래그 |
 | mail | `GET /mail`, `POST /mail/{id}/claim` | 커서 페이지 |
 | ftue | `GET /ftue`, `POST /ftue/steps` | 20 문서 |
@@ -74,7 +75,9 @@
 
 ## 5. 경제·상점 서버 규칙 체크리스트
 - 가격: `items.json price`(07 §2.3). 월정액 상점 10% 할인은 카탈로그 `discount_pct`에 반영.
-- 일일 한도(`economy.shop_daily_limit`): 재료 M001 200 / M002 20(보급 창고 시설로 최대 400/40) / M003 2, **빛나는 아이템 구매 1개**, 보석 스태미너 구매 10회, **골드 스태미너 물약 사용 3회**, 서약서 사용 제한 없음. 같은 전투의 당일 승리 횟수를 세어 골드 체감(4회째 ×0.7, 7회째 ×0.4)을 서버가 적용한다(07 §2.4). 본부 시설(07 §2.5)의 조회·강화 엔드포인트는 아직 `openapi.yaml`에 없다(추가 필요). 리셋 05:00 KST(`daily_reset_at`).
+- 일일 한도(`economy.shop_daily_limit`): 재료 M001 200 / M002 20(보급 창고 시설로 최대 400/40) / M003 2, **빛나는 아이템 구매 1개**, 보석 스태미너 구매 10회, **골드 스태미너 물약 사용 3회**, 서약서 사용 제한 없음. 같은 전투의 당일 승리 횟수를 세어 골드 체감(4회째 ×0.7, 7회째 ×0.4)을 서버가 적용한다(07 §2.4). 클라이언트 표시용 값: 상점 한도는 `ShopCatalog.entries[].daily_limit/daily_used/limit_group`(빛나는 아이템은 `limit_group = radiant`로 분류 전체 1개)와 `DailyState.shop_limits`, 골드 물약은 `DailyState.gold_potion_uses`, 반복 클리어는 `BattleStartResponse.repeat_gold`·`DailyState.battle_wins`·`RewardGrant.gold_mult`. 한도 초과는 429 `DAILY_LIMIT`(`details.limit_group`).
+- 본부 시설: `FacilityState`(단계·효과·다음 비용). 강화는 원장에 `facility_upgrade`로 기록하고, 훈련장(EXP)·보급 창고(한도)·연회장(호감도 가산)·무기고(프리셋 수) 효과는 서버가 해당 계산에 직접 적용한다. 정보실의 악몽 적 정보 공개는 `/battle/start` 이전 전투 정보 응답의 공개 수준으로 반영한다. 미해금 403 `FEATURE_LOCKED`, 최대 단계 409 `FACILITY_MAX`.
+- 보유 영웅 호감도: `/inventory/use`(매력 징표 + `target_hero_id`) 응답의 `affinity_rewards`·`materials`, 영웅의 `affinity_bonus`(100 초과 누적). 리셋 05:00 KST(`daily_reset_at`).
 - 보석 → 골드 1:100 일방향. 무료 보석 먼저 소모, 유료 잔량(`gem_paid`)은 환불 산정용으로 분리 보관.
 - IAP: Apple App Store Server API v2 / Google Play Developer API로 서버 검증, `order_id` 유니크, 월정액 갱신은 App Store Server Notifications v2 / Google RTDN 웹훅으로 반영. 지급은 `wallet_ledger`에 `reason=iap`.
 - 판매 30%, 조합은 `recipes`, 상징 중복 장착 금지, 지원 아이템 슬롯 규칙은 서버가 최종 판정.
