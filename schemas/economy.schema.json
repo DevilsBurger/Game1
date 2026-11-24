@@ -162,6 +162,30 @@
    "required": [],
    "additionalProperties": true
   },
+  "shop_daily_limit": {
+   "type": "object",
+   "properties": {
+    "M001": {
+     "type": "integer"
+    },
+    "M002": {
+     "type": "integer"
+    },
+    "M003": {
+     "type": "integer"
+    },
+    "radiant": {
+     "type": "integer"
+    }
+   },
+   "required": [
+    "M001",
+    "M002",
+    "M003",
+    "radiant"
+   ],
+   "additionalProperties": true
+  },
   "repeat_gold_decay": {
    "type": "object",
    "properties": {

@@ -105,3 +105,11 @@ def test_economy_power_model_from_engine_calibration():
     top = T["normal"][(5, 3)] + R.ITEM_POWER_COMPLETED
     assert 90 <= top <= 125, top
     assert T["normal"][(1, 3)] + R.ITEM_POWER_RADIANT < 85    # 저계층 ★3 + 빛나는 아이템만으로 후반 콘텐츠를 넘지 못한다
+
+
+def test_progression_pacing_rules():
+    """진행 속도 규칙(03 §4.1, 07 §6): 저계층 ★3가 싸지 않고, 빛나는 아이템 구매에 일일 한도가 있다."""
+    c = [econ["star_up_cost"]["2_to_3"][str(t)]["M003"] for t in range(1, 6)]
+    assert c == sorted(c) and c[0] >= 4 and c[-1] == 8
+    lim = econ["shop_daily_limit"]
+    assert lim["radiant"] == 1 and lim["M003"] == 2 and lim["M001"] == 200 and lim["M002"] == 20

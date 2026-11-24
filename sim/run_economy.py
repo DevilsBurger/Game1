@@ -24,7 +24,7 @@ PROFILES = {
 }
 _ITEMS = {i["id"]: i for i in json.load(open(os.path.join(DATA, "items.json"), encoding="utf-8"))["items"]}
 MAT_PRICE = {m: _ITEMS[m]["price_gold"] for m in ("M001", "M002", "M003")}
-MAT_DAILY_LIMIT = {"M001": 200, "M002": 20, "M003": 2}   # 07 §1, 21 §5
+MAT_DAILY_LIMIT = {m: E["shop_daily_limit"][m] for m in ("M001", "M002", "M003")}   # economy.shop_daily_limit (07 §1, 21 §5)
 PRICE_COMPLETED = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "completed")
 PACT_GOLD = [(_ITEMS["X006"]["price_gold"], _ITEMS["X006"]["effect"]["hero_drop_mult"]), (_ITEMS["X005"]["price_gold"], _ITEMS["X005"]["effect"]["hero_drop_mult"])]
 TOKEN_GOLD = _ITEMS["X008"]["price_gold"]; TOKEN_AFFINITY = _ITEMS["X008"]["effect"]["affinity"]; TOKENS_PER_DAY = 4
@@ -42,7 +42,7 @@ GOLD_RESERVE = 3000   # 소모품은 이만큼의 여유 골드가 있을 때만
 WIN_BASE = math.log(0.76 / 0.24)   # 여유 0 → 76%
 PRICE_RADIANT = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "radiant")
 RADIANT_UNLOCK_ACT = 1    # 실험용: 빛나는 아이템 골드 구매가 열리는 막(기본 1 = 처음부터)
-RADIANT_DAILY_LIMIT = None   # 실험용: 빛나는 아이템 하루 구매 한도(기본 없음)
+RADIANT_DAILY_LIMIT = E["shop_daily_limit"]["radiant"]   # 빛나는 아이템 하루 구매 한도(None = 무제한, 실험에서 교체)
 M003_DROP_SCALE = 1.0   # 실험용: 별의 결정 확률 드랍 배율(기본 1.0)
 
 
@@ -334,7 +334,7 @@ def main():
     s = open(doc, encoding="utf-8").read()
     L = ["## 9. 경제 진행 시뮬레이션 결과 (자동 생성: `python sim/run_economy.py`)", "",
          "가상 플레이어 3프로필 × 12회 × 90일 몬테카를로. 전력은 '승률 76%가 되는 전투 레벨'로 환산하며 실제 전투 엔진 측정표를 쓴다(`sim/calibrate_power.py` → `sim/reports/power_calibration.json`: 난이도별 계층×성급 표, 아이템 보정, 기울기). 보상·드랍·호감도·승급·구매는 `economy.json`·`battles.json`·`items.json` 규칙 그대로.",
-         "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(주력 팀 슬롯분)과 빛나는 아이템 교체, 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개), 골드 물약(일 3회 한도), 용병단 본부 시설, 보유 영웅 호감도 선물을 모두 포함한다. 반복 클리어 골드 체감을 적용한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
+         "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(주력 팀 슬롯분)과 빛나는 아이템 교체(하루 1개 한도), 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개), 골드 물약(일 3회 한도), 용병단 본부 시설, 보유 영웅 호감도 선물을 모두 포함한다. 반복 클리어 골드 체감을 적용한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
          "| 프로필 | 일차 | 보유 영웅 | T4/T5 | ★2 이상 | 전력 | 막 | 용병 레벨 | 누적 골드 | 누적 지출 | 소진율 | 보석 지출 | 조합 아이템 | 클리어 전투 | 승률 | 최강팀 스태미너 소진 비율 | 참전 불가일 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for prof, r in out.items():
         for d, s_ in r["snapshots"].items():
