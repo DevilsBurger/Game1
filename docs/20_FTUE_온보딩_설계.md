@@ -91,7 +91,7 @@
 ## 6. 코치마크·툴팁 사양
 - 구성: 딤(검정 70%) + 타깃 컷아웃(라운드 12) + 펄스 링(ember) + 말풍선(≤ 2줄, 240~360px) + [다음]/[건너뛰기]. 차단형은 [건너뛰기] 없음, 타깃 외 입력 무시.
 - 위치: 타깃 기준 자동(상/하/좌/우), 세이프 에어리어 안. 전환 애니 종료 후 0.3s에 표시. 전투 중 콜아웃은 일시정지 없이 3s.
-- 문자열 키(17 문서, `data/strings_ko.json`): `ui.ftue.{step_id}.title`, `ui.ftue.{step_id}.body` — 22단계 전부 ko/en 작성 완료. 서버 에러 문구는 `ui.error.{CODE}`(21 §3).
+- 문자열 키(17 문서, `data/strings_ko.json`): `ui.ftue.{step_id}.title`, `ui.ftue.{step_id}.body` — 24단계 전부 ko/en 작성 완료. 서버 에러 문구는 `ui.error.{CODE}`(21 §3).
 - 단계 ID: `deploy_drag`★ `deploy_start`★ `battle_hud` `result_reward` `speed_intro` `hero_acquired` `hero_detail` `lobby_coach_worldmap` `lobby_coach_heroes` `lobby_coach_shop` `deploy_second` `trait_intro` `guild_join` `craft_first`★ `equip_first` `encounter_intro` `affinity_intro` `stamina_intro` `daily_intro` `star_up_intro` `quest_intro` `hard_intro` (★ 차단형). `FtueState.completed`는 `deploy_drag`~`lobby_coach_shop` 10개 완료 시 true.
 
 ## 7. 복귀·리텐션 훅 (D1~D7)
