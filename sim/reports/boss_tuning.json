@@ -9,34 +9,35 @@
   "hard": 1.0,
   "nightmare": 1.035
  },
+ "scope": "boss",
  "history": [
   {
    "step": 0,
-   "mean_cliff": 1.0944444444444443
+   "mean_cliff": 1.0027777777777778
   },
   {
    "step": 1,
-   "mean_cliff": 1.1555555555555554
+   "mean_cliff": 1.0638888888888889
   },
   {
    "step": 2,
-   "mean_cliff": 1.1555555555555554
+   "mean_cliff": 1.0944444444444443
   },
   {
    "step": 3,
-   "mean_cliff": 1.1288194444444444
+   "mean_cliff": 1.090625
   },
   {
    "step": 4,
-   "mean_cliff": 1.1307291666666666
+   "mean_cliff": 1.0963541666666667
   },
   {
    "step": 5,
-   "mean_cliff": 1.1326388888888888
+   "mean_cliff": 1.0953993055555555
   },
   {
    "step": 6,
-   "mean_cliff": 1.1350260416666667
+   "mean_cliff": 1.0968315972222222
   }
  ],
  "rows": [
@@ -45,23 +46,24 @@
    "name": "재의 사자",
    "act": 1,
    "type": "hunt",
+   "mode": "team",
    "level": 17,
    "boss": "화염 와이번",
    "hp_mult": 2.0,
    "cliff": {
     "normal": 0.979,
-    "hard": 0.773,
-    "nightmare": 0.635
+    "hard": 0.79,
+    "nightmare": 0.618
    },
    "power_mult": {
     "normal": 0.94,
-    "hard": 0.773,
-    "nightmare": 0.657
+    "hard": 0.79,
+    "nightmare": 0.64
    },
    "wr": {
-    "normal": 0.75,
-    "hard": 0.562,
-    "nightmare": 0.146
+    "normal": 0.688,
+    "hard": 0.292,
+    "nightmare": 0.104
    }
   },
   {
@@ -69,23 +71,24 @@
    "name": "결전: 하론 재탈환",
    "act": 1,
    "type": "decisive",
+   "mode": "army",
    "level": 18,
    "boss": "재의 장군",
    "hp_mult": 3.0,
    "cliff": {
     "normal": 1.46,
-    "hard": 1.168,
-    "nightmare": 0.962
+    "hard": 1.116,
+    "nightmare": 0.945
    },
    "power_mult": {
     "normal": 1.402,
-    "hard": 1.168,
-    "nightmare": 0.996
+    "hard": 1.116,
+    "nightmare": 0.978
    },
    "wr": {
-    "normal": 0.896,
-    "hard": 0.542,
-    "nightmare": 0.125
+    "normal": 0.688,
+    "hard": 0.771,
+    "nightmare": 0.292
    }
   },
   {
@@ -93,23 +96,24 @@
    "name": "폭풍 해협의 유령",
    "act": 2,
    "type": "hunt",
+   "mode": "team",
    "level": 25,
    "boss": "바다뱀",
    "hp_mult": 2.0,
    "cliff": {
-    "normal": 1.168,
-    "hard": 0.962,
-    "nightmare": 0.755
+    "normal": 1.116,
+    "hard": 0.91,
+    "nightmare": 0.773
    },
    "power_mult": {
-    "normal": 1.121,
-    "hard": 0.962,
-    "nightmare": 0.781
+    "normal": 1.071,
+    "hard": 0.91,
+    "nightmare": 0.8
    },
    "wr": {
-    "normal": 0.562,
-    "hard": 0.479,
-    "nightmare": 0.312
+    "normal": 0.625,
+    "hard": 0.562,
+    "nightmare": 0.375
    }
   },
   {
@@ -117,23 +121,24 @@
    "name": "서리 거인 토벌",
    "act": 2,
    "type": "hunt",
+   "mode": "team",
    "level": 29,
    "boss": "서리 거인",
    "hp_mult": 2.0,
    "cliff": {
-    "normal": 0.979,
+    "normal": 0.962,
     "hard": 0.773,
-    "nightmare": 0.584
+    "nightmare": 0.601
    },
    "power_mult": {
-    "normal": 0.94,
+    "normal": 0.924,
     "hard": 0.773,
-    "nightmare": 0.604
+    "nightmare": 0.622
    },
    "wr": {
-    "normal": 0.625,
-    "hard": 0.583,
-    "nightmare": 0.333
+    "normal": 0.521,
+    "hard": 0.375,
+    "nightmare": 0.375
    }
   },
   {
@@ -141,22 +146,23 @@
    "name": "서리 마녀의 예언",
    "act": 2,
    "type": "hunt",
+   "mode": "team",
    "level": 47,
    "boss": "서리 마녀",
    "hp_mult": 2.0,
    "cliff": {
-    "normal": 1.426,
-    "hard": 0.687,
-    "nightmare": 0.807
+    "normal": 1.305,
+    "hard": 0.652,
+    "nightmare": 0.79
    },
    "power_mult": {
-    "normal": 1.369,
-    "hard": 0.687,
-    "nightmare": 0.835
+    "normal": 1.253,
+    "hard": 0.652,
+    "nightmare": 0.818
    },
    "wr": {
-    "normal": 0.792,
-    "hard": 0.625,
+    "normal": 0.667,
+    "hard": 0.354,
     "nightmare": 0.188
    }
   },
@@ -165,23 +171,24 @@
    "name": "결전: 재의 함대",
    "act": 2,
    "type": "decisive",
+   "mode": "army",
    "level": 48,
    "boss": "재의 장군",
    "hp_mult": 3.0,
    "cliff": {
-    "normal": 1.409,
-    "hard": 1.082,
+    "normal": 1.34,
+    "hard": 1.065,
     "nightmare": 0.79
    },
    "power_mult": {
-    "normal": 1.353,
-    "hard": 1.082,
+    "normal": 1.286,
+    "hard": 1.065,
     "nightmare": 0.818
    },
    "wr": {
-    "normal": 0.417,
-    "hard": 0.375,
-    "nightmare": 0.146
+    "normal": 0.458,
+    "hard": 0.25,
+    "nightmare": 0.167
    }
   },
   {
@@ -189,23 +196,24 @@
    "name": "폐기된 병기",
    "act": 3,
    "type": "raid",
+   "mode": "army",
    "level": 73,
    "boss": "프로토타입 병기",
    "hp_mult": 4.0,
    "cliff": {
-    "normal": 1.976,
-    "hard": 1.048,
-    "nightmare": 0.945
+    "normal": 2.216,
+    "hard": 1.151,
+    "nightmare": 1.082
    },
    "power_mult": {
-    "normal": 1.897,
-    "hard": 1.048,
-    "nightmare": 0.978
+    "normal": 2.127,
+    "hard": 1.151,
+    "nightmare": 1.12
    },
    "wr": {
-    "normal": 0.854,
+    "normal": 0.708,
     "hard": 0.5,
-    "nightmare": 0.229
+    "nightmare": 0.25
    }
   },
   {
@@ -213,23 +221,24 @@
    "name": "결전: 쐐기의 성소",
    "act": 3,
    "type": "decisive",
+   "mode": "army",
    "level": 78,
    "boss": "재의 주술사",
    "hp_mult": 3.0,
    "cliff": {
-    "normal": 1.563,
-    "hard": 1.34,
-    "nightmare": 0.927
+    "normal": 1.134,
+    "hard": 0.927,
+    "nightmare": 0.687
    },
    "power_mult": {
-    "normal": 1.5,
-    "hard": 1.34,
-    "nightmare": 0.959
+    "normal": 1.089,
+    "hard": 0.927,
+    "nightmare": 0.711
    },
    "wr": {
-    "normal": 0.646,
-    "hard": 0.396,
-    "nightmare": 0.208
+    "normal": 0.771,
+    "hard": 0.542,
+    "nightmare": 0.333
    }
   },
   {
@@ -237,23 +246,24 @@
    "name": "용의 묘지",
    "act": 4,
    "type": "hunt",
+   "mode": "team",
    "level": 79,
    "boss": "용의 유령",
    "hp_mult": 2.0,
    "cliff": {
-    "normal": 1.391,
-    "hard": 1.22,
-    "nightmare": 0.859
+    "normal": 1.116,
+    "hard": 0.962,
+    "nightmare": 0.687
    },
    "power_mult": {
-    "normal": 1.335,
-    "hard": 1.22,
-    "nightmare": 0.889
+    "normal": 1.071,
+    "hard": 0.962,
+    "nightmare": 0.711
    },
    "wr": {
-    "normal": 0.667,
-    "hard": 0.396,
-    "nightmare": 0.188
+    "normal": 0.896,
+    "hard": 0.375,
+    "nightmare": 0.25
    }
   },
   {
@@ -261,23 +271,24 @@
    "name": "결전: 흑룡의 그림자",
    "act": 4,
    "type": "decisive",
+   "mode": "army",
    "level": 90,
    "boss": "재의 장군",
    "hp_mult": 3.0,
    "cliff": {
-    "normal": 1.391,
+    "normal": 1.357,
     "hard": 1.151,
-    "nightmare": 1.185
+    "nightmare": 0.841
    },
    "power_mult": {
-    "normal": 1.335,
+    "normal": 1.303,
     "hard": 1.151,
-    "nightmare": 1.226
+    "nightmare": 0.87
    },
    "wr": {
-    "normal": 0.667,
-    "hard": 0.542,
-    "nightmare": 0.271
+    "normal": 0.688,
+    "hard": 0.5,
+    "nightmare": 0.562
    }
   },
   {
@@ -285,23 +296,24 @@
    "name": "재의 장군들",
    "act": 5,
    "type": "raid",
+   "mode": "army",
    "level": 93,
    "boss": "재의 장군",
    "hp_mult": 4.0,
    "cliff": {
-    "normal": 2.079,
-    "hard": 1.254,
-    "nightmare": 1.151
+    "normal": 2.234,
+    "hard": 1.151,
+    "nightmare": 1.013
    },
    "power_mult": {
-    "normal": 1.996,
-    "hard": 1.254,
-    "nightmare": 1.191
+    "normal": 2.145,
+    "hard": 1.151,
+    "nightmare": 1.048
    },
    "wr": {
-    "normal": 0.771,
-    "hard": 0.396,
-    "nightmare": 0.312
+    "normal": 0.583,
+    "hard": 0.583,
+    "nightmare": 0.5
    }
   },
   {
@@ -309,23 +321,24 @@
    "name": "결전: 흑룡 바르그라드",
    "act": 5,
    "type": "decisive",
+   "mode": "army",
    "level": 99,
    "boss": "재의 장군",
    "hp_mult": 3.0,
    "cliff": {
-    "normal": 1.512,
-    "hard": 1.495,
-    "nightmare": 0.979
+    "normal": 1.941,
+    "hard": 1.701,
+    "nightmare": 1.151
    },
    "power_mult": {
-    "normal": 1.452,
-    "hard": 1.495,
-    "nightmare": 1.013
+    "normal": 1.863,
+    "hard": 1.701,
+    "nightmare": 1.191
    },
    "wr": {
-    "normal": 0.667,
-    "hard": 0.25,
-    "nightmare": 0.458
+    "normal": 0.521,
+    "hard": 0.375,
+    "nightmare": 0.354
    }
   }
  ]

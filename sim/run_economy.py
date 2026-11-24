@@ -4,7 +4,7 @@
 모델:
   - 하루 세션: 프로필별 목표 참전 횟수. 영웅별 스태미너 100, 6분당 1 회복(하루 240), 참전 시 영웅당 난이도별 소모(웨이브형 ×1.5).
   - 전투 선택: 현재 '전력 레벨'(보유 상위 팀의 계층·성급) 근처의 지역/조우/스토리 전투. 난이도는 전력 여유에 따라 보통/어려움/악몽.
-    승률 = 로지스틱((전력 − 전투 레벨 − 난이도 간격) / 12) (여유 0 → 76%). 전력 환산은 실제 엔진 측정값(calibrate_power.py).
+    승률 = 로지스틱((난이도별 전력 − 전투 레벨) / 기울기) (여유 0 → 76%). 전력 환산표·기울기는 실제 엔진 측정값(calibrate_power.py).
   - 보상: economy.json 공식(골드·재료·아이템 드랍·영웅 드랍·호감도 천장). 중복 영웅 → 파편.
   - 지출(07 §2.2의 골드 소비처 전부): 승급 골드, 부족 재료 상점 구매(일일 한도 M001 200/M002 20/M003 2), 조합 아이템(주력 팀 슬롯분)·빛나는 아이템 교체,
     골드 소모품(조우 서약서·매력 징표). 보석은 프로필별(물약·계층 4·5 조우 고급 서약서).
@@ -37,43 +37,41 @@ FACILITY_BUDGET_SHARE = 0.6
 GOLD_SCALE = {"normal": 1.0, "hard": 1.0, "nightmare": 1.0}   # 난이도별 골드 보상 가정 실험용 배율(기본 1.0 = battles.json 그대로)
 DAILY_GOLD_SOFTCAP = None   # 실험용: 하루 전투 골드가 (한도, 배율)의 한도를 넘으면 초과분에 배율 적용. None = 미적용(현재 규칙)
 GOLD_RESERVE = 3000   # 소모품은 이만큼의 여유 골드가 있을 때만 산다(승급·아이템 우선)
-# 전력 = '보통 난이도 승률 76%가 되는 전투 레벨'. 실제 전투 엔진 측정값(sim/calibrate_power.py → reports/power_calibration.json)을 가법 모형으로 맞춘 것.
-#   계층 기본(★1, 아이템 없음) 22/32/40/47/60, ★2 +28, ★3 +59. 조합 아이템 3개 장착 +16, 빛나는 3개 장착 +26. 어려움 −12, 악몽 −24. 로지스틱 기울기 12.
-#   레벨 95를 넘는 구성(계층 4·5 ★3 등)은 측정 범위 밖이라 가법 모형의 외삽값이다.
-TIER_POWER = {1: 22, 2: 32, 3: 40, 4: 47, 5: 60}; STAR_POWER = {1: 0, 2: 28, 3: 59}
-ITEM_POWER_COMPLETED = 16.0; ITEM_POWER_RADIANT = 26.0   # 팀 전원이 3슬롯을 해당 등급으로 채웠을 때
-DIFF_OFFSET = {"normal": 0, "hard": 12, "nightmare": 24}; WIN_K = 12.0; WIN_BASE = math.log(0.76 / 0.24)   # 여유 0 → 76%
+# 전력 = '승률 76%가 되는 전투 레벨'. 실제 전투 엔진 측정값(sim/calibrate_power.py → reports/power_calibration.json)을 그대로 쓴다.
+#   난이도별 (계층, 성급) 표, 조합·빛나는 아이템 3슬롯 장착 보정, 로지스틱 기울기. 몬스터 전력 보정 곡선을 바꾸면 calibrate_power.py를 다시 돌려야 한다.
+WIN_BASE = math.log(0.76 / 0.24)   # 여유 0 → 76%
 PRICE_RADIANT = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "radiant")
-
-
-# 난이도별 환산표: 기본은 보통 난이도 표에서 난이도 간격을 뺀 값. 적 강화 가정 실험(experiments)에서는 난이도별 측정표로 교체한다.
-POWER_TABLE = {d: ({t: v - off for t, v in TIER_POWER.items()}, dict(STAR_POWER)) for d, off in DIFF_OFFSET.items()}
 M003_DROP_SCALE = 1.0   # 실험용: 별의 결정 확률 드랍 배율(기본 1.0)
 
 
 def load_power_model(path):
-    """power_calibration*.json → (난이도별 환산표, 조합 아이템 보정, 빛나는 아이템 보정). 난이도별로 '계층 효과 + 성급 효과' 가법 모형을 최소제곱으로 맞춘다(측정 범위 밖 null 칸은 외삽)."""
+    """power_calibration*.json → (난이도별 {(계층, 성급): 전력}, 조합 아이템 보정, 빛나는 아이템 보정, 기울기).
+    측정 범위(레벨 95) 밖이라 null인 칸은 난이도별 '계층 효과 + 성급 효과' 가법 모형(교대 최소제곱)의 외삽값으로 채운다."""
     C = json.load(open(path, encoding="utf-8"))["configs"]
     table = {}
     for d in ("normal", "hard", "nightmare"):
         cells = {(t, st): C[f"t{t}_s{st}_none_{d}"]["L76"] for t in range(1, 6) for st in (1, 2, 3)}
-        cells = {k: v for k, v in cells.items() if v is not None}
+        meas = {k: v for k, v in cells.items() if v is not None}
         tt = {t: 0.0 for t in range(1, 6)}; ss = {1: 0.0, 2: 0.0, 3: 0.0}
-        for _ in range(200):   # 교대 최소제곱
+        for _ in range(200):
             for t in tt:
-                v = [cells[(t, x)] - ss[x] for x in ss if (t, x) in cells]; tt[t] = statistics.mean(v) if v else tt[t]
+                v = [meas[(t, x)] - ss[x] for x in ss if (t, x) in meas]; tt[t] = statistics.mean(v) if v else tt[t]
             for x in ss:
-                v = [cells[(t, x)] - tt[t] for t in tt if (t, x) in cells]; ss[x] = statistics.mean(v) if v else ss[x]
-        table[d] = ({t: tt[t] + ss[1] for t in tt}, {x: ss[x] - ss[1] for x in ss})
+                v = [meas[(t, x)] - tt[t] for t in tt if (t, x) in meas]; ss[x] = statistics.mean(v) if v else ss[x]
+        table[d] = {k: (meas[k] if k in meas else tt[k[0]] + ss[k[1]]) for k in cells}
     def bonus(kind):
         v = [C[f"t{t}_s{st}_{kind}_normal"]["L76"] - C[f"t{t}_s{st}_none_normal"]["L76"] for t in range(1, 6) for st in (1, 2, 3)
              if C[f"t{t}_s{st}_{kind}_normal"]["L76"] is not None and C[f"t{t}_s{st}_none_normal"]["L76"] is not None]
         return statistics.mean(v)
-    return table, bonus("completed"), bonus("radiant")
+    ks = sorted(v["k"] for v in C.values() if v["k"] is not None and v["items"] == "none")
+    return table, bonus("completed"), bonus("radiant"), ks[len(ks) // 2]
+
+
+POWER_TABLE, ITEM_POWER_COMPLETED, ITEM_POWER_RADIANT, WIN_K = load_power_model(os.path.join(REP, "power_calibration.json"))
 
 
 def hero_power(tier, star, diff="normal"):
-    tt, st = POWER_TABLE[diff]; return tt[tier] + st[star]
+    return POWER_TABLE[diff][(tier, star)]
 
 
 class Player:
@@ -119,10 +117,10 @@ class Player:
 
     def pick_battle(self):
         pl = self.power_level()
-        cands = [b for b in BATTLES if b["act"] <= self.act and b["level"] <= pl + 24]
+        cands = [b for b in BATTLES if b["act"] <= self.act and b["level"] <= pl + 2 * WIN_K]
         if not cands: cands = [b for b in BATTLES if b["act"] <= self.act]
-        enc = [b for b in cands if b["kind"] == "encounter" and b["hero_id"] not in self.owned and b["level"] <= pl + 12]
-        story = [b for b in cands if b["kind"] == "story" and b["id"] not in self.cleared and b["level"] <= pl + 16]
+        enc = [b for b in cands if b["kind"] == "encounter" and b["hero_id"] not in self.owned and b["level"] <= pl + WIN_K]
+        story = [b for b in cands if b["kind"] == "story" and b["id"] not in self.cleared and b["level"] <= pl + 1.33 * WIN_K]
         reg = [b for b in cands if b["kind"] == "regional"]
         r = self.rng.random()
         if story and r < 0.25: return self.rng.choice(story)
@@ -331,7 +329,7 @@ def main():
     doc = os.path.join(ROOT, "docs", "07_경제_및_비즈니스모델.md")
     s = open(doc, encoding="utf-8").read()
     L = ["## 9. 경제 진행 시뮬레이션 결과 (자동 생성: `python sim/run_economy.py`)", "",
-         "가상 플레이어 3프로필 × 12회 × 90일 몬테카를로. 전력은 '보통 난이도 승률 76%가 되는 전투 레벨'로 환산하며 실제 전투 엔진 측정값을 쓴다(`sim/calibrate_power.py`: 계층 기본 22/32/40/47/60, ★2 +28, ★3 +59, 조합 아이템 +16, 빛나는 +26, 어려움 −12, 악몽 −24, 기울기 12). 보상·드랍·호감도·승급·구매는 `economy.json`·`battles.json`·`items.json` 규칙 그대로.",
+         "가상 플레이어 3프로필 × 12회 × 90일 몬테카를로. 전력은 '승률 76%가 되는 전투 레벨'로 환산하며 실제 전투 엔진 측정표를 쓴다(`sim/calibrate_power.py` → `sim/reports/power_calibration.json`: 난이도별 계층×성급 표, 아이템 보정, 기울기). 보상·드랍·호감도·승급·구매는 `economy.json`·`battles.json`·`items.json` 규칙 그대로.",
          "골드 지출은 승급 골드, 부족 재료의 보급소 구매(일일 한도 M001 200 / M002 20 / M003 2), 조합 아이템(주력 팀 슬롯분)과 빛나는 아이템 교체, 골드 서약서(계층 3 이상 조우)·매력 징표(계층 4·5, 일 4개), 골드 물약(일 3회 한도), 용병단 본부 시설, 보유 영웅 호감도 선물을 모두 포함한다. 반복 클리어 골드 체감을 적용한다. '누적 골드'는 첫 클리어 보너스를 포함한 총수입이다.", "",
          "| 프로필 | 일차 | 보유 영웅 | T4/T5 | ★2 이상 | 전력 | 막 | 용병 레벨 | 누적 골드 | 누적 지출 | 소진율 | 보석 지출 | 조합 아이템 | 클리어 전투 | 승률 | 최강팀 스태미너 소진 비율 | 참전 불가일 |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for prof, r in out.items():
@@ -364,10 +362,11 @@ def main():
     nm = {k: out[k]["snapshots"][90]["gold_by"]["nightmare"] / max(1, out[k]["snapshots"][90]["gold_earned"]) for k in ("free", "light", "heavy")}
     L += ["- **막 진행**: 4막 도달 — " + ", ".join(f"{out[k]['profile'].split('(')[0]} {actday(k, 'act4')}" for k in ("free", "light", "heavy"))
           + "; 5막 도달 — " + ", ".join(f"{out[k]['profile'].split('(')[0]} {actday(k, 'act5')}" for k in ("free", "light", "heavy"))
-          + ". 엔진 측정 전력으로는 전력이 막 진행을 막지 않는다. 스토리 전투 수(76)와 하루 참전 횟수가 속도를 정한다.",
-          "- **전력이 콘텐츠를 앞선다**: 엔진 측정상 계층 1 ★3 팀(아이템 없음)의 전력은 82로 계층 5 ★1(60)보다 높고, 계층 1의 ★3 승급은 별의 결정 1개(보급소 1,500골드)면 된다. 여기에 빛나는 아이템(+26, 전 품목 골드 구매)을 더하면 첫 주에 레벨 90대 보통 전투를 이긴다."
-          f" 그 결과 수입의 대부분이 악몽 난이도에서 나온다(90일 누적 골드 중 악몽 비중: 무과금 {nm['free']:.0%}, 소과금 {nm['light']:.0%}, 헤비 {nm['heavy']:.0%})."
-          " 성급 배율(체력 ×1.8·공격력 ×1.5/성)이 계층 배율(×1.00~1.70)보다 훨씬 크고 저계층 승급이 싼 것이 원인이며, 진행 속도를 늦추려면 저계층 ★3 비용·별의 결정 공급·고레벨 적 성급 중 하나를 조정해야 한다(미결정).", ""]
+          + ".",
+          "- **전력과 콘텐츠**: 엔진 측정 전력(보통 난이도, 아이템 없음) — " + ", ".join(f"계층 {t} ★1 {POWER_TABLE['normal'][(t, 1)]:.0f} / ★2 {POWER_TABLE['normal'][(t, 2)]:.0f} / ★3 {POWER_TABLE['normal'][(t, 3)]:.0f}" for t in (1, 3, 5))
+          + f". 조합 아이템 3개 +{ITEM_POWER_COMPLETED:.0f}, 빛나는 3개 +{ITEM_POWER_RADIANT:.0f}. 악몽 기준으로는 계층 5 ★3이 {POWER_TABLE['nightmare'][(5, 3)]:.0f}이다(스토리 최고 레벨 100)."
+          f" 90일 누적 골드 중 악몽 난이도 비중: 무과금 {nm['free']:.0%}, 소과금 {nm['light']:.0%}, 헤비 {nm['heavy']:.0%}."
+          " 몬스터 전력 보정 곡선은 '레벨대별 실제 도달 팀'(scenario.expected_loadout)을 기준으로 맞춘 것이다(09 §4, 부록 B3).", ""]
     marker = "## 9. 경제 진행 시뮬레이션 결과"
     s = s[:s.index(marker)] if marker in s else s
     open(doc, "w", encoding="utf-8").write(s.rstrip() + "\n\n" + "\n".join(L))

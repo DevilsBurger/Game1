@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 전투 난이도 검증: battles.json의 적 편성을 몬스터 템플릿으로 생성하고(유형별 규칙: 웨이브·구조물·호위·암살·탈출·구출 포함), 전투 레벨에 맞는 '기대 팀'으로 싸워
-난이도별 승률을 측정한다. 기대 팀: 계층 = 1+레벨/22, 성급 = 1(<35)/2(<75)/3·2 혼합(≥75). 목표: 보통 70~85%, 어려움 45~65%, 악몽 20~40% (기대 팀 기준).
+난이도별 승률을 측정한다. 기대 팀: 계층 = 1+레벨/22, 성급·아이템 = scenario.expected_loadout(레벨대별 실제 도달 팀: ★1 무장비 → ★3 + 빛나는 아이템). 목표: 보통 70~85%, 어려움 45~65%, 악몽 20~40% (기대 팀 기준).
 출력: sim/reports/battle_validation.json
 """
 import json, os, sys, random, statistics, argparse
@@ -53,6 +53,7 @@ def evaluate(sample, fights, procs, curve, seed0=0):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--sample", type=int, default=240); ap.add_argument("--fights", type=int, default=12); ap.add_argument("--procs", type=int, default=4)
+    ap.add_argument("--freeze-below", type=int, default=0, help="이 레벨 이하 구간의 보정값은 건드리지 않는다(FTUE 검증 구간 보호)")
     ap.add_argument("--calibrate", type=int, default=0, help="몬스터 전력 보정 곡선을 N라운드 피팅하여 economy.json에 기록")
     args = ap.parse_args()
     battles = json.load(open(os.path.join(DATA, "battles.json"), encoding="utf-8"))["battles"]
@@ -67,18 +68,23 @@ def main():
     pool_b = [b for b in battles if b["kind"] in ("regional", "story")]
     for rnd in range(args.calibrate):
         sample = rng.sample(pool_b, max(150, args.sample * 3 // 4))
+        # 전투 수가 적은 구간(레벨 91~100 등 40개 미만)은 매 라운드 전수 포함해 보정 잡음을 줄인다
+        small = {bd for bd in BANDS if sum(1 for b in pool_b if band_of(b["level"]) == bd) < 40}
+        ids = {b["id"] for b in sample}
+        sample = sample + [b for b in pool_b if band_of(b["level"]) in small and b["id"] not in ids]
         wins = evaluate(sample, max(6, args.fights * 2 // 3), args.procs, curve, seed0=1000 * rnd)
         bmap = {b["id"]: b for b in sample}
         acc = {}
         for (bid, diff), ws in wins.items():
             acc.setdefault((diff, band_of(bmap[bid]["level"])), []).extend(ws)
         for (diff, band), ws in acc.items():
+            if int(band.split("-")[1]) <= args.freeze_below: continue
             obs = sum(ws) / len(ws)
             f = ((obs + 0.05) / (TARGET[diff] + 0.05)) ** 0.3   # 능력치 배수는 HP·AD·AP에 함께 곱해지므로 완만하게
             f = max(0.8, min(1.25, f))
             curve["bands"][diff][band] = round(max(0.3, min(3.0, curve["bands"][diff].get(band, 1.0) * f)), 3)
         print(f"[calibrate {rnd}] " + " | ".join(f"{d}: " + ",".join(f"{curve['bands'][d][b]:.2f}" for b in BANDS) for d in DIFFS), flush=True)
-        econ["enemy_power_curve"] = dict(curve, desc="기대 팀 기준 난이도 목표(보통 78%/어려움 55%/악몽 30%)로 피팅한 몬스터 능력치 배수. 난이도별 × 레벨 10 구간별. 클라이언트는 몬스터 HP·AD·AP에 곱한다.")
+        econ["enemy_power_curve"] = dict(curve, desc="기대 팀(scenario.expected_loadout: 레벨대별 실제 도달 팀) 기준 난이도 목표(보통 78%/어려움 55%/악몽 30%)로 피팅한 몬스터 능력치 배수. 난이도별 × 레벨 10 구간별. 클라이언트는 몬스터 HP·AD·AP에 곱한다.")
         json.dump(econ, open(econ_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     sample = rng.sample(pool_b, args.sample)
     wins = evaluate(sample, args.fights, args.procs, curve, seed0=99999)

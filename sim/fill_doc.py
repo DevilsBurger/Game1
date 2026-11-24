@@ -119,7 +119,7 @@ def followup_block():
     if os.path.exists(p):
         r = json.load(open(p, encoding="utf-8"))
         L += ["#### 9.6 고레벨 난이도 보정 · 테스트 벡터",
-              "- 기대 팀 정의를 레벨 75+에서 ★3·★2 혼합으로 낮추고 유형별 규칙(웨이브·성벽·수호 대상·호위·암살·탈출·구출)을 적용해 8라운드 재보정: " + ", ".join(f"{d} {v['mean']:.1%}" for d, v in r["summary"].items()) + ".",
+              "- 기대 팀을 '레벨대별 실제 도달 팀'(성급 상향 + 아이템 장착, `scenario.expected_loadout`)으로 재정의하고 레벨 21 이상 구간을 재보정(1~20은 FTUE 검증 구간이라 고정): " + ", ".join(f"{d} {v['mean']:.1%}" for d, v in r["summary"].items()) + ".",
               "- 레벨 구간별: " + ", ".join(f"{k} {v:.0%}" for k, v in r["by_level_band"].items()) + "."]
         vp = os.path.join(HERE, "..", "tests", "vectors", "battle_vectors.json")
         if os.path.exists(vp):

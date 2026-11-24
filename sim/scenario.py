@@ -11,8 +11,36 @@ import random
 STAR_GAIN = {1: 1.0, 2: 1.8 * 1.5, 3: 3.24 * 2.25}
 
 
+def expected_loadout(level, i):
+    """기대 팀의 i번째 유닛 장비 수준: (성급, 조합 아이템 수, 빛나는 아이템 수).
+    '그 레벨대에 도달한 플레이어가 실제로 갖춘 팀'을 기준으로 한다(경계는 몬스터 전력 보정 곡선의 10레벨 구간에 맞춤).
+      1~20   ★1, 아이템 없음            (1막·FTUE 구간. 조합 아이템 드랍은 레벨 20부터)
+      21~30  ★2·★1 교대, 조합 1개
+      31~50  ★2, 조합 2개
+      51~70  ★3·★2 교대, 조합 3개
+      71~90  ★3, 조합 3개
+      91~100 ★3, 절반은 빛나는 3개·절반은 조합 3개
+    이전 정의(★1 <35 / ★2 <75 / ★3·★2 혼합, 아이템 없음)는 실제 플레이어 전력보다 크게 낮아 콘텐츠가 첫 주에 소진됐다(07 §9)."""
+    if level <= 20: return 1, 0, 0
+    if level <= 30: return (2 if i % 2 == 0 else 1), 1, 0
+    if level <= 50: return 2, 2, 0
+    if level <= 70: return (3 if i % 2 == 0 else 2), 3, 0
+    if level <= 90: return 3, 3, 0
+    return (3, 0, 3) if i % 2 == 0 else (3, 3, 0)
+
+
+_ITEM_IDS = {}
+
+
+def loadout_items(d, n_completed, n_radiant, rng):
+    """기대 팀 아이템: 역할을 가리지 않고 무작위(보수적 가정)."""
+    if not _ITEM_IDS:
+        for c in ("completed", "radiant"): _ITEM_IDS[c] = sorted(i["id"] for i in d.items.values() if i["category"] == c)
+    return (rng.sample(_ITEM_IDS["radiant"], n_radiant) if n_radiant else []) + (rng.sample(_ITEM_IDS["completed"], n_completed) if n_completed else [])
+
+
 def expected_team(d, level, size, rng, star_override=None):
-    """레벨에 맞는 기대 팀: 계층 = 1 + level//22, 성급 = 1(<35) / 2(<75) / 3(≥75, 절반은 2). 역할 혼합."""
+    """레벨에 맞는 기대 팀: 계층 = 1 + level//22(한 단계 아래 혼합), 성급·아이템 = expected_loadout. 역할 혼합."""
     tier = max(1, min(5, 1 + level // 22))
     pool = [h for h in d.heroes.values() if h["tier"] in (tier, max(1, tier - 1))]
     roles = ["knight", "guardian", "warrior", "duelist", "ranger", "mage", "priest", "assassin", "artillerist", "bard"]
@@ -22,11 +50,9 @@ def expected_team(d, level, size, rng, star_override=None):
         team.append(rng.choice(cands)["id"])
     specs = []
     for i, h in enumerate(team):
+        star, nc, nr = expected_loadout(level, i)
         if star_override: star = star_override
-        elif level < 35: star = 1
-        elif level < 75: star = 2
-        else: star = 3 if i % 2 == 0 else 2
-        specs.append(d.hero_spec(h, star))
+        specs.append(d.hero_spec(h, star, items=loadout_items(d, nc, nr, rng)))
     return specs
 
 
@@ -75,7 +101,8 @@ def build_scenario(d, b, diff, rng, curve=None, allies=None, boss_hp_override=No
         if b["participation"]["mode"] == "solo":
             tier = max(1, min(5, 1 + b["level"] // 22))
             cands = [h["id"] for h in d.heroes.values() if h["tier"] == tier and h["class"] in ("duelist", "warrior", "knight")]
-            allies = [d.hero_spec(rng.choice(cands), 1 if b["level"] < 35 else (2 if b["level"] < 75 else 3))]
+            star, nc, nr = expected_loadout(b["level"], 0)
+            allies = [d.hero_spec(rng.choice(cands), star, items=loadout_items(d, nc, nr, rng))]
         else:
             allies = expected_team(d, b["level"], size, rng)
     enemies = build_enemies(d, b, diff, curve, boss_hp_override)
