@@ -41,6 +41,8 @@ GOLD_RESERVE = 3000   # 소모품은 이만큼의 여유 골드가 있을 때만
 #   난이도별 (계층, 성급) 표, 조합·빛나는 아이템 3슬롯 장착 보정, 로지스틱 기울기. 몬스터 전력 보정 곡선을 바꾸면 calibrate_power.py를 다시 돌려야 한다.
 WIN_BASE = math.log(0.76 / 0.24)   # 여유 0 → 76%
 PRICE_RADIANT = next(i["price_gold"] for i in _ITEMS.values() if i["category"] == "radiant")
+RADIANT_UNLOCK_ACT = 1    # 실험용: 빛나는 아이템 골드 구매가 열리는 막(기본 1 = 처음부터)
+RADIANT_DAILY_LIMIT = None   # 실험용: 빛나는 아이템 하루 구매 한도(기본 없음)
 M003_DROP_SCALE = 1.0   # 실험용: 별의 결정 확률 드랍 배율(기본 1.0)
 
 
@@ -276,8 +278,10 @@ class Player:
         slots = 3 * (self.team_slots() + 1)
         while budget >= PRICE_COMPLETED and self.items["completed"] + self.items.get("radiant", 0) < slots:
             self.pay(PRICE_COMPLETED, "items"); budget -= PRICE_COMPLETED; self.items["completed"] += 1
-        while budget >= PRICE_RADIANT and self.items["completed"] + self.items.get("radiant", 0) >= slots and self.items.get("radiant", 0) < slots:
-            self.pay(PRICE_RADIANT, "items"); budget -= PRICE_RADIANT; self.items["radiant"] = self.items.get("radiant", 0) + 1
+        bought_rad = 0
+        while (self.act >= RADIANT_UNLOCK_ACT and (RADIANT_DAILY_LIMIT is None or bought_rad < RADIANT_DAILY_LIMIT) and budget >= PRICE_RADIANT
+               and self.items["completed"] + self.items.get("radiant", 0) >= slots and self.items.get("radiant", 0) < slots):
+            self.pay(PRICE_RADIANT, "items"); budget -= PRICE_RADIANT; self.items["radiant"] = self.items.get("radiant", 0) + 1; bought_rad += 1
         # 용병단 본부 시설(2막부터): 승급·아이템 뒤 남은 골드의 일부로 가장 싼 다음 단계부터
         if self.act >= 2:
             budget = max(0, self.gold - GOLD_RESERVE) * FACILITY_BUDGET_SHARE
